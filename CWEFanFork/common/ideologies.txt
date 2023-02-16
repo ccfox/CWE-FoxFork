@@ -107,7 +107,8 @@ centre_left_group = {
 		add_economic_reform = { base = 1 }
 	}
 
-	social_democracy = {
+	# political and social reformist
+	social_democrat = {
 		color = { 255 80 80 } 
 		date = 1900.1.1
 		
