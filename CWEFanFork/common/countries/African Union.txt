@@ -1,0 +1,175 @@
+graphical_culture = AfricanGC
+color = { 120 98 57 }
+party = {
+		name = "Pan Africanist Congress"
+		citizenship_policy = limited_citizenship
+		economic_policy = state_capitalism
+		ideology = nationalist
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = jingoism
+		start_date = 1836.1.1
+		end_date = 2100.1.1
+}
+party = {
+		name = "Pan Africanist Congress (Moderates)"
+		citizenship_policy = full_citizenship
+		economic_policy = interventionism
+		ideology = big_tent
+		religious_policy = secularized
+		trade_policy = free_trade
+		war_policy = pro_military
+		start_date = 1836.1.1
+		end_date = 2100.1.1
+}
+
+party = {
+		name = "African People's Party" #Fictional
+		citizenship_policy = limited_citizenship
+		economic_policy = interventionism
+		ideology = conservative
+		religious_policy = secularized
+		trade_policy = free_trade
+		war_policy = pro_military
+		start_date = 1836.1.1
+		end_date = 2092.1.1
+}
+party = {
+		name = "Movement for a Free Africa" #Fictional
+		citizenship_policy = full_citizenship
+		economic_policy = laissez_faire
+		ideology = liberal
+		religious_policy = secularized
+		trade_policy = free_trade
+		war_policy = pacifism
+		start_date = 1836.1.1
+		end_date = 2092.1.1
+}
+party = {
+		name = "Organisation of African Unity (Moderate)"
+		citizenship_policy = full_citizenship
+		economic_policy = state_capitalism
+		ideology = social_democrat
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = pro_military
+		start_date = 1836.1.1
+		end_date = 2092.1.1
+}
+party = {
+		name = "Organisation of African Unity (Radical)"
+		citizenship_policy = full_citizenship
+		economic_policy = planned_economy1
+		ideology = socialist
+		religious_policy = pro_atheism
+		trade_policy = protectionism
+		war_policy = pro_military
+		start_date = 1836.1.1
+		end_date = 2092.1.1
+}
+party = {
+		name = "African Unification Front"
+		citizenship_policy = full_citizenship
+		economic_policy = interventionism
+		ideology = progressive
+		religious_policy = pro_atheism
+		trade_policy = protectionism
+		war_policy = pacifism
+		start_date = 1836.1.1
+		end_date = 2092.1.1
+}
+party = {
+		name = "African National Union"
+		citizenship_policy = residency
+		economic_policy = state_capitalism
+		ideology = populist
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = jingoism
+		start_date = 1836.1.1
+		end_date = 2092.1.1
+}
+party = {
+		name = "League of Africa" #Fictional
+		citizenship_policy = residency
+		economic_policy = state_capitalism
+		ideology = traditionalist
+		religious_policy = moralism
+		trade_policy = protectionism
+		war_policy = pro_military
+		start_date = 1836.1.1
+		end_date = 2092.1.1
+}
+party = {
+		name = "A-APRP"
+		citizenship_policy = full_citizenship
+		economic_policy = planned_economy
+		ideology = communist
+		religious_policy = pro_atheism
+		trade_policy = protectionism
+		war_policy = pro_military
+		start_date = 1836.1.1
+		end_date = 2092.1.1
+}
+party = {
+		name = "African Democratic Rally"
+		citizenship_policy = full_citizenship
+		economic_policy = planned_economy1
+		ideology = communist_social
+		religious_policy = pro_atheism
+		trade_policy = protectionism
+		war_policy = pro_military
+		start_date = 1836.1.1
+		end_date = 1959.1.1
+}
+party = {
+		name = "AATUF"
+		citizenship_policy = full_citizenship
+		economic_policy = planned_economy1
+		ideology = communist_social
+		religious_policy = pro_atheism
+		trade_policy = protectionism
+		war_policy = pro_military
+		start_date = 1959.1.1
+		end_date = 1973.1.1
+}
+party = {
+		name = "OATUU"
+		citizenship_policy = full_citizenship
+		economic_policy = planned_economy1
+		ideology = communist_social
+		religious_policy = pro_atheism
+		trade_policy = protectionism
+		war_policy = pro_military
+		start_date = 1973.1.1
+		end_date = 2092.1.1
+}
+unit_names = {
+	carrier = {
+		Yodit Shewa "Mara Takla" Lalibela "Yekuno Amlak" Tigray Tatadum Seyum "Kedus Harbe" "Na'akueto La'ab" Yetbarak
+	}
+	transportship = {
+	}
+	modern_frigate = {
+		Yodit Shewa "Mara Takla" Lalibela "Yekuno Amlak" Tigray Tatadum Seyum "Kedus Harbe" "Na'akueto La'ab" Yetbarak
+	}
+	cruiser = {
+		Yodit Shewa "Mara Takla" Lalibela "Yekuno Amlak" Tigray Tatadum Seyum "Kedus Harbe" "Na'akueto La'ab" Yetbarak
+	}
+	modern_cruiser = {
+		Yodit Shewa "Mara Takla" Lalibela "Yekuno Amlak" Tigray Tatadum Seyum "Kedus Harbe" "Na'akueto La'ab" Yetbarak
+	}
+	frigate = {
+		Yodit Shewa "Mara Takla" Lalibela "Yekuno Amlak" Tigray Tatadum Seyum "Kedus Harbe" "Na'akueto La'ab" Yetbarak
+	}
+	modern_destroyer = {
+		Yodit Shewa "Mara Takla" Lalibela "Yekuno Amlak" Tigray Tatadum Seyum "Kedus Harbe" "Na'akueto La'ab" Yetbarak
+	}
+	destroyer = {
+		Yodit Shewa "Mara Takla" Lalibela "Yekuno Amlak" Tigray Tatadum Seyum "Kedus Harbe" "Na'akueto La'ab" Yetbarak
+	}
+	submarine = {
+		Yodit Shewa "Mara Takla" Lalibela "Yekuno Amlak" Tigray Tatadum Seyum "Kedus Harbe" "Na'akueto La'ab" Yetbarak
+	}
+
+}

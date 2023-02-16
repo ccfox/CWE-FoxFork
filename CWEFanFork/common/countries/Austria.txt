@@ -1,0 +1,321 @@
+graphical_culture = AustriaHungaryGC
+color = { 251 251 221 }
+proletarian_dictatorship = { 124 40 30 }
+proletarian_dictatorship1 = { 124 40 30 }
+socialist_democracy = { 124 40 30 }
+party = {
+		name = "VdU (German Nationalist)"
+		citizenship_policy = residency
+		economic_policy = state_capitalism
+		ideology = nationalist
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = jingoism
+		start_date = 1836.1.1
+		end_date = 1956.4.7
+}
+party = {
+		name = "FPO (National Conservative)"
+		citizenship_policy = residency
+		economic_policy = state_capitalism
+		ideology = nationalist
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = jingoism
+		start_date = 1956.4.7
+		end_date = 2100.1.1
+}
+party = {
+		name = "Democratic Party of Austria"
+		citizenship_policy = limited_citizenship
+		economic_policy = interventionism
+		ideology = big_tent
+		religious_policy = secularized
+		trade_policy = free_trade
+		war_policy = pacifism
+		start_date = 1836.1.1
+		end_date = 1993.1.1
+}
+party = {
+		name = "Liberal Forum (Centrist)"
+		citizenship_policy = full_citizenship
+		economic_policy = laissez_faire
+		ideology = big_tent
+		religious_policy = secularized
+		trade_policy = free_trade
+		war_policy = pacifism
+		start_date = 1993.1.1
+		end_date = 2014.1.25
+}
+party = {
+		name = "NEOS (Centrist)"
+		citizenship_policy = full_citizenship
+		economic_policy = laissez_faire
+		ideology = big_tent
+		religious_policy = secularized
+		trade_policy = free_trade
+		war_policy = pacifism
+		start_date = 2014.1.25
+		end_date = 2100.1.1
+}
+party = {
+		name = "OVP"
+		citizenship_policy = limited_citizenship
+		economic_policy = interventionism
+		ideology = conservative
+		religious_policy = moralism
+		trade_policy = free_trade
+		war_policy = pro_military
+		start_date = 1836.1.1
+		end_date = 2017.1.1
+}
+party = {
+		name = "OVP-DnV (Right)"
+		citizenship_policy = limited_citizenship
+		economic_policy = interventionism
+		ideology = conservative
+		religious_policy = moralism
+		trade_policy = free_trade
+		war_policy = pro_military
+		start_date = 2017.1.1
+		end_date = 2092.1.1
+}
+party = {
+		name = "VdU (National Liberal)"
+		citizenship_policy = limited_citizenship
+		economic_policy = laissez_faire
+		ideology = liberal
+		religious_policy = secularized
+		trade_policy = free_trade
+		war_policy = pro_military
+		start_date = 1836.1.1
+		end_date = 1956.4.7
+}
+party = {
+		name = "OVP (Liberal Conservative)"
+		citizenship_policy = limited_citizenship
+		economic_policy = laissez_faire
+		ideology = liberal
+		religious_policy = moralism
+		trade_policy = free_trade
+		war_policy = pacifism
+		start_date = 1956.4.7
+		end_date = 1993.1.1
+}
+party = {
+		name = "Liberal Forum (Liberal)"
+		citizenship_policy = full_citizenship
+		economic_policy = laissez_faire
+		ideology = liberal
+		religious_policy = secularized
+		trade_policy = free_trade
+		war_policy = pacifism
+		start_date = 1993.1.1
+		end_date = 2014.1.25
+}
+party = {
+		name = "NEOS (Liberal)"
+		citizenship_policy = full_citizenship
+		economic_policy = laissez_faire
+		ideology = liberal
+		religious_policy = secularized
+		trade_policy = free_trade
+		war_policy = pacifism
+		start_date = 2014.1.25
+		end_date = 2100.1.1
+}
+party = {
+		name = "NEOS – The New Austria"
+		citizenship_policy = full_citizenship
+		economic_policy = laissez_faire
+		ideology = liberal
+		religious_policy = secularized
+		trade_policy = free_trade
+		war_policy = pacifism
+		start_date = 2012.10.27
+		end_date = 2014.1.25
+}
+party = {
+		name = "NEOS – Liberal Forum"
+		citizenship_policy = full_citizenship
+		economic_policy = laissez_faire
+		ideology = liberal
+		religious_policy = secularized
+		trade_policy = free_trade
+		war_policy = pacifism
+		start_date = 2014.1.25
+		end_date = 2092.1.1
+}
+party = {
+		name = "SPO (Social Democrats)"
+		citizenship_policy = limited_citizenship
+		economic_policy = state_capitalism
+		ideology = social_democrat
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = pacifism
+		start_date = 1836.1.1
+		end_date = 1991.1.1
+}
+party = {
+		name = "SPO (Social Democrats)"
+		citizenship_policy = full_citizenship
+		economic_policy = interventionism
+		ideology = social_democrat
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = pacifism
+		start_date = 1991.1.1
+		end_date = 2092.1.1
+}
+party = {
+		name = "SPO (Austro-Marxist)"
+		citizenship_policy = limited_citizenship
+		economic_policy = planned_economy1
+		ideology = socialist
+		religious_policy = pro_atheism
+		trade_policy = protectionism
+		war_policy = pacifism
+		start_date = 1836.1.1
+		end_date = 1949.1.1
+}
+party = {
+		name = "SPO (The Spark)"
+		citizenship_policy = full_citizenship
+		economic_policy = planned_economy1
+		ideology = socialist
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = pacifism
+		start_date = 1949.1.1
+		end_date = 2092.1.1
+}
+party = {
+		name = "SPO (Progressive)"
+		citizenship_policy = full_citizenship
+		economic_policy = state_capitalism
+		ideology = progressive
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = pacifism
+		start_date = 1836.1.1
+		end_date = 1982.1.1
+}
+party = {
+		name = "Alternative List Austria"
+		citizenship_policy = full_citizenship
+		economic_policy = interventionism
+		ideology = progressive
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = pacifism
+		start_date = 1982.1.1
+		end_date = 1986.1.1
+}
+party = {
+		name = "GRUNE"
+		citizenship_policy = full_citizenship
+		economic_policy = interventionism
+		ideology = progressive
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = pacifism
+		start_date = 1986.1.1
+		end_date = 2092.1.1
+}
+party = {
+		name = "VdU (Populist)"
+		citizenship_policy = limited_citizenship
+		economic_policy = laissez_faire
+		ideology = populist
+		religious_policy = secularized
+		trade_policy = free_trade
+		war_policy = jingoism
+		start_date = 1836.1.1
+		end_date = 1956.4.7
+}
+party = {
+		name = "FPO (Populist)"
+		citizenship_policy = residency
+		economic_policy = laissez_faire
+		ideology = populist
+		religious_policy = moralism
+		trade_policy = free_trade
+		war_policy = jingoism
+		start_date = 1956.4.7
+		end_date = 2092.1.1
+}
+party = {
+		name = "VdU (Reactionary)"
+		citizenship_policy = residency
+		economic_policy = interventionism
+		ideology = traditionalist
+		religious_policy = moralism
+		trade_policy = protectionism
+		war_policy = pro_military
+		start_date = 1836.1.1
+		end_date = 1956.4.7
+}
+party = {
+		name = "FPO (NRx)"
+		citizenship_policy = residency
+		economic_policy = interventionism
+		ideology = traditionalist
+		religious_policy = moralism
+		trade_policy = protectionism
+		war_policy = pro_military
+		start_date = 1956.4.7
+		end_date = 2092.1.1
+}
+party = {
+		name = "KPO"
+		citizenship_policy = full_citizenship
+		economic_policy = planned_economy
+		ideology = communist
+		religious_policy = pro_atheism
+		trade_policy = protectionism
+		war_policy = pacifism
+		start_date = 1836.1.1
+		end_date = 2092.1.1
+}
+party = {
+		name = "KPO (Reformist)"
+		citizenship_policy = full_citizenship
+		economic_policy = planned_economy1
+		ideology = communist_social
+		religious_policy = pro_atheism
+		trade_policy = protectionism
+		war_policy = pacifism
+		start_date = 1836.1.1
+		end_date = 2092.1.1
+}
+unit_names = {
+	carrier = {
+		Habsburg �rp�d Babenburg "Erzherzog Karl" "Erzherzog Friedrich" "Erzherzog Ferdinand Max" "Erzherzog Franz Ferdinand" Radetzky Zr�nyi
+	}
+	transportship = {
+		"1. Klipperflottille" "2. Klipperflottille" "3. Klipperflottille" "4. Klipperflottille" "5. Klipperflottille" "6. Klipperflottille" "7. Klipperflottille" "8. Klipperflottille" "9. Klipperflottille" "10. Klipperflottille"
+	}
+	modern_frigate = {
+		"Novara" "Schwarzenberg" "Helgoland" "Frundsberg" "Aurora" "Saida" "Nautilus" "Albatros" "Donau" "Lacroma" "Lika" "Principesse Augusta" "Austria" "Saida" "Maria Theresia" "H�chst�dt" "Falke" "Adler" "Delphin"
+	}
+	cruiser = {
+		"Habsburg" "Kaiser Karl IV" "Sankt Georg" "Admiral Spaun" "Saida" "Helgoland" "Novara" "Donau" "Laudon" "Minerva" "Tiger" "Leopold" "Panther" "Csepel" "Dukla" "Kaiman" "Zenta" "Szigetv�r" "Aspern" "Boa" "Pluto" "Zenta" "Uzsok" "Ulan" "Warasdiner" "Streiter" "Schrafschutze" "Wildfang" "H�chst�dt" "Schwarzenberg" "Frundsberg" "Kaiserin Elizabeth" "Kaiser Franz Joseph I" "Aurora" "Inn" "Pola" "Triest" "Lissa" "Tatra" "Triglav" "Balaton" "Csepel" "Husz�r"
+	}
+	modern_cruiser = {
+		"Kaiser Maximilian" "Don Juan D'Austria" "Austria" "Hungary" "Budapest" "Wien" "Praha" "Erz. Karl" "Erz. Ferndinand Max" "Erz. Friedrich" "K. Erz. Stephanie" "K. Erz. Rudolf" "Szent L�szl�" "Monarch" "Arpad" "Babenburg" "Custoza" "Kaiser Franz I" "Kaiser Karl V" "Kaiser Franz Joseph II" "Kaiserin Maria Theresia" "Erz. Franz Ferdinand" "Radetzky" "Zrinyi" "Viribis Unitis" "Tegetthoff" "Prinz Eugen" "Prinz Metternich" "Szent Istvan"
+	}
+	frigate = {
+		"Guerriera" "Bellona" "Medea" "Venus" "Admiral Spaun" "Kaiserin Elisabeth" "Saida" "Sankt Georg" "Austria" "Schwarzenberg" "Aurora" "Donau" "Inn" "Pola" "Triest"
+	}
+	modern_destroyer = {
+		"Hum" "Trabant" "Taurus" "Vesta" "Dalmat" "Cam�lion" "Kopernik" "Drach" "Salamander" "Aquila" "Sterneck" "Principesse Augusta" "Maros" "Leitha" "Szamos" "K�r�s" "R�ka" "G�a" "Gigant"
+	}
+	destroyer = {
+		"Habsburg" "Viribus Unitis" "Ferdinand Max" "Aquila" "Montecuccoli" "Sterneck" "Kaiserin Maria Theresia" "Radetzky"
+	}
+	submarine = {
+		"Principesse Augusta" "Maros" "Leitha" "Szamos" "K�r�s" "R�ka" "G�a" "Gigant" "Hum" "Trabant" "Taurus" "Vesta" "Dalmat" "Cam�lion" "Kopernik" "Drach" "Salamander" "Aquila" "Sterneck"
+	}
+
+}

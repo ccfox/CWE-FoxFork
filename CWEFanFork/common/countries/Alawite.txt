@@ -1,0 +1,163 @@
+graphical_culture = MiddleEasternGC
+color = { 27 130 137 }
+party = {
+		name = "Nationalist Bloc"
+		citizenship_policy = residency
+		economic_policy = planned_economy
+		ideology = nationalist
+		religious_policy = moralism
+		trade_policy = free_trade
+		war_policy = pro_military
+		start_date = 1836.1.1
+		end_date = 2100.1.1
+}
+party = {
+		name = "Nationalist Bloc (Moderate)"
+		citizenship_policy = limited_citizenship
+		economic_policy = interventionism
+		ideology = conservative
+		religious_policy = secularized
+		trade_policy = free_trade
+		war_policy = pro_military
+		start_date = 1836.1.1
+		end_date = 2100.1.1
+}
+party = {
+		name = "Nationalist Bloc (Center)"
+		citizenship_policy = full_citizenship
+		economic_policy = interventionism
+		ideology = big_tent
+		religious_policy = secularized
+		trade_policy = free_trade
+		war_policy = pro_military
+		start_date = 1836.1.1
+		end_date = 2100.1.1
+}
+party = {
+		name = "Popular Front (Liberal)"
+		citizenship_policy = full_citizenship
+		economic_policy = laissez_faire
+		ideology = liberal
+		religious_policy = secularized
+		trade_policy = free_trade
+		war_policy = pacifism
+		start_date = 1836.1.1
+		end_date = 2092.1.1
+}
+party = {
+		name = "Popular Front (Social Democrat)"
+		citizenship_policy = full_citizenship
+		economic_policy = state_capitalism
+		ideology = social_democrat
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = pro_military
+		start_date = 1836.1.1
+		end_date = 2092.1.1
+}
+party = {
+		name = "Socialist Ba'ath Party"
+		citizenship_policy = limited_citizenship
+		economic_policy = planned_economy1
+		ideology = socialist
+		religious_policy = pro_atheism
+		trade_policy = protectionism
+		war_policy = pro_military
+		start_date = 1836.1.1
+		end_date = 2092.1.1
+}
+party = {
+		name = "Popular Front (Progressive)"
+		citizenship_policy = full_citizenship
+		economic_policy = interventionism
+		ideology = progressive
+		religious_policy = pro_atheism
+		trade_policy = protectionism
+		war_policy = pacifism
+		start_date = 1836.1.1
+		end_date = 2092.1.1
+}
+party = {
+		name = "Socialist Ba'ath Party (Populist)"
+		citizenship_policy = residency
+		economic_policy = state_capitalism
+		ideology = populist
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = jingoism
+		start_date = 1836.1.1
+		end_date = 2092.1.1
+}
+party = {
+		name = "Nationalist Bloc (Islamists)"
+		citizenship_policy = residency
+		economic_policy = state_capitalism
+		ideology = traditionalist
+		religious_policy = moralism
+		trade_policy = protectionism
+		war_policy = pro_military
+		start_date = 1836.1.1
+		end_date = 2000.1.1
+}
+party = {
+		name = "Popular Front (Islamists)"
+		citizenship_policy = residency
+		economic_policy = state_capitalism
+		ideology = traditionalist
+		religious_policy = moralism
+		trade_policy = protectionism
+		war_policy = pro_military
+		start_date = 2000.1.1
+		end_date = 2092.1.1
+}
+party = {
+		name = "Alawite Communist Party"
+		citizenship_policy = full_citizenship
+		economic_policy = planned_economy
+		ideology = communist
+		religious_policy = pro_atheism
+		trade_policy = protectionism
+		war_policy = pro_military
+		start_date = 1836.1.1
+		end_date = 2092.1.1
+}
+party = {
+		name = "Socialist Unionist Party"
+		citizenship_policy = full_citizenship
+		economic_policy = planned_economy1
+		ideology = communist_social
+		religious_policy = pro_atheism
+		trade_policy = protectionism
+		war_policy = pro_military
+		start_date = 1836.1.1
+		end_date = 2092.1.1
+}
+unit_names = {
+	carrier = {
+		Syriana "Salah Al-Din" "Sultan Pasha al-Atrash" "al-Hattin" "al-Hirasa" "Tawfiq Bay" Sham Halab Lattakia Homs Hama Palmyra "Mu'aviyye" Tartus "Faisal I" "Sayf al-Sultan" Zainab "Minat al-Baida" Baniyas Kadisia "al-Assad" "Ibrahim Hananu" Karrusa "al-Abyad" "Al-Hakim Bi-Amrih"
+	}
+	transportship = {
+	}
+	modern_frigate = {
+		Syriana "Salah Al-Din" "Sultan Pasha al-Atrash" "al-Hattin" "al-Hirasa" "Tawfiq Bay" Sham Halab Lattakia Homs Hama Palmyra "Mu'aviyye" Tartus "Faisal I" "Sayf al-Sultan" Zainab "Minat al-Baida" Baniyas Kadisia "al-Assad" Karrusa "al-Abyad" "Al-Hakim Bi-Amrih"
+	}
+	cruiser = {
+		Syriana "Salah Al-Din" "Sultan Pasha al-Atrash" "al-Hattin" "al-Hirasa" "Tawfiq Bay" Sham Halab Lattakia Homs Hama Palmyra "Mu'aviyye" Tartus "Faisal I" "Sayf al-Sultan" Zainab "Minat al-Baida" Baniyas Kadisia "al-Assad" Karrusa "al-Abyad" "Al-Hakim Bi-Amrih"
+	}
+	modern_cruiser = {
+		Syriana "Salah Al-Din" "Sultan Pasha al-Atrash" "al-Hattin" "al-Hirasa" "Tawfiq Bay" Sham Halab Lattakia Homs Hama Palmyra "Mu'aviyye" Tartus "Faisal I" "Sayf al-Sultan" Zainab "Minat al-Baida" Baniyas Kadisia "al-Assad" "Ibrahim Hananu" Karrusa "al-Abyad" "Al-Hakim Bi-Amrih"
+	}
+	frigate = {
+		Syriana "Salah Al-Din" "Sultan Pasha al-Atrash" "al-Hattin" "al-Hirasa" "Tawfiq Bay" Sham Halab Lattakia Homs Hama Palmyra "Mu'aviyye" Tartus "Faisal I" "Sayf al-Sultan" Zainab "Minat al-Baida" Baniyas Kadisia "al-Assad" Karrusa "al-Abyad" "Al-Hakim Bi-Amrih"
+	}
+	modern_destroyer = {
+		Syriana "Salah Al-Din" "Sultan Pasha al-Atrash" "al-Hattin" "al-Hirasa" "Tawfiq Bay" Sham Halab Lattakia Homs Hama Palmyra "Mu'aviyye" Tartus "Faisal I" "Sayf al-Sultan" Zainab "Minat al-Baida" Baniyas Kadisia "al-Assad" Karrusa "al-Abyad" "Al-Hakim Bi-Amrih"
+	}
+	destroyer = {
+		Syriana "Salah Al-Din" "Sultan Pasha al-Atrash" "al-Hattin" "al-Hirasa" "Tawfiq Bay" Sham Halab Lattakia Homs Hama Palmyra "Mu'aviyye" Tartus "Faisal I" "Sayf al-Sultan" Zainab "Minat al-Baida" Baniyas Kadisia "al-Assad" Karrusa "al-Abyad" "Al-Hakim Bi-Amrih"
+	}
+	submarine = {
+		Syriana "Salah Al-Din" "Sultan Pasha al-Atrash" "al-Hattin" "al-Hirasa" "Tawfiq Bay" Sham Halab Lattakia Homs Hama Palmyra "Mu'aviyye" Tartus "Faisal I" "Sayf al-Sultan" Zainab "Minat al-Baida" Baniyas Kadisia "al-Assad" Karrusa "al-Abyad" "Al-Hakim Bi-Amrih"
+	}
+
+}
