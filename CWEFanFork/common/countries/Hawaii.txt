@@ -4,29 +4,6 @@ colonial_government = { 120 226 250 }
 party = {
 		name = "Hawaiian Independent Party"
 		citizenship_policy = limited_citizenship
-		economic_policy = state_capitalism
-		ideology = nationalist
-		religious_policy = secularized
-		trade_policy = protectionism
-		war_policy = jingoism
-		start_date = 1836.1.1
-		end_date = 2100.1.1
-}
-party = {
-		name = "party_big_tent_0_generic_USA"
-		citizenship_policy = full_citizenship
-		economic_policy = interventionism
-		ideology = big_tent
-		religious_policy = secularized
-		trade_policy = free_trade
-		war_policy = pro_military
-		start_date = 1836.1.1
-		end_date = 2100.1.1
-}
-
-party = {
-		name = "party_conservative_0_generic_USA"
-		citizenship_policy = limited_citizenship
 		economic_policy = interventionism
 		ideology = conservative
 		religious_policy = secularized
@@ -36,7 +13,29 @@ party = {
 		end_date = 2092.1.1
 }
 party = {
-		name = "party_liberal_0_generic_USA"
+		name = "Hawai'i Republican Party (Centrist)"
+		citizenship_policy = limited_citizenship
+		economic_policy = interventionism
+		ideology = big_tent
+		religious_policy = secularized
+		trade_policy = free_trade
+		war_policy = pacifism
+		start_date = 1836.1.1
+		end_date = 2092.1.1
+}
+party = {
+		name = "Hawai'i Republican Party"
+		citizenship_policy = limited_citizenship
+		economic_policy = interventionism
+		ideology = conservative
+		religious_policy = moralism
+		trade_policy = free_trade
+		war_policy = pro_military
+		start_date = 1836.1.1
+		end_date = 2092.1.1
+}
+party = {
+		name = "Democratic Party of Hawai'i"
 		citizenship_policy = full_citizenship
 		economic_policy = laissez_faire
 		ideology = liberal
@@ -47,18 +46,29 @@ party = {
 		end_date = 2092.1.1
 }
 party = {
-		name = "party_socialist_0_generic_USA"
-		citizenship_policy = limited_citizenship
+		name = "Democratic Party of Hawai'i (SD)"
+		citizenship_policy = full_citizenship
 		economic_policy = state_capitalism
-		ideology = socialist
-		religious_policy = pro_atheism
+		ideology = social_democrat
+		religious_policy = secularized
 		trade_policy = protectionism
 		war_policy = pacifism
 		start_date = 1836.1.1
 		end_date = 2092.1.1
 }
 party = {
-		name = "party_progressive_0_generic_USA"
+		name = "Communist Party of Hawai'i (Liberal)"
+		citizenship_policy = full_citizenship
+		economic_policy = planned_economy1
+		ideology = socialist
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = pacifism
+		start_date = 1836.1.1
+		end_date = 2092.1.1
+}
+party = {
+		name = "Democratic Party of Hawai'i (Progressive)"
 		citizenship_policy = full_citizenship
 		economic_policy = interventionism
 		ideology = progressive
@@ -69,7 +79,7 @@ party = {
 		end_date = 2092.1.1
 }
 party = {
-		name = "party_populist_0_generic_USA"
+		name = "Hawai'i Party"
 		citizenship_policy = residency
 		economic_policy = state_capitalism
 		ideology = populist
@@ -80,7 +90,7 @@ party = {
 		end_date = 2092.1.1
 }
 party = {
-		name = "party_traditionalist_0_generic_USA"
+		name = "National Party"
 		citizenship_policy = residency
 		economic_policy = state_capitalism
 		ideology = traditionalist
@@ -91,7 +101,7 @@ party = {
 		end_date = 2092.1.1
 }
 party = {
-		name = "party_communist_0_generic_USA"
+		name = "Communist Party of Hawai'i"
 		citizenship_policy = full_citizenship
 		economic_policy = planned_economy
 		ideology = communist
@@ -102,24 +112,13 @@ party = {
 		end_date = 2092.1.1
 }
 party = {
-		name = "party_communist_social_0_generic_USA"
+		name = "Communist Party of Hawai'i (Reformist)"
 		citizenship_policy = full_citizenship
 		economic_policy = state_capitalism
 		ideology = communist_social
 		religious_policy = pro_atheism
 		trade_policy = protectionism
 		war_policy = pro_military
-		start_date = 1836.1.1
-		end_date = 2092.1.1
-}
-party = {
-		name = "social_democrat_party"
-		citizenship_policy = full_citizenship
-		economic_policy = state_capitalism
-		ideology = social_democrat
-		religious_policy = secularized
-		trade_policy = protectionism
-		war_policy = pacifism
 		start_date = 1836.1.1
 		end_date = 2092.1.1
 }
