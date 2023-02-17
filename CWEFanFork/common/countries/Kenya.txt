@@ -1,0 +1,383 @@
+graphical_culture = AfricanGC
+color = { 86 114 143 }
+party = {
+		name = "Kenya Land and Freedom Army"
+		citizenship_policy = limited_citizenship
+		economic_policy = state_capitalism
+		ideology = nationalist
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = pro_military
+		start_date = 1836.1.1
+		end_date = 2100.1.1
+}
+party = {
+		name = "Kenya National Party"
+		citizenship_policy = full_citizenship
+		economic_policy = interventionism
+		ideology = big_tent
+		religious_policy = secularized
+		trade_policy = free_trade
+		war_policy = pro_military
+		start_date = 1836.1.1
+		end_date = 1960.3.1
+}
+party = {
+		name = "Kenya African Democratic Union"
+		citizenship_policy = full_citizenship
+		economic_policy = interventionism
+		ideology = big_tent
+		religious_policy = secularized
+		trade_policy = free_trade
+		war_policy = pro_military
+		start_date = 1960.3.1
+		end_date = 1991.1.1
+}
+party = {
+		name = "Democratic Party"
+		citizenship_policy = full_citizenship
+		economic_policy = interventionism
+		ideology = big_tent
+		religious_policy = secularized
+		trade_policy = free_trade
+		war_policy = pro_military
+		start_date = 1991.1.1
+		end_date = 2007.8.1
+}
+party = {
+		name = "Party of National Unity"
+		citizenship_policy = full_citizenship
+		economic_policy = interventionism
+		ideology = big_tent
+		religious_policy = secularized
+		trade_policy = free_trade
+		war_policy = pro_military
+		start_date = 2007.8.1
+		end_date = 2100.1.1
+}
+party = {
+		name = "Kenya African Study Union"
+		citizenship_policy = full_citizenship
+		economic_policy = interventionism
+		ideology = conservative
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = pacifism
+		start_date = 1836.1.1
+		end_date = 1947.1.1
+}
+party = {
+		name = "Kenya African Union"
+		citizenship_policy = full_citizenship
+		economic_policy = interventionism
+		ideology = conservative
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = pacifism
+		start_date = 1947.1.1
+		end_date = 1960.5.14
+}
+party = {
+		name = "Kenya African National Union"
+		citizenship_policy = full_citizenship
+		economic_policy = interventionism
+		ideology = conservative
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = pro_military
+		start_date = 1960.5.14
+		end_date = 2012.1.1
+}
+party = {
+		name = "The National Party"
+		citizenship_policy = full_citizenship
+		economic_policy = interventionism
+		ideology = conservative
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = pro_military
+		start_date = 2012.1.1
+		end_date = 2092.1.1
+}
+party = {
+		name = "Jubilee Party of Kenya"
+		citizenship_policy = limited_citizenship
+		economic_policy = laissez_faire
+		ideology = conservative
+		religious_policy = secularized
+		trade_policy = free_trade
+		war_policy = pro_military
+		start_date = 2016.9.7
+		end_date = 2092.1.1
+}
+party = {
+		name = "New Kenya Party"
+		citizenship_policy = full_citizenship
+		economic_policy = laissez_faire
+		ideology = liberal
+		religious_policy = secularized
+		trade_policy = free_trade
+		war_policy = pacifism
+		start_date = 1836.1.1
+		end_date = 1962.9.1
+}
+party = {
+		name = "African People's Party"
+		citizenship_policy = full_citizenship
+		economic_policy = laissez_faire
+		ideology = liberal
+		religious_policy = secularized
+		trade_policy = free_trade
+		war_policy = pro_military
+		start_date = 1962.9.1
+		end_date = 1991.12.25
+}
+party = {
+		name = "FORD-Asili"
+		citizenship_policy = full_citizenship
+		economic_policy = laissez_faire
+		ideology = liberal
+		religious_policy = secularized
+		trade_policy = free_trade
+		war_policy = pro_military
+		start_date = 1991.12.25
+		end_date = 2002.1.1
+}
+party = {
+		name = "Liberal Democratic Party"
+		citizenship_policy = full_citizenship
+		economic_policy = laissez_faire
+		ideology = liberal
+		religious_policy = secularized
+		trade_policy = free_trade
+		war_policy = pro_military
+		start_date = 2002.1.1
+		end_date = 2005.1.1
+}
+party = {
+		name = "Orange Democratic Movement"
+		citizenship_policy = full_citizenship
+		economic_policy = laissez_faire
+		ideology = liberal
+		religious_policy = secularized
+		trade_policy = free_trade
+		war_policy = pro_military
+		start_date = 2005.1.1
+		end_date = 2092.1.1
+}
+party = {
+		name = "Nairobi People Convention Party"
+		citizenship_policy = full_citizenship
+		economic_policy = state_capitalism
+		ideology = socialist
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = pacifism
+		start_date = 1836.1.1
+		end_date = 1966.1.1
+}
+party = {
+		name = "Kenya People's Union"
+		citizenship_policy = full_citizenship
+		economic_policy = state_capitalism
+		ideology = socialist
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = pacifism
+		start_date = 1966.1.1
+		end_date = 1991.1.1
+}
+party = {
+		name = "FORD-Kenya"
+		citizenship_policy = full_citizenship
+		economic_policy = interventionism
+		ideology = socialist
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = pacifism
+		start_date = 1991.1.1
+		end_date = 2006.3.1
+}
+party = {
+		name = "Orange Democratic Movement Kenya"
+		citizenship_policy = full_citizenship
+		economic_policy = interventionism
+		ideology = socialist
+		religious_policy = secularized
+		trade_policy = free_trade
+		war_policy = pacifism
+		start_date = 2006.3.1
+		end_date = 2011.3.1
+}
+party = {
+		name = "Wiper Democratic Movement Kenya"
+		citizenship_policy = full_citizenship
+		economic_policy = interventionism
+		ideology = socialist
+		religious_policy = secularized
+		trade_policy = free_trade
+		war_policy = pacifism
+		start_date = 2011.3.1
+		end_date = 2092.1.1
+}
+party = {
+		name = "Kenya Indian Congress"
+		citizenship_policy = full_citizenship
+		economic_policy = interventionism
+		ideology = progressive
+		religious_policy = pro_atheism
+		trade_policy = protectionism
+		war_policy = pacifism
+		start_date = 1836.1.1
+		end_date = 1991.1.1
+}
+party = {
+		name = "Kenya National Congress"
+		citizenship_policy = full_citizenship
+		economic_policy = interventionism
+		ideology = progressive
+		religious_policy = pro_atheism
+		trade_policy = protectionism
+		war_policy = pacifism
+		start_date = 1991.1.1
+		end_date = 1997.1.1
+}
+party = {
+		name = "Safina"
+		citizenship_policy = full_citizenship
+		economic_policy = interventionism
+		ideology = progressive
+		religious_policy = pro_atheism
+		trade_policy = protectionism
+		war_policy = pacifism
+		start_date = 1997.1.1
+		end_date = 2092.1.1
+}
+party = {
+		name = "Federal Independence Party"
+		citizenship_policy = residency
+		economic_policy = interventionism
+		ideology = populist
+		religious_policy = secularized
+		trade_policy = free_trade
+		war_policy = pro_military
+		start_date = 1836.1.1
+		end_date = 1959.8.1
+}
+party = {
+		name = "United Party"
+		citizenship_policy = residency
+		economic_policy = interventionism
+		ideology = populist
+		religious_policy = secularized
+		trade_policy = free_trade
+		war_policy = pro_military
+		start_date = 1959.8.1
+		end_date = 1960.3.1
+}
+party = {
+		name = "Kenya Coalition"
+		citizenship_policy = residency
+		economic_policy = interventionism
+		ideology = populist
+		religious_policy = secularized
+		trade_policy = free_trade
+		war_policy = pro_military
+		start_date = 1960.3.1
+		end_date = 2092.1.1
+}
+party = {
+		name = "party_traditionalist_0_KEN"
+		citizenship_policy = residency
+		economic_policy = state_capitalism
+		ideology = traditionalist
+		religious_policy = moralism
+		trade_policy = protectionism
+		war_policy = pro_military
+		start_date = 1836.1.1
+		end_date = 2092.1.1
+}
+party = {
+		name = "Kenya People's Union"
+		citizenship_policy = full_citizenship
+		economic_policy = planned_economy
+		ideology = communist
+		religious_policy = pro_atheism
+		trade_policy = protectionism
+		war_policy = pacifism
+		start_date = 1836.1.1
+		end_date = 2019.1.1
+}
+party = {
+		name = "Communist Party of Kenya"
+		citizenship_policy = full_citizenship
+		economic_policy = planned_economy
+		ideology = communist
+		religious_policy = pro_atheism
+		trade_policy = protectionism
+		war_policy = pacifism
+		start_date = 2019.1.1
+		end_date = 2092.1.1
+}
+party = {
+		name = "Kenya People's Union"
+		citizenship_policy = full_citizenship
+		economic_policy = planned_economy1
+		ideology = communist_social
+		religious_policy = pro_atheism
+		trade_policy = protectionism
+		war_policy = pro_military
+		start_date = 1836.1.1
+		end_date = 2019.1.1
+}
+party = {
+		name = "Communist Party of Kenya"
+		citizenship_policy = full_citizenship
+		economic_policy = planned_economy1
+		ideology = communist_social
+		religious_policy = pro_atheism
+		trade_policy = protectionism
+		war_policy = pro_military
+		start_date = 2019.1.1
+		end_date = 2092.1.1
+}
+party = {
+		name = "social_democrat_party"
+		citizenship_policy = full_citizenship
+		economic_policy = state_capitalism
+		ideology = social_democrat
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = pacifism
+		start_date = 1836.1.1
+		end_date = 2092.1.1
+}
+unit_names = {
+	carrier = {
+		Mwami Karyenda Nzambi KENanda Upemba Mwari Mulopwe Mulungu Mbonga Bambudye Mazendere Mboko Musikavanhu Mutorwa
+	}
+	transportship = {
+	}
+	modern_frigate = {
+		Mwami Karyenda Nzambi KENanda Upemba Mwari Mulopwe Mulungu Mbonga Bambudye Mazendere Mboko Musikavanhu Mutorwa
+	}
+	cruiser = {
+		Mwami Karyenda Nzambi KENanda Upemba Mwari Mulopwe Mulungu Mbonga Bambudye Mazendere Mboko Musikavanhu Mutorwa
+	}
+	modern_cruiser = {
+		Mwami Karyenda Nzambi KENanda Upemba Mwari Mulopwe Mulungu Mbonga Bambudye Mazendere Mboko Musikavanhu Mutorwa
+	}
+	frigate = {
+		Mwami Karyenda Nzambi KENanda Upemba Mwari Mulopwe Mulungu Mbonga Bambudye Mazendere Mboko Musikavanhu Mutorwa
+	}
+	modern_destroyer = {
+		Mwami Karyenda Nzambi KENanda Upemba Mwari Mulopwe Mulungu Mbonga Bambudye Mazendere Mboko Musikavanhu Mutorwa
+	}
+	destroyer = {
+		Mwami Karyenda Nzambi KENanda Upemba Mwari Mulopwe Mulungu Mbonga Bambudye Mazendere Mboko Musikavanhu Mutorwa
+	}
+	submarine = {
+		Mwami Karyenda Nzambi KENanda Upemba Mwari Mulopwe Mulungu Mbonga Bambudye Mazendere Mboko Musikavanhu Mutorwa
+	}
+
+}
