@@ -1,0 +1,2985 @@
+#modern_shipyard, 1946
+modern_shipyard_invention = {
+	limit = { modern_shipyard = 1 }
+	chance = {
+		base = 0
+		modifier = {
+			factor = 4
+			has_country_modifier = wonder_weapons
+		}
+		modifier = {
+			factor = 2
+			military_spending = 0.50
+		}
+		modifier = {
+			factor = 2
+			military_spending = 0.75
+		}
+		modifier = {
+			factor = -2
+			is_greater_power = no 
+			is_secondary_power = no
+		}
+		modifier = {
+			factor = 2
+OR = { has_country_modifier = spcno has_country_modifier = military_tech_cooperation }
+		}
+	}
+	effect = {
+	
+	#Battlecruiser
+	modern_cruiser = {
+	hull = 5
+	}
+
+	#Cruiser
+	cruiser = {
+	hull = 5
+	}
+
+	#Corvette
+	modern_frigate = {
+	hull = 5
+	}
+
+	#Frigate
+	frigate = {
+	hull = 5
+	}
+
+	#Destroyer
+	destroyer = {
+	hull = 5
+	}
+	
+	}
+
+}
+
+#seabees, 1946
+i_naval_industry = {
+	limit = { seabees = 1 }
+	chance = {
+		base = 0
+		modifier = {
+			factor = 4
+			has_country_modifier = wonder_weapons
+		}
+		modifier = {
+			factor = 2
+			military_spending = 0.50
+		}
+		modifier = {
+			factor = 2
+			military_spending = 0.75
+		}
+		modifier = {
+			factor = -2
+			is_greater_power = no 
+			is_secondary_power = no
+		}
+		modifier = {
+			factor = 2
+OR = { has_country_modifier = spcno has_country_modifier = military_tech_cooperation }
+		}
+	}
+	effect = {
+	
+	#Battlecruiser
+	modern_cruiser = {
+	hull = 1
+	}
+
+	#Cruiser
+	cruiser = {
+	hull = 1
+	}
+
+	#Corvette
+	modern_frigate = {
+	hull = 1
+	}
+
+	#Frigate
+	frigate = {
+	hull = 1
+	}
+
+	#Destroyer
+	destroyer = {
+	hull = 1
+	}
+	
+	}
+
+}
+
+#submarine_base, 1946
+
+#nuclear_reactors, 1950
+
+#artificial_island, 1960
+
+#naval_sea_systems_command, 1970
+
+#mobile_offshore_base, 1990
+naval_warfare_center_invention = {
+	limit = { mobile_offshore_base = 1 }
+	chance = {
+		base = 0
+		modifier = {
+			factor = 4
+			has_country_modifier = wonder_weapons
+		}
+		modifier = {
+			factor = 2
+			military_spending = 0.50
+		}
+		modifier = {
+			factor = 2
+			military_spending = 0.75
+		}
+		modifier = {
+			factor = -2
+			is_greater_power = no 
+			is_secondary_power = no
+		}
+		modifier = {
+			factor = 2
+OR = { has_country_modifier = spcno has_country_modifier = military_tech_cooperation }
+		}
+	}
+	effect = {
+	
+	#Nuclear Aircraft Carrier
+	modern_destroyer = {
+	fire_range = 0.05
+	}
+
+	#Aircraft Carrier
+	carrier = {
+	fire_range = 0.05
+	}
+
+	#Battlecruiser
+	modern_cruiser = {
+	fire_range = 0.05
+	}
+
+	#Cruiser
+	cruiser = {
+	fire_range = 0.05
+	}
+
+	#Corvette
+	modern_frigate = {
+	fire_range = 0.05
+	}
+
+	#Frigate
+	frigate = {
+	fire_range = 0.05
+	}
+
+	#Destroyer
+	destroyer = {
+	fire_range = 0.05
+	}
+
+	#Submarine
+	submarine = {
+	fire_range = 0.05
+	}
+
+	#Fast Attack Craft
+	patrolboat = {
+	fire_range = 0.05
+	}
+
+	#Transport Ship
+	transportship = {
+	fire_range = 0.05
+	}
+	
+	}
+
+}
+standard_overseas_naval_base = {
+	limit = { mobile_offshore_base = 1 }
+	chance = {
+		base = 0
+		modifier = {
+			factor = 4
+			has_country_modifier = wonder_weapons
+		}
+		modifier = {
+			factor = 2
+			military_spending = 0.50
+		}
+		modifier = {
+			factor = 2
+			military_spending = 0.75
+		}
+		modifier = {
+			factor = -2
+			is_greater_power = no 
+			is_secondary_power = no
+		}
+		modifier = {
+			factor = 2
+OR = { has_country_modifier = spcno has_country_modifier = military_tech_cooperation }
+		}
+	}
+	effect = {
+		navy_base = {
+			default_organisation = 1
+		}
+	}
+}
+
+#modern_shipping, 2010
+
+#orbital_engineering, 2030
+
+#shipyard_automation, 2070
+
+#modern_shipbuilding, 1946
+modern_cruiser_invention = {
+	limit = { modern_shipbuilding = 1 }
+	chance = {
+		base = 0
+		modifier = {
+			factor = 4
+			has_country_modifier = wonder_weapons
+		}
+		modifier = {
+			factor = 2
+			military_spending = 0.50
+		}
+		modifier = {
+			factor = 2
+			military_spending = 0.75
+		}
+		modifier = {
+			factor = -2
+			is_greater_power = no 
+			is_secondary_power = no
+		}
+		modifier = {
+			factor = 2
+			OR = { has_country_modifier = spcno has_country_modifier = military_tech_cooperation }
+		}
+	}
+	effect = {
+	
+	#Crusier
+	activate_unit = cruiser
+	
+	}
+
+}
+
+postwar_submarine_invention = {
+	limit = { modern_shipbuilding = 1 }
+	chance = {
+		base = 0
+		modifier = {
+			factor = 4
+			has_country_modifier = wonder_weapons
+		}
+		modifier = {
+			factor = 2
+			military_spending = 0.50
+		}
+		modifier = {
+			factor = 2
+			military_spending = 0.75
+		}
+		modifier = {
+			factor = -2
+			is_greater_power = no 
+			is_secondary_power = no
+		}
+		modifier = {
+			factor = 2
+			OR = { has_country_modifier = spcno has_country_modifier = military_tech_cooperation }
+		}
+	}
+	effect = {
+	
+		#Submarine
+		activate_unit = submarine
+	
+	}
+
+}
+fish_processing = {
+	limit = { modern_shipbuilding = 1 }
+	chance = {
+		base = 2
+		modifier = {
+			factor = 4
+			has_country_modifier = wonder_weapons
+		}
+		modifier = {
+			factor = 2
+			military_spending = 0.50
+		}
+		modifier = {
+			factor = 2
+			military_spending = 0.75
+		}
+		modifier = {
+			factor = -2
+			is_greater_power = no 
+			is_secondary_power = no
+		}
+		modifier = {
+			factor = 2
+OR = { has_country_modifier = spcno has_country_modifier = military_tech_cooperation }
+		}
+
+		modifier = {
+			factor = 2
+			post_war_radar = 1
+		}
+	}
+	effect = {
+		factory_goods_throughput = {
+			canned_food = 0.05
+		}
+	}
+}
+steamer_transports = {
+	limit = { modern_shipbuilding = 1 }
+	chance = {
+		base = 0
+		modifier = {
+			factor = 4
+			has_country_modifier = wonder_weapons
+		}
+		modifier = {
+			factor = 2
+			military_spending = 0.50
+		}
+		modifier = {
+			factor = 2
+			military_spending = 0.75
+		}
+		modifier = {
+			factor = -2
+			is_greater_power = no 
+			is_secondary_power = no
+		}
+		modifier = {
+			factor = 2
+OR = { has_country_modifier = spcno has_country_modifier = military_tech_cooperation }
+		}
+
+		modifier = {
+			factor = 2
+			modern_shipyard = 1
+		}
+	}
+	effect = {
+		transportship = {
+			hull = 2
+			evasion = 0.02
+			maximum_speed = 1
+		}
+	}
+}
+commerce_raiders = {
+	limit = { modern_shipbuilding = 1 }
+	chance = {
+		base = 0
+		modifier = {
+			factor = 4
+			has_country_modifier = wonder_weapons
+		}
+		modifier = {
+			factor = 2
+			military_spending = 0.50
+		}
+		modifier = {
+			factor = 2
+			military_spending = 0.75
+		}
+		modifier = {
+			factor = -2
+			is_greater_power = no 
+			is_secondary_power = no
+		}
+		modifier = {
+			factor = 2
+OR = { has_country_modifier = spcno has_country_modifier = military_tech_cooperation }
+		}
+
+		modifier = {
+			factor = 1
+			supercarriers = 1
+		}
+		modifier = {
+			factor = 3
+			mobile_offshore_base = 1
+		}
+	}
+	effect = {
+		transportship = {
+			hull = 2
+			evasion = 0.02
+			maximum_speed = 1
+		}
+		submarine = {
+			evasion = 0.02
+			maximum_speed = 1
+		}
+	}
+}
+
+#corvettes, 1946
+building_station_shipyards = { #block_construction
+	limit = { corvettes = 1 } #modern_shipbuilding
+	chance = {
+		base = 2
+		modifier = {
+			factor = 4
+			has_country_modifier = wonder_weapons
+		}
+		modifier = {
+			factor = 2
+			military_spending = 0.50
+		}
+		modifier = {
+			factor = 2
+			military_spending = 0.75
+		}
+		modifier = {
+			factor = -2
+			is_greater_power = no 
+			is_secondary_power = no
+		}
+		modifier = {
+			factor = 2
+OR = { has_country_modifier = spcno has_country_modifier = military_tech_cooperation }
+		}
+
+		modifier = {
+			factor = 2
+			naval_sea_systems_command = 1
+		}
+		modifier = {
+			factor = 1
+			modern_shipyard = 1
+		}
+	}
+	effect = {
+		factory_goods_throughput = {
+			ships = 0.05 #0.10
+		}
+	}
+}
+crusier_upgrade_invention = {
+	limit = { corvettes = 1 }
+	chance = {
+		base = 0
+		modifier = {
+			factor = 4
+			has_country_modifier = wonder_weapons
+		}
+		modifier = {
+			factor = 2
+			military_spending = 0.50
+		}
+		modifier = {
+			factor = 2
+			military_spending = 0.75
+		}
+		modifier = {
+			factor = -2
+			is_greater_power = no 
+			is_secondary_power = no
+		}
+		modifier = {
+			factor = 2
+OR = { has_country_modifier = spcno has_country_modifier = military_tech_cooperation }
+		}
+	}
+	effect = {
+	
+	#Cruiser
+	cruiser = {
+	hull = 5
+	maximum_speed = 2
+	}
+
+	}
+
+}
+
+modern_corvettes_invention = {
+	limit = { corvettes = 1 }
+	chance = {
+		base = 0
+		modifier = {
+			factor = 4
+			has_country_modifier = wonder_weapons
+		}
+		modifier = {
+			factor = 2
+			military_spending = 0.50
+		}
+		modifier = {
+			factor = 2
+			military_spending = 0.75
+		}
+		modifier = {
+			factor = -2
+			is_greater_power = no 
+			is_secondary_power = no
+		}
+		modifier = {
+			factor = 2
+OR = { has_country_modifier = spcno has_country_modifier = military_tech_cooperation }
+		}
+	}
+	effect = {
+	
+	#Corvette
+	activate_unit = modern_frigate
+
+	}
+
+}
+#modern_frigates_invention = {
+#	limit = { corvettes = 1 }
+#	chance = {
+#		base = 0
+#		modifier = {
+#			factor = 4
+#			has_country_modifier = wonder_weapons
+#		}
+#		modifier = {
+#			factor = 2
+#			military_spending = 0.50
+#		}
+#		modifier = {
+#			factor = 2
+#			military_spending = 0.75
+#		}
+#		modifier = {
+#			factor = -2
+#			is_greater_power = no 
+#			is_secondary_power = no
+#		}
+#		modifier = {
+#			factor = 2
+#OR = { has_country_modifier = spcno has_country_modifier = military_tech_cooperation }
+#		}
+#	}
+#	effect = {
+#	
+#	#activate_unit = frigate
+#	
+#	}
+#
+#}
+
+frigate_upgrade_invention = {
+	limit = { corvettes = 1 }
+	chance = {
+		base = 0
+		modifier = {
+			factor = 4
+			has_country_modifier = wonder_weapons
+		}
+		modifier = {
+			factor = 2
+			military_spending = 0.50
+		}
+		modifier = {
+			factor = 2
+			military_spending = 0.75
+		}
+		modifier = {
+			factor = -2
+			is_greater_power = no 
+			is_secondary_power = no
+		}
+		modifier = {
+			factor = 2
+OR = { has_country_modifier = spcno has_country_modifier = military_tech_cooperation }
+		}
+	}
+	effect = {
+	
+	#Frigate
+	frigate = {
+	hull = 5
+	maximum_speed = 2
+	}
+
+	}
+
+}
+
+
+#guided_missile_destroyers, 1960
+corvette_upgrade_invention = {
+	limit = { guided_missile_destroyers = 1 }
+	chance = {
+		base = 0
+		modifier = {
+			factor = 4
+			has_country_modifier = wonder_weapons
+		}
+		modifier = {
+			factor = 2
+			military_spending = 0.50
+		}
+		modifier = {
+			factor = 2
+			military_spending = 0.75
+		}
+		modifier = {
+			factor = -2
+			is_greater_power = no 
+			is_secondary_power = no
+		}
+		modifier = {
+			factor = 2
+OR = { has_country_modifier = spcno has_country_modifier = military_tech_cooperation }
+		}
+	}
+	effect = {
+	
+	#Corvette
+	modern_frigate = {
+	hull = 5
+	maximum_speed = 2
+	}
+
+	}
+
+}
+
+modern_destroyers_invention = {
+	limit = { guided_missile_destroyers = 1 }
+	chance = {
+		base = 0
+		modifier = {
+			factor = 4
+			has_country_modifier = wonder_weapons
+		}
+		modifier = {
+			factor = 2
+			military_spending = 0.50
+		}
+		modifier = {
+			factor = 2
+			military_spending = 0.75
+		}
+		modifier = {
+			factor = -2
+			is_greater_power = no 
+			is_secondary_power = no
+		}
+		modifier = {
+			factor = 2
+OR = { has_country_modifier = spcno has_country_modifier = military_tech_cooperation }
+		}
+	}
+	effect = {
+	
+	activate_unit = destroyer
+	
+	}
+
+}
+
+intermodal_container = {
+	limit = { guided_missile_destroyers = 1 }
+	chance = {
+		base = 2
+		modifier = {
+			factor = 2
+			late_fordism = 1
+		}
+	}
+	effect = {
+		factory_goods_throughput = {
+			transport = 0.05
+		}
+	}
+}
+#nuclear_submarine, 1955
+nuclear_submarine_invention = {
+	limit = { nuclear_submarine = 1 }
+	chance = {
+		base = 0
+		modifier = {
+			factor = 4
+			has_country_modifier = wonder_weapons
+		}
+		modifier = {
+			factor = 2
+			military_spending = 0.50
+		}
+		modifier = {
+			factor = 2
+			military_spending = 0.75
+		}
+		modifier = {
+			factor = -2
+			is_greater_power = no 
+			is_secondary_power = no
+		}
+		modifier = {
+			factor = 2
+			OR = { has_country_modifier = spcno has_country_modifier = military_tech_cooperation }
+		}
+	}
+	effect = {
+		
+		#Submarine
+		submarine = {
+			hull = 5
+			maximum_speed = 2
+		}
+
+	}
+
+}
+
+destroyer_upgrade_invention = {
+	limit = { nuclear_submarine = 1 }
+	chance = {
+		base = 0
+		modifier = {
+			factor = 4
+			has_country_modifier = wonder_weapons
+		}
+		modifier = {
+			factor = 2
+			military_spending = 0.50
+		}
+		modifier = {
+			factor = 2
+			military_spending = 0.75
+		}
+		modifier = {
+			factor = -2
+			is_greater_power = no 
+			is_secondary_power = no
+		}
+		modifier = {
+			factor = 2
+OR = { has_country_modifier = spcno has_country_modifier = military_tech_cooperation }
+		}
+	}
+	effect = {
+	
+	#Destroyer
+	destroyer = {
+	hull = 5
+	maximum_speed = 2
+	}
+
+	}
+
+}
+
+hydrazine_propulsion = {
+	limit = { nuclear_submarine = 1 }
+	chance = {
+		base = 2
+		modifier = {
+			factor = 0
+NOT = { any_owned_province = { has_building = naval_base } }
+		}
+		modifier = {
+			factor = 2
+			has_country_modifier = wonder_weapons
+		}
+		modifier = {
+			factor = 2
+			military_spending = 0.50
+		}
+		modifier = {
+			factor = 2
+			military_spending = 0.75
+		}
+		modifier = {
+			factor = -2
+			is_greater_power = no 
+			is_secondary_power = no
+		}
+		modifier = {
+			factor = 2
+			OR = { has_country_modifier = spcno has_country_modifier = military_tech_cooperation }
+		}
+	}
+	effect = {
+		submarine = {
+			maximum_speed = 2
+			torpedo_attack = 2	
+		}
+	}
+}
+mechanized_fishing_vessels = {
+	limit = { nuclear_submarine = 1 }
+	chance = {
+		base = 4
+	}
+	effect = {
+		rgo_goods_output = {
+			fish = 0.5
+		}
+		rgo_size = {
+			fish = -0.25
+		}
+	}
+}
+#submarine_launched_ballistic_missile, 1960
+ballistic_missile_submarines = {
+	limit = { submarine_launched_ballistic_missile = 1 }
+	chance = {
+		base = 0
+		modifier = {
+			factor = -10
+NOT = { any_owned_province = { has_building = naval_base } }
+		}
+		modifier = {
+			factor = 2
+			has_country_modifier = wonder_weapons
+		}
+		modifier = {
+			factor = 2
+			military_spending = 0.50
+		}
+		modifier = {
+			factor = 2
+			military_spending = 0.75
+		}
+		modifier = {
+			factor = -2
+			is_greater_power = no 
+			is_secondary_power = no
+		}
+		modifier = {
+			factor = 2
+OR = { has_country_modifier = spcno has_country_modifier = military_tech_cooperation }
+		}
+
+	}
+	effect = {
+		submarine = {
+			maximum_speed = 2
+			torpedo_attack = 2	
+		}
+	}
+}
+
+guided_missile_destroyers_invention = {
+	limit = { submarine_launched_ballistic_missile = 1 }
+	chance = {
+		base = 0
+		modifier = {
+			factor = 4
+			has_country_modifier = wonder_weapons
+		}
+		modifier = {
+			factor = 2
+			military_spending = 0.50
+		}
+		modifier = {
+			factor = 2
+			military_spending = 0.75
+		}
+		modifier = {
+			factor = -2
+			is_greater_power = no 
+			is_secondary_power = no
+		}
+		modifier = {
+			factor = 2
+OR = { has_country_modifier = spcno has_country_modifier = military_tech_cooperation }
+		}
+	}
+	effect = {
+	
+	#Battlecruiser
+	modern_cruiser = {
+	hull = 5
+	maximum_speed = 2
+	}
+
+	#Cruiser
+	cruiser = {
+	hull = 5
+	maximum_speed = 2
+	}
+
+	#Corvette
+	modern_frigate = {
+	hull = 5
+	maximum_speed = 2
+	}
+
+	#Frigate
+	frigate = {
+	hull = 5
+	maximum_speed = 2
+	}
+
+	#Destroyer
+	destroyer = {
+	hull = 5
+	maximum_speed = 2
+	}
+
+	}
+
+}
+
+submarine_base_invention = {
+	limit = { submarine_launched_ballistic_missile = 1 }
+	chance = {
+		base = 0
+		modifier = {
+			factor = 4
+			has_country_modifier = wonder_weapons
+		}
+		modifier = {
+			factor = 2
+			military_spending = 0.50
+		}
+		modifier = {
+			factor = 2
+			military_spending = 0.75
+		}
+		modifier = {
+			factor = -2
+			is_greater_power = no 
+			is_secondary_power = no
+		}
+		modifier = {
+			factor = 2
+OR = { has_country_modifier = spcno has_country_modifier = military_tech_cooperation }
+		}
+	}
+	effect = {
+	
+	#Submarine
+	submarine = {
+	gun_power = 5
+	hull = 5
+	}
+	
+	}
+
+}
+
+submarine_upgrade_invention = {
+	limit = { submarine_launched_ballistic_missile = 1 }
+	chance = {
+		base = 0
+		modifier = {
+			factor = 4
+			has_country_modifier = wonder_weapons
+		}
+		modifier = {
+			factor = 2
+			military_spending = 0.50
+		}
+		modifier = {
+			factor = 2
+			military_spending = 0.75
+		}
+		modifier = {
+			factor = -2
+			is_greater_power = no 
+			is_secondary_power = no
+		}
+		modifier = {
+			factor = 2
+OR = { has_country_modifier = spcno has_country_modifier = military_tech_cooperation }
+		}
+	}
+	effect = {
+	
+	#Submarine
+		submarine = {
+			hull = 5
+			maximum_speed = 2
+		}
+
+	}
+
+}
+#vehicle_cargo_ship, 1972
+vehicle_cargo_ship_invention = {
+	limit = { vehicle_cargo_ship = 1 }
+	chance = {
+		base = 0
+		modifier = {
+			factor = 4
+			has_country_modifier = wonder_weapons
+		}
+		modifier = {
+			factor = 2
+			military_spending = 0.50
+		}
+		modifier = {
+			factor = 2
+			military_spending = 0.75
+		}
+		modifier = {
+			factor = -2
+			is_greater_power = no 
+			is_secondary_power = no
+		}
+		modifier = {
+			factor = 2
+OR = { has_country_modifier = spcno has_country_modifier = military_tech_cooperation }
+		}
+	}
+	effect = {
+	
+	#Transport Ship
+	transportship = {
+	maximum_speed = 2
+	}
+	
+	}
+
+}
+steamer_automatic_construction_plants = { #shipyard_robots
+	limit = { vehicle_cargo_ship = 1 }
+	chance = {
+		base = 4
+		modifier = {
+			factor = 2
+			invention = building_station_shipyards
+		}
+	}
+	effect = {
+		factory_goods_throughput = {
+			ships = 0.05 #0.10
+		}
+	}
+}
+
+
+#ballistic_missile_submarine, 1990
+ballistic_missile_submarine_invention = {
+	limit = { ballistic_missile_submarine = 1 }
+	chance = {
+		base = 0
+		modifier = {
+			factor = 4
+			has_country_modifier = wonder_weapons
+		}
+		modifier = {
+			factor = 2
+			military_spending = 0.50
+		}
+		modifier = {
+			factor = 2
+			military_spending = 0.75
+		}
+		modifier = {
+			factor = -2
+			is_greater_power = no 
+			is_secondary_power = no
+		}
+		modifier = {
+			factor = 2
+OR = { has_country_modifier = spcno has_country_modifier = military_tech_cooperation }
+		}
+	}
+	effect = {
+	
+	#Submarine
+	submarine = {
+	hull = 5
+	gun_power = 2.5
+	maximum_speed = 2
+	}
+
+	}
+
+}
+
+#navy_stealth, 2000
+
+#sea_control_ships, 2035
+sea_control_ships_invention = {
+	limit = { sea_control_ships = 1 }
+	chance = {
+		base = 0
+		modifier = {
+			factor = 4
+			has_country_modifier = wonder_weapons
+		}
+		modifier = {
+			factor = 2
+			military_spending = 0.50
+		}
+		modifier = {
+			factor = 2
+			military_spending = 0.75
+		}
+		modifier = {
+			factor = -2
+			is_greater_power = no 
+			is_secondary_power = no
+		}
+		modifier = {
+			factor = 2
+OR = { has_country_modifier = spcno has_country_modifier = military_tech_cooperation }
+		}
+	}
+	effect = {
+
+	navy_base = { maximum_speed = 2 }
+	
+	#Destroyer
+	destroyer = {
+	hull = 5
+	supply_consumption = -0.05
+	}
+
+	#Aircraft Carrier
+	carrier = {
+	hull = 5
+	supply_consumption = -0.05
+	}
+
+	#Fast Attack Craft
+	patrolboat = {
+	hull = 1
+	supply_consumption = -0.05
+	}
+
+	#Transport Ship
+	transportship = {
+	hull = 2.5
+	supply_consumption = -0.05
+	}
+
+	}
+
+}
+
+#unconventional_craft, 2070
+
+political_lobbying = {
+	limit = { unconventional_craft = 1 }
+	chance = {
+		base = 2
+
+		modifier = {
+			factor = 2
+			military_spending = 0.50
+		}
+		modifier = {
+			factor = 2
+			military_spending = 0.75
+		}
+		modifier = {
+			factor = -2
+			is_greater_power = no 
+			is_secondary_power = no
+		}
+		modifier = {
+			factor = 2
+OR = { has_country_modifier = spcno has_country_modifier = military_tech_cooperation }
+		}
+
+		modifier = {
+			factor = 2
+			war_on_terror = 1
+		}
+		modifier = {
+			factor = 2
+			vanguard_method = 1
+		}
+	}
+	effect = {
+		navy_base = {
+			default_organisation = 1
+		}
+	}
+}
+
+military_political_decision_making = {
+	limit = { unconventional_craft = 1 }
+	chance = {
+		base = 2
+
+		modifier = {
+			factor = 2
+			military_spending = 0.50
+		}
+		modifier = {
+			factor = 2
+			military_spending = 0.75
+		}
+		modifier = {
+			factor = -2
+			is_greater_power = no 
+			is_secondary_power = no
+		}
+		modifier = {
+			factor = 2
+OR = { has_country_modifier = spcno has_country_modifier = military_tech_cooperation }
+		}
+
+		modifier = {
+			factor = 2
+			war_on_terror = 1
+		}
+		modifier = {
+			factor = 2
+			age_of_protests = 1
+		}
+	}
+	effect = {
+		navy_base = {
+			default_organisation = 1
+		}
+	}
+}
+
+local_military_government = {
+	limit = { unconventional_craft = 1 }
+	chance = {
+		base = 2
+
+		modifier = {
+			factor = 2
+			military_spending = 0.50
+		}
+		modifier = {
+			factor = 2
+			military_spending = 0.75
+		}
+		modifier = {
+			factor = -2
+			is_greater_power = no 
+			is_secondary_power = no
+		}
+		modifier = {
+			factor = 2
+OR = { has_country_modifier = spcno has_country_modifier = military_tech_cooperation }
+		}
+
+		modifier = {
+			factor = 1
+			is_greater_power = yes
+		}
+		modifier = {
+			factor = 2
+			new_world_order = 1
+		}
+	}
+	effect = {
+		navy_base = {
+			default_organisation = 1
+		}
+	}
+}
+
+#ww2_aircraft_carrier, 1946
+ww2_aircraft_carrier_invention = {
+	limit = { ww2_aircraft_carrier = 1 }
+	chance = {
+		base = 0
+		modifier = {
+			factor = 4
+			has_country_modifier = wonder_weapons
+		}
+		modifier = {
+			factor = 2
+			military_spending = 0.50
+		}
+		modifier = {
+			factor = 2
+			military_spending = 0.75
+		}
+		modifier = {
+			factor = -2
+			is_greater_power = no 
+			is_secondary_power = no
+		}
+		modifier = {
+			factor = 2
+OR = { has_country_modifier = spcno has_country_modifier = military_tech_cooperation }
+		}
+	}
+	effect = {
+	
+	#Aircraft Carrier
+	carrier = {
+	hull = 5
+	}
+
+	}
+
+}
+
+#carrier_battle_group, 1946
+carrier_battle_group_invention = {
+	limit = { carrier_battle_group = 1 }
+	chance = {
+		base = 0
+		modifier = {
+			factor = 4
+			has_country_modifier = wonder_weapons
+		}
+		modifier = {
+			factor = 2
+			military_spending = 0.50
+		}
+		modifier = {
+			factor = 2
+			military_spending = 0.75
+		}
+		modifier = {
+			factor = -2
+			is_greater_power = no 
+			is_secondary_power = no
+		}
+		modifier = {
+			factor = 2
+OR = { has_country_modifier = spcno has_country_modifier = military_tech_cooperation }
+		}
+	}
+	effect = {
+	
+		naval_attrition = -0.1
+		navy_base = {
+			default_organisation = 3
+		}
+		
+		#Aircraft Carrier
+		carrier = {
+			hull = 5
+			gun_power = 5
+			torpedo_attack = 1
+		}
+
+	}
+
+}
+
+#helicopter_carrier, 1960
+helicopter_carrier_invention = {
+	limit = { helicopter_carrier = 1 }
+	chance = {
+		base = 0
+		modifier = {
+			factor = 4
+			has_country_modifier = wonder_weapons
+		}
+		modifier = {
+			factor = 2
+			military_spending = 0.50
+		}
+		modifier = {
+			factor = 2
+			military_spending = 0.75
+		}
+		modifier = {
+			factor = -2
+			is_greater_power = no 
+			is_secondary_power = no
+		}
+		modifier = {
+			factor = 2
+OR = { has_country_modifier = spcno has_country_modifier = military_tech_cooperation }
+		}
+	}
+	effect = {
+	
+	#Aircraft Carrier
+	carrier = {
+	hull = 5
+	gun_power = 5
+	torpedo_attack = 1
+	}
+	
+	#Transport Ship
+	transportship = {
+	hull = 2
+	gun_power = 2
+	fire_range = 0.2
+	supply_consumption = 0.05
+	}
+
+	}
+
+}
+
+#vertical_take_off_and_landing, 1970
+vertical_take_off_and_landing_invention = {
+	limit = { vertical_take_off_and_landing = 1 }
+	chance = {
+		base = 0
+		modifier = {
+			factor = 4
+			has_country_modifier = wonder_weapons
+		}
+		modifier = {
+			factor = 2
+			military_spending = 0.50
+		}
+		modifier = {
+			factor = 2
+			military_spending = 0.75
+		}
+		modifier = {
+			factor = -2
+			is_greater_power = no 
+			is_secondary_power = no
+		}
+		modifier = {
+			factor = 2
+OR = { has_country_modifier = spcno has_country_modifier = military_tech_cooperation }
+		}
+	}
+	effect = {
+	
+	#Aircraft Carrier
+	carrier = {
+	hull = 5
+	gun_power = 5
+	torpedo_attack = 1
+	}
+	
+	#Transport Ship
+	transportship = {
+	gun_power = 3
+	fire_range = 0.2
+	supply_consumption = 0.05
+	}
+
+	}
+
+}
+
+#aircraft_carrier, 1980
+aircraft_carrier_invention = {
+	limit = { aircraft_carrier = 1 }
+	chance = {
+		base = 0
+		modifier = {
+			factor = 4
+			has_country_modifier = wonder_weapons
+		}
+		modifier = {
+			factor = 2
+			military_spending = 0.50
+		}
+		modifier = {
+			factor = 2
+			military_spending = 0.75
+		}
+		modifier = {
+			factor = -2
+			is_greater_power = no 
+			is_secondary_power = no
+		}
+		modifier = {
+			factor = 2
+OR = { has_country_modifier = spcno has_country_modifier = military_tech_cooperation }
+		}
+	}
+	effect = {
+
+	#Aircraft Carrier
+	carrier = {
+	hull = 5
+	gun_power = 5
+	torpedo_attack = 1
+	}
+
+	}
+
+}
+
+#supercarriers, 1990
+nuclear_reactors_invention = {
+	limit = { supercarriers = 1 }
+	chance = {
+		base = 0
+		modifier = {
+			factor = 4
+			has_country_modifier = wonder_weapons
+		}
+		modifier = {
+			factor = 2
+			military_spending = 0.50
+		}
+		modifier = {
+			factor = 2
+			military_spending = 0.75
+		}
+		modifier = {
+			factor = -2
+			is_greater_power = no 
+			is_secondary_power = no
+		}
+		modifier = {
+			factor = 2
+			OR = { has_country_modifier = spcno has_country_modifier = military_tech_cooperation }
+		}
+	}
+	effect = {
+	
+		#Aircraft Carrier
+		carrier = {
+			maximum_speed = 2
+		}
+
+	}
+
+}
+
+supercarriers_invention = {
+	limit = { supercarriers = 1 }
+	chance = {
+		base = 0
+		modifier = {
+			factor = 4
+			has_country_modifier = wonder_weapons
+		}
+		modifier = {
+			factor = 2
+			military_spending = 0.50
+		}
+		modifier = {
+			factor = 2
+			military_spending = 0.75
+		}
+		modifier = {
+			factor = -2
+			is_greater_power = no 
+			is_secondary_power = no
+		}
+		modifier = {
+			factor = 2
+			OR = { has_country_modifier = spcno has_country_modifier = military_tech_cooperation }
+		}
+	}
+	effect = {
+
+	#Supercarrier
+	activate_unit = modern_destroyer
+
+	}
+
+}
+
+#electromagnetic_aircraft_launch, 2010
+electromagnetic_aircraft_launch_invention = {
+	limit = { electromagnetic_aircraft_launch = 1 }
+	chance = {
+		base = 0
+		modifier = {
+			factor = 4
+			has_country_modifier = wonder_weapons
+		}
+		modifier = {
+			factor = 2
+			military_spending = 0.50
+		}
+		modifier = {
+			factor = 2
+			military_spending = 0.75
+		}
+		modifier = {
+			factor = -2
+			is_greater_power = no 
+			is_secondary_power = no
+		}
+		modifier = {
+			factor = 2
+OR = { has_country_modifier = spcno has_country_modifier = military_tech_cooperation }
+		}
+	}
+	effect = {
+
+	#Nuclear Aircraft Carrier
+	modern_destroyer = {
+	gun_power = 5
+	torpedo_attack = 1
+	}
+
+	}
+
+}
+#unmanned_naval_craft, 2020
+navy_combat_drones = {
+	limit = { unmanned_naval_craft = 1 }
+	chance = {
+		base = 0
+
+		modifier = {
+			factor = 4
+			has_country_modifier = wonder_weapons
+		}
+		modifier = {
+			factor = 2
+			military_spending = 0.50
+		}
+		modifier = {
+			factor = 2
+			military_spending = 0.75
+		}
+		modifier = {
+			factor = -2
+			is_greater_power = no 
+			is_secondary_power = no
+		}
+		modifier = {
+			factor = 2
+OR = { has_country_modifier = spcno has_country_modifier = military_tech_cooperation }
+		}
+
+		modifier = {
+			factor = 1
+			quantum_computer = 1
+		}
+	}
+	effect = {
+		navy_base = {
+			gun_power = 1
+		}
+	}
+}
+#higher_density_reactor, 2050
+higher_density_reactor_invention = {
+	limit = { higher_density_reactor = 1 }
+	chance = {
+		base = 0
+		modifier = {
+			factor = 4
+			has_country_modifier = wonder_weapons
+		}
+		modifier = {
+			factor = 2
+			military_spending = 0.50
+		}
+		modifier = {
+			factor = 2
+			military_spending = 0.75
+		}
+		modifier = {
+			factor = -2
+			is_greater_power = no 
+			is_secondary_power = no
+		}
+		modifier = {
+			factor = 2
+OR = { has_country_modifier = spcno has_country_modifier = military_tech_cooperation }
+		}
+	}
+	effect = {
+
+	#Nuclear Aircraft Carrier
+	modern_destroyer = {
+	hull = 5
+	maximum_speed = 2
+	}
+
+	}
+
+}
+
+#nextgen_supercarriers, 2070
+i_autonomous_supercarriers = {
+	limit = { nextgen_supercarriers = 1 }
+	chance = {
+		base = 0
+
+		modifier = {
+			factor = 4
+			has_country_modifier = wonder_weapons
+		}
+		modifier = {
+			factor = 2
+			military_spending = 0.50
+		}
+		modifier = {
+			factor = 2
+			military_spending = 0.75
+		}
+		modifier = {
+			factor = -2
+			is_greater_power = no 
+			is_secondary_power = no
+		}
+		modifier = {
+			factor = 2
+OR = { has_country_modifier = spcno has_country_modifier = military_tech_cooperation }
+		}
+	}
+	effect = {
+		#Carrier
+		carrier = {
+			gun_power = 2
+		}
+		#Nuclear Aircraft Carrier
+		modern_destroyer = {
+			gun_power = 2
+		}
+	}
+}
+nextgen_supercarriers_invention = {
+	limit = { nextgen_supercarriers = 1 }
+	chance = {
+		base = 0
+		modifier = {
+			factor = 4
+			has_country_modifier = wonder_weapons
+		}
+		modifier = {
+			factor = 2
+			military_spending = 0.50
+		}
+		modifier = {
+			factor = 2
+			military_spending = 0.75
+		}
+		modifier = {
+			factor = -2
+			is_greater_power = no 
+			is_secondary_power = no
+		}
+		modifier = {
+			factor = 2
+OR = { has_country_modifier = spcno has_country_modifier = military_tech_cooperation }
+		}
+	}
+	effect = {
+
+	#Nuclear Aircraft Carrier
+	modern_destroyer = {
+	hull = 5
+	gun_power = 5
+	torpedo_attack = 1
+	maximum_speed = 2
+	}
+
+	}
+
+}
+#ww2_command_system
+#anti_submarine_warfare, 1950
+#anti_ship_missiles, 1960
+anti_ship_missiles_invention = {
+	limit = { anti_ship_missiles = 1 }
+	chance = {
+		base = 0
+		modifier = {
+			factor = 4
+			has_country_modifier = wonder_weapons
+		}
+		modifier = {
+			factor = 2
+			military_spending = 0.50
+		}
+		modifier = {
+			factor = 2
+			military_spending = 0.75
+		}
+		modifier = {
+			factor = -2
+			is_greater_power = no 
+			is_secondary_power = no
+		}
+		modifier = {
+			factor = 2
+OR = { has_country_modifier = spcno has_country_modifier = military_tech_cooperation }
+		}
+	}
+	effect = {
+	
+	#Battlecruiser
+	modern_cruiser = {
+	gun_power = 5
+	}
+
+	#Cruiser
+	cruiser = {
+	gun_power = 5
+	}
+
+	#Corvette
+	modern_frigate = {
+	gun_power = 5
+	fire_range = 0.05
+	torpedo_attack = 1
+	}
+
+	#Frigate
+	frigate = {
+	gun_power = 5
+	torpedo_attack = 1
+	}
+
+	#Destroyer
+	destroyer = {
+	gun_power = 5
+	}
+
+	#Fast Attack Craft
+	patrolboat = {
+	gun_power = 1
+	fire_range = 0.05
+	torpedo_attack = 1
+	}
+	
+	}
+
+}
+
+battlecrusier_invention = {
+	limit = { anti_ship_missiles = 1 }
+	chance = {
+		base = 0
+		modifier = {
+			factor = 4
+			has_country_modifier = wonder_weapons
+		}
+		modifier = {
+			factor = 2
+			military_spending = 0.50
+		}
+		modifier = {
+			factor = 2
+			military_spending = 0.75
+		}
+		modifier = {
+			factor = -2
+			is_greater_power = no 
+			is_secondary_power = no
+		}
+		modifier = {
+			factor = 2
+OR = { has_country_modifier = spcno has_country_modifier = military_tech_cooperation }
+		}
+	}
+	effect = {
+
+	#Battlecrusier
+	activate_unit = modern_cruiser
+
+	}
+
+}
+
+missile_guidance_system_invention = {
+	limit = { anti_ship_missiles = 1 }
+	chance = {
+		base = 0
+		modifier = {
+			factor = 4
+			has_country_modifier = wonder_weapons
+		}
+		modifier = {
+			factor = 2
+			military_spending = 0.50
+		}
+		modifier = {
+			factor = 2
+			military_spending = 0.75
+		}
+		modifier = {
+			factor = -2
+			is_greater_power = no 
+			is_secondary_power = no
+		}
+		modifier = {
+			factor = 2
+OR = { has_country_modifier = spcno has_country_modifier = military_tech_cooperation }
+		}
+	}
+	effect = {
+
+	#Nuclear Aircraft Carrier
+	modern_destroyer = {
+	fire_range = 0.025
+	gun_power = 2.5
+	}
+
+	#Aircraft Carrier
+	carrier = {
+	fire_range = 0.025
+	gun_power = 2.5
+	}
+
+	#Battlecruiser
+	modern_cruiser = {
+	fire_range = 0.025
+	gun_power = 2.5
+	}
+
+	#Cruiser
+	cruiser = {
+	fire_range = 0.025
+	gun_power = 2.5
+	}
+
+	#Corvette
+	modern_frigate = {
+	fire_range = 0.025
+	gun_power = 2.5
+	}
+
+	#Frigate
+	frigate = {
+	fire_range = 0.025
+	gun_power = 2.5
+	}
+
+	#Destroyer
+	destroyer = {
+	fire_range = 0.025
+	gun_power = 2.5
+	}
+
+	#Submarine
+	submarine = {
+	fire_range = 0.025
+	gun_power = 2.5
+	}
+
+	#Fast Attack Craft
+	patrolboat = {
+	fire_range = 0.025
+	gun_power = 0.5
+	}
+
+	}
+
+}
+
+#aegis_combat, 1974
+i_aegis_combat = {
+	limit = { aegis_combat = 1 }
+	chance = {
+		base = 2
+
+		modifier = {
+			factor = 4
+			has_country_modifier = wonder_weapons
+		}
+		modifier = {
+			factor = 2
+			military_spending = 0.50
+		}
+		modifier = {
+			factor = 2
+			military_spending = 0.75
+		}
+		modifier = {
+			factor = -2
+			is_greater_power = no 
+			is_secondary_power = no
+		}
+		modifier = {
+			factor = 2
+OR = { has_country_modifier = spcno has_country_modifier = military_tech_cooperation }
+		}
+	}
+	effect = {
+		navy_base = {
+			default_organisation = 3
+		}
+	}
+}
+
+#cruise_missile, 1990
+cruise_missile_invention = {
+	limit = { cruise_missile = 1 }
+	chance = {
+		base = 0
+		modifier = {
+			factor = 4
+			has_country_modifier = wonder_weapons
+		}
+		modifier = {
+			factor = 2
+			military_spending = 0.50
+		}
+		modifier = {
+			factor = 2
+			military_spending = 0.75
+		}
+		modifier = {
+			factor = -2
+			is_greater_power = no 
+			is_secondary_power = no
+		}
+		modifier = {
+			factor = 2
+OR = { has_country_modifier = spcno has_country_modifier = military_tech_cooperation }
+		}
+	}
+	effect = {
+		navy_base = {
+			gun_power = 2
+		}
+
+	#Nuclear Aircraft Carrier
+	modern_destroyer = {
+	fire_range = 0.05
+	}
+
+	#Aircraft Carrier
+	carrier = {
+	fire_range = 0.05
+	}
+
+	#Battlecruiser
+	modern_cruiser = {
+	fire_range = 0.05
+	}
+
+	#Cruiser
+	cruiser = {
+	fire_range = 0.05
+	}
+
+	#Corvette
+	modern_frigate = {
+	fire_range = 0.05
+	}
+
+	#Frigate
+	frigate = {
+	fire_range = 0.05
+	}
+
+	#Destroyer
+	destroyer = {
+	fire_range = 0.05
+	}
+
+	#Submarine
+	submarine = {
+	fire_range = 0.05
+	}
+
+	#Fast Attack Craft
+	patrolboat = {
+	fire_range = 0.05
+	}
+
+	#Transport Ship
+	transportship = {
+	fire_range = 0.05
+	}
+
+	}
+
+}
+marine_radar_invention = {
+	limit = { cruise_missile = 1 }
+	chance = {
+		base = 0
+		modifier = {
+			factor = 4
+			has_country_modifier = wonder_weapons
+		}
+		modifier = {
+			factor = 2
+			military_spending = 0.50
+		}
+		modifier = {
+			factor = 2
+			military_spending = 0.75
+		}
+		modifier = {
+			factor = -2
+			is_greater_power = no 
+			is_secondary_power = no
+		}
+		modifier = {
+			factor = 2
+OR = { has_country_modifier = spcno has_country_modifier = military_tech_cooperation }
+		}
+	}
+	effect = {
+	
+	#Nuclear Aircraft Carrier
+	modern_destroyer = {
+	fire_range = 0.05
+	}
+
+	#Aircraft Carrier
+	carrier = {
+	fire_range = 0.05
+	}
+
+	#Battlecruiser
+	modern_cruiser = {
+	fire_range = 0.05
+	}
+
+	#Cruiser
+	cruiser = {
+	fire_range = 0.05
+	}
+
+	#Corvette
+	modern_frigate = {
+	fire_range = 0.05
+	}
+
+	#Frigate
+	frigate = {
+	fire_range = 0.05
+	}
+
+	#Destroyer
+	destroyer = {
+	fire_range = 0.05
+	}
+
+	#Submarine
+	submarine = {
+	fire_range = 0.05
+	}
+
+	#Fast Attack Craft
+	patrolboat = {
+	fire_range = 0.05
+	}
+
+	#Transport Ship
+	transportship = {
+	fire_range = 0.05
+	}
+	
+	}
+
+}
+
+modern_anti_ship_missiles_invention = {
+	limit = { cruise_missile = 1 }
+	chance = {
+		base = 0
+		modifier = {
+			factor = 4
+			has_country_modifier = wonder_weapons
+		}
+		modifier = {
+			factor = 2
+			military_spending = 0.50
+		}
+		modifier = {
+			factor = 2
+			military_spending = 0.75
+		}
+		modifier = {
+			factor = -2
+			is_greater_power = no 
+			is_secondary_power = no
+		}
+		modifier = {
+			factor = 2
+OR = { has_country_modifier = spcno has_country_modifier = military_tech_cooperation }
+		}
+	}
+	effect = {
+	
+	#Battlecruiser
+	modern_cruiser = {
+	gun_power = 5
+	}
+
+	#Cruiser
+	cruiser = {
+	gun_power = 5
+	}
+
+	#Corvette
+	modern_frigate = {
+	gun_power = 5
+	}
+
+	#Frigate
+	frigate = {
+	gun_power = 5
+	torpedo_attack = 1
+	}
+
+	#Destroyer
+	destroyer = {
+	gun_power = 5
+	}
+
+	#Fast Attack Craft
+	patrolboat = {
+	gun_power = 1
+	fire_range = 0.05
+	torpedo_attack = 1
+	}
+	
+	}
+
+}
+
+#aegis_defense, 2000
+i_aegis_defense = {
+	limit = { aegis_defense = 1 }
+	chance = {
+		base = 2
+
+		modifier = {
+			factor = 4
+			has_country_modifier = wonder_weapons
+		}
+		modifier = {
+			factor = 2
+			military_spending = 0.50
+		}
+		modifier = {
+			factor = 2
+			military_spending = 0.75
+		}
+		modifier = {
+			factor = -2
+			is_greater_power = no 
+			is_secondary_power = no
+		}
+		modifier = {
+			factor = 2
+OR = { has_country_modifier = spcno has_country_modifier = military_tech_cooperation }
+		}
+	}
+	effect = {
+		navy_base = {
+			default_organisation = 3
+		}
+	}
+}
+
+aegis_combined = {
+	limit = { aegis_defense = 1 }
+	chance = {
+		base = 0
+
+		modifier = {
+			factor = 4
+			has_country_modifier = wonder_weapons
+		}
+		modifier = {
+			factor = 2
+			military_spending = 0.50
+		}
+		modifier = {
+			factor = 2
+			military_spending = 0.75
+		}
+		modifier = {
+			factor = -2
+			is_greater_power = no 
+			is_secondary_power = no
+		}
+		modifier = {
+			factor = 2
+OR = { has_country_modifier = spcno has_country_modifier = military_tech_cooperation }
+		}
+
+		modifier = {
+			factor = 2
+			carrier_battle_groups = 1
+		}
+		modifier = {
+			factor = 4
+			invention = i_aegis_defense
+		}
+	}
+	effect = {
+		navy_base = {
+			default_organisation = 3
+		}
+	}
+}
+#anti_ship_ballistic_missile, 2010
+anti_ship_ballistic_missile_invention = {
+	limit = { anti_ship_ballistic_missile = 1 }
+	chance = {
+		base = 0
+		modifier = {
+			factor = 4
+			has_country_modifier = wonder_weapons
+		}
+		modifier = {
+			factor = 2
+			military_spending = 0.50
+		}
+		modifier = {
+			factor = 2
+			military_spending = 0.75
+		}
+		modifier = {
+			factor = -2
+			is_greater_power = no 
+			is_secondary_power = no
+		}
+		modifier = {
+			factor = 2
+OR = { has_country_modifier = spcno has_country_modifier = military_tech_cooperation }
+		}
+	}
+	effect = {
+	
+	#Nuclear Aircraft Carrier
+	modern_destroyer = {
+	fire_range = 0.05
+	gun_power = 5
+	}
+
+	#Aircraft Carrier
+	carrier = {
+	fire_range = 0.05
+	gun_power = 5
+	}
+
+	#Battlecruiser
+	modern_cruiser = {
+	fire_range = 0.05
+	gun_power = 5
+	}
+
+	#Cruiser
+	cruiser = {
+	fire_range = 0.05
+	gun_power = 5
+	}
+
+	#Corvette
+	modern_frigate = {
+	fire_range = 0.05
+	gun_power = 5
+	}
+
+	#Frigate
+	frigate = {
+	fire_range = 0.05
+	gun_power = 5
+	}
+
+	#Destroyer
+	destroyer = {
+	fire_range = 0.05
+	gun_power = 5
+	}
+
+	#Fast Attack Craft
+	patrolboat = {
+	fire_range = 0.05
+	gun_power = 2.5
+	}
+	
+	}
+
+}
+
+#ship_defense_system, 2050
+ship_defense_system_invention = {
+	limit = { ship_defense_system = 1 }
+	chance = {
+		base = 0
+		modifier = {
+			factor = 4
+			has_country_modifier = wonder_weapons
+		}
+		modifier = {
+			factor = 2
+			military_spending = 0.50
+		}
+		modifier = {
+			factor = 2
+			military_spending = 0.75
+		}
+		modifier = {
+			factor = -2
+			is_greater_power = no 
+			is_secondary_power = no
+		}
+		modifier = {
+			factor = 2
+OR = { has_country_modifier = spcno has_country_modifier = military_tech_cooperation }
+		}
+	}
+	effect = {
+
+	#Nuclear Aircraft Carrier
+	modern_destroyer = {
+	hull = 1
+	evasion = 0.05
+	}
+
+	#Aircraft Carrier
+	carrier = {
+	hull = 1
+	evasion = 0.05
+	}
+
+	#Battlecruiser
+	modern_cruiser = {
+	hull = 1
+	evasion = 0.05
+	}
+
+	#Cruiser
+	cruiser = {
+	hull = 1
+	evasion = 0.025
+	}
+
+	#Corvette
+	modern_frigate = {
+	hull = 1
+	evasion = 0.025
+	}
+
+	#Frigate
+	frigate = {
+	hull = 1
+	evasion = 0.025
+	}
+
+	#Destroyer
+	destroyer = {
+	hull = 1
+	evasion = 0.025
+	}
+
+	#Submarine
+	submarine = {
+	hull = 1
+	evasion = 0.01
+	}
+
+	#Fast Attack Craft
+	patrolboat = {
+	hull = 0.20
+	evasion = 0.01
+	}
+
+	#Transport Ship
+	transportship = {
+	hull = 0.2
+	evasion = 0.02
+	}
+
+	}
+
+}
+
+#magnetohydrodynamic_propulsors, 2050
+magnetohydrodynamic_propulsors_invention = {
+	limit = { magnetohydrodynamic_propulsors = 1 }
+	chance = {
+		base = 0
+		modifier = {
+			factor = 4
+			has_country_modifier = wonder_weapons
+		}
+		modifier = {
+			factor = 2
+			military_spending = 0.50
+		}
+		modifier = {
+			factor = 2
+			military_spending = 0.75
+		}
+		modifier = {
+			factor = -2
+			is_greater_power = no 
+			is_secondary_power = no
+		}
+		modifier = {
+			factor = 2
+OR = { has_country_modifier = spcno has_country_modifier = military_tech_cooperation }
+		}
+	}
+	effect = {
+	
+	navy_base = { maximum_speed = 2 }
+
+	}
+
+}
+
+#plasma_gasification, 2070
+plasma_gun_invention = {
+	limit = { plasma_gasification = 1 }
+	chance = {
+		base = 0
+		modifier = {
+			factor = 4
+			has_country_modifier = wonder_weapons
+		}
+		modifier = {
+			factor = 2
+			military_spending = 0.50
+		}
+		modifier = {
+			factor = 2
+			military_spending = 0.75
+		}
+		modifier = {
+			factor = -2
+			is_greater_power = no 
+			is_secondary_power = no
+		}
+		modifier = {
+			factor = 2
+OR = { has_country_modifier = spcno has_country_modifier = military_tech_cooperation }
+		}
+	}
+	effect = {
+
+	#supply_range = 0.50
+
+	#Nuclear Aircraft Carrier
+	modern_destroyer = {
+	fire_range = 0.05
+	}
+
+	#Aircraft Carrier
+	carrier = {
+	fire_range = 0.05
+	}
+
+	#Battlecruiser
+	modern_cruiser = {
+	fire_range = 0.05
+	}
+
+	#Cruiser
+	cruiser = {
+	fire_range = 0.05
+	}
+
+	#Corvette
+	modern_frigate = {
+	fire_range = 0.05
+	}
+
+	#Frigate
+	frigate = {
+	fire_range = 0.05
+	}
+
+	#Destroyer
+	destroyer = {
+	fire_range = 0.05
+	}
+
+	#Submarine
+	submarine = {
+	fire_range = 0.05
+	}
+
+	#Fast Attack Craft
+	patrolboat = {
+	fire_range = 0.05
+	}
+
+	#Transport Ship
+	transportship = {
+	fire_range = 0.05
+	}
+
+	}
+
+}
+
+#############
+
+#command_of_the_sea, 1946
+convoy_sailing = {
+	limit = { command_of_the_sea = 1 }
+	chance = {
+		base = 2
+
+		modifier = {
+			factor = 2
+			military_spending = 0.50
+		}
+		modifier = {
+			factor = 2
+			military_spending = 0.75
+		}
+		modifier = {
+			factor = -2
+			is_greater_power = no 
+			is_secondary_power = no
+		}
+		modifier = {
+			factor = 2
+OR = { has_country_modifier = spcno has_country_modifier = military_tech_cooperation }
+		}
+	}
+	effect = {
+		naval_attrition = -0.1
+		navy_base = {
+			default_organisation = 1
+		}
+	}
+}
+war_gamming = {
+	limit = { command_of_the_sea = 1 }
+	chance = {
+		base = 2
+
+		modifier = {
+			factor = 2
+			military_spending = 0.50
+		}
+		modifier = {
+			factor = 2
+			military_spending = 0.75
+		}
+		modifier = {
+			factor = -2
+			is_greater_power = no 
+			is_secondary_power = no
+		}
+		modifier = {
+			factor = 2
+OR = { has_country_modifier = spcno has_country_modifier = military_tech_cooperation }
+		}
+	}
+	effect = {
+		navy_base = {
+			default_organisation = 1
+		}
+	}
+}
+amphibious_warfare_training = {
+	limit = { command_of_the_sea = 1 }
+	chance = {
+		base = 2
+
+		modifier = {
+			factor = 2
+			military_spending = 0.50
+		}
+		modifier = {
+			factor = 2
+			military_spending = 0.75
+		}
+		modifier = {
+			factor = -2
+			is_greater_power = no 
+			is_secondary_power = no
+		}
+		modifier = {
+			factor = 2
+OR = { has_country_modifier = spcno has_country_modifier = military_tech_cooperation }
+		}
+	}
+	effect = {
+		navy_base = {
+			default_organisation = 1
+		}
+	}
+}
+
+#sea_denial_strategy, 1950
+combined_arms_planning = {
+	limit = { sea_denial_strategy = 1 }
+	chance = {
+		base = 2
+
+		modifier = {
+			factor = 2
+			military_spending = 0.50
+		}
+		modifier = {
+			factor = 2
+			military_spending = 0.75
+		}
+		modifier = {
+			factor = -2
+			is_greater_power = no 
+			is_secondary_power = no
+		}
+		modifier = {
+			factor = 2
+OR = { has_country_modifier = spcno has_country_modifier = military_tech_cooperation }
+		}
+			
+	}
+	effect = {
+		navy_base = {
+			default_organisation = 1
+		}
+	}
+}
+
+naval_exercises = {
+	limit = { sea_denial_strategy = 1 }
+	chance = {
+		base = 2
+
+		modifier = {
+			factor = 2
+			military_spending = 0.50
+		}
+		modifier = {
+			factor = 2
+			military_spending = 0.75
+		}
+		modifier = {
+			factor = -2
+			is_greater_power = no 
+			is_secondary_power = no
+		}
+		modifier = {
+			factor = 2
+OR = { has_country_modifier = spcno has_country_modifier = military_tech_cooperation }
+		}
+
+		modifier = {
+			factor = 2
+			invention = war_gamming
+		}
+	}
+	effect = {
+		naval_attrition = -0.1
+	}
+}
+
+#power_projection, 1960
+international_supply_chains = {
+	limit = { power_projection = 1 }
+	chance = {
+		base = 2
+		modifier = {
+			factor = 2
+			military_spending = 0.50
+		}
+		modifier = {
+			factor = 2
+			military_spending = 0.75
+		}
+		modifier = {
+			factor = -2
+			is_greater_power = no 
+			is_secondary_power = no
+		}
+		modifier = {
+			factor = 2
+OR = { has_country_modifier = spcno has_country_modifier = military_tech_cooperation }
+		}
+
+		modifier = {
+			factor = 2
+			colour_revolution = 1
+		}
+		modifier = {
+			factor = 1
+			naval_sea_systems_command = 1
+		}	
+	}
+	effect = {
+		naval_attrition = -0.1
+		navy_base = {
+			default_organisation = 2
+		}
+	}
+}
+
+#green_blue_water_navies, 1980
+littoral_combat_doctrine = {
+	limit = { green_blue_water_navies = 1 }
+	chance = {
+		base = 2
+
+		modifier = {
+			factor = 2
+			military_spending = 0.50
+		}
+		modifier = {
+			factor = 2
+			military_spending = 0.75
+		}
+		modifier = {
+			factor = -2
+			is_greater_power = no 
+			is_secondary_power = no
+		}
+		modifier = {
+			factor = 2
+OR = { has_country_modifier = spcno has_country_modifier = military_tech_cooperation }
+		}
+	}
+	effect = {
+		naval_attrition = -0.1
+		navy_base = {
+			default_organisation = 1
+		}
+	}
+}
+
+#carrier_battle_groups, 1990
+i_cooperative_strategy = {
+	limit = { carrier_battle_groups = 1 }
+	chance = {
+		base = 2
+
+		modifier = {
+			factor = 2
+			military_spending = 0.50
+		}
+		modifier = {
+			factor = 2
+			military_spending = 0.75
+		}
+		modifier = {
+			factor = -2
+			is_greater_power = no 
+			is_secondary_power = no
+		}
+		modifier = {
+			factor = 2
+OR = { has_country_modifier = spcno has_country_modifier = military_tech_cooperation }
+		}
+		modifier = {
+			factor = 1
+			prestige = 40
+		}
+		modifier = {
+			factor = 2
+			economic_globalization = 1
+		}
+	}
+	effect = {
+		naval_attrition = -0.1
+		navy_base = {
+			default_organisation = 1
+		}
+	}
+}
+wargames = {
+	limit = { carrier_battle_groups = 1 }
+	chance = {
+		base = 2
+
+		modifier = {
+			factor = 2
+			military_spending = 0.50
+		}
+		modifier = {
+			factor = 2
+			military_spending = 0.75
+		}
+		modifier = {
+			factor = -2
+			is_greater_power = no 
+			is_secondary_power = no
+		}
+		modifier = {
+			factor = 2
+OR = { has_country_modifier = spcno has_country_modifier = military_tech_cooperation }
+		}
+
+		modifier = {
+			factor = 1
+			prestige = 40
+		}
+		modifier = {
+			factor = 2
+			high_speed_uni_network = 1
+		}
+	}
+	effect = {
+		naval_attrition = -0.1
+		navy_base = {
+			default_organisation = 1
+		}
+	}
+}
+
+#salvo_combat_model, 1995
+i_salvo_combat_model = {
+	limit = { salvo_combat_model = 1 }
+	chance = {
+		base = 2
+
+		modifier = {
+			factor = 2
+			military_spending = 0.50
+		}
+		modifier = {
+			factor = 2
+			military_spending = 0.75
+		}
+		modifier = {
+			factor = -2
+			is_greater_power = no 
+			is_secondary_power = no
+		}
+		modifier = {
+			factor = 2
+OR = { has_country_modifier = spcno has_country_modifier = military_tech_cooperation }
+		}
+	}
+	effect = {
+		naval_attrition = -0.1
+		navy_base = {
+			default_organisation = 1
+		}
+	}
+}
+
+#supercarrier_battle_group, 2020
+
+#fleet_in_being, 2030
+
+#seabasing, 2050
+i_seabasing = {
+	limit = { seabasing = 1 }
+	chance = {
+		base = 4
+
+		modifier = {
+			factor = 2
+			military_spending = 0.50
+		}
+		modifier = {
+			factor = 2
+			military_spending = 0.75
+		}
+		modifier = {
+			factor = -2
+			is_greater_power = no 
+			is_secondary_power = no
+		}
+		modifier = {
+			factor = 2
+OR = { has_country_modifier = spcno has_country_modifier = military_tech_cooperation }
+		}
+
+	}
+	effect = {
+		naval_attrition = -0.2
+		navy_base = {
+			default_organisation = 2
+		}
+	}
+}
+
+#modern_battlespace, 2070
