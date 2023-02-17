@@ -1,0 +1,2298 @@
+#1948 elections
+country_event = {
+  id = 8015801
+  title = "United States $Year$ Presidential Election"
+  desc = EVT_8015801_DESC
+  picture = "nwo2_usa_elections_1948"
+  
+	fire_only_once = yes
+
+	trigger = {
+		tag = USA
+		year = 1948 
+		NOT = { has_global_flag = 1950_start_date_flag }
+		NOT = { year = 1952 }
+		election = no
+		government = democracy
+		NOT = { has_country_flag = elections_disabled }
+	}
+
+	mean_time_to_happen = { months = 11 modifier = { factor = 0.1 year = 1949 } }
+
+	option = {
+		name = "Harry S. Truman (Moderate Democrat)"
+		
+		random_owned = { #This should give the player or AI the modifier if they don't have a majority support
+			limit = { owner = { AND = { government = democracy tag = USA NOT = { OR = { pop_majority_ideology = big_tent pop_majority_ideology = liberal } } } } }
+			owner = { add_country_modifier = { name = revolution_chaos duration = 1065 } }
+		}
+		
+		#The president's party becomes the executive, ie the lower house in Vicky
+		ruling_party_ideology = big_tent
+		
+		#Simulate the ideological divide
+		any_pop = { 
+			limit = {
+				OR = { strata = rich type = farmers type = labourers culture = afro_american }
+			}
+			ideology = { factor = 0.2 value = big_tent }
+		}
+		
+		ai_chance = {
+			factor = 0.25
+			modifier = {
+				factor = 6
+				pop_majority_ideology = big_tent
+			}
+			modifier = {
+				factor = 3
+				pop_majority_ideology = liberal
+			}
+		}
+	}
+	
+	option = {
+		name = "Henry Wallace (Progressive Democrat)"
+		
+		random_owned = { #This should give the player or AI the modifier if they don't have a majority support
+			limit = { owner = { AND = { government = democracy tag = USA NOT = { OR = { pop_majority_ideology = progressive pop_majority_ideology = social_democrat pop_majority_ideology = socialist } } } } }
+			owner = { add_country_modifier = { name = revolution_chaos duration = 1065 } }
+		}
+		
+		#The president's party becomes the executive, ie the lower house in Vicky
+		ruling_party_ideology = progressive
+		
+		#Simulate the ideological divide
+		any_pop = { 
+			limit = {
+				OR = { strata = poor culture = afro_american }
+			}
+			ideology = { factor = 0.2 value = progressive }
+		}
+		
+		any_pop = {
+			limit = { AND = { location = { is_core = CSA } culture = white_anglo } }
+			scaled_consciousness = { factor = 10 ideology = populist }
+			scaled_militancy = { factor = 10 ideology = populist }
+			scaled_consciousness = { factor = 10 ideology = nationalist }
+			scaled_militancy = { factor = 10 ideology = nationalist }
+		}
+		
+		
+		ai_chance = {
+			factor = 0.25
+			modifier = {
+				factor = 6
+				pop_majority_ideology = progressive
+			}
+			modifier = {
+				factor = 3
+				pop_majority_ideology = social_democrat
+			}
+			modifier = {
+				factor = 3
+				pop_majority_ideology = socialist
+			}
+		}
+	}
+
+	option = {
+		name = "Thomas E. Dewey (Conservative Republican)"
+		
+		random_owned = { #This should give the player or AI the modifier if they don't have a majority support
+			limit = { owner = { AND = { government = democracy tag = USA NOT = { OR = { pop_majority_ideology = conservative pop_majority_ideology = traditionalist } } } } }
+			owner = { add_country_modifier = { name = revolution_chaos duration = 1065 } }
+		}
+		
+		#The president's party becomes the executive, ie the lower house in Vicky
+		ruling_party_ideology = conservative
+		
+		#Simulate the ideological divide
+		any_pop = {
+			limit = { OR = { AND = { location = { is_core = CSA } NOT = { culture = afro_american } } strata = rich strata = middle } }
+			ideology = {
+				factor = 0.2
+				value = conservative
+			}
+		}
+		
+		ai_chance = {
+			factor = 0.25
+			modifier = {
+				factor = 8
+				pop_majority_ideology = conservative
+			}
+			modifier = {
+				factor = 1.1
+				pop_majority_ideology = traditionalist
+			}
+		}
+	}
+	
+	option = {
+		name = "Strom Thurmond (Dixiecrat)"
+		
+		random_owned = { #This should give the player or AI the modifier if they don't have a majority support
+			limit = { owner = { AND = { government = democracy tag = USA NOT = { OR = { pop_majority_ideology = populist pop_majority_ideology = nationalist } } } } }
+			owner = { add_country_modifier = { name = revolution_chaos duration = 1065 } }
+		}
+		
+		#The president's party becomes the executive, ie the lower house in Vicky
+		ruling_party_ideology = populist
+		
+		#Simulate the ideological divide
+		any_pop = {
+			limit = { OR = { AND = { location = { is_core = CSA } culture = white_anglo } AND = { OR = { strata = rich strata = middle } culture = white_anglo } } }
+			ideology = {
+				factor = 0.2
+				value = populist
+			}
+		}
+		
+		any_pop = {
+			limit = { AND = { location = { is_core = CSA } culture = afro_american } }
+			consciousness = 10 
+			militancy = 10
+		}
+		
+		ai_chance = {
+			factor = 0.25
+			modifier = {
+				factor = 6
+				pop_majority_ideology = populist
+			}
+			modifier = {
+				factor = 3
+				pop_majority_ideology = nationalist
+			}
+		}
+	}
+}
+
+#1952 elections
+country_event = {
+  id = 8015802
+  title = "United States $Year$ Presidential Election"
+  desc = EVT_8015802_DESC
+  picture = "nwo2_usa_elections_1952"
+  
+	fire_only_once = yes
+
+	trigger = {
+		tag = USA
+		year = 1952 NOT = { year = 1955 }
+		election = no
+		government = democracy
+		NOT = { has_country_flag = elections_disabled }	
+	}
+
+	mean_time_to_happen = { months = 11 modifier = { factor = 0.1 year = 1953 } }
+	
+	option = {
+		name = "Dwight D. Eisenhower (Moderate Republican)"
+		
+		random_owned = { #This should give the player or AI the modifier if they don't have a majority support
+			limit = { owner = { AND = { government = democracy tag = USA NOT = { OR = { pop_majority_ideology = big_tent pop_majority_ideology = conservative } } } } }
+			owner = { add_country_modifier = { name = revolution_chaos duration = 1065 } }
+		}
+		
+		#The president's party becomes the executive, ie the lower house in Vicky
+		ruling_party_ideology = big_tent
+		
+		#Simulate the ideological divide
+		any_pop = {
+			limit = {
+				OR = { strata = rich type = farmers type = labourers culture = afro_american }
+			}
+			ideology = { factor = 0.2 value = big_tent }
+		}
+
+		ai_chance = {
+			factor = 0.25
+			modifier = {
+				factor = 6
+				pop_majority_ideology = big_tent
+			}
+			modifier = {
+				factor = 3
+				pop_majority_ideology = conservative
+			}
+			modifier = {
+				factor = 3
+				pop_majority_ideology = traditionalist
+			}
+		}
+	}
+
+	option = {
+		name = "Adlai E. Stevenson (Liberal Democrat)"
+		
+		random_owned = { #This should give the player or AI the modifier if they don't have a majority support
+			limit = { owner = { AND = { government = democracy tag = USA NOT = { OR = { pop_majority_ideology = progressive pop_majority_ideology = social_democrat pop_majority_ideology = liberal } } } } }
+			owner = { add_country_modifier = { name = revolution_chaos duration = 1065 } }
+		}
+		
+		#The president's party becomes the executive, ie the lower house in Vicky
+		ruling_party_ideology = liberal
+		
+		#Simulate the ideological divide
+		any_pop = {
+			limit = {
+				OR = { AND = { location = { is_core = CSA } NOT = { culture = afro_american } } strata = rich strata = middle }
+			}
+			ideology = { factor = 0.2 value = liberal }
+		}
+		
+		ai_chance = {
+			factor = 0.25
+			modifier = {
+				factor = 6
+				pop_majority_ideology = liberal
+			}
+			modifier = {
+				factor = 1.1
+				pop_majority_ideology = progressive
+			}
+			modifier = {
+				factor = 1.1
+				pop_majority_ideology = social_democrat
+			}
+			modifier = {
+				factor = 1.1
+				pop_majority_ideology = populist
+			}
+		}
+	}
+}
+
+#1956 elections
+country_event = {
+  id = 8015803
+  title = "United States $Year$ Presidential Election"
+  desc = EVT_8015803_DESC
+  picture = "nwo2_usa_elections_1956"
+  
+	fire_only_once = yes
+
+	trigger = {
+		tag = USA
+		year = 1956 NOT = { year = 1959 }
+		election = no
+		government = democracy
+		NOT = { has_country_flag = elections_disabled }	
+	}
+
+	mean_time_to_happen = { months = 11 modifier = { factor = 0.1 year = 1957 } }
+
+	option = {
+		name = "Dwight D. Eisenhower (Moderate Republican)"
+		
+		random_owned = { #This should give the player or AI the modifier if they don't have a majority support
+			limit = { owner = { AND = { government = democracy tag = USA NOT = { OR = { pop_majority_ideology = big_tent pop_majority_ideology = conservative } } } } }
+			owner = { add_country_modifier = { name = revolution_chaos duration = 1065 } }
+		}
+		
+		#The president's party becomes the executive, ie the lower house in Vicky
+		ruling_party_ideology = big_tent
+		
+		#Simulate the ideological divide
+		any_pop = {
+			limit = {
+				OR = { strata = rich type = farmers type = labourers culture = afro_american }
+			}
+			ideology = { factor = 0.2 value = big_tent }
+		}
+
+		ai_chance = {
+			factor = 0.25
+			modifier = {
+				factor = 6
+				pop_majority_ideology = big_tent
+			}
+			modifier = {
+				factor = 3
+				pop_majority_ideology = conservative
+			}
+			modifier = {
+				factor = 3
+				pop_majority_ideology = traditionalist
+			}
+		}
+	}
+
+	option = {
+		name = "Adlai E. Stevenson (Liberal Democrat)"
+		
+		random_owned = { #This should give the player or AI the modifier if they don't have a majority support
+			limit = { owner = { AND = { government = democracy tag = USA NOT = { OR = { pop_majority_ideology = progressive pop_majority_ideology = social_democrat pop_majority_ideology = liberal } } } } }
+			owner = { add_country_modifier = { name = revolution_chaos duration = 1065 } }
+		}
+		
+		#The president's party becomes the executive, ie the lower house in Vicky
+		ruling_party_ideology = liberal
+		
+		#Simulate the ideological divide
+		any_pop = {
+			limit = {
+				OR = { AND = { location = { is_core = CSA } NOT = { culture = afro_american } } strata = rich strata = middle }
+			}
+			ideology = { factor = 0.2 value = liberal }
+		}
+		
+		ai_chance = {
+			factor = 0.25
+			modifier = {
+				factor = 6
+				pop_majority_ideology = liberal
+			}
+			modifier = {
+				factor = 1.1
+				pop_majority_ideology = progressive
+			}
+			modifier = {
+				factor = 1.1
+				pop_majority_ideology = social_democrat
+			}
+			modifier = {
+				factor = 1.1
+				pop_majority_ideology = populist
+			}
+		}
+	}
+}
+
+#1960 elections
+country_event = {
+  id = 8015804
+  title = "United States $Year$ Presidential Election"
+  desc = EVT_8015804_DESC
+  picture = "nwo2_usa_elections_1960"
+  
+	fire_only_once = yes
+
+	trigger = {
+		tag = USA
+		year = 1960 NOT = { year = 1962 }
+		government = democracy
+		election = no
+		NOT = { has_country_flag = elections_disabled }	
+	}
+
+	mean_time_to_happen = { months = 11 modifier = { factor = 0.1 year = 1961 } }
+
+	option = {
+		name = "John F. Kennedy (Liberal Democrat)"
+		
+		random_owned = { #This should give the player or AI the modifier if they don't have a majority support
+			limit = { owner = { AND = { government = democracy tag = USA NOT = { OR = { pop_majority_ideology = progressive pop_majority_ideology = social_democrat pop_majority_ideology = liberal } } } } }
+			owner = { add_country_modifier = { name = revolution_chaos duration = 1065 } }
+		}
+		
+		set_country_flag = jfk_elected
+		
+		#The president's party becomes the executive, ie the lower house in Vicky
+		ruling_party_ideology = liberal
+		
+		#Simulate the ideological divide
+		any_pop = {
+			limit = {
+				OR = { strata = middle strata = poor culture = afro_american }
+			}
+			ideology = { factor = 0.2 value = liberal }
+		}
+
+		ai_chance = {
+			factor = 0.33
+			modifier = {
+				factor = 6
+				pop_majority_ideology = liberal
+			}
+			modifier = {
+				factor = 3
+				pop_majority_ideology = progressive
+			}
+			modifier = {
+				factor = 3
+				pop_majority_ideology = social_democrat
+			}
+		}
+	}
+
+	option = {
+		name = "Richard M. Nixon (Conservative Republican)"
+		
+		set_country_flag = nixon_elected
+		
+		random_owned = { #This should give the player or AI the modifier if they don't have a majority support
+			limit = { owner = { AND = { government = democracy tag = USA NOT = { OR = { pop_majority_ideology = big_tent pop_majority_ideology = conservative } } } } }
+			owner = { add_country_modifier = { name = revolution_chaos duration = 1065 } }
+		}
+		
+		#The president's party becomes the executive, ie the lower house in Vicky
+		ruling_party_ideology = conservative
+		
+		#Simulate the ideological divide
+		any_pop = {
+			limit = { OR = { AND = { location = { is_core = CSA } NOT = { culture = afro_american } } strata = rich strata = middle } }
+			ideology = {
+				factor = 0.2
+				value = conservative
+			}
+		}
+		
+		ai_chance = {
+			factor = 0.33
+			modifier = {
+				factor = 6
+				pop_majority_ideology = conservative
+			}
+			modifier = {
+				factor = 3
+				pop_majority_ideology = big_tent
+			}
+			modifier = {
+				factor = 3
+				pop_majority_ideology = traditionalist
+			}
+		}
+	}
+	
+	option = {
+		name = "Harry Byrd (Dixiecrat)"
+		
+		random_owned = { #This should give the player or AI the modifier if they don't have a majority support
+			limit = { owner = { AND = { government = democracy tag = USA NOT = { OR = { pop_majority_ideology = populist pop_majority_ideology = nationalist } } } } }
+			owner = { add_country_modifier = { name = revolution_chaos duration = 1065 } }
+		}
+		
+		#The president's party becomes the executive, ie the lower house in Vicky
+		ruling_party_ideology = populist
+		
+		#Simulate the ideological divide
+		any_pop = {
+			limit = { OR = { AND = { location = { is_core = CSA } culture = white_anglo } AND = { OR = { strata = rich strata = middle } culture = white_anglo } } }
+			ideology = {
+				factor = 0.2
+				value = populist
+			}
+		}
+		
+		any_pop = {
+			limit = { AND = { location = { is_core = CSA } culture = afro_american } }
+			consciousness = 10 
+			militancy = 10
+		}
+		
+		ai_chance = {
+			factor = 0.33
+			modifier = {
+				factor = 6
+				pop_majority_ideology = populist
+			}
+			modifier = {
+				factor = 3
+				pop_majority_ideology = nationalist
+			}
+		}
+	}
+}
+
+#Assassination of JFK
+country_event = {
+  id = 8015805
+  title = EVT_8015805_NAME
+  desc = EVT_8015805_DESC
+  picture = "nwo2_assassination_of_jfk"
+  
+	fire_only_once = yes
+
+	trigger = {
+    	tag = USA
+		year = 1963 NOT = { year = 1964 }
+		ruling_party_ideology = liberal
+		OR = { 
+			has_country_flag = jfk_elected
+			has_country_flag = elections_disabled 
+		}
+	}
+
+	mean_time_to_happen = { months = 11 }
+
+	option = {
+		name = EVT_8015805_A
+		prestige_factor = -0.02
+		any_pop = { militancy = -2.0 consciousness = 1 }
+	}
+}
+
+#1964 elections
+country_event = {
+  id = 8015806
+  title = "United States $Year$ Presidential Election"
+  desc = EVT_8015806_DESC
+  picture = "nwo2_usa_elections_1964"
+  
+	fire_only_once = yes
+
+	trigger = {
+		tag = USA
+		year = 1964 NOT = { year = 1968 }
+		election = no
+		government = democracy
+		NOT = { has_country_flag = elections_disabled }	
+	}
+
+	mean_time_to_happen = { months = 11 modifier = { factor = 0.1 year = 1965 } }
+
+	option = {
+		name = "Lyndon B. Johnson (Great Society Democratic)"
+		
+		random_owned = { #This should give the player or AI the modifier if they don't have a majority support
+			limit = { owner = { AND = { government = democracy tag = USA NOT = { OR = { pop_majority_ideology = social_democrat pop_majority_ideology = progressive pop_majority_ideology = liberal } } } } }
+			owner = { add_country_modifier = { name = revolution_chaos duration = 1065 } }
+		}
+		
+		set_country_flag = lbj_elected
+	
+		#The president's party becomes the executive, ie the lower house in Vicky
+		ruling_party_ideology = social_democrat
+		
+		#Simulate the ideological divide
+		any_pop = {
+			limit = {
+				OR = { strata = middle type = farmers type = labourers culture = afro_american }
+			}
+			ideology = { factor = 0.2 value = social_democrat }
+		}
+	
+		ai_chance = {
+			factor = 0.5
+			modifier = {
+				factor = 5
+				pop_majority_ideology = social_democrat
+			}
+			modifier = {
+				factor = 4
+				pop_majority_ideology = progressive
+			}
+			modifier = {
+				factor = 4
+				pop_majority_ideology = liberal
+			}
+			modifier = {
+				factor = 3
+				has_country_flag = { jfk_elected }
+			}
+		}
+	}
+
+	option = {
+		name = "Barry Goldwater (Conservative Republican)"
+		
+		set_country_flag = goldwater_elected
+		
+		random_owned = { #This should give the player or AI the modifier if they don't have a majority support
+			limit = { owner = { AND = { government = democracy tag = USA NOT = { OR = { pop_majority_ideology = big_tent pop_majority_ideology = conservative } } } } }
+			owner = { add_country_modifier = { name = revolution_chaos duration = 1065 } }
+		}
+		
+		#The president's party becomes the executive, ie the lower house in Vicky
+		ruling_party_ideology = conservative
+		
+		#Simulate the ideological divide
+		any_pop = {
+			limit = { OR = { AND = { location = { is_core = CSA } NOT = { culture = afro_american } } strata = rich strata = middle } }
+			ideology = {
+				factor = 0.2
+				value = conservative
+			}
+		}
+		
+		#Add party loyalty so the president's party will retain the executive after this event
+		any_owned = {
+			limit = { is_colonial = no }
+			party_loyalty = {
+                ideology = conservative
+                loyalty_value = 0.25
+            }
+		}
+		
+		ai_chance = {
+			factor = 0.5
+			modifier = {
+				factor = 6
+				pop_majority_ideology = conservative
+			}
+			modifier = {
+				factor = 3
+				pop_majority_ideology = big_tent
+			}
+			modifier = {
+				factor = 3
+				pop_majority_ideology = traditionalist
+			}
+			modifier = {
+				factor = 3
+				NOT = { has_country_flag = { jfk_elected } }
+			}
+		}
+	}  
+}
+
+#1968 elections
+country_event = {
+  id = 8015807
+  title = "United States $Year$ Presidential Election"
+  desc = EVT_8015807_DESC
+  picture = "nwo2_usa_elections_1968"
+  
+	fire_only_once = yes
+
+	trigger = {
+		tag = USA
+		year = 1968 NOT = { year = 1972 }
+		election = no
+		government = democracy
+		NOT = { has_country_flag = elections_disabled }	
+	}
+
+	mean_time_to_happen = { months = 11 modifier = { factor = 0.1 year = 1969 } }
+
+	option = {
+		name = "Richard M. Nixon (Conservative Republican)"
+		
+		set_country_flag = nixon_elected
+		
+		random_owned = { #This should give the player or AI the modifier if they don't have a majority support
+			limit = { owner = { AND = { government = democracy tag = USA NOT = { OR = { pop_majority_ideology = big_tent pop_majority_ideology = conservative } } } } }
+			owner = { add_country_modifier = { name = revolution_chaos duration = 1065 } }
+		}
+		
+		#The president's party becomes the executive, ie the lower house in Vicky
+		ruling_party_ideology = conservative
+		
+		#Simulate the ideological divide
+		any_pop = {
+			limit = { OR = { AND = { location = { is_core = CSA } NOT = { culture = afro_american } } strata = rich strata = middle } }
+			ideology = {
+				factor = 0.2
+				value = conservative
+			}
+		}
+		
+		ai_chance = {
+			factor = 0.33
+			modifier = {
+				factor = 6
+				pop_majority_ideology = conservative
+			}
+			modifier = {
+				factor = 3
+				pop_majority_ideology = big_tent
+			}
+			modifier = {
+				factor = 3
+				pop_majority_ideology = traditionalist
+			}
+		}
+	}
+
+	option = {
+		name = "Hubert Humphrey (Liberal Democrat)"
+		
+		random_owned = { #This should give the player or AI the modifier if they don't have a majority support
+			limit = { owner = { AND = { government = democracy tag = USA NOT = { OR = { pop_majority_ideology = progressive pop_majority_ideology = social_democrat pop_majority_ideology = liberal } } } } }
+			owner = { add_country_modifier = { name = revolution_chaos duration = 1065 } }
+		}
+		
+		#The president's party becomes the executive, ie the lower house in Vicky
+		ruling_party_ideology = liberal
+		
+		#Simulate the ideological divide
+		any_pop = {
+			limit = {
+				OR = { strata = middle type = farmers type = labourers culture = afro_american }
+			}
+			ideology = { factor = 0.2 value = liberal }
+		}
+		
+		ai_chance = {
+			factor = 0.25
+			modifier = {
+				factor = 6
+				pop_majority_ideology = liberal
+			}
+			modifier = {
+				factor = 1.1
+				pop_majority_ideology = progressive
+			}
+			modifier = {
+				factor = 1.1
+				pop_majority_ideology = social_democrat
+			}
+		}
+	}
+	
+	option = {
+		name = "George Wallace (American Independent)"
+		
+		random_owned = { #This should give the player or AI the modifier if they don't have a majority support
+			limit = { owner = { AND = { government = democracy tag = USA NOT = { OR = { pop_majority_ideology = populist pop_majority_ideology = nationalist } } } } }
+			owner = { add_country_modifier = { name = revolution_chaos duration = 1065 } }
+		}
+		
+		#The president's party becomes the executive, ie the lower house in Vicky
+		ruling_party_ideology = nationalist
+		
+		#Simulate the ideological divide
+		any_pop = {
+			limit = { AND = { culture = white_anglo OR = { strata = rich strata = middle } } }
+			ideology = {
+				factor = 0.2
+				value = nationalist
+			}
+		}
+		
+		any_pop = {
+			limit = { NOT = { culture = white_anglo } }
+			consciousness = 8
+			militancy = 5
+		}
+		
+		ai_chance = {
+			factor = 0.33
+			modifier = {
+				factor = 6
+				pop_majority_ideology = populist
+			}
+			modifier = {
+				factor = 3
+				pop_majority_ideology = nationalist
+			}
+		}
+	}
+}
+
+#1972 elections
+country_event = {
+  id = 8015808
+  title = "United States $Year$ Presidential Election"
+  desc = EVT_8015808_DESC
+  picture = "nwo2_usa_elections_1972"
+  
+	fire_only_once = yes
+
+	trigger = {
+		tag = USA
+		year = 1972 NOT = { year = 1973 }
+		election = no
+		government = democracy
+		NOT = { has_country_flag = elections_disabled }	
+	}
+
+	mean_time_to_happen = { months = 11 modifier = { factor = 0.1 year = 1973 } }
+	
+	
+	option = {
+		name = "Richard M. Nixon (Conservative Republican)"
+		
+		set_country_flag = nixon_elected
+		
+		random_owned = { #This should give the player or AI the modifier if they don't have a majority support
+			limit = { owner = { AND = { government = democracy tag = USA NOT = { OR = { pop_majority_ideology = big_tent pop_majority_ideology = conservative } } } } }
+			owner = { add_country_modifier = { name = revolution_chaos duration = 1065 } }
+		}
+		
+		#The president's party becomes the executive, ie the lower house in Vicky
+		ruling_party_ideology = conservative
+		
+		#Simulate the ideological divide
+		any_pop = {
+			limit = { OR = { AND = { location = { is_core = CSA } NOT = { culture = afro_american } } strata = rich strata = middle } }
+			ideology = {
+				factor = 0.2
+				value = conservative
+			}
+		}
+		
+		ai_chance = {
+			factor = 0.5
+			modifier = {
+				factor = 6
+				pop_majority_ideology = conservative
+			}
+			modifier = {
+				factor = 3
+				pop_majority_ideology = big_tent
+			}
+			modifier = {
+				factor = 3
+				pop_majority_ideology = traditionalist
+			}
+		}
+	}
+
+	option = {
+		name = "George McGovern (Liberal Democrat)"
+		
+		set_country_flag = mcgovern_elected
+		
+		random_owned = { #This should give the player or AI the modifier if they don't have a majority support
+			limit = { owner = { AND = { government = democracy tag = USA NOT = { OR = { pop_majority_ideology = progressive pop_majority_ideology = social_democrat pop_majority_ideology = liberal } } } } }
+			owner = { add_country_modifier = { name = revolution_chaos duration = 1065 } }
+		}
+		
+		#The president's party becomes the executive, ie the lower house in Vicky
+		ruling_party_ideology = liberal
+		
+		#Simulate the ideological divide
+		any_pop = {
+			limit = {
+				OR = { strata = middle type = farmers type = labourers culture = afro_american }
+			}
+			ideology = { factor = 0.2 value = liberal }
+		}
+		
+		ai_chance = {
+			factor = 0.5
+			modifier = {
+				factor = 6
+				pop_majority_ideology = liberal
+			}
+			modifier = {
+				factor = 1.1
+				pop_majority_ideology = progressive
+			}
+			modifier = {
+				factor = 1.1
+				pop_majority_ideology = social_democrat
+			}
+		}
+	}
+}
+
+#Resignation of Spiro Agnew - Republican Party
+country_event = {
+  id = 8015809
+  title = EVT_8015809_NAME
+  desc = EVT_8015809_DESC
+  picture = "nwo2_spiro_agnew"
+  
+	fire_only_once = yes
+
+	trigger = {
+		tag = USA
+		year = 1973 NOT = { year = 1974 }
+		OR = { 
+			has_country_flag = nixon_elected
+			ruling_party_ideology = conservative
+			ruling_party_ideology = big_tent
+		}
+	}
+
+	mean_time_to_happen = { months = 11 }
+
+	option = {
+		name = EVT_8015809_A
+		
+		#Democrat support rises
+		any_pop = { ideology = { factor = 0.05 value = liberal } }
+		
+		ai_chance = { factor = 0.9 }
+	}
+
+	option = {
+		name = EVT_8015809_B
+		prestige = -50
+		any_pop = { militancy = 5 consciousness = 5 }
+		
+		#Add corruption
+		random_owned = {
+			limit = { owner = { NOT = { has_country_modifier = massive_government_corruption } } }
+			owner = { 
+				remove_country_modifier = minimal_government_corruption
+				remove_country_modifier = low_government_corruption
+				remove_country_modifier = medium_government_corruption
+				remove_country_modifier = large_government_corruption
+				add_country_modifier = { name = massive_government_corruption duration = -1 } 
+			}
+		}
+		
+		ai_chance = { factor = 0.1 }
+	}
+}
+
+#Nixon Resigns - Republican Party
+country_event = {
+  id = 8015810
+  title = EVT_8015810_NAME
+  desc = EVT_8015810_DESC
+  picture = "nwo2_nixon_resigns"
+  is_triggered_only = yes # USA
+
+	option = {
+		name = EVT_8015810_A
+		prestige = -50
+		
+		#Change leader
+		country_event = 111222
+		
+		#Add Democrat support
+		any_pop = { ideology = { factor = 0.1 value = liberal } }
+		
+		set_country_flag = nixon_resigns
+	}
+}
+
+#1976 Elections
+country_event = {
+  id = 8015811
+  title = "United States $Year$ Presidential Election"
+  desc = EVT_8015811_DESC
+  picture = "nwo2_usa_elections_1976"
+  
+	fire_only_once = yes
+
+	trigger = {
+		tag = USA
+		year = 1976 NOT = { year = 1980 }
+		election = no
+		government = democracy
+		NOT = { has_country_flag = elections_disabled }	
+	}
+
+	mean_time_to_happen = { months = 11 modifier = { factor = 0.1 year = 1977 } }
+	
+	
+		option = {
+		name = "Jimmy Carter (Liberal Democrat)"
+		
+		clr_country_flag = nixon_entrenched
+		clr_country_flag = watergate_scandal_flag
+		
+		random_owned = { #This should give the player or AI the modifier if they don't have a majority support
+			limit = { owner = { AND = { government = democracy tag = USA NOT = { OR = { pop_majority_ideology = progressive pop_majority_ideology = social_democrat pop_majority_ideology = liberal } } } } }
+			owner = { add_country_modifier = { name = revolution_chaos duration = 1065 } }
+		}
+		
+		#The president's party becomes the executive, ie the lower house in Vicky
+		ruling_party_ideology = liberal
+		
+		#Simulate the ideological divide
+		any_pop = {
+			limit = {
+				OR = { strata = middle type = farmers type = labourers culture = afro_american }
+			}
+			ideology = { factor = 0.2 value = liberal }
+		}
+		
+		ai_chance = {
+			factor = 0.5
+			modifier = {
+				factor = 6
+				pop_majority_ideology = liberal
+			}
+			modifier = {
+				factor = 1.1
+				pop_majority_ideology = progressive
+			}
+			modifier = {
+				factor = 1.1
+				pop_majority_ideology = social_democrat
+			}
+			modifier = {
+				factor = 4
+				has_country_flag = nixon_resigns
+			}
+		}
+	}
+
+	option = {
+		name = "Gerald Ford (Conservative Republican)"
+		
+		clr_country_flag = nixon_entrenched
+		clr_country_flag = watergate_scandal_flag
+		
+		random_owned = { #This should give the player or AI the modifier if they don't have a majority support
+			limit = { owner = { AND = { government = democracy tag = USA NOT = { OR = { pop_majority_ideology = big_tent pop_majority_ideology = conservative } } } } }
+			owner = { add_country_modifier = { name = revolution_chaos duration = 1065 } }
+		}
+		
+		#The president's party becomes the executive, ie the lower house in Vicky
+		ruling_party_ideology = conservative
+		
+		#Simulate the ideological divide
+		any_pop = {
+			limit = { OR = { AND = { location = { is_core = CSA } NOT = { culture = afro_american } } strata = rich strata = middle } }
+			ideology = {
+				factor = 0.2
+				value = conservative
+			}
+		}
+		
+		ai_chance = {
+			factor = 0.5
+			modifier = {
+				factor = 6
+				pop_majority_ideology = conservative
+			}
+			modifier = {
+				factor = 3
+				pop_majority_ideology = big_tent
+			}
+			modifier = {
+				factor = 3
+				pop_majority_ideology = traditionalist
+			}
+		}
+	}
+}
+
+#1980 Elections
+country_event = {
+  id = 8015812
+  title = "United States $Year$ Presidential Election"
+  desc = EVT_8015812_DESC
+  picture = "nwo2_usa_elections_1980"
+  
+	fire_only_once = yes
+
+	trigger = {
+		tag = USA
+		year = 1980 NOT = { year = 1984 }
+		election = no
+		government = democracy
+		NOT = { has_country_flag = elections_disabled }	
+	}
+
+	mean_time_to_happen = { months = 11 modifier = { factor = 0.1 year = 1981 } }
+
+	option = {
+		name = "Ronald Reagan (Conservative Republican)"
+		
+		set_country_flag = reagan_elected
+		
+		random_owned = { #This should give the player or AI the modifier if they don't have a majority support
+			limit = { owner = { AND = { government = democracy tag = USA NOT = { OR = { pop_majority_ideology = traditionalist pop_majority_ideology = conservative } } } } }
+			owner = { add_country_modifier = { name = revolution_chaos duration = 1065 } }
+		}
+		
+		#The president's party becomes the executive, ie the lower house in Vicky
+		ruling_party_ideology = conservative
+		
+		#Simulate the ideological divide
+		any_pop = {
+			limit = { OR = { AND = { location = { is_core = CSA } NOT = { culture = afro_american } } strata = rich strata = middle } }
+			ideology = {
+				factor = 0.2
+				value = conservative
+			}
+		}
+		
+		ai_chance = {
+			factor = 0.33
+			modifier = {
+				factor = 6
+				pop_majority_ideology = conservative
+			}
+			modifier = {
+				factor = 3
+				pop_majority_ideology = traditionalist
+			}
+		}
+	}
+	option = {
+		name = "Jimmy Carter (Liberal Democrat)"
+		
+		random_owned = { #This should give the player or AI the modifier if they don't have a majority support
+			limit = { owner = { AND = { government = democracy tag = USA NOT = { OR = { pop_majority_ideology = liberal } } } } }
+			owner = { add_country_modifier = { name = revolution_chaos duration = 1065 } }
+		}
+		
+		#The president's party becomes the executive, ie the lower house in Vicky
+		ruling_party_ideology = liberal
+		
+		#Simulate the ideological divide
+		any_pop = {
+			limit = {
+				OR = { strata = middle type = farmers type = labourers culture = afro_american }
+			}
+			ideology = { factor = 0.2 value = liberal }
+		}
+		
+		ai_chance = {
+			factor = 0.33
+			modifier = {
+				factor = 6
+				pop_majority_ideology = liberal
+			}
+			modifier = {
+				factor = 1.1
+				pop_majority_ideology = social_democrat
+			}
+		}
+	}
+	
+	option = {
+		name = "John Anderson (Republican-Aligned Independent)"
+		
+		random_owned = { #This should give the player or AI the modifier if they don't have a majority support
+			limit = { owner = { AND = { government = democracy tag = USA NOT = { OR = { pop_majority_ideology = big_tent pop_majority_ideology = progressive } } } } }
+			owner = { add_country_modifier = { name = revolution_chaos duration = 1065 } }
+		}
+		
+		#The president's party becomes the executive, ie the lower house in Vicky
+		ruling_party_ideology = big_tent
+		
+		#Add ideological support
+		any_pop = {
+			limit = {
+				OR = { strata = rich strata = middle }
+			}
+			ideology = { factor = 0.2 value = big_tent }
+		}
+		any_pop = {
+			limit = {
+				OR = { strata = poor }
+			}
+			ideology = { factor = 0.15 value = progressive }
+		}
+		
+		ai_chance = {
+			factor = 0.33
+			modifier = {
+				factor = 8
+				pop_majority_ideology = big_tent
+			}
+			modifier = {
+				factor = 1.1
+				pop_majority_ideology = progressive
+			}
+			modifier = {
+				factor = 1.1
+				pop_majority_ideology = populist
+			}
+		}
+	} 
+}
+
+#1984 Elections
+country_event = {
+  id = 8015813
+  title = "United States $Year$ Presidential Election"
+  desc = EVT_8015813_DESC
+  picture = "nwo2_usa_elections_1984"
+  
+	fire_only_once = yes
+
+	trigger = {
+		tag = USA
+		year = 1984 NOT = { year = 1988 }
+		election = no
+		government = democracy
+		NOT = { has_country_flag = elections_disabled }	
+	}
+
+	mean_time_to_happen = { months = 11 modifier = { factor = 0.1 year = 1985 } }
+
+	option = {
+		name = "Ronald Reagan (Conservative Republican)"
+		
+		random_owned = { #This should give the player or AI the modifier if they don't have a majority support
+			limit = { owner = { AND = { government = democracy tag = USA NOT = { OR = { pop_majority_ideology = traditionalist pop_majority_ideology = conservative } } } } }
+			owner = { add_country_modifier = { name = revolution_chaos duration = 1065 } }
+		}
+		
+		#The president's party becomes the executive, ie the lower house in Vicky
+		ruling_party_ideology = conservative
+		
+		#Simulate the ideological divide
+		any_pop = {
+			limit = { OR = { AND = { location = { is_core = CSA } NOT = { culture = afro_american } } strata = rich strata = middle } }
+			ideology = {
+				factor = 0.2
+				value = conservative
+			}
+		}
+		
+		ai_chance = {
+			factor = 0.5
+			modifier = {
+				factor = 6
+				pop_majority_ideology = conservative
+			}
+			modifier = {
+				factor = 3
+				pop_majority_ideology = traditionalist
+			}
+			modifier = {
+				factor = 3
+				pop_majority_ideology = nationalist
+			}
+			modifier = {
+				factor = 3
+				pop_majority_ideology = populist
+			}
+		}
+	}
+
+	option = {
+		name = "Walter Mondale (Moderate Democrat)"
+
+		random_owned = { #This should give the player or AI the modifier if they don't have a majority support
+			limit = { owner = { AND = { government = democracy tag = USA NOT = { OR = { pop_majority_ideology = big_tent pop_majority_ideology = liberal } } } } }
+			owner = { add_country_modifier = { name = revolution_chaos duration = 1065 } }
+		}
+		
+		#The president's party becomes the executive, ie the lower house in Vicky
+		ruling_party_ideology = big_tent
+		
+		#Simulate the ideological divide
+		any_pop = {
+			limit = {
+				OR = { strata = middle type = farmers type = labourers culture = afro_american }
+			}
+			ideology = { factor = 0.2 value = big_tent }
+		}
+		
+		ai_chance = {
+			factor = 0.5
+			modifier = {
+				factor = 3
+				pop_majority_ideology = liberal
+			}
+			modifier = {
+				factor = 1.1
+				pop_majority_ideology = social_democrat
+			}
+			modifier = {
+				factor = 1.1
+				pop_majority_ideology = progressive
+			}
+			modifier = {
+				factor = 6
+				pop_majority_ideology = big_tent
+			}
+		}
+	}
+}
+
+#1988 Elections
+country_event = {
+  id = 8015814
+  title = "United States $Year$ Presidential Election"
+  desc = EVTDESC8015814
+  picture = "nwo2_usa_elections_1988"
+  
+	fire_only_once = yes
+
+	trigger = {
+    	tag = USA
+		year = 1988 NOT = { year = 1992 }
+		election = no
+		government = democracy
+		NOT = { has_country_flag = elections_disabled }	
+	}
+
+	mean_time_to_happen = { months = 11 modifier = { factor = 0.1 year = 1989 } }
+
+	option = {
+		name = "George H. W. Bush (Conservative Republican)"
+		
+		random_owned = { #This should give the player or AI the modifier if they don't have a majority support
+			limit = { owner = { AND = { government = democracy tag = USA NOT = { OR = { pop_majority_ideology = nationalist pop_majority_ideology = traditionalist pop_majority_ideology = conservative } } } } }
+			owner = { add_country_modifier = { name = revolution_chaos duration = 1065 } }
+		}
+		
+		#The president's party becomes the executive, ie the lower house in Vicky
+		ruling_party_ideology = conservative
+		
+		#Simulate the ideological divide
+		any_pop = {
+			limit = { OR = { AND = { location = { is_core = CSA } NOT = { culture = afro_american } } strata = rich strata = middle } }
+			ideology = {
+				factor = 0.2
+				value = conservative
+			}
+		}
+		
+		ai_chance = {
+			factor = 0.5
+			modifier = {
+				factor = 6
+				pop_majority_ideology = conservative
+			}
+			modifier = {
+				factor = 3
+				pop_majority_ideology = traditionalist
+			}
+			modifier = {
+				factor = 3
+				pop_majority_ideology = populist
+			}
+			modifier = {
+				factor = 3
+				pop_majority_ideology = nationalist
+			}
+		}
+	}
+
+	option = {
+		name = "Michael Dukakis (Liberal Democrat)"
+
+		random_owned = { #This should give the player or AI the modifier if they don't have a majority support
+			limit = { owner = { AND = { government = democracy tag = USA NOT = { OR = { pop_majority_ideology = progressive pop_majority_ideology = social_democrat pop_majority_ideology = big_tent pop_majority_ideology = liberal } } } } }
+			owner = { add_country_modifier = { name = revolution_chaos duration = 1065 } }
+		}
+		
+		#The president's party becomes the executive, ie the lower house in Vicky
+		ruling_party_ideology = liberal
+		
+		#Simulate the ideological divide
+		any_pop = {
+			limit = {
+				OR = { strata = middle type = farmers type = labourers culture = afro_american }
+			}
+			ideology = { factor = 0.2 value = liberal }
+		}
+		
+		ai_chance = {
+			factor = 0.5
+			modifier = {
+				factor = 6
+				pop_majority_ideology = liberal
+			}
+			modifier = {
+				factor = 1.1
+				pop_majority_ideology = social_democrat
+			}
+			modifier = {
+				factor = 1.5
+				pop_majority_ideology = progressive
+			}
+			modifier = {
+				factor = 3
+				pop_majority_ideology = big_tent
+			}
+		}
+	}
+}
+
+#1992 Elections
+country_event = {
+  id = 8015815
+  title = "United States $Year$ Presidential Election"
+  desc = EVTDESC8015815
+  picture = "nwo2_usa_elections_1992"
+  
+	fire_only_once = yes
+
+	trigger = {
+    	tag = USA
+		year = 1992 NOT = { year = 1996 }
+		election = no
+		government = democracy
+		NOT = { has_country_flag = elections_disabled }	
+	}
+
+	mean_time_to_happen = { months = 11 modifier = { factor = 0.1 year = 1993 } }
+
+	option = {
+		name = "Bill Clinton (Liberal Democrat)"
+		
+		random_owned = { #This should give the player or AI the modifier if they don't have a majority support
+			limit = { owner = { AND = { government = democracy tag = USA NOT = { OR = { pop_majority_ideology = progressive pop_majority_ideology = social_democrat pop_majority_ideology = big_tent pop_majority_ideology = liberal } } } } }
+			owner = { add_country_modifier = { name = revolution_chaos duration = 1065 } }
+		}
+		
+		#The president's party becomes the executive, ie the lower house in Vicky
+		ruling_party_ideology = liberal
+		
+		#Simulate the ideological divide
+		any_pop = {
+			limit = {
+				OR = { strata = middle type = farmers type = labourers culture = afro_american }
+			}
+			ideology = { factor = 0.2 value = liberal }
+		}
+		
+		ai_chance = {
+			factor = 0.33
+			modifier = {
+				factor = 6
+				pop_majority_ideology = liberal
+			}
+			modifier = {
+				factor = 1.1
+				pop_majority_ideology = social_democrat
+			}
+			modifier = {
+				factor = 1.5
+				pop_majority_ideology = progressive
+			}
+			modifier = {
+				factor = 3
+				pop_majority_ideology = big_tent
+			}
+		}
+	}
+
+	option = {
+		name = "George H. W. Bush (Conservative Republican)"
+		
+		random_owned = { #This should give the player or AI the modifier if they don't have a majority support
+			limit = { owner = { AND = { government = democracy tag = USA NOT = { OR = { pop_majority_ideology = nationalist pop_majority_ideology = traditionalist pop_majority_ideology = conservative } } } } }
+			owner = { add_country_modifier = { name = revolution_chaos duration = 1065 } }
+		}
+		
+		#The president's party becomes the executive, ie the lower house in Vicky
+		ruling_party_ideology = conservative
+		
+		#Simulate the ideological divide
+		any_pop = {
+			limit = { OR = { AND = { location = { is_core = CSA } NOT = { culture = afro_american } } strata = rich strata = middle } }
+			ideology = {
+				factor = 0.2
+				value = conservative
+			}
+		}
+		
+		ai_chance = {
+			factor = 0.33
+			modifier = {
+				factor = 6
+				pop_majority_ideology = conservative
+			}
+			modifier = {
+				factor = 3
+				pop_majority_ideology = traditionalist
+			}
+			modifier = {
+				factor = 3
+				pop_majority_ideology = nationalist
+			}
+		}
+	}
+
+	option = {
+		name = "Ross Perot (Reform Party)"
+		
+		random_owned = { #This should give the player or AI the modifier if they don't have a majority support
+			limit = { owner = { AND = { government = democracy tag = USA NOT = { OR = { pop_majority_ideology = populist } } } } }
+			owner = { add_country_modifier = { name = revolution_chaos duration = 1065 } }
+		}
+		
+		#The president's party becomes the executive, ie the lower house in Vicky
+		ruling_party_ideology = populist
+		
+		#Add ideological support
+		any_pop = {
+			limit = {
+				OR = { strata = rich }
+			}
+			ideology = { factor = 0.2 value = populist }
+		}
+		any_pop = {
+			limit = {
+				OR = { strata = middle }
+			}
+			ideology = { factor = 0.15 value = populist }
+		}
+		
+		ai_chance = {
+			factor = 0.33
+			modifier = {
+				factor = 8
+				pop_majority_ideology = populist
+			}
+		}
+	}
+
+}
+
+#1996 Elections
+country_event = {
+  id = 8015816
+  title = "United States $Year$ Presidential Election"
+  desc = EVTDESC8015816
+  picture = "nwo2_usa_elections_1996"
+  
+	fire_only_once = yes
+
+	trigger = {
+    	tag = USA
+		year = 1996 NOT = { year = 2000 }
+		election = no
+		government = democracy
+		NOT = { has_country_flag = elections_disabled }	
+	}
+
+	mean_time_to_happen = { months = 11 modifier = { factor = 0.1 year = 1997 } }
+
+	option = {
+		name = "Bill Clinton (Liberal Democrat)"
+		
+		random_owned = { #This should give the player or AI the modifier if they don't have a majority support
+			limit = { owner = { AND = { government = democracy tag = USA NOT = { OR = { pop_majority_ideology = progressive pop_majority_ideology = social_democrat pop_majority_ideology = big_tent pop_majority_ideology = liberal } } } } }
+			owner = { add_country_modifier = { name = revolution_chaos duration = 1065 } }
+		}
+		
+		#The president's party becomes the executive, ie the lower house in Vicky
+		ruling_party_ideology = liberal
+		
+		#Simulate the ideological divide
+		any_pop = {
+			limit = {
+				OR = { strata = middle type = farmers type = labourers culture = afro_american }
+			}
+			ideology = { factor = 0.2 value = liberal }
+		}
+
+		ai_chance = {
+			factor = 0.33
+			modifier = {
+				factor = 6
+				pop_majority_ideology = liberal
+			}
+			modifier = {
+				factor = 1.1
+				pop_majority_ideology = social_democrat
+			}
+			modifier = {
+				factor = 1.5
+				pop_majority_ideology = progressive
+			}
+			modifier = {
+				factor = 3
+				pop_majority_ideology = big_tent
+			}
+		}
+	}
+
+	option = {
+		name = "Bob Dole (Conservative Republican)"
+		
+		random_owned = { #This should give the player or AI the modifier if they don't have a majority support
+			limit = { owner = { AND = { government = democracy tag = USA NOT = { OR = { pop_majority_ideology = nationalist pop_majority_ideology = traditionalist pop_majority_ideology = conservative } } } } }
+			owner = { add_country_modifier = { name = revolution_chaos duration = 1065 } }
+		}
+		
+		#The president's party becomes the executive, ie the lower house in Vicky
+		ruling_party_ideology = conservative
+		
+		#Simulate the ideological divide
+		any_pop = {
+			limit = { OR = { AND = { location = { is_core = CSA } NOT = { culture = afro_american } } strata = rich strata = middle } }
+			ideology = {
+				factor = 0.2
+				value = conservative
+			}
+		}
+		
+		ai_chance = {
+			factor = 0.33
+			modifier = {
+				factor = 6
+				pop_majority_ideology = conservative
+			}
+			modifier = {
+				factor = 3
+				pop_majority_ideology = traditionalist
+			}
+			modifier = {
+				factor = 3
+				pop_majority_ideology = nationalist
+			}
+		}
+	}
+
+	option = {
+		name = "Ross Perot (Reform Party)"
+		
+		random_owned = { #This should give the player or AI the modifier if they don't have a majority support
+			limit = { owner = { AND = { government = democracy tag = USA NOT = { OR = { pop_majority_ideology = populist } } } } }
+			owner = { add_country_modifier = { name = revolution_chaos duration = 1065 } }
+		}
+		
+		#The president's party becomes the executive, ie the lower house in Vicky
+		ruling_party_ideology = populist
+		
+		#Add ideological support
+		any_pop = {
+			limit = {
+				OR = { strata = rich }
+			}
+			ideology = { factor = 0.2 value = populist }
+		}
+		any_pop = {
+			limit = {
+				OR = { strata = middle }
+			}
+			ideology = { factor = 0.15 value = populist }
+		}
+		
+		ai_chance = {
+			factor = 0.33
+			modifier = {
+				factor = 8
+				pop_majority_ideology = populist
+			}
+		}
+	}
+
+}
+
+#2000 Elections
+country_event = {
+  id = 8015817
+  title = "United States $Year$ Presidential Election"
+  desc = EVTDESC8015817
+  picture = "nwo2_usa_elections_2000"
+  
+	fire_only_once = yes
+
+	trigger = {
+    	tag = USA
+		year = 2000 NOT = { year = 2004 }
+		election = no
+		government = democracy
+		NOT = { has_country_flag = elections_disabled }	
+	}
+
+	mean_time_to_happen = { months = 11 modifier = { factor = 0.1 year = 2001 } }
+
+	option = {
+		name = "George W. Bush Jr. (Conservative Republican)"
+		
+		random_owned = { #This should give the player or AI the modifier if they don't have a majority support
+			limit = { owner = { AND = { government = democracy tag = USA NOT = { OR = { pop_majority_ideology = nationalist pop_majority_ideology = traditionalist pop_majority_ideology = conservative } } } } }
+			owner = { add_country_modifier = { name = revolution_chaos duration = 1065 } }
+		}
+		
+		#The president's party becomes the executive, ie the lower house in Vicky
+		ruling_party_ideology = conservative
+		
+		#Simulate the ideological divide
+		any_pop = {
+			limit = { OR = { AND = { location = { is_core = CSA } NOT = { culture = afro_american } } strata = rich strata = middle } }
+			ideology = {
+				factor = 0.2
+				value = conservative
+			}
+		}
+
+		
+		ai_chance = {
+			factor = 0.5
+			modifier = {
+				factor = 6
+				pop_majority_ideology = conservative
+			}
+			modifier = {
+				factor = 3
+				pop_majority_ideology = traditionalist
+			}
+			modifier = {
+				factor = 3
+				pop_majority_ideology = nationalist
+			}
+			modifier = {
+				factor = 3
+				pop_majority_ideology = populist
+			}
+		}
+	}
+
+	option = {
+		name = "Al Gore (Liberal Democrat)"
+		
+		random_owned = { #This should give the player or AI the modifier if they don't have a majority support
+			limit = { owner = { AND = { government = democracy tag = USA NOT = { OR = { pop_majority_ideology = progressive pop_majority_ideology = social_democrat pop_majority_ideology = big_tent pop_majority_ideology = liberal } } } } }
+			owner = { add_country_modifier = { name = revolution_chaos duration = 1065 } }
+		}
+		
+		#The president's party becomes the executive, ie the lower house in Vicky
+		ruling_party_ideology = liberal
+		
+		#Simulate the ideological divide
+		any_pop = {
+			limit = {
+				OR = { strata = middle type = farmers type = labourers culture = afro_american }
+			}
+			ideology = { factor = 0.2 value = liberal }
+		}
+		
+		ai_chance = {
+			factor = 0.5
+			modifier = {
+				factor = 6
+				pop_majority_ideology = liberal
+			}
+			modifier = {
+				factor = 1.1
+				pop_majority_ideology = social_democrat
+			}
+			modifier = {
+				factor = 1.5
+				pop_majority_ideology = progressive
+			}
+			modifier = {
+				factor = 3
+				pop_majority_ideology = big_tent
+			}
+		}
+	}
+
+}
+
+#2004 Elections
+country_event = {
+  id = 8015818
+  title = "United States $Year$ Presidential Election"
+  desc = EVTDESC8015818
+  picture = "nwo2_usa_elections_2004"
+  
+	fire_only_once = yes
+
+	trigger = {
+    	tag = USA
+		year = 2004 NOT = { year = 2008 }
+		election = no
+		government = democracy
+		NOT = { has_country_flag = elections_disabled }	
+	}
+
+	mean_time_to_happen = { months = 11 modifier = { factor = 0.1 year = 2005 } }
+
+	option = {
+		name = "George W. Bush Jr. (Conservative Republican)"
+		
+		random_owned = { #This should give the player or AI the modifier if they don't have a majority support
+			limit = { owner = { AND = { government = democracy tag = USA NOT = { OR = { pop_majority_ideology = nationalist pop_majority_ideology = traditionalist pop_majority_ideology = conservative } } } } }
+			owner = { add_country_modifier = { name = revolution_chaos duration = 1065 } }
+		}
+		
+		#The president's party becomes the executive, ie the lower house in Vicky
+		ruling_party_ideology = conservative
+		
+		#Simulate the ideological divide
+		any_pop = {
+			limit = { OR = { AND = { location = { is_core = CSA } NOT = { culture = afro_american } } strata = rich strata = middle } }
+			ideology = {
+				factor = 0.2
+				value = conservative
+			}
+		}
+		
+		ai_chance = {
+			factor = 0.5
+			modifier = {
+				factor = 6
+				pop_majority_ideology = conservative
+			}
+			modifier = {
+				factor = 3
+				pop_majority_ideology = traditionalist
+			}
+			modifier = {
+				factor = 3
+				pop_majority_ideology = nationalist
+			}
+			modifier = {
+				factor = 3
+				pop_majority_ideology = populist
+			}
+		}
+	}
+
+	option = {
+		name = "John Kerry (Liberal Democrat)"
+
+		random_owned = { #This should give the player or AI the modifier if they don't have a majority support
+			limit = { owner = { AND = { government = democracy tag = USA NOT = { OR = { pop_majority_ideology = progressive pop_majority_ideology = social_democrat pop_majority_ideology = big_tent pop_majority_ideology = liberal } } } } }
+			owner = { add_country_modifier = { name = revolution_chaos duration = 1065 } }
+		}
+		
+		#The president's party becomes the executive, ie the lower house in Vicky
+		ruling_party_ideology = liberal
+		
+		#Simulate the ideological divide
+		any_pop = {
+			limit = {
+				OR = { strata = middle type = farmers type = labourers culture = afro_american }
+			}
+			ideology = { factor = 0.2 value = liberal }
+		}
+		
+		ai_chance = {
+			factor = 0.5
+			modifier = {
+				factor = 6
+				pop_majority_ideology = liberal
+			}
+			modifier = {
+				factor = 1.1
+				pop_majority_ideology = social_democrat
+			}
+			modifier = {
+				factor = 1.5
+				pop_majority_ideology = progressive
+			}
+			modifier = {
+				factor = 3
+				pop_majority_ideology = big_tent
+			}
+		}
+	}
+
+}
+
+#2008 Elections
+country_event = {
+  id = 8015819
+  title = "2008 Presidential Election"
+  desc = EVTDESC8015819
+  picture = "nwo2_usa_elections_2008"
+  
+	fire_only_once = yes
+
+	trigger = {
+    	tag = USA
+		year = 2008 NOT = { year = 2012 }
+		election = no
+		government = democracy
+		NOT = { has_country_flag = elections_disabled }	
+	}
+
+	mean_time_to_happen = { months = 11 modifier = { factor = 0.1 year = 2009 } }
+
+	option = {
+		name = "Barack Obama (Liberal Democrat)"
+		
+		random_owned = { #This should give the player or AI the modifier if they don't have a majority support
+			limit = { owner = { AND = { government = democracy tag = USA NOT = { OR = { pop_majority_ideology = progressive pop_majority_ideology = social_democrat pop_majority_ideology = big_tent pop_majority_ideology = liberal } } } } }
+			owner = { add_country_modifier = { name = revolution_chaos duration = 1065 } }
+		}
+
+		set_country_flag = obama_presidency
+
+		#The president's party becomes the executive, ie the lower house in Vicky
+		ruling_party_ideology = liberal
+		
+		#Simulate the ideological divide
+		any_pop = {
+			limit = {
+				OR = { strata = middle type = farmers type = labourers culture = afro_american }
+			}
+			ideology = { factor = 0.2 value = liberal }
+		}
+		
+		ai_chance = {
+			factor = 0.5
+			modifier = {
+				factor = 6
+				pop_majority_ideology = liberal
+			}
+			modifier = {
+				factor = 1.1
+				pop_majority_ideology = social_democrat
+			}
+			modifier = {
+				factor = 1.5
+				pop_majority_ideology = progressive
+			}
+			modifier = {
+				factor = 3
+				pop_majority_ideology = big_tent
+			}
+		}
+	}
+
+	option = {
+		name = "John McCain (Conservative Republican)"
+		
+		random_owned = { #This should give the player or AI the modifier if they don't have a majority support
+			limit = { owner = { AND = { government = democracy tag = USA NOT = { OR = { pop_majority_ideology = nationalist pop_majority_ideology = traditionalist pop_majority_ideology = conservative } } } } }
+			owner = { add_country_modifier = { name = revolution_chaos duration = 1065 } }
+		}
+		
+		#The president's party becomes the executive, ie the lower house in Vicky
+		ruling_party_ideology = conservative
+		
+		#Simulate the ideological divide
+		any_pop = {
+			limit = { OR = { AND = { location = { is_core = CSA } NOT = { culture = afro_american } } strata = rich strata = middle } }
+			ideology = {
+				factor = 0.2
+				value = conservative
+			}
+		}
+		
+		ai_chance = {
+			factor = 0.5
+			modifier = {
+				factor = 6
+				pop_majority_ideology = conservative
+			}
+			modifier = {
+				factor = 3
+				pop_majority_ideology = traditionalist
+			}
+			modifier = {
+				factor = 3
+				pop_majority_ideology = nationalist
+			}
+			modifier = {
+				factor = 3
+				pop_majority_ideology = populist
+			}
+		}
+	}
+
+}
+
+#2012 Elections
+country_event = {
+  id = 8015820
+  title = "2012 Presidential Election"
+  desc = EVTDESC8015820
+  picture = "nwo2_usa_elections_2012"
+  
+	fire_only_once = yes
+
+	trigger = {
+    	tag = USA
+		year = 2012 NOT = { year = 2016 }
+		election = no
+		government = democracy
+		NOT = { has_country_flag = elections_disabled }	
+	}
+
+	mean_time_to_happen = { months = 11 modifier = { factor = 0.1 year = 2013 } }
+
+	option = {
+		name = "Barack Obama (Moderate Democrat)"
+		
+		random_owned = { #This should give the player or AI the modifier if they don't have a majority support
+			limit = { owner = { AND = { government = democracy tag = USA NOT = { OR = { pop_majority_ideology = progressive pop_majority_ideology = social_democrat pop_majority_ideology = big_tent pop_majority_ideology = liberal } } } } }
+			owner = { add_country_modifier = { name = revolution_chaos duration = 1065 } }
+		}
+
+		set_country_flag = obama_presidency
+
+		#The president's party becomes the executive, ie the lower house in Vicky
+		ruling_party_ideology = big_tent
+		
+		#Simulate the ideological divide
+		any_pop = {
+			limit = {
+				OR = { strata = middle type = farmers type = labourers culture = afro_american }
+			}
+			ideology = { factor = 0.2 value = big_tent }
+		}
+		
+		ai_chance = {
+			factor = 0.5
+			modifier = {
+				factor = 3
+				pop_majority_ideology = liberal
+			}
+			modifier = {
+				factor = 1.1
+				pop_majority_ideology = social_democrat
+			}
+			modifier = {
+				factor = 1.5
+				pop_majority_ideology = progressive
+			}
+			modifier = {
+				factor = 6
+				pop_majority_ideology = big_tent
+			}
+		}
+	}
+
+	option = {
+		name = "Mitt Romney (Conservative Republican)"
+		
+		random_owned = { #This should give the player or AI the modifier if they don't have a majority support
+			limit = { owner = { AND = { government = democracy tag = USA NOT = { OR = { pop_majority_ideology = nationalist pop_majority_ideology = traditionalist pop_majority_ideology = conservative } } } } }
+			owner = { add_country_modifier = { name = revolution_chaos duration = 1065 } }
+		}
+		
+		#The president's party becomes the executive, ie the lower house in Vicky
+		ruling_party_ideology = conservative
+		
+		#Simulate the ideological divide
+		any_pop = {
+			limit = { OR = { AND = { location = { is_core = CSA } NOT = { culture = afro_american } } strata = rich strata = middle } }
+			ideology = {
+				factor = 0.2
+				value = conservative
+			}
+		}
+		
+		ai_chance = {
+			factor = 0.5
+			modifier = {
+				factor = 6
+				pop_majority_ideology = conservative
+			}
+			modifier = {
+				factor = 3
+				pop_majority_ideology = traditionalist
+			}
+			modifier = {
+				factor = 3
+				pop_majority_ideology = nationalist
+			}
+			modifier = {
+				factor = 3
+				pop_majority_ideology = populist
+			}
+		}
+	}
+
+}
+
+#2016 Elections
+country_event = {
+  id = 8015821
+  title = "2016 Presidential Election"
+  desc = EVTDESC8015821
+  picture = "nwo2_usa_elections_2016"
+  
+	fire_only_once = yes
+
+	trigger = {
+    	tag = USA
+		year = 2016 NOT = { year = 2020 }
+		election = no
+		government = democracy
+		NOT = { has_country_flag = elections_disabled }	
+		
+		NOT = { ruling_party_ideology = populist }
+	}
+
+	mean_time_to_happen = { months = 11 modifier = { factor = 0.1 year = 2017 } }
+
+	option = {
+		name = "Donald Trump (Populist Republican)"
+		
+		random_owned = { #This should give the player or AI the modifier if they don't have a majority support
+			limit = { owner = { AND = { government = democracy tag = USA NOT = { OR = { pop_majority_ideology = populist pop_majority_ideology = nationalist pop_majority_ideology = traditionalist pop_majority_ideology = conservative } } } } }
+			owner = { add_country_modifier = { name = revolution_chaos duration = 1065 } }
+		}
+
+		set_country_flag = trump_2016_election
+		
+		#The president's party becomes the executive, ie the lower house in Vicky
+		ruling_party_ideology = populist
+		
+		#Simulate the ideological divide
+		any_pop = {
+			limit = { OR = { AND = { location = { is_core = CSA } NOT = { culture = afro_american } } strata = rich strata = middle } }
+			ideology = {
+				factor = 0.2
+				value = populist
+			}
+		}
+		
+		ai_chance = {
+			factor = 0.5
+			modifier = {
+				factor = 3
+				pop_majority_ideology = conservative
+			}
+			modifier = {
+				factor = 3
+				pop_majority_ideology = traditionalist
+			}
+			modifier = {
+				factor = 3
+				pop_majority_ideology = nationalist
+			}
+			modifier = {
+				factor = 6
+				pop_majority_ideology = populist
+			}
+		}
+	}
+
+	option = {
+		name = "Hillary Clinton (Liberal Democrat)"
+
+		random_owned = { #This should give the player or AI the modifier if they don't have a majority support
+			limit = { owner = { AND = { government = democracy tag = USA NOT = { OR = { pop_majority_ideology = progressive pop_majority_ideology = social_democrat pop_majority_ideology = big_tent pop_majority_ideology = liberal } } } } }
+			owner = { add_country_modifier = { name = revolution_chaos duration = 1065 } }
+		}
+		
+		#The president's party becomes the executive, ie the lower house in Vicky
+		ruling_party_ideology = liberal
+		
+		#Simulate the ideological divide
+		any_pop = {
+			limit = {
+				OR = { strata = middle type = farmers type = labourers culture = afro_american }
+			}
+			ideology = { factor = 0.2 value = liberal }
+		}
+		
+		ai_chance = {
+			factor = 0.5
+			modifier = {
+				factor = 3
+				pop_majority_ideology = liberal
+			}
+			modifier = {
+				factor = 1.1
+				pop_majority_ideology = social_democrat
+			}
+			modifier = {
+				factor = 1.5
+				pop_majority_ideology = progressive
+			}
+			modifier = {
+				factor = 6
+				pop_majority_ideology = big_tent
+			}
+		}
+	}
+
+}
+
+#2020 Elections
+country_event = {
+  id = 8015822
+  title = "2020 Presidential Election"
+  desc = EVTDESC8015822
+  picture = "nwo2_usa_elections_2020"
+  fire_only_once = yes
+
+	trigger = {
+    	tag = USA
+		year = 2020 NOT = { year = 2024 }
+		election = no
+		government = democracy
+		
+		is_vassal = no
+		
+		NOT = { has_country_flag = elections_disabled }
+		
+	}
+
+	mean_time_to_happen = { months = 11 modifier = { factor = 0.1 year = 2017 } }
+
+	option = {
+		name = "Joe Biden (Moderate Democrat)"
+		
+		random_owned = { #This should give the player or AI the modifier if they don't have a majority support
+			limit = { owner = { AND = { government = democracy tag = USA NOT = { OR = { pop_majority_ideology = progressive pop_majority_ideology = social_democrat pop_majority_ideology = big_tent pop_majority_ideology = liberal } } } } }
+			owner = { add_country_modifier = { name = revolution_chaos duration = 1065 } }
+		}
+
+		set_country_flag = biden_2020_flag
+		
+		#The president's party becomes the executive, ie the lower house in Vicky
+		ruling_party_ideology = big_tent
+		
+		#Simulate the ideological divide
+		any_pop = {
+			limit = {
+				OR = { strata = middle type = farmers type = labourers culture = afro_american }
+			}
+			ideology = { factor = 0.2 value = big_tent }
+		}
+		
+		ai_chance = {
+			factor = 0.5
+			modifier = {
+				factor = 3
+				pop_majority_ideology = liberal
+			}
+			modifier = {
+				factor = 1.1
+				pop_majority_ideology = social_democrat
+			}
+			modifier = {
+				factor = 1.5
+				pop_majority_ideology = progressive
+			}
+			modifier = {
+				factor = 6
+				pop_majority_ideology = big_tent
+			}
+		}
+	}
+
+	option = {
+		name = "Donald Trump (Populist Republican)"
+		
+		random_owned = { #This should give the player or AI the modifier if they don't have a majority support
+			limit = { owner = { AND = { government = democracy tag = USA NOT = { OR = { pop_majority_ideology = populist pop_majority_ideology = nationalist pop_majority_ideology = traditionalist pop_majority_ideology = conservative } } } } }
+			owner = { add_country_modifier = { name = revolution_chaos duration = 1065 } }
+		}
+		
+		#The president's party becomes the executive, ie the lower house in Vicky
+		ruling_party_ideology = populist
+		
+		#Simulate the ideological divide
+		any_pop = {
+			limit = { OR = { AND = { location = { is_core = CSA } NOT = { culture = afro_american } } strata = rich strata = middle } }
+			ideology = {
+				factor = 0.2
+				value = populist
+			}
+		}
+
+		#Weaken US democracy
+		political_reform = regulated_opinion
+		political_reform = universal_weighted_voting
+		political_reform = politicised_service
+		
+		#Democrats are furious
+		any_pop = {
+			scaled_militancy = {
+				factor = 5
+				ideology = liberal
+			}
+			scaled_militancy = {
+				factor = 10
+				ideology = progressive
+			}
+			scaled_militancy = {
+				factor = 10
+				ideology = socialist
+			}
+			scaled_militancy = {
+				factor = 10
+				ideology = communist
+			}
+			scaled_militancy = {
+				factor = 10
+				ideology = communist_social
+			}
+		}
+		
+		ai_chance = {
+			factor = 0.5
+			modifier = {
+				factor = 3
+				pop_majority_ideology = conservative
+			}
+			modifier = {
+				factor = 3
+				pop_majority_ideology = traditionalist
+			}
+			modifier = {
+				factor = 3
+				pop_majority_ideology = nationalist
+			}
+			modifier = {
+				factor = 6
+				pop_majority_ideology = populist
+			}
+		}
+	}
+
+}

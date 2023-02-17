@@ -1,0 +1,429 @@
+#Albanian People's Republic
+country_event = {
+	id = 1512126
+	title = "$YEAR$ Albanian Constitution"
+	desc = EVTDESC1512126
+	picture = "alb_comm_start"
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = ALB
+		year = 1946
+		NOT = { year = 1990 }
+		
+		OR = { government = democracy government = democracy1 government = hms_government government = hms_government1 }
+		is_vassal = no
+		war = no
+		
+		ruling_party_ideology = communist
+		
+		has_global_flag = blocsenabled
+	}
+	
+	mean_time_to_happen = { 
+		months = 1
+	}
+
+	option = {
+		name = "Join the Eastern Bloc"
+		
+		government = proletarian_dictatorship
+		country_event = 800052
+		
+		RUS = { country_event = 120003 } #Vassalise
+		
+		ai_chance = { factor = 0.95 }
+	}
+	
+	option = {
+		name = "Resist the Sovietisation of Albania"
+		
+		RUS = { country_event = 120002 } #War to vassalise
+		
+		ai_chance = { factor = 0.05 }
+	}
+
+}
+
+#Democratisation of Albania
+country_event = {
+  id = 8000204
+  title = EVT_8000204_NAME
+  desc = EVT_8000204_DESC
+  picture = "fatos_nano"
+  fire_only_once = yes
+
+	trigger = {
+		tag = ALB
+		year = 1991
+		NOT = { has_global_flag = 1992_start_date_flag }
+
+		OR = { 
+			NOT = { 
+				any_neighbor_country = { 
+					OR = { 
+						government = proletarian_dictatorship 
+						government = proletarian_dictatorship1 
+					}
+				}
+			}
+			RUS = { ruling_party_ideology = communist_social } 
+			NOT = { has_global_flag = blocsenabled }
+		}
+		
+		government = proletarian_dictatorship
+		
+		is_vassal = no
+		war = no
+	}
+ 
+	mean_time_to_happen = { months = 3 }
+
+	option = {
+		name = "Let us move towards democracy!"
+		government = democracy
+		country_event = 800054
+		election = yes
+		define_general = { name = "Fatos Nano" personality = energetic background = no_background }
+	}
+	option = {
+		name = "Communism yet will prevail!"
+		any_pop = { militancy = 5.0 consciousness = 2 }
+	}
+	
+}
+
+#Claims over Kosovo
+country_event = {
+  id = 8000205
+  title = "EVT_8000202_NAME"
+  desc = "EVT_8000202_DESC"
+  picture = "nwo2_kosovo_claims"
+  fire_only_once = yes
+
+	trigger = {
+		tag = ALB
+		year = 1946
+		NOT = { owns = 802 }
+		NOT = { owns = 803 }
+		is_vassal = no
+	}
+	
+	mean_time_to_happen = { months = 6 }
+
+	option = {
+		name = "EVT_8000202_A"
+		prestige_factor = -0.05
+		
+		802 = { remove_core = ALB }
+		803 = { remove_core = ALB }
+		
+		random_country = {
+			limit = { OR = { tag = YUG tag = SER } }
+			relation = { who = THIS value = 100 }
+		}
+		
+		ai_chance = { factor = 0.6 }
+	}
+
+	option = {
+		name = "EVT_8000202_B"
+		802 = { add_core = ALB }
+		803 = { add_core = ALB }
+		
+		random_country = {
+			limit = { OR = { tag = YUG tag = SER } }
+			relation = { who = THIS value = -100 }
+		}
+
+		badboy = 10
+		ai_chance = { factor = 0.4 }
+	}
+
+}
+
+#Death of Enver Hoxha
+country_event = {
+  id = 8022804
+  title = EVT_8022804_NAME
+  desc = EVT_8022804_DESC
+  picture = "nwo2_enver_hoxha"
+  fire_only_once = yes
+
+	trigger = {
+		tag = ALB
+		year = 1985 
+		NOT = { year = 1990 }
+		government = proletarian_dictatorship
+	}
+
+	mean_time_to_happen = { months = 4 }
+
+	option = {
+		name = "A great Albanian has been lost"
+		any_pop = { consciousness = 2.0 }
+	}
+
+}
+
+#Soviet–Albanian split
+country_event = {
+	id = 8022805
+	title = "The Soviet–Albanian Split"
+	desc = EVTDESC1512127
+	picture = "alb_rus_split"
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = ALB
+		government = proletarian_dictatorship
+		RUS = { is_our_vassal = ALB government = proletarian_dictatorship has_country_flag = nikita_khrushchev }
+		war = no
+		year = 1960
+		NOT = { year = 1990 }
+		CHI = { is_greater_power = yes government = proletarian_dictatorship }
+		has_global_flag = blocsenabled
+	}
+
+	mean_time_to_happen = { 
+		months = 12
+	}
+
+	option = {
+		name = "Side with Communist China"
+		RUS = { release_vassal = ALB }
+		RUS = { diplomatic_influence = { who = ALB value = -200 } }
+		CHI = { diplomatic_influence = { who = ALB value = 200 } prestige = 500 }
+		relation = { who = RUS value = -200 }
+		relation = { who = CHI value = 200 }
+		ai_chance = { factor = 0.8 }
+	}
+
+	option = {
+		name = "Stay with the Soviets"
+		prestige = -50
+		relation = { who = RUS value = 50 }
+		ai_chance = { factor = 0.2 }
+	}
+
+}
+
+#Hoxa's Policies
+country_event = {
+  id = 8022807
+  title = EVT_8022807_NAME # Hoxha policies
+  desc = EVT_8022807_DESC
+  picture = "nwo2_hoxha_policies"
+  fire_only_once = yes
+
+	trigger = {
+		tag = ALB
+		year = 1976
+		NOT = { year = 1990 }
+		government = proletarian_dictatorship
+	}
+
+	mean_time_to_happen = { months = 11 }
+
+	option = {
+		name = "Autarky is the way forward!"
+		prestige = 100
+		add_country_modifier = { name = juche duration = -1 }
+		ai_chance = { factor = 0.9 }
+	}
+
+	option = {
+		name = "Maybe some market reforms are in order?"
+		money = 50000
+		ruling_party_ideology = communist_social
+		add_country_modifier = { name = revolution_chaos duration = 3650 }
+		ai_chance = { factor = 0.1 }
+	}
+}
+
+country_event = {
+	id = 8022808
+	title = "$YEAR$ Albanian Parliamentary Elections"
+	desc = EVTDESC8022808
+	picture = "transition_albania"
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = ALB
+		has_global_flag = 1992_start_date_flag
+
+
+		government = socialist_democracy
+		ruling_party_ideology = socialist
+		war = no
+		is_vassal = no
+		
+	}
+
+	mean_time_to_happen = { 
+		months = 2
+	}
+
+	option = {
+		name = "A Democratic Party victory sweeps away the remaining Socialist policies."
+		
+		government = democracy
+		country_event = 800054
+		ruling_party_ideology = conservative
+
+		any_pop = { 
+			limit = { strata = rich }
+			ideology = { factor = 0.2 value = conservative }
+		}
+		any_pop = { 
+			limit = { strata = middle }
+			ideology = { factor = 0.1 value = liberal }
+			ideology = { factor = 0.1 value = conservative }
+		}
+		any_pop = { 
+			limit = { strata = poor }
+			ideology = { factor = 0.1 value = socialist }
+			ideology = { factor = 0.1 value = populist }
+			ideology = { factor = 0.1 value = social_democrat }
+		}
+		
+		any_pop = {
+			scaled_militancy = { 
+				factor = 10
+				ideology = communist
+			}
+			scaled_militancy = { 
+				factor = 10
+				ideology = communist_social
+			}
+			scaled_militancy = { 
+				factor = 5 
+				ideology = socialist
+			}
+		}
+		
+		ai_chance = { factor = 0.9 }
+	}
+	
+	option = {
+		name = "The Socialist Party rallies together its support."
+		badboy = 2
+
+		add_country_modifier = { name = revolution_chaos duration = 1825 }
+
+		any_pop = { 
+			limit = { strata = poor }
+			ideology = { factor = 0.15 value = socialist }
+			ideology = { factor = 0.1 value = liberal }
+		}
+		any_pop = { 
+			limit = { strata = middle }
+			ideology = { factor = 0.25 value = conservative }
+		}
+		any_pop = { 
+			limit = { strata = rich }
+			ideology = { factor = 0.25 value = nationalist }
+		}
+
+		any_pop = {
+			scaled_militancy = { 
+				factor = 10
+				ideology = traditionalist
+			}
+			scaled_militancy = { 
+				factor = 5
+				ideology = conservative
+			}
+			scaled_militancy = { 
+				factor = 10
+				ideology = liberal
+			}
+			scaled_militancy = { 
+				factor = 5
+				ideology = progressive
+			}
+		}
+		
+		ai_chance = { factor = 0.1 }
+	}
+	
+}
+
+#People's Socialist Republic of Albania
+country_event = {
+  id = 1512297
+  title = "People's Socialist Republic of Albania"
+  desc = EVTDESC1512297
+  picture = "ALB_SOV_puppet"
+  fire_only_once = yes
+
+  trigger = {
+    	tag = ALB
+	government = hms_government
+	war = no
+	is_vassal = no
+	ruling_party_ideology = communist
+	year = 1946
+	NOT = { year = 1990 }
+  }
+
+mean_time_to_happen = { months = 1 }
+
+  option = {
+    name = "Abolish the monarchy and form a socialist state"
+	prestige = 50
+	government = proletarian_dictatorship
+	country_event = 800052
+	RUS = { country_event = 120003 }
+	ai_chance = { factor = 0.95 }
+  }
+
+  option = {
+    name = "Invite the king to return"
+	prestige = -50
+	relation = { who = RUS value = -100 }
+	RUS = { country_event = 120002 }
+	ai_chance = { factor = 0.05 }
+  }
+
+}
+
+
+#1997 Albanian monarchy referendum
+country_event = {
+  id = 1512300
+  title = "$YEAR$ Albanian Monarchy Referendum"
+  desc = EVTDESC1512300
+  picture = "ALB_King_ZOG"
+	
+fire_only_once = yes
+
+  trigger = {
+	tag = ALB
+	is_vassal = no
+	war = no
+	government = democracy
+	NOT = { has_global_flag = blocsenabled }
+	NOT = { ruling_party_ideology = communist }
+	NOT = { ruling_party_ideology = communist_social }
+  }
+
+mean_time_to_happen = { months = 24 }
+
+  option = {
+    name = "We are a republic!"
+	prestige = 50
+add_country_modifier = { name = revolution_chaos duration = 365 }
+	ai_chance = { factor = 0.7 }
+  }
+
+  option = {
+    name = "Restore the House of Zog!"
+	government = hms_government
+	ai_chance = { factor = 0.3 }
+  }
+
+}
