@@ -58,10 +58,10 @@ party = {
 }
 party = {
 		name = "Communist Party of Hawai'i (Liberal)"
-		citizenship_policy = full_citizenship
-		economic_policy = planned_economy1
+		citizenship_policy = limited_citizenship
+		economic_policy = state_capitalism
 		ideology = socialist
-		religious_policy = secularized
+		religious_policy = pro_atheism
 		trade_policy = protectionism
 		war_policy = pacifism
 		start_date = 1836.1.1
