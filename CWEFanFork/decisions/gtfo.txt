@@ -1,0 +1,78 @@
+political_decisions = {
+
+	xhide_superstate = {
+		picture = "hide_superstate"
+		
+		potential = { 
+			NOT = { has_country_flag = hide_superstate } 
+		}
+		
+		allow = { 
+			ai = no 
+		}
+		
+		effect = { 
+			set_country_flag = hide_superstate 
+		}
+		
+		alert = no
+		
+		ai_will_do = { factor = 0 }
+	}
+
+	xunhide_superstate = {
+		picture = "hide_superstate"
+		
+		potential = { 
+			has_country_flag = hide_superstate 
+		}	
+		
+		allow = { 
+			ai = no 
+		}
+		
+		effect = { 
+			clr_country_flag = hide_superstate 
+		}
+		
+		alert = no
+		
+		ai_will_do = { factor = 0 }
+	}
+
+	vassal_interactions = {
+        picture = gtfo
+        
+        potential = {
+			ai = no
+			
+			num_of_vassals_no_substates = 1
+			
+            is_vassal = no
+			
+			NOT = { has_country_flag = vassal_interactions_flag }
+        }
+		
+        allow = {
+			is_vassal = no
+		}
+		
+        effect = {
+		
+			set_country_flag = vassal_interactions_flag
+			
+			random_country = {
+				limit = {
+					vassal_of = THIS
+				}
+				country_event = 47777793
+			}
+		}
+		
+		alert = no
+		
+		ai_will_do = { factor = 0 }
+		
+    }
+	
+}
