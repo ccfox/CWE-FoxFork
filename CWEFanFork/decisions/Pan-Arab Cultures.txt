@@ -1,0 +1,222 @@
+political_decisions = {
+
+	#Change to Regional Identity
+	arab_national_identity = {
+		picture = "arab_national_identity"
+		potential = {
+
+			NOT = { tag = ISI }
+			NOT = { tag = UAR }
+			NOT = { tag = XUM }
+
+			capital_scope = { OR = { continent = mena is_core = SUD } }
+
+			NOT = { has_country_flag = arab_national_identity }
+
+			AND = {
+				OR = {
+					AND = {
+						primary_culture = arab
+						OR = { tag = EGY tag = SUD tag = MAU }
+					}
+				}
+				OR = {
+					AND = {
+						primary_culture = arab
+						OR = {
+							pop_majority_culture = arab_gulf 
+							pop_majority_culture = berber
+							pop_majority_culture = arab_levantine
+							pop_majority_culture = arab_mesopotamian
+							pop_majority_culture = arab_awazi
+							pop_majority_culture = arab_shuwa
+							pop_majority_culture = arab_marsh
+							pop_majority_culture = arab_khamseh
+							pop_majority_culture = arab_hassaniya
+						}
+					}
+				}	
+			}
+
+		}
+
+		allow = {
+			election = no
+			wars_of_national_liberation = 1
+			OR = { ruling_party_ideology = big_tent ruling_party_ideology = conservative ruling_party_ideology = liberal ruling_party_ideology = progressive ruling_party_ideology = social_democrat ruling_party_ideology = traditionalist }
+		}
+
+		effect = {
+		
+			set_country_flag = arab_national_identity
+			clr_country_flag = pan_arab_identity
+			clr_country_flag = arab_cultural_identity
+
+			random_owned = { 
+				limit = { owner = { pop_majority_culture = arab_gulf } } 
+				owner = { primary_culture = arab_gulf }
+			}
+
+			random_owned = { 
+				limit = { owner = { pop_majority_culture = berber } } 
+				owner = { primary_culture = berber }
+			}
+
+			random_owned = { 
+				limit = { owner = { pop_majority_culture = arab_levantine } } 
+				owner = { primary_culture = arab_levantine }
+			}
+
+			random_owned = { 
+				limit = { owner = { pop_majority_culture = arab_mesopotamian } } 
+				owner = { primary_culture = arab_mesopotamian }
+			}
+
+			random_owned = { 
+				limit = { owner = { pop_majority_culture = arab_awazi } } 
+				owner = { primary_culture = arab_awazi }
+			}
+
+			random_owned = { 
+				limit = { owner = { pop_majority_culture = arab_shuwa } } 
+				owner = { primary_culture = arab_shuwa }
+			}
+
+			random_owned = { 
+				limit = { owner = { pop_majority_culture = arab_marsh } } 
+				owner = { primary_culture = arab_marsh }
+			}
+
+			random_owned = { 
+				limit = { owner = { pop_majority_culture = arab_khamseh } } 
+				owner = { primary_culture = arab_khamseh }
+			}
+
+			random_owned = { 
+				limit = { owner = { pop_majority_culture = arab_hassaniya } } 
+				owner = { primary_culture = arab_hassaniya }
+			}
+
+			random_owned = { 
+				limit = { owner = { capital_scope = { is_core = EGY } } }
+				owner = { primary_culture = egyptian }
+			}
+		
+			random_owned = { 
+				limit = { owner = { capital_scope = { is_core = SUD } } }
+				owner = { primary_culture = sudanese }
+			}
+
+		}
+		ai_will_do = { 
+			factor = 1 
+		}
+	}
+
+	#Change to Arab primary
+	change_arab = {
+		picture = "change_arab"
+		potential = {
+
+			NOT = { tag = ISI }
+
+			NOT = { tag = UAR }
+
+			NOT = { tag = XUM }
+
+			NOT = { has_country_flag = pan_arab_identity }
+
+			capital_scope = { OR = { continent = mena is_core = SUD } }
+
+			OR = { 
+				primary_culture = egyptian
+				primary_culture = sudanese
+				primary_culture = arab_sahrawi
+
+				primary_culture = arab_gulf 
+				primary_culture = berber
+				primary_culture = arab_levantine
+				primary_culture = arab_mesopotamian
+				primary_culture = arab_awazi
+				primary_culture = arab_shuwa
+				primary_culture = arab_marsh
+				primary_culture = arab_khamseh
+				primary_culture = arab_hassaniya
+			}
+
+			NOT = { primary_culture = arab }
+		}
+		allow = {
+			election = no
+			OR = { ruling_party_ideology = nationalist ruling_party_ideology = socialist ruling_party_ideology = communist ruling_party_ideology = communist_social }
+		}
+		effect = {
+		
+			primary_culture = arab
+
+			clr_country_flag = arab_national_identity
+			set_country_flag = pan_arab_identity
+			clr_country_flag = arab_cultural_identity
+
+
+			random_owned = { 
+				limit = { owner = { pop_majority_culture = arab_gulf } } 
+				owner = { add_accepted_culture = arab_gulf }
+			}
+			
+			random_owned = { 
+				limit = { owner = { pop_majority_culture = berber } } 
+				owner = { add_accepted_culture = berber }
+			}
+
+			random_owned = { 
+				limit = { owner = { pop_majority_culture = arab_levantine } } 
+				owner = { add_accepted_culture = arab_levantine }
+			}
+			
+			random_owned = { 
+				limit = { owner = { pop_majority_culture = arab_mesopotamian } } 
+				owner = { add_accepted_culture = arab_mesopotamian }
+			}
+			
+			random_owned = { 
+				limit = { owner = { pop_majority_culture = arab_awazi } } 
+				owner = { add_accepted_culture = arab_awazi }
+			}
+			
+			random_owned = { 
+				limit = { owner = { pop_majority_culture = arab_shuwa } } 
+				owner = { add_accepted_culture = arab_shuwa }
+			}
+			
+			random_owned = { 
+				limit = { owner = { pop_majority_culture = arab_marsh } } 
+				owner = { add_accepted_culture = arab_marsh }
+			}
+			
+			random_owned = { 
+				limit = { owner = { pop_majority_culture = arab_khamseh } } 
+				owner = { add_accepted_culture = arab_khamseh }
+			}
+
+			random_owned = { 
+				limit = { owner = { pop_majority_culture = arab_hassaniya } } 
+				owner = { add_accepted_culture = arab_hassaniya }
+			}
+			
+			random_owned = { 
+				limit = { owner = { pop_majority_culture = egyptian } } 
+				owner = { add_accepted_culture = egyptian }
+			}
+
+			random_owned = { 
+				limit = { owner = { pop_majority_culture = sudanese } } 
+				owner = { add_accepted_culture = sudanese }
+			}
+
+		}
+		ai_will_do = { 
+			factor = 1 
+		}
+	}
+}
