@@ -1,0 +1,438 @@
+#Schuman declaration
+country_event = {
+  id = 8232001
+  title = EVT_8232000_NAME
+  desc = EVT_8232000_DESC
+  picture = "nwo2_schuman_declaration"
+  is_triggered_only = yes
+
+  option = {
+    name = EVT_8232001_B
+	prestige = 25
+	badboy = -5
+	relation = { who = FROM value = 50 } 
+FROM = { diplomatic_influence = { who = THIS value = 50 } }
+	set_country_flag = schuman_declaration
+	ai_chance = { factor = 1 }
+  }
+
+  option = {
+    name = EVT_8232001_C
+FROM = { diplomatic_influence = { who = THIS value = -50 } }
+	relation = { who = FROM value = -50 } 
+	ai_chance = { factor = 0 }
+  }
+
+}
+
+#European Coal and Steel Community
+country_event = {
+  id = 8232041
+  title = EVT_8232041_NAME
+  desc = EVT_8232041_DESC
+  picture = "nwo2_european_coal_and_steel_community"
+  is_triggered_only = yes
+
+  option = {
+    name = EVT_8232041_A
+	prestige = 25
+	badboy = -5
+	relation = { who = FROM value = 50 }
+FROM = { diplomatic_influence = { who = THIS value = 100 } } 
+	set_country_flag = trade_block_ambition
+	ai_chance = { factor = 1 }
+  }
+
+  option = {
+    name = EVT_8232041_B
+FROM = { diplomatic_influence = { who = THIS value = -50 } }
+	relation = { who = FROM value = -50 } 
+	ai_chance = { factor = 0 }
+  }
+
+}
+
+#European Economic Community - Treaty of Rome
+country_event = {
+  id = 8232050
+  title = "The Treaty of Rome"
+  desc = EVTDESC8232050
+  picture = "nwo2_european_economic_community"
+  
+  trigger = {
+	has_global_flag = european_coal_and_steel_community
+	has_country_flag = xeu_ambition
+
+	tech_school = XEU_tech_school
+
+	NOT = { capitalism = 1 }
+
+	NOT = { has_country_flag = treaty_of_rome_event }
+
+	year = 1957
+
+#GP UK cannot join if France is a GP in the EEC
+NOT = { 
+AND = { 
+tag = ENG
+is_greater_power = yes
+FRA = { is_greater_power = yes has_country_flag = xeu_ambition }
+	} 
+}
+
+  }
+
+  mean_time_to_happen = { months = 3 }
+
+  option = {
+    name = "We are one step closer to a united Europe"
+	prestige = 100
+	badboy = -5
+	set_global_flag = eec_single_market
+	set_country_flag = treaty_of_rome_event
+any_owned = { add_province_modifier = { name = single_market duration = -1 } }
+  }
+
+}
+
+#UK joins the EEC
+country_event = {
+  id = 8232051
+  title = "Accession of the UK into the EEC"
+  desc = EVTDESC8232051
+  picture = "uk_joins_the_eec"
+  fire_only_once = yes
+  
+  trigger = {
+	has_global_flag = eec_single_market
+	has_country_flag = schuman_declaration
+	has_country_flag = trade_block_ambition
+	NOT = { has_country_flag = xeu_ambition }
+
+	NOT = { tech_school = XEU_tech_school }
+
+	has_country_flag = blocked_from_superstate_historical
+
+	tag = ENG
+OR = { government = hms_government government = hms_government1 government = democracy government = democracy1 }
+	war = no
+	is_greater_power = yes
+	NOT = { badboy = 0.75 }
+
+	year = 1973
+	NOT = { year = 1990 }
+
+	NOT = { capitalism = 1 }
+
+  }
+
+  mean_time_to_happen = { months = 1 }
+
+  option = {
+	name = "About bloody time!"
+	prestige = 100
+	badboy = -5
+	clr_country_flag = blocked_from_superstate_historical
+	set_country_flag = uk_joins_eec
+	set_country_flag = trade_block_ambition
+	set_country_flag = in_trade_block
+	set_country_flag = xeu_ambition
+	tech_school = XEU_tech_school
+any_owned = { add_province_modifier = { name = single_market duration = -1 } }
+	ai_chance = { factor = 1 }
+  }
+
+  option = {
+    name = "Embrace global Britain"
+	clr_country_flag = trade_block_ambition
+	ai_chance = { factor = 0 }
+  }
+
+}
+
+#Rotating Chairmanship of the EU
+country_event = {
+	id = 1400042
+	title = "Chairmanship of the European Union"
+	desc = "The Chairmanship of the European Union is rotating again. The Chairmanship only lasts 5 years." 
+	picture = "eu_chairman"
+	
+	trigger = {
+		year = 1946
+		NOT = { has_country_modifier = xeu_chairmanship }
+		has_country_flag = xeu_chairmanship
+	}
+	
+	option = {
+	name = "We had a good run."
+random_country = { limit = { AND = { NOT = { has_country_modifier = xeu_chairmanship } has_country_modifier = xeu_member has_country_modifier = creditor_nation } } country_event = 1300018 }
+	remove_country_modifier = xeu_chairmanship
+	clr_country_flag = xeu_chairmanship
+		}
+}
+
+#Rotating Chairmanship of the EU - select the new leader
+country_event = {
+	id = 1400043
+	title = "Chairmanship of the European Union"
+	desc = "The Chairmanship of the EU is rotating and the Chairmanship has come to us. The Chairmanship only lasts 5 years." 
+	picture = "eu_chairman"
+	
+is_triggered_only = yes
+
+	option = {
+	name = "Splendid!"
+prestige = 10
+any_country = { limit = { tech_school = XEU_tech_school } country_event = 1400044 }
+add_country_modifier = { name = xeu_chairmanship duration = 1825 }
+set_country_flag = xeu_chairmanship
+		}
+}
+
+#Rotating Chairmanship of the EU - inform EU members of change
+country_event = {
+	id = 1400044
+	title = "$FROMCOUNTRY$ has become new EU Chairman"
+	desc = "The Chairmanship of the EU is rotating and the Chairmanship has come to $FROMCOUNTRY$. The Chairmanship only lasts 5 years." 
+	picture = "eu_chairman"
+	
+is_triggered_only = yes
+
+	option = {
+	name = "Great!"
+	relation = { who = FROM value = 20 }
+		}
+	option = {
+	name = "Terrible!"
+	relation = { who = FROM value = -20 }
+		}
+}
+#Rotating Chairmanships first - EU
+country_event = {
+	id = 1400045
+	title = "Chairmanship of the European Union"
+	desc = "The Chairmanship of the EU is rotating and we get the first one as we are the founder. The Chairmanship only lasts 5 years." 
+	picture = "eu_chairman"
+	
+trigger = { 
+is_greater_power = yes
+economic_globalization = 1
+any_greater_power = { limit = { tech_school = XEU_tech_school } NOT = { has_country_modifier = xeu_chairmanship } }
+any_neighbor_country = { limit = { tech_school = XEU_tech_school } NOT = { has_country_modifier = xeu_chairmanship } }
+has_country_modifier = xeu_member
+NOT = { has_global_flag = eufirst }
+}
+	major = yes
+	option = {
+	name = "Splendid!"
+prestige = 10
+add_country_modifier = { name = xeu_chairmanship duration = 1825 }
+set_country_flag = xeu_chairmanship
+set_global_flag = eufirst
+		}
+}
+
+#Kicked out of the EIB
+country_event = {
+	id = 1400070
+	title = "$COUNTRY$ has been kicked out of the EIB"
+	desc = "Since we have left the EU, we can no longer be members of the European Investment Bank"
+	picture = "eib"
+	
+trigger = { 
+NOT = { OR = { tech_school = XEU_tech_school tech_school = XEU_tech_school1 } }
+has_country_modifier = eib_member
+}
+
+option = {
+name = "We don't want to be part of it anyway!"
+prestige = -10
+remove_country_modifier = eib_member
+remove_country_modifier = eib_principal_member
+		}
+}
+
+#European Defence Community
+country_event = {
+	id = 1512070
+title = "The European Defence Community"
+	desc = EVTDESC1512070
+	picture = "edc_proposal"
+
+fire_only_once = yes
+
+trigger = {
+year = 1952
+war = no
+NOT = { year = 1990 }
+tag = FRA
+is_greater_power = yes
+GER = { exists = yes }
+}
+
+mean_time_to_happen = { 
+months = 5
+	}
+
+option = {
+name = "Propose the EDC Treaty"
+prestige = 25
+relation = { who = USA value = -200 }
+any_country = { limit = { exists = yes OR = { tag = GER tag = ITA tag = NET tag = BEL tag = LUX } } country_event = 1512071 }
+ai_chance = { factor = 0.1 }
+		}
+
+option = {
+name = "Leave defence to NATO"
+prestige = -25
+relation = { who = USA value = 200 }
+relation = { who = ENG value = 200 }
+ai_chance = { factor = 0.9 }
+		}
+
+}
+
+#European Defence Community - receiver
+country_event = {
+	id = 1512071
+title = "The European Defence Community"
+	desc = EVTDESC1512070
+	picture = "edc_proposal"
+
+is_triggered_only = yes
+
+option = {
+name = "Ratify the EDC Treaty"
+create_alliance = FROM
+relation = { who = FROM value = 200 }
+FROM = { diplomatic_influence = { who = THIS value = 300 } }
+ai_chance = { factor = 0.9 }
+		}
+
+option = {
+name = "Leave defence to NATO"
+prestige = 25
+relation = { who = USA value = 200 }
+USA = { diplomatic_influence = { who = THIS value = 50 } }
+ai_chance = { factor = 0.1 }
+		}
+
+}
+
+#European Exchange Rate Mechanism
+country_event = {
+	id = 1512195
+title = "European Exchange Rate Mechanism"
+	desc = EVTDESC1512195
+	picture = "erm_eec"
+
+trigger = {
+
+NOT = { has_country_flag = erm_flag }
+
+has_country_flag = xeu_ambition
+
+war = no
+
+is_vassal = no
+
+year = 1979
+
+NOT = { modern_stock_exchange = 1 }
+
+money = 100000
+
+NOT = { has_country_flag = left_erm }
+
+}
+
+mean_time_to_happen = { 
+months = 3
+	}
+
+option = {
+name = "Join the system"
+money = -100000
+add_country_modifier = { name = economic_boom duration = 1825 }
+set_country_flag = erm_flag
+ai_chance = { factor = 0.9 }
+		}
+
+option = {
+name = "Maintain our monetary independence!"
+prestige = 50
+set_country_flag = left_erm
+ai_chance = { factor = 0.1 }
+		}
+
+}
+
+#European Central Bank
+country_event = {
+	id = 1512229
+title = "European Central Bank"
+	desc = EVTDESC1512229
+	picture = "ecb_interest_rates"
+
+trigger = {
+OR = { 
+any_owned_province = { has_province_modifier = currency_union }
+any_owned_province = { has_province_modifier = currency_union_province }
+}
+has_country_flag = xeu_ambition
+NOT = { has_country_flag = superstate_central_bank }
+}
+
+option = {
+name = "We can no longer control our interest rates!"
+set_country_flag = superstate_central_bank
+remove_country_modifier = cbihigh
+remove_country_modifier = cbimedium
+remove_country_modifier = cbilow
+		}
+
+}
+
+#EEC countries join the French Sphere during the cold war
+country_event = {
+	id = 1512134
+title = "The European Economic Community"
+	desc = EVTDESC1512134
+	picture = "eec_join"
+
+trigger = {
+OR = { government = democracy government = democracy1 government = hms_government government = hms_government1 }
+NOT = { has_country_flag = eec_choice_made }
+capital_scope = { continent = europe }
+is_greater_power = no
+year = 1958
+part_of_sphere = no
+is_vassal = no
+war = no
+has_global_flag = european_coal_and_steel_community
+has_global_flag = blocsenabled
+GER = { exists = yes government = democracy tech_school = XEU_tech_school }
+FRA = { exists = yes government = democracy is_greater_power = yes tech_school = XEU_tech_school }
+tech_school = XEU_tech_school
+}
+
+mean_time_to_happen = { 
+months = 1
+	}
+
+option = {
+name = "Join the EEC fully!"
+prestige = 50
+FRA = { diplomatic_influence = { who = THIS value = 200 } prestige = 50 }
+set_country_flag = eec_choice_made
+ai_chance = { factor = 1 }
+		}
+
+option = {
+name = "Delay integration"
+prestige = -50
+set_country_flag = eec_choice_made
+ai_chance = { factor = 0 }
+		}
+
+}

@@ -1,0 +1,1331 @@
+#GERMAN population boom
+country_event = {
+	id = 1200233
+	title = "German Population Boom"
+	desc = "The war is over and the population is booming, many people are starting to feel that it is ok to have larger families."
+	picture = "germanpopulationboom"
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = GER
+		year = 1946
+		NOT = { year = 1989 }
+		war = no
+		NOT = { has_country_flag = gerpopboom }
+
+	}
+	
+	option = {
+		name = "A higher birthrate is always good"
+		any_owned = {
+			add_province_modifier = { name = family_values1 duration = 1000 }
+		}
+		set_country_flag = gerpopboom
+	}
+}
+
+# Reparations Israel and West Germany
+country_event = {
+  id = 8004326
+  title = EVT_8004326_NAME
+  desc = EVT_8004326_DESC
+  picture = "reparations_agreement"
+  
+	is_triggered_only = yes # ISR
+	
+	option = {
+		name = EVT_8004326_A
+		prestige = 20
+		money = -300000
+		ISR = { country_event = 8007721 } 
+		ai_chance = { factor = 1 }
+	}
+
+	option = {
+		name = EVT_8004326_B
+		prestige = -10
+		badboy = 10
+		ai_chance = { factor = 0 }
+	}
+}
+
+#The Spiegel Affair
+country_event = {
+  id = 8004522
+  title = "The Spiegel Affair"
+  desc = EVT_8004522_DESC
+  picture = "nwo2_spiegel_affair"
+  fire_only_once = yes
+
+	trigger = {
+		tag = GER
+		year = 1962
+		NOT = { year = 1967 }
+		
+		OR = { government = democracy government = democracy1 }
+		is_vassal = no
+		war = no
+		election = no
+		
+		#CDU
+		ruling_party_ideology = conservative
+	
+		#East Germany
+		DDR = { exists = yes ruling_party_ideology = communist }
+	}
+
+	mean_time_to_happen = { months = 10 }
+
+	option = {
+		name = "Suppress the Press!"
+		
+		any_pop = { 
+			militancy = -2
+			consciousness = -3
+		}
+		
+		#Undermine the Press
+		political_reform = firewall_publishing
+		
+		add_country_modifier = { name = ruling_party_scandal duration = 365 }
+		
+		set_country_flag = spiegel_affair_flag
+	}
+	
+	option = {
+		name = "Admit our mistake"
+		prestige = -40
+		
+		#Opposition becomes more popular
+		any_pop = { 
+			militancy = 2
+			consciousness = 3
+			ideology = { factor = 0.10 value = socialist }
+		}
+	}
+}
+
+#The Fall of Konrad Adenauer, 1963
+country_event = {
+  id = 8004506
+  title = "The Fall of Konrad Adenauer"
+  desc = "EVT_8004506_DESC"
+  picture = "nwo2_old_adenauer"
+  
+	fire_only_once = yes
+
+	trigger = {
+		tag = GER
+		year = 1963 
+		NOT = { year = 1967 }
+		
+		OR = { government = democracy government = democracy1 }
+		#is_vassal = no
+		#war = no
+		election = no
+		
+		#CDU
+		ruling_party_ideology = conservative
+		
+		has_country_flag = spiegel_affair_flag
+	}
+
+	mean_time_to_happen = { months = 10 }
+
+	option = {
+		name = "It's time for new leadership!"
+		prestige = -40
+		
+		#Opposition becomes more popular
+		any_pop = { 
+			militancy = 1
+			consciousness = 2
+			ideology = { factor = 0.05 value = socialist }
+		}
+	}
+}
+
+#The Fall of Willy Brandt 
+country_event = {
+  id = 8004514
+  title = "The Fall of Willy Brandt"
+  desc = EVT_8004514_DESC
+  picture = "nwo2_willy_brandt"
+  
+	fire_only_once = yes
+
+	trigger = {
+		tag = GER
+		year = 1974 
+		NOT = { year = 1990 }
+		
+		OR = { government = democracy government = democracy1 }
+		#is_vassal = no
+		#war = no
+		election = no
+		
+		#SPD
+		ruling_party_ideology = social_democrat
+	}
+
+	mean_time_to_happen = { months = 5 }
+
+	option = {
+		name = "It's time for new leadership!"
+		prestige = -40
+		
+		#Opposition becomes more popular
+		any_pop = { 
+			militancy = 1
+			consciousness = 2
+			ideology = { factor = 0.05 value = conservative }
+		}
+		
+		add_country_modifier = { name = ruling_party_scandal duration = 365 }
+	}
+}
+
+#F84 Thunderstreak Incident - GER start
+country_event = {
+  id = 8004523
+  title = "The F-84 Thunderstreak Incident"
+  desc = EVT_8004523_DESC
+  picture = "nwo2_f_84_thunderstreak"
+  
+	fire_only_once = yes
+
+	trigger = {
+		tag = GER
+		year = 1961
+		NOT = { year = 1990 }
+		
+		OR = { government = democracy government = democracy1 }
+		is_vassal = no
+		war = no
+		
+		#In NATO
+		alliance_with = USA
+
+		#East Germany
+		DDR = { exists = yes ruling_party_ideology = communist vassal_of = RUS }
+		
+		#Cold War ongoing
+		has_global_flag = blocsenabled
+	}
+
+	mean_time_to_happen = { months = 9 }
+
+	option = {
+		name = "It was an accident!"
+		prestige_factor = -0.02
+		any_pop = { consciousness = 2 }
+		relation = { who = RUS value = -50 }
+		ai_chance= { factor = 0.9 }
+	}
+
+	option = {
+		name = "Our airforce can go where it wants!"
+		RUS = { country_event = 8004524 }
+		relation = { who = RUS value = -50 }
+		ai_chance= { factor = 0.1 }
+	}
+}
+
+#F84 Thunderstreak Incident - RUS reaction
+country_event = {
+  id = 8004524
+  title = "The F-84 Thunderstreak Incident"
+  desc = EVT_8004523_DESC
+  picture = "nwo2_f_84_thunderstreak"
+  
+	is_triggered_only = yes
+
+	option = {
+		name = "Protest angrily!"
+		prestige_factor = -0.02
+		
+		any_pop = { consciousness = 2 }
+		relation = { who = GER value = -50 }
+		ai_chance = { factor = 0.9 }
+	}
+
+	option = {
+		name = "It's WAR!"
+		
+		war = {
+			target = GER
+			attacker_goal = { casus_belli = cut_down_to_size }
+			defender_goal = { casus_belli = status_quo }
+			call_ally = yes
+		} 
+		
+		ai_chance = { factor = 0.1 }
+	}
+}
+
+#Ostpolitik
+country_event = {
+  id = 8004526
+  title = "Ostpolitik"
+  desc = EVT_8004526_DESC
+  picture = "nwo2_ostpolitik"
+  
+	fire_only_once = yes
+
+	trigger = {
+		tag = GER
+		year = 1969
+		NOT = { year = 1990 }
+		
+		OR = { government = democracy government = democracy1 }
+		is_vassal = no
+		war = no
+		
+		#In NATO
+		alliance_with = USA
+
+		#East Germany
+		DDR = { exists = yes ruling_party_ideology = communist vassal_of = RUS }
+		
+		#Cold War ongoing
+		has_global_flag = blocsenabled
+		
+		#SDP
+		ruling_party_ideology = social_democrat
+	}
+
+	mean_time_to_happen = { months = 6 }
+
+	option = {
+		name = "Try to normalise relations"
+		
+		#Gain popularity
+		any_pop = { 
+			consciousness = 2
+			dominant_issue = { value = pacifism factor = 0.10 } 
+			ideology = { factor = 0.05 value = socialist }
+		}
+		
+		#Right wing is unhappy
+		any_pop = {
+			limit = { is_primary_culture = yes }
+			scaled_militancy = {
+				factor = 10
+				ideology = nationalist
+			}
+			scaled_militancy = {
+				factor = 10
+				ideology = populist
+			}
+			scaled_militancy = {
+				factor = 10
+				ideology = traditionalist
+			}
+			scaled_militancy = {
+				factor = 5
+				ideology = conservative
+			}
+		}
+		
+		relation = { who = DDR value = 100 } 
+		relation = { who = RUS value = 50 } 
+	}
+
+	option = {
+		name = "We shall show strength!"
+		prestige = 100
+		relation = { who = DDR value = -100 } 
+		relation = { who = RUS value = -50 } 
+	}
+}
+
+#The Treaty of Warsaw
+country_event = {
+  id = 8004527
+  title = "The Treaty of Warsaw"
+  desc = EVT_8004527_DESC
+  picture = "nwo2_GER_treaty_of_warsaw"
+  
+	fire_only_once = yes
+
+	trigger = {
+		tag = GER
+		year = 1970
+		NOT = { year = 1990 }
+	
+		OR = { government = democracy government = democracy1 }
+		is_vassal = no
+		war = no
+
+		#East Germany
+		DDR = { exists = yes ruling_party_ideology = communist vassal_of = RUS }
+		
+		#Poland
+		POL = { exists = yes ruling_party_ideology = communist vassal_of = RUS }
+		
+		#Cold War ongoing
+		has_global_flag = blocsenabled
+		
+		#SDP
+		ruling_party_ideology = social_democrat
+		
+		#Oder-Neisse line claims by Germany
+		any_core = { owned_by = POL }
+	}
+
+	mean_time_to_happen = { months = 11 }
+
+	option = {
+		name = "Accept the Oder-Neisse line"
+		
+		#Gain popularity
+		any_pop = { 
+			consciousness = 2
+			dominant_issue = { value = pacifism factor = 0.10 }
+			ideology = { factor = 0.05 value = socialist }
+		}
+		
+		#Right wing is unhappy
+		any_pop = {
+			limit = { is_primary_culture = yes }
+			scaled_militancy = {
+				factor = 10
+				ideology = nationalist
+			}
+			scaled_militancy = {
+				factor = 10
+				ideology = populist
+			}
+			scaled_militancy = {
+				factor = 10
+				ideology = traditionalist
+			}
+			scaled_militancy = {
+				factor = 5
+				ideology = conservative
+			}
+		}
+		
+		relation = { who = POL value = 100 } 
+		relation = { who = RUS value = 50 } 
+		
+		#Remove German claims in Poland
+		all_core = { limit = { owned_by = POL } remove_core = GER }
+		
+		ai_chance = { factor = 0.9 }
+	}
+
+	option = {
+		name = "Continue to claim territories in Poland!"
+		prestige = 100
+		badboy = 5
+
+		relation = { who = POL value = -100 } 
+		relation = { who = RUS value = -50 } 
+		
+		#Any Germans in occupied cores become more nationalistic
+		all_core = { 
+			limit = { NOT = { owned_by = THIS } }
+			any_pop = { 
+				limit = { culture = german } 
+				militancy = 10
+				ideology = { factor = 0.30 value = nationalist } 
+			} 
+		}
+
+		set_country_flag = reject_oder_neisse 
+		ai_chance = { factor = 0 }
+	}
+}
+
+#Protests of 1967
+country_event = {
+  id = 8004329
+  title = "The Student Protests of $YEAR$"
+  desc = EVT_8004329_DESC
+  picture = "germany_1968"
+  
+	fire_only_once = yes
+ 
+	trigger = {
+		OR = { tag = GER tag = NGF tag = SGF }
+		year = 1967
+		NOT = { year = 1990 }
+		
+		OR = { government = democracy government = democracy1 government = hms_government }
+		is_vassal = no
+		war = no
+		
+		#Not a progressive government
+		NOT = { OR = { ruling_party_ideology = progressive ruling_party_ideology = liberal } }
+		
+		#Cold War ongoing
+		has_global_flag = blocsenabled
+	}
+  
+    mean_time_to_happen = { months = 6 }
+  
+	option = {
+		name = "Send the police to deal with these delinquents!"
+		
+		#progressive gain popularity
+		any_pop = { 
+			limit = { is_primary_culture = yes strata = middle }
+			consciousness = 10
+			militancy = 5
+			dominant_issue = { value = pacifism factor = 0.15 }
+			ideology = { factor = 0.15 value = progressive }
+		}
+		
+		#Left wing are angry
+		any_pop = {
+			limit = { is_primary_culture = yes }
+			scaled_militancy = {
+				ideology = communist
+				factor = 8
+			}
+			scaled_consciousness = {
+				ideology = communist
+				factor = 2
+			}
+			scaled_militancy = {
+				ideology = communist_social
+				factor = 8
+			}
+			scaled_consciousness = {
+				ideology = communist_social
+				factor = 2
+			}
+			scaled_militancy = {
+				ideology = socialist
+				factor = 8
+			}
+			scaled_consciousness = {
+				ideology = socialist
+				factor = 2
+			}
+		}
+		
+		set_country_flag = germany_1968_movement
+		
+		ai_chance = { factor = 0.9 }
+	}
+  
+	option = {
+		name = "Perhaps we can meet some of their demands..."
+		
+		#Enact social reforms
+		social_reform = subsidised_higher_education
+		
+		#USA loses influence
+		relation = { who = USA value = -50 }
+		USA = { diplomatic_influence = { who = GER value = -50 } }
+		
+		#progressive gain popularity
+		any_pop = { 
+			limit = { is_primary_culture = yes strata = middle }
+			consciousness = 5
+			dominant_issue = { value = pacifism factor = 0.30 }
+			ideology = { factor = 0.30 value = progressive }
+		}
+		
+		#Right wing gets angry
+		any_pop = {
+			limit = { is_primary_culture = yes }
+			scaled_militancy = {
+				ideology = conservative
+				factor = 6
+			}
+			scaled_consciousness = {
+				ideology = conservative
+				factor = 4
+			}
+			scaled_militancy = {
+				ideology = traditionalist
+				factor = 6
+			}
+			scaled_consciousness = {
+				ideology = traditionalist
+				factor = 4
+			}
+			scaled_militancy = {
+				ideology = big_tent
+				factor = 4
+			}
+			scaled_consciousness = {
+				ideology = big_tent
+				factor = 2
+			}
+		}
+		ai_chance = { factor = 0.1 }
+	}
+}
+
+#Frankfurt bombings of 1968
+country_event = {
+  id = 8004330
+  title = "The Frankfurt Bombings of $YEAR$"
+  desc = EVT_8004330_DESC
+  picture = "kaufhaus_frankfurt_bombing"
+  
+	fire_only_once = yes
+
+	trigger = {
+		OR = { tag = GER tag = NGF tag = SGF }
+		year = 1968 
+		month = 4
+		NOT = { year = 1990 }
+		
+		OR = { government = democracy government = democracy1 government = hms_government }
+		is_vassal = no
+		war = no
+		
+		#Not a progressive government
+		NOT = { OR = { ruling_party_ideology = progressive ruling_party_ideology = liberal ruling_party_ideology = social_democrat } }
+		
+		#Cold War ongoing
+		has_global_flag = blocsenabled
+	
+		has_country_flag = germany_1968_movement
+	}
+
+	mean_time_to_happen = { months = 1 }
+
+	option = {
+		name = EVT_8004330_A
+		clr_country_flag = germany_1968_movement
+		add_country_modifier = { name = years_of_lead duration = 15000 }
+		any_pop = { militancy = 3 consciousness = 3 }
+		add_country_modifier = { name = recent_terrorist_attack duration = 183 }
+	}
+}
+
+#Munich Massacre ( special event for West Germany if Olympics host )
+country_event = {
+  id = 8004331
+  title = EVT_8004331_NAME
+  desc = EVT_8004331_DESC
+  picture = "munich_massacre"
+  
+	fire_only_once = yes
+
+	trigger = {
+		OR = { tag = GER tag = NGF tag = SGF }
+		has_country_modifier = years_of_lead
+		NOT = { year = 1990 }
+		
+		OR = { government = democracy government = democracy1 government = hms_government }
+		
+		has_country_flag = olympics_ongoing
+		
+		NOT = { has_country_flag = munich_massacre_happened }
+	}
+
+	mean_time_to_happen = { days = 7 }
+
+	option = {
+		name = EVT_8004331_A
+		prestige = -25
+		
+		any_pop = { consciousness = 2 }
+		
+		any_owned = { limit = { has_province_modifier = olympics_city } add_province_modifier = { name = terrorist_chaos duration = 365 } }
+		add_country_modifier = { name = recent_terrorist_attack duration = 183 }
+		
+		set_country_flag = munich_massacre_happened
+	}
+}
+
+#The German Autumn
+country_event = { 
+  id = 8004332
+  title = "The German Autumn"
+  desc = EVT_8004332_DESC
+  picture = "german_autumn"
+  
+	fire_only_once = yes
+
+	trigger = {
+		OR = { tag = GER tag = NGF tag = SGF }
+		year = 1977
+		NOT = { year = 1990 }
+	
+		OR = { government = democracy government = democracy1 government = hms_government }
+		is_vassal = no
+		war = no
+		
+		has_country_modifier = years_of_lead
+	}
+
+	mean_time_to_happen = { months = 9 }
+
+	option = {
+		name = EVT_8004332_A
+		prestige = -25
+		any_pop = { consciousness = 3 }
+		war_exhaustion = 5
+		add_country_modifier = { name = recent_terrorist_attack duration = 183 }
+	}
+}
+
+#Oktoberfest bombing
+country_event = {
+  id = 8004333
+  title = EVT_8004333_NAME
+  desc = EVT_8004333_DESC
+  picture = "oktoberfest_bombing"
+  
+	fire_only_once = yes
+
+	trigger = {
+		OR = { tag = GER tag = NGF tag = SGF }
+		year = 1980 
+		month = 9
+		NOT = { year = 1990 }
+		
+		OR = { government = democracy government = democracy1 government = hms_government }
+		is_vassal = no
+		war = no
+	
+		has_country_modifier = years_of_lead
+	}
+
+	mean_time_to_happen = { months = 1 }
+
+	option = {
+		name = EVT_8004333_A
+		prestige = -25
+		any_pop = { consciousness = 2 }
+		599 = { add_province_modifier = { name = terrorist_chaos duration = 365 } } #Munich
+		add_country_modifier = { name = recent_terrorist_attack duration = 183 }
+	}
+}
+
+#West Berlin discotheque bombing
+country_event = {
+  id = 8004334
+  title = EVT_8004334_NAME
+  desc = EVT_8004334_DESC
+  picture = "west_berlin_bombing"
+  
+	fire_only_once = yes
+
+	trigger = {
+		OR = { tag = GER tag = NGF tag = SGF }
+		year = 1986
+		NOT = { year = 1990 }
+		
+		OR = { government = democracy government = democracy1 government = hms_government }
+		is_vassal = no
+		war = no
+		
+		#Owns Berlin
+		owns = 549
+		
+		#Cold War ongoing
+		has_global_flag = blocsenabled
+		
+		has_country_modifier = years_of_lead
+		
+		#Good relations with USA
+		relation = { who = USA value = 100 }
+
+		#Gaddafi
+		LBY = { 
+			exists = yes 
+			is_vassal = no 
+			OR = { government = nationalist_dictatorship government = populist_dictatorship government = theocracy } 
+		}
+	}
+
+	mean_time_to_happen = { months = 4 }
+
+	option = {
+		name = EVT_8004334_A
+		prestige = -25
+		relation = { who = LBY value = -100 }
+		any_pop = { consciousness = 2 }
+		549 = { add_province_modifier = { name = terrorist_chaos duration = 365 } } #Berlin
+		add_country_modifier = { name = recent_terrorist_attack duration = 183 }
+		USA = { country_event = 8004435 }
+	}
+}
+
+#West Berlin discotheque bombing - USA response
+country_event = {
+  id = 8004335
+  title = EVT_8004335_NAME
+  desc = EVT_8004335_DESC
+  picture = "west_berlin_bombing"
+  
+	is_triggered_only = yes
+
+	option = {
+		name = EVT_8004335_A
+		relation = { who = LBY value = -100 }
+		casus_belli = { target = LBY type = cut_down_to_size months = 24 }
+		money = -100000
+		ai_chance = { factor = 0.9 }
+	}
+	
+	option = {
+		name = EVT_8004335_B
+		prestige = -25
+		ai_chance = { factor = 0.1 }
+	}
+}
+
+#Weiterstadt Prison bombing / End of the years of lead
+country_event = {
+  id = 8004336
+  title = EVT_8004336_NAME
+  desc = EVT_8004336_DESC
+  picture = "weiterstadt_prison_bombing"
+  
+	fire_only_once = yes
+
+	trigger = {
+		OR = { tag = GER tag = NGF tag = SGF }
+		year = 1993
+		has_country_modifier = years_of_lead
+		
+		OR = { government = democracy government = democracy1 government = hms_government }
+		is_vassal = no
+		war = no
+		
+		#Darmstadt
+		owns = 2560
+	}
+
+	mean_time_to_happen = { months = 3 }
+
+	option = {
+		name = EVT_8004336_A
+		prestige = -25
+		2560 = { infrastructure = -1 } #Darmstadt
+		remove_country_modifier = years_of_lead
+		any_pop = { militancy = -3 }
+	}
+}
+
+# German Reparations
+country_event = {
+	id = 1412097
+	title = "German War Reparations"
+	desc = EVTDESC1412097
+	picture = "german_reparations"
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = GER
+		NOT = { year = 1991 }
+	}
+
+	option = {
+		name = "As the losers, we have no choice"
+		prestige = -10
+		add_country_modifier = { name = ger_war_rep duration = 23360 }
+	}
+}
+
+#German Reunification - Historical
+country_event = {
+	id = 1412159
+	title = "The Reunification of Germany"
+	desc = EVTDESC1412159
+	picture = "nwo2_united_germany"
+
+	major = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Deutschland Uber Alles!"
+		GER = { inherit = IAR }
+		GER = { inherit = ICB }
+		any_pop = { militancy = -10 }
+	}
+
+}
+
+#### Alternate History ####
+
+# Restoration of the Kaiser?
+country_event = {
+	id = 8004327
+	title = "Restoration of the Kaiser?"
+	desc = EVTDESC8004327
+	picture = "Wilhelm_III"
+	
+	fire_only_once = yes
+
+	trigger = {
+		tag = GER
+		year = 1946
+		NOT = { year = 1951 }
+		
+		government = democracy
+		war = no
+
+		ruling_party_ideology = traditionalist
+	}
+
+	mean_time_to_happen = {
+		months = 12
+	}
+
+	option = {
+		name = "Never!"
+		prestige = 25
+		ai_chance = { factor = 0.8 }
+	}
+
+	option = {
+		name = "Es lebe der Kaiser!"
+
+		government = hms_government
+
+		set_country_flag = Wilhelm_III
+
+		any_pop = {
+			limit = { is_primary_culture = yes }
+			
+			ideology = {
+				factor = 0.1
+				value = traditionalist
+			}
+			
+			scaled_militancy = {
+				factor = 10
+				ideology = communist
+			}
+			scaled_militancy = {
+				factor = 10
+				ideology = communist_social
+			}
+			scaled_militancy = {
+				factor = 5
+				ideology = socialist
+			}
+			scaled_militancy = {
+				factor = 5
+				ideology = progressive
+			}
+			scaled_militancy = {
+				factor = 5
+				ideology = liberal
+			}
+		}
+
+		ai_chance = { factor = 0.2 }
+	}
+
+}
+
+# Wilhelm's Coup
+country_event = {
+	id = 8004328
+	title = "Wilhelm's Coup"
+	desc = EVTDESC8004328
+	picture = "Wilhelm_III"
+	
+	fire_only_once = yes
+
+	trigger = {
+		tag = GER
+		year = 1946
+		NOT = { year = 1951 }
+		
+		government = hms_government
+		war = no
+		is_vassal = no
+		
+		average_militancy = 5
+		
+		has_country_flag = Wilhelm_III
+	}
+
+	mean_time_to_happen = {
+		months = 2
+	}
+
+	option = {
+		name = "The Kaiser shall restore order!"
+		prestige = 25
+		
+		government = absolute_monarchy
+		country_event = 800051
+		ruling_party_ideology = traditionalist
+		
+		any_pop = {
+			militancy = -4
+			consciousness = -4
+		}
+		
+		ai_chance = { factor = 0.35 }
+	}
+
+	option = {
+		name = "Let the unrest settle down on its own"
+		add_country_modifier = { name = revolution_chaos duration = 3650 }
+		ai_chance = { factor = 0.35 }
+	}
+
+	option = {
+		name = "Force the Kaiser to abdicate"
+		prestige = -20
+		
+		government = democracy
+		ruling_party_ideology = big_tent
+		
+		any_pop = {
+			limit = { is_primary_culture = yes }
+			scaled_militancy = {
+				factor = 10
+				ideology = traditionalist
+			}
+			scaled_militancy = {
+				factor = 5
+				ideology = conservative
+			}
+		}
+		ai_chance = { factor = 0.30 }
+	}
+}
+
+#Fall of the Berlin Wall
+country_event = {
+	id = 1412019
+	title = "Fall of the Berlin Wall"
+	desc = EVTDESC1412019
+	picture = "berlin_wall_fall"
+
+	trigger = {
+		tag = GER
+		OR = { 
+			549 = { has_province_modifier = berlin_wall } 
+			551 = { has_province_modifier = berlin_wall } 
+		}
+		OR = { 
+			AND = { 
+				exists = DDR 
+				DDR = { NOT = { government = proletarian_dictatorship } } 
+			} 
+			AND = { 
+				has_global_flag = depuppetize_warsaw_pact 
+				exists = DDR 
+			} 
+			DDR = { exists = no } 
+		}
+	}
+	
+	option = {
+		name = "Mr. Gorbachev, tear down this wall!"
+		prestige = 50
+		549 = { remove_province_modifier = berlin_wall }
+		551 = { remove_province_modifier = berlin_wall }
+	}
+	
+}
+
+#Restore German monarchy decision - Plebscite yes
+country_event = {
+	id = 1610055
+title = "Referendum to Restore the Monarchy Accepted"
+desc = EVTDESC1610055
+	picture = "restore_the_german_monarchy_vote_yes"
+
+trigger = {
+tag = GER
+OR = { government = democracy government = democracy1 }
+has_country_flag = restore_german_monarchy
+is_vassal = no
+	}
+
+mean_time_to_happen = { 
+months = 1
+	}
+
+option = {
+name = "We welcome our new Kaiser!"
+government = hms_government
+clr_country_flag = restore_german_monarchy
+	}
+
+}
+
+#Restore German monarchy decision - Plebscite no
+country_event = {
+	id = 1610056
+title = "Referendum to Restore the Monarchy Rejected"
+desc = EVTDESC1610056
+	picture = "restore_the_german_monarchy_vote"
+
+trigger = {
+tag = GER
+OR = { government = democracy government = democracy1 }
+has_country_flag = restore_german_monarchy
+is_vassal = no
+	}
+
+mean_time_to_happen = { 
+months = 1
+	}
+
+option = {
+name = "Republicanism is the way forward!"
+clr_country_flag = restore_german_monarchy
+	}
+
+}
+
+#Restore German monarchy decision - USA Overlord
+country_event = {
+	id = 1610057
+title = "Restoration of the German Monarchy?"
+desc = EVTDESC1610057
+	picture = "restore_the_german_monarchy_vote"
+
+is_triggered_only = yes
+
+option = {
+name = "If he is an anti-communist then why not?"
+release_vassal = GER
+GER = { government = hms_government }
+ai_chance = { factor = 0.6 }
+	}
+
+option = {
+name = "We dislike kings!"
+relation = { who = GER value = -50 }
+ai_chance = { factor = 0.4 }
+	}
+
+}
+
+#Restore German monarchy decision - notice of rejection
+country_event = {
+	id = 1610058
+title = "German Monarchy Request Rejected"
+desc = EVTDESC1610058
+	picture = "restore_the_german_monarchy_vote"
+
+is_triggered_only = yes
+
+option = {
+name = "We can try again once we are independent"
+prestige = -50
+	}
+
+}
+
+#Germany seeks return of Heligoland
+country_event = {
+	id = 1512273
+title = "Return of Heligoland"
+	desc = EVTDESC1512273
+	picture = "heligoland_1952"
+
+fire_only_once = yes
+
+trigger = {
+OR = { tag = GER tag = NGF }
+war = no
+year = 1952
+NOT = { owns = 533 }
+NOT = { year = 1990 }
+}
+
+mean_time_to_happen = { 
+months = 3
+	}
+
+option = {
+name = "Demand the return of the island"
+random_country = { 
+limit = { owns = 533 }
+country_event = 1512274
+}
+ai_chance = { factor = 0.8 }
+		}
+
+option = {
+name = "Abandon our claims"
+prestige = -25
+badboy = -5
+random_country = { 
+limit = { owns = 533 }
+relation = { who = THIS value = 100 }
+}
+ai_chance = { factor = 0.2 }
+		}
+}
+
+#Germany seeks return of Heligoland - receiver
+country_event = {
+	id = 1512274
+title = "Return of Heligoland to $FROMCOUNTRY$"
+	desc = EVTDESC1512273
+	picture = "heligoland_1952"
+
+is_triggered_only = yes
+
+option = {
+name = "Return the tiny island"
+FROM = { prestige = 50 }
+random_owned = { limit = { owner = { exists = NGF } } owner = { 533 = { add_core = NGF } } }
+533 = { remove_core = THIS add_core = GER secede_province = FROM }
+relation = { who = THIS value = 50 }
+ai_chance = { factor = 0.7 }
+		}
+
+option = {
+name = "Hold onto it"
+badboy = 2.5
+relation = { who = FROM value = -100 }
+533 = { add_core = GER }
+ai_chance = { factor = 0.3 }
+		}
+
+}
+
+#War reparations from Germany
+country_event = {
+  id = 1512322
+  title = "War Reparations from Germany"
+  desc = EVTDESC1512322
+  picture = "war_reparation_delivery"
+
+  trigger = {
+	NOT = { year = 1980 }
+	OR = { tag = USA tag = RUS tag = ENG tag = FRA }
+	
+OR = { 
+AND = { any_owned_province = { is_core = GER } 
+GER = { exists = no } NGF = { exists = no } 
+SGF = { exists = no } HAN = { exists = no } } 
+GER = { vassal_of = THIS } 
+OG1 = { vassal_of = THIS }
+OG2 = { vassal_of = THIS }
+OG3 = { vassal_of = THIS }
+OG4 = { vassal_of = THIS } 
+}
+
+  }
+
+mean_time_to_happen = { months = 12 }
+
+  option = {
+	name = "This is right and just!"	
+	money = 100000
+	small_arms = 250
+	weaponry = 250
+	ships = 250
+	aeroplanes = 250
+	gold_silver = 100
+	cement = 100
+	machine_parts = 100
+	fuel = 100
+  }
+
+}
+
+#London Agreement on German External Debts
+country_event = {
+  id = 1512324
+  title = "London Agreement on German External Debts"
+  desc = EVTDESC1512324
+  picture = "ger_debt_relief"
+
+fire_only_once = yes
+
+  trigger = {
+	tag = GER
+	government = democracy
+	year = 1953
+	exists = DDR
+	NOT = { year = 1990 }
+	NOT = { badboy = 0.5 }
+	war = no
+	is_vassal = no
+	has_global_flag = blocsenabled
+  }
+
+mean_time_to_happen = { months = 9 }
+
+  option = {
+	name = "Great!"	
+	prestige = 50
+add_country_modifier = { name = tax_boost_modifier duration = 3650 }
+  }
+
+}
+
+#Nationalist Germany - Add Austrian Culture for anschluss
+country_event = {
+	id = 1512340
+title = "Return of German Nationalism"
+	desc = EVTDESC1512340
+	picture = "nazi_return"
+
+fire_only_once = yes
+
+trigger = {
+tag = GER
+is_vassal = no
+election = no
+ruling_party_ideology = nationalist
+}
+
+mean_time_to_happen = { months = 6 }
+
+option = {
+name = "We shall unite all Germans under one flag!"
+any_country = { limit = { OR = { tag = USA tag = FRA tag = NET tag = BEL tag = LUX tag = RUS tag = ENG tag = POL tag = CZH tag = BOH } } relation = { who = THIS value = -100 } }
+add_accepted_culture = austrian_german
+		}
+
+}
+
+#German Welfare State
+country_event = {
+	id = 1512149
+title = "The Welfare State"
+	desc = EVTDESC1512149
+	picture = "german_welfare_state"
+
+fire_only_once = yes
+
+trigger = {
+tag = GER
+year = 1960
+ruling_party_ideology = social_democrat
+NOT = { year = 1990 }
+government = democracy
+}
+
+mean_time_to_happen = { 
+months = 2
+	}
+
+option = {
+name = "Yes!"
+social_reform = good_public_housing
+social_reform = unlimited_education
+social_reform = low_health_care
+social_reform = low_pensions
+social_reform = preemptive_security_actions
+social_reform = paid_vacation_hours
+social_reform = generous_subsidies
+ai_chance = { factor = 0.9 }
+	}
+
+option = {
+name = "No need"
+prestige = -25
+ai_chance = { factor = 0.1 }
+	}
+
+}
