@@ -9,8 +9,20 @@ party = {
 		trade_policy = free_trade
 		war_policy = pro_military
 		start_date = 1836.1.1
+		end_date = 1982.1.1
+}
+party = {
+		name = "Military Junta"
+		citizenship_policy = limited_citizenship
+		economic_policy = interventionism
+		ideology = nationalist
+		religious_policy = moralism
+		trade_policy = free_trade
+		war_policy = pro_military
+		start_date = 1982.1.1
 		end_date = 2100.1.1
 }
+
 party = {
 		name = "National Falange"
 		citizenship_policy = full_citizenship
@@ -23,37 +35,59 @@ party = {
 		end_date = 1957.7.28
 }
 party = {
-		name = "Democratic Party"
+		name = "Christian Democratic Party"
 		citizenship_policy = full_citizenship
 		economic_policy = interventionism
+		ideology = big_tent #religious centrist reformist
+		religious_policy = moralism
+		trade_policy = free_trade
+		war_policy = pacifism
+		start_date = 1957.7.28
+		end_date = 2100.1.1
+}
+party = {
+		name = "National Renewal"
+		citizenship_policy = full_citizenship
+		economic_policy = laissez_faire
 		ideology = big_tent
 		religious_policy = secularized
 		trade_policy = protectionism
 		war_policy = pacifism
-		start_date = 1957.7.28
+		start_date = 1987.4.29
+		end_date = 2092.1.1
+}
+party = {
+		name = "Radical Party (M)"
+		citizenship_policy = full_citizenship
+		economic_policy = interventionism
+		ideology = social_democrat
+		religious_policy = secularized
+		trade_policy = free_trade
+		war_policy = pro_military
+		start_date = 1836.1.1
+		end_date = 2100.1.1
+}
+party = {
+		name = "Democratic Party"
+		citizenship_policy = full_citizenship
+		economic_policy = interventionism
+		ideology = social_democrat
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = pacifism
+		start_date = 1952.1.1
 		end_date = 1960.9.18
 }
 party = {
 		name = "National Democratic Party"
 		citizenship_policy = full_citizenship
 		economic_policy = interventionism
-		ideology = big_tent
+		ideology = social_democrat
 		religious_policy = secularized
 		trade_policy = protectionism
 		war_policy = pacifism
 		start_date = 1960.9.18
-		end_date = 1983.9.24
-}
-party = {
-		name = "Christian Democratic Party"
-		citizenship_policy = full_citizenship
-		economic_policy = interventionism
-		ideology = big_tent
-		religious_policy = moralism
-		trade_policy = free_trade
-		war_policy = pacifism
-		start_date = 1983.9.24
-		end_date = 2093.1.1
+		end_date = 1987.4.29
 }
 party = {
 		name = "Conservative Party"
@@ -78,7 +112,7 @@ party = {
 		end_date = 1949.1.1
 }
 party = {
-		name = "Christian Democratic Party"
+		name = "Christian Democratic Party (C)"
 		citizenship_policy = full_citizenship
 		economic_policy = interventionism
 		ideology = conservative
@@ -122,15 +156,15 @@ party = {
 		end_date = 1987.4.29
 }
 party = {
-		name = "National Renewal"
+		name = "Christian Democratic Party (L)"
 		citizenship_policy = full_citizenship
-		economic_policy = laissez_faire
+		economic_policy = interventionism
 		ideology = liberal
-		religious_policy = secularized
-		trade_policy = protectionism
+		religious_policy = moralism
+		trade_policy = free_trade
 		war_policy = pacifism
-		start_date = 1987.4.29
-		end_date = 2092.1.1
+		start_date = 1983.9.24
+		end_date = 2093.1.1
 }
 party = {
 		name = "Socialist Party of Chile"
@@ -281,17 +315,6 @@ party = {
 		economic_policy = state_capitalism
 		ideology = communist_social
 		religious_policy = pro_atheism
-		trade_policy = protectionism
-		war_policy = pacifism
-		start_date = 1836.1.1
-		end_date = 2092.1.1
-}
-party = {
-		name = "social_democrat_party"
-		citizenship_policy = full_citizenship
-		economic_policy = state_capitalism
-		ideology = social_democrat
-		religious_policy = secularized
 		trade_policy = protectionism
 		war_policy = pacifism
 		start_date = 1836.1.1
