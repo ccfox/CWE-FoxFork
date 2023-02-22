@@ -1,0 +1,91 @@
+country_event = { # Death of Abdul Aziz
+  id = 8012901
+  title = EVT_8012901_NAME
+  desc = EVT_8012901_DESC
+  picture = "nwo2_death"
+  fire_only_once = yes
+
+  trigger = {
+    tag = SAA
+    year = 1953 NOT = { year = 1963 }
+    OR = { government = hms_government government = absolute_monarchy }
+  }
+
+  mean_time_to_happen = { months = 6 }
+
+  option = {
+    name = EVT_DEATH
+	
+	remove_country_modifier = traditional_king #Traditionalist
+	
+	ruling_party_ideology = big_tent
+	
+	add_country_modifier = { name = centrist_king duration = -1 }
+	
+	any_pop = { consciousness = -1.0 militancy = -2.0 }
+  }
+}
+country_event = { # Saud's handling of economy
+  id = 8012905
+  title = EVT_8012905_NAME
+  desc = EVT_8012905_DESC
+  picture = "nwo2_king_saud"
+  fire_only_once = yes
+
+  trigger = {
+    tag = SAA
+    year = 1953 NOT = { year = 1990 }
+	owns = 1157 # Riyadh
+  }
+
+  mean_time_to_happen = { months = 6 }
+
+  option = {
+    name = EVT_8012905_A
+	
+	any_owned = { limit = { produces = petroleum NOT = { has_province_modifier = oil_field } } add_province_modifier = { name = oil_field duration = -1 } }
+  }
+}
+
+country_event = { # Grand Mosque Seizure
+	id = 8012907
+	title = EVT_8012907_NAME
+	desc = EVT_8012907_DESC
+	picture = "1979_mosque_seizure"
+	
+	fire_only_once = yes
+
+	trigger = {
+		tag = SAA
+		year = 1979 NOT = { year = 1990 }
+		owns = 1151 # Mecca
+	}
+
+	mean_time_to_happen = { months = 11 }
+
+	option = {
+		name = EVT_8012907_A
+		any_pop = {
+			scaled_militancy = {
+				factor = 2
+				ideology = traditionalist
+			}
+			ideology = {
+				factor = 0.25
+				value = traditionalist
+			}
+		}
+		add_country_modifier = { name = global_islamist_agitation duration = 730 }
+	}
+  
+	option = {
+		name = EVT_8012907_B
+		ruling_party_ideology = traditionalist
+		any_pop = {
+			ideology = {
+				factor = 0.25
+				value = traditionalist
+			}
+		}
+	}
+}

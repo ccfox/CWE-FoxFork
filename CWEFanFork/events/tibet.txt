@@ -1,0 +1,99 @@
+#PRC demands the Annexation of Tibet
+country_event = {
+  id = 8015100
+  title = "The Annexation of Tibet?"
+  desc = EVTDESC8015100
+  picture = "nwo2_annexation_of_tibet"
+  
+	fire_only_once = yes
+
+	trigger = {
+		tag = CHI
+		year = 1950
+		NOT = { has_global_flag = 1950_start_date_flag }
+		NOT = { year = 1992 }
+		
+		government = proletarian_dictatorship
+		is_vassal = no
+		
+		TIB = { exists = yes is_vassal = no }
+
+		#PRC won the Civil War
+		has_global_flag = CHI_won_civil_war
+	}
+
+	mean_time_to_happen = { months = 10 }
+
+	option = {
+		name = "We shall incorporate Tibet!"
+		prestige = 50
+		badboy = 5 
+		
+		#War to annex Tibet
+		war = { 
+			target = TIB
+			attacker_goal = { casus_belli = annex_core_country } 
+			defender_goal = { casus_belli = humiliate } 
+		}
+		
+		1591 = { change_controller = CHI }
+		1588 = { change_controller = CHI }
+		
+		ai_chance = { factor = 0.9 }
+	}
+
+	option = {
+		name = "Leave them be"
+		prestige = -200
+		ai_chance = { factor = 0.1 }
+	}
+}
+
+#Tibet explusion of the KMT and PRC
+country_event = {
+  id = 8015101
+  title = "The Situation in China"
+  desc = EVTDESC8015101
+  picture = "nwo2_tibet_indy"
+  
+	fire_only_once = yes
+
+	trigger = {
+		tag = TIB
+		year = 1949
+		NOT = { has_global_flag = 1950_start_date_flag }
+		NOT = { year = 1992 }
+		
+		government = absolute_monarchy
+		is_vassal = no
+		war = no
+		
+		#Chinese Civil War
+		CHI = { war_with = KMT }
+		
+		#PRC is about to win
+		CHI = { controls = 2221 }
+	}
+
+	mean_time_to_happen = { months = 1 }
+
+	option = {
+		name = "Try to maintain independence from China"
+		prestige = 50
+		
+		KMT = { diplomatic_influence = { who = TIB value = -200 } }
+		CHI = { diplomatic_influence = { who = TIB value = -200 } }
+		
+		ai_chance = { factor = 0.9 }
+	}
+
+	option = {
+		name = "Let the Chinese gain influence"
+		
+		KMT = { diplomatic_influence = { who = TIB value = 50 } }
+		CHI = { diplomatic_influence = { who = TIB value = 50 } }
+		
+		ai_chance = { factor = 0.1 }
+	}
+	
+}
