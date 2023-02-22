@@ -1,0 +1,350 @@
+country_event = {
+  id = 8009922
+  title = EVT_8009922_NAME
+  desc = EVT_8009922_DESC
+  picture = "nwo2_tanger_protocol"
+  fire_only_once = yes
+
+  trigger = {
+	tag = SPA
+	year = 1956 NOT = { year = 1990 }
+	exists = MOR
+	war = no
+	MOR = { is_vassal = no }
+	OR = { is_our_vassal = TGZ TGZ = { exists = yes is_vassal = no } }
+	MOR = { war = no }
+  }
+
+  mean_time_to_happen = { months = 6 }
+
+  option = {
+	name = EVT_8009922_A
+	MOR = { inherit = TGZ } 
+
+	1687 = { secede_province = MOR } 
+	1688 = { secede_province = MOR } 
+
+	#1695 = { secede_province = MOR }
+
+	MOR = { country_event = 8009923 }
+	ai_chance = { factor = 0.9 }
+  }
+
+  option = {
+	name = EVT_8009922_B
+	any_pop = { militancy = 0.8 consciousness = 2.0 }
+	badboy = 5 
+	ai_chance = {
+		factor = 0.1
+		modifier = {
+			factor = 0
+			badboy = 0.8
+		}
+	}
+  }
+}
+country_event = {
+  id = 8009923
+  title = EVT_8009923_NAME
+  desc = EVT_8009923_DESC
+  picture = "nwo2_tanger_protocol"
+  is_triggered_only = yes
+
+  option = {
+	name = EVT_8009923_A
+	any_pop = { militancy = -0.5 consciousness = -1.0 }
+	prestige = 5
+  }
+}
+country_event = {
+  id = 8009924
+  title = EVT_8009924_NAME
+  desc = EVT_8009924_DESC
+  picture = "nwo2_western_sahara"
+  fire_only_once = yes
+
+  trigger = {
+	tag = SPA
+	year = 1974 NOT = { year = 1991 }
+	exists = MOR
+	owns = 1773
+	owns = 1774
+  }
+
+  mean_time_to_happen = { months = 8  }
+
+  option = {
+	name = EVT_8009924_A
+	1773 = { secede_province = MOR } 
+	1774 = { secede_province = MOR } 
+	any_pop = { militancy = -0.5 consciousness = -0.1 }
+	relation = { who = MOR value = 100 } 
+	MOR = { country_event = 8009925 }
+	ai_chance = { factor = 1 }
+  }
+
+  option = {
+	name = EVT_8009924_B
+	any_pop = { militancy = 0.8 consciousness = 2.0 }
+	relation = { who = MOR value = -200 } 
+	release = WSA
+	MOR = { country_event = 8009926 }
+	ai_chance = { factor = 0 }
+  }
+  
+  option = {
+	name = EVT_8009924_C
+	any_pop = { militancy = 0.8 consciousness = 2.0 }
+	badboy = 20 
+	relation = { who = MOR value = -200 } 
+	relation = { who = ALG value = -100 } 
+	ai_chance = { factor = 0 }
+  }
+}
+country_event = {
+  id = 8009925
+  title = EVT_8009925_NAME
+  desc = EVT_8009925_DESC
+  picture = "nwo2_western_sahara"
+  is_triggered_only = yes
+
+  option = {
+	name = EVT_8009925_A
+	1773 = { secede_province = WSA }
+	create_vassal = WSA
+WSA = { government = presidential_dictatorship country_event = 800050 ruling_party_ideology = conservative }
+
+ai_chance = { factor = 0.7 }
+  }
+
+  option = {
+	name = EVT_8009925_A
+	1773 = { secede_province = WSA }
+WSA = { government = populist_dictatorship country_event = 800050 }
+
+war = {
+	target = WSA
+	attacker_goal = { casus_belli = conquest }
+	defender_goal = { casus_belli = status_quo }
+	call_ally = no
+}
+
+ai_chance = { factor = 0.3 }
+
+  }
+
+}
+country_event = {
+  id = 8009926
+  title = EVT_8009925_NAME
+  desc = EVT_8009925_DESC
+  picture = "nwo2_western_sahara"
+  is_triggered_only = yes
+
+  option = {
+	name = EVT_8009926_A
+	casus_belli = { target = WSA type = conquest }
+	any_pop = { consciousness = 2.0 }
+	badboy = 10 
+	relation = { who = ALG value = -200 } 
+	relation = { who = WSA value = -200 } 
+	ai_chance = { factor = 1 }
+  }
+
+  option = {
+	name = EVT_8009926_B
+	any_pop = { militancy = 1.0  consciousness = 1.0 }
+	ai_chance = { factor = 0 }
+  }
+  
+}
+province_event = { # Morocco
+  id = 8210002
+  title = EVT_15400_NAME
+  desc = EVT_15400_DESC
+  picture = "nwo2_colonial_unrest"
+  fire_only_once = yes
+
+  trigger = {
+	NOT = { owned_by = MOR }
+	year = 1952 NOT = { year = 1954 }
+	is_core = MOR
+	tag = MOR
+  }
+
+  mean_time_to_happen = { months = 3 }
+
+  option = {
+	name = "OK"
+	any_pop = { militancy = 3.0 consciousness = 1.0 }
+  }
+}
+country_event = { # Independent Morocco
+  id = 8009927
+  title = EVT_8009927_NAME
+  desc = EVT_8009927_DESC
+  picture = "nwo2_tanger_protocol"
+  is_triggered_only = yes # MOR from algeria.txt
+
+  option = {
+	name = EVT_8009927_A
+	any_pop = { militancy = -2 consciousness = -1.0 }
+	FRA = { release_vassal = MOR }
+MOR = { government = hms_government country_event = 800054 }
+	prestige = 5
+  }
+}
+
+#Independence of Morocco
+country_event = {
+	id = 1610124
+	title = "Independence of Morocco"
+	desc = EVTDESC1610124
+	picture = "MOR_indy"
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = FRA
+		year = 1956
+		NOT = { year = 1990 }
+		is_vassal = no
+		war = no
+		is_our_vassal = MOR
+	}
+
+	mean_time_to_happen = { 
+		months = 4
+	}
+
+	option = {
+		name = "Let them be free!"
+		release_vassal = MOR
+		create_alliance = MOR
+		ai_chance = { factor = 0.9 }
+	}
+
+	option = {
+		name = "There shall be no independence for now"
+		badboy = 5
+		prestige = -50
+		MOR = {
+			any_pop = {
+				ideology = {
+					factor = 0.25
+					value = nationalist
+				}
+			}
+			add_country_modifier = { name = revolution_chaos duration = 3650 }
+		}
+		ai_chance = { factor = 0.1 }
+	}
+
+}
+
+#Ifni War
+country_event = {
+	id = 1512027
+title = "The Ifni War"
+	desc = EVTDESC1512027
+	picture = "ifni_war"
+
+fire_only_once = yes
+
+trigger = {
+year = 1957
+NOT = { year = 1990 }
+tag = MOR
+is_vassal = no
+SPA = { owns = 1695 }
+}
+
+mean_time_to_happen = { 
+months = 10
+	}
+
+option = {
+name = "Fight the Spanish"
+prestige = 50
+
+set_global_flag = spanish_decolonisation_mor 
+
+war = {
+	target = SPA
+	attacker_goal = { casus_belli = territorial_dispute }
+	defender_goal = { casus_belli = territorial_dispute }
+	call_ally = no
+}
+
+relation = { who = FRA value = -100 }
+ai_chance = { factor = 0.9 }
+		}
+
+option = {
+name = "Let bygones be bygones"
+prestige_factor = -0.25
+relation = { who = SPA value = 100 }
+add_country_modifier = { name = revolution_chaos duration = 1825 }
+ai_chance = { factor = 0.1 }
+		}
+
+}
+
+#Ifni War
+country_event = {
+	id = 1512028
+title = "Treaty of Angra de Cintra"
+	desc = EVTDESC1512028
+	picture = "ifni_war_1"
+
+fire_only_once = yes
+
+trigger = {
+year = 1957
+NOT = { year = 1990 }
+tag = SPA
+is_vassal = no
+owns = 1695
+NOT = { war_with = MOR }
+has_global_flag = spanish_decolonisation_mor
+}
+
+mean_time_to_happen = { 
+months = 1
+	}
+
+option = {
+name = "Sign the Treaty"
+prestige = 50
+badboy = -5
+relation = { who = MOR value = 100 }
+
+#1687 = { secede_province = MOR } 
+#1688 = { secede_province = MOR } 
+
+1695 = { secede_province = MOR }
+ 
+1696 = { secede_province = MOR } 
+
+relation = { who = FRA value = 50 }
+ai_chance = { factor = 0.95 }
+		}
+
+option = {
+name = "Refuse"
+prestige_factor = -0.1
+badboy = 10
+
+MOR = { create_alliance = FRA }
+
+war = {
+	target = MOR
+	attacker_goal = { casus_belli = territorial_dispute }
+	defender_goal = { casus_belli = dismantle_cb }
+	call_ally = no
+}
+
+ai_chance = { factor = 0.05 }
+		}
+
+}
