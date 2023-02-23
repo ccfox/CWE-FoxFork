@@ -2257,7 +2257,7 @@ country_event = {
 			is_vassal = no
 			war = no
 			
-			NOT = { OR = { ruling_party_ideology = social_democracy ruling_party_ideology = progressive } }
+			NOT = { OR = { ruling_party_ideology = social_democrat ruling_party_ideology = progressive } }
 			
 			has_country_flag = soviet_withdraw
 		}
