@@ -162,7 +162,7 @@
 		size = 200
 	 } 
 	clergymen = {
-		culture = asarab_levantine
+		culture = assyrian
 		religion =  catholic
 		size = 1688
 	 } 
@@ -177,7 +177,7 @@
 		size = 1000
 	 } 
 	clerks = {
-		culture = asarab_levantine
+		culture = assyrian
 		religion =  catholic
 		size = 5215
 	 } 
@@ -192,7 +192,7 @@
 		size = 1000
 	 } 
 	artisans = {
-		culture = asarab_levantine
+		culture = assyrian
 		religion =  catholic
 		size = 4903
 	 } 
@@ -207,7 +207,7 @@
 		size = 2106
 	 } 
 	craftsmen = {
-		culture = asarab_levantine
+		culture = assyrian
 		religion =  catholic
 		size = 12850
 	 } 
@@ -227,7 +227,7 @@
 		size = 4110
 	 } 
 	farmers = {
-		culture = asarab_levantine
+		culture = assyrian
 		religion =  catholic
 		size = 52886
 	 } 
@@ -353,7 +353,7 @@
 		size = 1708
 	 } 
 	craftsmen = {
-		culture = asarab_levantine
+		culture = assyrian
 		religion =  catholic
 		size = 1000
 	 } 
@@ -373,7 +373,7 @@
 		size = 500
 	 } 
 	farmers = {
-		culture = asarab_levantine
+		culture = assyrian
 		religion =  catholic
 		size = 4000
 	 } 

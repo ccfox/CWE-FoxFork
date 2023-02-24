@@ -250,7 +250,7 @@
 		size = 471
 	 }
 	farmers = {
-		culture = asarab_levantine
+		culture = assyrian
 		religion = catholic
 		size = 4000
 	 }  
@@ -2793,7 +2793,7 @@
 		size = 690
 	 }
 	farmers = {
-		culture = asarab_levantine
+		culture = assyrian
 		religion = catholic 
 		size = 1251
 	 } 
@@ -2856,7 +2856,7 @@
 		size = 3925
 	 }
 	farmers = {
-		culture = asarab_levantine
+		culture = assyrian
 		religion = catholic
 		size = 5772
 	 }
@@ -2924,7 +2924,7 @@
 		size = 13552
 	 }
 	farmers = {
-		culture = asarab_levantine
+		culture = assyrian
 		religion = catholic
 		size = 13772
 	 }  

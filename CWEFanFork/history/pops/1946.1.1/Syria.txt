@@ -149,7 +149,7 @@
 	 } 
 	 
 	farmers = {
-		culture = asarab_levantine
+		culture = assyrian
 		religion =  catholic 
 		size = 10000 #Unclear estimates from the time period
 	 } 
@@ -200,7 +200,7 @@
 		size = 35469
 	 } 
 	farmers = {
-		culture = asarab_levantine
+		culture = assyrian
 		religion =  catholic 
 		size = 38000 #Only demographics for 1943 and 1953 31k->42k
 	 } 
@@ -413,7 +413,7 @@
 	 } 
 	 
 	farmers = {
-		culture = asarab_levantine
+		culture = assyrian
 		religion =  catholic 
 		size = 10000 #Unclear estimates from the time period
 	 } 

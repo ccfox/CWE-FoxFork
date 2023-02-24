@@ -34,7 +34,7 @@
 		size = 75222
 	 } 
 	farmers = {
-		culture = asarab_levantine
+		culture = assyrian
 		religion =  catholic
 		size = 3000
 	 } 
