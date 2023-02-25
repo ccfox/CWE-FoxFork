@@ -112,9 +112,20 @@ party = {
 		end_date = 2092.1.1
 }
 party = {
-		name = "Social Democrats (Demarit)"
+		name = "Social Democratic Party"
 		citizenship_policy = full_citizenship
 		economic_policy = state_capitalism
+		ideology = social_democrat
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = pacifism
+		start_date = 1836.1.1
+		end_date = 2092.1.1
+}
+party = {
+		name = "Social Democratic Party (Left)"
+		citizenship_policy = full_citizenship
+		economic_policy = planned_economy1
 		ideology = socialist
 		religious_policy = secularized
 		trade_policy = protectionism
@@ -232,17 +243,7 @@ party = {
 		start_date = 1836.1.1
 		end_date = 2092.1.1
 }
-party = {
-		name = "social_democrat_party"
-		citizenship_policy = full_citizenship
-		economic_policy = state_capitalism
-		ideology = social_democrat
-		religious_policy = secularized
-		trade_policy = protectionism
-		war_policy = pacifism
-		start_date = 1836.1.1
-		end_date = 2092.1.1
-}
+
 unit_names = {
 	carrier = {
 		"Uusimaa" "V�in�m�inen" "Ilmarinen" "Joukahainen" "Birger Jarl" "Per Brahe" "Tapio" "Lemmink�inen" "Helsinki" "Rauma" "Turku" "Kemi" "Maarianhamina" "Vaasa" "Viipuri" "Kotka" "Oulu" "Rauma" "Karelen" "�bo"
