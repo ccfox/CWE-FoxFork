@@ -350,7 +350,7 @@ political_reforms = {
 				NOT = { has_country_flag = gridlocked_legislature }
 			}
 		}
-		democratic_opinion = { # democratic
+		democratic_opinion = { # appointed
 			rules = { population_vote = yes }
 			global_pop_consciousness_modifier = 0.02
 			
@@ -577,7 +577,7 @@ political_reforms = {
 			
 			administrative_multiplier = 3
 			
-			allow = {
+			allow = { 
 				NOT = { has_country_flag = gridlocked_legislature }
 			}
 		}
@@ -738,12 +738,6 @@ political_reforms = {
 			administrative_multiplier = 3
 			allow = { 
 				NOT = { has_country_flag = gridlocked_legislature }
-				NOT = {
-					AND = {
-						war_policy = pacifism 
-						lgbt_rights = lgbt_equal_rights
-					}
-				}
 			}
 		}
 		lgbt_equal_rights = { # two_year_draft
@@ -758,12 +752,6 @@ political_reforms = {
 			administrative_multiplier = 2
 			allow = { 
 				NOT = { has_country_flag = gridlocked_legislature }
-				NOT = {
-					AND = {
-						war_policy = pacifism 
-						lgbt_rights = gender_neutrallity
-					}
-				}
 			}
 		}
 		gender_neutrallity = { # one_year_draft
@@ -778,12 +766,6 @@ political_reforms = {
 			administrative_multiplier = 1
 			allow = { 
 				NOT = { has_country_flag = gridlocked_legislature }
-				NOT = {
-					AND = {
-						war_policy = pacifism 
-						lgbt_rights = lgbt_outlawed
-					}
-				}
 			}
 		}
 		lgbt_outlawed = { # no_draft
@@ -815,12 +797,7 @@ political_reforms = {
 			administrative_multiplier = 1
 			global_pop_consciousness_modifier = 0.01
 			allow = { 
-				NOT = {
-					OR = {
-						AND = { citizenship_policy = residency minorities_reform = minorities_oppression }
-						AND = { citizenship_policy = full_citizenship minorities_reform = minorities_affirmative_action }
-					}
-				} 
+				NOT = { citizenship_policy = residency } 
 				NOT = { has_country_flag = gridlocked_legislature }
 			}
 		}
@@ -2236,7 +2213,7 @@ military_reforms = {
 			
 			on_execute = {
 				effect = {
-					activate_technology = destroyers
+					activate_technology = guided_missile_destroyers
 					any_pop = {
 						scaled_militancy = {
 							ideology = liberal
