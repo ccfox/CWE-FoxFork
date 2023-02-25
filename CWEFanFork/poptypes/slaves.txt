@@ -295,6 +295,31 @@ modifier = { factor = 0.5
 country = { average_militancy = 7 } }
 
 	}
+	
+	social_democrat = {
+		factor = 1
+modifier = { factor = 2
+country = { ruling_party_ideology = social_democrat } }
+
+modifier = { factor = 2
+country = { pop_majority_ideology = social_democrat } }
+
+modifier = { factor = 2
+country = { ruling_party_ideology = social_democrat war = no } }
+
+modifier = { factor = 0.5
+country = { average_militancy = 1 } }
+
+modifier = { factor = 0.5
+country = { average_militancy = 3 } }
+
+modifier = { factor = 0.5
+country = { average_militancy = 5 } }
+
+modifier = { factor = 0.5
+country = { average_militancy = 7 } }
+
+	}
 
 	nationalist = {
 		factor = 1

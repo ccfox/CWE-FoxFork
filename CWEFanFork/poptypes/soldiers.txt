@@ -1563,6 +1563,111 @@ modifier = { factor = 0.5 NOT = { ruling_party_ideology = progressive } NOT = { 
 		modifier = { factor = 1.1 consciousness = 6 }
 		modifier = { factor = 1.1 consciousness = 7 }
 		modifier = { factor = 1.1 consciousness = 8 }
+		modifier = {
+			factor = 1.2
+			AND = { nationalvalue = nv_progressivism NOT = { ruling_party_ideology = social_democrat } }
+			OR = {
+				is_accepted_culture = yes
+				is_primary_culture = yes
+			}
+		}
+	}
+
+
+	social_democrat = { # political reformist
+		factor = 0.75
+		# government and ruling_party_ideology
+		modifier = { factor = 4 country = { ruling_party_ideology = social_democrat } everyday_needs = 0.5 }
+		modifier = { factor = 0.25 country = { ruling_party_ideology = social_democrat } NOT = { everyday_needs = 0.5 } }
+		modifier = { factor = 0.5 country = { ruling_party_ideology = social_democrat } militancy = 3 }
+		modifier = { factor = 0.5 country = { ruling_party_ideology = social_democrat } militancy = 5 }
+
+
+
+
+modifier = { factor = 1.5 country = { has_country_flag = social_democrat_surge } }
+
+		modifier = { 
+			factor = 1.5 
+			country = { 
+				ruling_party_ideology = social_democrat
+				OR = { economic_policy = planned_economy economic_policy = planned_economy1 }
+				civil_service = politicised_service 
+			} 
+		}
+
+
+		# ideology special
+
+modifier = { factor = 0.5 NOT = { ruling_party_ideology = social_democrat } NOT = { consciousness = 4 } }
+
+	modifier = { factor = 1.1 political_reform_want = 0.02 }
+	modifier = { factor = 1.1 political_reform_want = 0.04 }
+	modifier = { factor = 1.1 political_reform_want = 0.06 }
+	modifier = { factor = 1.1 political_reform_want = 0.08 }
+	modifier = { factor = 1.1 political_reform_want = 0.10 }
+	modifier = { factor = 1.1 political_reform_want = 0.12 }
+	modifier = { factor = 1.1 political_reform_want = 0.14 }
+	modifier = { factor = 1.1 political_reform_want = 0.16 }
+	modifier = { factor = 1.1 political_reform_want = 0.18 }
+	modifier = { factor = 1.1 political_reform_want = 0.20 }
+	
+	
+	
+		modifier = {
+			factor = 1.1
+			social_reform_want = 0.03
+		}
+		modifier = {
+			factor = 1.1
+			social_reform_want = 0.06
+		}
+		modifier = {
+			factor = 1.1
+			social_reform_want = 0.09
+		}
+		modifier = {
+			factor = 1.1	
+			social_reform_want = 0.12
+		}
+		modifier = {
+			factor = 1.1
+			social_reform_want = 0.15
+		}
+		modifier = {
+			factor = 1.1
+			social_reform_want = 0.18
+		}
+		modifier = {
+			factor = 1.1
+			social_reform_want = 0.21
+		}
+		modifier = {
+			factor = 1.1	
+			social_reform_want = 0.24
+		}
+		modifier = {
+			factor = 1.1
+			social_reform_want = 0.27
+		}
+		modifier = {
+			factor = 1.1
+			social_reform_want = 0.3
+		}
+	
+		modifier = { factor = 1.1 consciousness = 5 }
+		modifier = { factor = 1.1 consciousness = 6 }
+		modifier = { factor = 1.1 consciousness = 7 }
+		modifier = { factor = 1.1 consciousness = 8 }
+		
+		modifier = {
+			factor = 1.2
+			AND = { nationalvalue = nv_progressivism NOT = { ruling_party_ideology = progressive } }
+			OR = {
+				is_accepted_culture = yes
+				is_primary_culture = yes
+			}
+		}
 	}
 }
 
