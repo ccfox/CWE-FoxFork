@@ -114,7 +114,7 @@ party = {
 		name = "Social Democratic Party"
 		citizenship_policy = full_citizenship
 		economic_policy = state_capitalism
-		ideology = socialist
+		ideology = social_democrat
 		religious_policy = secularized
 		trade_policy = protectionism
 		war_policy = pacifism
@@ -209,17 +209,7 @@ party = {
 		start_date = 1836.1.1
 		end_date = 2092.1.1
 }
-party = {
-		name = "social_democrat_party"
-		citizenship_policy = full_citizenship
-		economic_policy = state_capitalism
-		ideology = social_democrat
-		religious_policy = secularized
-		trade_policy = protectionism
-		war_policy = pacifism
-		start_date = 1836.1.1
-		end_date = 2092.1.1
-}
+
 unit_names = {
 	carrier = {
 		"Ulrik Christian Gyldenl�ve" K�benhavn �rhus �lborg Odense Fredriksberg Esbjerg "N�rrejyske �" Fyn J�tlandshaf

@@ -9,7 +9,7 @@ non_state_culture_literacy = 0.0
 civilized = yes
 prestige = 100
 last_election = 1944.8.1
-ruling_party = "Republican People's Party"
+ruling_party = "Republican People's Party (Left)"
 upper_house = {
 	populist = 0
 	liberal = 10
@@ -82,7 +82,7 @@ oob = "/TUR_oob.txt"
 1950.1.1 = {
 	last_election = 1946.7.21
 	oob = "1950/TUR_oob.txt"
-	ruling_party = "Republican People's Party"
+	ruling_party = "Republican People's Party (Left)"
 }
 
 1992.1.1 = {
@@ -95,7 +95,7 @@ oob = "/TUR_oob.txt"
 	non_state_culture_literacy = 0.1
 	civilized = yes
 	prestige = 58
-	ruling_party = "True Path Party"
+	ruling_party = "Motherland Party (Center)"
 	upper_house = {
 		big_tent = 38
 		liberal = 0

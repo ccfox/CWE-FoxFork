@@ -158,7 +158,7 @@ party = {
 		name = "Swedish Social Democratic Party"
 		citizenship_policy = full_citizenship
 		economic_policy = state_capitalism
-		ideology = socialist
+		ideology = social_democrat
 		religious_policy = secularized
 		trade_policy = protectionism
 		war_policy = pacifism
@@ -169,12 +169,23 @@ party = {
 		name = "Swedish Social Democratic Party"
 		citizenship_policy = full_citizenship
 		economic_policy = interventionism
-		ideology = socialist
+		ideology = social_democrat
 		religious_policy = secularized
 		trade_policy = protectionism
 		war_policy = pacifism
 		start_date = 1986.1.1
 		end_date = 2092.1.1
+}
+party = {
+		name = "Swedish Social Democratic Party (Left)"
+		citizenship_policy = full_citizenship
+		economic_policy = state_capitalism
+		ideology = socialist
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = pacifism
+		start_date = 1836.1.1
+		end_date = 1990.1.1
 }
 party = {
 		name = "Left Party"
@@ -364,7 +375,7 @@ party = {
 		end_date = 1967.5.16
 }
 party = {
-		name = "Left Party - the Communists"
+		name = "Left Party (Communists)"
 		citizenship_policy = full_citizenship
 		economic_policy = planned_economy1
 		ideology = communist_social
@@ -372,30 +383,9 @@ party = {
 		trade_policy = protectionism
 		war_policy = pacifism
 		start_date = 1967.5.16
-		end_date = 1990.1.1
-}
-party = {
-		name = "Left Party"
-		citizenship_policy = full_citizenship
-		economic_policy = state_capitalism
-		ideology = communist_social
-		religious_policy = pro_atheism
-		trade_policy = protectionism
-		war_policy = pacifism
-		start_date = 1990.1.1
 		end_date = 2092.1.1
 }
-party = {
-		name = "social_democrat_party"
-		citizenship_policy = full_citizenship
-		economic_policy = state_capitalism
-		ideology = social_democrat
-		religious_policy = secularized
-		trade_policy = protectionism
-		war_policy = pacifism
-		start_date = 1836.1.1
-		end_date = 2092.1.1
-}
+
 unit_names = {
 	carrier = {
 		"Clas Eriksson Fleming" "Axel Nilsson Ryning" "Carl Carlsson Gyllenhielm" "Gustaf Otto Stenbock" "Lorentz Creutz" "Hans Wachtmeister af Johannishus" "Henrik af Trolle" "Carl August Ehrensv�rd" Fredrik Johan "Manligheten" "Dristigheten" "Sverige"
