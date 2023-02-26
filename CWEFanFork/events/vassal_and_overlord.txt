@@ -386,7 +386,7 @@ trigger = {
 option = {
 name = "We are no longer enjoying the splendid isolation"
 prestige = -50
-remove_country_modifier = declared_neutrality
+remove_country_modifier = neutrality
 clr_country_flag = renounced_war_rights
 clr_country_flag = neutrality		
 	}
