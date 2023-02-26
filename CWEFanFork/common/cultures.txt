@@ -27,8 +27,8 @@ european_french = {
 	white_french = {
 		 #!religion = { catholic }
 		 color = { 168 195 255 }
-		 first_names = { Narcisse Ren? ?douard Luc Letellier Th?odore Louis Francois Auguste Joseph Pierre Luis-Phillippe Jean Gaspard Eug?ne ?ssioff Huguel Jean-Pierre Gilles }
-		 last_names = { Belleau Caron "de St.-Just" Robitaille Masson Angers Chapleau Jotte Pantal?on Langelier Damasne LeBlanc Brodeur Perodeau }
+		 first_names = { Narcisse René Èdouard Luc Letellier Théodore Louis Francois Auguste Joseph Pierre Luis-Phillippe Jean Gaspard Eugéne Èssioff Huguel Jean-Pierre Gilles }
+		 last_names = { Belleau Caron "de St.-Just" Robitaille Masson Angers Chapleau Jotte Pantaléon Langelier Damasne LeBlanc Brodeur Perodeau }
 	}
 	occitans = { #culture doesn't exist
 		 #!religion = { catholic }
