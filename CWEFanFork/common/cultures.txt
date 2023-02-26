@@ -24,12 +24,6 @@ european_french = {
 		 first_names = { Yann Yannic Pierre Jakez Elouan Frasez Jaoua Paol Segal Alain Henri Hoel Michel Theodore }
 		 last_names = { "de Cornouaille" Karter Gallo Kergoulay Bellec "le Goff" Treguier Riou Morvan Peron Jezeguel Salaun "le Bihan" }
 	}
-	white_french = {
-		 #!religion = { catholic }
-		 color = { 168 195 255 }
-		 first_names = { Narcisse René Èdouard Luc Letellier Théodore Louis Francois Auguste Joseph Pierre Luis-Phillippe Jean Gaspard Eugéne Èssioff Huguel Jean-Pierre Gilles }
-		 last_names = { Belleau Caron "de St.-Just" Robitaille Masson Angers Chapleau Jotte Pantaléon Langelier Damasne LeBlanc Brodeur Perodeau }
-	}
 	occitans = { #culture doesn't exist
 		 #!religion = { catholic }
 		 color = { 110 110 50 }
