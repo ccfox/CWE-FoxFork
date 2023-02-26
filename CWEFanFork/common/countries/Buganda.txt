@@ -1,7 +1,7 @@
 graphical_culture = MiddleEasternGC
 color = { 23  114  143 }
 party = {
-		name = "party_nationalist"
+		name = "Katikkiro Rule (Nationalist)"
 		citizenship_policy = full_citizenship
 		economic_policy = state_capitalism
 		ideology = nationalist
@@ -45,7 +45,7 @@ party = {
 		end_date = 2100.1.1
 }
 party = {
-		name = "social_democrat_party"
+		name = "Buganda People's Congress (SD)"
 		citizenship_policy = full_citizenship
 		economic_policy = state_capitalism
 		ideology = social_democrat
@@ -56,7 +56,7 @@ party = {
 		end_date = 2092.1.1
 }
 party = {
-		name = "party_socialist_0_BUG"
+		name = "Buganda People's Congress"
 		citizenship_policy = limited_citizenship
 		economic_policy = state_capitalism
 		ideology = socialist
@@ -67,7 +67,7 @@ party = {
 		end_date = 2100.1.1
 }
 party = {
-		name = "party_progressive_0_BUG"
+		name = "Buganda People's Congress (Right)"
 		citizenship_policy = full_citizenship
 		economic_policy = interventionism
 		ideology = progressive
@@ -78,7 +78,7 @@ party = {
 		end_date = 2100.1.1
 }
 party = {
-		name = "party_populist_0_BUG"
+		name = "Kabaka Rule (Populist)"
 		citizenship_policy = residency
 		economic_policy = state_capitalism
 		ideology = populist
@@ -100,7 +100,7 @@ party = {
 		end_date = 2100.1.1
 }
 party = {
-		name = "Communists"
+		name = "Buganda People's Congress (ML)"
 		citizenship_policy = full_citizenship
 		economic_policy = planned_economy
 		ideology = communist
@@ -111,7 +111,7 @@ party = {
 		end_date = 2100.1.1
 }
 party = {
-		name = "party_communist_social"
+		name = "Buganda People's Congress (LN)"
 		citizenship_policy = full_citizenship
 		economic_policy = planned_economy1
 		ideology = communist_social
