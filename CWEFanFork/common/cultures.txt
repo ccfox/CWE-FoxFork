@@ -24,6 +24,12 @@ european_french = {
 		 first_names = { Yann Yannic Pierre Jakez Elouan Frasez Jaoua Paol Segal Alain Henri Hoel Michel Theodore }
 		 last_names = { "de Cornouaille" Karter Gallo Kergoulay Bellec "le Goff" Treguier Riou Morvan Peron Jezeguel Salaun "le Bihan" }
 	}
+	white_french = {
+		 #!religion = { catholic }
+		 color = { 168 195 255 }
+		 first_names = { Narcisse Ren? ?douard Luc Letellier Th?odore Louis Francois Auguste Joseph Pierre Luis-Phillippe Jean Gaspard Eug?ne ?ssioff Huguel Jean-Pierre Gilles }
+		 last_names = { Belleau Caron "de St.-Just" Robitaille Masson Angers Chapleau Jotte Pantal?on Langelier Damasne LeBlanc Brodeur Perodeau }
+	}
 	occitans = { #culture doesn't exist
 		 #!religion = { catholic }
 		 color = { 110 110 50 }
@@ -1349,12 +1355,6 @@ east_asian = {
 sri_lankan_cultures = {
 	leader = indian
 	unit = IndianGC
-	singalese = {
-		 #!religion = { buddhist }
-		 color = { 233 150 122 }
-		 first_names = { Ranjit Kharak Nau Nihal Chand Kaur Shir Dhalip Diwan Jassa Hari Bhuma Nawab Banda Baba Kapur }
-		 last_names = { Singh Kunwar Bahadur Dhillon Nalwa Ahluwalia Ramgarhia Mal Mulraj }
-	}
 	sinhala = {
 		 #!religion = { buddhist }
 		 color = { 255 165 0 }
