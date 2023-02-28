@@ -100,7 +100,17 @@ country_event = {
 		political_reform = firewall_publishing
 		political_reform = limited_meetings
 
-		ai_chance = { factor = 0.8 }
+		ai_chance = {
+			factor = 0.8
+			modifier = { 
+				factor = 0.3 #Represents support among the CPSU leadership
+				NOT = { OR = { aristocrats = { pop_majority_ideology = communist_social } bureaucrats = { pop_majority_ideology = communist_social } } }
+			}
+			modifier = {
+				factor = 0.95 #Represents support among the Supreme Soviet
+				NOT = { pop_majority_ideology = communist_social }
+			}
+		}
 	}
 
 	option = {
@@ -116,7 +126,17 @@ country_event = {
 		
 		add_country_modifier = { name = expert_diplomat duration = 3650 }
 		
-		ai_chance = { factor = 0.1 }
+		ai_chance = {
+			factor = 0.1
+			modifier = { 
+				factor = 6 #Represents support among the CPSU leadership
+				OR = { aristocrats = { pop_majority_ideology = communist } bureaucrats = { pop_majority_ideology = communist } }
+			}
+			modifier = {
+				factor = 3 #Represents support among the Supreme Soviet
+				pop_majority_ideology = communist
+			}
+		}
 	}
 
 	option = {
@@ -161,7 +181,17 @@ country_event = {
 		
 		add_country_modifier = { name = prince_of_terror duration = 3650 }
 		
-		ai_chance = { factor = 0.05 }
+		ai_chance = {
+			factor = 0.05
+			modifier = { 
+				factor = 10 #Represents support among the CPSU leadership
+				OR = { aristocrats = { OR = { pop_majority_ideology = liberal pop_majority_ideology = progressive pop_majority_ideology = nationalist } } bureaucrats = { OR = { pop_majority_ideology = liberal pop_majority_ideology = progressive pop_majority_ideology = nationalist } } }
+			}
+			modifier = {
+				factor = 6 #Represents support among the Supreme Soviet
+				OR = { pop_majority_ideology = liberal pop_majority_ideology = progressive pop_majority_ideology = nationalist } #?????
+			}
+		}
 	}
 
 	option = {
@@ -171,7 +201,17 @@ country_event = {
 		
 		any_pop = { militancy = -5 consciousness = -5 }
 		add_country_modifier = { name = military_man duration = 3650 }
-		ai_chance = { factor = 0.05 }
+		ai_chance = {
+			factor = 0.05
+			modifier = { 
+				factor = 10 #Represents support among the CPSU leadership
+				OR = { aristocrats = { pop_majority_ideology = socialist } bureaucrats = { pop_majority_ideology = socialist } }
+			}
+			modifier = {
+				factor = 6 #Represents support among the Supreme Soviet
+				pop_majority_ideology = socialist #?????
+			}
+		}
 	}
 	
 }
@@ -219,6 +259,12 @@ country_event = {
 			limit = { is_culture_group = THIS strata = middle } 
 			ideology = { factor = 0.10 value = liberal }
 		}
+		any_pop = {
+			limit = { is_culture_group = THIS strata = rich }
+			ideology = { factor = 0.10 value = communist_social }
+			militancy = -5
+			consciousness = 5
+		}
 		
 		#Relations
 		random_country = {
@@ -230,7 +276,13 @@ country_event = {
 			relation = { who = THIS value = 50 }
 		}
 
-		ai_chance = { factor = 0.9 }
+		ai_chance = {
+			factor = 0.9
+			modifier = { 
+				factor = 0.6 #Represents support among the CPSU leadership
+				NOT = { OR = { aristocrats = { pop_majority_ideology = communist_social } bureaucrats = { pop_majority_ideology = communist_social } } }
+			}
+		}
 	}
 
 	option = {
@@ -239,7 +291,13 @@ country_event = {
 		
 		set_country_flag = stalin_legacy
 		
-		ai_chance = { factor = 0.1 }
+		ai_chance = {
+			factor = 0.1
+			modifier = { 
+				factor = 6 #Represents support among the CPSU leadership
+				NOT = { OR = { aristocrats = { pop_majority_ideology = communist } bureaucrats = { pop_majority_ideology = communist } } }
+			}
+		}
 	}
 
 }
@@ -347,6 +405,13 @@ country_event = {
 			consciousness = 3
 		}
 		
+		any_pop = {
+			limit = { is_culture_group = THIS OR = { type = aristocrats type = bureaucrats } }
+			ideology = { factor = 0.10 value = communist }
+			militancy = -5
+			consciousness = 5
+		}
+		
 		ai_chance = { factor = 0.2 }
 	}
 	
@@ -375,6 +440,13 @@ country_event = {
 			ideology = { factor = 0.10 value = communist }
 			militancy = -1 
 			consciousness = 1
+		}
+		
+		any_pop = {
+			limit = { is_culture_group = THIS OR = { type = aristocrats type = bureaucrats } }
+			ideology = { factor = 0.05 value = communist }
+			militancy = -5
+			consciousness = 5
 		}
 		
 		ai_chance = { factor = 0.8 }
@@ -408,9 +480,15 @@ country_event = {
 		name = "Remove them"
 		any_pop = { militancy = -3 consciousness = -3 }
 		
+		#Make Reformists more powerful
+		any_pop = { 
+			limit = { OR = { type = aristocrats type = bureaucrats } } 
+			ideology = { factor = 0.15 value = communist_social } 
+		}
+		
 		#Jews get sent to the Gulags
 		any_pop = { 
-			limit = { culture = jewish } 
+			limit = { AND = { culture = jewish strata = rich } } 
 			pop_type = slaves
 		}
 		
@@ -423,8 +501,20 @@ country_event = {
 		
 		#Lose popularity
 		any_pop = { 
-			limit = { OR = { strata = rich strata = middle } is_culture_group = THIS } 
+			limit = { OR = { strata = poor strata = middle } is_culture_group = THIS } 
 			ideology = { factor = 0.05 value = liberal } 
+		}
+		
+		#Make Reformists less powerful
+		any_pop = { 
+			limit = { OR = { type = aristocrats type = bureaucrats } } 
+			ideology = { factor = 0.15 value = communist } 
+		}
+		
+		#Encourage Party Dialogue
+		any_pop = { 
+			limit = { OR = { type = aristocrats type = bureaucrats } } 
+			ideology = { factor = 0.15 value = socialist } 
 		}
 		
 		ai_chance = { factor = 0.1 }
@@ -517,6 +607,19 @@ country_event = {
 	option = {
 		name = "Help the American Government cover up the incident"
 		prestige = -100
+		
+		#Make Reformists more powerful
+		any_pop = { 
+			limit = { OR = { type = aristocrats type = bureaucrats } } 
+			ideology = { factor = 0.15 value = communist_social } 
+		}
+		
+		#Make Liberals more powerful
+		any_pop = { 
+			limit = { OR = { type = aristocrats type = bureaucrats } } 
+			ideology = { factor = 0.15 value = socialist } 
+		}
+		
 		relation = { who = USA value = 100 }
 		ai_chance = { factor = 0.1 }
 	}
@@ -550,7 +653,8 @@ country_event = {
 
 	option = {
 		name = "Issue a strong letter of complaint!"
-		relation = { who = RUS value = -100 } 
+		relation = { who = RUS value = -100 }
+		any_pop = { militancy = -1 consciousness = -1 }
 		
 		RUS = { country_event = 80142251 }
 		ai_chance = { factor = 0.9 }
@@ -560,6 +664,16 @@ country_event = {
 		name = "Be friendly with the Russians"
 		prestige = -50
 		any_pop = { militancy = 2 consciousness = 3 }
+		
+		any_pop = { 
+			limit = { OR = { strata = rich strata = middle } }
+			ideology = { factor = 0.15 value = conservative } 
+		}
+		
+		any_pop = { 
+			limit = { type = poor } 
+			ideology = { factor = 0.15 value = socialist } 
+		}
 		
 		ai_chance = { factor = 0.1 }
 	}
@@ -586,6 +700,30 @@ country_event = {
 		name = "Apologise for the mistake"
 		prestige = -100
 		any_pop = { consciousness = 3 }
+		
+		#Make Reformists more powerful
+		any_pop = { 
+			limit = { OR = { strata = middle strata = poor } } 
+			ideology = { factor = 0.05 value = communist_social } 
+		}
+
+		#Make Liberals more powerful
+		any_pop = { 
+			limit = { OR = strata = rich } 
+			ideology = { factor = 0.05 value = socialist } 
+		}			
+		
+		#Make Reformists more powerful
+		any_pop = { 
+			limit = { OR = { type = aristocrats type = bureaucrats } } 
+			ideology = { factor = 0.15 value = communist_social } 
+		}
+		
+		#Make Liberals more powerful
+		any_pop = { 
+			limit = { OR = { type = aristocrats type = bureaucrats } } 
+			ideology = { factor = 0.05 value = socialist } 
+		}
 		
 		#Reparations
 		money = -100000
@@ -966,13 +1104,29 @@ country_event = {
 	option = {
 		name = "Let's look at Liberman's proposals"
 		country_event = 9001024
-		ai_chance = { factor = 0.8 }
+		ai_chance = {
+			factor = 0.8
+			modifier = { 
+				factor = 0.3 #Represents support among the CPSU leadership
+				NOT = { OR = { aristocrats = { pop_majority_ideology = communist_social } bureaucrats = { pop_majority_ideology = communist_social } } }
+			}
+		}
 	}
 	
 	option = {
-		name = "Let's study the proposals of these 'Cybermetics'"
+		name = "Let's study the proposals of these 'Cybernetics'"
 		country_event = 9001025
-		ai_chance = { factor = 0.2 }
+		ai_chance = {
+			factor = 0.2
+			modifier = { 
+				factor = 6 #Represents support among the CPSU leadership
+				OR = { aristocrats = { pop_majority_ideology = communist } bureaucrats = { pop_majority_ideology = communist } }
+			}
+			modifier = { 
+				factor = 3 #Represents support among the CPSU leadership
+				OR = { aristocrats = { pop_majority_ideology = socialist } bureaucrats = { pop_majority_ideology = socialist } }
+			}
+		}
 	}
 }
 
@@ -1321,7 +1475,7 @@ country_event = {
                 }
             }
             
-            #Berlin is still under allied hands despite demanding it during the CMC
+            #West Berlin is still under allied hands despite demanding it during the CMC
             GER = { 
                 has_country_flag = RUS_CMC_berlin_demand_flag
                 NOT = { 

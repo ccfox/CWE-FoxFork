@@ -29,7 +29,7 @@ country_event = {
 		#Deutsche mark
 		has_global_flag = deutsche_mark
 		
-		#Berlin is in the western zone
+		#West Berlin is in the western zone
 		549 = { owned_by = OG4 }
 	}
 

@@ -19852,7 +19852,7 @@
 		size = 14339
 	 } 
 }
-#Berlin - Berlin (2418000/604500 POPS)
+#West Berlin - Berlin (1417956/354489 POPS)
 549 = {
 	officers = {
 		culture = european
@@ -19917,7 +19917,7 @@
 	clerks = {
 		culture = european
 		religion =  protestant 
-		size = 14024
+		size = 8024
 	 } 
 	clerks = {
 		culture = european
@@ -19927,7 +19927,7 @@
 	artisans = {
 		culture = european
 		religion =  protestant 
-		size = 13323
+		size = 8323
 	 } 
 	artisans = {
 		culture = european
@@ -19937,7 +19937,7 @@
 	craftsmen = {
 		culture = european
 		religion =  protestant 
-		size = 7387
+		size = 4387
 	 } 
 	craftsmen = {
 		culture = european
@@ -19947,22 +19947,22 @@
 	artisans = {
 		culture = german
 		religion =  catholic 
-		size = 35387
+		size = 25387
 	 } 
 	farmers = {
 		culture = german
 		religion = secularism
-		size = 6491
+		size = 4491
 	 } 
 	farmers = {
 		culture = german
 		religion =  catholic 
-		size = 403902
+		size = 303902
 	 } 
 	artisans = {
 		culture = german
 		religion = secularism
-		size = 74088
+		size = 64088
 	 } 
 }
 #Frankfurt - Hesse (2220000/555000 POPS)

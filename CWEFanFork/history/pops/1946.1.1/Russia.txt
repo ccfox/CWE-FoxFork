@@ -18755,6 +18755,119 @@
 		size = 8778
 	 } 
 }
+#East Berlin - Berlin (Roughly 1000000/250000 POPS)
+3381 = {
+	officers = {
+		culture = european
+		religion =  protestant 
+		size = 1531
+	 } 
+	officers = {
+		culture = european
+		religion = secularism
+		size = 281
+	 } 
+	soldiers = {
+		culture = european
+		religion =  protestant 
+		size = 6129
+	 } 
+	soldiers = {
+		culture = european
+		religion = secularism
+		size = 1124
+	 } 
+	bureaucrats = {
+		culture = european
+		religion =  protestant 
+		size = 3064
+	 } 
+	bureaucrats = {
+		culture = european
+		religion = secularism
+		size = 562
+	 } 
+	aristocrats = {
+		culture = european
+		religion =  protestant 
+		size = 3064
+	 } 
+	aristocrats = {
+		culture = european
+		religion = secularism
+		size = 562
+	 } 
+	clergymen = {
+		culture = european
+		religion =  protestant 
+		size = 10216
+	 } 
+	clergymen = {
+		culture = european
+		religion = secularism
+		size = 1873
+	 } 
+	clerks = {
+		culture = european
+		religion =  protestant 
+		size = 6024
+	 } 
+	clerks = {
+		culture = european
+		religion = secularism
+		size = 2572
+	 } 
+	artisans = {
+		culture = european
+		religion =  protestant 
+		size = 5323
+	 } 
+	artisans = {
+		culture = european
+		religion = secularism
+		size = 2443
+	 } 
+	craftsmen = {
+		culture = european
+		religion =  protestant 
+		size = 3387
+	 } 
+	craftsmen = {
+		culture = european
+		religion = secularism
+		size = 1000
+	 } 
+	aristocrats = {
+		culture = german
+		religion =  protestant 
+		size = 6000
+	 } 
+	aristocrats = {
+		culture = german
+		religion = secularism
+		size = 1500
+	 } 
+	artisans = {
+		culture = german
+		religion =  catholic 
+		size = 10000
+	 } 
+	farmers = {
+		culture = german
+		religion = secularism
+		size = 4000
+	 } 
+	farmers = {
+		culture = german
+		religion =  catholic 
+		size = 100000
+	 } 
+	artisans = {
+		culture = german
+		religion = secularism
+		size = 20000
+	 } 
+}
 #Prenzlau - Brandenburg (584000/146000 POPS)
 550 = {
 	officers = {

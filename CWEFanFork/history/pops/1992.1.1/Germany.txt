@@ -2865,112 +2865,112 @@
 	officers = {
 		culture = german
 		religion =  catholic 
-		size = 609
+		size = 409
 	 } 
 	officers = {
 		culture = german
 		religion = secularism
-		size = 993
+		size = 693
 	 } 
 	soldiers = {
 		culture = german
 		religion =  catholic 
-		size = 2437
+		size = 1437
 	 } 
 	soldiers = {
 		culture = german
 		religion = secularism
-		size = 3976
+		size = 2476
 	 } 
 	capitalists = {
 		culture = german
 		religion =  catholic 
-		size = 6241
+		size = 5241
 	 } 
 	capitalists = {
 		culture = german
 		religion = secularism
-		size = 10183
+		size = 9183
 	 } 
 	bureaucrats = {
 		culture = german
 		religion =  catholic 
-		size = 1872
+		size = 1372
 	 } 
 	bureaucrats = {
 		culture = german
 		religion = secularism
-		size = 3054
+		size = 2054
 	 } 
 	aristocrats = {
 		culture = german
 		religion =  catholic 
-		size = 1872
+		size = 1372
 	 } 
 	aristocrats = {
 		culture = german
 		religion = secularism
-		size = 3054
+		size = 1054
 	 } 
 	clergymen = {
 		culture = german
 		religion =  catholic 
-		size = 6241
+		size = 3241
 	 } 
 	clergymen = {
 		culture = german
 		religion = secularism
-		size = 10183
+		size = 7183
 	 } 
 	clerks = {
 		culture = german
 		religion =  catholic 
-		size = 8659
+		size = 4659
 	 } 
 	clerks = {
 		culture = german
 		religion = secularism
-		size = 14129
+		size = 7129
 	 } 
 	artisans = {
 		culture = german
 		religion =  catholic 
-		size = 7360
+		size = 4360
 	 } 
 	artisans = {
 		culture = german
 		religion = secularism
-		size = 12009
+		size = 9009
 	 } 
 	craftsmen = {
 		culture = german
 		religion =  catholic 
-		size = 27278
+		size = 17278
 	 } 
 	craftsmen = {
 		culture = german
 		religion = secularism
-		size = 44506
+		size = 24506
 	 } 
 	farmers = {
 		culture = german
 		religion =  catholic 
-		size = 118742
+		size = 68742
 	 } 
 	farmers = {
 		culture = german
 		religion = secularism
-		size = 193738
+		size = 113738
 	 } 
 	farmers = {
 		culture = european
 		religion =  protestant 
-		size = 43690
+		size = 33690
 	 } 
 	farmers = {
 		culture = european
 		religion = secularism
-		size = 71284
+		size = 41284
 	 } 
 	farmers = {
 		culture = indian
@@ -3066,6 +3066,119 @@
 		culture = filipino
 		religion = secularism
 		size = 2545
+	 } 
+}
+#East Berlin - Berlin (Roughly 1000000/250000 POPS)
+3381 = {
+	officers = {
+		culture = german
+		religion =  catholic 
+		size = 200
+	 } 
+	officers = {
+		culture = german
+		religion = secularism
+		size = 300
+	 } 
+	soldiers = {
+		culture = german
+		religion =  catholic 
+		size = 1000
+	 } 
+	soldiers = {
+		culture = german
+		religion = secularism
+		size = 1500
+	 } 
+	capitalists = {
+		culture = german
+		religion =  catholic 
+		size = 1000
+	 } 
+	capitalists = {
+		culture = german
+		religion = secularism
+		size = 1000
+	 } 
+	bureaucrats = {
+		culture = german
+		religion =  catholic 
+		size = 600
+	 } 
+	bureaucrats = {
+		culture = german
+		religion = secularism
+		size = 1000
+	 } 
+	aristocrats = {
+		culture = german
+		religion =  catholic 
+		size = 500
+	 } 
+	aristocrats = {
+		culture = german
+		religion = secularism
+		size = 2000
+	 } 
+	clergymen = {
+		culture = german
+		religion =  catholic 
+		size = 3000
+	 } 
+	clergymen = {
+		culture = german
+		religion = secularism
+		size = 3000
+	 } 
+	clerks = {
+		culture = german
+		religion =  catholic 
+		size = 4000
+	 } 
+	clerks = {
+		culture = german
+		religion = secularism
+		size = 7000
+	 } 
+	artisans = {
+		culture = german
+		religion =  catholic 
+		size = 3000
+	 } 
+	artisans = {
+		culture = german
+		religion = secularism
+		size = 5000
+	 } 
+	craftsmen = {
+		culture = german
+		religion =  catholic 
+		size = 10000
+	 } 
+	craftsmen = {
+		culture = german
+		religion = secularism
+		size = 20000
+	 } 
+	farmers = {
+		culture = german
+		religion =  catholic 
+		size = 50000
+	 } 
+	farmers = {
+		culture = german
+		religion = secularism
+		size = 80000
+	 } 
+	farmers = {
+		culture = european
+		religion =  protestant 
+		size = 10000
+	 } 
+	farmers = {
+		culture = european
+		religion = secularism
+		size = 30000
 	 } 
 }
 #Prenzlau - Brandenburg (794000/198500 POPS)

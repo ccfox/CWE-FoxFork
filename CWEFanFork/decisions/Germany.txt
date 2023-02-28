@@ -126,7 +126,7 @@ political_decisions = {
 			OG1 = { exists = no }
 			DDR = { exists = no }
 			NOT = { has_country_flag = no_partition_of_west_germany }
-			owns = 551
+			owns = 3381
 			tag = RUS
 			OR = { 
 				year = 1952
@@ -481,14 +481,13 @@ political_decisions = {
 		}
 		
 		allow = {
-			owns = 551
+			owns = 3381
 			owns = 549
 			549 = { controlled_by = THIS }
 		}
 		
 		effect = {
 			capital = 549
-			551 = { change_province_name =  "Potsdam" }
 		}
 	
 	}

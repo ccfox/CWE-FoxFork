@@ -68,7 +68,7 @@ country_event = { # Continuing our Solidarity?
 			vassal_of = RUS
 			war = no
 			
-			owns = 551
+			owns = 3381
 		}
 		
 		money = 1500000
@@ -243,7 +243,7 @@ country_event = { # Second Cuban Missile Crisis
 			vassal_of = RUS
 			war = no
 			
-			owns = 551
+			owns = 3381
 		}
 		
 		has_global_flag = blocsenabled

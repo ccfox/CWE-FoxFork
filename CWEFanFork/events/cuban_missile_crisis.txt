@@ -45,7 +45,7 @@ country_event = {
 		
 		#Berlin is divided
 		GER = { government = democracy is_vassal = no owns = 549 }
-		DDR = { vassal_of = RUS owns = 551 }
+		DDR = { vassal_of = RUS owns = 3381 }
 		
 		#Khruschev and Kennedy
 		has_country_flag = nikita_khrushchev

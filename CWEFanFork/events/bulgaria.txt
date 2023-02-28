@@ -276,14 +276,61 @@ country_event = {
 		country_event = 800054
 		ruling_party_ideology = communist_social
 		
-		ai_chance = { factor = 0.9 }
+		
+		any_pop = { 
+			limit = { strata = poor } 
+			ideology = { factor = 0.5 value = socialist }
+		}
+		
+		any_pop = { 
+			limit = { strata = middle } 
+			ideology = { factor = 0.15 value = social_democrat }
+		}
+		
+		any_pop = { 
+			limit = { strata = rich } 
+			ideology = { factor = 0.1 value = conservative }
+		}
+		
+		
+		any_pop = { 
+			limit = { OR = { type = aristocrats type = bureaucrats } } 
+			ideology = { factor = 0.05 value = socialist }
+		}
+		
+		
+		ai_chance = {
+			factor = 0.9
+			modifier = { 
+				factor = 0.6 #Expulsion of the Turks was one of the catalysts for the coup
+				NOT = { has_country_flag = big_execursion_bul }
+			}
+			modifier = { 
+				factor = 0.6 #The people support a socialist government
+				OR = { pop_majority_ideology = communist pop_majority_ideology = communist_social }
+			}
+			modifier = { 
+				factor = 0.3 #Reformists are too weak to launch a coup
+				NOT = { OR = { aristocrats = { pop_majority_ideology = communist_social } bureaucrats = { pop_majority_ideology = communist_social } } }
+			}
+		}
 	}
 
 	option = {
 		name = "Zhivkov rallies support to cling to power."
 		add_country_modifier = { name = revolution_chaos duration = 3650 }
 		any_pop = { militancy = 10 consciousness = 10 }
-		ai_chance = { factor = 0.1 }
+		ai_chance = {
+			factor = 0.1
+			modifier = { 
+				factor = 6 #The people support Zhivkov
+				pop_majority_ideology = communist
+			}
+			modifier = { 
+				factor = 3 #Reformists are too weak to launch a coup
+				OR = { aristocrats = { pop_majority_ideology = communist } bureaucrats = { pop_majority_ideology = communist } }
+			}
+		}
 	}
 	
 }

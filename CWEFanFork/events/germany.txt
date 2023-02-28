@@ -720,7 +720,7 @@ country_event = {
 		is_vassal = no
 		war = no
 		
-		#Owns Berlin
+		#Owns West Berlin
 		owns = 549
 		
 		#Cold War ongoing
@@ -1006,7 +1006,7 @@ country_event = {
 		tag = GER
 		OR = { 
 			549 = { has_province_modifier = berlin_wall } 
-			551 = { has_province_modifier = berlin_wall } 
+			3381 = { has_province_modifier = berlin_wall } #formerly uses 551
 		}
 		OR = { 
 			AND = { 
@@ -1025,7 +1025,7 @@ country_event = {
 		name = "Mr. Gorbachev, tear down this wall!"
 		prestige = 50
 		549 = { remove_province_modifier = berlin_wall }
-		551 = { remove_province_modifier = berlin_wall }
+		3381 = { remove_province_modifier = berlin_wall } #formerly uses 551
 	}
 	
 }

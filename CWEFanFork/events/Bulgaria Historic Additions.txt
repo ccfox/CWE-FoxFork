@@ -53,6 +53,10 @@ country_event = {
 
 		ai_chance = {
 			factor = 0.95
+			modifier = {
+				factor = 0.3
+				pop_majority_ideology = traditionalist 
+			}
 		}
 	}
 
@@ -265,27 +269,51 @@ country_event = {
 	option = {
 		name = "Crack down on traitors!"
 		badboy = 1
-		any_pop = { 
-			ideology = { factor = 0.05 value = communist }
+		any_pop = {
+			limit = { strata = rich }
+			ideology = { factor = 0.15 value = communist }
 			militancy = -3 
 			consciousness = -3
+		}
+		any_pop = {
+			limit = { OR = { strata = middle strata = poor } }
+			ideology = { factor = 0.05 value = communist }
+			consciousness = 2
 		}
 		
 		set_country_flag = broad_bul_purges
 		ai_chance = {
 			factor = 0.9
+			modifier = { 
+				factor = 0.6
+				NOT = { OR = { aristocrats = { pop_majority_ideology = communist } bureaucrats = { pop_majority_ideology = communist } } }
+			}
 		}
 	}
 
 	option = {
 		name = "Show more leniency towards dissent within the party."
 		add_country_modifier = { name = political_strife duration = 1095 }
-		any_pop = { 
-			ideology = { factor = 0.05 value = communist_social }
+		
+		any_pop = {
+			limit = { strata = rich }
+			ideology = { factor = 0.15 value = communist_social }
 			militancy = -3 
-			consciousness = -3
+			consciousness = 3
+		}
+		any_pop = {
+			limit = { OR = { strata = middle strata = poor } }
+			ideology = { factor = 0.05 value = communist_social }
+			consciousness = -2
 		}
 		
+		ai_chance = {
+			factor = 0.1
+			modifier = { 
+				factor = 6
+				OR = { aristocrats = { pop_majority_ideology = communist_social } bureaucrats = { pop_majority_ideology = communist_social } }
+			}
+		}
 	}
 	
 }
@@ -315,8 +343,17 @@ country_event = {
 
 	option = {
 		name = "Chervenkov takes the post of Prime Minister for himself."
+		random_owned = { #This should give the player or AI the modifier if they don't have a majority support
+			limit = { owner = { AND = { tag = ROM NOT = { OR = { aristocrats = { pop_majority_ideology = communist } bureaucrats = { pop_majority_ideology = communist } } } } } }
+			owner = { add_country_modifier = { name = political_strife duration = 1095 } }
+		}
 		badboy = 1
-		any_pop = { 
+		any_pop = {
+			limit = { strata = rich }
+			ideology = { factor = 0.15 value = communist }
+		}
+		any_pop = {
+			limit = { OR = { strata = middle strata = poor } }
 			ideology = { factor = 0.05 value = communist }
 		}
 		remove_country_modifier = collective_leadership
@@ -324,13 +361,29 @@ country_event = {
 		set_country_flag = chervenkov_bul	
 		ai_chance = {
 			factor = 0.9
+			modifier = { 
+				factor = 0.6 #Represents support among the BCP leadership
+				NOT = { OR = { aristocrats = { pop_majority_ideology = communist } bureaucrats = { pop_majority_ideology = communist } } }
+			}
+			modifier = {
+				factor = 0.85 #Represents support among the National Assembly
+				NOT = { pop_majority_ideology = communist }
+			}
 		}
 	}
 
 	option = {
 		name = "Allow the post to remain independent."
-		add_country_modifier = { name = political_strife duration = 1095 }
-		any_pop = { 
+		random_owned = { #This should give the player or AI the modifier if they don't have a majority support
+			limit = { owner = { AND = { tag = ROM NOT = { OR = { aristocrats = { pop_majority_ideology = communist_social } bureaucrats = { pop_majority_ideology = communist_social } } } } } }
+			owner = { add_country_modifier = { name = political_strife duration = 1095 } }
+		}
+		any_pop = {
+			limit = { strata = rich }
+			ideology = { factor = 0.15 value = communist_social }
+		}
+		any_pop = {
+			limit = { OR = { strata = middle strata = poor } }
 			ideology = { factor = 0.05 value = communist_social }
 		}
 		remove_country_modifier = collective_leadership
@@ -338,6 +391,14 @@ country_event = {
 		set_country_flag = chervenkov_bul_limited	
 		ai_chance = {
 			factor = 0.1
+			modifier = { 
+				factor = 10 #Represents support among the BCP leadership
+				OR = { aristocrats = { pop_majority_ideology = communist_social } bureaucrats = { pop_majority_ideology = communist_social } }
+			}
+			modifier = {
+				factor = 6 #Represents support among the National Assembly
+				pop_majority_ideology = communist_social
+			}
 		}
 	}
 	
@@ -499,7 +560,22 @@ country_event = {
 			ideology = { factor = 0.10 value = communist }
 		}
 		
-		ai_chance = { factor = 0.7 }
+		any_pop = { 
+			limit = { OR = { type = aristocrats type = bureaucrats } } 
+			ideology = { factor = 0.05 value = communist }
+		}
+		
+		ai_chance = {
+			factor = 0.7
+			modifier = { 
+				factor = 0.6 #Represents support among the BCP leadership
+				NOT = { OR = { aristocrats = { pop_majority_ideology = communist } bureaucrats = { pop_majority_ideology = communist } } }
+			}
+			modifier = {
+				factor = 0.85 #Represents support among the National Assembly
+				NOT = { pop_majority_ideology = communist }
+			}
+		}
 	}
 
 	option = {
@@ -517,11 +593,19 @@ country_event = {
 			limit = { strata = poor }
 			ideology = { factor = 0.10 value = communist_social }
 		}
+		any_pop = { 
+			limit = { OR = { type = aristocrats type = bureaucrats } } 
+			ideology = { factor = 0.05 value = communist_social }
+		}
 		
 		ai_chance = { 
 			factor = 0.2 
+			modifier = { 
+				factor = 10 #Represents support among the BCP leadership
+				OR = { aristocrats = { pop_majority_ideology = communist_social } bureaucrats = { pop_majority_ideology = communist_social } }
+			}
 			modifier = {
-				factor = 6
+				factor = 6 #Represents support among the National Assembly
 				pop_majority_ideology = communist_social
 			}
 		}
@@ -543,6 +627,11 @@ country_event = {
 			limit = { is_culture_group = THIS strata = rich } 
 			ideology = { factor = 0.2 value = nationalist }
 		}
+		any_pop = { 
+			limit = { is_culture_group = THIS OR = { type = aristocrats type = bureaucrats } } 
+			ideology = { factor = 0.05 value = communist }
+		}
+		
 		
 		#Soviet reaction
 		random_country = {
@@ -550,7 +639,25 @@ country_event = {
 			country_event = 8022923
 		}
 		
-		ai_chance = { factor = 0.1 }
+		ai_chance = {
+			factor = 0.1
+			modifier = { 
+				factor = 10 #Represents support among the BCP leadership
+				OR = { aristocrats = { pop_majority_ideology = communist } bureaucrats = { pop_majority_ideology = communist } }
+			}
+			modifier = {
+				factor = 6 #Represents support among the National Assembly
+				pop_majority_ideology = communist
+			}
+			modifier = {
+				factor = 8 #Represents support within the Soviet Union
+				RUS = { OR = { has_country_flag = ussr_stalinist_faction has_country_flag = georgy_malenkov has_country_flag = vyacheslav_molotov } }
+			}
+			modifier = {
+				factor = 0.12 #Represents support within the Soviet Union
+				RUS = { has_country_flag = nikita_khrushchev }
+			}
+		}
 	}
 }
 
@@ -594,7 +701,17 @@ country_event = {
 			limit = { strata = poor }
 			ideology = { factor = 0.10 value = communist_social }
 		}
-		ai_chance = { factor = 0.7 }
+		ai_chance = {
+			factor = 0.7
+			modifier = { 
+				factor = 0.6 #Represents support among the BCP leadership
+				NOT = { OR = { aristocrats = { pop_majority_ideology = communist_social } bureaucrats = { pop_majority_ideology = communist_social } } }
+			}
+			modifier = {
+				factor = 0.95 #Represents support among the National Assembly
+				NOT = { pop_majority_ideology = communist_social }
+			}
+		}
 	}
 
 	option = {
@@ -613,7 +730,17 @@ country_event = {
 			limit = { strata = poor }
 			ideology = { factor = 0.10 value = communist }
 		}
-		ai_chance = { factor = 0.2 }
+		ai_chance = {
+			factor = 0.2
+			modifier = { 
+				factor = 10 #Represents support among the BCP leadership
+				OR = { aristocrats = { pop_majority_ideology = communist } bureaucrats = { pop_majority_ideology = communist } }
+			}
+			modifier = {
+				factor = 6 #Represents support among the National Assembly
+				pop_majority_ideology = communist
+			}
+		}
 	}
 
 	option = {
@@ -637,9 +764,21 @@ country_event = {
 		}
 		ai_chance = { 
 			factor = 0.1 
+			modifier = { 
+				factor = 10 #Represents support among the BCP leadership
+				OR = { aristocrats = { pop_majority_ideology = communist_social } bureaucrats = { pop_majority_ideology = communist_social } }
+			}
+			modifier = { 
+				factor = 5 #Represents support among the BCP leadership
+				OR = { aristocrats = { pop_majority_ideology = nationalist } bureaucrats = { pop_majority_ideology = nationalist } }
+			}
 			modifier = {
-				factor = 6
+				factor = 6 #Represents support among the National Assembly
 				pop_majority_ideology = communist_social
+			}
+			modifier = {
+				factor = 3 #Represents support among the National Assembly
+				pop_majority_ideology = nationalist
 			}
 		}
 	}
@@ -669,7 +808,21 @@ country_event = {
 		
 		BUL = { set_country_flag = bulgaria_does_something_silly }
 		
-		ai_chance = { factor = 0.8 }
+		ai_chance = {
+			factor = 0.8
+			modifier = {
+				factor = 0.12
+				RUS = { OR = { has_country_flag = ussr_stalinist_faction has_country_flag = georgy_malenkov has_country_flag = vyacheslav_molotov } }
+			}
+			modifier = {
+				factor = 6
+				RUS = { has_country_flag = nikita_khrushchev }
+			}
+			modifier = {
+				factor = 3
+				RUS = { has_country_flag = lavrentiy_beria }
+			}
+		}
 	}
 
 	option = {
@@ -691,7 +844,17 @@ country_event = {
 			}
 		}
 		
-		ai_chance = { factor = 0.2 }
+		ai_chance = {
+			factor = 0.2
+			modifier = {
+				factor = 6
+				RUS = { OR = { has_country_flag = ussr_stalinist_faction has_country_flag = georgy_malenkov has_country_flag = vyacheslav_molotov } }
+			}
+			modifier = {
+				factor = 6
+				RUS = { has_country_flag = georgy_zhukov }
+			}
+		}
 	}
 	
 }
@@ -787,13 +950,34 @@ country_event = {
 			ideology = { factor = 0.05 value = liberal }
 		}
 		
+		any_pop = { 
+			limit = { strata = poor } 
+			ideology = { factor = 0.1 value = communist_social } 
+		}
+		
+		any_pop = { 
+			limit = { strata = middle } 
+			ideology = { factor = 0.05 value = communist_social }
+		}
+		
+		any_pop = { 
+			limit = { OR = { type = aristocrats type = bureaucrats } } 
+			ideology = { factor = 0.05 value = communist_social }
+		}
+		
 		814 = {
 			change_province_name = "Varna"
 		}
 		
 		set_country_flag = bulgarian_de_stalinization
 		
-		ai_chance = { factor = 0.9 }
+		ai_chance = {
+			factor = 0.9
+			modifier = { 
+				factor = 0.65 #Represents support among the BCP leadership
+				NOT = { OR = { aristocrats = { pop_majority_ideology = communist_social } bureaucrats = { pop_majority_ideology = communist_social } } }
+			}
+		}
 	}
 
 	option = {
@@ -813,7 +997,18 @@ country_event = {
 			ideology = { factor = 0.1 value = liberal }
 		}
 		
-		ai_chance = { factor = 0.1 }
+		any_pop = { 
+			limit = { is_culture_group = THIS OR = { type = aristocrats type = bureaucrats } } 
+			ideology = { factor = 0.05 value = communist }
+		}
+		
+		ai_chance = {
+			factor = 0.1
+			modifier = { 
+				factor = 3 #Represents support among the BCP leadership
+				OR = { aristocrats = { pop_majority_ideology = communist } bureaucrats = { pop_majority_ideology = communist } }
+			}
+		}
 	}
 
 }
@@ -919,10 +1114,19 @@ country_event = {
 			consciousness = -3
 		}
 		
+		any_pop = { 
+			limit = { is_culture_group = THIS OR = { type = aristocrats type = bureaucrats } } 
+			ideology = { factor = 0.05 value = communist_social }
+		}
+		
 		set_country_flag = stalinist_bul_purges 
 		
 		ai_chance = {
 			factor = 0.9
+			modifier = { 
+				factor = 0.7 #Represents support among the BCP leadership
+				NOT = { OR = { aristocrats = { pop_majority_ideology = communist_social } bureaucrats = { pop_majority_ideology = communist_social } } }
+			}
 		}
 	}
 
@@ -934,8 +1138,22 @@ country_event = {
 			militancy = -3 
 			consciousness = -3
 		}
+		
+		any_pop = { 
+			limit = { is_culture_group = THIS OR = { type = aristocrats type = bureaucrats } } 
+			ideology = { factor = 0.05 value = communist }
+		}
+		
 		ai_chance = {
 			factor = 0.1
+			modifier = { 
+				factor = 10 #Represents support among the BCP leadership
+				OR = { aristocrats = { pop_majority_ideology = communist } bureaucrats = { pop_majority_ideology = communist } }
+			}
+			modifier = { 
+				factor = 0.15 #Represents support among the BCP leadership
+				OR = { aristocrats = { pop_majority_ideology = socialist } bureaucrats = { pop_majority_ideology = socialist } }
+			}
 		}	
 	}
 	
@@ -981,7 +1199,17 @@ country_event = {
 		#random_pop = { limit = { type = aristocrats } money = 2500 } #Immediate gains from production
 		aristocrats = { money = 200 } #Immediate gains from production #Might be better this way
 		
-		ai_chance = { factor = 0.9 }
+		ai_chance = {
+			factor = 0.9
+			modifier = { 
+				factor = 2 #Represents support among technocrats
+				OR = { has_country_flag = lagadinova_bul has_country_flag = technocracy_bul }
+			}
+			modifier = { 
+				factor = 2 #Represents support among technocrats
+				RUS = { OR = { has_country_flag = partial_automation has_country_flag = ogas_project } }
+			}
+		}
 	}
 
 	option = {
@@ -1017,7 +1245,7 @@ country_event = {
 	mean_time_to_happen = { months = 4 }
 
 	option = {
-		name = "The plan if foiled prior to its execution."
+		name = "The plan is foiled prior to its execution."
 		add_country_modifier = { name = political_strife duration = 195 }
 		any_pop = { consciousness = -2 }
 		any_pop = { 
@@ -1032,7 +1260,13 @@ country_event = {
 			limit = { is_culture_group = THIS strata = rich } 
 			ideology = { factor = 0.05 value = liberal }
 		}
-		ai_chance = { factor = 0.95 }
+		ai_chance = {
+			factor = 0.95
+			modifier = { 
+				factor = 0.7 #Represents support among the BNA leadership
+				NOT = { OR = { officers = { militancy = 5 } soldiers = { militancy = 5 } } }
+			}
+		}
 	}
 
 	option = {
@@ -1060,7 +1294,13 @@ country_event = {
 			limit = { is_culture_group = THIS strata = rich } 
 			ideology = { factor = 0.5 value = communist }
 		}
-		ai_chance = { factor = 0.05 }
+		ai_chance = {
+			factor = 0.05
+			modifier = { 
+				factor = 6 #Represents support among the BNA leadership
+				NOT = { OR = { officers = { militancy = 5 } soldiers = { militancy = 5 } } }
+			}
+		}
 	}
 	
 }
@@ -1100,17 +1340,30 @@ country_event = {
 			limit = {
 				exists = yes
 				OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
-				ruling_party_ideology = communist
+				OR = { ruling_party_ideology = communist ruling_party_ideology = communist_social ruling_party_ideology = socialist }
 				capital_scope = { continent = europe }
 			}
 			any_pop = {
+				limit = { OR = { strata = middle strata = poor } } 
 				consciousness = 2
 				militancy = 2
 				ideology = { factor = 0.05 value = nationalist }
 			}
+			any_pop = {
+				limit = { strata = rich } 
+				consciousness = 2
+				militancy = 2
+				ideology = { factor = 0.05 value = communist_social } #Maybe make it communist instead since the revolt is a hardliner one?
+			}
 		}
 		
-		ai_chance = { factor = 0.3 }
+		ai_chance = {
+			factor = 0.3
+			modifier = {
+				factor = 6 
+				RUS = { OR = { has_country_flag = ussr_stalinist_faction has_country_flag = georgy_malenkov has_country_flag = vyacheslav_molotov } }
+			}
+		}
 	}
 	
 }
@@ -1181,7 +1434,17 @@ country_event = {
 		name = "Encourage her to join the government."
 		prestige = 50
 		research_points = 500
-		ai_chance = { factor = 0.84 }
+		ai_chance = {
+			factor = 0.84
+			modifier = { 
+				factor = 1.25 #Represents support among technocrats
+				RUS = { OR = { has_country_flag = partial_automation has_country_flag = ogas_project } }
+			}
+			modifier = { 
+				factor = 1.25 #Represents support among technocrats
+				RUS = { has_country_flag = virgin_lands_campaign_1 }
+			}
+		}
 	}
 
 	option = {
@@ -1190,7 +1453,17 @@ country_event = {
 		set_country_flag = bul_pre_technocracy
 		prestige = 30
 		research_points = 750
-		ai_chance = { factor = 0.15 }
+		ai_chance = {
+			factor = 0.15
+			modifier = { 
+				factor = 3 #Represents support among technocrats
+				RUS = { has_country_flag = ogas_project }
+			}
+			modifier = { 
+				factor = 1.25 #Represents support among technocrats
+				RUS = { has_country_flag = virgin_lands_campaign_1 }
+			}
+		}
 	}
 
 	option = {
@@ -1198,7 +1471,9 @@ country_event = {
 		add_country_modifier = { name = political_strife duration = 1095 }
 		badboy = 1
 		prestige = -10
-		ai_chance = { factor = 0.01 }
+		ai_chance = {
+			factor = 0.01
+		}
 	}
 	
 }
@@ -1234,14 +1509,26 @@ country_event = {
 		#random_pop = { limit = { type = aristocrats } money = 1000 } #Slower gains from investment
 		aristocrats = { money = 200 }
 		
-		ai_chance = { factor = 0.9 }
+		ai_chance = {
+			factor = 0.9
+			modifier = { 
+				factor = 1.25 #Represents support among technocrats
+				RUS = { OR = { has_country_flag = partial_automation has_country_flag = ogas_project } }
+			}
+			modifier = { 
+				factor = 3 #Represents support among technocrats
+				has_country_flag = bul_pre_technocracy
+			}
+		}
 	}
 
 	option = {
 		name = "The money is better spent elsewhere."
 		add_country_modifier = { name = political_strife duration = 1095 }
 		any_pop = { consciousness = -2 }
-		ai_chance = { factor = 0.1 }
+		ai_chance = {
+			factor = 0.1
+		}
 	}
 	
 }
@@ -1265,35 +1552,75 @@ country_event = {
 		NOT = { has_country_flag = reformer_bul_purges }
 	}
 
-	mean_time_to_happen = { months = 2 }
+	mean_time_to_happen = { months = 2 } 
 
 	option = {
 		name = "Purge Liberals within the party."
+		
 		badboy = 1
+		
 		any_pop = { 
 			ideology = { factor = 0.05 value = communist_social }
 			militancy = -3 
 			consciousness = -3
 		}
 		
+		any_pop = {
+			limit = { is_culture_group = THIS OR = { type = aristocrats type = bureaucrats } }
+			ideology = { factor = 0.10 value = communist }
+			militancy = 2
+			consciousness = 5
+		}
+		
 		set_country_flag = reformer_bul_purges 
 		
 		ai_chance = {
 			factor = 0.9
+			modifier = { 
+				factor = 0.6 #Represents support among the BCP leadership
+				NOT = { OR = { aristocrats = { pop_majority_ideology = communist } bureaucrats = { pop_majority_ideology = communist } } }
+			}
 		}
 	}
 
 	option = {
 		name = "They are no threat."
 		add_country_modifier = { name = political_strife duration = 1095 }
+		
 		any_pop = { 
+			limit = { strata = poor }
 			ideology = { factor = 0.05 value = communist }
 			militancy = -3 
-			consciousness = -3
+			consciousness = 1
+		}
+		
+		any_pop = { 
+			limit = { strata = middle }
+			ideology = { factor = 0.05 value = communist_social }
+			militancy = -3 
+			consciousness = 1
+		}
+		
+		any_pop = {
+			limit = { OR = { type = aristocrats type = bureaucrats } }
+			ideology = { factor = 0.05 value = communist_social }
+			militancy = -2
+			consciousness = -5
+		}
+		
+		any_pop = {
+			limit = { OR = { type = aristocrats type = bureaucrats } }
+			ideology = { factor = 0.02 value = socialist }
+			militancy = -2
+			consciousness = -5
 		}
 		
 		ai_chance = {
 			factor = 0.1
+			modifier = { 
+				factor = 0.6 #Represents support among the BCP leadership
+				OR = { aristocrats = { pop_majority_ideology = communist_social } bureaucrats = { pop_majority_ideology = communist_social } }
+			}
 		}
 	}
 	
@@ -1331,19 +1658,53 @@ country_event = {
 			ideology = { factor = 0.05 value = liberal }
 		}
 		
-		ai_chance = { factor = 0.8 }
+		any_pop = {
+			limit = { OR = { type = aristocrats type = bureaucrats } }
+			ideology = { factor = 0.10 value = communist_social }
+			consciousness = 1
+		}
+		
+		ai_chance = {
+			factor = 0.8
+			modifier = { 
+				factor = 0.6 #Represents support among the BCP leadership
+				NOT = { OR = { aristocrats = { pop_majority_ideology = communist_social } bureaucrats = { pop_majority_ideology = communist_social } } }
+			}
+			modifier = { 
+				factor = 3 #Soviet Market reforms have begun
+				RUS = { OR = { has_country_flag = liberman_reform has_country_flag = kosygin_reform } }
+			}
+		}
 	}
 	
 	option = {
 		name = "There is no need for these reforms in our economy."
+		
 		add_country_modifier = { name = political_strife duration = 1095 }
+		
 		any_pop = { 
 			ideology = { factor = 0.05 value = communist_social }
 			militancy = -3 
 			consciousness = 3
 		}
 		
-		ai_chance = { factor = 0.2 }
+		any_pop = {
+			limit = { OR = { type = aristocrats type = bureaucrats } }
+			ideology = { factor = 0.10 value = communist }
+			consciousness = 1
+		}
+		
+		ai_chance = {
+			factor = 0.2
+			modifier = { 
+				factor = 6 #Represents support among the BCP leadership
+				OR = { aristocrats = { pop_majority_ideology = communist } bureaucrats = { pop_majority_ideology = communist } }
+			}
+			modifier = { 
+				factor = 3 #Soviet Union still uses orthodox economic methods
+				NOT = { RUS = { OR = { has_country_flag = liberman_reform has_country_flag = kosygin_reform } } }
+			}
+		}
 	}
 	
 }
@@ -1394,22 +1755,66 @@ country_event = {
 			militancy = 6
 			consciousness = 6
 		}
-		ai_chance = { factor = 0.9 }
+		
+		any_pop = { 
+			limit = { strata = middle is_culture_group = THIS } 
+			ideology = { factor = 0.05 value = nationalist } 
+		}
+		
+		any_pop = { 
+			limit = { strata = poor is_culture_group = THIS } 
+			ideology = { factor = 0.05 value = communist } 
+		}
+		
+		any_pop = { 
+			limit = { OR = { type = aristocrats type = bureaucrats } } 
+			ideology = { factor = 0.05 value = communist_social }
+			militancy = 3
+			consciousness = 3
+		}
+
+		ai_chance = {
+			factor = 0.9
+			modifier = { 
+				factor = 6 #The Situation is unstable
+				NOT = { OR = { pop_majority_ideology = communist pop_majority_ideology = communist_social } }
+			}
+			modifier = { 
+				factor = 0.6 #Friendly Turkey makes it less likely
+				TUR = { OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } }
+			}
+		}
 	}
 
 	option = {
 		name = "We will not instate these policies against our Turkish comrades."
 		prestige = 10
 		add_country_modifier = { name = political_strife duration = 1095 }
+		
 		any_pop = { 
 			limit = { culture = turkish }
 			ideology = { factor = 0.05 value = communist }
 		}
+		
 		any_pop = { 
-			limit = { culture = bulgarian }
+			limit = { OR = { type = aristocrats type = bureaucrats } } 
+			ideology = { factor = 0.05 value = communist }
+			militancy = 3
+			consciousness = 3
+		}
+		
+		any_pop = { 
+			limit = { strata = middle culture = bulgarian }
 			ideology = { factor = 0.02 value = nationalist }
 		}
-		ai_chance = { factor = 0.1 }
+		
+		ai_chance = {
+			factor = 0.1
+			modifier = { 
+				factor = 6 #Reformist support among the population makes it less likely
+				pop_majority_ideology = communist_social
+			}
+		}
 	}
 	
 }
@@ -1446,14 +1851,26 @@ country_event = {
 		
 		set_country_flag = partial_automation_bul
 		
-		ai_chance = { factor = 0.9 }
+		ai_chance = {
+			factor = 0.9
+			modifier = { 
+				factor = 2 #Represents support among technocrats
+				OR = { has_country_flag = lagadinova_bul has_country_flag = technocracy_bul }
+			}
+			modifier = { 
+				factor = 2 #Represents support among technocrats
+				RUS = { OR = { has_country_flag = partial_automation has_country_flag = ogas_project } }
+			}
+		}
 	}
 
 	option = {
 		name = "The resources are better spent else-where."
 		any_pop = { consciousness = -2 }
 		
-		ai_chance = { factor = 0.1 }
+		ai_chance = {
+			factor = 0.1
+		}
 	}
 	
 }
@@ -1496,7 +1913,7 @@ country_event = {
 		name = "Limit the implementation of these reforms inside of Bulgaria."
 		any_pop = { 
 			limit = { strata = rich }
-			ideology = { factor = 0.01 value = communist }
+			ideology = { factor = 0.05 value = communist_social }
 		}
 		any_pop = { 
 			limit = { strata = middle }
@@ -1507,8 +1924,21 @@ country_event = {
 			ideology = { factor = 0.01 value = communist }
 		}
 		
+		any_pop = { 
+			limit = { OR = { type = aristocrats type = bureaucrats } } 
+			ideology = { factor = 0.15 value = communist }
+			militancy = 3
+			consciousness = 3
+		}
+		
 		any_pop = { militancy = -5 consciousness = -5 }
-		ai_chance = { factor = 0.9 }
+		ai_chance = {
+			factor = 0.9
+			modifier = { 
+				factor = 0.7 #Represents support among the BCP leadership
+				NOT = { OR = { aristocrats = { pop_majority_ideology = communist } bureaucrats = { pop_majority_ideology = communist } } }
+			}
+		}
 	}
 
 	option = {
@@ -1517,6 +1947,13 @@ country_event = {
 		government = socialist_democracy 
 		country_event = 800054
 		ruling_party_ideology = communist_social
+		
+		any_pop = { 
+			limit = { OR = { type = aristocrats type = bureaucrats } } 
+			ideology = { factor = 0.05 value = socialist }
+			militancy = 3
+			consciousness = 3
+		}
 		
 		any_pop = { 
 			limit = { strata = rich }
@@ -1533,7 +1970,17 @@ country_event = {
 		
 		any_pop = { militancy = -5 consciousness = 5 }
 
-		ai_chance = { factor = 0.05 }
+		ai_chance = {
+			factor = 0.05
+			modifier = { 
+				factor = 2 #Represents support among the BCP leadership
+				OR = { aristocrats = { pop_majority_ideology = communist } bureaucrats = { pop_majority_ideology = communist } }
+			}
+			modifier = { 
+				factor = 2 #Represents support among the BCP leadership
+				OR = { aristocrats = { OR = { pop_majority_ideology = progressive pop_majority_ideology = socialist pop_majority_ideology = social_democrat } } bureaucrats = { OR = { pop_majority_ideology = progressive pop_majority_ideology = socialist pop_majority_ideology = social_democrat } } }
+			}
+		}
 	}
 
 	option = {
@@ -1543,20 +1990,37 @@ country_event = {
 		add_country_modifier = { name = political_strife duration = 3095 }	
 		any_pop = { 
 			limit = { strata = rich }
-			ideology = { factor = 0.05 value = liberal }
+			ideology = { factor = 0.15 value = liberal }
 		}
 		any_pop = { 
 			limit = { strata = middle }
-			ideology = { factor = 0.05 value = liberal }
+			ideology = { factor = 0.05 value = communist_social }
 		}
 		any_pop = { 
 			limit = { strata = poor }
 			ideology = { factor = 0.05 value = communist }
 		}
 		
+		any_pop = { 
+			limit = { OR = { type = aristocrats type = bureaucrats } } 
+			ideology = { factor = 0.05 value = communist }
+			militancy = 3
+			consciousness = 3
+		}
+		
 		any_pop = { militancy = 8 consciousness = 8 }
 
-		ai_chance = { factor = 0.05 }
+		ai_chance = {
+			factor = 0.05
+			modifier = { 
+				factor = 3 #Represents support among the BCP leadership
+				OR = { aristocrats = { pop_majority_ideology = communist } bureaucrats = { pop_majority_ideology = communist } }
+			}
+			modifier = { 
+				factor = 6 #Represents support among the National Assembly
+				pop_majority_ideology = communist
+			}
+		}
 	}
 	
 }
@@ -1607,7 +2071,25 @@ country_event = {
 			limit = { strata = poor }
 			ideology = { factor = 0.10 value = communist_social }
 		}
-		ai_chance = { factor = 0.9 }
+		
+		any_pop = { 
+			limit = { OR = { type = aristocrats type = bureaucrats } } 
+			ideology = { factor = 0.05 value = communist_social }
+			militancy = 3
+			consciousness = 3
+		}
+		
+		ai_chance = {
+			factor = 0.9
+			modifier = { 
+				factor = 0.6 #Represents support among the BCP leadership
+				NOT = { OR = { aristocrats = { pop_majority_ideology = communist_social } bureaucrats = { pop_majority_ideology = communist_social } } }
+			}
+			modifier = { 
+				factor = 0.3 #Represents support among the National Assembly
+				NOT = { pop_majority_ideology = communist_social }
+			}
+		}
 	}
 
 	option = {
@@ -1616,20 +2098,37 @@ country_event = {
 
 		any_pop = { 
 			limit = { strata = rich }
-			ideology = { factor = 0.1 value = communist }
+			ideology = { factor = 0.1 value = communist_social }
 		}
 		any_pop = { 
 			limit = { strata = middle }
 			militancy = 6 consciousness = 6
-			ideology = { factor = 0.2 value = liberal }
+			ideology = { factor = 0.2 value = socialist }
 		}
 		any_pop = { 
 			limit = { strata = poor }
 			militancy = 3 consciousness = 3
-			ideology = { factor = 0.1 value = socialist }
+			ideology = { factor = 0.1 value = communist }
+		}
+		
+		any_pop = { 
+			limit = { OR = { type = aristocrats type = bureaucrats } } 
+			ideology = { factor = 0.05 value = communist }
+			militancy = 3
+			consciousness = 3
 		}
 
-		ai_chance = { factor = 0.1 }
+		ai_chance = {
+			factor = 0.1
+			modifier = { 
+				factor = 0.6 #Represents support among the BCP leadership
+				NOT = { OR = { aristocrats = { pop_majority_ideology = communist } bureaucrats = { pop_majority_ideology = communist } } }
+			}
+			modifier = { 
+				factor = 0.3 #Represents support among the National Assembly
+				NOT = { pop_majority_ideology = communist }
+			}
+		}
 	}
 	
 }
@@ -1691,6 +2190,21 @@ country_event = {
 			militancy = 6
 			consciousness = 6
 		}
+		
+		any_pop = { 
+			limit = { OR = { type = aristocrats type = bureaucrats } } 
+			ideology = { factor = 0.05 value = communist_social }
+			militancy = 3
+			consciousness = 3
+		}
+		
+		any_pop = { 
+			limit = { strata = rich } 
+			ideology = { factor = 0.05 value = nationalist }
+			militancy = 3
+			consciousness = 3
+		}
+		
 		TUR = {
 			random_owned = {
 				limit = { is_core = TUR }
@@ -1747,7 +2261,17 @@ country_event = {
 				}
 			}
 		}
-		ai_chance = { factor = 0.8 }
+		ai_chance = {
+			factor = 0.8
+			modifier = { 
+				factor = 0.6 #TUR is not friendly
+				NOT = { TUR = { OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 government = socialist_democracy } } }
+			}
+			modifier = { 
+				factor = 2 #The Situation is not stable
+				NOT = { OR = { pop_majority_ideology = communist pop_majority_ideology = communist_social } }
+			}
+		}
 	}
 
 	option = {
@@ -1768,7 +2292,28 @@ country_event = {
 			militancy = -3
 			consciousness = -3
 		}
-		ai_chance = { factor = 0.1 }
+		
+		any_pop = { 
+			limit = { OR = { type = aristocrats type = bureaucrats } } 
+			ideology = { factor = 0.01 value = communist_social }
+			militancy = 3
+			consciousness = 3
+		}
+		
+		any_pop = { 
+			limit = { strata = rich } 
+			ideology = { factor = 0.02 value = conservative }
+			militancy = 3
+			consciousness = 3
+		}
+		
+		ai_chance = {
+			factor = 0.1
+			modifier = { 
+				factor = 2 #The Situation is stable
+				OR = { pop_majority_ideology = communist pop_majority_ideology = communist_social }
+			}
+		}
 	}
 
 	option = {
@@ -1787,7 +2332,28 @@ country_event = {
 			militancy = -8
 			consciousness = -8
 		}
-		ai_chance = { factor = 0.1 }
+		
+		any_pop = { 
+			limit = { OR = { type = aristocrats type = bureaucrats } } 
+			ideology = { factor = 0.01 value = socialist }
+			militancy = 3
+			consciousness = 3
+		}
+		
+		any_pop = { 
+			limit = { strata = rich } 
+			ideology = { factor = 0.02 value = progressive }
+			militancy = 3
+			consciousness = 3
+		}
+		
+		ai_chance = {
+			factor = 0.1
+			modifier = { 
+				factor = 6 #Such policies would cause backlash
+				OR = { pop_majority_ideology = progressive pop_majority_ideology = socialist }
+			}
+		}
 	}
 	
 }
@@ -1825,8 +2391,16 @@ country_event = {
 		name = "We have to act quickly."
 		add_country_modifier = { name = revolution_chaos duration = 1825 }
 		any_pop = { 
-			limit = { strata = middle }
+			limit = { strata = poor }
 			ideology = { factor = 0.2 value = socialist }
+		}
+		any_pop = { 
+			limit = { strata = middle }
+			ideology = { factor = 0.2 value = social_democrat }
+		}
+		any_pop = { 
+			limit = { strata = rich }
+			ideology = { factor = 0.2 value = conservative }
 		}
 	}
 	
@@ -1866,12 +2440,34 @@ country_event = {
 		add_country_modifier = { name = economic_malaise duration = 1825 }
 		any_pop = { militancy = -3  consciousness = -3 }
 		any_pop = { 
-			limit = { strata = middle }
+			limit = { strata = poor }
 			ideology = { factor = 0.2 value = socialist }
+		}
+		any_pop = { 
+			limit = { strata = middle }
+			ideology = { factor = 0.2 value = social_democrat }
+		}
+		any_pop = { 
+			limit = { strata = rich }
+			ideology = { factor = 0.2 value = conservative }
 		}
 		ruling_party_ideology = socialist
 		government = democracy
-		ai_chance = { factor = 0.9 }
+		ai_chance = {
+			factor = 0.9
+			modifier = { 
+				factor = 0.6 #Represents support among the BCP leadership
+				OR = { aristocrats = { OR = { pop_majority_ideology = communist_social pop_majority_ideology = communist } } bureaucrats = { OR = { pop_majority_ideology = communist_social pop_majority_ideology = communist } } }
+			}
+			modifier = { 
+				factor = 0.3
+				OR = { pop_majority_ideology = communist pop_majority_ideology = communist_social }
+			}
+			modifier = { 
+				factor = 1.25
+				NOT = { OR = { pop_majority_ideology = communist pop_majority_ideology = communist_social } }
+			}
+		}
 	}
 
 	option = {
@@ -1882,7 +2478,17 @@ country_event = {
 			limit = { strata = poor }
 			ideology = { factor = 0.1 value = communist_social }
 		}
-		ai_chance = { factor = 0.1 }
+		ai_chance = {
+			factor = 0.1
+			modifier = { 
+				factor = 6 #Represents support among the BCP leadership
+				OR = { aristocrats = { OR = { pop_majority_ideology = communist_social pop_majority_ideology = communist } } bureaucrats = { OR = { pop_majority_ideology = communist_social pop_majority_ideology = communist } } }
+			}
+			modifier = { 
+				factor = 3
+				OR = { pop_majority_ideology = communist pop_majority_ideology = communist_social }
+			}
+		}
 	}
 	
 }
@@ -1917,11 +2523,16 @@ country_event = {
 	option = {
 		name = "The now reformed BSP manages to achieve majority."
 		
+		random_owned = { #This should give the player or AI the modifier if they don't have a majority support
+			limit = { owner = { AND = { tag = ROM NOT = { OR = { pop_majority_ideology = social_democrat pop_majority_ideology = socialist } } } } }
+			owner = { add_country_modifier = { name = revolution_chaos duration = 1365 } }
+		}
+		
 		ruling_party_ideology = socialist
 		
 		any_pop = { 
 			limit = { strata = rich }
-			ideology = { factor = 0.1 value = socialist }
+			ideology = { factor = 0.05 value = socialist }
 		}
 		any_pop = { 
 			limit = { strata = middle }
@@ -1946,7 +2557,10 @@ country_event = {
 
 		ruling_party_ideology = conservative
 		
-		add_country_modifier = { name = revolution_chaos duration = 3650 }
+		random_owned = { #This should give the player or AI the modifier if they don't have a majority support
+			limit = { owner = { AND = { tag = ROM NOT = { OR = { pop_majority_ideology = conservative pop_majority_ideology = big_tent pop_majority_ideology = liberal } } } } }
+			owner = { add_country_modifier = { name = revolution_chaos duration = 1365 } }
+		}
 		
 		any_pop = { 
 			limit = { strata = rich }
@@ -2147,6 +2761,11 @@ country_event = {
 		name = "SDS"
 		clr_country_flag = caretaker_gov_bul
 		
+		random_owned = { #This should give the player or AI the modifier if they don't have a majority support
+			limit = { owner = { AND = { tag = BUL NOT = { OR = { pop_majority_ideology = conservative } } } } }
+			owner = { add_country_modifier = { name = revolution_chaos duration = 1365 } }
+		}
+		
 		ruling_party_ideology = conservative
 		
 		any_pop = { 
@@ -2168,7 +2787,10 @@ country_event = {
 		
 		ruling_party_ideology = social_democrat
 		
-		add_country_modifier = { name = revolution_chaos duration = 1365 }
+		random_owned = { #This should give the player or AI the modifier if they don't have a majority support
+			limit = { owner = { AND = { tag = BUL NOT = { OR = { pop_majority_ideology = social_democrat pop_majority_ideology = socialist } } } } }
+			owner = { add_country_modifier = { name = revolution_chaos duration = 1365 } }
+		}
 		
 		any_pop = { 
 			ideology = { factor = 0.2 value = social_democrat }
@@ -2220,7 +2842,14 @@ country_event = {
 
 	option = {
 		name = "Democratic Left Coalition"
+		
+		random_owned = { #This should give the player or AI the modifier if they don't have a majority support
+			limit = { owner = { AND = { tag = BUL NOT = { OR = { pop_majority_ideology = social_democrat pop_majority_ideology = socialist } } } } }
+			owner = { add_country_modifier = { name = revolution_chaos duration = 1365 } }
+		}
+		
 		ruling_party_ideology = social_democrat
+		
 		any_pop = { 
 			ideology = { factor = 0.2 value = social_democrat }
 		}
@@ -2235,8 +2864,14 @@ country_event = {
 
 	option = {
 		name = "SDS"
+		
 		ruling_party_ideology = conservative
-		add_country_modifier = { name = revolution_chaos duration = 1365 }
+		
+		random_owned = { #This should give the player or AI the modifier if they don't have a majority support
+			limit = { owner = { AND = { tag = BUL NOT = { OR = { pop_majority_ideology = conservative } } } } }
+			owner = { add_country_modifier = { name = revolution_chaos duration = 1365 } }
+		}
+		
 		any_pop = { 
 			ideology = { factor = 0.2 value = conservative }
 		}
@@ -2282,7 +2917,15 @@ country_event = {
 
 	option = {
 		name = "SDS"
+		
+		random_owned = { #This should give the player or AI the modifier if they don't have a majority support
+			limit = { owner = { AND = { tag = BUL NOT = { OR = { pop_majority_ideology = conservative } } } } }
+			owner = { add_country_modifier = { name = revolution_chaos duration = 1365 } }
+		}
+		
 		ruling_party_ideology = conservative
+		
+		
 		any_pop = { 
 			ideology = { factor = 0.2 value = conservative }
 		}
@@ -2298,7 +2941,12 @@ country_event = {
 	option = {
 		name = "BSP"
 		ruling_party_ideology = social_democrat
-		add_country_modifier = { name = revolution_chaos duration = 1365 }
+		
+		random_owned = { #This should give the player or AI the modifier if they don't have a majority support
+			limit = { owner = { AND = { tag = BUL NOT = { OR = { pop_majority_ideology = social_democrat pop_majority_ideology = socialist } } } } }
+			owner = { add_country_modifier = { name = revolution_chaos duration = 1365 } }
+		}
+		
 		any_pop = { 
 			ideology = { factor = 0.2 value = social_democrat }
 		}
@@ -2394,7 +3042,14 @@ country_event = {
 
 	option = {
 		name = "NDSV"
+		
 		ruling_party_ideology = populist
+		
+		random_owned = { #This should give the player or AI the modifier if they don't have a majority support
+			limit = { owner = { AND = { tag = BUL NOT = { OR = { pop_majority_ideology = populist } } } } }
+			owner = { add_country_modifier = { name = revolution_chaos duration = 1365 } }
+		}
+		
 		any_pop = { 
 			ideology = { factor = 0.2 value = populist }
 		}
@@ -2410,7 +3065,12 @@ country_event = {
 	option = {
 		name = "SDS"
 		ruling_party_ideology = conservative
-		add_country_modifier = { name = revolution_chaos duration = 1365 }
+		
+		random_owned = { #This should give the player or AI the modifier if they don't have a majority support
+			limit = { owner = { AND = { tag = BUL NOT = { OR = { pop_majority_ideology = conservative } } } } }
+			owner = { add_country_modifier = { name = revolution_chaos duration = 1365 } }
+		}
+		
 		any_pop = { 
 			ideology = { factor = 0.2 value = conservative }
 		}
@@ -2426,7 +3086,12 @@ country_event = {
 	option = {
 		name = "Democratic Left Coalition"
 		ruling_party_ideology = social_democrat
-		add_country_modifier = { name = revolution_chaos duration = 1365 }
+		
+		random_owned = { #This should give the player or AI the modifier if they don't have a majority support
+			limit = { owner = { AND = { tag = BUL NOT = { OR = { pop_majority_ideology = social_democrat pop_majority_ideology = socialist } } } } }
+			owner = { add_country_modifier = { name = revolution_chaos duration = 1365 } }
+		}
+		
 		any_pop = { 
 			ideology = { factor = 0.2 value = social_democrat }
 		}
@@ -2476,6 +3141,12 @@ country_event = {
 
 	option = {
 		name = "Democratic Left Coalition"
+		
+		random_owned = { #This should give the player or AI the modifier if they don't have a majority support
+			limit = { owner = { AND = { tag = BUL NOT = { OR = { pop_majority_ideology = social_democrat pop_majority_ideology = socialist } } } } }
+			owner = { add_country_modifier = { name = revolution_chaos duration = 1365 } }
+		}
+		
 		ruling_party_ideology = social_democrat
 		any_pop = { 
 			ideology = { factor = 0.2 value = social_democrat }
@@ -2491,8 +3162,14 @@ country_event = {
 
 	option = {
 		name = "NDSV"
-		add_country_modifier = { name = revolution_chaos duration = 1365 }
+		
+		random_owned = { #This should give the player or AI the modifier if they don't have a majority support
+			limit = { owner = { AND = { tag = BUL NOT = { OR = { pop_majority_ideology = populist } } } } }
+			owner = { add_country_modifier = { name = revolution_chaos duration = 1365 } }
+		}
+		
 		ruling_party_ideology = populist
+		
 		any_pop = { 
 			ideology = { factor = 0.2 value = populist }
 		}
@@ -2508,7 +3185,10 @@ country_event = {
 	option = {
 		name = "SDS"
 		ruling_party_ideology = conservative
-		add_country_modifier = { name = revolution_chaos duration = 1365 }
+		random_owned = { #This should give the player or AI the modifier if they don't have a majority support
+			limit = { owner = { AND = { tag = BUL NOT = { OR = { pop_majority_ideology = conservative } } } } }
+			owner = { add_country_modifier = { name = revolution_chaos duration = 1365 } }
+		}
 		any_pop = { 
 			ideology = { factor = 0.2 value = conservative }
 		}
@@ -2651,7 +3331,14 @@ country_event = {
 
 	option = {
 		name = "GERB"
+		
+		random_owned = { #This should give the player or AI the modifier if they don't have a majority support
+			limit = { owner = { AND = { tag = BUL NOT = { OR = { pop_majority_ideology = conservative } } } } }
+			owner = { add_country_modifier = { name = revolution_chaos duration = 1365 } }
+		}
+		
 		ruling_party_ideology = conservative
+		
 		any_pop = { 
 			ideology = { factor = 0.2 value = conservative }
 		}
@@ -2659,7 +3346,7 @@ country_event = {
 			factor = 0.9
 			modifier = {
 				factor = 0.3
-				NOT = { pop_majority_ideology = socialist }
+				NOT = { pop_majority_ideology = conservative }
 			}
 		}
 	}
@@ -2667,7 +3354,12 @@ country_event = {
 	option = {
 		name = "Democratic Left Coalition"
 		ruling_party_ideology = social_democrat
-		add_country_modifier = { name = revolution_chaos duration = 1365 }
+		
+		random_owned = { #This should give the player or AI the modifier if they don't have a majority support
+			limit = { owner = { AND = { tag = BUL NOT = { OR = { pop_majority_ideology = social_democrat pop_majority_ideology = socialist } } } } }
+			owner = { add_country_modifier = { name = revolution_chaos duration = 1365 } }
+		}
+		
 		any_pop = { 
 			ideology = { factor = 0.2 value = social_democrat }
 		}
@@ -2717,7 +3409,14 @@ country_event = {
 
 	option = {
 		name = "GERB"
+		
+		random_owned = { #This should give the player or AI the modifier if they don't have a majority support
+			limit = { owner = { AND = { tag = BUL NOT = { OR = { pop_majority_ideology = conservative } } } } }
+			owner = { add_country_modifier = { name = revolution_chaos duration = 1365 } }
+		}
+		
 		ruling_party_ideology = conservative
+		
 		any_pop = { 
 			ideology = { factor = 0.2 value = conservative }
 		}
@@ -2733,7 +3432,12 @@ country_event = {
 	option = {
 		name = "Democratic Left Coalition"
 		ruling_party_ideology = social_democrat
-		add_country_modifier = { name = revolution_chaos duration = 1365 }
+		
+		random_owned = { #This should give the player or AI the modifier if they don't have a majority support
+			limit = { owner = { AND = { tag = BUL NOT = { OR = { pop_majority_ideology = social_democrat pop_majority_ideology = socialist } } } } }
+			owner = { add_country_modifier = { name = revolution_chaos duration = 1365 } }
+		}
+		
 		any_pop = { 
 			ideology = { factor = 0.2 value = social_democrat }
 		}
@@ -2783,7 +3487,14 @@ country_event = {
 
 	option = {
 		name = "GERB"
+		
+		random_owned = { #This should give the player or AI the modifier if they don't have a majority support
+			limit = { owner = { AND = { tag = BUL NOT = { OR = { pop_majority_ideology = conservative } } } } }
+			owner = { add_country_modifier = { name = revolution_chaos duration = 1365 } }
+		}
+		
 		ruling_party_ideology = conservative
+		
 		any_pop = { 
 			ideology = { factor = 0.2 value = conservative }
 		}
@@ -2798,8 +3509,14 @@ country_event = {
 
 	option = {
 		name = "Democratic Left Coalition"
+		
 		ruling_party_ideology = social_democrat
-		add_country_modifier = { name = revolution_chaos duration = 1365 }
+		
+		random_owned = { #This should give the player or AI the modifier if they don't have a majority support
+			limit = { owner = { AND = { tag = BUL NOT = { OR = { pop_majority_ideology = social_democrat pop_majority_ideology = socialist } } } } }
+			owner = { add_country_modifier = { name = revolution_chaos duration = 1365 } }
+		}
+		
 		any_pop = { 
 			ideology = { factor = 0.2 value = social_democrat }
 		}
@@ -2849,7 +3566,14 @@ country_event = {
 
 	option = {
 		name = "GERB"
+		
+		random_owned = { #This should give the player or AI the modifier if they don't have a majority support
+			limit = { owner = { AND = { tag = BUL NOT = { OR = { pop_majority_ideology = conservative } } } } }
+			owner = { add_country_modifier = { name = revolution_chaos duration = 1365 } }
+		}
+		
 		ruling_party_ideology = conservative
+		
 		any_pop = { 
 			ideology = { factor = 0.2 value = conservative }
 		}
@@ -2864,8 +3588,14 @@ country_event = {
 
 	option = {
 		name = "Democratic Left Coalition"
+		
 		ruling_party_ideology = social_democrat
-		add_country_modifier = { name = revolution_chaos duration = 1365 }
+		
+		random_owned = { #This should give the player or AI the modifier if they don't have a majority support
+			limit = { owner = { AND = { tag = BUL NOT = { OR = { pop_majority_ideology = social_democrat pop_majority_ideology = socialist } } } } }
+			owner = { add_country_modifier = { name = revolution_chaos duration = 1365 } }
+		}
+		
 		any_pop = { 
 			ideology = { factor = 0.2 value = social_democrat }
 		}
@@ -2931,7 +3661,11 @@ country_event = {
 		}
 
 		ai_chance = { 
-			factor = 0.9 
+			factor = 0.9
+			modifier = {
+				factor = 0.3
+				OR = { ruling_party_ideology = socialist ruling_party_ideology = progressive ruling_party_ideology = social_democrat ruling_party_ideology = communist ruling_party_ideology = communist_social }
+			}
 		}
 	}
 
@@ -2943,6 +3677,10 @@ country_event = {
 		
 		ai_chance = { 
 			factor = 0.1
+			modifier = {
+				factor = 6
+				OR = { ruling_party_ideology = socialist ruling_party_ideology = progressive ruling_party_ideology = social_democrat ruling_party_ideology = communist ruling_party_ideology = communist_social }
+			}
 		}
 	}
 	

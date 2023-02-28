@@ -1,4 +1,4 @@
-capital = 551
+capital = 3381
 primary_culture = german
 religion = secularism
 government = proletarian_dictatorship
