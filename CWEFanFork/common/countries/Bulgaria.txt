@@ -254,7 +254,7 @@ party = {
 		end_date = 1948.12.1
 }
 party = {
-		name = "Bulgarian Communist Party"
+		name = "Bulgarian Communist Party (Reformist)"
 		citizenship_policy = full_citizenship
 		economic_policy = planned_economy1
 		ideology = communist_social
@@ -265,7 +265,7 @@ party = {
 		end_date = 1990.3.3
 }
 party = {
-		name = "Communist Party of Bulgaria"
+		name = "Communist Party of Bulgaria (Reformist)"
 		citizenship_policy = full_citizenship
 		economic_policy = planned_economy1
 		ideology = communist_social
