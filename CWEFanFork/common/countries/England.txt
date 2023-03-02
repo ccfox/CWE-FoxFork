@@ -1,105 +1,6 @@
 graphical_culture = BritishGC
 color = { 239  96  88 }
 party = {
-		name = "party_conservative_0_ENG"
-		citizenship_policy = limited_citizenship
-		economic_policy = interventionism
-		ideology = conservative
-		religious_policy = secularized
-		trade_policy = free_trade
-		war_policy = pro_military
-		start_date = 1836.1.1
-		end_date = 2100.1.1
-}
-party = {
-		name = "party_liberal_0_ENG"
-		citizenship_policy = full_citizenship
-		economic_policy = laissez_faire
-		ideology = liberal
-		religious_policy = secularized
-		trade_policy = free_trade
-		war_policy = pacifism
-		start_date = 1836.1.1
-		end_date = 2100.1.1
-}
-party = {
-		name = "party_socialist_0_ENG"
-		citizenship_policy = limited_citizenship
-		economic_policy = state_capitalism
-		ideology = socialist
-		religious_policy = pro_atheism
-		trade_policy = protectionism
-		war_policy = pacifism
-		start_date = 1836.1.1
-		end_date = 2100.1.1
-}
-party = {
-		name = "party_progressive_0_ENG"
-		citizenship_policy = full_citizenship
-		economic_policy = interventionism
-		ideology = progressive
-		religious_policy = pro_atheism
-		trade_policy = protectionism
-		war_policy = pacifism
-		start_date = 1836.1.1
-		end_date = 2100.1.1
-}
-party = {
-		name = "Conservative-Liberal Coalition"
-		citizenship_policy = full_citizenship
-		economic_policy = interventionism
-		ideology = big_tent
-		religious_policy = secularized
-		trade_policy = free_trade
-		war_policy = pro_military
-		start_date = 1836.1.1
-		end_date = 2100.1.1
-}
-party = {
-		name = "party_populist_0_ENG"
-		citizenship_policy = residency
-		economic_policy = state_capitalism
-		ideology = populist
-		religious_policy = secularized
-		trade_policy = protectionism
-		war_policy = jingoism
-		start_date = 1836.1.1
-		end_date = 2100.1.1
-}
-party = {
-	name = "party_traditionalist_0_ENG"
-	citizenship_policy = residency
-	economic_policy = state_capitalism
-	ideology = traditionalist
-	religious_policy = moralism
-	trade_policy = protectionism
-	war_policy = pro_military
-	start_date = 1836.1.1
-	end_date = 2005.1.1
-}
-party = {
-	name = "party_traditionalist_1_ENG"
-	citizenship_policy = residency
-	economic_policy = state_capitalism
-	ideology = traditionalist
-	religious_policy = moralism
-	trade_policy = protectionism
-	war_policy = pro_military
-	start_date = 2005.1.1
-	end_date = 2100.1.1
-}
-party = {
-		name = "party_communist_0_ENG"
-		citizenship_policy = full_citizenship
-		economic_policy = planned_economy
-		ideology = communist
-		religious_policy = pro_atheism
-		trade_policy = protectionism
-		war_policy = pacifism
-		start_date = 1836.1.1
-		end_date = 2100.1.1
-}
-party = {
 		name = "English National Party"
 		citizenship_policy = full_citizenship
 		economic_policy = planned_economy
@@ -111,6 +12,216 @@ party = {
 		end_date = 2100.1.1
 }
 party = {
+		name = "SDP-Liberal Alliance (Right)"
+		citizenship_policy = full_citizenship
+		economic_policy = interventionism
+		ideology = big_tent
+		religious_policy = secularized
+		trade_policy = free_trade
+		war_policy = pacifism
+		start_date = 1836.1.1
+		end_date = 1988.3.3
+}
+party = {
+		name = "Conservative-Liberal Coalition"
+		citizenship_policy = full_citizenship
+		economic_policy = interventionism
+		ideology = big_tent
+		religious_policy = secularized
+		trade_policy = free_trade
+		war_policy = pro_military
+		start_date = 1988.3.3
+		end_date = 2100.1.1
+}
+party = {
+		name = "Conservative Party"
+		citizenship_policy = limited_citizenship
+		economic_policy = interventionism
+		ideology = conservative
+		religious_policy = secularized
+		trade_policy = free_trade
+		war_policy = pro_military
+		start_date = 1836.1.1
+		end_date = 1975.2.11
+}
+party = {
+		name = "Conservative Party"
+		citizenship_policy = limited_citizenship
+		economic_policy = laissez_faire
+		ideology = conservative
+		religious_policy = secularized
+		trade_policy = free_trade
+		war_policy = pro_military
+		start_date = 1975.2.11
+		end_date = 2005.10.20
+}
+party = {
+		name = "Conservative Party"
+		citizenship_policy = full_citizenship
+		economic_policy = interventionism
+		ideology = conservative
+		religious_policy = secularized
+		trade_policy = free_trade
+		war_policy = pro_military
+		start_date = 2005.10.20
+		end_date = 2092.1.1
+}
+party = {
+		name = "SDP-Liberal Alliance (Left)"
+		citizenship_policy = full_citizenship
+		economic_policy = interventionism
+		ideology = liberal
+		religious_policy = secularized
+		trade_policy = free_trade
+		war_policy = pacifism
+		start_date = 1836.1.1
+		end_date = 1988.3.3
+}
+party = {
+		name = "Liberal Democrats"
+		citizenship_policy = full_citizenship
+		economic_policy = interventionism
+		ideology = liberal
+		religious_policy = secularized
+		trade_policy = free_trade
+		war_policy = pacifism
+		start_date = 1988.3.3
+		end_date = 2092.1.1
+}
+party = {
+		name = "Labour Party"
+		citizenship_policy = full_citizenship
+		economic_policy = state_capitalism
+		ideology = social_democrat
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = pro_military
+		start_date = 1836.1.1
+		end_date = 1963.2.14
+}
+party = {
+		name = "Labour Party"
+		citizenship_policy = full_citizenship
+		economic_policy = state_capitalism
+		ideology = social_democrat
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = pacifism
+		start_date = 1963.2.14
+		end_date = 1994.7.21
+}
+party = {
+		name = "Labour Party (New Labour)"
+		citizenship_policy = full_citizenship
+		economic_policy = interventionism
+		ideology = social_democrat
+		religious_policy = secularized
+		trade_policy = free_trade
+		war_policy = pro_military
+		start_date = 1994.7.21
+		end_date = 2010.5.11
+}
+party = {
+		name = "Labour Party (Center)"
+		citizenship_policy = full_citizenship
+		economic_policy = interventionism
+		ideology = social_democrat
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = pacifism
+		start_date = 2010.5.11
+		end_date = 2092.1.1
+}
+party = {
+		name = "Independent Labour Party (Left)"
+		citizenship_policy = full_citizenship
+		economic_policy = planned_economy1
+		ideology = socialist
+		religious_policy = pro_atheism
+		trade_policy = protectionism
+		war_policy = pacifism
+		start_date = 1836.1.1
+		end_date = 1975.1.1
+}
+party = {
+		name = "Labour Party (Hard Left)"
+		citizenship_policy = full_citizenship
+		economic_policy = state_capitalism
+		ideology = socialist
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = pacifism
+		start_date = 1975.1.1
+		end_date = 2092.1.1
+}
+party = {
+		name = "Independent Labour Party (Right)"
+		citizenship_policy = full_citizenship
+		economic_policy = state_capitalism
+		ideology = progressive
+		religious_policy = pro_atheism
+		trade_policy = protectionism
+		war_policy = pacifism
+		start_date = 1836.1.1
+		end_date = 1975.1.1
+}
+party = {
+		name = "Labour Party (Soft Left)"
+		citizenship_policy = full_citizenship
+		economic_policy = state_capitalism
+		ideology = progressive
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = pacifism
+		start_date = 1975.1.1
+		end_date = 2092.1.1
+}
+party = {
+		name = "Green Party"
+		citizenship_policy = full_citizenship
+		economic_policy = interventionism
+		ideology = progressive
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = pacifism
+		start_date = 1985.1.1
+		end_date = 2092.1.1
+}
+party = {
+		name = "English National Party (P)"
+		citizenship_policy = residency
+		economic_policy = state_capitalism
+		ideology = populist
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = jingoism
+		start_date = 1836.1.1
+		end_date = 2100.1.1
+}
+party = {
+		name = "English National Party (NRx)"
+		citizenship_policy = residency
+		economic_policy = state_capitalism
+		ideology = traditionalist
+		religious_policy = moralism
+		trade_policy = protectionism
+		war_policy = pro_military
+		start_date = 1836.1.1
+		end_date = 2100.1.1
+}
+party = {
+		name = "Communist Party of England"
+		citizenship_policy = full_citizenship
+		economic_policy = planned_economy
+		ideology = communist
+		religious_policy = pro_atheism
+		trade_policy = protectionism
+		war_policy = pacifism
+		start_date = 1836.1.1
+		end_date = 2100.1.1
+}
+
+party = {
 		name = "Socialist Workers Party"
 		citizenship_policy = full_citizenship
 		economic_policy = state_capitalism
@@ -121,17 +232,7 @@ party = {
 		start_date = 1836.1.1
 		end_date = 2092.1.1
 }
-party = {
-		name = "social_democrat_party"
-		citizenship_policy = full_citizenship
-		economic_policy = state_capitalism
-		ideology = social_democrat
-		religious_policy = secularized
-		trade_policy = protectionism
-		war_policy = pacifism
-		start_date = 1836.1.1
-		end_date = 2092.1.1
-}
+
 unit_names = {
 	carrier = {
 		"Royal Sovereign" "Ramillies" "Royal Oak" "Repulse" "Revenge" "Resolution" "Empress of India" "Majestic" "Caesar" "Hannibal" "Illustrious" "Jupiter" "Magnificent" "Mars" "Prince George" "Victorious" "Canopus" "Albion" "Glory" "Goliath" "Ocean" "Vengeance" "Formidable" "Irresistible" "Implacable" "Bulwark" "London" "Venerable" "Duncan" "Albemarle" "Cornwallis" "Exmouth" "Montagu" "Russell" "Queen" "Prince of Wales" "King Edward VII" "Africa" "Britannia" "Commonwealth" "Dominion" "Hibernia" "Hindustan" "New Zealand" "Swiftsure" "Triumph" "Lord Nelson" "Agamemnon" "Camperdown" "Victoria" "Sans Pareil" "Trafalgar" "Nile"
