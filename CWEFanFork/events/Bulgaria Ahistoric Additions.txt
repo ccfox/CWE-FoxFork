@@ -103,7 +103,6 @@ country_event = {
 				factor = 6 #Represents support within the Socialist Movement
 				has_global_flag = de_stalinization
 			}
-			
 		}
 
 	}
@@ -1773,14 +1772,36 @@ country_event = {
 		any_pop = { militancy = -5 consciousness = -5 }
 		
 		any_pop = { 
+			limit = { OR = { type = aristocrats type = bureaucrats } } 
+			ideology = { factor = 0.05 value = communist }
+		}
+		
+		any_pop = { 
+			limit = { strata = rich }
+			ideology = { factor = 0.02 value = conservative }
+		}
+		
+		any_pop = { 
 			limit = { strata = middle }
 			ideology = { factor = 0.02 value = liberal }
 		}
+		
 		any_pop = { 
 			limit = { strata = poor }
-			ideology = { factor = 0.01 value = communist }
+			ideology = { factor = 0.02 value = communist }
 		}
-		ai_chance = { factor = 0.6 }
+		
+		ai_chance = {
+			factor = 0.8
+			modifier = { 
+				factor = 0.6 #Represents support among the BCP leadership
+				NOT = { OR = { aristocrats = { pop_majority_ideology = communist } bureaucrats = { pop_majority_ideology = communist } } }
+			}
+			modifier = {
+				factor = 0.3 #Represents support among the National Assembly
+				NOT = { pop_majority_ideology = communist }
+			}
+		}
 
 	}
 
@@ -1799,16 +1820,54 @@ country_event = {
 		aristocrats = { money = 100 } #Incentive to empower Nomenklatura
 		
 		any_pop = { militancy = -5 consciousness = -5 }
+		
+		any_pop = { 
+			limit = { OR = { type = aristocrats type = bureaucrats } } 
+			ideology = { factor = 0.05 value = communist }
+		}
+		
+		any_pop = { 
+			limit = { strata = rich }
+			ideology = { factor = 0.02 value = communist_social }
+		}
+		
 		any_pop = { 
 			limit = { strata = middle }
-			ideology = { factor = 0.04 value = communist_social }
+			ideology = { factor = 0.06 value = socialist }
 		}
+		
 		any_pop = { 
 			limit = { strata = poor }
-			ideology = { factor = 0.03 value = communist_social }
+			ideology = { factor = 0.08 value = liberal }
 		}
 
-		ai_chance = { factor = 0.4 }
+		ai_chance = {
+			factor = 0.2
+			modifier = {
+				factor = 1.25 #Represents technocrat influence
+				has_country_flag = radioelektronika_bul
+			}
+			modifier = {
+				factor = 2 #Represents technocrat influence
+				has_country_flag = radioelektronika_bul
+			}
+			modifier = {
+				factor = 2 #Represents technocrat influence
+				has_country_flag = cybernetisation_bul
+			}
+			modifier = {
+				factor = 2 #Represents technocrat influence
+				has_country_flag = partial_automation_bul
+			}
+			modifier = { 
+				factor = 3 #Represents support among technocrats
+				RUS = { OR = { has_country_flag = partial_automation has_country_flag = ogas_project } }
+			}
+			modifier = {
+				factor = 0.3 #Represents support within the BCP
+				ruling_party_ideology = communist_social
+			}
+		}
 
 	}
 
@@ -1892,16 +1951,38 @@ country_event = {
 		political_reform = regulated_opinion
 		
 		any_pop = { militancy = -5 consciousness = -5 }
+
 		any_pop = { 
-			limit = { strata = middle }
-			ideology = { factor = 0.05 value = communist_social }
-		}
-		any_pop = { 
-			limit = { strata = poor }
-			ideology = { factor = 0.10 value = communist }
+			limit = { OR = { type = aristocrats type = bureaucrats } } 
+			ideology = { factor = 0.05 value = communist }
 		}
 		
-		ai_chance = { factor = 0.6 }
+		any_pop = { 
+			limit = { strata = rich }
+			ideology = { factor = 0.02 value = communist_social }
+		}
+		
+		any_pop = { 
+			limit = { strata = middle }
+			ideology = { factor = 0.06 value = communist }
+		}
+		
+		any_pop = { 
+			limit = { strata = poor }
+			ideology = { factor = 0.08 value = liberal }
+		}
+		
+		ai_chance = {
+			factor = 0.6
+			modifier = { 
+				factor = 0.6 #Represents support among the BCP leadership
+				NOT = { OR = { aristocrats = { pop_majority_ideology = communist } bureaucrats = { pop_majority_ideology = communist } } }
+			}
+			modifier = {
+				factor = 0.3 #Represents support among the National Assembly
+				NOT = { pop_majority_ideology = communist }
+			}
+		}
 	}
 
 	option = {
@@ -1915,9 +1996,20 @@ country_event = {
 		political_reform = open_opinion
 		
 		any_pop = { militancy = -5 consciousness = -5 }
+		
+		any_pop = { 
+			limit = { OR = { type = aristocrats type = bureaucrats } } 
+			ideology = { factor = 0.15 value = communist_social }
+		}
+		
+		any_pop = { 
+			limit = { strata = rich }
+			ideology = { factor = 0.05 value = conservative }
+		}
+		
 		any_pop = { 
 			limit = { strata = middle }
-			ideology = { factor = 0.05 value = liberal }
+			ideology = { factor = 0.08 value = liberal }
 		}
 		
 		any_pop = { 
@@ -1925,7 +2017,17 @@ country_event = {
 			ideology = { factor = 0.10 value = communist_social }
 		}
 
-		ai_chance = { factor = 0.3 }
+		ai_chance = {
+			factor = 0.3
+			modifier = { 
+				factor = 6 #Represents support among the BCP leadership
+				OR = { aristocrats = { pop_majority_ideology = communist_social } bureaucrats = { pop_majority_ideology = communist_social } }
+			}
+			modifier = {
+				factor = 3 #Represents support among the National Assembly
+				pop_majority_ideology = communist_social
+			}
+		}
 	}
 
 	option = {
@@ -1941,16 +2043,32 @@ country_event = {
 		any_pop = { militancy = -5 consciousness = -5 }
 
 		any_pop = { 
+			limit = { OR = { type = aristocrats type = bureaucrats } } 
+			ideology = { factor = 0.15 value = communist }
+		}
+		
+		any_pop = { 
+			limit = { strata = rich }
+			ideology = { factor = 0.02 value = conservative }
+		}
+		
+		any_pop = { 
 			limit = { strata = middle }
-			ideology = { factor = 0.05 value = communist }
+			ideology = { factor = 0.06 value = communist_social }
 		}
 		
 		any_pop = { 
 			limit = { strata = poor }
 			ideology = { factor = 0.10 value = communist }
-		}		
+		}
 
-		ai_chance = { factor = 0.2 }
+		ai_chance = {
+			factor = 0.2
+			modifier = {
+				factor = 8 #Represents technocrat support
+				NOT = { has_country_flag = complete_automation_bul }
+			}
+		}
 
 	}
 
@@ -2092,41 +2210,72 @@ country_event = {
 		ruling_party_ideology = communist_social
 		
 		any_pop = { 
+			limit = { OR = { type = aristocrats type = bureaucrats } } 
+			ideology = { factor = 0.15 value = communist_social }
+		}
+		
+		any_pop = { 
 			limit = { strata = rich }
-			ideology = { factor = 0.20 value = socialist }
+			ideology = { factor = 0.10 value = socialist }
 		}
 		any_pop = { 
 			limit = { strata = middle }
-			ideology = { factor = 0.10 value = communist_social }
+			ideology = { factor = 0.08 value = communist_social }
 		}
 		any_pop = { 
 			limit = { strata = poor }
-			ideology = { factor = 0.05 value = communist_social }
+			ideology = { factor = 0.10 value = communist_social }
 		}
 		
 		any_pop = { militancy = -5 consciousness = 5 }
 
-		ai_chance = { factor = 0.8 }
+		ai_chance = {
+			factor = 0.8
+			modifier = { 
+				factor = 0.6 #Represents support among the BCP leadership
+				NOT = { OR = { aristocrats = { pop_majority_ideology = communist_social } bureaucrats = { pop_majority_ideology = communist_social } } }
+			}
+			modifier = {
+				factor = 0.3 #Represents support among the National Assembly
+				NOT = { pop_majority_ideology = communist_social }
+			}
+		}
 	}
 
 	option = {
 		name = "Limit the implementation of these reforms inside of Bulgaria."
 		add_country_modifier = { name = revolution_chaos duration = 3650 }
+		
+		any_pop = { 
+			limit = { OR = { type = aristocrats type = bureaucrats } } 
+			ideology = { factor = 0.15 value = communist }
+		}
+		
 		any_pop = { 
 			limit = { strata = rich }
-			ideology = { factor = 0.01 value = communist }
+			ideology = { factor = 0.10 value = conservative }
 		}
 		any_pop = { 
 			limit = { strata = middle }
-			ideology = { factor = 0.01 value = communist }
+			ideology = { factor = 0.08 value = socialist }
 		}
 		any_pop = { 
 			limit = { strata = poor }
-			ideology = { factor = 0.01 value = communist }
+			ideology = { factor = 0.10 value = communist }
 		}
 		
 		any_pop = { militancy = -5 consciousness = -5 }
-		ai_chance = { factor = 0.2 }
+		ai_chance = {
+			factor = 0.2
+			modifier = { 
+				factor = 6 #Represents support among the BCP leadership
+				OR = { aristocrats = { pop_majority_ideology = communist } bureaucrats = { pop_majority_ideology = communist } }
+			}
+			modifier = {
+				factor = 3 #Represents support among the National Assembly
+				pop_majority_ideology = communist
+			}
+		}
 	}
 	
 }
@@ -2170,12 +2319,17 @@ country_event = {
 		country_event = 800054
 		
 		any_pop = { 
+			limit = { OR = { type = aristocrats type = bureaucrats } } 
+			ideology = { factor = 0.15 value = socialist }
+		}
+		
+		any_pop = { 
 			limit = { strata = rich }
-			ideology = { factor = 0.20 value = socialist }
+			ideology = { factor = 0.10 value = socialist }
 		}
 		any_pop = { 
 			limit = { strata = middle }
-			ideology = { factor = 0.10 value = communist_social }
+			ideology = { factor = 0.08 value = socialist }
 		}
 		any_pop = { 
 			limit = { strata = poor }
@@ -2184,27 +2338,53 @@ country_event = {
 		
 		any_pop = { militancy = -5 consciousness = 5 }
 
-		ai_chance = { factor = 0.8 }
+		ai_chance = {
+			factor = 0.8
+			modifier = { 
+				factor = 0.6 #Represents support among the BCP leadership
+				NOT = { OR = { aristocrats = { pop_majority_ideology = communist_social } bureaucrats = { pop_majority_ideology = communist_social } } }
+			}
+			modifier = {
+				factor = 0.3 #Represents support among the National Assembly
+				NOT = { pop_majority_ideology = communist_social }
+			}
+		}
 	}
 
 	option = {
 		name = "Crack down on further dissent."
 		add_country_modifier = { name = revolution_chaos duration = 3650 }
+		
+		any_pop = { 
+			limit = { OR = { type = aristocrats type = bureaucrats } } 
+			ideology = { factor = 0.10 value = communist }
+		}
+		
 		any_pop = { 
 			limit = { strata = rich }
-			ideology = { factor = 0.01 value = nationalist }
+			ideology = { factor = 0.10 value = socialist }
 		}
 		any_pop = { 
 			limit = { strata = middle }
-			ideology = { factor = 0.01 value = conservative }
+			ideology = { factor = 0.05 value = conservative }
 		}
 		any_pop = { 
 			limit = { strata = poor }
-			ideology = { factor = 0.01 value = liberal }
+			ideology = { factor = 0.02 value = communist }
 		}
 		
 		any_pop = { militancy = 10 consciousness = 10 }
-		ai_chance = { factor = 0.2 }
+		ai_chance = {
+			factor = 0.2
+			modifier = { 
+				factor = 6 #Represents support among the BCP leadership
+				OR = { aristocrats = { pop_majority_ideology = communist } bureaucrats = { pop_majority_ideology = communist } }
+			}
+			modifier = {
+				factor = 3 #Represents support among the National Assembly
+				pop_majority_ideology = communist
+			}
+		}
 	}
 	
 }
@@ -2234,14 +2414,72 @@ country_event = {
 	option = {
 		name = "Fight against further attempts at reform."
 		any_pop = { militancy = 3 consciousness = 3 }
-		ai_chance = { factor = 0.8 }
+		
+		any_pop = { 
+			limit = { OR = { type = aristocrats type = bureaucrats } } 
+			ideology = { factor = 0.12 value = communist }
+		}
+		
+		any_pop = { 
+			limit = { strata = rich }
+			ideology = { factor = 0.08 value = liberal }
+		}
+		any_pop = { 
+			limit = { strata = middle }
+			ideology = { factor = 0.02 value = conservative }
+		}
+		any_pop = { 
+			limit = { strata = poor }
+			ideology = { factor = 0.08 value = communist }
+		}
+		
+		ai_chance = {
+			factor = 0.8
+			modifier = { 
+				factor = 0.6 #Represents support among the BCP leadership
+				NOT = { OR = { aristocrats = { OR = { pop_majority_ideology = communist_social pop_majority_ideology = communist } } bureaucrats = { OR = { pop_majority_ideology = communist_social pop_majority_ideology = communist } } } }
+			}
+			modifier = {
+				factor = 0.3 #Represents support among the National Assembly
+				NOT = { OR = { pop_majority_ideology = communist_social pop_majority_ideology = communist } }
+			}
+		}
 	}
 
 	option = {
 		name = "Abandon Marxism-Leninism as the BCP's platform."
 		any_pop = { militancy = -3 consciousness = -3 }
 		ruling_party_ideology = socialist
-		ai_chance = { factor = 0.2 }
+		
+		any_pop = { 
+			limit = { OR = { type = aristocrats type = bureaucrats } } 
+			ideology = { factor = 0.10 value = socialist }
+		}
+		
+		any_pop = { 
+			limit = { strata = rich }
+			ideology = { factor = 0.10 value = liberal }
+		}
+		any_pop = { 
+			limit = { strata = middle }
+			ideology = { factor = 0.05 value = conservative }
+		}
+		any_pop = { 
+			limit = { strata = poor }
+			ideology = { factor = 0.02 value = communist }
+		}
+		
+		ai_chance = {
+			factor = 0.2
+			modifier = { 
+				factor = 6 #Represents support among the BCP leadership
+				OR = { aristocrats = { pop_majority_ideology = socialist } bureaucrats = { pop_majority_ideology = socialist } }
+			}
+			modifier = {
+				factor = 3 #Represents support among the National Assembly
+				pop_majority_ideology = socialist
+			}
+		}
 	}
 
 }
@@ -2276,7 +2514,36 @@ country_event = {
 		set_country_flag = reformists_bul
 		ruling_party_ideology = communist_social
 		any_pop = { militancy = 3  consciousness = 3 }
-		ai_chance = { factor = 0.8 }
+		
+		any_pop = { 
+			limit = { OR = { type = aristocrats type = bureaucrats } } 
+			ideology = { factor = 0.15 value = communist_social }
+		}
+		
+		any_pop = { 
+			limit = { strata = rich }
+			ideology = { factor = 0.10 value = socialist }
+		}
+		any_pop = { 
+			limit = { strata = middle }
+			ideology = { factor = 0.05 value = communist_social }
+		}
+		any_pop = { 
+			limit = { strata = poor }
+			ideology = { factor = 0.02 value = communist }
+		}
+		
+		ai_chance = {
+			factor = 0.8
+			modifier = { 
+				factor = 6 #Represents support among the BCP leadership
+				OR = { aristocrats = { pop_majority_ideology = communist_social } bureaucrats = { pop_majority_ideology = communist_social } }
+			}
+			modifier = {
+				factor = 3 #Represents support among the National Assembly
+				pop_majority_ideology = communist_social
+			}
+		}
 	}
 
 	option = {
@@ -2285,7 +2552,36 @@ country_event = {
 		set_country_flag = hardliners_bul
 		ruling_party_ideology = communist
 		any_pop = { militancy = 3  consciousness = 3 }
-		ai_chance = { factor = 0.2 }
+		
+		any_pop = { 
+			limit = { OR = { type = aristocrats type = bureaucrats } } 
+			ideology = { factor = 0.15 value = communist }
+		}
+		
+		any_pop = { 
+			limit = { strata = rich }
+			ideology = { factor = 0.05 value = conservative }
+		}
+		any_pop = { 
+			limit = { strata = middle }
+			ideology = { factor = 0.08 value = liberal }
+		}
+		any_pop = { 
+			limit = { strata = poor }
+			ideology = { factor = 0.10 value = communist }
+		}
+		
+		ai_chance = {
+			factor = 0.2
+			modifier = { 
+				factor = 6 #Represents support among the BCP leadership
+				OR = { aristocrats = { pop_majority_ideology = communist } bureaucrats = { pop_majority_ideology = communist } }
+			}
+			modifier = {
+				factor = 3 #Represents support among the National Assembly
+				pop_majority_ideology = communist
+			}
+		}
 	}
 
 }
@@ -2326,14 +2622,38 @@ country_event = {
 		any_pop = { militancy = -5 consciousness = -5 }
 		
 		any_pop = { 
+			limit = { OR = { type = aristocrats type = bureaucrats } } 
+			ideology = { factor = 0.15 value = communist }
+		}
+		
+		any_pop = { 
+			limit = { strata = rich }
+			ideology = { factor = 0.02 value = conservative }
+		}
+		any_pop = { 
 			limit = { strata = middle }
-			ideology = { factor = 0.05 value = communist }
+			ideology = { factor = 0.05 value = liberal }
 		}
 		any_pop = { 
 			limit = { strata = poor }
-			ideology = { factor = 0.10 value = communist }
+			ideology = { factor = 0.12 value = communist }
 		}
-		ai_chance = { factor = 0.6 }
+		
+		ai_chance = {
+			factor = 0.6
+			modifier = { 
+				factor = 0.6 #Represents support among the BCP leadership
+				NOT = { OR = { aristocrats = { pop_majority_ideology = communist } bureaucrats = { pop_majority_ideology = communist } } }
+			}
+			modifier = {
+				factor = 0.3 #Represents support among the National Assembly
+				NOT = { pop_majority_ideology = communist }
+			}
+			modifier = {
+				factor = 0.3 #Represents support within the Socialist Movement
+				has_global_flag = de_stalinization
+			}
+		}
 	}
 
 	option = {
@@ -2343,25 +2663,63 @@ country_event = {
 		any_pop = { militancy = -5 consciousness = -5 }
 		
 		any_pop = { 
+			limit = { OR = { type = aristocrats type = bureaucrats } } 
+			ideology = { factor = 0.15 value = communist }
+		}
+		
+		any_pop = { 
+			limit = { strata = rich }
+			ideology = { factor = 0.02 value = nationalist }
+		}
+		
+		any_pop = { 
 			limit = { strata = middle }
-			ideology = { factor = 0.05 value = communist }
+			ideology = { factor = 0.02 value = communist }
 		}
 		
 		any_pop = { 
 			limit = { strata = poor }
-			ideology = { factor = 0.10 value = communist }
+			ideology = { factor = 0.05 value = communist }
 		}
-		ai_chance = { factor = 0.3 }
+		
+		ai_chance = {
+			factor = 0.3
+			modifier = {
+				factor = 6 #Represents support within the Socialist Movement
+				has_global_flag = de_stalinization
+			}
+		}
 	}
 	
 	option = {
 		name = "Zhivkov manages to rally against the Hardliners."
 		set_country_flag = stalinist_bul_purges
+		
 		any_pop = { 
-			ideology = { factor = 0.15 value = communist_social }
 			militancy = -3 
 			consciousness = 3
 		}
+		
+		any_pop = { 
+			limit = { OR = { type = aristocrats type = bureaucrats } } 
+			ideology = { factor = 0.15 value = communist_social }
+		}
+		
+		any_pop = { 
+			limit = { strata = rich }
+			ideology = { factor = 0.02 value = communist_social }
+		}
+		
+		any_pop = { 
+			limit = { strata = middle }
+			ideology = { factor = 0.02 value = communist_social }
+		}
+		
+		any_pop = { 
+			limit = { strata = poor }
+			ideology = { factor = 0.05 value = socialist }
+		}
+		
 		ai_chance = { factor = 0.1 }
 	}
 	
@@ -2396,11 +2754,46 @@ country_event = {
 		clr_country_flag = zhivkov_bul
 		set_country_flag = mladenov_bul
 		any_pop = { 
-			ideology = { factor = 0.15 value = communist_social }
 			militancy = -3 
 			consciousness = 3
 		}
-		ai_chance = { factor = 0.8 }
+		
+		any_pop = { 
+			limit = { OR = { type = aristocrats type = bureaucrats } } 
+			ideology = { factor = 0.15 value = communist_social }
+		}
+		
+		any_pop = { 
+			limit = { strata = rich }
+			ideology = { factor = 0.02 value = socialist }
+		}
+		
+		any_pop = { 
+			limit = { strata = middle }
+			ideology = { factor = 0.08 value = communist_social }
+		}
+		
+		any_pop = { 
+			limit = { strata = poor }
+			ideology = { factor = 0.02 value = socialist }
+		}
+		
+		any_pop = { 
+			limit = { strata = poor }
+			ideology = { factor = 0.05 value = communist }
+		}
+		
+		ai_chance = {
+			factor = 0.8
+			modifier = { 
+				factor = 0.6 #Represents support among the BCP leadership
+				NOT = { OR = { aristocrats = { pop_majority_ideology = communist_social } bureaucrats = { pop_majority_ideology = communist_social } } }
+			}
+			modifier = {
+				factor = 0.3 #Represents support among the National Assembly
+				NOT = { pop_majority_ideology = communist_social }
+			}
+		}
 	}
 	
 	option = {
@@ -2411,6 +2804,27 @@ country_event = {
 			militancy = -3 
 			consciousness = 3
 		}
+		
+		any_pop = { 
+			limit = { OR = { type = aristocrats type = bureaucrats } } 
+			ideology = { factor = 0.15 value = communist }
+		}
+		
+		any_pop = { 
+			limit = { strata = rich }
+			ideology = { factor = 0.02 value = socialist }
+		}
+		
+		any_pop = { 
+			limit = { strata = middle }
+			ideology = { factor = 0.02 value = communist }
+		}
+		
+		any_pop = { 
+			limit = { strata = poor }
+			ideology = { factor = 0.05 value = communist_social }
+		}
+		
 		ai_chance = { factor = 0.2 }
 	}
 	
@@ -2444,11 +2858,41 @@ country_event = {
 		set_country_flag = lilov_bul
 		set_country_flag = moderates_bul
 		any_pop = { 
-			ideology = { factor = 0.15 value = communist }
 			militancy = -3 
 			consciousness = 3
 		}
-		ai_chance = { factor = 0.7 }
+		
+		any_pop = { 
+			limit = { OR = { type = aristocrats type = bureaucrats } } 
+			ideology = { factor = 0.15 value = communist }
+		}
+		
+		any_pop = { 
+			limit = { strata = rich }
+			ideology = { factor = 0.02 value = socialist }
+		}
+		
+		any_pop = { 
+			limit = { strata = middle }
+			ideology = { factor = 0.08 value = communist_social }
+		}
+		
+		any_pop = { 
+			limit = { strata = poor }
+			ideology = { factor = 0.05 value = communist }
+		}
+		
+		ai_chance = {
+			factor = 0.7
+			modifier = { 
+				factor = 0.6 #Represents support among the BCP leadership
+				NOT = { OR = { aristocrats = { pop_majority_ideology = communist_social } bureaucrats = { pop_majority_ideology = communist_social } } }
+			}
+			modifier = {
+				factor = 0.3 #Represents support among the National Assembly
+				NOT = { pop_majority_ideology = communist_social }
+			}
+		}
 	}
 
 	option = {
@@ -2457,11 +2901,41 @@ country_event = {
 		set_country_flag = paunov_bul
 		set_country_flag = hardliners_bul
 		any_pop = { 
-			ideology = { factor = 0.15 value = communist }
 			militancy = -3 
 			consciousness = 3
 		}
-		ai_chance = { factor = 0.3 }
+		
+		any_pop = { 
+			limit = { OR = { type = aristocrats type = bureaucrats } } 
+			ideology = { factor = 0.15 value = communist }
+		}
+		
+		any_pop = { 
+			limit = { strata = rich }
+			ideology = { factor = 0.01 value = conservative }
+		}
+		
+		any_pop = { 
+			limit = { strata = middle }
+			ideology = { factor = 0.02 value = liberal }
+		}
+		
+		any_pop = { 
+			limit = { strata = poor }
+			ideology = { factor = 0.05 value = communist }
+		}
+		
+		ai_chance = {
+			factor = 0.3
+			modifier = { 
+				factor = 0.6 #Represents support among the BCP leadership
+				OR = { aristocrats = { pop_majority_ideology = communist } bureaucrats = { pop_majority_ideology = communist } }
+			}
+			modifier = {
+				factor = 0.3 #Represents support among the National Assembly
+				pop_majority_ideology = communist
+			}
+		}
 	}
 	
 }
