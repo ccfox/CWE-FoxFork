@@ -188,7 +188,7 @@ political_decisions = {
 			icbm = 1
 			semiconductor = 1
 			modern_medicine = 1
-			information_theory = 1
+			biomolecular_science = 1
 		}
 
 		effect = {
@@ -225,7 +225,7 @@ political_decisions = {
 			icbm = 1
 			semiconductor = 1
 			modern_medicine = 1
-			information_theory = 1
+			biomolecular_science = 1
 			future_data_centers = 1
 			next_generation_subcultures = 1
 		}
@@ -387,7 +387,7 @@ political_decisions = {
 			icbm = 1
 			semiconductor = 1
 			modern_medicine = 1
-			information_theory = 1
+			biomolecular_science = 1
 		}
 
 		effect = {

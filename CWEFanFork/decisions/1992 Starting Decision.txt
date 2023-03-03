@@ -353,6 +353,24 @@ any_country = {
 	activate_technology = close_air_support
 }
 
+#Programming Language Tech bugfix for 1992 start
+any_country = { 
+	limit = { 
+		NOT = { information_theory = 1 }
+		programming_language = 1
+	} 
+	activate_technology = information_theory
+}
+
+#Biomolecular Science Tech bugfix for 1992 start
+any_country = { 
+	limit = { 
+		NOT = { biomolecular_science = 1 }
+		medical_science = 1
+	} 
+	activate_technology = biomolecular_science
+}
+
 #South Africa
 SAF = { primary_culture = afrikaaner add_accepted_culture = british }
 
