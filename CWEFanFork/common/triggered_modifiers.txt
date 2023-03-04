@@ -41,7 +41,7 @@ apartheid_system = {
 	trigger = {
 		minorities_reform = minorities_oppression
 		citizenship_policy = residency
-		NOT = { OR = { ruling_party_ideology = liberal ruling_party_ideology = progressive ruling_party_ideology = socialist ruling_party_ideology = communist_social ruling_party_ideology = communist } }
+		NOT = { OR = { ruling_party_ideology = liberal ruling_party_ideology = progressive ruling_party_ideology = social_democrat ruling_party_ideology = socialist ruling_party_ideology = communist_social ruling_party_ideology = communist } }
 	}
 	prestige = -0.1
 	non_accepted_pop_militancy_modifier = 0.1
@@ -110,8 +110,8 @@ minority_government = {
 			} 
 
 			AND = { 
-				NOT = { OR = { pop_majority_ideology = liberal pop_majority_ideology = progressive } }
-				OR = { ruling_party_ideology = liberal ruling_party_ideology = progressive }
+				NOT = { OR = { pop_majority_ideology = liberal pop_majority_ideology = progressive pop_majority_ideology = social_democrat } }
+				OR = { ruling_party_ideology = liberal ruling_party_ideology = progressive ruling_party_ideology = social_democrat }
 			} 
 
 			AND = { 
@@ -617,7 +617,7 @@ neo_protectionism_low = {
 	trigger = {
 		has_country_flag = neo_protectionism
 		NOT = { OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } }
-		OR = { ruling_party_ideology = liberal ruling_party_ideology = progressive }
+		OR = { ruling_party_ideology = liberal ruling_party_ideology = progressive ruling_party_ideology = social_democrat }
 	}
 
 	factory_owner_cost = 0.05
@@ -631,7 +631,7 @@ money_laundering = {
 		has_country_flag = tax_haven
 		NOT = { number_of_states = 4 }
 		OR = { government = democracy government = democracy1 government = hms_government government = hms_government1 government = sar_government government = absolute_monarchy }
-		OR = { NOT = { rich_tax = 0.20 } AND = { ai = yes OR = { ruling_party_ideology = liberal ruling_party_ideology = progressive } } }
+		OR = { NOT = { rich_tax = 0.20 } AND = { ai = yes OR = { ruling_party_ideology = liberal ruling_party_ideology = progressive ruling_party_ideology = social_democrat } } }
 		NOT = { administration_spending = 0.40 }
 	}
 	rich_income_modifier = 0.10
@@ -646,7 +646,7 @@ tax_haven = {
 		has_country_flag = tax_haven
 		NOT = { number_of_states = 4 }
 		OR = { government = democracy government = democracy1 government = hms_government government = hms_government1 government = sar_government government = absolute_monarchy }
-		OR = { NOT = { rich_tax = 0.20 } AND = { ai = yes OR = { ruling_party_ideology = liberal ruling_party_ideology = progressive } } }
+		OR = { NOT = { rich_tax = 0.20 } AND = { ai = yes OR = { ruling_party_ideology = liberal ruling_party_ideology = progressive ruling_party_ideology = social_democrat } } }
 	}
 	rich_income_modifier = 0.30
 	middle_income_modifier = 0.10
@@ -663,6 +663,7 @@ liberal_discourse = {
 		OR = { 
 			pop_majority_ideology = liberal 
 			pop_majority_ideology = progressive 
+			pop_majority_ideology = social_democrat
 		}
 	}
 	global_assimilation_rate = -0.10

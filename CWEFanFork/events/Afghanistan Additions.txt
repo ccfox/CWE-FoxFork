@@ -137,7 +137,9 @@ country_event = {
 		}
 		
 		AFG = { country_event = 8017629 }
-		ai_chance = { factor = 0.9 }
+		ai_chance = { #Maybe make the UK more likely to cede the land if certain things regarding Pakistani-Indian referendums happens?
+			factor = 0.9
+		}
 	}
 
 	option = {
@@ -179,7 +181,9 @@ country_event = {
 		
 		AFG = { country_event = 8017628 }
 		
-		ai_chance = { factor = 0.1 }
+		ai_chance = {
+			factor = 0.1
+		}
 	}
 }
 
@@ -333,23 +337,29 @@ country_event = {
 		add_country_modifier = { name = political_strife duration = 3650 }
 		
 		any_pop = { 
-			ideology = { factor = 0.02 value = communist }
+			limit = { OR = { strata = poor strata = middle } }	
+			ideology = { factor = 0.10 value = communist_social }
 			consciousness = 2
 		}
 		any_pop = { 
-			ideology = { factor = 0.02 value = nationalist }
+			limit = { culture = pashtun OR = { strata = poor strata = rich } }	
+			ideology = { factor = 0.10 value = nationalist }
 			consciousness = 2
 		}
-		any_pop = { 
-			ideology = { factor = 0.02 value = progressive }
+		any_pop = {
+			limit = { OR = { strata = poor strata = middle } }		
+			ideology = { factor = 0.15 value = progressive }
 			consciousness = 2
 		}
-		any_pop = { 
-			ideology = { factor = 0.02 value = traditionalist }
+		any_pop = {
+			limit = { OR = { strata = poor strata = rich } }
+			ideology = { factor = 0.10 value = traditionalist }
 			consciousness = 7
 		}
 		
-		ai_chance = { factor = 0.8 }
+		ai_chance = {
+			factor = 0.8
+		}
 	}
 
 	option = {
@@ -357,12 +367,26 @@ country_event = {
 		add_country_modifier = { name = revolution_chaos duration = 3650 }
 		prestige = -50
 		any_pop = { 
-			limit = { strata = poor }
-			ideology = { factor = 0.10 value = communist }
 			militancy = 10
 			consciousness = 10
 		}
-		ai_chance = { factor = 0.2 }
+		
+		any_pop = { 
+			limit = { culture = pashtun OR = { strata = poor strata = rich } }
+			ideology = { factor = 0.15 value = nationalist }
+		}
+		any_pop = { 
+			limit = { strata = poor }
+			ideology = { factor = 0.15 value = communist }
+		}
+		any_pop = { 
+			limit = { strata = middle }
+			ideology = { factor = 0.15 value = communist_social }
+		}
+		
+		ai_chance = {
+			factor = 0.2
+		}
 	}
 
 }
@@ -391,19 +415,76 @@ country_event = {
 
 	option = {
 		name = "The progressive forces prevail."
-		any_pop = { 
-			ideology = { factor = 0.2 value = progressive }
+		
+		random_owned = { #This should give the player or AI the modifier if they don't have a majority support
+			limit = { owner = { AND = { tag = AFG NOT = { OR = { pop_majority_ideology = progressive pop_majority_ideology = social_democrat pop_majority_ideology = socialist pop_majority_ideology = communist pop_majority_ideology = communist_social } } } } }
+			owner = { add_country_modifier = { name = revolution_chaos duration = 1365 } }
 		}
-		ai_chance = { factor = 0.9 }
+		
+		any_pop = { 
+			limit = { strata = rich }
+			ideology = { factor = 0.02 value = conservative }
+		}
+		
+		any_pop = { 
+			limit = { NOT = { culture = pashtun } strata = poor }
+			ideology = { factor = 0.05 value = progressive }
+		}
+		
+		any_pop = { 
+			limit = { culture = pashtun strata = poor }
+			ideology = { factor = 0.04 value = progressive }
+		}
+		
+		any_pop = { 
+			limit = { strata = middle }
+			ideology = { factor = 0.15 value = progressive }
+		}
+		
+		ai_chance = {
+			factor = 0.9
+			modifier = {
+				factor = 0.3
+				NOT = { OR = { pop_majority_ideology = progressive pop_majority_ideology = social_democrat pop_majority_ideology = socialist pop_majority_ideology = communist pop_majority_ideology = communist_social } }
+			}
+		}
 	}
 
 	option = {
 		name = "Conservative landowners turn out to the vote."
-		add_country_modifier = { name = revolution_chaos duration = 365 }
-		any_pop = { 
-			ideology = { factor = 0.2 value = conservative }
+		
+		random_owned = { #This should give the player or AI the modifier if they don't have a majority support
+			limit = { owner = { AND = { tag = BUL NOT = { OR = { pop_majority_ideology = conservative pop_majority_ideology = traditionalist } } } } }
+			owner = { add_country_modifier = { name = revolution_chaos duration = 1365 } }
 		}
-		ai_chance = { factor = 0.1 }
+		
+		any_pop = { 
+			limit = { strata = rich }
+			ideology = { factor = 0.02 value = conservative }
+		}
+		
+		any_pop = { 
+			limit = { NOT = { culture = pashtun } strata = poor }
+			ideology = { factor = 0.02 value = progressive }
+		}
+		
+		any_pop = { 
+			limit = { culture = pashtun strata = poor }
+			ideology = { factor = 0.06 value = conservative }
+		}
+		
+		any_pop = { 
+			limit = { strata = middle }
+			ideology = { factor = 0.10 value = conservative }
+		}
+		
+		ai_chance = {
+			factor = 0.1
+			modifier = {
+				factor = 6
+				OR = { pop_majority_ideology = conservative pop_majority_ideology = traditionalist }
+			}
+		}
 	}
 
 }
@@ -434,21 +515,47 @@ country_event = {
 		badboy = 1
 		add_country_modifier = { name = revolution_chaos duration = 3095 }
 		any_pop = { 
-			ideology = { factor = 0.10 value = communist }
 			militancy = 5 
 			consciousness = 5
 		}
+		
 		any_pop = { 
+			limit = { strata = rich }
+			ideology = { factor = 0.02 value = conservative }
+		}
+		
+		any_pop = { 
+			limit = { NOT = { culture = pashtun } strata = poor }
+			ideology = { factor = 0.05 value = progressive }
+		}
+		
+		any_pop = { 
+			limit = { NOT = { culture = pashtun } strata = poor }
+			ideology = { factor = 0.05 value = communist }
+		}
+		
+		any_pop = { 
+			limit = { culture = pashtun strata = poor }
+			ideology = { factor = 0.03 value = conservative }
+		}
+		
+		any_pop = { 
+			limit = { strata = middle }
+			ideology = { factor = 0.05 value = progressive }
+		}
+		
+		any_pop = { 
+			limit = { strata = middle }
 			ideology = { factor = 0.10 value = communist_social }
-			militancy = 5 
-			consciousness = 5
 		}
-		any_pop = { 
-			ideology = { factor = 0.10 value = liberal }
-			militancy = 5 
-			consciousness = 5
+		
+		ai_chance = {
+			factor = 0.9
+			modifier = {
+				factor = 0.6 #A non-traditionalist government is less likely to attack the protesters
+				NOT = { OR = { ruling_party_ideology = traditionalist ruling_party_ideology = conservative ruling_party_ideology = populist ruling_party_ideology = nationalist } }
+			}
 		}
-		ai_chance = { factor = 0.9 }
 	}
 
 	option = {
@@ -461,16 +568,42 @@ country_event = {
 		political_reform = parties_restrict_non_democratic
 		set_country_flag = communist_protest_afg_s
 		add_country_modifier = { name = political_strife duration = 3650 }
+		
 		any_pop = { 
-			ideology = { factor = 0.10 value = communist }
+			limit = { strata = rich }
+			ideology = { factor = 0.1 value = traditionalist }
 		}
 		any_pop = { 
-			ideology = { factor = 0.10 value = communist_social }
+			limit = { strata = middle }
+			militancy = 6 consciousness = 6
+			ideology = { factor = 0.2 value = communist_social }
 		}
 		any_pop = { 
-			ideology = { factor = 0.10 value = liberal }
+			limit = { strata = poor }
+			militancy = 3 consciousness = 3
+			ideology = { factor = 0.1 value = communist }
 		}
-		ai_chance = { factor = 0.1 }
+		
+		any_pop = { #Start Parcham off with significant strength
+			limit = { OR = { type = aristocrats type = bureaucrats } } 
+			ideology = { factor = 0.25 value = communist_social }
+		}
+		
+		
+		ai_chance = {
+			factor = 0.1
+			modifier = {
+				factor = 6
+				OR = { pop_majority_ideology = communist pop_majority_ideology = communist_social pop_majority_ideology = progressive pop_majority_ideology = socialist pop_majority_ideology = social_democrat }
+			}
+			modifier = {
+				factor = 3
+				AND = { #More likely to go communist if USSR already present, need to find a way to make it so any communist nation that puppets them makes this more likely
+					RUS = { exists = yes OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } }
+					AFG = { in_sphere = RUS }
+				}
+			}
+		}
 	}
 	
 }
@@ -499,21 +632,82 @@ country_event = {
 
 	option = {
 		name = "Conservative landowners turn out to the vote."
-		any_pop = { 
-			ideology = { factor = 0.2 value = conservative }
+		
+		ruling_party_ideology = conservative
+		
+		random_owned = { #This should give the player or AI the modifier if they don't have a majority support
+			limit = { owner = { AND = { tag = BUL NOT = { OR = { pop_majority_ideology = conservative pop_majority_ideology = traditionalist } } } } }
+			owner = { add_country_modifier = { name = revolution_chaos duration = 1365 } }
 		}
-		ai_chance = { factor = 0.9 }
+		
+		any_pop = { 
+			limit = { strata = rich }
+			ideology = { factor = 0.02 value = conservative }
+		}
+		
+		any_pop = { 
+			limit = { NOT = { culture = pashtun } strata = poor }
+			ideology = { factor = 0.02 value = progressive }
+		}
+		
+		any_pop = { 
+			limit = { culture = pashtun strata = poor }
+			ideology = { factor = 0.06 value = conservative }
+		}
+		
+		any_pop = { 
+			limit = { strata = middle }
+			ideology = { factor = 0.10 value = conservative }
+		}
+		
+		ai_chance = {
+			factor = 0.8
+			modifier = {
+				factor = 0.3
+				NOT = { OR = { pop_majority_ideology = conservative pop_majority_ideology = traditionalist } }
+			}
+		}
 	}
 
 	option = {
 		name = "The progressive forces prevail."
-		any_pop = { 
-			ideology = { factor = 0.2 value = progressive }
+		
+		ruling_party_ideology = progressive
+		
+		random_owned = { #This should give the player or AI the modifier if they don't have a majority support
+			limit = { owner = { AND = { tag = AFG NOT = { OR = { pop_majority_ideology = progressive pop_majority_ideology = social_democrat pop_majority_ideology = socialist pop_majority_ideology = communist pop_majority_ideology = communist_social } } } } }
+			owner = { add_country_modifier = { name = revolution_chaos duration = 1365 } }
 		}
-		add_country_modifier = { name = revolution_chaos duration = 365 }
-		ai_chance = { factor = 0.1 }
-	}
+		
+		any_pop = { 
+			limit = { strata = rich }
+			ideology = { factor = 0.02 value = conservative }
+		}
+		
+		any_pop = { 
+			limit = { NOT = { culture = pashtun } strata = poor }
+			ideology = { factor = 0.05 value = progressive }
+		}
+		
+		any_pop = { 
+			limit = { culture = pashtun strata = poor }
+			ideology = { factor = 0.04 value = progressive }
+		}
+		
+		any_pop = { 
+			limit = { strata = middle }
+			ideology = { factor = 0.15 value = progressive }
+		}
+		
+		ai_chance = {
+			factor = 0.2
+			modifier = {
+				factor = 6
+				NOR = { pop_majority_ideology = progressive pop_majority_ideology = social_democrat pop_majority_ideology = socialist pop_majority_ideology = communist pop_majority_ideology = communist_social }
+			}
+		}
 
+	}
 }
 
 #Women's March
@@ -612,16 +806,39 @@ country_event = {
 		
 		any_pop = { 
 			limit = { strata = poor }
-			ideology = { factor = 0.10 value = communist }
+			ideology = { factor = 0.07 value = communist }
 		}
+		
 		any_pop = { 
 			limit = { strata = poor }
-			ideology = { factor = 0.10 value = communist_social }
+			ideology = { factor = 0.07 value = communist_social }
 		}
+		
+		any_pop = { 
+			limit = { strata = middle }
+			ideology = { factor = 0.05 value = communist }
+		}
+		
+		any_pop = { 
+			limit = { strata = middle }
+			ideology = { factor = 0.05 value = communist_social }
+		}
+		
+		any_pop = { 
+			limit = { strata = rich }
+			ideology = { factor = 0.10 value = traditoinalist }
+		}
+		
+		any_pop = { 
+			limit = { strata = rich }
+			ideology = { factor = 0.15 value = nationalist }
+		}
+		
 		any_pop = { 
 			limit = { culture = pashtun }
-			ideology = { factor = 0.10 value = nationalist }
+			ideology = { factor = 0.15 value = nationalist }
 		}
+		
 		any_pop = { 
 			militancy = 7 
 			consciousness = 7
@@ -665,21 +882,38 @@ country_event = {
 		name = "We will bring prosperity back to Afghanistan."
 		set_country_flag = seven_year_plan_afg
 		money = 10000
+		
 		any_pop = { 
 			limit = { strata = rich }
 			ideology = { factor = 0.05 value = nationalist }
 			militancy = -3
 			consciousness = -3
 		}
+		
 		any_pop = { 
-			limit = { strata = middle }
+			limit = { OR = { strata = middle strata = poor } }
 			militancy = 2
 			consciousness = 2
 		}
+		
+		any_pop = { 
+			limit = { strata = middle }
+			ideology = { factor = 0.05 value = communist_social }
+		}
+		
+		any_pop = { 
+			limit = { culture = pashtun strata = middle }
+			ideology = { factor = 0.02 value = nationalist }
+		}
+		
 		any_pop = { 
 			limit = { strata = poor }
-			militancy = 2
-			consciousness = 2
+			ideology = { factor = 0.05 value = communist }
+		}
+		
+		any_pop = { 
+			limit = { culture = pashtun strata = poor }
+			ideology = { factor = 0.02 value = nationalist }
 		}
 	}
 	
@@ -711,6 +945,11 @@ country_event = {
 
 	option = {
 		name = "Crack down on dissent."
+		any_pop = { 
+			limit = { type = soldiers type = officers }
+			militancy = 6
+			consciousness = 6
+		}
 		any_pop = { 
 			limit = { strata = rich }
 			ideology = { factor = 0.10 value = nationalist }
