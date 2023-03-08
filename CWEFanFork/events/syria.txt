@@ -93,7 +93,7 @@ country_event = {
 		ai_chance = { factor = 0.18 }
 		SYR = { 
 			inherit = THIS
-			add_accepted_culture = lebanese
+			#add_accepted_culture = lebanese
 		}
   	}
  	option = {
@@ -103,19 +103,19 @@ country_event = {
 		prestige = 4
 		any_pop = {
 			limit = {
-				culture = syrian
+				culture = arab_levantine #syrian
 				culture = arab
 			}
 			militancy = 3
 			consciousness = 2
 		}
-		any_pop = {
-			limit = {
-				culture = lebanese
-			}
-			militancy = -1
-			consciousness = -1
-		}
+		#any_pop = {
+		#	limit = {
+		#		culture = lebanese
+		#	}
+		#	militancy = -1
+		#	consciousness = -1
+		#}
   	}
 }
 country_event = {
