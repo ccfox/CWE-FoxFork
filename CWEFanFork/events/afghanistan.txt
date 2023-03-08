@@ -82,6 +82,10 @@ country_event = {
 				factor = 0.4 #Represents support for the 'legitimate' king
 				pop_majority_ideology = traditionalist
 			}
+			modifier = { 
+				factor = 4 #Represents support for a Republic
+				NOT = { pop_majority_ideology = traditionalist }
+			}
 		}
 	}
 
@@ -127,6 +131,10 @@ country_event = {
 			modifier = { 
 				factor = 4 #Represents support for the 'legitimate' king
 				pop_majority_ideology = traditionalist
+			}
+			modifier = { 
+				factor = 0.4 #Represents support for a Republic
+				NOT = { pop_majority_ideology = traditionalist }
 			}
 		}
  	}
@@ -223,6 +231,10 @@ country_event = {
 				factor = 0.6 #Support for the Islamic State
 				NOT = { pop_majority_ideology = traditionalist }
 			}
+			modifier = { 
+				factor = 6 #Support for the Islamic State
+				pop_majority_ideology = traditionalist
+			}
 		}
 	}
 
@@ -240,6 +252,10 @@ country_event = {
 			modifier = { 
 				factor = 6 #Support for the Islamic State
 				pop_majority_ideology = conservative
+			}
+			modifier = { 
+				factor = 0.6 #Support for the Islamic State
+				NOT = { pop_majority_ideology = conservative }
 			}
 		}
 	}
@@ -324,6 +340,10 @@ country_event = {
 			modifier = { 
 				factor = 6 #Support for the National Republic
 				pop_majority_ideology = nationalist
+			}
+			modifier = { 
+				factor = 0.6 #Support for the Saur Revolution
+				NOT = { pop_majority_ideology = nationalist }
 			}
 		}
   	}
@@ -486,6 +506,10 @@ country_event = {
 				factor = 0.7 #Represents support among the Afghan Army leadership
 				NOT = { OR = { officers = { militancy = 5 } soldiers = { militancy = 5 } } }
 			}
+			modifier = { 
+				factor = 7 #Represents support among the Afghan Army leadership
+				OR = { officers = { militancy = 5 } soldiers = { militancy = 5 } }
+			}
 		}
   	}
   
@@ -503,6 +527,10 @@ country_event = {
 			modifier = { 
 				factor = 6 #Represents support among the Afghan Army leadership
 				NOT = { OR = { officers = { militancy = 5 } soldiers = { militancy = 5 } } }
+			}
+			modifier = { 
+				factor = 0.6 #Represents support among the Afghan Army leadership
+				OR = { officers = { militancy = 5 } soldiers = { militancy = 5 } }
 			}
 		}
   	}
