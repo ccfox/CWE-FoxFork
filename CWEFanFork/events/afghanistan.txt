@@ -660,6 +660,13 @@ country_event = {
   		set_country_flag = failed_soviet_intervention_in_afghanistan
   		ai_chance = { 
 			factor = 0.2
+			modifier = {
+				factor = 0.3
+				AND = { #If Afghanistan is in the Soviet sphere, there is more influence to exert
+					RUS = { exists = yes OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } }
+					AFG = { in_sphere = RUS }
+				}
+			}
 		}
   	}
 }

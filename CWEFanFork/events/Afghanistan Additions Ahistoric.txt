@@ -9,8 +9,6 @@ country_event = {
 	title = "$YEAR$ Afghan Parliamentary Elections"
 	desc = EVTDESC80100100
 	picture = "afg_election"
-	
-	fire_only_once = yes #Effects of this event are too strong so it cannot be a repeating event
 
 	trigger = {
 		tag = AFG

@@ -665,7 +665,7 @@ country_event = {
 			}
 			any_pop = { 
 				limit = { type = middle }
-				ideology = { factor = 0.05 value = social_Democrat }
+				ideology = { factor = 0.05 value = social_democrat }
 			}
 		}
 		
