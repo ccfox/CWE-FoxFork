@@ -1120,8 +1120,16 @@ country_event = {
 		
 		#Soviet withdrawal
 		random_country = {
-			limit = { tag = RUS government = proletarian_dictatorship }
+			limit = { tag = RUS government = proletarian_dictatorship NOT = { has_country_flag = soviet_withdraw_afg } }
 			country_event = 8176114
+		}
+		#Event for Europe and USA (Maybe more in Future)
+		random_country = {
+			limit = { 
+				OR = { continent = europe AND = { tag = USA government = democracy } }
+				NOT = { has_global_flag = afg_focal_event }
+			}
+			country_event = 6121000
 		}
   	}
 }
@@ -1137,6 +1145,7 @@ country_event = {
 
   	option = {
     	name = EVT_8176114_A
+		set_country_flag = soviet_withdraw_afg
 		prestige_factor = -0.03
 		any_pop = { consciousness = 2 }
 		any_pop = { 
