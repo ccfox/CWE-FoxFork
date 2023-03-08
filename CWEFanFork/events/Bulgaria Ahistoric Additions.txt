@@ -59,6 +59,14 @@ country_event = {
 				factor = 0.3 #Represents support among the National Assembly
 				NOT = { pop_majority_ideology = communist }
 			}
+			modifier = { 
+				factor = 6 #Represents support among the BCP leadership
+				OR = { aristocrats = { pop_majority_ideology = communist } bureaucrats = { pop_majority_ideology = communist } }
+			}
+			modifier = {
+				factor = 3 #Represents support among the National Assembly
+				pop_majority_ideology = communist
+			}
 			modifier = {
 				factor = 0.1 #Represents support within the Soviet Union
 				NOT = { RUS = { OR = { has_country_flag = ussr_stalinist_faction has_country_flag = georgy_malenkov has_country_flag = vyacheslav_molotov } } }

@@ -25,9 +25,9 @@ country_event = {
 			has_country_flag = dmitry_ustinov
 		}
 		
-		#Owns Afghanistan
+		#Has Influence in Afghanistan
 		AFG = { 
-			OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } 
+			OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 government = socialist_democracy } 
 			vassal_of = RUS
 			OR = { ruling_party_ideology = communist_social ruling_party_ideology = communist }
 			has_country_flag = karmal_afg
