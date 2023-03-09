@@ -542,6 +542,14 @@ country_event = {
 		
 		add_country_modifier = { name = revolution_chaos duration = 1460 }
 		
+		random_country = {
+			limit = { 
+				OR = { continent = south_america AND = { tag = USA government = democracy } }
+				NOT = { tag = BOL }
+			}
+			country_event = 6121003
+		}
+		
 		ai_chance = {
 			factor = 0.2
 			modifier = { 
@@ -749,6 +757,7 @@ country_event = {
 		add_country_modifier = { name = revolution_chaos duration = 1460 }	
 		
 		any_pop = {
+			limit = { OR = { strata = poor strata = middle }
 			ideology = {
 				value = socialist
 				factor = 0.2
@@ -900,7 +909,32 @@ country_event = {
 			}
 		}
 		
-		ai_chance = { factor = 0.9 }
+		ai_chance = {
+			factor = 0.8
+			modifier = { 
+				factor = 0.3 #Business support
+				NOT = { capitalists = { pop_majority_ideology = conservative } }
+			}
+			modifier = { 
+				factor = 3 #Business support
+				capitalists = { pop_majority_ideology = conservative }
+			}
+			modifier = { 
+				factor = 0.3 #Business support
+				NOT = { OR = { officers = { pop_majority_ideology = conservative } soldiers = { pop_majority_ideology = conservative } } }
+			}
+			modifier = { 
+				factor = 3 #Business support
+				OR = { officers = { pop_majority_ideology = conservative } soldiers = { pop_majority_ideology = conservative } }
+			}
+			modifier = {
+				factor = 4
+				AND = { #American support for aligned regime
+					USA = { exists = yes AND = { government = democracy NOT = { OR = { ruling_party_ideology = progressive ruling_party_ideology = socialist ruling_party_ideology = communist ruling_party_ideology = communist_social } } } }
+					BOL = { in_sphere = USA }
+				}
+			}
+		}
 	}
 	
 	option = {
@@ -930,7 +964,32 @@ country_event = {
 		#Balance options
 		add_country_modifier = { name = revolution_chaos duration = 1825 }
 		
-		ai_chance = { factor = 0.1 }
+		ai_chance = {
+			factor = 0.2
+			modifier = { 
+				factor = 0.3 #Leftist support
+				NOT = { OR = { pop_majority_ideology = social_democrat pop_majority_ideology = socialist pop_majority_ideology = progressive pop_majority_ideology = communist pop_majority_ideology = communist_social } }
+			}
+			modifier = { 
+				factor = 3 #Leftist support
+				OR = { pop_majority_ideology = social_democrat pop_majority_ideology = socialist pop_majority_ideology = progressive pop_majority_ideology = communist pop_majority_ideology = communist_social }
+			}
+			modifier = {
+				factor = 4
+				AND = { #Soviet influence supports aligned government
+					RUS = { exists = yes OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } }
+					BOL = { in_sphere = RUS }
+				}
+			}
+			modifier = { 
+				factor = 3 #Represents support among the Army
+				OR = { officers = { militancy = 5 } soldiers = { militancy = 5 } }
+			}
+			modifier = { 
+				factor = 0.3 #Represents support among the Army
+				NOT = { OR = { officers = { militancy = 5 } soldiers = { militancy = 5 } } }
+			}
+		}
 	}
 	
 }
@@ -1005,7 +1064,32 @@ country_event = {
 			}
 		}
 		
-		ai_chance = { factor = 0.9 }
+		ai_chance = {
+			factor = 0.8
+			modifier = { 
+				factor = 0.3 #Leftist support
+				NOT = { OR = { pop_majority_ideology = social_democrat pop_majority_ideology = socialist pop_majority_ideology = progressive pop_majority_ideology = communist pop_majority_ideology = communist_social } }
+			}
+			modifier = { 
+				factor = 3 #Leftist support
+				OR = { pop_majority_ideology = social_democrat pop_majority_ideology = socialist pop_majority_ideology = progressive pop_majority_ideology = communist pop_majority_ideology = communist_social }
+			}
+			modifier = {
+				factor = 4
+				AND = { #Soviet influence supports aligned government
+					RUS = { exists = yes OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } }
+					BOL = { in_sphere = RUS }
+				}
+			}
+			modifier = { 
+				factor = 3 #Represents support among the Army
+				OR = { officers = { militancy = 5 } soldiers = { militancy = 5 } }
+			}
+			modifier = { 
+				factor = 0.3 #Represents support among the Army
+				NOT = { OR = { officers = { militancy = 5 } soldiers = { militancy = 5 } } }
+			}
+		}
 	}
 	
 	option = {
@@ -1030,7 +1114,32 @@ country_event = {
 			}
 		}
 		
-		ai_chance = { factor = 0.1 }
+		ai_chance = {
+			factor = 0.2
+			modifier = { 
+				factor = 0.3 #Business support
+				NOT = { capitalists = { pop_majority_ideology = conservative } }
+			}
+			modifier = { 
+				factor = 3 #Business support
+				capitalists = { pop_majority_ideology = conservative }
+			}
+			modifier = { 
+				factor = 0.3 #Business support
+				NOT = { OR = { officers = { pop_majority_ideology = conservative } soldiers = { pop_majority_ideology = conservative } } }
+			}
+			modifier = { 
+				factor = 3 #Business support
+				OR = { officers = { pop_majority_ideology = conservative } soldiers = { pop_majority_ideology = conservative } }
+			}
+			modifier = {
+				factor = 4
+				AND = { #American support for aligned regime
+					USA = { exists = yes AND = { government = democracy NOT = { OR = { ruling_party_ideology = progressive ruling_party_ideology = socialist ruling_party_ideology = communist ruling_party_ideology = communist_social } } } }
+					BOL = { in_sphere = USA }
+				}
+			}
+		}
 	}
 	
 }
@@ -1097,15 +1206,30 @@ country_event = {
 			}
 			scaled_militancy = { 
 				factor = -3
-				ideology = socialist
+				ideology = social_democrat
 			}
 		}
 		
 		ai_chance = { 
 			factor = 0.9
 			modifier = {
-				factor = 0.8
-				NOT = { pop_majority_ideology = progressive }
+				factor = 0.6
+				NOT = { OR = { pop_majority_ideology = progressive pop_majority_ideology = social_democrat } }
+			}
+			modifier = {
+				factor = 6
+				OR = { pop_majority_ideology = progressive pop_majority_ideology = social_democrat }
+			}
+			modifier = {
+				factor = 4
+				AND = { #American support for aligned regime
+					USA = { exists = yes AND = { government = democracy NOT = { OR = { ruling_party_ideology = progressive ruling_party_ideology = socialist ruling_party_ideology = communist ruling_party_ideology = communist_social } } } }
+					BOL = { in_sphere = USA }
+				}
+			}
+			modifier = {
+				factor = 0.3 #If there is no PRI to emulate, then why emulate it?
+				MEX = { NOT = { OR = { ruling_party_ideology = socialist ruling_party_ideology = social_democrat ruling_party_ideology = big_tent } } }
 			}
 		}
 	}
@@ -1137,6 +1261,14 @@ country_event = {
 		political_reform = limited_meetings
 		
 		add_country_modifier = { name = revolution_chaos duration = 1460 }
+		
+		random_country = {
+			limit = { 
+				OR = { continent = south_america AND = { tag = USA government = democracy } }
+				NOT = { tag = BOL }
+			}
+			country_event = 6121003
+		}
 
 		any_pop = {
 			ideology = {
@@ -1173,7 +1305,18 @@ country_event = {
 			factor = 0.1
 			modifier = {
 				factor = 6
-				pop_majority_ideology = socialist
+				OR = { pop_majority_ideology = socialist pop_majority_ideology = communist pop_majority_ideology = communist_social }
+			}
+			modifier = {
+				factor = 0.6
+				NOT = { OR = { pop_majority_ideology = socialist pop_majority_ideology = communist pop_majority_ideology = communist_social } }
+			}
+			modifier = {
+				factor = 4
+				AND = { #Soviet influence supports aligned government
+					RUS = { exists = yes OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } }
+					BOL = { in_sphere = RUS }
+				}
 			}
 		}
 	}
@@ -1198,7 +1341,7 @@ country_event = {
 		war = no
 		is_vassal = no
 		
-		OR = { ruling_party_ideology = socialist ruling_party_ideology = progressive }
+		OR = { ruling_party_ideology = socialist ruling_party_ideology = social_democrat ruling_party_ideology = progressive }
 	}
 
 	mean_time_to_happen = { 
