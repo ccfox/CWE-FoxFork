@@ -171,3 +171,97 @@ country_event = {
 		}
 	}
 }
+
+
+
+#Communism spreads to South American nation
+country_event = {
+   id = 6121002
+   title = "Communism Spreads to $FROMCOUNTRY$"
+   desc = EVTDESC6121002
+   picture = "nwo2_govt_change"
+
+	is_triggered_only = yes
+
+	option = {
+		name = "The red wave crashes against South America."
+		
+		random_owned = { #The US is Upset
+			limit = { tag = USA is_greater_power = yes government = democracy }
+			any_pop = { militancy = 2 consciousness = 2 }
+			any_pop = {
+				limit = { strata = poor } #Communist support grows among the working class
+				ideology = { factor = 0.05 value = communist }
+			}
+			any_pop = {
+				limit = { strata = middle } #Moderate left support among the middle class
+				ideology = { factor = 0.06 value = social_democrat }
+				ideology = { factor = 0.04 value = progressive }
+				ideology = { factor = 0.02 value = socialist }
+			}
+			any_pop = {
+				limit = { strata = rich } #Rich move more towards the far-right
+				ideology = { factor = 0.05 value = populist }
+			}
+		}
+		
+		random_owned = { #Other Communist Movements are more emboldened
+			limit = { 
+				capital_scope = { continent = south_america } 
+				NOT = {
+					OR = {
+						ruling_party_ideology = communist
+						ruling_party_ideology = communist_social
+					}
+				}
+			}
+			any_pop = { militancy = 2 consciousness = 2 }
+			any_pop = {
+				limit = { OR = { strata = poor strata = middle } }
+				ideology = { factor = 0.02 value = communist }
+			}
+			any_pop = {
+				limit = { strata = middle }
+				ideology = { factor = 0.02 value = social_democrat }
+				ideology = { factor = 0.02 value = progressive }
+				ideology = { factor = 0.02 value = socialist }
+			}
+			any_pop = {
+				limit = { strata = rich }
+				ideology = { factor = 0.02 value = populist }
+			}
+		}
+
+		random_owned = { #Communist regimes rejoice, victory serves as a stabilizing force
+			limit = { 
+				capital_scope = { continent = south_america } 
+				ruling_party_ideology = communist
+			}
+			any_pop = {
+				ideology = { factor = 0.02 value = communist }
+				militancy = -2 
+				consciousness = -2
+			}
+			any_pop = { 
+				limit = { OR = { type = aristocrats type = bureaucrats } } 
+				ideology = { factor = 0.05 value = communist }
+			}
+		}
+
+		random_owned = { #Communist regimes rejoice, victory serves as a stabilizing force
+			limit = { 
+				capital_scope = { continent = south_america } 
+				ruling_party_ideology = communist_social
+			}
+			any_pop = {
+				ideology = { factor = 0.02 value = communist_social }
+				militancy = -2 
+				consciousness = -2
+			}
+			any_pop = { 
+				limit = { OR = { type = aristocrats type = bureaucrats } } 
+				ideology = { factor = 0.05 value = communist_social }
+			}
+		}
+	}
+}

@@ -1129,7 +1129,7 @@ country_event = {
 				OR = { continent = europe AND = { tag = USA government = democracy } }
 				NOT = { has_global_flag = afg_focal_event }
 			}
-			country_event = 6121000
+			country_event = 6121001
 		}
   	}
 }
