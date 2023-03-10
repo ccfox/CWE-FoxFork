@@ -97,7 +97,7 @@ country_event = {
 
 	option = {
 		name = "Let democracy take its course!"
-		ruling_party_ideology = socialist
+		ruling_party_ideology = populist
 		add_country_modifier = { name = revolution_chaos duration = 3650 }
 		ai_chance = { factor = 0.1 }
 	}

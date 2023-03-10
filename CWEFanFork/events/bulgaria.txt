@@ -65,7 +65,14 @@ country_event = {
 		}
 
 		ai_chance = {
-			factor = 0.99
+			factor = 0.9
+			modifier = {
+				factor = 3
+				AND = { #Soviets have influence
+					RUS = { exists = yes OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } }
+					BUL = { in_sphere = RUS }
+				}
+			}
 		}
 	}
 
@@ -81,7 +88,7 @@ country_event = {
 		RUS = { country_event = 120002 } #War to vassalise
 
 		ai_chance = {
-			factor = 0.01
+			factor = 0.1
 		}
     }
 }
