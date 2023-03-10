@@ -2675,6 +2675,14 @@ country_event = {
 		any_pop = { militancy = -2 consciousness = -2 }
 		release_vassal = AFG
 		AFG = { country_event = 8017655 }
+		#Event for Europe and USA (Maybe more in Future)
+		random_country = {
+			limit = { 
+				OR = { continent = europe AND = { tag = USA government = democracy } }
+				NOT = { has_global_flag = afg_focal_event }
+			}
+			country_event = 6121001
+		}
 		war_exhaustion = -5
 		ai_chance = { factor = 0.9 } #Go through Soviet leaders from Domper's list
   	}
