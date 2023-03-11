@@ -1761,6 +1761,7 @@ country_event = {
 		any_pop = {
 			consciousness = -2
 			militancy = -2
+			ideology = { factor = 0.15 value = socialist }
 		}
 		
 		any_pop = { 
