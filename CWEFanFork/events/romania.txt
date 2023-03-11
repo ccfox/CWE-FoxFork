@@ -3143,6 +3143,7 @@ country_event = {
 		}
 		
 		any_pop = { militancy = -5 consciousness = 5 }
+		
 		ai_chance = { 
 			factor = 0.8
 			modifier = { 
@@ -3320,6 +3321,15 @@ country_event = {
 			diplomatic_influence = { who = THIS value = 50 }
 		}
 		
+		#Event for Europe and USA (Maybe more in Future)
+		random_country = {
+			limit = { 
+				OR = { continent = europe AND = { tag = USA government = democracy } }
+				NOT = ROM
+			}
+			country_event = 6121003
+		}
+		
 		ai_chance = {
 			factor = 0.2
 			modifier = {
@@ -3482,6 +3492,7 @@ country_event = {
 		government = democracy
 		country_event = 800054
 		ruling_party_ideology = liberal
+	
 		
 		#Romania is a Presidential republic
 		set_country_flag = presidential_system_republic
@@ -3523,6 +3534,15 @@ country_event = {
 				factor = 10
 				ideology = socialist
 			}
+		}
+		
+		#Event for Europe and USA (Maybe more in Future)
+		random_country = {
+			limit = { 
+				OR = { continent = europe AND = { tag = USA government = democracy } }
+				NOT = ROM
+			}
+			country_event = 6121003
 		}
 		
 		ai_chance = {
@@ -3694,6 +3714,16 @@ country_event = {
 			}
 		}
 		
+		#Event for Europe and USA (Maybe more in Future)
+		random_country = {
+			limit = { 
+				OR = { continent = europe AND = { tag = USA government = democracy } }
+				NOT = ROM
+			}
+			country_event = 6121003
+		}
+		
+		
 		ai_chance = {
 			factor = 0.2
 			modifier = { 
@@ -3762,6 +3792,15 @@ country_event = {
 		any_pop = { 
 			limit = { strata = poor }
 			ideology = { factor = 0.1 value = social_democrat }
+		}
+		
+		#Event for Europe and USA (Maybe more in Future)
+		random_country = {
+			limit = { 
+				OR = { continent = europe AND = { tag = USA government = democracy } }
+				NOT = ROM
+			}
+			country_event = 6121003
 		}
 		
 		

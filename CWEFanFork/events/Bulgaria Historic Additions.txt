@@ -1488,6 +1488,7 @@ country_event = {
 		any_country = {
 			limit = {
 				exists = yes
+				NOT = { tag = BUL }
 				OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 government = socialist_democracy }
 				OR = { ruling_party_ideology = communist ruling_party_ideology = communist_social ruling_party_ideology = socialist }
 				capital_scope = { continent = europe }
@@ -2683,6 +2684,17 @@ country_event = {
 		}
 		ruling_party_ideology = socialist
 		government = democracy
+		
+		#Event for Europe and USA (Maybe more in Future)
+		random_country = {
+			limit = { 
+				OR = { continent = europe AND = { tag = USA government = democracy } }
+				NOT = BUL
+			}
+			country_event = 6121003
+		}
+		
+		
 		ai_chance = {
 			factor = 0.8
 			modifier = { 
@@ -2884,6 +2896,14 @@ country_event = {
 		clr_country_flag = lukanov_democractic_bul
 		
 		government = democracy
+		
+		random_country = {
+			limit = { 
+				OR = { continent = europe AND = { tag = USA government = democracy } }
+				NOT = BUL
+			}
+			country_event = 6121003
+		}
 		
 		#Bulgaria is a parliamentary republic
 		clr_country_flag = presidential_system_republic
