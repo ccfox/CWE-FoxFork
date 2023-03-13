@@ -123,7 +123,18 @@ party = {
 		end_date = 2092.1.1
 }
 party = {
-		name = "Social Democratic Party (Left)"
+		name = "Finnish People's Democratic League"
+		citizenship_policy = full_citizenship
+		economic_policy = planned_economy1
+		ideology = socialist
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = pacifism
+		start_date = 1836.1.1
+		end_date = 1990.1.1
+}
+party = {
+		name = "Left Alliance"
 		citizenship_policy = full_citizenship
 		economic_policy = planned_economy1
 		ideology = socialist
@@ -211,39 +222,60 @@ party = {
 		end_date = 2092.1.1
 }
 party = {
-		name = "People's Democratic League"
-		citizenship_policy = full_citizenship
-		economic_policy = planned_economy
-		ideology = communist
-		religious_policy = pro_atheism
-		trade_policy = protectionism
-		war_policy = pacifism
-		start_date = 1836.1.1
-		end_date = 1990.1.1
-}
-party = {
-		name = "Communist Party of Finland"
+		name = "Communist Party of Finland (Taistoist)"
 		citizenship_policy = full_citizenship
 		economic_policy = planned_economy
 		ideology = communist
 		religious_policy = pro_atheism
 		trade_policy = protectionism
 		war_policy = pro_military
-		start_date = 1990.1.1
+		start_date = 1836.1.1
+		end_date = 1985.1.1
+}
+party = {
+		name = "Communist Party of Finland (Unity)"
+		citizenship_policy = full_citizenship
+		economic_policy = planned_economy
+		ideology = communist
+		religious_policy = pro_atheism
+		trade_policy = protectionism
+		war_policy = pro_military
+		start_date = 1985.1.1
+		end_date = 1994.1.1
+}
+party = {
+		name = "New Communist Party of Finland"
+		citizenship_policy = full_citizenship
+		economic_policy = planned_economy
+		ideology = communist
+		religious_policy = pro_atheism
+		trade_policy = protectionism
+		war_policy = pro_military
+		start_date = 1994.1.1
 		end_date = 2092.1.1
 }
 party = {
-		name = "Communist Party of Finland"
+		name = "Communist Party of Finland (Eurocommunist)"
 		citizenship_policy = full_citizenship
-		economic_policy = state_capitalism
+		economic_policy = planned_economy1
 		ideology = communist_social
 		religious_policy = pro_atheism
 		trade_policy = protectionism
 		war_policy = pacifism
 		start_date = 1836.1.1
+		end_date = 1992.1.1
+}
+party = {
+		name = "Left Alliance (Far Left)"
+		citizenship_policy = full_citizenship
+		economic_policy = planned_economy1
+		ideology = communist_social
+		religious_policy = pro_atheism
+		trade_policy = protectionism
+		war_policy = pacifism
+		start_date = 1992.1.1
 		end_date = 2092.1.1
 }
-
 unit_names = {
 	carrier = {
 		"Uusimaa" "V�in�m�inen" "Ilmarinen" "Joukahainen" "Birger Jarl" "Per Brahe" "Tapio" "Lemmink�inen" "Helsinki" "Rauma" "Turku" "Kemi" "Maarianhamina" "Vaasa" "Viipuri" "Kotka" "Oulu" "Rauma" "Karelen" "�bo"

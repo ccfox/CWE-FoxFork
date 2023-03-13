@@ -599,7 +599,7 @@ country_event = { # President Boris Yeltsin (Big Tent)
 	
 }
 
-country_event = { # President Alexander Yakovlev (Conservative)
+country_event = { # President Alexander Yakovlev (Conservative) #Isn't this guy a social democrat?
 	id = 9001457
 	title = "$MONARCHTITLE$ Alexander Yakovlev"
 	desc = EVT_9001457_DESC

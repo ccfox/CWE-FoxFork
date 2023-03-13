@@ -547,7 +547,7 @@ country_event = {
 				OR = { continent = south_america AND = { tag = USA government = democracy } }
 				NOT = { tag = BOL }
 			}
-			country_event = 6121003
+			country_event = 6121002
 		}
 		
 		ai_chance = {
@@ -1301,7 +1301,7 @@ country_event = {
 				OR = { continent = south_america AND = { tag = USA government = democracy } }
 				NOT = { tag = BOL }
 			}
-			country_event = 6121003
+			country_event = 6121002
 		}
 
 		any_pop = {
@@ -1642,7 +1642,7 @@ country_event = {
 				OR = { continent = south_america AND = { tag = USA government = democracy } }
 				NOT = { tag = BOL }
 			}
-			country_event = 6121003
+			country_event = 6121002
 		}
 
 		#Ideological shift

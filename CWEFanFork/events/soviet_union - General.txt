@@ -2757,7 +2757,7 @@ country_event = {
 	id = 1610107
 	title = "Interfere in French and Italian Politics?"
 	desc = EVTDESC1610107
-	picture = "romania_stalinism"
+	picture = "romania_stalinism" #wtf is this picture
 
 	fire_only_once = yes
 

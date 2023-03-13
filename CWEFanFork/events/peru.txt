@@ -27,7 +27,10 @@ country_event = {
 	}
 
 	option = {
-		name = "Stick to the status quo"
+		name = "The coup fails!"
+		
+		ruling_party_ideology = socialist
+		
 		add_country_modifier = { name = revolution_chaos duration = 3650 }
 		ai_chance = { factor = 0.1 }
 	}
@@ -54,14 +57,14 @@ country_event = {
 	mean_time_to_happen = { months = 6 }
 
 	option = {
-		name = "General Odria is succeeded by President Prado"
+		name = "General Odria is succeeded by President Prado."
 		government = democracy country_event = 800054
 		ruling_party_ideology = conservative
 		ai_chance = { factor = 0.9 }
 	}
 
 	option = {
-		name = "Stick to the status quo"
+		name = "Military rule continues."
 		add_country_modifier = { name = revolution_chaos duration = 3650 }
 		ai_chance = { factor = 0.1 }
 	}
@@ -206,7 +209,7 @@ country_event = {
 		country_event = 800050
 		ruling_party_ideology = traditionalist
 		money = 250000
-		ai_chance = { factor = 0.9 }
+		ai_chance = { factor = 0.8 }
 	}
 
 	option = {
@@ -251,7 +254,7 @@ country_event = {
 		
 		add_country_modifier = { name = economic_boom duration = 720 }
 		
-		ruling_party_ideology = social_democrat
+		ruling_party_ideology = populist
 		
 		ai_chance = { factor = 0.9 }
 	}
@@ -277,7 +280,7 @@ country_event = {
 		year = 1968
 		NOT = { year = 1990 }
 		government = presidential_dictatorship
-		OR = { ruling_party_ideology = traditionalist ruling_party_ideology = social_democrat }
+		OR = { ruling_party_ideology = traditionalist ruling_party_ideology = populist }
 		is_vassal = no
 		war = no
 		has_global_flag = blocsenabled
@@ -309,7 +312,7 @@ country_event = {
 	}
 
 	option = {
-		name = "Be neutral with everyone"
+		name = "Maintain the current foreign policy."
 		badboy = -5
 		relation = { who = USA value = 50 }
 		USA = { diplomatic_influence = { who = THIS value = 50 } }

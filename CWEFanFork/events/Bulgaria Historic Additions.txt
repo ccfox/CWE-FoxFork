@@ -278,7 +278,7 @@ country_event = {
 		name = "Crack down on traitors!"
 		badboy = 1
 		any_pop = {
-			limit = { strata = rich }
+			limit = { OR = { type = aristocrats type = bureaucrats } }
 			ideology = { factor = 0.15 value = communist }
 			militancy = -3 
 			consciousness = -3
@@ -308,7 +308,7 @@ country_event = {
 		add_country_modifier = { name = political_strife duration = 1095 }
 		
 		any_pop = {
-			limit = { strata = rich }
+			limit = { OR = { type = aristocrats type = bureaucrats } }
 			ideology = { factor = 0.15 value = communist_social }
 			militancy = -3 
 			consciousness = 3
@@ -365,7 +365,7 @@ country_event = {
 		}
 		badboy = 1
 		any_pop = {
-			limit = { strata = rich }
+			limit = { OR = { type = aristocrats type = bureaucrats } }
 			ideology = { factor = 0.15 value = communist }
 		}
 		any_pop = {
@@ -403,7 +403,7 @@ country_event = {
 			owner = { add_country_modifier = { name = political_strife duration = 1095 } }
 		}
 		any_pop = {
-			limit = { strata = rich }
+			limit = { OR = { type = aristocrats type = bureaucrats } }
 			ideology = { factor = 0.15 value = communist_social }
 		}
 		any_pop = {
@@ -474,7 +474,7 @@ country_event = {
 			ideology = { factor = 0.1 value = communist }
 		}
 		any_pop = { 
-			limit = { is_culture_group = THIS strata = rich } 
+			limit = { is_culture_group = THIS OR = { type = aristocrats type = bureaucrats } } 
 			ideology = { factor = 0.05 value = communist }
 		}
 		
@@ -497,7 +497,7 @@ country_event = {
 			ideology = { factor = 0.10 value = communist_social }
 		}
 		any_pop = { 
-			limit = { is_culture_group = THIS strata = rich } 
+			limit = { is_culture_group = THIS OR = { type = aristocrats type = bureaucrats } } 
 			militancy = 5 consciousness = 5
 			ideology = { factor = 0.10 value = communist }
 		}
