@@ -847,7 +847,7 @@ ITA = {
 }
 
 #Chernobyl
-959 = { add_province_modifier = { name = nuke_accident duration = 3650 } }
+959 = { add_province_modifier = { name = nuke_accident duration = 1460 } }
 
 #Hutu Power movement
 RWA = { add_country_modifier = { name = nationalist_agitation duration = 730 } set_country_flag = RWA_Civil_War }
