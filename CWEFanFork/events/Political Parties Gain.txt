@@ -61,6 +61,7 @@ country_event = {
 		#clr_country_flag = socialist_surge
 		#clr_country_flag = big_tent_surge
 		#clr_country_flag = liberal_surge
+		#clr_country_flag = reformist_surge
 		#clr_country_flag = progressive_surge
 		#clr_country_flag = nationalist_surge
 		#clr_country_flag = communist_surge
@@ -381,12 +382,12 @@ country_event = {
 
 }
 
-#progressive Party Gain
+#Progressive Party Gain
 country_event = {
 	id = 7007
 	title = "Progressive Support Surges"
 	desc = EVTDESC7001
-	picture = "progressive_surge"
+	picture = "progressive_surge" #Needs a picture
 
 	trigger = {
 
@@ -443,12 +444,12 @@ country_event = {
 
 }
 
-#social_democrat Party Gain
+#Social Democrat Party Gain
 country_event = {
 	id = 7112
 	title = "Social Democrat Support Surges"
 	desc = EVTDESC7112
-	picture = "social_democrat_surge"
+	picture = "progressive_surge"
 
 	trigger = {
 
@@ -733,6 +734,7 @@ clr_country_flag = populist_surge
 clr_country_flag = socialist_surge
 clr_country_flag = big_tent_surge
 clr_country_flag = liberal_surge
+clr_country_flag = reformist_surge
 clr_country_flag = progressive_surge
 clr_country_flag = nationalist_surge
 clr_country_flag = communist_surge
@@ -748,6 +750,7 @@ clr_country_flag = populist_surge
 clr_country_flag = socialist_surge
 clr_country_flag = big_tent_surge
 clr_country_flag = liberal_surge
+clr_country_flag = reformist_surge
 clr_country_flag = progressive_surge
 clr_country_flag = nationalist_surge
 clr_country_flag = communist_surge
@@ -763,6 +766,7 @@ set_country_flag = populist_surge
 clr_country_flag = socialist_surge
 clr_country_flag = big_tent_surge
 clr_country_flag = liberal_surge
+clr_country_flag = reformist_surge
 clr_country_flag = progressive_surge
 clr_country_flag = nationalist_surge
 clr_country_flag = communist_surge
@@ -778,6 +782,7 @@ clr_country_flag = populist_surge
 set_country_flag = socialist_surge
 clr_country_flag = big_tent_surge
 clr_country_flag = liberal_surge
+clr_country_flag = reformist_surge
 clr_country_flag = progressive_surge
 clr_country_flag = nationalist_surge
 clr_country_flag = communist_surge
@@ -793,6 +798,7 @@ clr_country_flag = populist_surge
 clr_country_flag = socialist_surge
 set_country_flag = big_tent_surge
 clr_country_flag = liberal_surge
+clr_country_flag = reformist_surge
 clr_country_flag = progressive_surge
 clr_country_flag = nationalist_surge
 clr_country_flag = communist_surge
@@ -808,6 +814,7 @@ clr_country_flag = populist_surge
 clr_country_flag = socialist_surge
 clr_country_flag = big_tent_surge
 set_country_flag = liberal_surge
+clr_country_flag = reformist_surge
 clr_country_flag = progressive_surge
 clr_country_flag = nationalist_surge
 clr_country_flag = communist_surge
@@ -815,7 +822,7 @@ clr_country_flag = communist_social_surge
 		}
 
 option = {
-name = "Support the Progressives"
+name = "Support the Social Democrats"
 
 clr_country_flag = conservative_surge
 clr_country_flag = traditionalist_surge
@@ -823,7 +830,8 @@ clr_country_flag = populist_surge
 clr_country_flag = socialist_surge
 clr_country_flag = big_tent_surge
 clr_country_flag = liberal_surge
-set_country_flag = progressive_surge
+set_country_flag = reformist_surge
+clr_country_flag = progressive_surge
 clr_country_flag = nationalist_surge
 clr_country_flag = communist_surge
 clr_country_flag = communist_social_surge
@@ -838,6 +846,7 @@ clr_country_flag = populist_surge
 clr_country_flag = socialist_surge
 clr_country_flag = big_tent_surge
 clr_country_flag = liberal_surge
+clr_country_flag = reformist_surge
 clr_country_flag = progressive_surge
 set_country_flag = nationalist_surge
 clr_country_flag = communist_surge
@@ -853,6 +862,7 @@ clr_country_flag = populist_surge
 clr_country_flag = socialist_surge
 clr_country_flag = big_tent_surge
 clr_country_flag = liberal_surge
+clr_country_flag = reformist_surge
 clr_country_flag = progressive_surge
 clr_country_flag = nationalist_surge
 set_country_flag = communist_surge
@@ -868,6 +878,7 @@ clr_country_flag = populist_surge
 clr_country_flag = socialist_surge
 clr_country_flag = big_tent_surge
 clr_country_flag = liberal_surge
+clr_country_flag = reformist_surge
 clr_country_flag = progressive_surge
 clr_country_flag = nationalist_surge
 clr_country_flag = communist_surge
@@ -885,6 +896,7 @@ clr_country_flag = populist_surge
 clr_country_flag = socialist_surge
 clr_country_flag = big_tent_surge
 clr_country_flag = liberal_surge
+clr_country_flag = reformist_surge
 clr_country_flag = progressive_surge
 clr_country_flag = nationalist_surge
 clr_country_flag = communist_surge
@@ -910,6 +922,7 @@ has_country_flag = populist_surge
 has_country_flag = socialist_surge
 has_country_flag = big_tent_surge
 has_country_flag = liberal_surge
+has_country_flag = reformist_surge
 has_country_flag = progressive_surge
 has_country_flag = nationalist_surge
 has_country_flag = communist_surge
@@ -929,6 +942,7 @@ clr_country_flag = populist_surge
 clr_country_flag = socialist_surge
 clr_country_flag = big_tent_surge
 clr_country_flag = liberal_surge
+clr_country_flag = reformist_surge
 clr_country_flag = progressive_surge
 clr_country_flag = nationalist_surge
 clr_country_flag = communist_surge
