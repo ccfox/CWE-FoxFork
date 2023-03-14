@@ -235,7 +235,7 @@ country_event = {
 		# EVT_209_A;A Nuclear Disaster!
 		prestige = -20
 		any_pop = { consciousness = 4 }
-		959 = { add_province_modifier = { name = nuke_accident duration = 10950 } }
+		959 = { add_province_modifier = { name = nuke_accident duration = 1825 } } #10950
 	}
 }
 
