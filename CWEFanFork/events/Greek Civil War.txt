@@ -65,7 +65,17 @@ country_event = {
 		GRE = { 
 			country_event = 8941022
 		}
-		ai_chance = { factor = 0.8 }
+		ai_chance = {
+			factor = 0.8
+			modifier = {
+				factor = 0.6
+				NOT = { OR = { ruling_party_ideology = conservative ruling_party_ideology = liberal ruling_party_ideology = big_tent ruling_party_ideology = social_democrat } }
+			}
+			modifier = {
+				factor = 6
+				OR = { ruling_party_ideology = conservative ruling_party_ideology = liberal ruling_party_ideology = big_tent ruling_party_ideology = social_democrat }
+			}
+		}
 	}
 	
 	option = {
@@ -89,7 +99,17 @@ country_event = {
 		relation = { who = GRE value = 50 }
 		diplomatic_influence = { who = GRE value = 50 }
 		
-		ai_chance = { factor = 0.1 }
+		ai_chance = {
+			factor = 0.1
+			modifier = {
+				factor = 0.6
+				NOT = { OR = { ruling_party_ideology = nationalist ruling_party_ideology = traditionalist ruling_party_ideology = populist } }
+			}
+			modifier = {
+				factor = 6
+				OR = { ruling_party_ideology = nationalist ruling_party_ideology = traditionalist ruling_party_ideology = populist }
+			}
+		}
 	}
 
 	option = {
@@ -101,7 +121,17 @@ country_event = {
 		relation = { who = GRE value = 100 }
 		diplomatic_influence = { who = GRE value = -50 }
 		
-		ai_chance = { factor = 0.1 }
+		ai_chance = {
+			factor = 0.1
+			modifier = {
+				factor = 0.6
+				NOT = { OR = { ruling_party_ideology = communist ruling_party_ideology = socialist ruling_party_ideology = communist_social ruling_party_ideology = progressive } }
+			}
+			modifier = {
+				factor = 6
+				OR = { ruling_party_ideology = communist ruling_party_ideology = socialist ruling_party_ideology = communist_social ruling_party_ideology = progressive }
+			}
+		}
 	}
 
 }
@@ -171,7 +201,17 @@ country_event = {
 		GRE = { 
 			country_event = 8941023
 		}
-		ai_chance = { factor = 0.8 }
+		ai_chance = {
+			factor = 0.8
+			modifier = {
+				factor = 0.6
+				NOT = { OR = { ruling_party_ideology = conservative ruling_party_ideology = liberal ruling_party_ideology = big_tent ruling_party_ideology = social_democrat } }
+			}
+			modifier = {
+				factor = 6
+				OR = { ruling_party_ideology = conservative ruling_party_ideology = liberal ruling_party_ideology = big_tent ruling_party_ideology = social_democrat }
+			}
+		}
 	}
 	
 	option = {
@@ -195,7 +235,17 @@ country_event = {
 		relation = { who = GRE value = 50 }
 		diplomatic_influence = { who = GRE value = 50 }
 		
-		ai_chance = { factor = 0.1 }
+		ai_chance = {
+			factor = 0.1
+			modifier = {
+				factor = 0.6
+				NOT = { OR = { ruling_party_ideology = nationalist ruling_party_ideology = traditionalist ruling_party_ideology = populist } }
+			}
+			modifier = {
+				factor = 6
+				OR = { ruling_party_ideology = nationalist ruling_party_ideology = traditionalist ruling_party_ideology = populist }
+			}
+		}
 	}
 	
 	option = {
@@ -212,7 +262,17 @@ country_event = {
 		relation = { who = GRE value = -50 }
 		diplomatic_influence = { who = GRE value = -50 }
 		
-		ai_chance = { factor = 0.1 }
+		ai_chance = {
+			factor = 0.1
+			modifier = {
+				factor = 0.6
+				NOT = { OR = { ruling_party_ideology = communist ruling_party_ideology = socialist ruling_party_ideology = communist_social ruling_party_ideology = progressive } }
+			}
+			modifier = {
+				factor = 6
+				OR = { ruling_party_ideology = communist ruling_party_ideology = socialist ruling_party_ideology = communist_social ruling_party_ideology = progressive }
+			}
+		}
 	}
 	
 }
@@ -275,7 +335,7 @@ country_event = {
 		relation = { who = UGR value = -50 }
 		diplomatic_influence = { who = UGR value = -100 }
 		
-		ai_chance = { factor = 0.8 }
+		ai_chance = { factor = 0.8 } #Domper's list
 	}
 	
 	option = {
@@ -300,7 +360,7 @@ country_event = {
 		
 		set_global_flag = ussr_intervenes_GCW_flag
 		
-		ai_chance = { factor = 0.1 }
+		ai_chance = { factor = 0.1 } #Domper's list
 	}
 	
 	option = {
@@ -330,7 +390,7 @@ country_event = {
 		relation = { who = UGR value = 100 }
 		diplomatic_influence = { who = UGR value = 100 }
 		
-		ai_chance = { factor = 0.1 }
+		ai_chance = { factor = 0.1 } #Domper's list
 	}
 	
 }
@@ -363,19 +423,23 @@ country_event = {
 				GRE = { exists = no }
 			}
 			AND = { 
-				UGR = { OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } }
-				GRE = { OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } } 
+				UGR = { OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 government = socialist_democracy } }
+				GRE = { OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 government = socialist_democracy } } 
+			}
+			#AND = { 
+			#	UGR = { OR = { ruling_party_ideology = communist ruling_party_ideology = communist_social } }
+			#	GRE = { OR = { ruling_party_ideology = communist ruling_party_ideology = communist_social } } 
+			#}
+			AND = { 
+				UGR = { OR = { government = hms_government government = hms_government1 government = democracy government = democracy1 } } #STOP PUTTING SOCIALIST DEMOCRACY HERE, IT BREAKS THE GAME
+				GRE = { OR = { government = hms_government government = hms_government1 government = democracy government = democracy1 } } #Might pull monarchy into its own thing later
 			}
 			AND = { 
-				UGR = { OR = { ruling_party_ideology = communist ruling_party_ideology = communist_social } }
-				GRE = { OR = { ruling_party_ideology = communist ruling_party_ideology = communist_social } } 
+				UGR = { OR = { government = absolute_monarchy government = nationalist_dictatorship government = presidential_dictatorship } }
+				GRE = { OR = { government = absolute_monarchy government = nationalist_dictatorship government = presidential_dictatorship } } 
 			}
-			AND = { 
-				UGR = { OR = { government = hms_government government = hms_government1 government = democracy government = democracy1 government = socialist_democracy } }
-				GRE = { OR = { government = hms_government government = hms_government1 government = democracy government = democracy1 government = socialist_democracy } } 
-			}
-			is_our_vassal = GRE
-			is_our_vassal = UGR
+			#is_our_vassal = GRE
+			#is_our_vassal = UGR
 		}
 		
 		NOT = { has_global_flag = 1992_start_date_flag }
@@ -389,37 +453,61 @@ country_event = {
 		name = "We are a united nation once again!"
 		any_pop = { militancy = -2.5 consciousness = -1 }
 		
-		#Player is GRE
+		
+		#Communist Greece
 		random_owned = {
-			limit = { 
-				owner = { GRE = { ai = no } } 
+			limit = {
+				UGR = {
+					OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 government = socialist_democracy }
+				}
+				GRE = {
+					OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 government = socialist_democracy }
+				}
 			}
-			owner = { inherit = UGR }
+			UGR = { inherit = GRE }
+			any_core = {
+				limit = { is_core = GRE }
+				remove_core = GRE
+				add_core = UGR
+			}
 		}
 		
-		#Player is UGR
+		#Democratic Greece
 		random_owned = {
-			limit = { 
-				owner = { UGR = { ai = no } } 
+			limit = {
+				UGR = {
+					OR = { government = hms_government government = hms_government1 government = democracy government = democracy1 }
+				}
+				GRE = {
+					OR = { government = hms_government government = hms_government1 government = democracy government = democracy1 }
+				}
 			}
-			owner = { 
-				inherit = GRE 
-				change_tag = GRE 
+			GRE = { inherit = UGR }
+			any_core = {
+				limit = { is_core = UGR }
+				remove_core = UGR
+				add_core = GRE
 			}
 		}
 		
-		#Both are AI - GRE
+		
+		#Authoritarian Greece
 		random_owned = {
-			limit = { 
-				owner = { 
-					tag = GRE
-					GRE = { ai = yes } 
-					UGR = { ai = yes } 
-				} 
+			limit = {
+				UGR = {
+					OR = { government = absolute_monarchy government = populist_dictatorship government = nationalist_dictatorship government = presidential_dictatorship }
+				}
+				GRE = {
+					OR = { government = absolute_monarchy government = populist_dictatorship government = nationalist_dictatorship government = presidential_dictatorship }
+				}
 			}
-			owner = { inherit = UGR }
+			GRE = { inherit = UGR }
+			any_core = {
+				limit = { is_core = UGR }
+				remove_core = UGR
+				add_core = GRE
+			}
 		}
-
 	}
 
 }
@@ -439,7 +527,7 @@ country_event = {
 		NOT = { has_global_flag = 1950_start_date_flag }
 		NOT = { year = 1990 }
 		
-		government = hms_government
+		OR = { government = hms_government government = democracy }
 		is_vassal = no
 		war = yes
 		
@@ -639,6 +727,7 @@ country_event = {
 		any_owned = {
 			limit = { is_core = GRE NOT = { is_core = CYP } }
 			secede_province = UGR
+			add_core = UGR
 			change_controller = GRE
 		}
 		

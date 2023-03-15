@@ -1,0 +1,566 @@
+#Finnish Communists Attempt a Coup
+country_event = {
+	id = 8105011
+	title = "Pro-Communist Coup in Finland"
+	desc = EVTDESC8105011
+	picture = "regime_change" 
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Send Support and recognize the new government."
+		badboy = 2
+		
+		any_pop = {
+			limit = { strata = poor }
+			ideology = { factor = 0.05 value = communist }
+			militancy = -2.5
+			consciousness = -2.5
+		}
+		any_pop = {
+			limit = { strata = middle }
+			ideology = { factor = 0.05 value = communist }
+			militancy = -2.5
+			consciousness = -2.5
+		}
+		any_pop = {
+			limit = { OR = { type = aristocrats type = bureaucrats } }
+			ideology = { factor = 0.05 value = communist }
+			militancy = -2.5
+			consciousness = -2.5
+		}
+		
+		FIN = { 
+			any_pop = {
+				limit = { strata = poor }
+				ideology = { factor = 0.1 value = communist_social }
+				militancy = -2.5
+				consciousness = -2.5
+			}
+			any_pop = {
+				limit = { strata = middle }
+				ideology = { factor = 0.05 value = socialist }
+				militancy = 2.5
+				consciousness = 2.5
+			}
+			any_pop = {
+				limit = { OR = { type = aristocrats type = bureaucrats } }
+				ideology = { factor = 0.15 value = communist }
+				militancy = -2.5
+				consciousness = -2.5
+			}
+		}
+		
+		relation = { who = RUS value = 200 } 
+		RUS = { diplomatic_influence = { who = THIS value = 200 } }
+		
+		ai_chance = { factor = 0.9 } #Domper's List
+	}
+
+	option = {
+		name = "We can't risk getting involved in Finnish affairs."
+		badboy = -1
+		
+		any_pop = {
+			limit = { strata = poor }
+			ideology = { factor = 0.05 value = communist }
+			militancy = -2.5
+			consciousness = -2.5
+		}
+		any_pop = {
+			limit = { strata = middle }
+			ideology = { factor = 0.05 value = communist }
+			militancy = -2.5
+			consciousness = -2.5
+		}
+		any_pop = {
+			limit = { OR = { type = aristocrats type = bureaucrats } }
+			ideology = { factor = 0.05 value = communist }
+			militancy = -2.5
+			consciousness = -2.5
+		}
+		
+		FIN = { 
+			any_pop = {
+				limit = { strata = poor }
+				ideology = { factor = 0.1 value = communist_social }
+				militancy = 2.5
+				consciousness = 2.5
+			}
+			any_pop = {
+				limit = { strata = middle }
+				ideology = { factor = 0.15 value = socialist }
+				militancy = 2.5
+				consciousness = 2.5
+			}
+			any_pop = {
+				limit = { OR = { type = aristocrats type = bureaucrats } }
+				ideology = { factor = 0.15 value = communist_social }
+				militancy = -2.5
+				consciousness = -2.5
+			}
+		}
+		ai_chance = { factor = 0.1 } #Domper's List
+	}
+
+}
+
+
+
+#A Red Finland
+country_event = {
+   id = 8105012
+   title = "A New Finland"
+   desc = EVTDESC8105012
+   picture = "fin_com_1"
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Transform Finland into a Proletarian State!"
+	   
+		relation = { who = RUS value = 50 }
+		
+		any_pop = { militancy = 5 consciousness = 5 }
+		
+		any_pop = {
+			limit = { OR = { type = aristocrats type = bureaucrats } }
+			ideology = { factor = 0.15 value = communist }
+		}
+		any_pop = {
+			limit = { strata = middle }
+			ideology = { factor = 0.05 value = communist_social }
+		}
+		any_pop = {
+			limit = { strata = poor }
+			ideology = { factor = 0.05 value = communist }
+		}
+	   
+		government = proletarian_dictatorship
+
+		political_reform = regulated_opinion
+		political_reform = none_voting #No voting
+		political_reform = limited_meetings
+		political_reform = politicised_service #Politicized
+		political_reform = censored_publishing
+		political_reform = state_controlled_unions #State Unions
+		political_reform = parties_only_nominated
+		political_reform = open_immigration
+		political_reform = lgbt_outlawed #no_draft
+		political_reform = minorities_affirmative_action
+		political_reform = proportional_representation
+
+		FIN = { country_event = 8105013 }
+
+		ai_chance = {
+			factor = 0.5
+			modifier = { 
+				factor = 0.6 
+				NOT = { OR = { aristocrats = { OR = { pop_majority_ideology = communist pop_majority_ideology = communist_social } } bureaucrats = { OR = { pop_majority_ideology = communist pop_majority_ideology = communist_social } } } }
+			}
+			modifier = {
+				factor = 0.6 
+				NOT = { OR = { pop_majority_ideology = communist pop_majority_ideology = communist_social } }
+			}
+			modifier = { 
+				factor = 6 
+				OR = { aristocrats = { OR = { pop_majority_ideology = communist pop_majority_ideology = communist_social } } bureaucrats = { OR = { pop_majority_ideology = communist pop_majority_ideology = communist_social } } }
+			}
+			modifier = {
+				factor = 3 
+				 OR = { pop_majority_ideology = communist pop_majority_ideology = communist_social }
+			}
+			modifier = {
+				factor = 3
+				AND = { #Soviets have influence
+					RUS = { exists = yes OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } }
+					BUL = { in_sphere = RUS }
+				}
+			}
+		}
+	}
+
+	option = {
+		name = "Preserve elements of western Democracy."
+	   
+		relation = { who = RUS value = -50 }
+		
+		any_pop = { militancy = -5 consciousness = -5 }
+		
+		any_pop = {
+			limit = { OR = { type = aristocrats type = bureaucrats } }
+			ideology = { factor = 0.15 value = socialist }
+		}
+		any_pop = {
+			limit = { strata = middle }
+			ideology = { factor = 0.05 value = communist_social }
+		}
+		any_pop = {
+			limit = { strata = poor }
+			ideology = { factor = 0.05 value = communist_social }
+		}
+
+		ai_chance = {
+			factor = 0.5
+			modifier = { 
+				factor = 0.6 
+				NOT = { OR = { aristocrats = { pop_majority_ideology = socialist } bureaucrats = { pop_majority_ideology = socialist } } }
+			}
+			modifier = {
+				factor = 0.6
+				NOT = { pop_majority_ideology = socialist }
+			}
+			modifier = { 
+				factor = 6 
+				OR = { aristocrats = { pop_majority_ideology = socialist } bureaucrats = { pop_majority_ideology = socialist } }
+			}
+			modifier = {
+				factor = 3 
+				pop_majority_ideology = socialist
+			}
+		}
+    }
+}
+
+
+#Leadership of a Communist Finland
+country_event = {
+   id = 8105013   
+   title = "Leadership of a Communist Finland"
+   desc = EVTDESC8105013
+   picture = "fin_com_2"
+
+	is_triggered_only = yes
+
+	option = {
+		name = "The moderate majority maintains their grip on the Finnish left."
+		
+		any_pop = {
+			limit = { OR = { type = aristocrats type = bureaucrats } }
+			ideology = { factor = 0.15 value = socialist }
+		}
+		any_pop = {
+			limit = { strata = middle }
+			ideology = { factor = 0.05 value = socialist }
+		}
+		any_pop = {
+			limit = { strata = poor }
+			ideology = { factor = 0.05 value = socialist }
+		}
+		
+		any_country = {
+			limit = {
+					RUS = {
+						exists = yes 
+						OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 government = socialist_democracy }
+						OR = { ruling_party_ideology = communist ruling_party_ideology = communist_social ruling_party_ideology = socialist }
+					}
+			}
+			FIN = { country_event = 8105014 }
+		}
+
+		ai_chance = {
+			factor = 0.33
+			modifier = { 
+				factor = 0.6 
+				NOT = { OR = { aristocrats = { pop_majority_ideology = socialist } bureaucrats = { pop_majority_ideology = socialist } } }
+			}
+			modifier = {
+				factor = 0.3
+				NOT = { pop_majority_ideology = socialist }
+			}
+			modifier = { 
+				factor = 6 
+				OR = { aristocrats = { pop_majority_ideology = socialist } bureaucrats = { pop_majority_ideology = socialist } }
+			}
+			modifier = {
+				factor = 3 
+				pop_majority_ideology = socialist
+			}
+		}
+    }
+	
+	option = {
+		name = "Allow Pro-Soviet elements to come to power."
+		
+		any_pop = {
+			limit = { OR = { type = aristocrats type = bureaucrats } }
+			ideology = { factor = 0.15 value = communist }
+		}
+		any_pop = {
+			limit = { strata = middle }
+			ideology = { factor = 0.05 value = communist }
+		}
+		any_pop = {
+			limit = { strata = poor }
+			ideology = { factor = 0.05 value = communist }
+		}
+		
+		any_country = {
+			limit = {
+					RUS = {
+						exists = yes 
+						OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 government = socialist_democracy }
+						OR = { ruling_party_ideology = communist ruling_party_ideology = communist_social ruling_party_ideology = socialist }
+					}
+			}
+			FIN = { country_event = 8105014 }
+		}
+
+		ai_chance = {
+			factor = 0.33
+			modifier = { 
+				factor = 0.6 
+				NOT = { OR = { aristocrats = { pop_majority_ideology = communist } bureaucrats = { pop_majority_ideology = communist } } }
+			}
+			modifier = {
+				factor = 0.3
+				NOT = { pop_majority_ideology = communist }
+			}
+			modifier = { 
+				factor = 6 
+				OR = { aristocrats = { pop_majority_ideology = communist } bureaucrats = { pop_majority_ideology = communist } }
+			}
+			modifier = {
+				factor = 3 
+				pop_majority_ideology = communist
+			}
+		}
+    }
+	
+	option = {
+		name = "A coalition underneath the SKDL shares power."
+		
+		any_pop = {
+			limit = { OR = { type = aristocrats type = bureaucrats } }
+			ideology = { factor = 0.15 value = communist_social }
+		}
+		any_pop = {
+			limit = { strata = middle }
+			ideology = { factor = 0.05 value = communist_social }
+		}
+		any_pop = {
+			limit = { strata = poor }
+			ideology = { factor = 0.05 value = communist_social }
+		}
+		
+		any_country = {
+			limit = {
+					RUS = {
+						exists = yes 
+						OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 government = socialist_democracy }
+						OR = { ruling_party_ideology = communist ruling_party_ideology = communist_social ruling_party_ideology = socialist }
+					}
+			}
+			FIN = { country_event = 8105014 }
+		}
+
+		ai_chance = {
+			factor = 0.33
+			modifier = { 
+				factor = 0.6 
+				NOT = { OR = { aristocrats = { pop_majority_ideology = communist_social } bureaucrats = { pop_majority_ideology = communist_social } } }
+			}
+			modifier = {
+				factor = 0.3
+				NOT = { pop_majority_ideology = communist_social }
+			}
+			modifier = { 
+				factor = 6 
+				OR = { aristocrats = { pop_majority_ideology = communist_social } bureaucrats = { pop_majority_ideology = communist_social } }
+			}
+			modifier = {
+				factor = 3 
+				pop_majority_ideology = communist_social
+			}
+		}
+    }
+}
+
+
+#Finland and the Communist Bloc
+country_event = {
+   id = 8105014
+   title = "Finnish Foreign Policy"
+   desc = EVTDESC8105014
+   picture = "warsaw_pact_founding"
+
+
+	is_triggered_only = yes
+
+
+	option = {
+		name = "Try to maintain neutrality."
+
+		any_pop = { militancy = -5 consciousness = -5 }
+		
+		any_pop = {
+			limit = { OR = { type = aristocrats type = bureaucrats } }
+			ideology = { factor = 0.15 value = socialist }
+		}
+		any_pop = {
+			limit = { strata = middle }
+			ideology = { factor = 0.05 value = socialist }
+		}
+		any_pop = {
+			limit = { strata = poor }
+			ideology = { factor = 0.05 value = communist_social }
+		}
+
+		ai_chance = {
+			factor = 0.33
+			modifier = { 
+				factor = 0.6 
+				NOT = { OR = { aristocrats = { pop_majority_ideology = socialist } bureaucrats = { pop_majority_ideology = socialist } } }
+			}
+			modifier = {
+				factor = 0.6
+				NOT = { pop_majority_ideology = socialist }
+			}
+			modifier = { 
+				factor = 6 
+				OR = { aristocrats = { pop_majority_ideology = socialist } bureaucrats = { pop_majority_ideology = socialist } }
+			}
+			modifier = {
+				factor = 3 
+				pop_majority_ideology = socialist
+			}
+			modifier = {
+				factor = 4 
+				ruling_party_ideology = socialist
+			}
+			modifier = {
+				factor = 0.4
+				NOT = { ruling_party_ideology = socialist }
+			}
+		}
+	}
+	
+	option = {
+		name = "Align with the USSR, but maintain independence."
+
+
+		any_pop = { militancy = -1 consciousness = 3 }
+		
+		any_country = {
+			limit = {
+				exists = yes
+				NOT = { tag = FIN }
+				OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 government = socialist_democracy }
+				OR = { ruling_party_ideology = communist ruling_party_ideology = communist_social ruling_party_ideology = socialist }
+				capital_scope = { continent = europe }
+			}
+			relation = { who = THIS value = 50 }
+		}
+		
+		any_pop = {
+			limit = { OR = { type = aristocrats type = bureaucrats } }
+			ideology = { factor = 0.15 value = socialist }
+		}
+		any_pop = {
+			limit = { strata = middle }
+			ideology = { factor = 0.05 value = socialist }
+		}
+		any_pop = {
+			limit = { strata = poor }
+			ideology = { factor = 0.05 value = communist_social }
+		}
+
+		ai_chance = {
+			factor = 0.33
+			modifier = { 
+				factor = 0.6 
+				NOT = { OR = { aristocrats = { pop_majority_ideology = communist_social } bureaucrats = { pop_majority_ideology = communist_social } } }
+			}
+			modifier = {
+				factor = 0.6
+				NOT = { pop_majority_ideology = communist_social }
+			}
+			modifier = { 
+				factor = 6 
+				OR = { aristocrats = { pop_majority_ideology = communist_social } bureaucrats = { pop_majority_ideology = communist_social } }
+			}
+			modifier = {
+				factor = 3 
+				pop_majority_ideology = communist_social
+			}
+			modifier = {
+				factor = 4 
+				ruling_party_ideology = communist_social
+			}
+			modifier = {
+				factor = 0.4
+				NOT = { ruling_party_ideology = communist_social }
+			}
+		}
+	}
+
+	option = {
+		name = "Fully join the Warsaw Pact."
+		
+		any_pop = { militancy = 8 consciousness = 8 }
+		
+		any_pop = {
+			limit = { OR = { type = aristocrats type = bureaucrats } }
+			ideology = { factor = 0.15 value = communist }
+		}
+		any_pop = {
+			limit = { strata = middle }
+			ideology = { factor = 0.05 value = socialist }
+		}
+		any_pop = {
+			limit = { strata = poor }
+			ideology = { factor = 0.05 value = communist_social }
+		}
+	   
+		RUS = { country_event = 120003 } #Vassalise
+
+		#Benefits of Sovietisation to USSR
+		RUS = {
+			money = 250000
+			electric_gear = 500
+			machine_parts = 500
+			cement = 500
+			steel = 500
+			fuel = 500
+		}
+
+		ai_chance = {
+			factor = 0.33
+			modifier = {
+				factor = 3
+				AND = { #Soviets have influence
+					RUS = { exists = yes OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } }
+					BUL = { in_sphere = RUS }
+				}
+			}
+			modifier = { 
+				factor = 0.6 
+				NOT = { OR = { aristocrats = { pop_majority_ideology = communist } bureaucrats = { pop_majority_ideology = communist } } }
+			}
+			modifier = {
+				factor = 0.6
+				NOT = { pop_majority_ideology = communist }
+			}
+			modifier = { 
+				factor = 6 
+				OR = { aristocrats = { pop_majority_ideology = communist } bureaucrats = { pop_majority_ideology = communist } }
+			}
+			modifier = {
+				factor = 3 
+				pop_majority_ideology = communist
+			}
+			modifier = {
+				factor = 4 
+				ruling_party_ideology = communist
+			}
+			modifier = {
+				factor = 0.4
+				NOT = { ruling_party_ideology = communist }
+			}
+		}
+    }
+}
+
+
+

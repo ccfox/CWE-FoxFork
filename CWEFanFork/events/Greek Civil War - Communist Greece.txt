@@ -48,12 +48,25 @@ country_event = {
 			consciousness = -8
 		}
 		
+		any_pop = {
+			limit = { OR = { type = aristocrats type = bureaucrats } }
+			ideology = { factor = 0.05 value = communist }
+		}
+		
 		GRE = {
 			country_event = 8940015
 		}
 		
 		ai_chance = {
 			factor = 0.6
+			modifier = { 
+				factor = 0.6
+				NOT = { OR = { aristocrats = { OR = { pop_majority_ideology = communist pop_majority_ideology = socialist } } bureaucrats = { OR = { pop_majority_ideology = communist pop_majority_ideology = socialist } } } }
+			}
+			modifier = { 
+				factor = 6
+				OR = { aristocrats = { OR = { pop_majority_ideology = communist pop_majority_ideology = socialist } } bureaucrats = { OR = { pop_majority_ideology = communist pop_majority_ideology = socialist } } }
+			}
 		}
 	}
 
@@ -72,6 +85,11 @@ country_event = {
 			ideology = { factor = 0.05 value = communist }
 			militancy = -4
 			consciousness = -4
+		}
+		
+		any_pop = {
+			limit = { OR = { type = aristocrats type = bureaucrats } }
+			ideology = { factor = 0.05 value = communist }
 		}
 		
 		any_pop = { 
@@ -103,6 +121,14 @@ country_event = {
 		
 		ai_chance = {
 			factor = 0.4
+			modifier = { 
+				factor = 0.6
+				NOT = { OR = { aristocrats = { pop_majority_ideology = communist_social } bureaucrats = { pop_majority_ideology = communist_social } } }
+			}
+			modifier = { 
+				factor = 6
+				OR = { aristocrats = { pop_majority_ideology = communist_social } bureaucrats = { pop_majority_ideology = communist_social } }
+			}
 		}
 	}
 	
@@ -309,11 +335,42 @@ country_event = {
 			}
 			reduce_pop = 0.99
 		}
+		
+		any_pop = {
+			limit = { culture = greek strata = poor }
+			ideology = { factor = 0.05 value = communist }
+		}
+		any_pop = {
+			limit = { culture = greek strata = middle }
+			ideology = { factor = 0.05 value = communist }
+		}
+		
+		any_pop = {
+			limit = { OR = { type = aristocrats type = bureaucrats } }
+			ideology = { factor = 0.15 value = communist }
+		}
+		
 		GRE = {
 			country_event = 8940018
 		}
 		ai_chance = {
-			factor = 0.99
+			factor = 0.8
+			modifier = { 
+				factor = 0.6
+				NOT = { OR = { aristocrats = { pop_majority_ideology = communist } bureaucrats = { pop_majority_ideology = communist } } }
+			}
+			modifier = { 
+				factor = 6
+				OR = { aristocrats = { pop_majority_ideology = communist } bureaucrats = { pop_majority_ideology = communist } }
+			}
+			modifier = { 
+				factor = 3
+				has_country_flag = gre_white_terror
+			}
+			modifier = { 
+				factor = 0.3
+				NOT = { has_country_flag = gre_white_terror }
+			}
 		}
 	}
 
@@ -325,16 +382,47 @@ country_event = {
 		add_country_modifier = { name = revolution_chaos duration = 1365 }
 		any_pop = {
 			limit = { culture = greek strata = poor }
-			ideology = { factor = 0.10 value = communist }
+			ideology = { factor = 0.10 value = communist_social }
+			militancy = 3
+			consciousness = 3
+		}
+		any_pop = {
+			limit = { culture = greek strata = middle }
 			ideology = { factor = 0.15 value = socialist }
 			militancy = 3
 			consciousness = 3
 		}
+		
+		any_pop = {
+			limit = { OR = { type = aristocrats type = bureaucrats } }
+			ideology = { factor = 0.05 value = communist_social }
+		}
+		any_pop = {
+			limit = { OR = { type = aristocrats type = bureaucrats } }
+			ideology = { factor = 0.15 value = socialist }
+		}
+		
 		GRE = {
 			country_event = 8940019
 		}
 		ai_chance = {
-			factor = 0.01
+			factor = 0.2
+			modifier = { 
+				factor = 0.6
+				NOT = { OR = { aristocrats = { OR = { pop_majority_ideology = communist_social pop_majority_ideology = socialist } } bureaucrats = { OR = { pop_majority_ideology = communist_social pop_majority_ideology = socialist } } } }
+			}
+			modifier = { 
+				factor = 6
+				OR = { aristocrats = { OR = { pop_majority_ideology = communist_social pop_majority_ideology = socialist } } bureaucrats = { OR = { pop_majority_ideology = communist_social pop_majority_ideology = socialist } } }
+			}
+			modifier = { 
+				factor = 0.3
+				has_country_flag = gre_white_terror
+			}
+			modifier = { 
+				factor = 3
+				NOT = { has_country_flag = gre_white_terror }
+			}
 		}
 	}
 	
@@ -434,7 +522,7 @@ country_event = {
 			}
 			any_pop = {
 				limit = { culture = greek strata = poor }
-				ideology = { factor = 0.15 value = socialist }
+				ideology = { factor = 0.2 value = socialist }
 				militancy = -6
 				consciousness = -6
 			}
@@ -443,6 +531,10 @@ country_event = {
 				ideology = { factor = 0.15 value = socialist }
 				militancy = -6
 				consciousness = -6
+			}
+			any_pop = {
+				limit = { OR = { type = aristocrats type = bureaucrats } }
+				ideology = { factor = 0.05 value = communist_social }
 			}
 		}
 
@@ -457,13 +549,13 @@ country_event = {
 			}
 			any_pop = {
 				limit = { culture = greek strata = poor }
-				ideology = { factor = 0.10 value = socialist }
+				ideology = { factor = 0.12 value = socialist }
 				militancy = -6
 				consciousness = -6
 			}
 			any_pop = {
 				limit = { culture = greek strata = middle }
-				ideology = { factor = 0.05 value = socialist }
+				ideology = { factor = 0.08 value = socialist }
 				militancy = -6
 				consciousness = -6
 			}
@@ -539,7 +631,15 @@ country_event = {
 		}
 		
 		ai_chance = {
-			factor = 0.99
+			factor = 0.8
+			modifier = {
+				factor = 0.6
+				has_country_flag = kke_election_boycott
+			}
+			modifier = {
+				factor = 6
+				NOT = { has_country_flag = kke_election_boycott }
+			}
 		}
 	}
 
@@ -555,10 +655,14 @@ country_event = {
 		}
 		
 		ai_chance = {
-			factor = 0.01
+			factor = 0.2
 			modifier = {
-				factor = 90
+				factor = 6
 				has_country_flag = kke_election_boycott
+			}
+			modifier = {
+				factor = 0.6
+				NOT = { has_country_flag = kke_election_boycott }
 			}
 		}
 	}
@@ -681,8 +785,21 @@ country_event = {
 			consciousness = 3
 		}
 		
+		any_pop = {
+			limit = { OR = { type = aristocrats type = bureaucrats } }
+			ideology = { factor = 0.15 value = communist }
+		}
+		
 		ai_chance = { 
-			factor = 0.9
+			factor = 0.8
+			modifier = { 
+				factor = 0.6
+				NOT = { OR = { aristocrats = { pop_majority_ideology = communist } bureaucrats = { pop_majority_ideology = communist } } }
+			}
+			modifier = { 
+				factor = 6
+				OR = { aristocrats = { pop_majority_ideology = communist } bureaucrats = { pop_majority_ideology = communist } }
+			}
 		}
 	}
 
@@ -695,6 +812,16 @@ country_event = {
 			ideology = { factor = 0.15 value = communist_social }
 		}
 		
+		any_pop = { 
+			limit = { strata = middle }
+			ideology = { factor = 0.1 value = socialist }
+		}
+		
+		any_pop = {
+			limit = { OR = { type = aristocrats type = bureaucrats } }
+			ideology = { factor = 0.15 value = communist_social }
+		}
+		
 		money = 50000
 		
 		small_arms = 100
@@ -703,7 +830,17 @@ country_event = {
 		ammunition = 100
 		automobiles = 100
 		
-		ai_chance = { factor = 0.1 }
+		ai_chance = {
+			factor = 0.2
+			modifier = { 
+				factor = 0.6
+				NOT = { OR = { aristocrats = { pop_majority_ideology = communist_social } bureaucrats = { pop_majority_ideology = communist_social } } }
+			}
+			modifier = { 
+				factor = 6
+				OR = { aristocrats = { pop_majority_ideology = communist_social } bureaucrats = { pop_majority_ideology = communist_social } }
+			}
+		}
 	}
 	
 }
@@ -1250,7 +1387,7 @@ country_event = {
 	}
 
 
-	mean_time_to_happen = { months = 4 }
+	mean_time_to_happen = { months = 3 }
 
 	option = {
 		name = "Greece's liberation draws near!"
@@ -1311,7 +1448,7 @@ country_event = {
 		GRE = { controls = 842 }
 	}
 
-	mean_time_to_happen = { months = 6 }
+	mean_time_to_happen = { months = 4 }
 
 	option = {
 		name = "Continue the push!"
@@ -1372,7 +1509,7 @@ country_event = {
 	}
 
 
-	mean_time_to_happen = { months = 6 }
+	mean_time_to_happen = { months = 4 }
 
 	option = {
 		name = "Greece awaits!"
@@ -1406,6 +1543,12 @@ country_event = {
 					type = soldiers culture = greek
 				}
 				ideology = { factor = 0.25 value = communist }
+			}
+			any_pop = { 
+				limit = { 
+					strata = poor culture = greek
+				}
+				ideology = { factor = 0.15 value = communist }
 			}
 		}
 	}
@@ -1449,6 +1592,7 @@ country_event = {
 	trigger = {
 		tag = UGR
 		has_global_flag = greek_civil_war
+		NOT = { has_country_flag = ugr_civil_war_victory }
 		
 		is_vassal = no
 		war = no
@@ -1463,9 +1607,19 @@ country_event = {
 		name = "The Greek workers have cast off their chains!"
 		set_country_flag = ugr_civil_war_victory
 		
+		random_country = {
+			limit = { 
+				OR = { continent = europe AND = { tag = USA government = democracy } }
+				NOT = { OR = { tag = UGR tag = GRE } }
+			}
+			country_event = 6121004
+		}
+		
 		capital = 834
 		
 		prestige = 100
+		
+		country_event = 8940046
 		
 		any_pop = { 
 			militancy = -8
@@ -1482,19 +1636,21 @@ country_event = {
 	title = "Proclamation of the Democratic Republic of Greece"
 	desc = EVTDESC8940045
 	picture = "ugr_communism"
+	
+	is_triggered_only = yes
 
-	fire_only_once = yes
+	#fire_only_once = yes
 
-	trigger = {
-		tag = UGR
-		has_country_flag = ugr_civil_war_victory
-		
-		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
-		is_vassal = no
-		war = no
-	}
+	#trigger = {
+	#	tag = UGR
+	#	has_country_flag = ugr_civil_war_victory
+	#	
+	#	OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
+	#	is_vassal = no
+	#	war = no
+	#}
 
-	mean_time_to_happen = { months = 1 }
+	#mean_time_to_happen = { months = 1 }
 
 	option = {
 		name = "Keep the leading role of the KKE in politics."
@@ -1508,7 +1664,23 @@ country_event = {
 		random_country = { limit = { tag = YUG government = proletarian_dictatorship is_vassal = no } relation = { who = THIS value = 50 } }
 
 		ai_chance = {
-			factor = 0.9
+			factor = 0.8
+			modifier = { 
+				factor = 0.6
+				NOT = { OR = { aristocrats = { OR = { pop_majority_ideology = communist pop_majority_ideology = communist_social } } bureaucrats = { OR = { pop_majority_ideology = communist pop_majority_ideology = communist_social } } } }
+			}
+			modifier = { 
+				factor = 6
+				OR = { aristocrats = { OR = { pop_majority_ideology = communist pop_majority_ideology = communist_social } } bureaucrats = { OR = { pop_majority_ideology = communist pop_majority_ideology = communist_social } } }
+			}
+			modifier = {
+				factor = 0.3
+				NOT = { OR = { pop_majority_ideology = communist pop_majority_ideology = communist_social } }
+			}
+			modifier = {
+				factor = 3
+				OR = { pop_majority_ideology = communist pop_majority_ideology = communist_social }
+			}
 		}
 	}
 
@@ -1525,7 +1697,23 @@ country_event = {
 		random_country = { limit = { tag = YUG government = proletarian_dictatorship is_vassal = no } relation = { who = THIS value = 25 } }
 
 		ai_chance = {
-			factor = 0.1
+			factor = 0.2
+			modifier = { 
+				factor = 0.6
+				NOT = { OR = { aristocrats = { pop_majority_ideology = socialist } bureaucrats = { pop_majority_ideology = socialist } } }
+			}
+			modifier = { 
+				factor = 6
+				OR = { aristocrats = { pop_majority_ideology = socialist } bureaucrats = { pop_majority_ideology = socialist } }
+			}
+			modifier = {
+				factor = 0.3
+				NOT = { pop_majority_ideology = socialist }
+			}
+			modifier = {
+				factor = 3
+				pop_majority_ideology = socialist
+			}
 		}
 	}
 	
