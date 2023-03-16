@@ -31,7 +31,7 @@ country_event = {
 		
 		any_pop = {
 			limit = { strata = poor }
-			ideology = { factor = 0.1 value = communist }
+			ideology = { factor = 0.15 value = communist }
 		}
 		
 		any_pop = {
@@ -39,9 +39,24 @@ country_event = {
 			ideology = { factor = 0.1 value = socialist }
 		}
 		
+		any_pop = {
+			limit = { OR = { type = aristocrats type = bureaucrats } }
+			ideology = { factor = 0.15 value = communist }
+		}
+		
 		prestige = 10
 		
-		ai_chance = { factor = 0.9 }
+		ai_chance = {
+			factor = 0.9
+			modifier = {
+				factor = 0.3
+				pop_majority_ideology = traditionalist 
+			}
+			modifier = {
+				factor = 6
+				NOT = { pop_majority_ideology = traditionalist }
+			}
+		}
 	}
 
 	option = {
@@ -56,10 +71,201 @@ country_event = {
 
 		RUS = { country_event = 120002 } #War to vassalise
 		
-		ai_chance = { factor = 0.1 }
+		ai_chance = {
+			factor = 0.1
+			modifier = {
+				factor = 0.1
+				NOT = { pop_majority_ideology = traditionalist }
+			}
+			modifier = {
+				factor = 3
+				pop_majority_ideology = traditionalist
+			}
+		}
 	}
 
 }
+
+
+####		      ####
+#### Pre-DotP Hungary ####
+####		      ####
+
+#1947 Elections
+country_event = {
+	id = 8021321
+	title = "$YEAR$ Hungarian Elections"
+	desc = EVTDESC8021321
+	picture = "47_elections1"
+	
+	fire_only_once = yes
+
+	trigger = {
+		tag = HUN
+		year = 1947
+		NOT = { year = 1950 }
+		
+		government = democracy
+		war = no
+		is_vassal = no
+		
+		NOT = { has_country_modifier = election_cooldown }
+		
+		OR = { ruling_party_ideology = socialist ruling_party_ideology = communist }
+		
+	}
+
+	mean_time_to_happen = { months = 3 }
+
+	option = {
+		name = "MKP overtakes the Socialists."
+		
+		ruling_party_ideology = communist
+		
+		add_country_modifier = { name = election_cooldown duration = 730 }
+		
+		random_owned = { #This should give the player or AI the modifier if they don't have a majority support
+			limit = { owner = { AND = { tag = FIN NOT = { OR = { pop_majority_ideology = communist pop_majority_ideology = communist_social } } } } }
+			owner = { add_country_modifier = { name = revolution_chaos duration = 1365 } }
+		}
+		
+		any_pop = { 
+			ideology = { factor = 0.15 value = communist }
+		}
+		
+		ai_chance = {
+			factor = 0.8
+			modifier = {
+				factor = 0.6
+				NOT = { OR = { pop_majority_ideology = communist pop_majority_ideology = communist_social } }
+			}
+			modifier = {
+				factor = 6
+				OR = { pop_majority_ideology = communist pop_majority_ideology = communist_social }
+			}
+		}
+	}
+
+	option = {
+		name = "FKgP Maintains its majority in the socialist government."
+		
+		ruling_party_ideology = socialist
+		
+		add_country_modifier = { name = election_cooldown duration = 730 }
+		
+		random_owned = { #This should give the player or AI the modifier if they don't have a majority support
+			limit = { owner = { AND = { tag = FIN NOT = { OR = { pop_majority_ideology = socialist pop_majority_ideology = social_democrat pop_majority_ideology = progressive } } } } }
+			owner = { add_country_modifier = { name = revolution_chaos duration = 1365 } }
+		}
+		
+		any_pop = { 
+			ideology = { factor = 0.15 value = socialist }
+		}
+		
+		ai_chance = {
+			factor = 0.2
+			modifier = {
+				factor = 0.6
+				NOT = { OR = { pop_majority_ideology = socialist pop_majority_ideology = social_democrat pop_majority_ideology = progressive } }
+			}
+			modifier = {
+				factor = 6
+				OR = { pop_majority_ideology = socialist pop_majority_ideology = social_democrat pop_majority_ideology = progressive }
+			}
+		}
+	}
+
+}
+
+
+#1949 Elections
+country_event = {
+	id = 8021322
+	title = "$YEAR$ Hungarian Elections"
+	desc = EVTDESC8021322
+	picture = "47_elections2"
+	
+	fire_only_once = yes
+
+	trigger = {
+		tag = HUN
+		year = 1949
+		NOT = { year = 1950 }
+		
+		government = democracy
+		war = no
+		is_vassal = no
+		
+		NOT = { has_country_modifier = election_cooldown }
+		
+		OR = { ruling_party_ideology = socialist ruling_party_ideology = communist }
+		
+	}
+
+	mean_time_to_happen = { months = 3 }
+
+	option = {
+		name = "Communist forces remain dominant within the MFN."
+		
+		ruling_party_ideology = communist
+		
+		add_country_modifier = { name = election_cooldown duration = 730 }
+		
+		random_owned = { #This should give the player or AI the modifier if they don't have a majority support
+			limit = { owner = { AND = { tag = FIN NOT = { OR = { pop_majority_ideology = communist pop_majority_ideology = communist_social } } } } }
+			owner = { add_country_modifier = { name = revolution_chaos duration = 1365 } }
+		}
+		
+		any_pop = { 
+			ideology = { factor = 0.15 value = communist }
+		}
+		
+		ai_chance = {
+			factor = 0.8
+			modifier = {
+				factor = 0.6
+				NOT = { OR = { pop_majority_ideology = communist pop_majority_ideology = communist_social } }
+			}
+			modifier = {
+				factor = 6
+				OR = { pop_majority_ideology = communist pop_majority_ideology = communist_social }
+			}
+		}
+	}
+
+	option = {
+		name = "FKgP achieves a governmental majority with the help of moderates in the MFN."
+
+		ruling_party_ideology = socialist
+		
+		add_country_modifier = { name = election_cooldown duration = 730 }
+		
+		random_owned = { #This should give the player or AI the modifier if they don't have a majority support
+			limit = { owner = { AND = { tag = FIN NOT = { OR = { pop_majority_ideology = socialist pop_majority_ideology = social_democrat pop_majority_ideology = progressive } } } } }
+			owner = { add_country_modifier = { name = revolution_chaos duration = 1365 } }
+		}
+		
+		any_pop = { 
+			ideology = { factor = 0.15 value = socialist }
+		}
+		
+		RUS = { country_event = 120002 } #War to vassalise #Temporarily here
+		
+		ai_chance = {
+			factor = 0.2
+			modifier = {
+				factor = 0.6
+				NOT = { OR = { pop_majority_ideology = socialist pop_majority_ideology = social_democrat pop_majority_ideology = progressive } }
+			}
+			modifier = {
+				factor = 6
+				OR = { pop_majority_ideology = socialist pop_majority_ideology = social_democrat pop_majority_ideology = progressive }
+			}
+		}
+	}
+}
+
+
 
 #1949 Hungarian Constitutional Change
 country_event = {
@@ -110,7 +316,14 @@ country_event = {
 		RUS = { country_event = 120003 } #Vassalise
 
 		ai_chance = {
-           factor = 0.95
+           factor = 0.9
+			modifier = {
+				factor = 3
+				AND = { #Soviets have influence
+					RUS = { exists = yes OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } }
+					BUL = { in_sphere = RUS }
+				}
+			}
 		}
 	}
 
@@ -121,7 +334,14 @@ country_event = {
 		RUS = { country_event = 120002 } #War to vassalise
 
 		ai_chance = {
-           factor = 0.05
+           factor = 0.1
+			modifier = {
+				factor = 0.3
+				AND = { #Soviets have influence
+					RUS = { exists = yes OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } }
+					BUL = { in_sphere = RUS }
+				}
+			}
 		}
 	}
 
@@ -147,9 +367,22 @@ country_event = {
 
 	option = {
 		name = EVT_8021317_A
-		any_pop = { 
+		
+		any_pop = {
+			limit = { strata = poor }
+			ideology = { factor = 0.2 value = communist }
+		}
+		
+		any_pop = {
+			limit = { strata = middle }
+			ideology = { factor = 0.15 value = communist }
+		}
+		
+		any_pop = {
+			limit = { OR = { type = aristocrats type = bureaucrats } }
 			ideology = { factor = 0.05 value = communist }
 		}
+		
 		relation = { who = RUS value = 50 }
 	}
 }
@@ -176,15 +409,67 @@ country_event = {
 		relation = { who = RUS value = 50 }
 		relation = { who = YUG value = -50 }
 		any_pop = { militancy = 2 consciousness = -2 }
-		ai_chance = { factor = 0.9 }
+		
+		any_pop = {
+			limit = { strata = poor }
+			ideology = { factor = 0.05 value = communist }
+		}
+		
+		any_pop = {
+			limit = { strata = middle }
+			ideology = { factor = 0.05 value = communist }
+		}
+		
+		any_pop = {
+			limit = { OR = { type = aristocrats type = bureaucrats } }
+			ideology = { factor = 0.05 value = communist }
+		}
+		
+		ai_chance = {
+			factor = 0.8
+			modifier = { 
+				factor = 0.6
+				NOT = { OR = { aristocrats = { pop_majority_ideology = communist } bureaucrats = { pop_majority_ideology = communist } } }
+			}
+			modifier = { 
+				factor = 6
+				OR = { aristocrats = { pop_majority_ideology = communist } bureaucrats = { pop_majority_ideology = communist } }
+			}
+		}
 	}
 
 	option = {
 		name = EVT_8021318_B
 		relation = { who = RUS value = -100 }
 		any_pop = { militancy = -2 consciousness = 2 }
+		
+		any_pop = {
+			limit = { strata = poor }
+			ideology = { factor = 0.15 value = communist_social }
+		}
+		
+		any_pop = {
+			limit = { strata = middle }
+			ideology = { factor = 0.2 value = communist_social }
+		}
+		
+		any_pop = {
+			limit = { OR = { type = aristocrats type = bureaucrats } }
+			ideology = { factor = 0.15 value = communist_social }
+		}
+		
 		relation = { who = YUG value = 100 }
-		ai_chance = { factor = 0.1 }
+		ai_chance = {
+			factor = 0.2
+			modifier = { 
+				factor = 0.6
+				NOT = { OR = { aristocrats = { pop_majority_ideology = communist_social } bureaucrats = { pop_majority_ideology = communist_social } } }
+			}
+			modifier = { 
+				factor = 6
+				OR = { aristocrats = { pop_majority_ideology = communist_social } bureaucrats = { pop_majority_ideology = communist_social } }
+			}
+		}
 	}
 
 }

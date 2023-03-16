@@ -16,6 +16,7 @@ country_event = {
 	option = {
 		name = "We will finally win our national liberation!"
 		set_country_flag = ets_tore
+
 		any_pop = {
 			limit = { culture = uighur }
 			ideology = { factor = 0.10 value = communist }
@@ -28,6 +29,8 @@ country_event = {
 			militancy = -8
 			consciousness = -8
 		}
+		
+		RUS = { country_event = 8013808 }
 	}
 	
 }
@@ -39,26 +42,28 @@ country_event = {
 	desc = EVTDESC8013808
 	picture = "nwo2_east_turkestan"
 
-	fire_only_once = yes
+	#fire_only_once = yes
+	
+	is_triggered_only = yes
 
-	trigger = {
-		tag = RUS
-		year = 1946
-		NOT = { year = 1950 }
+	#trigger = {
+	#	tag = RUS
+	#	year = 1946
+	#	NOT = { year = 1950 }
+	#
+	#	OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
+	#	is_greater_power = yes
+	#	war = no
+	#
+	#	KMT = { war_with = CHI } #Chinese Civil War ongoing
+	#
+	#	ETS = { 
+	#		exists = yes
+	#		has_country_flag = ets_tore
+	#	}
+	#}
 
-		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
-		is_greater_power = yes
-		war = no
-
-		KMT = { war_with = CHI } #Chinese Civil War ongoing
-
-		ETS = { 
-			exists = yes
-			has_country_flag = ets_tore
-		}
-	}
-
-	mean_time_to_happen = { months = 1 }
+	#mean_time_to_happen = { months = 1 }
 
 	option = {
 		name = "Recall Tore and support his removal from power."
@@ -129,6 +134,10 @@ country_event = {
 			factor = 0.5
 			modifier = {
 				factor = 0.3
+				NOT = { has_country_flag = ets_tore }
+			}
+			modifier = {
+				factor = 3
 				has_country_flag = ets_tore
 			}
 		}
@@ -148,8 +157,12 @@ country_event = {
 		ai_chance = { 
 			factor = 0.5
 			modifier = {
-				factor = 10
+				factor = 0.3
 				has_country_flag = ets_tore
+			}
+			modifier = {
+				factor = 3
+				NOT = { has_country_flag = ets_tore }
 			}
 		}
 	}
