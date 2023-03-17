@@ -134,11 +134,11 @@ country_event = {
 			factor = 0.5
 			modifier = {
 				factor = 0.3
-				NOT = { has_country_flag = ets_tore }
+				NOT = { has_country_flag = ets_qasim }
 			}
 			modifier = {
 				factor = 3
-				has_country_flag = ets_tore
+				has_country_flag = ets_qasim
 			}
 		}
 	}
@@ -158,11 +158,11 @@ country_event = {
 			factor = 0.5
 			modifier = {
 				factor = 0.3
-				has_country_flag = ets_tore
+				has_country_flag = ets_qasim
 			}
 			modifier = {
 				factor = 3
-				NOT = { has_country_flag = ets_tore }
+				NOT = { has_country_flag = ets_qasim }
 			}
 		}
 	}
