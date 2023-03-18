@@ -828,12 +828,12 @@
 		size = 1870
 	 } 
 	artisans = {
-		culture = arab_sahrawi
+		culture = arab_hassaniya
 		religion =  sunni 
 		size = 1354
 	 } 
 	farmers = {
-		culture = arab_sahrawi
+		culture = arab_hassaniya
 		religion =  sunni 
 		size = 35573
 	 } 

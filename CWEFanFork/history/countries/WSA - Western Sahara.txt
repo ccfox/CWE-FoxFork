@@ -1,6 +1,5 @@
 capital = 1773
-primary_culture = arab_sahrawi
-culture = arab_hassaniya
+primary_culture = arab_hassaniya
 culture = arab
 religion = secularism
 government = proletarian_dictatorship
