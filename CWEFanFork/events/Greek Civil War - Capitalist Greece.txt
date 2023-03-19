@@ -64,13 +64,21 @@ country_event = {
 		
 		ai_chance = {
 			factor = 0.8
+			#modifier = { 
+			#	factor = 6 
+			#	NOT = { OR = { officers = { OR = { pop_majority_ideology = conservative pop_majority_ideology = nationalist pop_majority_ideology = traditionalist } } soldiers = { OR = { pop_majority_ideology = conservative pop_majority_ideology = nationalist pop_majority_ideology = traditionalist } } } }
+			#}
+			#modifier = { 
+			#	factor = 0.6 
+			#	OR = { officers = { OR = { pop_majority_ideology = conservative pop_majority_ideology = nationalist pop_majority_ideology = traditionalist } } soldiers = { OR = { pop_majority_ideology = conservative pop_majority_ideology = nationalist pop_majority_ideology = traditionalist } } }
+			#}
 			modifier = { 
-				factor = 6 
-				NOT = { OR = { officers = { OR = { pop_majority_ideology = conservative pop_majority_ideology = nationalist pop_majority_ideology = traditionalist } } soldiers = { OR = { pop_majority_ideology = conservative pop_majority_ideology = nationalist pop_majority_ideology = traditionalist } } } }
+				factor = 3 #Military support
+				NOT = { average_militancy = 5 }
 			}
 			modifier = { 
-				factor = 0.6 
-				OR = { officers = { OR = { pop_majority_ideology = conservative pop_majority_ideology = nationalist pop_majority_ideology = traditionalist } } soldiers = { OR = { pop_majority_ideology = conservative pop_majority_ideology = nationalist pop_majority_ideology = traditionalist } } }
+				factor = 0.3 #Military support
+				average_militancy = 5
 			}
 		}
 	}
@@ -130,13 +138,21 @@ country_event = {
 		
 		ai_chance = {
 			factor = 0.2
+			#modifier = { 
+			#	factor = 0.6 
+			#	NOT = { OR = { officers = { OR = { pop_majority_ideology = conservative pop_majority_ideology = nationalist pop_majority_ideology = traditionalist } } soldiers = { OR = { pop_majority_ideology = conservative pop_majority_ideology = nationalist pop_majority_ideology = traditionalist } } } }
+			#}
+			#modifier = { 
+			#	factor = 6 
+			#	OR = { officers = { OR = { pop_majority_ideology = conservative pop_majority_ideology = nationalist pop_majority_ideology = traditionalist } } soldiers = { OR = { pop_majority_ideology = conservative pop_majority_ideology = nationalist pop_majority_ideology = traditionalist } } }
+			#}
 			modifier = { 
-				factor = 0.6 
-				NOT = { OR = { officers = { OR = { pop_majority_ideology = conservative pop_majority_ideology = nationalist pop_majority_ideology = traditionalist } } soldiers = { OR = { pop_majority_ideology = conservative pop_majority_ideology = nationalist pop_majority_ideology = traditionalist } } } }
+				factor = 0.3 #Military support
+				NOT = { average_militancy = 5 }
 			}
 			modifier = { 
-				factor = 6 
-				OR = { officers = { OR = { pop_majority_ideology = conservative pop_majority_ideology = nationalist pop_majority_ideology = traditionalist } } soldiers = { OR = { pop_majority_ideology = conservative pop_majority_ideology = nationalist pop_majority_ideology = traditionalist } } }
+				factor = 3 #Military support
+				average_militancy = 5
 			}
 		}
 	}

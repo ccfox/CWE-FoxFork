@@ -610,13 +610,21 @@ country_event = {
 
 		ai_chance = {
 			factor = 0.8 #Also go over leaders in Domper's list for modifiers associated with Stalin's later years?
+			#modifier = { 
+			#	factor = 0.6 #Represents support among the PMR leadership
+			#	NOT = { OR = { aristocrats = { pop_majority_ideology = communist } bureaucrats = { pop_majority_ideology = communist } } }
+			#}
+			#modifier = { 
+			#	factor = 6 #Represents support among the PMR leadership
+			#	OR = { aristocrats = { pop_majority_ideology = communist } bureaucrats = { pop_majority_ideology = communist } }
+			#}
 			modifier = { 
 				factor = 0.6 #Represents support among the PMR leadership
-				NOT = { OR = { aristocrats = { pop_majority_ideology = communist } bureaucrats = { pop_majority_ideology = communist } } }
+				NOT = { pop_majority_ideology = communist }
 			}
 			modifier = { 
 				factor = 6 #Represents support among the PMR leadership
-				OR = { aristocrats = { pop_majority_ideology = communist } bureaucrats = { pop_majority_ideology = communist } }
+				pop_majority_ideology = communist
 			}
 		}
 	}
@@ -655,13 +663,21 @@ country_event = {
 		
 		ai_chance = {
 			factor = 0.2
+			#modifier = { 
+			#	factor = 0.6 #Represents support among the PMR leadership
+			#	NOT = { OR = { aristocrats = { pop_majority_ideology = communist_social } bureaucrats = { pop_majority_ideology = communist_social } } }
+			#}
+			#modifier = { 
+			#	factor = 6 #Represents support among the PMR leadership
+			#	OR = { aristocrats = { pop_majority_ideology = communist_social } bureaucrats = { pop_majority_ideology = communist_social } }
+			#}
 			modifier = { 
 				factor = 0.6 #Represents support among the PMR leadership
-				NOT = { OR = { aristocrats = { pop_majority_ideology = communist_social } bureaucrats = { pop_majority_ideology = communist_social } } }
+				NOT = { pop_majority_ideology = communist_social }
 			}
 			modifier = { 
 				factor = 6 #Represents support among the PMR leadership
-				OR = { aristocrats = { pop_majority_ideology = communist_social } bureaucrats = { pop_majority_ideology = communist_social } }
+				pop_majority_ideology = communist_social
 			}
 		}
 	}
@@ -834,14 +850,14 @@ country_event = {
 		
 		ai_chance = {
 			factor = 0.8
-			modifier = { 
-				factor = 0.6 #Represents support among the PMR leadership
-				NOT = { OR = { aristocrats = { pop_majority_ideology = communist } bureaucrats = { pop_majority_ideology = communist } } }
-			}
-			modifier = { 
-				factor = 6 #Represents support among the PMR leadership
-				OR = { aristocrats = { pop_majority_ideology = communist } bureaucrats = { pop_majority_ideology = communist } }
-			}
+			#modifier = { 
+			#	factor = 0.6 #Represents support among the PMR leadership
+			#	NOT = { OR = { aristocrats = { pop_majority_ideology = communist } bureaucrats = { pop_majority_ideology = communist } } }
+			#}
+			#modifier = { 
+			#	factor = 6 #Represents support among the PMR leadership
+			#	OR = { aristocrats = { pop_majority_ideology = communist } bureaucrats = { pop_majority_ideology = communist } }
+			#}
 			modifier = {
 				factor = 3 #Represents support among the Great National Assembly
 				pop_majority_ideology = communist
@@ -891,14 +907,14 @@ country_event = {
 		
 		ai_chance = {
 			factor = 0.1
-			modifier = { 
-				factor = 0.6 #Represents support among the PMR leadership
-				NOT = { OR = { aristocrats = { pop_majority_ideology = communist_social } bureaucrats = { pop_majority_ideology = communist_social } } }
-			}
-			modifier = { 
-				factor = 6 #Represents support among the PMR leadership
-				OR = { aristocrats = { pop_majority_ideology = communist_social } bureaucrats = { pop_majority_ideology = communist_social } }
-			}
+			#modifier = { 
+			#	factor = 0.6 #Represents support among the PMR leadership
+			#	NOT = { OR = { aristocrats = { pop_majority_ideology = communist_social } bureaucrats = { pop_majority_ideology = communist_social } } }
+			#}
+			#modifier = { 
+			#	factor = 6 #Represents support among the PMR leadership
+			#	OR = { aristocrats = { pop_majority_ideology = communist_social } bureaucrats = { pop_majority_ideology = communist_social } }
+			#}
 			modifier = {
 				factor = 3 #Represents support among the Great National Assembly
 				pop_majority_ideology = communist_social
@@ -955,14 +971,14 @@ country_event = {
 		
 		ai_chance = {
 			factor = 0.1
-			modifier = { 
-				factor = 0.6 #Represents support among the PMR leadership
-				NOT = { OR = { aristocrats = { pop_majority_ideology = socialist } bureaucrats = { pop_majority_ideology = socialist } } }
-			}
-			modifier = { 
-				factor = 6 #Represents support among the PMR leadership
-				OR = { aristocrats = { pop_majority_ideology = socialist } bureaucrats = { pop_majority_ideology = socialist } }
-			}
+			#modifier = { 
+			#	factor = 0.6 #Represents support among the PMR leadership
+			#	NOT = { OR = { aristocrats = { pop_majority_ideology = socialist } bureaucrats = { pop_majority_ideology = socialist } } }
+			#}
+			#modifier = { 
+			#	factor = 6 #Represents support among the PMR leadership
+			#	OR = { aristocrats = { pop_majority_ideology = socialist } bureaucrats = { pop_majority_ideology = socialist } }
+			#}
 			modifier = {
 				factor = 0 #Represents support among the Great National Assembly
 				pop_majority_ideology = socialist
@@ -1076,14 +1092,14 @@ country_event = {
 		
 		ai_chance = {
 			factor = 0.8
-			modifier = { 
-				factor = 0.6 #Represents support among the PMR leadership
-				NOT = { OR = { aristocrats = { pop_majority_ideology = communist_social } bureaucrats = { pop_majority_ideology = communist_social } } }
-			}
-			modifier = { 
-				factor = 6 #Represents support among the PMR leadership
-				OR = { aristocrats = { pop_majority_ideology = communist_social } bureaucrats = { pop_majority_ideology = communist_social } }
-			}
+			#modifier = { 
+			#	factor = 0.6 #Represents support among the PMR leadership
+			#	NOT = { OR = { aristocrats = { pop_majority_ideology = communist_social } bureaucrats = { pop_majority_ideology = communist_social } } }
+			#}
+			#modifier = { 
+			#	factor = 6 #Represents support among the PMR leadership
+			#	OR = { aristocrats = { pop_majority_ideology = communist_social } bureaucrats = { pop_majority_ideology = communist_social } }
+			#}
 			modifier = {
 				factor = 3 #Represents support among the Great National Assembly
 				pop_majority_ideology = communist_social
@@ -1129,14 +1145,14 @@ country_event = {
 		
 		ai_chance = {
 			factor = 0.2
-			modifier = { 
-				factor = 0.6 #Represents support among the PMR leadership
-				NOT = { OR = { aristocrats = { pop_majority_ideology = communist_social } bureaucrats = { pop_majority_ideology = communist_social } } }
-			}
-			modifier = { 
-				factor = 6 #Represents support among the PMR leadership
-				OR = { aristocrats = { pop_majority_ideology = communist_social } bureaucrats = { pop_majority_ideology = communist_social } }
-			}
+			#modifier = { 
+			#	factor = 0.6 #Represents support among the PMR leadership
+			#	NOT = { OR = { aristocrats = { pop_majority_ideology = communist_social } bureaucrats = { pop_majority_ideology = communist_social } } }
+			#}
+			#modifier = { 
+			#	factor = 6 #Represents support among the PMR leadership
+			#	OR = { aristocrats = { pop_majority_ideology = communist_social } bureaucrats = { pop_majority_ideology = communist_social } }
+			#}
 			modifier = {
 				factor = 3 #Represents support among the Great National Assembly
 				pop_majority_ideology = communist_social
@@ -1203,14 +1219,14 @@ country_event = {
 
 		ai_chance = {
 			factor = 0.8
-			modifier = { 
-				factor = 0.6 #Represents support among the PMR leadership
-				NOT = { OR = { aristocrats = { pop_majority_ideology = communist_social } bureaucrats = { pop_majority_ideology = communist_social } } }
-			}
-			modifier = { 
-				factor = 6 #Represents support among the PMR leadership
-				OR = { aristocrats = { pop_majority_ideology = communist_social } bureaucrats = { pop_majority_ideology = communist_social } }
-			}
+			#modifier = { 
+			#	factor = 0.6 #Represents support among the PMR leadership
+			#	NOT = { OR = { aristocrats = { pop_majority_ideology = communist_social } bureaucrats = { pop_majority_ideology = communist_social } } }
+			#}
+			#modifier = { 
+			#	factor = 6 #Represents support among the PMR leadership
+			#	OR = { aristocrats = { pop_majority_ideology = communist_social } bureaucrats = { pop_majority_ideology = communist_social } }
+			#}
 			modifier = {
 				factor = 3 #Represents support among the Great National Assembly
 				pop_majority_ideology = communist_social
@@ -1219,22 +1235,22 @@ country_event = {
 				factor = 0.3 #Represents support among the Great National Assembly
 				NOT = { pop_majority_ideology = communist_social }
 			}
-			modifier = {
-				factor = 0.3 #Represents support among the Hungarian population
-				any_pop = { #I don't actually know if any_pop will work here
-					limit = { culture = hungarian }
-					pop_majority_ideology = communist
-				}
-			}
-			modifier = {
-				factor = 3 #Represents support among the Hungarian population
-				NOT = {
-					any_pop = {
-						limit = { culture = hungarian }
-						pop_majority_ideology = communist
-					}
-				}
-			}
+			#modifier = {
+			#	factor = 0.3 #Represents support among the Hungarian population
+			#	any_pop = { #I don't actually know if any_pop will work here
+			#		limit = { culture = hungarian }
+			#		pop_majority_ideology = communist
+			#	}
+			#}
+			#modifier = {
+			#	factor = 3 #Represents support among the Hungarian population
+			#	NOT = {
+			#		any_pop = {
+			#			limit = { culture = hungarian }
+			#			pop_majority_ideology = communist
+			#		}
+			#	}
+			#}
 		}
 		
 	}
@@ -1264,14 +1280,14 @@ country_event = {
 		
 		ai_chance = {
 			factor = 0.2
-			modifier = { 
-				factor = 0.6 #Represents support among the PMR leadership
-				NOT = { OR = { aristocrats = { pop_majority_ideology = communist_social } bureaucrats = { pop_majority_ideology = communist_social } } }
-			}
-			modifier = { 
-				factor = 6 #Represents support among the PMR leadership
-				OR = { aristocrats = { pop_majority_ideology = communist_social } bureaucrats = { pop_majority_ideology = communist_social } }
-			}
+			#modifier = { 
+			#	factor = 0.6 #Represents support among the PMR leadership
+			#	NOT = { OR = { aristocrats = { pop_majority_ideology = communist_social } bureaucrats = { pop_majority_ideology = communist_social } } }
+			#}
+			#modifier = { 
+			#	factor = 6 #Represents support among the PMR leadership
+			#	OR = { aristocrats = { pop_majority_ideology = communist_social } bureaucrats = { pop_majority_ideology = communist_social } }
+			#}
 			modifier = {
 				factor = 3 #Represents support among the Great National Assembly
 				pop_majority_ideology = communist_social
@@ -1280,22 +1296,22 @@ country_event = {
 				factor = 0.3 #Represents support among the Great National Assembly
 				NOT = { pop_majority_ideology = communist_social }
 			}
-			modifier = {
-				factor = 3 #Represents support among the Hungarian population
-				any_pop = {
-					limit = { culture = hungarian }
-					pop_majority_ideology = communist
-				}
-			}
-			modifier = {
-				factor = 0.3 #Represents support among the Hungarian population
-				NOT = {
-					any_pop = {
-						limit = { culture = hungarian }
-						pop_majority_ideology = communist
-					}
-				}
-			}
+			#modifier = {
+			#	factor = 3 #Represents support among the Hungarian population
+			#	any_pop = {
+			#		limit = { culture = hungarian }
+			#		pop_majority_ideology = communist
+			#	}
+			#}
+			#modifier = {
+			#	factor = 0.3 #Represents support among the Hungarian population
+			#	NOT = {
+			#		any_pop = {
+			#			limit = { culture = hungarian }
+			#			pop_majority_ideology = communist
+			#		}
+			#	}
+			#}
 		}
 		
 	}
@@ -1660,14 +1676,14 @@ country_event = {
 
 		ai_chance = {
 			factor = 0.8
-			modifier = { 
-				factor = 0.6 #Represents support among the PCR leadership
-				NOT = { OR = { aristocrats = { pop_majority_ideology = communist } bureaucrats = { pop_majority_ideology = communist } } }
-			}
-			modifier = { 
-				factor = 6 #Represents support among the PCR leadership
-				OR = { aristocrats = { pop_majority_ideology = communist } bureaucrats = { pop_majority_ideology = communist } }
-			}
+			#modifier = { 
+			#	factor = 0.6 #Represents support among the PCR leadership
+			#	NOT = { OR = { aristocrats = { pop_majority_ideology = communist } bureaucrats = { pop_majority_ideology = communist } } }
+			#}
+			#modifier = { 
+			#	factor = 6 #Represents support among the PCR leadership
+			#	OR = { aristocrats = { pop_majority_ideology = communist } bureaucrats = { pop_majority_ideology = communist } }
+			#}
 			modifier = {
 				factor = 3 #Represents support among the Great National Assembly
 				pop_majority_ideology = communist
@@ -1676,10 +1692,10 @@ country_event = {
 				factor = 0.3 #Represents support among the Great National Assembly
 				NOT = { pop_majority_ideology = communist }
 			}
-			modifier = { 
-				factor = 2 #Represents support among the PCR leadership
-				OR = { aristocrats = { pop_majority_ideology = nationalist } bureaucrats = { pop_majority_ideology = nationalist } }
-			}
+			#modifier = { 
+			#	factor = 2 #Represents support among the PCR leadership
+			#	OR = { aristocrats = { pop_majority_ideology = nationalist } bureaucrats = { pop_majority_ideology = nationalist } }
+			#}
 			modifier = {
 				factor = 2 #Represents support among the Great National Assembly
 				pop_majority_ideology = nationalist
@@ -1724,14 +1740,14 @@ country_event = {
 
 		ai_chance = {
 			factor = 0.2
-			modifier = { 
-				factor = 0.6 #Represents support among the PCR leadership
-				NOT = { OR = { aristocrats = { pop_majority_ideology = communist_social } bureaucrats = { pop_majority_ideology = communist_social } } }
-			}
-			modifier = { 
-				factor = 6 #Represents support among the PCR leadership
-				OR = { aristocrats = { pop_majority_ideology = communist_social } bureaucrats = { pop_majority_ideology = communist_social } }
-			}
+			#modifier = { 
+			#	factor = 0.6 #Represents support among the PCR leadership
+			#	NOT = { OR = { aristocrats = { pop_majority_ideology = communist_social } bureaucrats = { pop_majority_ideology = communist_social } } }
+			#}
+			#modifier = { 
+			#	factor = 6 #Represents support among the PCR leadership
+			#	OR = { aristocrats = { pop_majority_ideology = communist_social } bureaucrats = { pop_majority_ideology = communist_social } }
+			#}
 			modifier = {
 				factor = 3 #Represents support among the Great National Assembly
 				pop_majority_ideology = communist_social
@@ -1805,14 +1821,14 @@ country_event = {
 
 		ai_chance = {
 			factor = 0.8
-			modifier = { 
-				factor = 0.6 #Represents support among the PCR leadership
-				NOT = { OR = { aristocrats = { pop_majority_ideology = communist } bureaucrats = { pop_majority_ideology = communist } } }
-			}
-			modifier = { 
-				factor = 6 #Represents support among the PCR leadership
-				OR = { aristocrats = { pop_majority_ideology = communist } bureaucrats = { pop_majority_ideology = communist } }
-			}
+			#modifier = { 
+			#	factor = 0.6 #Represents support among the PCR leadership
+			#	NOT = { OR = { aristocrats = { pop_majority_ideology = communist } bureaucrats = { pop_majority_ideology = communist } } }
+			#}
+			#modifier = { 
+			#	factor = 6 #Represents support among the PCR leadership
+			#	OR = { aristocrats = { pop_majority_ideology = communist } bureaucrats = { pop_majority_ideology = communist } }
+			#}
 			modifier = {
 				factor = 3 #Represents support among the Great National Assembly
 				pop_majority_ideology = communist
@@ -1821,10 +1837,10 @@ country_event = {
 				factor = 0.3 #Represents support among the Great National Assembly
 				NOT = { pop_majority_ideology = communist }
 			}
-			modifier = { 
-				factor = 2 #Represents support among the PCR leadership
-				OR = { aristocrats = { pop_majority_ideology = nationalist } bureaucrats = { pop_majority_ideology = nationalist } }
-			}
+			#modifier = { 
+			#	factor = 2 #Represents support among the PCR leadership
+			#	OR = { aristocrats = { pop_majority_ideology = nationalist } bureaucrats = { pop_majority_ideology = nationalist } }
+			#}
 			modifier = {
 				factor = 2 #Represents support among the Great National Assembly
 				pop_majority_ideology = nationalist
@@ -1862,14 +1878,14 @@ country_event = {
 		
 		ai_chance = {
 			factor = 0.2
-			modifier = { 
-				factor = 0.6 #Represents support among the PCR leadership
-				NOT = { OR = { aristocrats = { pop_majority_ideology = communist_social } bureaucrats = { pop_majority_ideology = communist_social } } }
-			}
-			modifier = { 
-				factor = 6 #Represents support among the PCR leadership
-				OR = { aristocrats = { pop_majority_ideology = communist_social } bureaucrats = { pop_majority_ideology = communist_social } }
-			}
+			#modifier = { 
+			#	factor = 0.6 #Represents support among the PCR leadership
+			#	NOT = { OR = { aristocrats = { pop_majority_ideology = communist_social } bureaucrats = { pop_majority_ideology = communist_social } } }
+			#}
+			#modifier = { 
+			#	factor = 6 #Represents support among the PCR leadership
+			#	OR = { aristocrats = { pop_majority_ideology = communist_social } bureaucrats = { pop_majority_ideology = communist_social } }
+			#}
 			modifier = {
 				factor = 3 #Represents support among the Great National Assembly
 				pop_majority_ideology = communist_social
@@ -1947,14 +1963,14 @@ country_event = {
 
 		ai_chance = {
 			factor = 0.8
-			modifier = { 
-				factor = 0.6 #Represents support among the PCR leadership
-				NOT = { OR = { aristocrats = { pop_majority_ideology = communist } bureaucrats = { pop_majority_ideology = communist } } }
-			}
-			modifier = { 
-				factor = 6 #Represents support among the PCR leadership
-				OR = { aristocrats = { pop_majority_ideology = communist } bureaucrats = { pop_majority_ideology = communist } }
-			}
+			#modifier = { 
+			#	factor = 0.6 #Represents support among the PCR leadership
+			#	NOT = { OR = { aristocrats = { pop_majority_ideology = communist } bureaucrats = { pop_majority_ideology = communist } } }
+			#}
+			#modifier = { 
+			#	factor = 6 #Represents support among the PCR leadership
+			#	OR = { aristocrats = { pop_majority_ideology = communist } bureaucrats = { pop_majority_ideology = communist } }
+			#}
 			modifier = {
 				factor = 3 #Represents support among the Great National Assembly
 				pop_majority_ideology = communist
@@ -1963,10 +1979,10 @@ country_event = {
 				factor = 0.3 #Represents support among the Great National Assembly
 				NOT = { pop_majority_ideology = communist }
 			}
-			modifier = { 
-				factor = 2 #Represents support among the PCR leadership
-				OR = { aristocrats = { pop_majority_ideology = nationalist } bureaucrats = { pop_majority_ideology = nationalist } }
-			}
+			#modifier = { 
+			#	factor = 2 #Represents support among the PCR leadership
+			#	OR = { aristocrats = { pop_majority_ideology = nationalist } bureaucrats = { pop_majority_ideology = nationalist } }
+			#}
 			modifier = {
 				factor = 2 #Represents support among the Great National Assembly
 				pop_majority_ideology = nationalist
@@ -2007,14 +2023,14 @@ country_event = {
 		
 		ai_chance = {
 			factor = 0.2
-			modifier = { 
-				factor = 0.6 #Represents support among the PCR leadership
-				NOT = { OR = { aristocrats = { pop_majority_ideology = communist_social } bureaucrats = { pop_majority_ideology = communist_social } } }
-			}
-			modifier = { 
-				factor = 6 #Represents support among the PCR leadership
-				OR = { aristocrats = { pop_majority_ideology = communist_social } bureaucrats = { pop_majority_ideology = communist_social } }
-			}
+			#modifier = { 
+			#	factor = 0.6 #Represents support among the PCR leadership
+			#	NOT = { OR = { aristocrats = { pop_majority_ideology = communist_social } bureaucrats = { pop_majority_ideology = communist_social } } }
+			#}
+			#modifier = { 
+			#	factor = 6 #Represents support among the PCR leadership
+			#	OR = { aristocrats = { pop_majority_ideology = communist_social } bureaucrats = { pop_majority_ideology = communist_social } }
+			#}
 			modifier = {
 				factor = 3 #Represents support among the Great National Assembly
 				pop_majority_ideology = communist_social
@@ -2422,14 +2438,14 @@ country_event = {
 
 		ai_chance = {
 			factor = 0.8
-			modifier = { 
-				factor = 0.6 #Represents support among the PCR leadership
-				NOT = { OR = { aristocrats = { pop_majority_ideology = communist } bureaucrats = { pop_majority_ideology = communist } } }
-			}
-			modifier = { 
-				factor = 6 #Represents support among the PCR leadership
-				OR = { aristocrats = { pop_majority_ideology = communist } bureaucrats = { pop_majority_ideology = communist } }
-			}
+			#modifier = { 
+			#	factor = 0.6 #Represents support among the PCR leadership
+			#	NOT = { OR = { aristocrats = { pop_majority_ideology = communist } bureaucrats = { pop_majority_ideology = communist } } }
+			#}
+			#modifier = { 
+			#	factor = 6 #Represents support among the PCR leadership
+			#	OR = { aristocrats = { pop_majority_ideology = communist } bureaucrats = { pop_majority_ideology = communist } }
+			#}
 			modifier = {
 				factor = 3 #Represents support among the Great National Assembly
 				pop_majority_ideology = communist
@@ -2471,14 +2487,14 @@ country_event = {
 		
 		ai_chance = {
 			factor = 0.1
-			modifier = { 
-				factor = 0.6 #Represents support among the PCR leadership
-				NOT = { OR = { aristocrats = { pop_majority_ideology = communist_social } bureaucrats = { pop_majority_ideology = communist_social } } }
-			}
-			modifier = { 
-				factor = 6 #Represents support among the PCR leadership
-				OR = { aristocrats = { pop_majority_ideology = communist_social } bureaucrats = { pop_majority_ideology = communist_social } }
-			}
+			#modifier = { 
+			#	factor = 0.6 #Represents support among the PCR leadership
+			#	NOT = { OR = { aristocrats = { pop_majority_ideology = communist_social } bureaucrats = { pop_majority_ideology = communist_social } } }
+			#}
+			#modifier = { 
+			#	factor = 6 #Represents support among the PCR leadership
+			#	OR = { aristocrats = { pop_majority_ideology = communist_social } bureaucrats = { pop_majority_ideology = communist_social } }
+			#}
 			modifier = {
 				factor = 3 #Represents support among the Great National Assembly
 				pop_majority_ideology = communist_social
@@ -2570,14 +2586,14 @@ country_event = {
 
 		ai_chance = {
 			factor = 0.8
-			modifier = { 
-				factor = 0.6 #Represents support among the PCR leadership
-				NOT = { OR = { aristocrats = { pop_majority_ideology = communist } bureaucrats = { pop_majority_ideology = communist } } }
-			}
-			modifier = { 
-				factor = 6 #Represents support among the PCR leadership
-				OR = { aristocrats = { pop_majority_ideology = communist } bureaucrats = { pop_majority_ideology = communist } }
-			}
+			#modifier = { 
+			#	factor = 0.6 #Represents support among the PCR leadership
+			#	NOT = { OR = { aristocrats = { pop_majority_ideology = communist } bureaucrats = { pop_majority_ideology = communist } } }
+			#}
+			#modifier = { 
+			#	factor = 6 #Represents support among the PCR leadership
+			#	OR = { aristocrats = { pop_majority_ideology = communist } bureaucrats = { pop_majority_ideology = communist } }
+			#}
 			modifier = {
 				factor = 3 #Represents support among the Great National Assembly
 				pop_majority_ideology = communist
@@ -2617,14 +2633,14 @@ country_event = {
 		
 		ai_chance = {
 			factor = 0.2
-			modifier = { 
-				factor = 0.6 #Represents support among the PCR leadership
-				NOT = { OR = { aristocrats = { pop_majority_ideology = communist_social } bureaucrats = { pop_majority_ideology = communist_social } } }
-			}
-			modifier = { 
-				factor = 6 #Represents support among the PCR leadership
-				OR = { aristocrats = { pop_majority_ideology = communist_social } bureaucrats = { pop_majority_ideology = communist_social } }
-			}
+			#modifier = { 
+			#	factor = 0.6 #Represents support among the PCR leadership
+			#	NOT = { OR = { aristocrats = { pop_majority_ideology = communist_social } bureaucrats = { pop_majority_ideology = communist_social } } }
+			#}
+			#modifier = { 
+			#	factor = 6 #Represents support among the PCR leadership
+			#	OR = { aristocrats = { pop_majority_ideology = communist_social } bureaucrats = { pop_majority_ideology = communist_social } }
+			#}
 			modifier = {
 				factor = 3 #Represents support among the Great National Assembly
 				pop_majority_ideology = communist_social
@@ -2719,14 +2735,14 @@ country_event = {
 		
 		ai_chance = {
 			factor = 0.8
-			modifier = { 
-				factor = 0.6 #Represents support among the PCR leadership
-				NOT = { OR = { aristocrats = { pop_majority_ideology = communist } bureaucrats = { pop_majority_ideology = communist } } }
-			}
-			modifier = { 
-				factor = 6 #Represents support among the PCR leadership
-				OR = { aristocrats = { pop_majority_ideology = communist } bureaucrats = { pop_majority_ideology = communist } }
-			}
+			#modifier = { 
+			#	factor = 0.6 #Represents support among the PCR leadership
+			#	NOT = { OR = { aristocrats = { pop_majority_ideology = communist } bureaucrats = { pop_majority_ideology = communist } } }
+			#}
+			#modifier = { 
+			#	factor = 6 #Represents support among the PCR leadership
+			#	OR = { aristocrats = { pop_majority_ideology = communist } bureaucrats = { pop_majority_ideology = communist } }
+			#}
 			modifier = {
 				factor = 3 #Represents support among the Great National Assembly
 				pop_majority_ideology = communist
@@ -2759,14 +2775,14 @@ country_event = {
 		
 		ai_chance = {
 			factor = 0.2
-			modifier = { 
-				factor = 0.6 #Represents support among the PCR leadership
-				NOT = { OR = { aristocrats = { pop_majority_ideology = communist_social } bureaucrats = { pop_majority_ideology = communist_social } } }
-			}
-			modifier = { 
-				factor = 6 #Represents support among the PCR leadership
-				OR = { aristocrats = { pop_majority_ideology = communist_social } bureaucrats = { pop_majority_ideology = communist_social } }
-			}
+			#modifier = { 
+			#	factor = 0.6 #Represents support among the PCR leadership
+			#	NOT = { OR = { aristocrats = { pop_majority_ideology = communist_social } bureaucrats = { pop_majority_ideology = communist_social } } }
+			#}
+			#modifier = { 
+			#	factor = 6 #Represents support among the PCR leadership
+			#	OR = { aristocrats = { pop_majority_ideology = communist_social } bureaucrats = { pop_majority_ideology = communist_social } }
+			#}
 			modifier = {
 				factor = 3 #Represents support among the Great National Assembly
 				pop_majority_ideology = communist_social
@@ -2902,14 +2918,14 @@ country_event = {
 		
 		ai_chance = {
 			factor = 0.8
-			modifier = { 
-				factor = 0.6 #Represents support among the PCR leadership
-				NOT = { OR = { aristocrats = { pop_majority_ideology = communist } bureaucrats = { pop_majority_ideology = communist } } }
-			}
-			modifier = { 
-				factor = 6 #Represents support among the PCR leadership
-				OR = { aristocrats = { pop_majority_ideology = communist } bureaucrats = { pop_majority_ideology = communist } }
-			}
+			#modifier = { 
+			#	factor = 0.6 #Represents support among the PCR leadership
+			#	NOT = { OR = { aristocrats = { pop_majority_ideology = communist } bureaucrats = { pop_majority_ideology = communist } } }
+			#}
+			#modifier = { 
+			#	factor = 6 #Represents support among the PCR leadership
+			#	OR = { aristocrats = { pop_majority_ideology = communist } bureaucrats = { pop_majority_ideology = communist } }
+			#}
 			modifier = {
 				factor = 3 #Represents support among the Great National Assembly
 				pop_majority_ideology = communist
@@ -2952,14 +2968,14 @@ country_event = {
 		
 		ai_chance = {
 			factor = 0.2
-			modifier = { 
-				factor = 0.6 #Represents support among the PCR leadership
-				NOT = { OR = { aristocrats = { OR = { pop_majority_ideology = socialist pop_majority_ideology = communist_social } } bureaucrats = { OR = { pop_majority_ideology = socialist pop_majority_ideology = communist_social } } } }
-			}
-			modifier = { 
-				factor = 6 #Represents support among the PCR leadership
-				OR = { aristocrats = { OR = { pop_majority_ideology = socialist pop_majority_ideology = communist_social } } bureaucrats = { OR = { pop_majority_ideology = socialist pop_majority_ideology = communist_social } } }
-			}
+			#modifier = { 
+			#	factor = 0.6 #Represents support among the PCR leadership
+			#	NOT = { OR = { aristocrats = { OR = { pop_majority_ideology = socialist pop_majority_ideology = communist_social } } bureaucrats = { OR = { pop_majority_ideology = socialist pop_majority_ideology = communist_social } } } }
+			#}
+			#modifier = { 
+			#	factor = 6 #Represents support among the PCR leadership
+			#	OR = { aristocrats = { OR = { pop_majority_ideology = socialist pop_majority_ideology = communist_social } } bureaucrats = { OR = { pop_majority_ideology = socialist pop_majority_ideology = communist_social } } }
+			#}
 			modifier = {
 				factor = 3 #Represents support among the Great National Assembly
 				OR = { pop_majority_ideology = socialist pop_majority_ideology = communist_social }
@@ -3023,14 +3039,14 @@ country_event = {
 		
 		ai_chance = {
 			factor = 0.8
-			modifier = { 
-				factor = 0.6 #Represents support among the PCR leadership
-				NOT = { OR = { aristocrats = { pop_majority_ideology = communist } bureaucrats = { pop_majority_ideology = communist } } }
-			}
-			modifier = { 
-				factor = 6 #Represents support among the PCR leadership
-				OR = { aristocrats = { pop_majority_ideology = communist } bureaucrats = { pop_majority_ideology = communist } }
-			}
+			#modifier = { 
+			#	factor = 0.6 #Represents support among the PCR leadership
+			#	NOT = { OR = { aristocrats = { pop_majority_ideology = communist } bureaucrats = { pop_majority_ideology = communist } } }
+			#}
+			#modifier = { 
+			#	factor = 6 #Represents support among the PCR leadership
+			#	OR = { aristocrats = { pop_majority_ideology = communist } bureaucrats = { pop_majority_ideology = communist } }
+			#}
 			modifier = {
 				factor = 3 #Represents support among the Great National Assembly
 				pop_majority_ideology = communist
@@ -3074,14 +3090,14 @@ country_event = {
 		
 		ai_chance = {
 			factor = 0.2
-			modifier = { 
-				factor = 0.6 #Represents support among the PCR leadership
-				NOT = { OR = { aristocrats = { pop_majority_ideology = communist_social } bureaucrats = { pop_majority_ideology = communist_social } } }
-			}
-			modifier = { 
-				factor = 6 #Represents support among the PCR leadership
-				OR = { aristocrats = { pop_majority_ideology = communist_social } bureaucrats = { pop_majority_ideology = communist_social } }
-			}
+			#modifier = { 
+			#	factor = 0.6 #Represents support among the PCR leadership
+			#	NOT = { OR = { aristocrats = { pop_majority_ideology = communist_social } bureaucrats = { pop_majority_ideology = communist_social } } }
+			#}
+			#modifier = { 
+			#	factor = 6 #Represents support among the PCR leadership
+			#	OR = { aristocrats = { pop_majority_ideology = communist_social } bureaucrats = { pop_majority_ideology = communist_social } }
+			#}
 			modifier = {
 				factor = 3 #Represents support among the Great National Assembly
 				pop_majority_ideology = communist_social
@@ -3146,14 +3162,14 @@ country_event = {
 		
 		ai_chance = { 
 			factor = 0.8
-			modifier = { 
-				factor = 0.6 #Represents support among the PCR leadership
-				NOT = { OR = { aristocrats = { OR = { pop_majority_ideology = communist_social pop_majority_ideology = socialist pop_majority_ideology = liberal } } bureaucrats = { OR = { pop_majority_ideology = communist_social pop_majority_ideology = socialist pop_majority_ideology = liberal } } } }
-			}
-			modifier = { 
-				factor = 6 #Represents support among the PCR leadership
-				OR = { aristocrats = { OR = { pop_majority_ideology = communist_social pop_majority_ideology = socialist pop_majority_ideology = liberal } } bureaucrats = { OR = { pop_majority_ideology = communist_social pop_majority_ideology = socialist pop_majority_ideology = liberal } } }
-			}
+			#modifier = { 
+			#	factor = 0.6 #Represents support among the PCR leadership
+			#	NOT = { OR = { aristocrats = { OR = { pop_majority_ideology = communist_social pop_majority_ideology = socialist pop_majority_ideology = liberal } } bureaucrats = { OR = { pop_majority_ideology = communist_social pop_majority_ideology = socialist pop_majority_ideology = liberal } } } }
+			#}
+			#modifier = { 
+			#	factor = 6 #Represents support among the PCR leadership
+			#	OR = { aristocrats = { OR = { pop_majority_ideology = communist_social pop_majority_ideology = socialist pop_majority_ideology = liberal } } bureaucrats = { OR = { pop_majority_ideology = communist_social pop_majority_ideology = socialist pop_majority_ideology = liberal } } }
+			#}
 			modifier = {
 				factor = 3 #Represents support among the Great National Assembly
 				OR = { pop_majority_ideology = communist_social pop_majority_ideology = socialist pop_majority_ideology = liberal }
@@ -3195,14 +3211,14 @@ country_event = {
 		
 		ai_chance = {
 			factor = 0.2
-			modifier = { 
-				factor = 0.6 #Represents support among the PCR leadership
-				NOT = { OR = { aristocrats = { pop_majority_ideology = communist } bureaucrats = { pop_majority_ideology = communist } } }
-			}
-			modifier = { 
-				factor = 6 #Represents support among the PCR leadership
-				OR = { aristocrats = { pop_majority_ideology = communist } bureaucrats = { pop_majority_ideology = communist } }
-			}
+			#modifier = { 
+			#	factor = 0.6 #Represents support among the PCR leadership
+			#	NOT = { OR = { aristocrats = { pop_majority_ideology = communist } bureaucrats = { pop_majority_ideology = communist } } }
+			#}
+			#modifier = { 
+			#	factor = 6 #Represents support among the PCR leadership
+			#	OR = { aristocrats = { pop_majority_ideology = communist } bureaucrats = { pop_majority_ideology = communist } }
+			#}
 			modifier = {
 				factor = 3 #Represents support among the Great National Assembly
 				pop_majority_ideology = communist
@@ -3474,13 +3490,21 @@ country_event = {
 		
 		ai_chance = {
 			factor = 0.8
-			modifier = { 
-				factor = 0.3 #Represents support among the FDSN leadership
-				NOT = { OR = { aristocrats = { OR = { pop_majority_ideology = communist pop_majority_ideology = communist_social } } bureaucrats = { OR = { pop_majority_ideology = communist pop_majority_ideology = communist_social } } } }
+			#modifier = { 
+			#	factor = 0.3 #Represents support among the FDSN leadership
+			#	NOT = { OR = { aristocrats = { OR = { pop_majority_ideology = communist pop_majority_ideology = communist_social } } bureaucrats = { OR = { pop_majority_ideology = communist pop_majority_ideology = communist_social } } } }
+			#}
+			#modifier = { 
+			#	factor = 3 #Represents support among the FDSN leadership
+			#	OR = { aristocrats = { OR = { pop_majority_ideology = communist pop_majority_ideology = communist_social } } bureaucrats = { OR = { pop_majority_ideology = communist pop_majority_ideology = communist_social } } }
+			#}
+			modifier = {
+				factor = 0.6
+				average_militancy = 6
 			}
-			modifier = { 
-				factor = 3 #Represents support among the FDSN leadership
-				OR = { aristocrats = { OR = { pop_majority_ideology = communist pop_majority_ideology = communist_social } } bureaucrats = { OR = { pop_majority_ideology = communist pop_majority_ideology = communist_social } } }
+			modifier = {
+				factor = 6
+				NOT = { average_militancy = 6 }
 			}
 		}
 	}
@@ -3547,13 +3571,21 @@ country_event = {
 		
 		ai_chance = {
 			factor = 0.2
-			modifier = { 
-				factor = 6 #Represents support among the FDSN leadership
-				NOT = { OR = { aristocrats = { OR = { pop_majority_ideology = communist pop_majority_ideology = communist_social } } bureaucrats = { OR = { pop_majority_ideology = communist pop_majority_ideology = communist_social } } } }
+			#modifier = { 
+			#	factor = 6 #Represents support among the FDSN leadership
+			#	NOT = { OR = { aristocrats = { OR = { pop_majority_ideology = communist pop_majority_ideology = communist_social } } bureaucrats = { OR = { pop_majority_ideology = communist pop_majority_ideology = communist_social } } } }
+			#}
+			#modifier = { 
+			#	factor = 0.6 #Represents support among the FDSN leadership
+			#	OR = { aristocrats = { OR = { pop_majority_ideology = communist pop_majority_ideology = communist_social } } bureaucrats = { OR = { pop_majority_ideology = communist pop_majority_ideology = communist_social } } }
+			#}
+			modifier = {
+				factor = 6
+				average_militancy = 6
 			}
-			modifier = { 
-				factor = 0.6 #Represents support among the FDSN leadership
-				OR = { aristocrats = { OR = { pop_majority_ideology = communist pop_majority_ideology = communist_social } } bureaucrats = { OR = { pop_majority_ideology = communist pop_majority_ideology = communist_social } } }
+			modifier = {
+				factor = 0.6
+				NOT = { average_militancy = 6 }
 			}
 		}
 	}
@@ -3652,13 +3684,21 @@ country_event = {
 		
 		ai_chance = {
 			factor = 0.8
-			modifier = { 
-				factor = 0.3 #Represents support among the FDSN leadership
-				NOT = { OR = { aristocrats = { OR = { pop_majority_ideology = communist pop_majority_ideology = communist_social } } bureaucrats = { OR = { pop_majority_ideology = communist pop_majority_ideology = communist_social } } } }
+			#modifier = { 
+			#	factor = 0.3 #Represents support among the FDSN leadership
+			#	NOT = { OR = { aristocrats = { OR = { pop_majority_ideology = communist pop_majority_ideology = communist_social } } bureaucrats = { OR = { pop_majority_ideology = communist pop_majority_ideology = communist_social } } } }
+			#}
+			#modifier = { 
+			#	factor = 3 #Represents support among the FDSN leadership
+			#	OR = { aristocrats = { OR = { pop_majority_ideology = communist pop_majority_ideology = communist_social } } bureaucrats = { OR = { pop_majority_ideology = communist pop_majority_ideology = communist_social } } }
+			#}
+			modifier = {
+				factor = 0.6
+				average_militancy = 6
 			}
-			modifier = { 
-				factor = 3 #Represents support among the FDSN leadership
-				OR = { aristocrats = { OR = { pop_majority_ideology = communist pop_majority_ideology = communist_social } } bureaucrats = { OR = { pop_majority_ideology = communist pop_majority_ideology = communist_social } } }
+			modifier = {
+				factor = 6
+				NOT = { average_militancy = 6 }
 			}
 		}
 	}
@@ -3726,13 +3766,21 @@ country_event = {
 		
 		ai_chance = {
 			factor = 0.2
-			modifier = { 
-				factor = 6 #Represents support among the FDSN leadership
-				NOT = { OR = { aristocrats = { OR = { pop_majority_ideology = communist pop_majority_ideology = communist_social } } bureaucrats = { OR = { pop_majority_ideology = communist pop_majority_ideology = communist_social } } } }
+			#modifier = { 
+			#	factor = 6 #Represents support among the FDSN leadership
+			#	NOT = { OR = { aristocrats = { OR = { pop_majority_ideology = communist pop_majority_ideology = communist_social } } bureaucrats = { OR = { pop_majority_ideology = communist pop_majority_ideology = communist_social } } } }
+			#}
+			#modifier = { 
+			#	factor = 0.6 #Represents support among the FDSN leadership
+			#	OR = { aristocrats = { OR = { pop_majority_ideology = communist pop_majority_ideology = communist_social } } bureaucrats = { OR = { pop_majority_ideology = communist pop_majority_ideology = communist_social } } }
+			#}
+			modifier = {
+				factor = 6
+				average_militancy = 6
 			}
-			modifier = { 
-				factor = 0.6 #Represents support among the FDSN leadership
-				OR = { aristocrats = { OR = { pop_majority_ideology = communist pop_majority_ideology = communist_social } } bureaucrats = { OR = { pop_majority_ideology = communist pop_majority_ideology = communist_social } } }
+			modifier = {
+				factor = 0.6
+				NOT = { average_militancy = 6 }
 			}
 		}
 	}
@@ -4692,14 +4740,14 @@ country_event = {
 
 		ai_chance = {
 			factor = 0.8
-			modifier = { 
-				factor = 0.6 #Represents support among the PCR leadership
-				NOT = { OR = { aristocrats = { pop_majority_ideology = communist } bureaucrats = { pop_majority_ideology = communist } } }
-			}
-			modifier = { 
-				factor = 6 #Represents support among the PCR leadership
-				OR = { aristocrats = { pop_majority_ideology = communist } bureaucrats = { pop_majority_ideology = communist } }
-			}
+			#modifier = { 
+			#	factor = 0.6 #Represents support among the PCR leadership
+			#	NOT = { OR = { aristocrats = { pop_majority_ideology = communist } bureaucrats = { pop_majority_ideology = communist } } }
+			#}
+			#modifier = { 
+			#	factor = 6 #Represents support among the PCR leadership
+			#	OR = { aristocrats = { pop_majority_ideology = communist } bureaucrats = { pop_majority_ideology = communist } }
+			#}
 			modifier = {
 				factor = 3 #Represents support among the Great National Assembly
 				pop_majority_ideology = communist
@@ -4735,14 +4783,14 @@ country_event = {
 		
 		ai_chance = {
 			factor = 0.2
-			modifier = { 
-				factor = 0.6 #Represents support among the PCR leadership
-				NOT = { OR = { aristocrats = { pop_majority_ideology = communist_social } bureaucrats = { pop_majority_ideology = communist_social } } }
-			}
-			modifier = { 
-				factor = 6 #Represents support among the PCR leadership
-				OR = { aristocrats = { pop_majority_ideology = communist_social } bureaucrats = { pop_majority_ideology = communist_social } }
-			}
+			#modifier = { 
+			#	factor = 0.6 #Represents support among the PCR leadership
+			#	NOT = { OR = { aristocrats = { pop_majority_ideology = communist_social } bureaucrats = { pop_majority_ideology = communist_social } } }
+			#}
+			#modifier = { 
+			#	factor = 6 #Represents support among the PCR leadership
+			#	OR = { aristocrats = { pop_majority_ideology = communist_social } bureaucrats = { pop_majority_ideology = communist_social } }
+			#}
 			modifier = {
 				factor = 3 #Represents support among the Great National Assembly
 				pop_majority_ideology = communist_social
