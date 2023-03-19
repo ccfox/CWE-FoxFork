@@ -108,14 +108,14 @@ country_event = {
 
 		ai_chance = {
 			factor = 0.8
-			modifier = { 
-				factor = 6 #Represents support among the CPSU leadership
-				OR = { aristocrats = { pop_majority_ideology = communist_social } bureaucrats = { pop_majority_ideology = communist_social } }
-			}
-			modifier = { 
-				factor = 0.6 #Represents support among the CPSU leadership
-				NOT = { OR = { aristocrats = { pop_majority_ideology = communist_social } bureaucrats = { pop_majority_ideology = communist_social } } }
-			}
+			#modifier = { 
+			#	factor = 6 #Represents support among the CPSU leadership
+			#	OR = { aristocrats = { pop_majority_ideology = communist_social } bureaucrats = { pop_majority_ideology = communist_social } }
+			#}
+			#modifier = { 
+			#	factor = 0.6 #Represents support among the CPSU leadership
+			#	NOT = { OR = { aristocrats = { pop_majority_ideology = communist_social } bureaucrats = { pop_majority_ideology = communist_social } } }
+			#}
 			modifier = {
 				factor = 3 #Represents support among the Supreme Soviet
 				pop_majority_ideology = communist_social
@@ -147,14 +147,14 @@ country_event = {
 		
 		ai_chance = {
 			factor = 0.1
-			modifier = { 
-				factor = 6 #Represents support among the CPSU leadership
-				OR = { aristocrats = { pop_majority_ideology = communist } bureaucrats = { pop_majority_ideology = communist } }
-			}
-			modifier = { 
-				factor = 0.6 #Represents support among the CPSU leadership
-				NOT = { OR = { aristocrats = { pop_majority_ideology = communist } bureaucrats = { pop_majority_ideology = communist } } }
-			}
+			#modifier = { 
+			#	factor = 6 #Represents support among the CPSU leadership
+			#	OR = { aristocrats = { pop_majority_ideology = communist } bureaucrats = { pop_majority_ideology = communist } }
+			#}
+			#modifier = { 
+			#	factor = 0.6 #Represents support among the CPSU leadership
+			#	NOT = { OR = { aristocrats = { pop_majority_ideology = communist } bureaucrats = { pop_majority_ideology = communist } } }
+			#}
 			modifier = {
 				factor = 3 #Represents support among the Supreme Soviet
 				pop_majority_ideology = communist
@@ -215,14 +215,14 @@ country_event = {
 		
 		ai_chance = {
 			factor = 0.05
-			modifier = { 
-				factor = 6 #Represents support among the CPSU leadership
-				OR = { aristocrats = { pop_majority_ideology = liberal } bureaucrats = { pop_majority_ideology = liberal } }
-			}
-			modifier = { 
-				factor = 0.6 #Represents support among the CPSU leadership
-				NOT = { OR = { aristocrats = { pop_majority_ideology = liberal } bureaucrats = { pop_majority_ideology = liberal } } }
-			}
+			#modifier = { 
+			#	factor = 6 #Represents support among the CPSU leadership
+			#	OR = { aristocrats = { pop_majority_ideology = liberal } bureaucrats = { pop_majority_ideology = liberal } }
+			#}
+			#modifier = { 
+			#	factor = 0.6 #Represents support among the CPSU leadership
+			#	NOT = { OR = { aristocrats = { pop_majority_ideology = liberal } bureaucrats = { pop_majority_ideology = liberal } } }
+			#}
 			modifier = {
 				factor = 3 #Represents support among the Supreme Soviet
 				pop_majority_ideology = liberal
@@ -249,14 +249,14 @@ country_event = {
 		
 		ai_chance = {
 			factor = 0.05
-			modifier = { 
-				factor = 6 #Represents support among the CPSU leadership
-				OR = { aristocrats = { pop_majority_ideology = socialist } bureaucrats = { pop_majority_ideology = socialist } }
-			}
-			modifier = { 
-				factor = 0.6 #Represents support among the CPSU leadership
-				NOT = { OR = { aristocrats = { pop_majority_ideology = socialist } bureaucrats = { pop_majority_ideology = socialist } } }
-			}
+			#modifier = { 
+			#	factor = 6 #Represents support among the CPSU leadership
+			#	OR = { aristocrats = { pop_majority_ideology = socialist } bureaucrats = { pop_majority_ideology = socialist } }
+			#}
+			#modifier = { 
+			#	factor = 0.6 #Represents support among the CPSU leadership
+			#	NOT = { OR = { aristocrats = { pop_majority_ideology = socialist } bureaucrats = { pop_majority_ideology = socialist } } }
+			#}
 			modifier = {
 				factor = 3 #Represents support among the Supreme Soviet
 				pop_majority_ideology = socialist
@@ -332,14 +332,14 @@ country_event = {
 
 		ai_chance = {
 			factor = 0.8
-			modifier = { 
-				factor = 0.6 #Represents support among the CPSU leadership
-				NOT = { OR = { aristocrats = { pop_majority_ideology = communist_social } bureaucrats = { pop_majority_ideology = communist_social } } }
-			}
-			modifier = { 
-				factor = 6 #Represents support among the CPSU leadership
-				OR = { aristocrats = { pop_majority_ideology = communist_social } bureaucrats = { pop_majority_ideology = communist_social } }
-			}
+			#modifier = { 
+			#	factor = 0.6 #Represents support among the CPSU leadership
+			#	NOT = { OR = { aristocrats = { pop_majority_ideology = communist_social } bureaucrats = { pop_majority_ideology = communist_social } } }
+			#}
+			#modifier = { 
+			#	factor = 6 #Represents support among the CPSU leadership
+			#	OR = { aristocrats = { pop_majority_ideology = communist_social } bureaucrats = { pop_majority_ideology = communist_social } }
+			#}
 		}
 	}
 
@@ -351,14 +351,14 @@ country_event = {
 		
 		ai_chance = {
 			factor = 0.2
-			modifier = { 
-				factor = 6 #Represents support among the CPSU leadership
-				OR = { aristocrats = { pop_majority_ideology = communist } bureaucrats = { pop_majority_ideology = communist } }
-			}
-			modifier = { 
-				factor = 0.6 #Represents support among the CPSU leadership
-				NOT = { OR = { aristocrats = { pop_majority_ideology = communist } bureaucrats = { pop_majority_ideology = communist } } }
-			}
+			#modifier = { 
+			#	factor = 6 #Represents support among the CPSU leadership
+			#	OR = { aristocrats = { pop_majority_ideology = communist } bureaucrats = { pop_majority_ideology = communist } }
+			#}
+			#modifier = { 
+			#	factor = 0.6 #Represents support among the CPSU leadership
+			#	NOT = { OR = { aristocrats = { pop_majority_ideology = communist } bureaucrats = { pop_majority_ideology = communist } } }
+			#}
 		}
 	}
 
@@ -1174,10 +1174,10 @@ country_event = {
 		country_event = 9001024
 		ai_chance = {
 			factor = 0.8
-			modifier = { 
-				factor = 0.3 #Represents support among the CPSU leadership
-				NOT = { OR = { aristocrats = { pop_majority_ideology = communist_social } bureaucrats = { pop_majority_ideology = communist_social } } }
-			}
+			#modifier = { 
+			#	factor = 0.3 #Represents support among the CPSU leadership
+			#	NOT = { OR = { aristocrats = { pop_majority_ideology = communist_social } bureaucrats = { pop_majority_ideology = communist_social } } }
+			#}
 		}
 	}
 	
@@ -1186,14 +1186,14 @@ country_event = {
 		country_event = 9001025
 		ai_chance = {
 			factor = 0.2
-			modifier = { 
-				factor = 6 #Represents support among the CPSU leadership
-				OR = { aristocrats = { pop_majority_ideology = communist } bureaucrats = { pop_majority_ideology = communist } }
-			}
-			modifier = { 
-				factor = 3 #Represents support among the CPSU leadership
-				OR = { aristocrats = { pop_majority_ideology = socialist } bureaucrats = { pop_majority_ideology = socialist } }
-			}
+			#modifier = { 
+			#	factor = 6 #Represents support among the CPSU leadership
+			#	OR = { aristocrats = { pop_majority_ideology = communist } bureaucrats = { pop_majority_ideology = communist } }
+			#}
+			#modifier = { 
+			#	factor = 3 #Represents support among the CPSU leadership
+			#	OR = { aristocrats = { pop_majority_ideology = socialist } bureaucrats = { pop_majority_ideology = socialist } }
+			#}
 		}
 	}
 }

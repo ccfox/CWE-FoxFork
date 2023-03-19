@@ -59,14 +59,14 @@ country_event = {
 		
 		ai_chance = {
 			factor = 0.6
-			modifier = { 
-				factor = 0.6
-				NOT = { OR = { aristocrats = { OR = { pop_majority_ideology = communist pop_majority_ideology = socialist } } bureaucrats = { OR = { pop_majority_ideology = communist pop_majority_ideology = socialist } } } }
-			}
-			modifier = { 
-				factor = 6
-				OR = { aristocrats = { OR = { pop_majority_ideology = communist pop_majority_ideology = socialist } } bureaucrats = { OR = { pop_majority_ideology = communist pop_majority_ideology = socialist } } }
-			}
+			#modifier = { 
+			#	factor = 0.6
+			#	NOT = { OR = { aristocrats = { OR = { pop_majority_ideology = communist pop_majority_ideology = socialist } } bureaucrats = { OR = { pop_majority_ideology = communist pop_majority_ideology = socialist } } } }
+			#}
+			#modifier = { 
+			#	factor = 6
+			#	OR = { aristocrats = { OR = { pop_majority_ideology = communist pop_majority_ideology = socialist } } bureaucrats = { OR = { pop_majority_ideology = communist pop_majority_ideology = socialist } } }
+			#}
 		}
 	}
 
@@ -121,14 +121,14 @@ country_event = {
 		
 		ai_chance = {
 			factor = 0.4
-			modifier = { 
-				factor = 0.6
-				NOT = { OR = { aristocrats = { pop_majority_ideology = communist_social } bureaucrats = { pop_majority_ideology = communist_social } } }
-			}
-			modifier = { 
-				factor = 6
-				OR = { aristocrats = { pop_majority_ideology = communist_social } bureaucrats = { pop_majority_ideology = communist_social } }
-			}
+			#modifier = { 
+			#	factor = 0.6
+			#	NOT = { OR = { aristocrats = { pop_majority_ideology = communist_social } bureaucrats = { pop_majority_ideology = communist_social } } }
+			#}
+			#modifier = { 
+			#	factor = 6
+			#	OR = { aristocrats = { pop_majority_ideology = communist_social } bureaucrats = { pop_majority_ideology = communist_social } }
+			#}
 		}
 	}
 	
@@ -355,14 +355,14 @@ country_event = {
 		}
 		ai_chance = {
 			factor = 0.8
-			modifier = { 
-				factor = 0.6
-				NOT = { OR = { aristocrats = { pop_majority_ideology = communist } bureaucrats = { pop_majority_ideology = communist } } }
-			}
-			modifier = { 
-				factor = 6
-				OR = { aristocrats = { pop_majority_ideology = communist } bureaucrats = { pop_majority_ideology = communist } }
-			}
+			#modifier = { 
+			#	factor = 0.6
+			#	NOT = { OR = { aristocrats = { pop_majority_ideology = communist } bureaucrats = { pop_majority_ideology = communist } } }
+			#}
+			#modifier = { 
+			#	factor = 6
+			#	OR = { aristocrats = { pop_majority_ideology = communist } bureaucrats = { pop_majority_ideology = communist } }
+			#}
 			modifier = { 
 				factor = 3
 				has_country_flag = gre_white_terror
@@ -407,14 +407,14 @@ country_event = {
 		}
 		ai_chance = {
 			factor = 0.2
-			modifier = { 
-				factor = 0.6
-				NOT = { OR = { aristocrats = { OR = { pop_majority_ideology = communist_social pop_majority_ideology = socialist } } bureaucrats = { OR = { pop_majority_ideology = communist_social pop_majority_ideology = socialist } } } }
-			}
-			modifier = { 
-				factor = 6
-				OR = { aristocrats = { OR = { pop_majority_ideology = communist_social pop_majority_ideology = socialist } } bureaucrats = { OR = { pop_majority_ideology = communist_social pop_majority_ideology = socialist } } }
-			}
+			#modifier = { 
+			#	factor = 0.6
+			#	NOT = { OR = { aristocrats = { OR = { pop_majority_ideology = communist_social pop_majority_ideology = socialist } } bureaucrats = { OR = { pop_majority_ideology = communist_social pop_majority_ideology = socialist } } } }
+			#}
+			#modifier = { 
+			#	factor = 6
+			#	OR = { aristocrats = { OR = { pop_majority_ideology = communist_social pop_majority_ideology = socialist } } bureaucrats = { OR = { pop_majority_ideology = communist_social pop_majority_ideology = socialist } } }
+			#}
 			modifier = { 
 				factor = 0.3
 				has_country_flag = gre_white_terror
@@ -792,14 +792,14 @@ country_event = {
 		
 		ai_chance = { 
 			factor = 0.8
-			modifier = { 
-				factor = 0.6
-				NOT = { OR = { aristocrats = { pop_majority_ideology = communist } bureaucrats = { pop_majority_ideology = communist } } }
-			}
-			modifier = { 
-				factor = 6
-				OR = { aristocrats = { pop_majority_ideology = communist } bureaucrats = { pop_majority_ideology = communist } }
-			}
+			#modifier = { 
+			#	factor = 0.6
+			#	NOT = { OR = { aristocrats = { pop_majority_ideology = communist } bureaucrats = { pop_majority_ideology = communist } } }
+			#}
+			#modifier = { 
+			#	factor = 6
+			#	OR = { aristocrats = { pop_majority_ideology = communist } bureaucrats = { pop_majority_ideology = communist } }
+			#}
 		}
 	}
 
@@ -832,14 +832,14 @@ country_event = {
 		
 		ai_chance = {
 			factor = 0.2
-			modifier = { 
-				factor = 0.6
-				NOT = { OR = { aristocrats = { pop_majority_ideology = communist_social } bureaucrats = { pop_majority_ideology = communist_social } } }
-			}
-			modifier = { 
-				factor = 6
-				OR = { aristocrats = { pop_majority_ideology = communist_social } bureaucrats = { pop_majority_ideology = communist_social } }
-			}
+			#modifier = { 
+			#	factor = 0.6
+			#	NOT = { OR = { aristocrats = { pop_majority_ideology = communist_social } bureaucrats = { pop_majority_ideology = communist_social } } }
+			#}
+			#modifier = { 
+			#	factor = 6
+			#	OR = { aristocrats = { pop_majority_ideology = communist_social } bureaucrats = { pop_majority_ideology = communist_social } }
+			#}
 		}
 	}
 	
@@ -1665,14 +1665,14 @@ country_event = {
 
 		ai_chance = {
 			factor = 0.8
-			modifier = { 
-				factor = 0.6
-				NOT = { OR = { aristocrats = { OR = { pop_majority_ideology = communist pop_majority_ideology = communist_social } } bureaucrats = { OR = { pop_majority_ideology = communist pop_majority_ideology = communist_social } } } }
-			}
-			modifier = { 
-				factor = 6
-				OR = { aristocrats = { OR = { pop_majority_ideology = communist pop_majority_ideology = communist_social } } bureaucrats = { OR = { pop_majority_ideology = communist pop_majority_ideology = communist_social } } }
-			}
+			#modifier = { 
+			#	factor = 0.6
+			#	NOT = { OR = { aristocrats = { OR = { pop_majority_ideology = communist pop_majority_ideology = communist_social } } bureaucrats = { OR = { pop_majority_ideology = communist pop_majority_ideology = communist_social } } } }
+			#}
+			#modifier = { 
+			#	factor = 6
+			#	OR = { aristocrats = { OR = { pop_majority_ideology = communist pop_majority_ideology = communist_social } } bureaucrats = { OR = { pop_majority_ideology = communist pop_majority_ideology = communist_social } } }
+			#}
 			modifier = {
 				factor = 0.3
 				NOT = { OR = { pop_majority_ideology = communist pop_majority_ideology = communist_social } }
@@ -1698,14 +1698,14 @@ country_event = {
 
 		ai_chance = {
 			factor = 0.2
-			modifier = { 
-				factor = 0.6
-				NOT = { OR = { aristocrats = { pop_majority_ideology = socialist } bureaucrats = { pop_majority_ideology = socialist } } }
-			}
-			modifier = { 
-				factor = 6
-				OR = { aristocrats = { pop_majority_ideology = socialist } bureaucrats = { pop_majority_ideology = socialist } }
-			}
+			#modifier = { 
+			#	factor = 0.6
+			#	NOT = { OR = { aristocrats = { pop_majority_ideology = socialist } bureaucrats = { pop_majority_ideology = socialist } } }
+			#}
+			#modifier = { 
+			#	factor = 6
+			#	OR = { aristocrats = { pop_majority_ideology = socialist } bureaucrats = { pop_majority_ideology = socialist } }
+			#}
 			modifier = {
 				factor = 0.3
 				NOT = { pop_majority_ideology = socialist }
