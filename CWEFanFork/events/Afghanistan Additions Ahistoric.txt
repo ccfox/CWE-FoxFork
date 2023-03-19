@@ -14,7 +14,7 @@ country_event = {
 		tag = AFG
 		year = 1973
 		
-		government = hms_government
+		OR = { government = hms_government government = hms_government1 }
 		is_vassal = no
 		
 		OR = { ruling_party_ideology = conservative ruling_party_ideology = progressive }
@@ -61,8 +61,13 @@ country_event = {
 		
 		any_pop = { 
 			limit = { OR = { strata = rich strata = middle } }
-			ideology = { factor = 0.15 value = progressive }
+			ideology = { factor = 0.1 value = progressive }
 		}
+		any_pop = { 
+			limit = { OR = { strata = poor strata = middle } }
+			ideology = { factor = 0.05 value = progressive }
+		}
+
 		ai_chance = { 
 			factor = 0.5
 			modifier = {
@@ -92,7 +97,7 @@ country_event = {
 		year = 1976
 		NOT = { year = 1990 }
 		
-		government = hms_government
+		OR = { government = hms_government government = hms_government1 }
 		is_vassal = no
 		war = no
 		
@@ -152,7 +157,7 @@ country_event = {
 		tag = AFG
 		year = 1980
 		
-		government = hms_government
+		OR = { government = hms_government government = hms_government1 }
 		
 		progressive = 30
 	}
@@ -183,7 +188,7 @@ country_event = {
 	trigger = {
 		tag = AFG
 		year = 2007
-		OR = { government = absolute_monarchy government = hms_government }
+		OR = { government = absolute_monarchy government = hms_government government = hms_government1 }
 	}
 
 	mean_time_to_happen = { months = 7 }
@@ -211,7 +216,7 @@ country_event = {
 		tag = AFG
 		year = 1985
 		
-		government = hms_government
+		OR = { government = hms_government government = hms_government1 }
 		
 		NOT = { has_country_flag = afg_modernization }
 		

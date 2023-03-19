@@ -208,7 +208,7 @@ country_event = {
 				factor = 4
 				AND = { #British influence
 					ENG = { exists = yes OR = { government = hms_government government = hms_government1 } }
-					GRE = { in_sphere = RUS }
+					GRE = { in_sphere = ENG }
 				}
 			}
 		}
