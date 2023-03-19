@@ -1049,11 +1049,6 @@ country_event = {
 			consciousness = -2
 		}
 		
-		random_owned = { #This should give the player or AI the modifier if they don't have a majority support #Experimental version for communists
-			limit = { owner = { AND = { tag = AFG NOT = { OR = { aristocrats = { OR = { pop_majority_ideology = communist_social pop_majority_ideology = socialist } } bureaucrats = { OR = { pop_majority_ideology = communist_social pop_majority_ideology = socialist } } } } } } }
-			owner = { add_country_modifier = { name = political_strife duration = 1365 } }
-		}
-		
 		any_pop = { 
 			limit = { OR = { type = aristocrats type = bureaucrats } } 
 			ideology = { factor = 0.05 value = communist_social }
