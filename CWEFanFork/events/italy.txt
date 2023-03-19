@@ -28,7 +28,31 @@ country_event = {
 			scaled_consciousness = { factor = 2 ideology = communist }
         }
 	
-	    ai_chance = { factor = 0.9 }
+	    ai_chance = {
+			factor = 0.8
+			modifier = {
+				factor = 4
+				AND = { #British influence
+					ENG = { exists = yes OR = { government = hms_government government = hms_government1 } }
+					ITA = { in_sphere = ENG }
+				}
+			}
+			modifier = {
+				factor = 2
+				AND = { #American Influence
+					USA = { exists = yes AND = { government = democracy NOT = { OR = { ruling_party_ideology = progressive ruling_party_ideology = socialist ruling_party_ideology = communist ruling_party_ideology = communist_social } } } }
+					ITA = { in_sphere = USA }
+				}
+			}
+			modifier = {
+				factor = 3
+				OR = { ruling_party_ideology = nationalist ruling_party_ideology = big_tent ruling_party_ideology = conservative ruling_party_ideology = liberal ruling_party_ideology = populist ruling_party_ideology = traditionalist }
+			}
+			modifier = {
+				factor = 0.3
+				NOT = { OR = { ruling_party_ideology = nationalist ruling_party_ideology = big_tent ruling_party_ideology = conservative ruling_party_ideology = liberal ruling_party_ideology = populist ruling_party_ideology = traditionalist } }
+			}
+		}
     }
 
     option = {
@@ -44,7 +68,31 @@ country_event = {
 			scaled_consciousness = { factor = -2 ideology = communist }
 	    }
 
-        ai_chance = { factor = 0.1 }
+        ai_chance = {
+			factor = 0.2
+			modifier = {
+				factor = 4
+				AND = { #British influence
+					ENG = { exists = yes OR = { government = hms_government government = hms_government1 } }
+					GRE = { in_sphere = ENG }
+				}
+			}
+			modifier = {
+				factor = 4
+				AND = { #Soviet influence
+					RUS = { exists = yes OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } }
+					ITA = { in_sphere = RUS }
+				}
+			}
+			modifier = {
+				factor = 3
+				OR = { ruling_party_ideology = communist ruling_party_ideology = communist_social ruling_party_ideology = socialist ruling_party_ideology = progressive ruling_party_ideology = social_democrat }
+			}
+			modifier = {
+				factor = 0.3
+				NOT = { OR = { ruling_party_ideology = communist ruling_party_ideology = communist_social ruling_party_ideology = socialist ruling_party_ideology = progressive ruling_party_ideology = social_democrat } }
+			}
+		}
     }
 
 }
@@ -85,7 +133,31 @@ country_event = {
 			relation = { who = THIS value = -25 }
         }
 	
-	    ai_chance = { factor = 0.9 }
+	    ai_chance = {
+			factor = 0.8
+			modifier = {
+				factor = 4
+				AND = { #British influence
+					ENG = { exists = yes OR = { government = hms_government government = hms_government1 } }
+					ITA = { in_sphere = ENG }
+				}
+			}
+			modifier = {
+				factor = 2
+				AND = { #American Influence
+					USA = { exists = yes AND = { government = democracy NOT = { OR = { ruling_party_ideology = progressive ruling_party_ideology = socialist ruling_party_ideology = communist ruling_party_ideology = communist_social } } } }
+					ITA = { in_sphere = USA }
+				}
+			}
+			modifier = {
+				factor = 3
+				OR = { ruling_party_ideology = nationalist ruling_party_ideology = big_tent ruling_party_ideology = conservative ruling_party_ideology = liberal ruling_party_ideology = populist ruling_party_ideology = traditionalist }
+			}
+			modifier = {
+				factor = 0.3
+				NOT = { OR = { ruling_party_ideology = nationalist ruling_party_ideology = big_tent ruling_party_ideology = conservative ruling_party_ideology = liberal ruling_party_ideology = populist ruling_party_ideology = traditionalist } }
+			}
+		}
     }
 
     option = {
@@ -107,7 +179,24 @@ country_event = {
 			relation = { who = THIS value = 15 }
         }
 
-        ai_chance = { factor = 0.1 }
+        ai_chance = {
+			factor = 0.2
+			modifier = {
+				factor = 4
+				AND = { #Soviet influence
+					RUS = { exists = yes OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } }
+					ITA = { in_sphere = RUS }
+				}
+			}
+			modifier = {
+				factor = 3
+				OR = { ruling_party_ideology = communist ruling_party_ideology = communist_social ruling_party_ideology = socialist ruling_party_ideology = progressive ruling_party_ideology = social_democrat }
+			}
+			modifier = {
+				factor = 0.3
+				NOT = { OR = { ruling_party_ideology = communist ruling_party_ideology = communist_social ruling_party_ideology = socialist ruling_party_ideology = progressive ruling_party_ideology = social_democrat } }
+			}
+		}
     }
 
 }
@@ -294,6 +383,7 @@ country_event = {
 		any_pop = { 
 			limit = { OR = { strata = poor strata = middle } }
 			ideology = { factor = 0.12 value = big_tent }
+			ideology = { factor = 0.25 value = social_democrat }
 			ideology = { factor = 0.20 value = socialist }
 			ideology = { factor = 0.30 value = communist }
 		}
@@ -325,19 +415,21 @@ country_event = {
         clr_country_flag = umberto_II
 		set_country_flag = ITA_1948_republic_flag 
 		ai_chance = {
-			factor = 0.9
+			factor = 0.8
 			modifier = {
-				factor = 0
-				OR = {
-					pop_majority_ideology = populist
-					pop_majority_ideology = nationalist
-					pop_majority_ideology = traditionalist
-				}
+				factor = 0.3
+				pop_majority_ideology = traditionalist
 			}
 			modifier = {
-				factor = 0.5
-				part_of_sphere = yes
-				sphere_owner = { government = hms_government }
+				factor = 3
+				NOT = { pop_majority_ideology = traditionalist }
+			}
+			modifier = {
+				factor = 4
+				AND = { #British influence
+					ENG = { exists = yes OR = { government = hms_government government = hms_government1 } }
+					GRE = { in_sphere = ENG }
+				}
 			}
 		}
 	}
@@ -349,12 +441,14 @@ country_event = {
 		any_pop = { 
 			limit = { location = { OR = { region = MOD_739 region = TUS_744 } } }
 			ideology = { factor = 0.05 value = liberal }
+			ideology = { factor = 0.15 value = social_democrat }
 			ideology = { factor = 0.3 value = socialist }
 			ideology = { factor = 0.6 value = communist }
 		}
 		any_pop = { 
 			limit = { location = { OR = { region = AUS_726 region = SAR_720 region = PAP_752 } } }
 			ideology = { factor = 0.1 value = liberal }
+			ideology = { factor = 0.15 value = social_democrat }
 			ideology = { factor = 0.2 value = socialist }
 			ideology = { factor = 0.3 value = communist }
 		}
@@ -385,7 +479,17 @@ country_event = {
 		}
 		
 		set_country_flag = ITA_1946_Violence
-		ai_chance = { factor = 0.1 }
+		ai_chance = {
+			factor = 0.2
+			modifier = {
+				factor = 3
+				pop_majority_ideology = traditionalist
+			}
+			modifier = {
+				factor = 0.3
+				NOT = { pop_majority_ideology = traditionalist }
+			}
+		}
 	}
 	
 }
