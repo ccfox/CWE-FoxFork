@@ -435,6 +435,14 @@ country_event = {
 			#	factor = 6
 			#	OR = { aristocrats = { pop_majority_ideology = communist } bureaucrats = { pop_majority_ideology = communist } }
 			#}
+			modifier = { 
+				factor = 0.6
+				NOT = { pop_majority_ideology = communist }
+			}
+			modifier = { 
+				factor = 6
+				pop_majority_ideology = communist
+			}
 		}
 	}
 
@@ -469,6 +477,14 @@ country_event = {
 			#	factor = 6
 			#	OR = { aristocrats = { pop_majority_ideology = communist_social } bureaucrats = { pop_majority_ideology = communist_social } }
 			#}
+			modifier = { 
+				factor = 0.6
+				NOT = { pop_majority_ideology = communist_social }
+			}
+			modifier = { 
+				factor = 6
+				pop_majority_ideology = communist_social
+			}
 		}
 	}
 

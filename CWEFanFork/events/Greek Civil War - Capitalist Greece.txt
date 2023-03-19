@@ -761,6 +761,14 @@ country_event = {
 			#	factor = 6
 			#	OR = { aristocrats = { OR = { pop_majority_ideology = socialist pop_majority_ideology = communist pop_majority_ideology = communist_social } } bureaucrats = { OR = { pop_majority_ideology = socialist pop_majority_ideology = communist pop_majority_ideology = communist_social } } }
 			#}
+			modifier = { 
+				factor = 0.6
+				NOT = { OR = { pop_majority_ideology = socialist pop_majority_ideology = communist pop_majority_ideology = communist_social } }
+			}
+			modifier = { 
+				factor = 6
+				OR = { pop_majority_ideology = socialist pop_majority_ideology = communist pop_majority_ideology = communist_social }
+			}
 		}
 	}
 
@@ -777,6 +785,14 @@ country_event = {
 			#	factor = 0.6
 			#	OR = { aristocrats = { OR = { pop_majority_ideology = socialist pop_majority_ideology = communist pop_majority_ideology = communist_social } } bureaucrats = { OR = { pop_majority_ideology = socialist pop_majority_ideology = communist pop_majority_ideology = communist_social } } }
 			#}
+			modifier = { 
+				factor = 6
+				NOT = { OR = { pop_majority_ideology = socialist pop_majority_ideology = communist pop_majority_ideology = communist_social } }
+			}
+			modifier = { 
+				factor = 0.6
+				OR = { pop_majority_ideology = socialist pop_majority_ideology = communist pop_majority_ideology = communist_social }
+			}
 		}
 	}
 	
