@@ -28,7 +28,7 @@ political_decisions = {
 			}
 			
 			#Religious
-			religious_policy = moralism
+			OR = { religious_policy = moralism religious_policy = pluralism }
 			
 			election = no
 			

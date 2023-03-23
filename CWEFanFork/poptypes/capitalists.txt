@@ -2123,6 +2123,35 @@ issues = {
 			consciousness = 9
 		}
 	}
+	pluralism = {
+		factor = 1
+		modifier = {
+			factor = 1.1
+			consciousness = 2
+			NOT = { consciousness = 4 }
+			is_state_religion = yes
+		}
+		modifier = {
+			factor = 3
+			country = { election = yes has_country_flag = elcmedium }
+		}
+		modifier = {
+			factor = 0.9
+			consciousness = 6
+		}
+		modifier = {
+			factor = 0.9
+			consciousness = 7
+		}
+		modifier = {
+			factor = 0.9
+			consciousness = 8
+		}
+		modifier = {
+			factor = 0.9
+			consciousness = 9
+		}	
+	}
 
 # economic_policy
 	laissez_faire = { 
