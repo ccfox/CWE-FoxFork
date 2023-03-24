@@ -68,9 +68,53 @@ party = {
 		end_date = 2092.1.1
 }
 party = {
-		name = "Seychelles Peoples United Party"
+		name = "Seychelles Peoples United Party (SD)"
 		citizenship_policy = full_citizenship
 		economic_policy = state_capitalism
+		ideology = social_democrat
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = pacifism
+		start_date = 1836.1.1
+		end_date = 1978.1.1
+}
+party = {
+		name = "People's Progressive Front (SD)"
+		citizenship_policy = full_citizenship
+		economic_policy = state_capitalism
+		ideology = social_democrat
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = pacifism
+		start_date = 1978.1.1
+		end_date = 2009.1.1
+}
+party = {
+		name = "People's Party (Right)"
+		citizenship_policy = full_citizenship
+		economic_policy = state_capitalism
+		ideology = social_democrat
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = pacifism
+		start_date = 2009.1.1
+		end_date = 2018.11.1
+}
+party = {
+		name = "United Seychelles Party (Right)"
+		citizenship_policy = full_citizenship
+		economic_policy = state_capitalism
+		ideology = social_democrat
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = pacifism
+		start_date = 2018.11.1
+		end_date = 2092.1.1
+}
+party = {
+		name = "Seychelles Peoples United Party"
+		citizenship_policy = full_citizenship
+		economic_policy = planned_economy1
 		ideology = socialist
 		religious_policy = secularized
 		trade_policy = protectionism
@@ -81,7 +125,7 @@ party = {
 party = {
 		name = "People's Progressive Front"
 		citizenship_policy = full_citizenship
-		economic_policy = state_capitalism
+		economic_policy = planned_economy1
 		ideology = socialist
 		religious_policy = secularized
 		trade_policy = protectionism
@@ -90,7 +134,7 @@ party = {
 		end_date = 2009.1.1
 }
 party = {
-		name = "People's Party"
+		name = "People's Party (Left)"
 		citizenship_policy = full_citizenship
 		economic_policy = state_capitalism
 		ideology = socialist
@@ -101,7 +145,7 @@ party = {
 		end_date = 2018.11.1
 }
 party = {
-		name = "United Seychelles Party"
+		name = "United Seychelles Party (Left)"
 		citizenship_policy = full_citizenship
 		economic_policy = state_capitalism
 		ideology = socialist
@@ -145,7 +189,7 @@ party = {
 		end_date = 2092.1.1
 }
 party = {
-		name = "Seychelles Peoples United Party"
+		name = "Seychelles Peoples United Party (ML)"
 		citizenship_policy = full_citizenship
 		economic_policy = planned_economy
 		ideology = communist
@@ -156,7 +200,7 @@ party = {
 		end_date = 1978.1.1
 }
 party = {
-		name = "People's Progressive Front"
+		name = "People's Progressive Front (ML)"
 		citizenship_policy = full_citizenship
 		economic_policy = planned_economy
 		ideology = communist
@@ -167,7 +211,7 @@ party = {
 		end_date = 2092.1.1
 }
 party = {
-		name = "Seychelles Peoples United Party"
+		name = "Seychelles Peoples United Party (Reformist)"
 		citizenship_policy = full_citizenship
 		economic_policy = planned_economy1
 		ideology = communist_social
@@ -178,7 +222,7 @@ party = {
 		end_date = 1978.1.1
 }
 party = {
-		name = "People's Progressive Front"
+		name = "People's Progressive Front (Reformist)"
 		citizenship_policy = full_citizenship
 		economic_policy = planned_economy1
 		ideology = communist_social
@@ -186,17 +230,6 @@ party = {
 		trade_policy = protectionism
 		war_policy = pacifism
 		start_date = 1978.1.1
-		end_date = 2092.1.1
-}
-party = {
-		name = "social_democrat_party"
-		citizenship_policy = full_citizenship
-		economic_policy = state_capitalism
-		ideology = social_democrat
-		religious_policy = secularized
-		trade_policy = protectionism
-		war_policy = pacifism
-		start_date = 1836.1.1
 		end_date = 2092.1.1
 }
 unit_names = {

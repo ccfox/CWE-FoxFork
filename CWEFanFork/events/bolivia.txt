@@ -489,21 +489,37 @@ country_event = {
 		
 		ai_chance = {
 			factor = 0.8
+			#modifier = { 
+			#	factor = 0.3 #Business support
+			#	NOT = { capitalists = { pop_majority_ideology = conservative } }
+			#}
+			#modifier = { 
+			#	factor = 3 #Business support
+			#	capitalists = { pop_majority_ideology = conservative }
+			#}
+			#modifier = { 
+			#	factor = 0.3 #Military support
+			#	NOT = { OR = { officers = { pop_majority_ideology = conservative } soldiers = { pop_majority_ideology = conservative } } }
+			#}
+			#modifier = { 
+			#	factor = 3 #Military support
+			#	OR = { officers = { pop_majority_ideology = conservative } soldiers = { pop_majority_ideology = conservative } }
+			#}
 			modifier = { 
 				factor = 0.3 #Business support
-				NOT = { capitalists = { pop_majority_ideology = conservative } }
+				NOT = { pop_majority_ideology = conservative }
 			}
 			modifier = { 
 				factor = 3 #Business support
-				capitalists = { pop_majority_ideology = conservative }
+				pop_majority_ideology = conservative
 			}
 			modifier = { 
-				factor = 0.3 #Business support
-				NOT = { OR = { officers = { pop_majority_ideology = conservative } soldiers = { pop_majority_ideology = conservative } } }
+				factor = 3 #Military support
+				NOT = { average_militancy = 5 }
 			}
 			modifier = { 
-				factor = 3 #Business support
-				OR = { officers = { pop_majority_ideology = conservative } soldiers = { pop_majority_ideology = conservative } }
+				factor = 0.3 #Military support
+				average_militancy = 5
 			}
 			modifier = {
 				factor = 4
@@ -547,7 +563,7 @@ country_event = {
 				OR = { continent = south_america AND = { tag = USA government = democracy } }
 				NOT = { tag = BOL }
 			}
-			country_event = 6121003
+			country_event = 6121002
 		}
 		
 		ai_chance = {
@@ -567,13 +583,21 @@ country_event = {
 					BOL = { in_sphere = RUS }
 				}
 			}
+			#modifier = { 
+			#	factor = 3 #Represents support among the Army
+			#	OR = { officers = { militancy = 5 } soldiers = { militancy = 5 } }
+			#}
+			#modifier = { 
+			#	factor = 0.3 #Represents support among the Army
+			#	NOT = { OR = { officers = { militancy = 5 } soldiers = { militancy = 5 } } }
+			#}
 			modifier = { 
-				factor = 3 #Represents support among the Army
-				OR = { officers = { militancy = 5 } soldiers = { militancy = 5 } }
+				factor = 0.3 #Military support
+				NOT = { average_militancy = 5 }
 			}
 			modifier = { 
-				factor = 0.3 #Represents support among the Army
-				NOT = { OR = { officers = { militancy = 5 } soldiers = { militancy = 5 } } }
+				factor = 3 #Military support
+				average_militancy = 5
 			}
 		}	
 	}
@@ -639,21 +663,37 @@ country_event = {
 		}
 		ai_chance = {
 			factor = 0.8
+			#modifier = { 
+			#	factor = 0.3 #Business support
+			#	NOT = { capitalists = { pop_majority_ideology = conservative } }
+			#}
+			#modifier = { 
+			#	factor = 3 #Business support
+			#	capitalists = { pop_majority_ideology = conservative }
+			#}
+			#modifier = { 
+			#	factor = 0.3 #Military support
+			#	NOT = { OR = { officers = { pop_majority_ideology = conservative } soldiers = { pop_majority_ideology = conservative } } }
+			#}
+			#modifier = { 
+			#	factor = 3 #Military support
+			#	OR = { officers = { pop_majority_ideology = conservative } soldiers = { pop_majority_ideology = conservative } }
+			#}
 			modifier = { 
 				factor = 0.3 #Business support
-				NOT = { capitalists = { pop_majority_ideology = conservative } }
+				NOT = { pop_majority_ideology = conservative }
 			}
 			modifier = { 
 				factor = 3 #Business support
-				capitalists = { pop_majority_ideology = conservative }
+				pop_majority_ideology = conservative
 			}
 			modifier = { 
-				factor = 0.3 #Business support
-				NOT = { OR = { officers = { pop_majority_ideology = conservative } soldiers = { pop_majority_ideology = conservative } } }
+				factor = 3 #Military support
+				NOT = { average_militancy = 5 }
 			}
 			modifier = { 
-				factor = 3 #Business support
-				OR = { officers = { pop_majority_ideology = conservative } soldiers = { pop_majority_ideology = conservative } }
+				factor = 0.3 #Military support
+				average_militancy = 5
 			}
 			modifier = {
 				factor = 4
@@ -709,13 +749,21 @@ country_event = {
 					BOL = { in_sphere = RUS }
 				}
 			}
+			#modifier = { 
+			#	factor = 3 #Represents support among the Army
+			#	OR = { officers = { militancy = 5 } soldiers = { militancy = 5 } }
+			#}
+			#modifier = { 
+			#	factor = 0.3 #Represents support among the Army
+			#	NOT = { OR = { officers = { militancy = 5 } soldiers = { militancy = 5 } } }
+			#}
 			modifier = { 
-				factor = 3 #Represents support among the Army
-				OR = { officers = { militancy = 5 } soldiers = { militancy = 5 } }
+				factor = 0.3 #Military support
+				NOT = { average_militancy = 5 }
 			}
 			modifier = { 
-				factor = 0.3 #Represents support among the Army
-				NOT = { OR = { officers = { militancy = 5 } soldiers = { militancy = 5 } } }
+				factor = 3 #Military support
+				average_militancy = 5
 			}
 		}
 		
@@ -766,21 +814,37 @@ country_event = {
 		
 		ai_chance = { 
 			factor = 0.8
+			#modifier = { 
+			#	factor = 0.3 #Business support
+			#	NOT = { capitalists = { pop_majority_ideology = conservative } }
+			#}
+			#modifier = { 
+			#	factor = 3 #Business support
+			#	capitalists = { pop_majority_ideology = conservative }
+			#}
+			#modifier = { 
+			#	factor = 0.3 #Military support
+			#	NOT = { OR = { officers = { pop_majority_ideology = conservative } soldiers = { pop_majority_ideology = conservative } } }
+			#}
+			#modifier = { 
+			#	factor = 3 #Military support
+			#	OR = { officers = { pop_majority_ideology = conservative } soldiers = { pop_majority_ideology = conservative } }
+			#}
 			modifier = { 
 				factor = 0.3 #Business support
-				NOT = { capitalists = { pop_majority_ideology = conservative } }
+				NOT = { pop_majority_ideology = conservative }
 			}
 			modifier = { 
 				factor = 3 #Business support
-				capitalists = { pop_majority_ideology = conservative }
+				pop_majority_ideology = conservative
 			}
 			modifier = { 
-				factor = 0.3 #Business support
-				NOT = { OR = { officers = { pop_majority_ideology = conservative } soldiers = { pop_majority_ideology = conservative } } }
+				factor = 3 #Military support
+				NOT = { average_militancy = 5 }
 			}
 			modifier = { 
-				factor = 3 #Business support
-				OR = { officers = { pop_majority_ideology = conservative } soldiers = { pop_majority_ideology = conservative } }
+				factor = 0.3 #Military support
+				average_militancy = 5
 			}
 			modifier = {
 				factor = 4
@@ -842,13 +906,21 @@ country_event = {
 					BOL = { in_sphere = RUS }
 				}
 			}
+			#modifier = { 
+			#	factor = 3 #Represents support among the Army
+			#	OR = { officers = { militancy = 5 } soldiers = { militancy = 5 } }
+			#}
+			#modifier = { 
+			#	factor = 0.3 #Represents support among the Army
+			#	NOT = { OR = { officers = { militancy = 5 } soldiers = { militancy = 5 } } }
+			#}
 			modifier = { 
-				factor = 3 #Represents support among the Army
-				OR = { officers = { militancy = 5 } soldiers = { militancy = 5 } }
+				factor = 0.3 #Military support
+				NOT = { average_militancy = 5 }
 			}
 			modifier = { 
-				factor = 0.3 #Represents support among the Army
-				NOT = { OR = { officers = { militancy = 5 } soldiers = { militancy = 5 } } }
+				factor = 3 #Military support
+				average_militancy = 5
 			}
 		}
 	}
@@ -911,21 +983,37 @@ country_event = {
 		
 		ai_chance = {
 			factor = 0.8
+			#modifier = { 
+			#	factor = 0.3 #Business support
+			#	NOT = { capitalists = { pop_majority_ideology = conservative } }
+			#}
+			#modifier = { 
+			#	factor = 3 #Business support
+			#	capitalists = { pop_majority_ideology = conservative }
+			#}
+			#modifier = { 
+			#	factor = 0.3 #Military support
+			#	NOT = { OR = { officers = { pop_majority_ideology = conservative } soldiers = { pop_majority_ideology = conservative } } }
+			#}
+			#modifier = { 
+			#	factor = 3 #Military support
+			#	OR = { officers = { pop_majority_ideology = conservative } soldiers = { pop_majority_ideology = conservative } }
+			#}
 			modifier = { 
 				factor = 0.3 #Business support
-				NOT = { capitalists = { pop_majority_ideology = conservative } }
+				NOT = { pop_majority_ideology = conservative }
 			}
 			modifier = { 
 				factor = 3 #Business support
-				capitalists = { pop_majority_ideology = conservative }
+				pop_majority_ideology = conservative
 			}
 			modifier = { 
-				factor = 0.3 #Business support
-				NOT = { OR = { officers = { pop_majority_ideology = conservative } soldiers = { pop_majority_ideology = conservative } } }
+				factor = 3 #Military support
+				NOT = { average_militancy = 5 }
 			}
 			modifier = { 
-				factor = 3 #Business support
-				OR = { officers = { pop_majority_ideology = conservative } soldiers = { pop_majority_ideology = conservative } }
+				factor = 0.3 #Military support
+				average_militancy = 5
 			}
 			modifier = {
 				factor = 4
@@ -981,13 +1069,21 @@ country_event = {
 					BOL = { in_sphere = RUS }
 				}
 			}
+			#modifier = { 
+			#	factor = 3 #Represents support among the Army
+			#	OR = { officers = { militancy = 5 } soldiers = { militancy = 5 } }
+			#}
+			#modifier = { 
+			#	factor = 0.3 #Represents support among the Army
+			#	NOT = { OR = { officers = { militancy = 5 } soldiers = { militancy = 5 } } }
+			#}
 			modifier = { 
-				factor = 3 #Represents support among the Army
-				OR = { officers = { militancy = 5 } soldiers = { militancy = 5 } }
+				factor = 0.3 #Military support
+				NOT = { average_militancy = 5 }
 			}
 			modifier = { 
-				factor = 0.3 #Represents support among the Army
-				NOT = { OR = { officers = { militancy = 5 } soldiers = { militancy = 5 } } }
+				factor = 3 #Military support
+				average_militancy = 5
 			}
 		}
 	}
@@ -1081,13 +1177,21 @@ country_event = {
 					BOL = { in_sphere = RUS }
 				}
 			}
+			#modifier = { 
+			#	factor = 3 #Represents support among the Army
+			#	OR = { officers = { militancy = 5 } soldiers = { militancy = 5 } }
+			#}
+			#modifier = { 
+			#	factor = 0.3 #Represents support among the Army
+			#	NOT = { OR = { officers = { militancy = 5 } soldiers = { militancy = 5 } } }
+			#}
 			modifier = { 
-				factor = 3 #Represents support among the Army
-				OR = { officers = { militancy = 5 } soldiers = { militancy = 5 } }
+				factor = 0.3 #Military support
+				NOT = { average_militancy = 5 }
 			}
 			modifier = { 
-				factor = 0.3 #Represents support among the Army
-				NOT = { OR = { officers = { militancy = 5 } soldiers = { militancy = 5 } } }
+				factor = 3 #Military support
+				average_militancy = 5
 			}
 		}
 	}
@@ -1116,21 +1220,37 @@ country_event = {
 		
 		ai_chance = {
 			factor = 0.2
+			#modifier = { 
+			#	factor = 0.3 #Business support
+			#	NOT = { capitalists = { pop_majority_ideology = conservative } }
+			#}
+			#modifier = { 
+			#	factor = 3 #Business support
+			#	capitalists = { pop_majority_ideology = conservative }
+			#}
+			#modifier = { 
+			#	factor = 0.3 #Military support
+			#	NOT = { OR = { officers = { pop_majority_ideology = conservative } soldiers = { pop_majority_ideology = conservative } } }
+			#}
+			#modifier = { 
+			#	factor = 3 #Military support
+			#	OR = { officers = { pop_majority_ideology = conservative } soldiers = { pop_majority_ideology = conservative } }
+			#}
 			modifier = { 
 				factor = 0.3 #Business support
-				NOT = { capitalists = { pop_majority_ideology = conservative } }
+				NOT = { pop_majority_ideology = conservative }
 			}
 			modifier = { 
 				factor = 3 #Business support
-				capitalists = { pop_majority_ideology = conservative }
-			}
-			modifier = { 
-				factor = 0.3 #Military support
-				NOT = { OR = { officers = { pop_majority_ideology = conservative } soldiers = { pop_majority_ideology = conservative } } }
+				pop_majority_ideology = conservative
 			}
 			modifier = { 
 				factor = 3 #Military support
-				OR = { officers = { pop_majority_ideology = conservative } soldiers = { pop_majority_ideology = conservative } }
+				NOT = { average_militancy = 5 }
+			}
+			modifier = { 
+				factor = 0.3 #Military support
+				average_militancy = 5
 			}
 			modifier = {
 				factor = 4
@@ -1301,7 +1421,7 @@ country_event = {
 				OR = { continent = south_america AND = { tag = USA government = democracy } }
 				NOT = { tag = BOL }
 			}
-			country_event = 6121003
+			country_event = 6121002
 		}
 
 		any_pop = {
@@ -1433,13 +1553,21 @@ country_event = {
 				factor = 6
 				OR = { pop_majority_ideology = progressive pop_majority_ideology = social_democrat pop_majority_ideology = socialist }
 			}
+			#modifier = { 
+			#	factor = 3 #Represents support among the Army
+			#	OR = { officers = { militancy = 5 } soldiers = { militancy = 5 } }
+			#}
+			#modifier = { 
+			#	factor = 0.3 #Represents support among the Army
+			#	NOT = { OR = { officers = { militancy = 4 } soldiers = { militancy = 4 } } }
+			#}
 			modifier = { 
-				factor = 3 #Represents support among the Army
-				OR = { OR = { officers = { militancy = 4 } soldiers = { militancy = 4 } } OR = { officers = { OR = { pop_majority_ideology = nationalist pop_majority_ideology = populist pop_majority_ideology = traditionalist } } soldiers = { OR = { pop_majority_ideology = nationalist pop_majority_ideology = populist pop_majority_ideology = traditionalist } } } }
+				factor = 0.3 #Military support
+				NOT = { average_militancy = 4 }
 			}
 			modifier = { 
-				factor = 0.3 #Represents support among the Army
-				NOT = { OR = { OR = { officers = { militancy = 4 } soldiers = { militancy = 4 } } OR = { officers = { OR = { pop_majority_ideology = nationalist pop_majority_ideology = populist pop_majority_ideology = traditionalist } } soldiers = { OR = { pop_majority_ideology = nationalist pop_majority_ideology = populist pop_majority_ideology = traditionalist } } } } }
+				factor = 3 #Military support
+				average_militancy = 4
 			}
 			modifier = {
 				factor = 4
@@ -1510,13 +1638,21 @@ country_event = {
 				factor = 0.6
 				OR = { pop_majority_ideology = progressive pop_majority_ideology = social_democrat pop_majority_ideology = socialist }
 			}
+			#modifier = { 
+			#	factor = 0.3 #Represents support among the Army
+			#	OR = { officers = { militancy = 4 } soldiers = { militancy = 4 } }
+			#}
+			#modifier = { 
+			#	factor = 3 #Represents support among the Army
+			#	NOT = { OR = { officers = { militancy = 4 } soldiers = { militancy = 4 } } }
+			#}
 			modifier = { 
-				factor = 0.3 #Represents support among the Army
-				OR = { OR = { officers = { militancy = 4 } soldiers = { militancy = 4 } } OR = { officers = { OR = { pop_majority_ideology = nationalist pop_majority_ideology = populist pop_majority_ideology = traditionalist } } soldiers = { OR = { pop_majority_ideology = nationalist pop_majority_ideology = populist pop_majority_ideology = traditionalist } } } }
+				factor = 3 #Military support
+				NOT = { average_militancy = 4 }
 			}
 			modifier = { 
-				factor = 3 #Represents support among the Army
-				NOT = { OR = { OR = { officers = { militancy = 4 } soldiers = { militancy = 4 } } OR = { officers = { OR = { pop_majority_ideology = nationalist pop_majority_ideology = populist pop_majority_ideology = traditionalist } } soldiers = { OR = { pop_majority_ideology = nationalist pop_majority_ideology = populist pop_majority_ideology = traditionalist } } } } }
+				factor = 0.3 #Military support
+				average_militancy = 4
 			}
 			modifier = {
 				factor = 4
@@ -1609,13 +1745,21 @@ country_event = {
 				factor = 6
 				OR = { pop_majority_ideology = communist pop_majority_ideology = communist_social pop_majority_ideology = socialist }
 			}
+			#modifier = { 
+			#	factor = 3 #Represents support among the Army
+			#	OR = { officers = { militancy = 5 } soldiers = { militancy = 5 } }
+			#}
+			#modifier = { 
+			#	factor = 0.3 #Represents support among the Army
+			#	NOT = { OR = { officers = { militancy = 5 } soldiers = { militancy = 5 } } }
+			#}
 			modifier = { 
-				factor = 3 #Represents support among the Army
-				OR = { OR = { officers = { militancy = 4 } soldiers = { militancy = 4 } } OR = { officers = { OR = { pop_majority_ideology = nationalist pop_majority_ideology = populist pop_majority_ideology = traditionalist } } soldiers = { OR = { pop_majority_ideology = nationalist pop_majority_ideology = populist pop_majority_ideology = traditionalist } } } }
+				factor = 3 #Military support
+				NOT = { average_militancy = 5 }
 			}
 			modifier = { 
-				factor = 0.3 #Represents support among the Army
-				NOT = { OR = { OR = { officers = { militancy = 4 } soldiers = { militancy = 4 } } OR = { officers = { OR = { pop_majority_ideology = nationalist pop_majority_ideology = populist pop_majority_ideology = traditionalist } } soldiers = { OR = { pop_majority_ideology = nationalist pop_majority_ideology = populist pop_majority_ideology = traditionalist } } } } }
+				factor = 0.3 #Military support
+				average_militancy = 5
 			}
 			modifier = {
 				factor = 4
@@ -1642,7 +1786,7 @@ country_event = {
 				OR = { continent = south_america AND = { tag = USA government = democracy } }
 				NOT = { tag = BOL }
 			}
-			country_event = 6121003
+			country_event = 6121002
 		}
 
 		#Ideological shift
@@ -1669,13 +1813,21 @@ country_event = {
 				factor = 0.6
 				OR = { pop_majority_ideology = communist pop_majority_ideology = communist_social pop_majority_ideology = socialist }
 			}
+			#modifier = { 
+			#	factor = 3 #Represents support among the Army
+			#	OR = { officers = { militancy = 5 } soldiers = { militancy = 5 } }
+			#}
+			#modifier = { 
+			#	factor = 0.3 #Represents support among the Army
+			#	NOT = { OR = { officers = { militancy = 5 } soldiers = { militancy = 5 } } }
+			#}
 			modifier = { 
-				factor = 0.3 #Represents support among the Army
-				OR = { OR = { officers = { militancy = 4 } soldiers = { militancy = 4 } } OR = { officers = { OR = { pop_majority_ideology = nationalist pop_majority_ideology = populist pop_majority_ideology = traditionalist } } soldiers = { OR = { pop_majority_ideology = nationalist pop_majority_ideology = populist pop_majority_ideology = traditionalist } } } }
+				factor = 0.3 #Military support
+				NOT = { average_militancy = 5 }
 			}
 			modifier = { 
-				factor = 3 #Represents support among the Army
-				NOT = { OR = { OR = { officers = { militancy = 4 } soldiers = { militancy = 4 } } OR = { officers = { OR = { pop_majority_ideology = nationalist pop_majority_ideology = populist pop_majority_ideology = traditionalist } } soldiers = { OR = { pop_majority_ideology = nationalist pop_majority_ideology = populist pop_majority_ideology = traditionalist } } } } }
+				factor = 3 #Military support
+				average_militancy = 5
 			}
 			modifier = {
 				factor = 4
@@ -1813,13 +1965,21 @@ country_event = {
 				factor = 0.6
 				OR = { pop_majority_ideology = progressive pop_majority_ideology = social_democrat pop_majority_ideology = socialist }
 			}
+			#modifier = { 
+			#	factor = 3 #Represents support among the Army
+			#	OR = { officers = { militancy = 5 } soldiers = { militancy = 5 } }
+			#}
+			#modifier = { 
+			#	factor = 0.3 #Represents support among the Army
+			#	NOT = { OR = { officers = { militancy = 5 } soldiers = { militancy = 5 } } }
+			#}
 			modifier = { 
-				factor = 0.3 #Represents support among the Army
-				OR = { OR = { officers = { militancy = 4 } soldiers = { militancy = 4 } } OR = { officers = { OR = { pop_majority_ideology = nationalist pop_majority_ideology = populist pop_majority_ideology = traditionalist } } soldiers = { OR = { pop_majority_ideology = nationalist pop_majority_ideology = populist pop_majority_ideology = traditionalist } } } }
+				factor = 3 #Military support
+				NOT = { average_militancy = 5 }
 			}
 			modifier = { 
-				factor = 3 #Represents support among the Army
-				NOT = { OR = { OR = { officers = { militancy = 4 } soldiers = { militancy = 4 } } OR = { officers = { OR = { pop_majority_ideology = nationalist pop_majority_ideology = populist pop_majority_ideology = traditionalist } } soldiers = { OR = { pop_majority_ideology = nationalist pop_majority_ideology = populist pop_majority_ideology = traditionalist } } } } }
+				factor = 0.3 #Military support
+				average_militancy = 5
 			}
 			modifier = {
 				factor = 4
@@ -1863,13 +2023,21 @@ country_event = {
 				factor = 6
 				OR = { pop_majority_ideology = progressive pop_majority_ideology = social_democrat pop_majority_ideology = socialist }
 			}
+			#modifier = { 
+			#	factor = 3 #Represents support among the Army
+			#	OR = { officers = { militancy = 5 } soldiers = { militancy = 5 } }
+			#}
+			#modifier = { 
+			#	factor = 0.3 #Represents support among the Army
+			#	NOT = { OR = { officers = { militancy = 5 } soldiers = { militancy = 5 } } }
+			#}
 			modifier = { 
-				factor = 3 #Represents support among the Army
-				OR = { OR = { officers = { militancy = 4 } soldiers = { militancy = 4 } } OR = { officers = { OR = { pop_majority_ideology = nationalist pop_majority_ideology = populist pop_majority_ideology = traditionalist } } soldiers = { OR = { pop_majority_ideology = nationalist pop_majority_ideology = populist pop_majority_ideology = traditionalist } } } }
+				factor = 0.3 #Military support
+				NOT = { average_militancy = 5 }
 			}
 			modifier = { 
-				factor = 0.3 #Represents support among the Army
-				NOT = { OR = { OR = { officers = { militancy = 4 } soldiers = { militancy = 4 } } OR = { officers = { OR = { pop_majority_ideology = nationalist pop_majority_ideology = populist pop_majority_ideology = traditionalist } } soldiers = { OR = { pop_majority_ideology = nationalist pop_majority_ideology = populist pop_majority_ideology = traditionalist } } } } }
+				factor = 3 #Military support
+				average_militancy = 5
 			}
 			modifier = {
 				factor = 4
@@ -1960,13 +2128,21 @@ country_event = {
 				factor = 6
 				OR = { pop_majority_ideology = progressive pop_majority_ideology = social_democrat pop_majority_ideology = socialist }
 			}
+			#modifier = { 
+			#	factor = 3 #Represents support among the Army
+			#	OR = { officers = { militancy = 5 } soldiers = { militancy = 5 } }
+			#}
+			#modifier = { 
+			#	factor = 0.3 #Represents support among the Army
+			#	NOT = { OR = { officers = { militancy = 5 } soldiers = { militancy = 5 } } }
+			#}
 			modifier = { 
-				factor = 3 #Represents support among the Army
-				OR = { OR = { officers = { militancy = 4 } soldiers = { militancy = 4 } } OR = { officers = { OR = { pop_majority_ideology = nationalist pop_majority_ideology = populist pop_majority_ideology = traditionalist } } soldiers = { OR = { pop_majority_ideology = nationalist pop_majority_ideology = populist pop_majority_ideology = traditionalist } } } }
+				factor = 0.3 #Military support
+				NOT = { average_militancy = 5 }
 			}
 			modifier = { 
-				factor = 0.3 #Represents support among the Army
-				NOT = { OR = { OR = { officers = { militancy = 4 } soldiers = { militancy = 4 } } OR = { officers = { OR = { pop_majority_ideology = nationalist pop_majority_ideology = populist pop_majority_ideology = traditionalist } } soldiers = { OR = { pop_majority_ideology = nationalist pop_majority_ideology = populist pop_majority_ideology = traditionalist } } } } }
+				factor = 3 #Military support
+				average_militancy = 5
 			}
 			modifier = {
 				factor = 4
@@ -2023,13 +2199,21 @@ country_event = {
 				factor = 0.6
 				OR = { pop_majority_ideology = progressive pop_majority_ideology = social_democrat pop_majority_ideology = socialist }
 			}
+			#modifier = { 
+			#	factor = 0.3 #Represents support among the Army
+			#	OR = { officers = { militancy = 5 } soldiers = { militancy = 5 } }
+			#}
+			#modifier = { 
+			#	factor = 3 #Represents support among the Army
+			#	NOT = { OR = { officers = { militancy = 5 } soldiers = { militancy = 5 } } }
+			#}
 			modifier = { 
-				factor = 0.3 #Represents support among the Army
-				OR = { OR = { officers = { militancy = 4 } soldiers = { militancy = 4 } } OR = { officers = { OR = { pop_majority_ideology = nationalist pop_majority_ideology = populist pop_majority_ideology = traditionalist } } soldiers = { OR = { pop_majority_ideology = nationalist pop_majority_ideology = populist pop_majority_ideology = traditionalist } } } }
+				factor = 3 #Military support
+				NOT = { average_militancy = 5 }
 			}
 			modifier = { 
-				factor = 3 #Represents support among the Army
-				NOT = { OR = { OR = { officers = { militancy = 4 } soldiers = { militancy = 4 } } OR = { officers = { OR = { pop_majority_ideology = nationalist pop_majority_ideology = populist pop_majority_ideology = traditionalist } } soldiers = { OR = { pop_majority_ideology = nationalist pop_majority_ideology = populist pop_majority_ideology = traditionalist } } } } }
+				factor = 0.3 #Military support
+				average_militancy = 5
 			}
 			modifier = {
 				factor = 4
@@ -2086,6 +2270,7 @@ country_event = {
 			scaled_militancy = { 
 				factor = 10
 				ideology = traditionalist
+				ideology = { factor = 0.25 value = nationalist }
 			}
 			scaled_militancy = { 
 				factor = 10
@@ -2101,17 +2286,58 @@ country_event = {
 			}
 		}
 		any_pop = { 
+			limit = { OR = { type = soldiers type = officers } } 
+			ideology = { factor = 0.25 value = nationalist }
+			militancy = 8
+			consciousness = 8
+		}
+		any_pop = { 
 			limit = { strata = middle } 
+			ideology = { factor = 0.1 value = social_democrat }
 			militancy = -10
 			consciousness = -10
 		}
 		any_pop = { 
 			limit = { strata = poor } 
+			ideology = { factor = 0.15 value = socialist }
 			militancy = -5
 			consciousness = -5
 		}
 		
-		ai_chance = { factor = 0.9 }
+		ai_chance = {
+			factor = 0.8
+			modifier = {
+				factor = 0.6
+				NOT = { OR = { pop_majority_ideology = progressive pop_majority_ideology = social_democrat pop_majority_ideology = socialist pop_majority_ideology = big_tent } }
+			}
+			modifier = {
+				factor = 6
+				OR = { pop_majority_ideology = progressive pop_majority_ideology = social_democrat pop_majority_ideology = socialist pop_majority_ideology = big_tent }
+			}
+			#modifier = { 
+			#	factor = 0.3 #Represents support among the Army
+			#	OR = { officers = { militancy = 5 } soldiers = { militancy = 5 } }
+			#}
+			#modifier = { 
+			#	factor = 3 #Represents support among the Army
+			#	NOT = { OR = { officers = { militancy = 5 } soldiers = { militancy = 5 } } }
+			#}
+			modifier = { 
+				factor = 3 #Military support
+				NOT = { average_militancy = 5 }
+			}
+			modifier = { 
+				factor = 0.3 #Military support
+				average_militancy = 5
+			}
+			modifier = {
+				factor = 4
+				AND = { #Soviet influence supports aligned government
+					RUS = { exists = yes OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } }
+					BOL = { in_sphere = RUS }
+				}
+			}
+		}
 	}
 
 	option = {
@@ -2138,7 +2364,40 @@ country_event = {
 			ideology = { factor = 0.1 value = communist }
 		}
 		
-		ai_chance = { factor = 0.1 }
+		ai_chance = {
+			factor = 0.2
+			modifier = {
+				factor = 6
+				NOT = { OR = { pop_majority_ideology = progressive pop_majority_ideology = social_democrat pop_majority_ideology = socialist pop_majority_ideology = big_tent } }
+			}
+			modifier = {
+				factor = 0.6
+				OR = { pop_majority_ideology = progressive pop_majority_ideology = social_democrat pop_majority_ideology = socialist pop_majority_ideology = big_tent }
+			}
+			#modifier = { 
+			#	factor = 3 #Represents support among the Army
+			#	OR = { officers = { militancy = 5 } soldiers = { militancy = 5 } }
+			#}
+			#modifier = { 
+			#	factor = 0.3 #Represents support among the Army
+			#	NOT = { OR = { officers = { militancy = 5 } soldiers = { militancy = 5 } } }
+			#}
+			modifier = { 
+				factor = 0.3 #Military support
+				NOT = { average_militancy = 5 }
+			}
+			modifier = { 
+				factor = 3 #Military support
+				average_militancy = 5
+			}
+			modifier = {
+				factor = 4
+				AND = { #American support for aligned regime
+					USA = { exists = yes AND = { government = democracy NOT = { OR = { ruling_party_ideology = progressive ruling_party_ideology = socialist ruling_party_ideology = communist ruling_party_ideology = communist_social } } } }
+					BOL = { in_sphere = USA }
+				}
+			}
+		}
 	}
 
 }
@@ -2178,10 +2437,63 @@ country_event = {
 		political_reform = ruling_party_opinion
 		
 		add_country_modifier = { name = dirty_war duration = 1460 }
+		
+		#Ideological shift
+		any_pop = {
+			limit = { strata = rich }
+			ideology = { factor = 0.2 value = nationalist }
+		}
+		any_pop = { 
+			limit = { OR = { type = soldiers type = officers } } 
+			ideology = { factor = 0.25 value = nationalist }
+			militancy = 8
+			consciousness = 8
+		}
+		any_pop = {
+			limit = { strata = middle }
+			ideology = { factor = 0.2 value = big_tent }
+		}
+		any_pop = {
+			limit = { strata = poor }
+			ideology = { factor = 0.1 value = socialist }
+		}
 
 		set_country_flag = bolivian_false_thaw
 
-		ai_chance = { factor = 0.9 }
+		ai_chance = {
+			factor = 0.8
+			modifier = {
+				factor = 6
+				NOT = { OR = { pop_majority_ideology = social_democrat pop_majority_ideology = socialist pop_majority_ideology = liberal pop_majority_ideology = progressive } }
+			}
+			modifier = {
+				factor = 0.6
+				OR = { pop_majority_ideology = social_democrat pop_majority_ideology = socialist pop_majority_ideology = liberal pop_majority_ideology = progressive }
+			}
+			#modifier = { 
+			#	factor = 3 #Represents support among the Army
+			#	OR = { officers = { militancy = 5 } soldiers = { militancy = 5 } }
+			#}
+			#modifier = { 
+			#	factor = 0.3 #Represents support among the Army
+			#	NOT = { OR = { officers = { militancy = 5 } soldiers = { militancy = 5 } } }
+			#}
+			modifier = { 
+				factor = 0.3 #Military support
+				NOT = { average_militancy = 5 }
+			}
+			modifier = { 
+				factor = 3 #Military support
+				average_militancy = 5
+			}
+			modifier = {
+				factor = 4
+				AND = { #American support for aligned regime
+					USA = { exists = yes AND = { government = democracy NOT = { OR = { ruling_party_ideology = progressive ruling_party_ideology = socialist ruling_party_ideology = communist ruling_party_ideology = communist_social } } } }
+					BOL = { in_sphere = USA }
+				}
+			}
+		}
 	}
 
 	option = {
@@ -2198,6 +2510,14 @@ country_event = {
 			limit = { strata = rich }
 			ideology = { factor = 0.2 value = conservative }
 		}
+		any_pop = {
+			limit = { strata = middle }
+			ideology = { factor = 0.2 value = liberal }
+		}
+		any_pop = {
+			limit = { strata = poor }
+			ideology = { factor = 0.1 value = liberal }
+		}
 		
 		add_country_modifier = { name = revolution_chaos duration = 3650 }
 		
@@ -2206,7 +2526,40 @@ country_event = {
 			change_controller = REB
 		}
 		
-		ai_chance = { factor = 0.1 }
+		ai_chance = {
+			factor = 0.2
+			modifier = {
+				factor = 0.6
+				NOT = { OR = { pop_majority_ideology = social_democrat pop_majority_ideology = socialist pop_majority_ideology = liberal pop_majority_ideology = progressive } }
+			}
+			modifier = {
+				factor = 6
+				OR = { pop_majority_ideology = social_democrat pop_majority_ideology = socialist pop_majority_ideology = liberal pop_majority_ideology = progressive }
+			}
+			#modifier = { 
+			#	factor = 0.3 #Represents support among the Army
+			#	OR = { officers = { militancy = 5 } soldiers = { militancy = 5 } }
+			#}
+			#modifier = { 
+			#	factor = 3 #Represents support among the Army
+			#	NOT = { OR = { officers = { militancy = 5 } soldiers = { militancy = 5 } } }
+			#}
+			modifier = { 
+				factor = 3 #Military support
+				NOT = { average_militancy = 5 }
+			}
+			modifier = { 
+				factor = 0.3 #Military support
+				average_militancy = 5
+			}
+			modifier = {
+				factor = 4
+				AND = { #Soviet influence supports aligned government
+					RUS = { exists = yes OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } }
+					BOL = { in_sphere = RUS }
+				}
+			}
+		}
 	}
 
 }
@@ -2253,13 +2606,13 @@ country_event = {
 			limit = { strata = rich }
 			ideology = {
 				factor = 0.1
-				value = big_tent
+				value = conservative
 			} 
 		}
 		any_pop = { 
 			limit = { strata = middle }
 			ideology = {
-				factor = 0.05
+				factor = 0.15
 				value = big_tent
 			}
 		}
@@ -2267,11 +2620,28 @@ country_event = {
 			limit = { strata = poor }
 			ideology = {
 				factor = 0.05
-				value = big_tent
+				value = socialist
 			} 
 		}
 		
-		ai_chance = { factor = 0.9 }	
+		ai_chance = {
+			factor = 0.8
+			modifier = {
+				factor = 0.6
+				NOT = { OR = { pop_majority_ideology = big_tent pop_majority_ideology = socialist pop_majority_ideology = social_democrat pop_majority_ideology = progressive } }
+			}
+			modifier = {
+				factor = 6
+				OR = { pop_majority_ideology = big_tent pop_majority_ideology = socialist pop_majority_ideology = social_democrat pop_majority_ideology = progressive }
+			}
+			modifier = {
+				factor = 4
+				AND = { #Soviet influence supports aligned government
+					RUS = { exists = yes OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } }
+					BOL = { in_sphere = RUS }
+				}
+			}
+		}	
 	}
 
 	option = {
@@ -2293,7 +2663,7 @@ country_event = {
 			limit = { strata = rich }
 			ideology = {
 				factor = 0.05
-				value = liberal
+				value = conservative
 			}
 		}
 		any_pop = { 
@@ -2303,12 +2673,36 @@ country_event = {
 			ideology = {
 				factor = 0.05
 				value = liberal
+			}
+		}
+		any_pop = { 
+			limit = { is_culture_group = THIS strata = poor }
+			ideology = {
+				factor = 0.05
+				value = liberal
 			} 
 		}
 		
 		add_country_modifier = { name = revolution_chaos duration = 365 }
 		
-		ai_chance = { factor = 0.1 }	
+		ai_chance = {
+			factor = 0.2
+			modifier = {
+				factor = 0.6
+				NOT = { OR = { pop_majority_ideology = conservative pop_majority_ideology = liberal } }
+			}
+			modifier = {
+				factor = 6
+				OR = { pop_majority_ideology = conservative pop_majority_ideology = liberal }
+			}
+			modifier = {
+				factor = 4
+				AND = { #American support for aligned regime
+					USA = { exists = yes AND = { government = democracy NOT = { OR = { ruling_party_ideology = progressive ruling_party_ideology = socialist ruling_party_ideology = communist ruling_party_ideology = communist_social } } } }
+					BOL = { in_sphere = USA }
+				}
+			}
+		}	
 	}
 
 }
@@ -2352,7 +2746,62 @@ country_event = {
 			} 
 		}
 		
-		ai_chance = { factor = 0.9 }	
+		any_pop = { 
+			limit = { strata = middle }
+			ideology = {
+				factor = 0.05
+				value = socialist
+			}
+		}
+		any_pop = { 
+			limit = { strata = poor }
+			ideology = {
+				factor = 0.05
+				value = socialist
+			} 
+		}
+		
+		any_pop = { 
+			limit = { OR = { type = soldiers type = officers } } 
+			ideology = { factor = 0.25 value = nationalist }
+			militancy = -8
+			consciousness = -8
+		}
+		
+		ai_chance = {
+			factor = 0.8
+			modifier = {
+				factor = 0.6
+				NOT = { OR = { pop_majority_ideology = nationalist pop_majority_ideology = populist } }
+			}
+			modifier = {
+				factor = 6
+				OR = { pop_majority_ideology = nationalist pop_majority_ideology = populist }
+			}
+			#modifier = { 
+			#	factor = 3 #Represents support among the Army
+			#	OR = { officers = { militancy = 5 } soldiers = { militancy = 5 } }
+			#}
+			#modifier = { 
+			#	factor = 0.3 #Represents support among the Army
+			#	NOT = { OR = { officers = { militancy = 5 } soldiers = { militancy = 5 } } }
+			#}
+			modifier = { 
+				factor = 0.3 #Military support
+				NOT = { average_militancy = 5 }
+			}
+			modifier = { 
+				factor = 3 #Military support
+				average_militancy = 5
+			}
+			modifier = {
+				factor = 4
+				AND = { #American support for aligned regime
+					USA = { exists = yes AND = { government = democracy NOT = { OR = { ruling_party_ideology = progressive ruling_party_ideology = socialist ruling_party_ideology = communist ruling_party_ideology = communist_social } } } }
+					BOL = { in_sphere = USA }
+				}
+			}
+		}	
 	}
 
 	option = {
@@ -2378,9 +2827,50 @@ country_event = {
 			} 
 		}
 		
+		any_pop = { 
+			limit = { is_culture_group = THIS strata = poor }
+			ideology = {
+				factor = 0.05
+				value = liberal
+			} 
+		}
+		
 		add_country_modifier = { name = revolution_chaos duration = 365 }
 		
-		ai_chance = { factor = 0.1 }	
+		ai_chance = {
+			factor = 0.2
+			modifier = {
+				factor = 0.6
+				NOT = { OR = { pop_majority_ideology = liberal pop_majority_ideology = conservative } }
+			}
+			modifier = {
+				factor = 6
+				OR = { pop_majority_ideology = liberal pop_majority_ideology = conservative }
+			}
+			#modifier = { 
+			#	factor = 0.3 #Represents support among the Army
+			#	OR = { officers = { militancy = 5 } soldiers = { militancy = 5 } }
+			#}
+			#modifier = { 
+			#	factor = 3 #Represents support among the Army
+			#	NOT = { OR = { officers = { militancy = 5 } soldiers = { militancy = 5 } } }
+			#}
+			modifier = { 
+				factor = 3 #Military support
+				NOT = { average_militancy = 5 }
+			}
+			modifier = { 
+				factor = 0.3 #Military support
+				average_militancy = 5
+			}
+			modifier = {
+				factor = 4
+				AND = { #Soviet influence supports aligned government
+					RUS = { exists = yes OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } }
+					BOL = { in_sphere = RUS }
+				}
+			}
+		}	
 	}
 
 }
@@ -2411,7 +2901,7 @@ country_event = {
 		OR = { economic_policy = laissez_faire economic_policy = interventionism }
 		
 		#Republican Party run USA
-		USA = { is_greater_power = yes government = democracy ruling_party_ideology = conservative }
+		USA = { is_greater_power = yes government = democracy OR = { ruling_party_ideology = conservative ruling_party_ideology = nationalist ruling_party_ideology = big_tent ruling_party_ideology = traditionalist ruling_party_ideology = populist } }
 	}
 
 	mean_time_to_happen = { months = 10 }
@@ -2435,7 +2925,7 @@ country_event = {
 			}
 			ideology = {
 				value = socialist
-				factor = 0.4
+				factor = 0.25
 			}
 			scaled_consciousness = {
 				ideology = socialist
@@ -2447,7 +2937,64 @@ country_event = {
 			}
 		}
 		
-		ai_chance = { factor = 0.99 }	
+		any_pop = {
+			limit = {
+				AND = {
+					OR = { strata = middle strata = poor }
+					OR = {
+						culture = quechua
+						culture = aimara
+					}
+				}
+			}
+			ideology = {
+				value = socialist
+				factor = 0.15
+			}
+			scaled_consciousness = {
+				ideology = socialist
+				factor = 3
+			}
+			scaled_militancy = {
+				factor = 3
+				ideology = socialist
+			}
+		}
+		
+		ai_chance = {
+			factor = 0.8
+			modifier = {
+				factor = 0.3
+				NOT = { OR = { pop_majority_ideology = nationalist pop_majority_ideology = populist pop_majority_ideology = conservative pop_majority_ideology = traditionalist } }
+			}
+			modifier = {
+				factor = 3
+				OR = { pop_majority_ideology = nationalist pop_majority_ideology = populist pop_majority_ideology = conservative pop_majority_ideology = traditionalist }
+			}
+			#modifier = { 
+			#	factor = 0.3 #Represents support among the Army
+			#	OR = { officers = { militancy = 5 } soldiers = { militancy = 5 } }
+			#}
+			#modifier = { 
+			#	factor = 3 #Represents support among the Army
+			#	NOT = { OR = { officers = { militancy = 5 } soldiers = { militancy = 5 } } }
+			#}
+			modifier = { 
+				factor = 3 #Military support
+				NOT = { average_militancy = 5 }
+			}
+			modifier = { 
+				factor = 0.3 #Military support
+				average_militancy = 5
+			}
+			modifier = {
+				factor = 4
+				AND = { #American support for aligned regime
+					USA = { exists = yes AND = { government = democracy NOT = { OR = { ruling_party_ideology = progressive ruling_party_ideology = socialist ruling_party_ideology = communist ruling_party_ideology = communist_social } } } }
+					BOL = { in_sphere = USA }
+				}
+			}
+		}	
 	}
 
 	option = {
@@ -2471,6 +3018,10 @@ country_event = {
 					}
 				}
 			}
+			ideology = {
+				value = socialist
+				factor = 0.15
+			}
 			scaled_consciousness = {
 				factor = -5
 			}
@@ -2479,7 +3030,63 @@ country_event = {
 			}
 		}
 		
-		ai_chance = { factor = 0.01 }	
+		any_pop = { 
+			limit = { strata = rich }
+			ideology = {
+				factor = 0.15
+				value = nationalist
+			} 
+		}
+		
+		any_pop = { 
+			limit = { strata = poor }
+			ideology = {
+				factor = 0.1
+				value = socialist
+			} 
+		}
+		
+		any_pop = { 
+			limit = { OR = { type = soldiers type = officers } } 
+			ideology = { factor = 0.25 value = nationalist }
+			militancy = 8
+			consciousness = 8
+		}
+		
+		ai_chance = {
+			factor = 0.2
+			modifier = {
+				factor = 0.3
+				NOT = { OR = { pop_majority_ideology = liberal pop_majority_ideology = progressive pop_majority_ideology = socialist pop_majority_ideology = social_democrat } }
+			}
+			modifier = {
+				factor = 3
+				OR = { pop_majority_ideology = liberal pop_majority_ideology = progressive pop_majority_ideology = socialist pop_majority_ideology = social_democrat }
+			}
+			#modifier = { 
+			#	factor = 3 #Represents support among the Army
+			#	OR = { officers = { militancy = 5 } soldiers = { militancy = 5 } }
+			#}
+			#modifier = { 
+			#	factor = 0.3 #Represents support among the Army
+			#	NOT = { OR = { officers = { militancy = 5 } soldiers = { militancy = 5 } } }
+			#}
+			modifier = { 
+				factor = 0.3 #Military support
+				NOT = { average_militancy = 5 }
+			}
+			modifier = { 
+				factor = 3 #Military support
+				average_militancy = 5
+			}
+			modifier = {
+				factor = 4
+				AND = { #Soviet influence supports aligned government
+					RUS = { exists = yes OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } }
+					BOL = { in_sphere = RUS }
+				}
+			}
+		}	
 	}
 
 }
@@ -2794,7 +3401,17 @@ country_event = {
 			}
 		}
 		
-		ai_chance = { factor = 0.8 }
+		ai_chance = {
+			factor = 0.8
+			modifier = {
+				factor = 0.6
+				AND = { has_accepted_culture = quechua has_accepted_culture = aimara }
+			}
+			modifier = {
+				factor = 6
+				NOT = { AND = { has_accepted_culture = quechua has_accepted_culture = aimara } }
+			}
+		}
 	}
 
 	option = {
@@ -2852,7 +3469,17 @@ country_event = {
 			}
 		}
 		
-		ai_chance = { factor = 0.2 }
+		ai_chance = {
+			factor = 0.2
+			modifier = {
+				factor = 6
+				AND = { has_accepted_culture = quechua has_accepted_culture = aimara }
+			}
+			modifier = {
+				factor = 0.6
+				NOT = { AND = { has_accepted_culture = quechua has_accepted_culture = aimara } }
+			}
+		}
 	}
 
 }
@@ -2915,7 +3542,17 @@ country_event = {
 			}
 		}
 		
-		ai_chance = { factor = 0.9 }
+		ai_chance = {
+			factor = 0.8
+			modifier = {
+				factor = 6
+				OR = { pop_majority_ideology = socialist pop_majority_ideology = progressive }
+			}
+			modifier = {
+				factor = 0.6
+				NOT = { OR = { pop_majority_ideology = socialist pop_majority_ideology = progressive } }
+			}
+		}
 	}
 
 	option = {
@@ -2939,7 +3576,17 @@ country_event = {
 			}
 		}
 		
-		ai_chance = { factor = 0.1 }
+		ai_chance = {
+			factor = 0.2
+			modifier = {
+				factor = 0.6
+				OR = { pop_majority_ideology = socialist pop_majority_ideology = progressive }
+			}
+			modifier = {
+				factor = 6
+				NOT = { OR = { pop_majority_ideology = socialist pop_majority_ideology = progressive } }
+			}
+		}
 	}
 
 }
@@ -3003,7 +3650,17 @@ country_event = {
 			}
 		}
 		
-		ai_chance = { factor = 0.9 }	
+		ai_chance = {
+			factor = 0.8
+			modifier = {
+				factor = 6
+				OR = { pop_majority_ideology = socialist pop_majority_ideology = progressive pop_majority_ideology = communist_social }
+			}
+			modifier = {
+				factor = 0.6
+				NOT = { OR = { pop_majority_ideology = socialist pop_majority_ideology = progressive pop_majority_ideology = communist_social } }
+			}
+		}	
 	}
 
 	option = {
@@ -3031,7 +3688,17 @@ country_event = {
 		
 		add_country_modifier = { name = revolution_chaos duration = 365 }
 		
-		ai_chance = { factor = 0.1 }	
+		ai_chance = {
+			factor = 0.2
+			modifier = {
+				factor = 6
+				OR = { pop_majority_ideology = liberal pop_majority_ideology = conservative pop_majority_ideology = big_tent }
+			}
+			modifier = {
+				factor = 0.6
+				NOT = { OR = { pop_majority_ideology = liberal pop_majority_ideology = conservative pop_majority_ideology = big_tent } }
+			}
+		}	
 	}
 
 }

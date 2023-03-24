@@ -609,12 +609,12 @@
 	soldiers = {
 		culture = greek
 		religion =  orthodox 
-		size = 321
+		size = 1321
 	 } 
 	soldiers = {
 		culture = greek
 		religion = secularism
-		size = 20
+		size = 2020
 	 } 
 	capitalists = {
 		culture = greek
@@ -669,7 +669,7 @@
 	farmers = {
 		culture = greek
 		religion =  orthodox 
-		size = 20957
+		size = 17957
 	 } 
 	farmers = {
 		culture = greek

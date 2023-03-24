@@ -502,13 +502,21 @@ country_event = {
 		
 		ai_chance = {
 			factor = 0.9
+			#modifier = { 
+			#	factor = 0.7 #Represents support among the Afghan Army leadership
+			#	NOT = { OR = { officers = { militancy = 5 } soldiers = { militancy = 5 } } }
+			#}
+			#modifier = { 
+			#	factor = 7 #Represents support among the Afghan Army leadership
+			#	OR = { officers = { militancy = 5 } soldiers = { militancy = 5 } }
+			#}
 			modifier = { 
-				factor = 0.7 #Represents support among the Afghan Army leadership
-				NOT = { OR = { officers = { militancy = 5 } soldiers = { militancy = 5 } } }
+				factor = 0.7 #Military support
+				NOT = { average_militancy = 5 }
 			}
 			modifier = { 
-				factor = 7 #Represents support among the Afghan Army leadership
-				OR = { officers = { militancy = 5 } soldiers = { militancy = 5 } }
+				factor = 7 #Military support
+				average_militancy = 5
 			}
 		}
   	}
@@ -524,13 +532,21 @@ country_event = {
 		add_country_modifier = { name = revolution_chaos duration = 3650 }
 		ai_chance = {
 			factor = 0.1
+			#modifier = { 
+			#	factor = 6 #Represents support among the Afghan Army leadership
+			#	NOT = { OR = { officers = { militancy = 5 } soldiers = { militancy = 5 } } }
+			#}
+			#modifier = { 
+			#	factor = 0.6 #Represents support among the Afghan Army leadership
+			#	OR = { officers = { militancy = 5 } soldiers = { militancy = 5 } }
+			#}
 			modifier = { 
-				factor = 6 #Represents support among the Afghan Army leadership
-				NOT = { OR = { officers = { militancy = 5 } soldiers = { militancy = 5 } } }
+				factor = 7 #Military support
+				NOT = { average_militancy = 5 }
 			}
 			modifier = { 
-				factor = 0.6 #Represents support among the Afghan Army leadership
-				OR = { officers = { militancy = 5 } soldiers = { militancy = 5 } }
+				factor = 0.7 #Military support
+				average_militancy = 5
 			}
 		}
   	}

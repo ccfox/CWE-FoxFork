@@ -10,12 +10,12 @@
 		religion =  orthodox 
 		size = 27
 	 } 
-	aristocrats = {
+	capitalists = {
 		culture = lebanese
 		religion =  orthodox 
 		size = 1876
 	 } 
-	aristocrats = {
+	capitalists = {
 		culture = arab_levantine
 		religion = secularism
 		size = 63
@@ -30,12 +30,12 @@
 		religion = secularism
 		size = 1
 	 } 
-	capitalists = {
+	aristocrats = {
 		culture = lebanese
 		religion =  orthodox 
 		size = 234
 	 } 
-	capitalists = {
+	aristocrats = {
 		culture = arab_levantine
 		religion = secularism
 		size = 7
@@ -126,12 +126,12 @@
 		religion = secularism
 		size = 3
 	 } 
-	aristocrats = {
+	capitalists = {
 		culture = lebanese
 		religion =  orthodox 
 		size = 7556
 	 } 
-	aristocrats = {
+	capitalists = {
 		culture = arab_levantine
 		religion = secularism
 		size = 253
@@ -146,12 +146,12 @@
 		religion = secularism
 		size = 6
 	 } 
-	capitalists = {
+	aristocrats = {
 		culture = lebanese
 		religion =  orthodox 
 		size = 944
 	 } 
-	capitalists = {
+	aristocrats = {
 		culture = arab_levantine
 		religion = secularism
 		size = 31
@@ -282,12 +282,12 @@
 		religion =  orthodox 
 		size = 27
 	 } 
-	aristocrats = {
+	capitalists = {
 		culture = lebanese
 		religion =  orthodox 
 		size = 1876
 	 } 
-	aristocrats = {
+	capitalists = {
 		culture = arab_levantine
 		religion = secularism
 		size = 63
@@ -302,12 +302,12 @@
 		religion = secularism
 		size = 1
 	 } 
-	capitalists = {
+	aristocrats = {
 		culture = lebanese
 		religion =  orthodox 
 		size = 234
 	 } 
-	capitalists = {
+	aristocrats = {
 		culture = arab_levantine
 		religion = secularism
 		size = 7
@@ -409,27 +409,27 @@
 #Sidon - Sidon (194000/48500 POPS)
 915 = {
 	officers = {
-		culture = arab_levantine
+		culture = lebanese
 		religion =  orthodox 
 		size = 6
 	 } 
 	soldiers = {
-		culture = arab_levantine
+		culture = lebanese
 		religion =  orthodox 
 		size = 27
 	 } 
-	aristocrats = {
-		culture = arab_levantine
+	capitalists = {
+		culture = lebanese
 		religion =  orthodox 
 		size = 1876
 	 } 
-	aristocrats = {
+	capitalists = {
 		culture = arab_levantine
 		religion = secularism
 		size = 63
 	 } 
 	bureaucrats = {
-		culture = arab_levantine
+		culture = lebanese
 		religion =  orthodox 
 		size = 46
 	 } 
@@ -438,18 +438,18 @@
 		religion = secularism
 		size = 1
 	 } 
-	capitalists = {
-		culture = arab_levantine
+	aristocrats = {
+		culture = lebanese
 		religion =  orthodox 
 		size = 234
 	 } 
-	capitalists = {
+	aristocrats = {
 		culture = arab_levantine
 		religion = secularism
 		size = 7
 	 } 
 	clergymen = {
-		culture = arab_levantine
+		culture = lebanese
 		religion =  orthodox 
 		size = 154
 	 } 

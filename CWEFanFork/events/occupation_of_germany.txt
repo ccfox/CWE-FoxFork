@@ -136,7 +136,7 @@ country_event = {
 		}
 		SGF = { 
 			civilized = yes 
-			government = democracy 
+			government = democracy1
 			country_event = 800054 
 			ruling_party_ideology = conservative 
 		}

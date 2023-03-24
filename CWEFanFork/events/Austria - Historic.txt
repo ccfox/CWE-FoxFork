@@ -37,13 +37,13 @@ country_event = {
 		}
 
 		ai_chance = { 
-			factor = 0.8
+			factor = 0.6
 			modifier = {
 				factor = 6
 				pop_majority_ideology = conservative
 			}
 			modifier = {
-				factor = 0.25
+				factor = 0.6
 				NOT = { pop_majority_ideology = conservative }
 			}
 		}
@@ -62,10 +62,14 @@ country_event = {
 		add_country_modifier = { name = revolution_chaos duration = 1065 }
 
 		ai_chance = { 
-			factor = 0.1
+			factor = 0.15
 			modifier = {
 				factor = 6
-				pop_majority_ideology = social_democrat
+				OR = { pop_majority_ideology = social_democrat pop_majority_ideology = progressive }
+			}
+			modifier = {
+				factor = 0.6
+				NOT = { OR = { pop_majority_ideology = social_democrat pop_majority_ideology = progressive } }
 			}
 		}
 	}
@@ -88,14 +92,14 @@ country_event = {
 		}
 
 		ai_chance = { 
-			factor = 0.05
+			factor = 0.15
 			modifier = {
 				factor = 6
-				OR = { pop_majority_ideology = liberal pop_majority_ideology = nationalist pop_majority_ideology = populist }
+				OR = { pop_majority_ideology = liberal pop_majority_ideology = nationalist pop_majority_ideology = populist pop_majority_ideology = traditionalist }
 			}
 			modifier = {
-				factor = 3
-				pop_majority_ideology = traditionalist
+				factor = 0.6
+				NOT = { OR = { pop_majority_ideology = liberal pop_majority_ideology = nationalist pop_majority_ideology = populist pop_majority_ideology = traditionalist } }
 			}
 		}
 	}
@@ -113,10 +117,14 @@ country_event = {
 		}
 
 		ai_chance = { 
-			factor = 0.05
+			factor = 0.15
 			modifier = {
 				factor = 6
 				OR = { pop_majority_ideology = communist pop_majority_ideology = communist_social pop_majority_ideology = socialist }
+			}
+			modifier = {
+				factor = 0.6
+				NOT = { OR = { pop_majority_ideology = communist pop_majority_ideology = communist_social pop_majority_ideology = socialist } }
 			}
 		}
 	}
@@ -168,11 +176,11 @@ country_event = {
 			factor = 0.8
 			modifier = {
 				factor = 6
-				pop_majority_ideology = social_democrat
+				OR = { pop_majority_ideology = social_democrat pop_majority_ideology = progressive }
 			}
 			modifier = {
-				factor = 0.25
-				NOT = { pop_majority_ideology = social_democrat }
+				factor = 0.6
+				NOT = { OR = { pop_majority_ideology = social_democrat pop_majority_ideology = progressive } }
 			}
 		}
 	}
@@ -188,10 +196,14 @@ country_event = {
 		}
 
 		ai_chance = { 
-			factor = 0.1
+			factor = 0.15
 			modifier = {
 				factor = 6
 				pop_majority_ideology = conservative
+			}
+			modifier = {
+				factor = 0.6
+				NOT = { pop_majority_ideology = conservative }
 			}
 		}
 	}
@@ -215,14 +227,14 @@ country_event = {
 		}
 
 		ai_chance = { 
-			factor = 0.05
+			factor = 0.15
 			modifier = {
 				factor = 6
-				OR = { pop_majority_ideology = liberal pop_majority_ideology = nationalist pop_majority_ideology = populist }
+				OR = { pop_majority_ideology = nationalist pop_majority_ideology = populist pop_majority_ideology = traditionalist }
 			}
 			modifier = {
-				factor = 3
-				pop_majority_ideology = traditionalist
+				factor = 0.6
+				NOT = { OR = { pop_majority_ideology = nationalist pop_majority_ideology = populist pop_majority_ideology = traditionalist } }
 			}
 		}
 	}
@@ -240,10 +252,14 @@ country_event = {
 		}
 		
 		ai_chance = { 
-			factor = 0.05
+			factor = 0.15
 			modifier = {
 				factor = 6
 				OR = { pop_majority_ideology = communist pop_majority_ideology = communist_social pop_majority_ideology = socialist }
+			}
+			modifier = {
+				factor = 0.6
+				NOT = { OR = { pop_majority_ideology = communist pop_majority_ideology = communist_social pop_majority_ideology = socialist } }
 			}
 		}
 	}
@@ -298,6 +314,10 @@ country_event = {
 				factor = 6
 				pop_majority_ideology = conservative
 			}
+			modifier = {
+				factor = 0.6
+				NOT = { pop_majority_ideology = conservative }
+			}
 		}
 	}
 
@@ -321,7 +341,11 @@ country_event = {
 			factor = 0.25
 			modifier = {
 				factor = 6
-				pop_majority_ideology = social_democrat
+				OR = { pop_majority_ideology = social_democrat pop_majority_ideology = progressive }
+			}
+			modifier = {
+				factor = 0.6
+				NOT = { OR = { pop_majority_ideology = social_democrat pop_majority_ideology = progressive } }
 			}
 		}
 	}
@@ -345,11 +369,11 @@ country_event = {
 			factor = 0.25
 			modifier = {
 				factor = 6
-				OR = { pop_majority_ideology = nationalist pop_majority_ideology = populist }
+				OR = { pop_majority_ideology = nationalist pop_majority_ideology = populist pop_majority_ideology = traditionalist }
 			}
 			modifier = {
-				factor = 3
-				pop_majority_ideology = traditionalist
+				factor = 0.6
+				NOT = { OR = { pop_majority_ideology = nationalist pop_majority_ideology = populist pop_majority_ideology = traditionalist } }
 			}
 		}
 	}
@@ -374,6 +398,10 @@ country_event = {
 			modifier = {
 				factor = 6
 				OR = { pop_majority_ideology = communist pop_majority_ideology = communist_social pop_majority_ideology = socialist }
+			}
+			modifier = {
+				factor = 0.6
+				NOT = { OR = { pop_majority_ideology = communist pop_majority_ideology = communist_social pop_majority_ideology = socialist } }
 			}
 		}
 	}
@@ -429,6 +457,10 @@ country_event = {
 				factor = 6
 				pop_majority_ideology = social_democrat
 			}
+			modifier = {
+				factor = 0.6
+				NOT = { pop_majority_ideology = social_democrat }
+			}
 		}
 	}
 
@@ -452,6 +484,10 @@ country_event = {
 			modifier = {
 				factor = 6
 				pop_majority_ideology = conservative
+			}
+			modifier = {
+				factor = 0.6
+				NOT = { pop_majority_ideology = conservative }
 			}
 		}
 	}
@@ -501,12 +537,12 @@ country_event = {
 		ai_chance = { 
 			factor = 0.25
 			modifier = {
-				factor = 6
-				pop_majority_ideology = progressive
+				factor = 0.6
+				NOT = { OR = { pop_majority_ideology = communist pop_majority_ideology = communist_social pop_majority_ideology = socialist pop_majority_ideology = progressive } }
 			}
 			modifier = {
-				factor = 3
-				OR = { pop_majority_ideology = communist pop_majority_ideology = communist_social pop_majority_ideology = socialist }
+				factor = 6
+				OR = { pop_majority_ideology = communist pop_majority_ideology = communist_social pop_majority_ideology = socialist pop_majority_ideology = progressive }
 			}
 		}
 	}
@@ -561,6 +597,10 @@ country_event = {
 				factor = 6
 				pop_majority_ideology = social_democrat
 			}
+			modifier = {
+				factor = 0.6
+				NOT = { pop_majority_ideology = social_democrat }
+			}
 		}
 	}
 
@@ -584,6 +624,10 @@ country_event = {
 			modifier = {
 				factor = 6
 				pop_majority_ideology = conservative
+			}
+			modifier = {
+				factor = 0.6
+				NOT = { pop_majority_ideology = conservative }
 			}
 		}
 	}
@@ -633,12 +677,12 @@ country_event = {
 		ai_chance = { 
 			factor = 0.2
 			modifier = {
-				factor = 6
-				pop_majority_ideology = progressive
+				factor = 0.6
+				NOT = { OR = { pop_majority_ideology = communist pop_majority_ideology = communist_social pop_majority_ideology = socialist pop_majority_ideology = progressive } }
 			}
 			modifier = {
-				factor = 3
-				OR = { pop_majority_ideology = communist pop_majority_ideology = communist_social pop_majority_ideology = socialist }
+				factor = 6
+				OR = { pop_majority_ideology = communist pop_majority_ideology = communist_social pop_majority_ideology = socialist pop_majority_ideology = progressive }
 			}
 		}
 	}
@@ -713,6 +757,10 @@ country_event = {
 			modifier = {
 				factor = 6
 				OR = { pop_majority_ideology = liberal pop_majority_ideology = big_tent }
+			}
+			modifier = {
+				factor = 0.6
+				NOT = { OR = { pop_majority_ideology = liberal pop_majority_ideology = big_tent } }
 			}
 		}
 	}

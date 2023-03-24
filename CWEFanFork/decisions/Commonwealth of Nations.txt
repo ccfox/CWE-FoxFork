@@ -138,7 +138,7 @@ AND = { has_global_flag = commonwealthoption1 NOT = { OR = { ruling_party_ideolo
 
 AND = { has_global_flag = commonwealthoption2 NOT = { OR = { ruling_party_ideology = conservative ruling_party_ideology = big_tent } } } 
 
-AND = { has_global_flag = commonwealthoption3 NOT = { OR = { ruling_party_ideology = socialist ruling_party_ideology = communist } } } 
+AND = { has_global_flag = commonwealthoption3 NOT = { OR = { ruling_party_ideology = socialist ruling_party_ideology = communist ruling_party_ideology = communist_social } } } 
 
 AND = { has_global_flag = commonwealthoption4 NOT = { OR = { ruling_party_ideology = nationalist ruling_party_ideology = populist ruling_party_ideology = traditionalist } } } 
 
@@ -244,7 +244,7 @@ has_country_modifier = commonwealthoption4  } }
 			has_country_modifier = commonwealthoption2
 			has_country_modifier = commonwealthoption3
 			has_country_modifier = commonwealthoption4 } }
-	OR = { ai = no AND = { ai = yes ruling_party_ideology = socialist } AND = { ai = yes ruling_party_ideology = communist } }
+	OR = { ai = no AND = { ai = yes ruling_party_ideology = socialist } AND = { ai = yes ruling_party_ideology = communist } AND = { ai = yes ruling_party_ideology = communist_social } }
 				}
 		effect = {
 add_country_modifier = { name = commonwealthoption3 duration = -1 }

@@ -1,7 +1,7 @@
 graphical_culture = Generic
 color = { 250 128 114 }
 party = {
-		name = "party_nationalist"
+		name = "Economic Union Party"
 		citizenship_policy = limited_citizenship
 		economic_policy = state_capitalism
 		ideology = nationalist
@@ -12,7 +12,7 @@ party = {
 		end_date = 2100.1.1
 }
 party = {
-		name = "party_big_tent"
+		name = "United Newfoundland Party (Moderate)"
 		citizenship_policy = full_citizenship
 		economic_policy = interventionism
 		ideology = big_tent
@@ -20,11 +20,21 @@ party = {
 		trade_policy = free_trade
 		war_policy = pro_military
 		start_date = 1836.1.1
+		end_date = 1949.1.1
+}
+party = {
+		name = "Progressive Conservative Party (Moderate)"
+		citizenship_policy = full_citizenship
+		economic_policy = state_capitalism
+		ideology = big_tent
+		religious_policy = secularized
+		trade_policy = free_trade
+		war_policy = pro_military
+		start_date = 1949.1.1
 		end_date = 2100.1.1
 }
-
 party = {
-		name = "party_conservative_0_NFL"
+		name = "United Newfoundland Party"
 		citizenship_policy = limited_citizenship
 		economic_policy = interventionism
 		ideology = conservative
@@ -32,10 +42,21 @@ party = {
 		trade_policy = free_trade
 		war_policy = pro_military
 		start_date = 1836.1.1
-		end_date = 2092.1.1
+		end_date = 1949.1.1
 }
 party = {
-		name = "party_liberal_0_NFL"
+		name = "Progressive Conservative Party"
+		citizenship_policy = limited_citizenship
+		economic_policy = state_capitalism
+		ideology = conservative
+		religious_policy = secularized
+		trade_policy = free_trade
+		war_policy = pro_military
+		start_date = 1949.1.1
+		end_date = 2100.1.1
+}
+party = {
+		name = "Confederate Association"
 		citizenship_policy = full_citizenship
 		economic_policy = laissez_faire
 		ideology = liberal
@@ -43,10 +64,43 @@ party = {
 		trade_policy = free_trade
 		war_policy = pacifism
 		start_date = 1836.1.1
+		end_date = 1948.1.1
+}
+party = {
+		name = "Liberal Party of Newfoundland"
+		citizenship_policy = full_citizenship
+		economic_policy = laissez_faire
+		ideology = liberal
+		religious_policy = secularized
+		trade_policy = free_trade
+		war_policy = pacifism
+		start_date = 1948.1.1
 		end_date = 2092.1.1
 }
 party = {
-		name = "party_socialist_0_NFL"
+		name = "Newfoundland People's Party (SD)"
+		citizenship_policy = full_citizenship
+		economic_policy = state_capitalism
+		ideology = social_democrat
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = pacifism
+		start_date = 1836.1.1
+		end_date = 1961.1.1
+}
+party = {
+		name = "NL NDP (SD)"
+		citizenship_policy = full_citizenship
+		economic_policy = state_capitalism
+		ideology = social_democrat
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = pacifism
+		start_date = 1961.1.1
+		end_date = 2092.1.1
+}
+party = {
+		name = "Fishermen's Protective Union"
 		citizenship_policy = limited_citizenship
 		economic_policy = state_capitalism
 		ideology = socialist
@@ -57,7 +111,7 @@ party = {
 		end_date = 2092.1.1
 }
 party = {
-		name = "party_progressive_0_NFL"
+		name = "Newfoundland People's Party (Progressive)"
 		citizenship_policy = full_citizenship
 		economic_policy = interventionism
 		ideology = progressive
@@ -65,10 +119,21 @@ party = {
 		trade_policy = protectionism
 		war_policy = pacifism
 		start_date = 1836.1.1
+		end_date = 1961.1.1
+}
+party = {
+		name = "NL NDP (Progressive)"
+		citizenship_policy = full_citizenship
+		economic_policy = interventionism
+		ideology = progressive
+		religious_policy = pro_atheism
+		trade_policy = protectionism
+		war_policy = pacifism
+		start_date = 1961.1.1
 		end_date = 2092.1.1
 }
 party = {
-		name = "party_populist_0_NFL"
+		name = "United Newfoundland Party (Populist)"
 		citizenship_policy = residency
 		economic_policy = state_capitalism
 		ideology = populist
@@ -76,10 +141,32 @@ party = {
 		trade_policy = protectionism
 		war_policy = jingoism
 		start_date = 1836.1.1
-		end_date = 2092.1.1
+		end_date = 1949.1.1
 }
 party = {
-		name = "party_traditionalist_0_NFL"
+		name = "Progressive Conservative Party (Red Tory)"
+		citizenship_policy = residency
+		economic_policy = state_capitalism
+		ideology = populist
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = jingoism
+		start_date = 1949.1.1
+		end_date = 2019.1.1
+}
+party = {
+		name = "NL Alliance"
+		citizenship_policy = residency
+		economic_policy = state_capitalism
+		ideology = populist
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = jingoism
+		start_date = 2019.1.1
+		end_date = 2100.1.1
+}
+party = {
+		name = "Responsible Government League"
 		citizenship_policy = residency
 		economic_policy = state_capitalism
 		ideology = traditionalist
@@ -90,7 +177,7 @@ party = {
 		end_date = 2092.1.1
 }
 party = {
-		name = "party_communist_0_NFL"
+		name = "CPNL"
 		citizenship_policy = full_citizenship
 		economic_policy = planned_economy
 		ideology = communist
@@ -101,9 +188,9 @@ party = {
 		end_date = 2092.1.1
 }
 party = {
-		name = "party_communist_social"
+		name = "Fishermen's Protective Union (LN)"
 		citizenship_policy = full_citizenship
-		economic_policy = state_capitalism
+		economic_policy = planned_economy1
 		ideology = communist_social
 		religious_policy = pro_atheism
 		trade_policy = protectionism
@@ -111,17 +198,7 @@ party = {
 		start_date = 1836.1.1
 		end_date = 2092.1.1
 }
-party = {
-		name = "social_democrat_party"
-		citizenship_policy = full_citizenship
-		economic_policy = state_capitalism
-		ideology = social_democrat
-		religious_policy = secularized
-		trade_policy = protectionism
-		war_policy = pacifism
-		start_date = 1836.1.1
-		end_date = 2092.1.1
-}
+
 unit_names = {
 	carrier = {
 		"Beacon Hill" "Cap De La Madeleine" "Cape Breton" Charlottetown Chebogue Dunver Eastview Grou Joliette Jonquiere "Kirkland Lake" Kokanee "La Hulloise" Longueuil Magog Matane Montreal "New Glasgow" "New Waterford" Orkney Outremont "Port Colborne" "Prince Rupert" "St Catherines" "Saint John" Springhill Stettler Stormont Swansea "Thetford Mines" Valleyfield Waskesiu Wentworth
