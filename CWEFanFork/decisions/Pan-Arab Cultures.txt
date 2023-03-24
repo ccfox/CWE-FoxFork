@@ -64,7 +64,7 @@ political_decisions = {
 			}
 
 			random_owned = { 
-				limit = { owner = { pop_majority_culture = arab_levantine } } 
+				limit = { owner = { pop_majority_culture = arab_levantine NOT = { capital_scope = { is_core = LEB } } } } 
 				owner = { primary_culture = arab_levantine }
 			}
 
