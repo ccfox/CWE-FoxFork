@@ -8,7 +8,9 @@ political_decisions = {
 			NOT = { tag = ISI }
 			NOT = { tag = UAR }
 			NOT = { tag = XUM }
-
+			
+			NOT = { tag = LEB } #Stopgap bugfix
+			
 			capital_scope = { OR = { continent = mena is_core = SUD } }
 
 			NOT = { has_country_flag = arab_national_identity }
@@ -129,7 +131,9 @@ political_decisions = {
 			NOT = { tag = UAR }
 
 			NOT = { tag = XUM }
-
+			
+			NOT = { tag = LEB } #Stopgap bugfix
+			
 			NOT = { has_country_flag = pan_arab_identity }
 
 			capital_scope = { OR = { continent = mena is_core = SUD } }
