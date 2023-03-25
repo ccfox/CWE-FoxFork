@@ -2362,7 +2362,7 @@ country_event = {
 				release = ICB 
 				government = sar_government 
 				country_event = 800054 
-				ruling_party_ideology = socialist 
+				ruling_party_ideology = social_democrat 
 			} 
 		}
 		
@@ -2542,7 +2542,7 @@ country_event = {
 				release = ICB 
 				government = sar_government 
 				country_event = 800054 
-				ruling_party_ideology = socialist 
+				ruling_party_ideology = social_democrat 
 			} 
 		}
 		
