@@ -103,7 +103,7 @@ public_meetings = no_meetings penal_system = capital_punishment
 	non_state_culture_literacy = 0.08
 	civilized = yes
 	prestige = 47
-	ruling_party = "Socialist Party of Albania"
+	ruling_party = "Socialist Party of Albania (SD)"
 	upper_house = {
 		populist = 4
 		liberal = 21
