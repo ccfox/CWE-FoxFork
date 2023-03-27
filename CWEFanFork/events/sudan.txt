@@ -519,7 +519,6 @@ option = {
 name = "Accept the results"
 release = SSU
 SSU = { government = democracy country_event = 800054 }
-SSU = { country_event = 1512094 }
 SSU = { add_country_modifier = { name = revolution_chaos duration = 3650 } }
 ai_chance = { factor = 0.8 }
 		}
