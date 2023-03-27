@@ -1491,6 +1491,12 @@ south_asian_indian = {
 south_asian_pakistani = {
 	leader = indian
 	unit = IndianGC
+	indian_muslim = {
+		 #!religion = { sunni }
+		 color = { 0 100 0 }
+		 first_names = { Ranjit Kharak Nau Nihal Chand Shir Dhalip Diwan Jassa Hari Bhuma Nawab Banda Baba Kapur }
+		 last_names = { Singh Kunwar Bahadur Dhillon Nalwa Ahluwalia Ramgarhia Mal Mulraj }
+	}
 	sindi = {
 		 color = { 190 65 230 }
 		 first_names = { "Morad Ali" "Nur Mohammad" Sobhdar Hosayn Shahdad Mohammad Nasir Morad Karim Gholam "Mir Fath" }
