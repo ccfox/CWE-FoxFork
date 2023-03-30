@@ -21,6 +21,16 @@ political_decisions = {
 #Indicate that this is the CWE mod
 set_global_flag = CWE_MOD_ACTIVE
 
+#Truman Doctrine (disabled by helsinki_accords)
+random_country = {
+	limit = { 
+		tag = USA
+		year = 1950
+		NOT = { year = 1990 } 
+	}
+	set_country_flag = truman_doctrine
+}
+
 random_country = { 
 	limit = { tag = UGR } 
 	any_pop = {
