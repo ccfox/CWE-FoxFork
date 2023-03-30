@@ -31,7 +31,7 @@ country_event = {
 		
 		any_pop = {
 			limit = { strata = poor }
-			ideology = { factor = 0.15 value = communist }
+			ideology = { factor = 0.25 value = communist }
 		}
 		
 		any_pop = {
@@ -41,7 +41,7 @@ country_event = {
 		
 		any_pop = {
 			limit = { OR = { type = aristocrats type = bureaucrats } }
-			ideology = { factor = 0.15 value = communist }
+			ideology = { factor = 0.25 value = communist }
 		}
 		
 		prestige = 10

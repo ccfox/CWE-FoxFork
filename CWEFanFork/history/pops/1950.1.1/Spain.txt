@@ -276,12 +276,12 @@
 #Tarfaya - Guelmim-Es Semara (139000/34750 POPS)
 1696 = {
 	capitalists = {
-		culture = arab_sahrawi
+		culture = arab_hassaniya
 		religion =  sunni 
 		size = 1390
 	 } 
 	farmers = {
-		culture = arab_sahrawi
+		culture = arab_hassaniya
 		religion =  sunni 
 		size = 28815
 	 } 
@@ -297,42 +297,37 @@
 #Aaiun - Aaiun (1000/250 POPS)
 1773 = {
 	soldiers = {
-		culture = arab_sahrawi
+		culture = arab_hassaniya
 		religion =  sunni 
 		size = 3
 	 } 
 	capitalists = {
-		culture = arab_sahrawi
+		culture = arab_hassaniya
 		religion =  sunni 
 		size = 10
 	 } 
 	bureaucrats = {
-		culture = arab_sahrawi
+		culture = arab_hassaniya
 		religion =  sunni 
 		size = 1
 	 } 
 	clergymen = {
-		culture = arab_sahrawi
+		culture = arab_hassaniya
 		religion =  sunni 
 		size = 2
 	 } 
 	artisans = {
-		culture = arab_sahrawi
+		culture = arab_hassaniya
 		religion =  sunni 
 		size = 7
 	 } 
 	farmers = {
-		culture = arab_sahrawi
+		culture = arab_hassaniya
 		religion =  sunni 
-		size = 190
+		size = 690
 	 } 
 
 	#For Pan-Arab and National Arab
-	farmers = {
-		culture = arab_hassaniya
-		religion =  sunni 
-		size = 500
-	 } 
 	farmers = {
 		culture = arab
 		religion =  sunni 
@@ -343,52 +338,47 @@
 #Dakhla - Dakhla (7000/1750 POPS)
 1774 = {
 	officers = {
-		culture = arab_sahrawi
+		culture = arab_hassaniya
 		religion =  sunni 
 		size = 5
 	 } 
 	soldiers = {
-		culture = arab_sahrawi
+		culture = arab_hassaniya
 		religion =  sunni 
 		size = 21
 	 } 
 	capitalists = {
-		culture = arab_sahrawi
+		culture = arab_hassaniya
 		religion =  sunni 
 		size = 70
 	 } 
 	bureaucrats = {
-		culture = arab_sahrawi
+		culture = arab_hassaniya
 		religion =  sunni 
 		size = 1
 	 } 
 	aristocrats = {
-		culture = arab_sahrawi
+		culture = arab_hassaniya
 		religion =  sunni 
 		size = 8
 	 } 
 	clergymen = {
-		culture = arab_sahrawi
+		culture = arab_hassaniya
 		religion =  sunni 
 		size = 17
 	 } 
 	artisans = {
-		culture = arab_sahrawi
+		culture = arab_hassaniya
 		religion =  sunni 
 		size = 50
 	 } 
 	farmers = {
-		culture = arab_sahrawi
+		culture = arab_hassaniya
 		religion =  sunni 
-		size = 1332
+		size = 1832
 	 } 
 
 	#For Pan-Arab and National Arab
-	farmers = {
-		culture = arab_hassaniya
-		religion =  sunni 
-		size = 500
-	 } 
 	farmers = {
 		culture = arab
 		religion =  sunni 

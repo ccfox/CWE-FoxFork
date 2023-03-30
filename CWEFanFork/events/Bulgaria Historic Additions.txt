@@ -33,7 +33,7 @@ country_event = {
 		any_pop = { 
 			limit = { OR = { strata = middle strata = poor } }
 			ideology = {
-				factor = 0.10
+				factor = 0.15
 				value = communist
 			}
 		}

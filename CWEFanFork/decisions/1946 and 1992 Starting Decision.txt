@@ -21,6 +21,26 @@ political_decisions = {
 #Indicate that this is the CWE mod
 set_global_flag = CWE_MOD_ACTIVE
 
+random_country = { 
+	limit = { tag = UGR } 
+	any_pop = {
+		limit = { culture = greek }
+		ideology = { factor = 0.25 value = communist }
+	}
+		
+	any_pop = {
+		limit = { OR = { type = aristocrats type = bureaucrats } }
+		ideology = { factor = 0.25 value = communist }
+	}
+}
+
+#I can't figure out where to do this outside of this file
+random_country = { 
+	limit = { tag = USA is_greater_power = yes government = democracy } 
+	relation = { who = MEX value = -100 }
+	diplomatic_influence = { who = MEX value = -200 }
+}
+
 #Guatemalan Revolution
 random_country = {
 	limit = { 
