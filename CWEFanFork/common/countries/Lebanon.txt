@@ -134,18 +134,18 @@ party = {
 		end_date = 2092.1.1
 }
 party = {
-		name = "Kataeb Party"
+		name = "Arab Socialist Ba'ath Party (P)"
 		citizenship_policy = residency
 		economic_policy = state_capitalism
 		ideology = populist
-		religious_policy = pluralism
+		religious_policy = secularized
 		trade_policy = protectionism
 		war_policy = jingoism
 		start_date = 1836.1.1
 		end_date = 2092.1.1
 }
 party = {
-		name = "Najjadeh Party"
+		name = "Kataeb Party"
 		citizenship_policy = residency
 		economic_policy = state_capitalism
 		ideology = traditionalist
