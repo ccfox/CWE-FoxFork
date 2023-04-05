@@ -67,7 +67,7 @@ AND = { ruling_party_ideology = communist }
 		effect = {
 
 add_country_modifier = { name = refugee_ban duration = 365 }
-country_event = 1410163
+#country_event = 1410163
 	}
 		ai_will_do = { 
 			factor = 1 
