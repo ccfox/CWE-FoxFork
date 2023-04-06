@@ -136,7 +136,7 @@ country_event = {
 		}
 		SGF = { 
 			civilized = yes 
-			government = democracy 
+			government = democracy1
 			country_event = 800054 
 			ruling_party_ideology = conservative 
 		}
@@ -806,7 +806,7 @@ country_event = {
 		}
 		
 		#West Berlin is in the western zone
-		549 = { owned_by = OG4 }
+		549 = { owned_by = OG4 } #Add trigger for if ICB exists
 	}
 
 	mean_time_to_happen = { months = 3 }
@@ -816,7 +816,7 @@ country_event = {
 		relation = { who = RUS value = -50 }
 		relation = { who = ENG value = 50 }
 		
-		money = 200000
+		money = 200000 #Add ideology modifiers
 		
 		#Trigger the Berlin Airlift
 		set_global_flag = deutsche_mark
@@ -826,7 +826,7 @@ country_event = {
 
 	option = {
 		name = "It is best not to anger the Russian Bear"
-		prestige_factor = -0.025
+		prestige_factor = -0.025 #Add ideology modifiers
 		relation = { who = RUS value = 50 }
 		ai_chance = { factor = 0.1 }
 	}
@@ -978,33 +978,6 @@ country_event = {
 	}
 
 }
-#East Berlin rename
-#country_event = {
-#  id = 8204101
-#  title = "The Division of Berlin"
-#  desc = EVTDESC8204101
-#  picture = "nwo2_divided_berlin"
-#  
-#	fire_only_once = yes
-#
-#	trigger = {
-#		tag = DDR
-#		
-#		has_global_flag = blocsenabled
-#		
-#		#Divided Berlin
-#		owns = 3381
-#		GER = { owns = 549 }
-#	}
-#
-#	mean_time_to_happen = { months = 1 }
-#
-#	option = {
-#		name = EVT_8204101_A
-#		551 = { change_province_name = "East Berlin" }
-#		capital = 3381
-#	}
-#}
 
 #German General Treaty - Independence of Germany via GP
 country_event = {

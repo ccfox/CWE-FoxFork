@@ -382,6 +382,7 @@ country_event = {
 				OR = {
 					ruling_party_ideology = socialist
 					ruling_party_ideology = communist
+					ruling_party_ideology = communist_social
 				}
 				is_vassal = no
 			}

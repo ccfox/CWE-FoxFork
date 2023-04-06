@@ -12,7 +12,7 @@ country_event = {
 	year = 1947
 	GRE = { 
 		war = no 
-		NOT = { government = proletarian_dictatorship }
+		NOT = { OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 government = socialist_democracy } }
 	}
 	NOT = { exists = UGR }
 	owns = 846
@@ -28,8 +28,17 @@ country_event = {
 	relation = { who = GRE value = 100 }
 	GRE = { country_event = 8006211 }
 	prestige = 10
-	ai_chance = { factor = 0.7 }
-  }
+	ai_chance = {
+		factor = 0.7
+			modifier = {
+				factor = 4
+				AND = { #British influence
+					ENG = { exists = yes OR = { government = hms_government government = hms_government1 } }
+					GRE = { in_sphere = ENG }
+				}
+			}
+		}
+	}
 
   option = {
     name = "Transfer the islands to Turkey"
@@ -38,8 +47,17 @@ country_event = {
 	relation = { who = TUR value = 100 }
 	TUR = { country_event = 8006211 }
 	prestige = -25
-	ai_chance = { factor = 0.1 }
-  }
+	ai_chance = {
+		factor = 0.1
+			modifier = {
+				factor = 4
+				AND = { #British influence
+					ENG = { exists = yes OR = { government = hms_government government = hms_government1 } }
+					TUR = { in_sphere = ENG }
+				}
+			}
+		}
+	}
 
   option = {
     name = "Let Italy keep it as it was before the war"
@@ -47,16 +65,43 @@ country_event = {
 	relation = { who = ITA value = 100 }
 	ITA = { country_event = 8006211 }
 	prestige = -50
-	ai_chance = { factor = 0.1 }
-  }
+	ai_chance = {
+		factor = 0.1
+			modifier = {
+				factor = 4
+				AND = { #British influence
+					ENG = { exists = yes OR = { government = hms_government government = hms_government1 } }
+					ITA = { in_sphere = ENG }
+				}
+			}
+			modifier = {
+				factor = 3
+				ruling_party_ideology = populist
+			}
+			modifier = {
+				factor = 0.3
+				NOT = { ruling_party_ideology = populist }
+			}
+		}
+	}
 
   option = {
     name = EVT_8006210_B
 	# EVT_8006210_B;We must keep the island of strategic reasons
 	prestige = -100
 	badboy = 5
-	ai_chance = { factor = 0.1 }
-  }
+	ai_chance = {
+		factor = 0.1
+			modifier = {
+				factor = 3
+				OR = { ruling_party_ideology = nationalist ruling_party_ideology = traditionalist }
+			}
+			modifier = {
+				factor = 0.3
+				NOT = { OR = { ruling_party_ideology = nationalist ruling_party_ideology = traditionalist } }
+			}
+		}
+	}
 }
 country_event = {
   id = 8006211
@@ -413,5 +458,110 @@ country_event = {
 	# EVT_8006210_A;The City of man's desire is lost.
 	prestige = -10
     	relation = { who = TUR value = -70 }
+	}
+}
+
+
+#Death of George II
+country_event = { 
+	id = 8116000
+	title = "Death of King George II"
+	desc = EVTDESC8116000
+	picture = "monarchy_cleanup" #Placeholder
+  
+	fire_only_once = yes
+
+	trigger = {
+		tag = GRE
+		year = 1947
+		OR = { government = absolute_monarchy government = hms_government government = hms_government1 }
+	}
+
+	mean_time_to_happen = { months = 2 }
+
+	option = {
+		name = "Paul will ascend to the throne."
+		any_pop = { 
+			militancy = -1
+			consciousness = -1
+		}
+	}
+}
+
+#Death of Paul
+country_event = { 
+	id = 8116001
+	title = "Death of King Paul"
+	desc = EVTDESC8116001
+	picture = "monarchy_cleanup" #Placeholder
+  
+	fire_only_once = yes
+
+	trigger = {
+		tag = GRE
+		year = 1964
+		OR = { government = absolute_monarchy government = hms_government government = hms_government1 }
+	}
+
+	mean_time_to_happen = { months = 2 }
+
+	option = {
+		name = "Constantine II will ascend to the throne."
+		any_pop = { 
+			militancy = -1
+			consciousness = -1
+		}
+	}
+}
+
+#Death of Constantine II
+country_event = { 
+	id = 8116002
+	title = "Death of King Constantine II"
+	desc = EVTDESC8116002
+	picture = "nwo2_king_constantine"
+  
+	fire_only_once = yes
+
+	trigger = {
+		tag = GRE
+		year = 2023
+		OR = { government = absolute_monarchy government = hms_government government = hms_government1 }
+	}
+
+	mean_time_to_happen = { months = 2 }
+
+	option = {
+		name = "Pavlos will ascend to the throne."
+		any_pop = { 
+			militancy = -1
+			consciousness = -1
+		}
+	}
+}
+
+#Abdication of Pavlos
+country_event = { 
+	id = 8116003
+	title = "Abdication of King Pavlos"
+	desc = EVTDESC8116003
+	picture = "monarchy_cleanup" #Placeholder
+  
+	fire_only_once = yes
+
+	trigger = {
+		tag = GRE
+		year = 2065
+		OR = { government = absolute_monarchy government = hms_government government = hms_government1 }
+	}
+
+	mean_time_to_happen = { months = 2 }
+
+	option = {
+		name = "Constantine Alexios will ascend to the throne."
+		any_pop = { 
+			militancy = -1
+			consciousness = -1
+		}
 	}
 }

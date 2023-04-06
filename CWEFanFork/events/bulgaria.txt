@@ -65,7 +65,14 @@ country_event = {
 		}
 
 		ai_chance = {
-			factor = 0.99
+			factor = 0.9
+			modifier = {
+				factor = 3
+				AND = { #Soviets have influence
+					RUS = { exists = yes OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } }
+					BUL = { in_sphere = RUS }
+				}
+			}
 		}
 	}
 
@@ -81,7 +88,7 @@ country_event = {
 		RUS = { country_event = 120002 } #War to vassalise
 
 		ai_chance = {
-			factor = 0.01
+			factor = 0.1
 		}
     }
 }
@@ -306,13 +313,25 @@ country_event = {
 				NOT = { has_country_flag = big_execursion_bul }
 			}
 			modifier = { 
+				factor = 6 #The people don't support a socialist government
+				NOT = { OR = { pop_majority_ideology = communist pop_majority_ideology = communist_social } }
+			}
+			#modifier = { 
+			#	factor = 0.3 #Reformists are too weak to launch a coup
+			#	NOT = { OR = { aristocrats = { pop_majority_ideology = communist_social } bureaucrats = { pop_majority_ideology = communist_social } } }
+			#}
+			modifier = { 
+				factor = 6 #Expulsion of the Turks was one of the catalysts for the coup
+				has_country_flag = big_execursion_bul
+			}
+			modifier = { 
 				factor = 0.6 #The people support a socialist government
 				OR = { pop_majority_ideology = communist pop_majority_ideology = communist_social }
 			}
-			modifier = { 
-				factor = 0.3 #Reformists are too weak to launch a coup
-				NOT = { OR = { aristocrats = { pop_majority_ideology = communist_social } bureaucrats = { pop_majority_ideology = communist_social } } }
-			}
+			#modifier = { 
+			#	factor = 3 #Reformists are strong enough to launch a coup
+			#	OR = { aristocrats = { pop_majority_ideology = communist_social } bureaucrats = { pop_majority_ideology = communist_social } } }
+			#}
 		}
 	}
 
@@ -326,10 +345,18 @@ country_event = {
 				factor = 6 #The people support Zhivkov
 				pop_majority_ideology = communist
 			}
+			#modifier = { 
+			#	factor = 3 #Reformists are too weak to launch a coup
+			#	OR = { aristocrats = { pop_majority_ideology = communist } bureaucrats = { pop_majority_ideology = communist } }
+			#}
 			modifier = { 
-				factor = 3 #Reformists are too weak to launch a coup
-				OR = { aristocrats = { pop_majority_ideology = communist } bureaucrats = { pop_majority_ideology = communist } }
+				factor = 0.6 #The people don't support Zhivkov
+				NOT = { pop_majority_ideology = communist }
 			}
+			#modifier = { 
+			#	factor = 3 #Reformists are strong enough to launch a coup
+			#	NOT = { OR = { aristocrats = { pop_majority_ideology = communist } bureaucrats = { pop_majority_ideology = communist } } }
+			#}
 		}
 	}
 	

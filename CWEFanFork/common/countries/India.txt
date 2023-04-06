@@ -391,13 +391,13 @@ socialist_democracy = { 255 69 0 }
 	}
 
 party = {
-		name = "social_democrat_party"
+		name = "Indian National Congress (SD)"
 		citizenship_policy = full_citizenship
-		economic_policy = state_capitalism
+		economic_policy = interventionism
 		ideology = social_democrat
 		religious_policy = secularized
 		trade_policy = protectionism
-		war_policy = pacifism
+		war_policy = pro_military
 		start_date = 1836.1.1
 		end_date = 2092.1.1
 }

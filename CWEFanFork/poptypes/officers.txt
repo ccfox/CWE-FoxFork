@@ -2206,7 +2206,7 @@ issues = {
 			factor = 0
 			NOT = { is_next_reform = no_meetings }
 		}
-		modifier = { factor = 1.50 OR = { pop_majority_ideology = liberal pop_majority_ideology = progressive } }
+		modifier = { factor = 1.50 OR = { pop_majority_ideology = liberal pop_majority_ideology = progressive pop_majority_ideology = social_democrat } }
 		
 		modifier = { factor = 1.10 literacy = 0.20 }
 		modifier = { factor = 1.10 literacy = 0.25 }
@@ -2236,7 +2236,7 @@ issues = {
 			factor = 0
 			NOT = { is_next_reform = limited_meetings }
 		}
-		modifier = { factor = 1.50 OR = { pop_majority_ideology = liberal pop_majority_ideology = progressive } }
+		modifier = { factor = 1.50 OR = { pop_majority_ideology = liberal pop_majority_ideology = progressive pop_majority_ideology = social_democrat } }
 		
 		modifier = { factor = 1.10 literacy = 0.20 }
 		modifier = { factor = 1.10 literacy = 0.25 }
@@ -2266,7 +2266,7 @@ issues = {
 			factor = 0
 			NOT = { is_next_reform = free_meetings }
 		}
-		modifier = { factor = 1.50 OR = { pop_majority_ideology = liberal pop_majority_ideology = progressive } }
+		modifier = { factor = 1.50 OR = { pop_majority_ideology = liberal pop_majority_ideology = progressive pop_majority_ideology = social_democrat } }
 		
 		modifier = { factor = 1.10 literacy = 0.20 }
 		modifier = { factor = 1.10 literacy = 0.25 }
@@ -2764,7 +2764,7 @@ issues = {
 			factor = 0
 			NOT = { is_next_reform = registered_voting }
 		}
-		modifier = { factor = 1.50 OR = { pop_majority_ideology = liberal pop_majority_ideology = progressive } }
+		modifier = { factor = 1.50 OR = { pop_majority_ideology = liberal pop_majority_ideology = progressive pop_majority_ideology = social_democrat } }
 		
 		modifier = { factor = 1.10 literacy = 0.20 }
 		modifier = { factor = 1.10 literacy = 0.25 }
@@ -2797,7 +2797,7 @@ issues = {
 			factor = 0
 			NOT = { is_next_reform = universal_weighted_voting }
 		}
-		modifier = { factor = 1.50 OR = { pop_majority_ideology = liberal pop_majority_ideology = progressive } }
+		modifier = { factor = 1.50 OR = { pop_majority_ideology = liberal pop_majority_ideology = progressive pop_majority_ideology = social_democrat } }
 		
 		modifier = { factor = 1.10 literacy = 0.20 }
 		modifier = { factor = 1.10 literacy = 0.25 }
@@ -2831,7 +2831,7 @@ issues = {
 			factor = 0
 			NOT = { is_next_reform = universal_voting }
 		}
-		modifier = { factor = 1.50 OR = { pop_majority_ideology = liberal pop_majority_ideology = progressive } }
+		modifier = { factor = 1.50 OR = { pop_majority_ideology = liberal pop_majority_ideology = progressive pop_majority_ideology = social_democrat } }
 		
 		modifier = { factor = 1.10 literacy = 0.20 }
 		modifier = { factor = 1.10 literacy = 0.25 }
@@ -2864,7 +2864,7 @@ issues = {
 			factor = 0
 			NOT = { is_next_reform = promoted_voting }
 		}
-		modifier = { factor = 1.50 OR = { pop_majority_ideology = liberal pop_majority_ideology = progressive } }
+		modifier = { factor = 1.50 OR = { pop_majority_ideology = liberal pop_majority_ideology = progressive pop_majority_ideology = social_democrat } }
 		
 		modifier = { factor = 1.10 literacy = 0.20 }
 		modifier = { factor = 1.10 literacy = 0.25 }
@@ -2900,7 +2900,7 @@ issues = {
 			factor = 0
 			NOT = { is_next_reform = regulated_opinion }
 		}
-		modifier = { factor = 1.50 OR = { pop_majority_ideology = liberal pop_majority_ideology = progressive } }
+		modifier = { factor = 1.50 OR = { pop_majority_ideology = liberal pop_majority_ideology = progressive pop_majority_ideology = social_democrat } }
 		
 		modifier = { factor = 1.10 literacy = 0.20 }
 		modifier = { factor = 1.10 literacy = 0.25 }
@@ -2927,7 +2927,7 @@ issues = {
 			factor = 0
 			NOT = { is_next_reform = open_opinion }
 		}
-		modifier = { factor = 1.50 OR = { pop_majority_ideology = liberal pop_majority_ideology = progressive } }
+		modifier = { factor = 1.50 OR = { pop_majority_ideology = liberal pop_majority_ideology = progressive pop_majority_ideology = social_democrat } }
 		
 		modifier = { factor = 1.10 literacy = 0.20 }
 		modifier = { factor = 1.10 literacy = 0.25 }
@@ -2954,7 +2954,7 @@ issues = {
 			factor = 0
 			NOT = { is_next_reform = free_opinion }
 		}
-		modifier = { factor = 1.50 OR = { pop_majority_ideology = liberal pop_majority_ideology = progressive } }
+		modifier = { factor = 1.50 OR = { pop_majority_ideology = liberal pop_majority_ideology = progressive pop_majority_ideology = social_democrat } }
 		
 		modifier = { factor = 1.10 literacy = 0.20 }
 		modifier = { factor = 1.10 literacy = 0.25 }
@@ -2981,7 +2981,7 @@ issues = {
 			factor = 0
 			NOT = { is_next_reform = democratic_opinion }
 		}
-		modifier = { factor = 1.50 OR = { pop_majority_ideology = liberal pop_majority_ideology = progressive } }
+		modifier = { factor = 1.50 OR = { pop_majority_ideology = liberal pop_majority_ideology = progressive pop_majority_ideology = social_democrat } }
 		
 		modifier = { factor = 1.10 literacy = 0.20 }
 		modifier = { factor = 1.10 literacy = 0.25 }
@@ -3082,7 +3082,7 @@ issues = {
 			factor = 0
 			NOT = { is_next_reform = firewall_publishing }
 		}
-		modifier = { factor = 1.25 OR = { pop_majority_ideology = liberal pop_majority_ideology = progressive } }
+		modifier = { factor = 1.25 OR = { pop_majority_ideology = liberal pop_majority_ideology = progressive pop_majority_ideology = social_democrat } }
 		
 		modifier = { factor = 1.10 literacy = 0.20 consciousness = 2 }
 		modifier = { factor = 1.10 literacy = 0.25 consciousness = 2 }
@@ -3109,7 +3109,7 @@ issues = {
 			factor = 0
 			NOT = { is_next_reform = unregulated_publishing }
 		}
-		modifier = { factor = 1.25 OR = { pop_majority_ideology = liberal pop_majority_ideology = progressive } }
+		modifier = { factor = 1.25 OR = { pop_majority_ideology = liberal pop_majority_ideology = progressive pop_majority_ideology = social_democrat } }
 		
 		modifier = { factor = 1.10 literacy = 0.20 consciousness = 2 }
 		modifier = { factor = 1.10 literacy = 0.25 consciousness = 2 }
@@ -3136,7 +3136,7 @@ issues = {
 			factor = 0
 			NOT = { is_next_reform = responsible_publishing }
 		}
-		modifier = { factor = 1.25 OR = { pop_majority_ideology = liberal pop_majority_ideology = progressive } }
+		modifier = { factor = 1.25 OR = { pop_majority_ideology = liberal pop_majority_ideology = progressive pop_majority_ideology = social_democrat } }
 		
 		modifier = { factor = 1.10 literacy = 0.20 consciousness = 2 }
 		modifier = { factor = 1.10 literacy = 0.25 consciousness = 2 }
@@ -3170,7 +3170,7 @@ issues = {
 		modifier = { factor = 0.1 strata = rich }
 		modifier = { factor = 0.5 strata = middle }
 		
-		modifier = { factor = 1.25 OR = { pop_majority_ideology = liberal pop_majority_ideology = progressive } }
+		modifier = { factor = 1.25 OR = { pop_majority_ideology = liberal pop_majority_ideology = progressive pop_majority_ideology = social_democrat } }
 		modifier = { factor = 1.50 OR = { pop_majority_ideology = socialist pop_majority_ideology = big_tent } }
 		modifier = { factor = 1.75 OR = { pop_majority_ideology = communist pop_majority_ideology = communist_social } }
 		
@@ -3191,7 +3191,7 @@ issues = {
 		modifier = { factor = 0.1 strata = rich }
 		modifier = { factor = 0.5 strata = middle }
 		
-		modifier = { factor = 1.25 OR = { pop_majority_ideology = liberal pop_majority_ideology = progressive } }
+		modifier = { factor = 1.25 OR = { pop_majority_ideology = liberal pop_majority_ideology = progressive pop_majority_ideology = social_democrat } }
 		modifier = { factor = 1.50 OR = { pop_majority_ideology = socialist pop_majority_ideology = big_tent } }
 		modifier = { factor = 1.75 OR = { pop_majority_ideology = communist pop_majority_ideology = communist_social } }
 		
@@ -3212,7 +3212,7 @@ issues = {
 		modifier = { factor = 0.1 strata = rich }
 		modifier = { factor = 0.5 strata = middle }
 		
-		modifier = { factor = 1.25 OR = { pop_majority_ideology = liberal pop_majority_ideology = progressive } }
+		modifier = { factor = 1.25 OR = { pop_majority_ideology = liberal pop_majority_ideology = progressive pop_majority_ideology = social_democrat } }
 		modifier = { factor = 1.50 OR = { pop_majority_ideology = socialist pop_majority_ideology = big_tent } }
 		modifier = { factor = 1.75 OR = { pop_majority_ideology = communist pop_majority_ideology = communist_social } }
 		
@@ -3233,7 +3233,7 @@ issues = {
 			factor = 0
 			NOT = { is_next_reform = parties_only_nominated }
 		}
-		modifier = { factor = 1.25 OR = { pop_majority_ideology = liberal pop_majority_ideology = progressive } }
+		modifier = { factor = 1.25 OR = { pop_majority_ideology = liberal pop_majority_ideology = progressive pop_majority_ideology = social_democrat } }
 		
 		modifier = { factor = 1.05 literacy = 0.20 }
 		modifier = { factor = 1.05 literacy = 0.25 }
@@ -3260,7 +3260,7 @@ issues = {
 			factor = 0
 			NOT = { is_next_reform = parties_allowed }
 		}
-		modifier = { factor = 1.25 OR = { pop_majority_ideology = liberal pop_majority_ideology = progressive } }
+		modifier = { factor = 1.25 OR = { pop_majority_ideology = liberal pop_majority_ideology = progressive pop_majority_ideology = social_democrat } }
 		
 		modifier = { factor = 1.05 literacy = 0.20 }
 		modifier = { factor = 1.05 literacy = 0.25 }
@@ -3287,7 +3287,7 @@ issues = {
 			factor = 0
 			NOT = { is_next_reform = parties_promote_democratic }
 		}
-		modifier = { factor = 1.25 OR = { pop_majority_ideology = liberal pop_majority_ideology = progressive } }
+		modifier = { factor = 1.25 OR = { pop_majority_ideology = liberal pop_majority_ideology = progressive pop_majority_ideology = social_democrat } }
 		
 		modifier = { factor = 1.05 literacy = 0.20 }
 		modifier = { factor = 1.05 literacy = 0.25 }
@@ -3315,7 +3315,7 @@ issues = {
 			factor = 0
 			NOT = { is_next_reform = parties_restrict_non_democratic }
 		}
-		modifier = { factor = 1.25 OR = { pop_majority_ideology = liberal pop_majority_ideology = progressive } }
+		modifier = { factor = 1.25 OR = { pop_majority_ideology = liberal pop_majority_ideology = progressive pop_majority_ideology = social_democrat } }
 		
 		modifier = { factor = 1.05 literacy = 0.20 }
 		modifier = { factor = 1.05 literacy = 0.25 }
@@ -3345,7 +3345,7 @@ issues = {
 			factor = 0
 			NOT = { is_next_reform = quota_immigration }
 		}
-		modifier = { factor = 1.25 OR = { pop_majority_ideology = liberal pop_majority_ideology = progressive } }
+		modifier = { factor = 1.25 OR = { pop_majority_ideology = liberal pop_majority_ideology = progressive pop_majority_ideology = social_democrat } }
 		
 		modifier = { factor = 1.25 strata = rich }
 		modifier = { factor = 1.15 strata = middle }
@@ -3368,7 +3368,7 @@ issues = {
 			factor = 0
 			NOT = { is_next_reform = open_immigration }
 		}
-		modifier = { factor = 1.25 OR = { pop_majority_ideology = liberal pop_majority_ideology = progressive } }
+		modifier = { factor = 1.25 OR = { pop_majority_ideology = liberal pop_majority_ideology = progressive pop_majority_ideology = social_democrat } }
 		
 		modifier = { factor = 1.25 strata = rich }
 		modifier = { factor = 1.15 strata = middle }
@@ -3391,7 +3391,7 @@ issues = {
 			factor = 0
 			NOT = { is_next_reform = naturalization }
 		}
-		modifier = { factor = 1.25 OR = { pop_majority_ideology = liberal pop_majority_ideology = progressive } }
+		modifier = { factor = 1.25 OR = { pop_majority_ideology = liberal pop_majority_ideology = progressive pop_majority_ideology = social_democrat } }
 		
 		modifier = { factor = 1.25 strata = rich }
 		modifier = { factor = 1.15 strata = middle }
@@ -3414,7 +3414,7 @@ issues = {
 			factor = 0
 			NOT = { is_next_reform = promoted_immigration }
 		}
-		modifier = { factor = 1.25 OR = { pop_majority_ideology = liberal pop_majority_ideology = progressive } }
+		modifier = { factor = 1.25 OR = { pop_majority_ideology = liberal pop_majority_ideology = progressive pop_majority_ideology = social_democrat } }
 		
 		modifier = { factor = 1.25 strata = rich }
 		modifier = { factor = 1.15 strata = middle }
@@ -3879,7 +3879,7 @@ rehabilitation = {
 		}
 		
 		#Rollback gang
-		modifier = { factor = 0.1 OR = { pop_majority_ideology = liberal pop_majority_ideology = progressive } }
+		modifier = { factor = 0.1 OR = { pop_majority_ideology = liberal pop_majority_ideology = progressive pop_majority_ideology = social_democrat } }
 		modifier = { factor = 0.5 pop_majority_ideology = big_tent }
 		
 		modifier = { factor = 1.2 strata = rich }
@@ -3905,7 +3905,7 @@ rehabilitation = {
 		}
 		
 		#Rollback gang
-		modifier = { factor = 0.1 OR = { pop_majority_ideology = liberal pop_majority_ideology = progressive } }
+		modifier = { factor = 0.1 OR = { pop_majority_ideology = liberal pop_majority_ideology = progressive pop_majority_ideology = social_democrat } }
 		modifier = { factor = 0.5 pop_majority_ideology = big_tent }
 		
 		modifier = { factor = 1.2 strata = rich }
@@ -3932,7 +3932,7 @@ rehabilitation = {
 		}
 		
 		#Rollback gang
-		modifier = { factor = 0.1 OR = { pop_majority_ideology = liberal pop_majority_ideology = progressive } }
+		modifier = { factor = 0.1 OR = { pop_majority_ideology = liberal pop_majority_ideology = progressive pop_majority_ideology = social_democrat } }
 		modifier = { factor = 0.5 pop_majority_ideology = big_tent }
 		
 		modifier = { factor = 1.2 strata = rich }
@@ -3958,7 +3958,7 @@ rehabilitation = {
 		}
 		
 		#Rollback gang
-		modifier = { factor = 0.1 OR = { pop_majority_ideology = liberal pop_majority_ideology = progressive } }
+		modifier = { factor = 0.1 OR = { pop_majority_ideology = liberal pop_majority_ideology = progressive pop_majority_ideology = social_democrat } }
 		modifier = { factor = 0.5 pop_majority_ideology = big_tent }
 		
 		modifier = { factor = 1.2 strata = rich }
@@ -3983,7 +3983,7 @@ rehabilitation = {
 		}
 		
 		#Rollback gang
-		modifier = { factor = 0.1 OR = { pop_majority_ideology = liberal pop_majority_ideology = progressive } }
+		modifier = { factor = 0.1 OR = { pop_majority_ideology = liberal pop_majority_ideology = progressive pop_majority_ideology = social_democrat } }
 		modifier = { factor = 0.5 pop_majority_ideology = big_tent }
 		
 		modifier = { factor = 1.2 strata = rich }

@@ -559,6 +559,8 @@ country_event = {
 			}
 			owner = { ITA = { inherit = RIT } }
 		}
+		
+		capital = 749
 
 	}
 

@@ -141,7 +141,7 @@ party = {
 		trade_policy = protectionism
 		war_policy = pacifism
 		start_date = 1987.10.29
-		end_date = 1970.1.1
+		end_date = 1991.4.15
 }
 party = {
 		name = "Reunification National Party"

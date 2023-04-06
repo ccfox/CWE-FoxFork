@@ -20,12 +20,12 @@
 		religion = secularism
 		size = 94
 	 } 
-	aristocrats = {
+	capitalists = {
 		culture = arab_gulf
 		religion =  sunni 
 		size = 4156
 	 } 
-	aristocrats = {
+	capitalists = {
 		culture = arab_gulf
 		religion = secularism
 		size = 173
@@ -40,12 +40,12 @@
 		religion = secularism
 		size = 8
 	 } 
-	capitalists = {
+	aristocrats = {
 		culture = arab_gulf
 		religion =  sunni 
 		size = 519
 	 } 
-	capitalists = {
+	aristocrats = {
 		culture = arab_gulf
 		religion = secularism
 		size = 21
@@ -111,12 +111,12 @@
 		size = 779
 	 } 
 	farmers = {
-		culture = indian_muslim
+		culture = punjabi
 		religion =  sunni 
 		size = 18705
 	 } 
 	farmers = {
-		culture = indian_muslim
+		culture = punjabi
 		religion = secularism
 		size = 779
 	 } 

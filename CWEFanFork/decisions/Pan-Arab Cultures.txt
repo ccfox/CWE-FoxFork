@@ -131,7 +131,6 @@ political_decisions = {
 			OR = { 
 				primary_culture = egyptian
 				primary_culture = sudanese
-				primary_culture = arab_sahrawi
 
 				primary_culture = arab_gulf 
 				primary_culture = berber

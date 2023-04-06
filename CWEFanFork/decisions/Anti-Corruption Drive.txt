@@ -35,10 +35,10 @@ political_decisions = {
 			soldiers = { money = -5 }
 
 			#Chance of a civil war
-			random = {
-				chance = 30
-				country_event = 1512323
-			}
+			#random = {
+			#	chance = 30
+			#	country_event = 1512323
+			#}
            
 			add_country_modifier = { name = reducing_corruption duration = 730 }
 			

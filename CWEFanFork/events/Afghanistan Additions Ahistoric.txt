@@ -9,14 +9,12 @@ country_event = {
 	title = "$YEAR$ Afghan Parliamentary Elections"
 	desc = EVTDESC80100100
 	picture = "afg_election"
-	
-	fire_only_once = yes #Effects of this event are too strong so it cannot be a repeating event
 
 	trigger = {
 		tag = AFG
 		year = 1973
 		
-		government = hms_government
+		OR = { government = hms_government government = hms_government1 }
 		is_vassal = no
 		
 		OR = { ruling_party_ideology = conservative ruling_party_ideology = progressive }
@@ -26,6 +24,14 @@ country_event = {
 
 	option = {
 		name = "Conservatives achieve a majority."
+		
+		ruling_party_ideology = conservative
+		
+		random_owned = { #This should give the player or AI the modifier if they don't have a majority support
+			limit = { owner = { AND = { tag = AFG NOT = { OR = { pop_majority_ideology = conservative } } } } }
+			owner = { add_country_modifier = { name = revolution_chaos duration = 1365 } }
+		}
+		
 		any_pop = { 
 			limit = { OR = { strata = middle strata = poor } }
 			ideology = { factor = 0.15 value = conservative }
@@ -36,20 +42,41 @@ country_event = {
 				factor = 0.5
 				NOT = { pop_majority_ideology = conservative }
 			}
+			modifier = {
+				factor = 5
+				pop_majority_ideology = conservative
+			}
 		}
 	}
 
 	option = {
 		name = "The progressive forces prevail."
+		
+		ruling_party_ideology = progressive
+		
+		random_owned = { #This should give the player or AI the modifier if they don't have a majority support
+			limit = { owner = { AND = { tag = AFG NOT = { OR = { pop_majority_ideology = progressive } } } } }
+			owner = { add_country_modifier = { name = revolution_chaos duration = 1365 } }
+		}
+		
 		any_pop = { 
 			limit = { OR = { strata = rich strata = middle } }
-			ideology = { factor = 0.15 value = progressive }
+			ideology = { factor = 0.1 value = progressive }
 		}
+		any_pop = { 
+			limit = { OR = { strata = poor strata = middle } }
+			ideology = { factor = 0.05 value = progressive }
+		}
+
 		ai_chance = { 
 			factor = 0.5
 			modifier = {
 				factor = 0.5
 				NOT = { pop_majority_ideology = progressive }
+			}
+			modifier = {
+				factor = 5
+				pop_majority_ideology = progressive
 			}
 		}
 	}
@@ -70,7 +97,7 @@ country_event = {
 		year = 1976
 		NOT = { year = 1990 }
 		
-		government = hms_government
+		OR = { government = hms_government government = hms_government1 }
 		is_vassal = no
 		war = no
 		
@@ -130,7 +157,7 @@ country_event = {
 		tag = AFG
 		year = 1980
 		
-		government = hms_government
+		OR = { government = hms_government government = hms_government1 }
 		
 		progressive = 30
 	}
@@ -161,7 +188,7 @@ country_event = {
 	trigger = {
 		tag = AFG
 		year = 2007
-		OR = { government = absolute_monarchy government = hms_government }
+		OR = { government = absolute_monarchy government = hms_government government = hms_government1 }
 	}
 
 	mean_time_to_happen = { months = 7 }
@@ -189,7 +216,7 @@ country_event = {
 		tag = AFG
 		year = 1985
 		
-		government = hms_government
+		OR = { government = hms_government government = hms_government1 }
 		
 		NOT = { has_country_flag = afg_modernization }
 		
@@ -410,7 +437,17 @@ country_event = {
 		name = "Mohammed Daoud Khan's son shall lead the revolution!"
 		any_pop = { militancy = 5 consciousness = 5 }
 		add_country_modifier = { name = revolution_chaos duration = 3650 }
-		ai_chance = { factor = 0.6 }
+		ai_chance = {
+			factor = 0.6
+			modifier = {
+				factor = 0.3
+				NOT = { pop_majority_ideology = nationalist }
+			}
+			modifier = {
+				factor = 3
+				pop_majority_ideology = nationalist
+			}
+		}
 	}
 
 	option = {
@@ -419,7 +456,17 @@ country_event = {
 		country_event = 800054
 		any_pop = { militancy = -5 consciousness = -5 }
 		clr_country_flag = afg_daoud_khan
-		ai_chance = { factor = 0.4 }
+		ai_chance = {
+			factor = 0.4
+			modifier = {
+				factor = 3
+				NOT = { pop_majority_ideology = nationalist }
+			}
+			modifier = {
+				factor = 0.3
+				pop_majority_ideology = nationalist
+			}
+		}
 	}
 	
 }
@@ -473,6 +520,14 @@ country_event = {
 			}
 			country_event = 80100111
 		}
+		
+		#Event for Europe and USA (Maybe more in Future)
+		random_country = {
+			limit = { 
+				OR = { continent = europe AND = { tag = USA government = democracy } }
+			}
+			country_event = 6121000
+		}
 	}
 	
 }
@@ -499,7 +554,6 @@ country_event = {
 			owner = { any_pop = { ideology = { factor = 0.20 value = communist_social } } }
 		}
  	}
-	
 }
 
 #Mineral Exploitation
@@ -618,12 +672,41 @@ country_event = {
 		name = "Gulabzoy (Khalq)"
 		set_country_flag = gulabzoy_afg
 		clr_country_flag = taraki_afg
+
 		any_pop = { 
-			ideology = { factor = 0.10 value = communist }
-			militancy = -2
-			consciousness = -2
+			limit = { OR = { type = aristocrats type = bureaucrats } } 
+			ideology = { factor = 0.15 value = communist }
 		}
-		ai_chance = { factor = 0.8 }
+		
+		any_pop = { 
+			limit = { strata = middle }
+			ideology = { factor = 0.1 value = communist }
+		}
+		any_pop = { 
+			limit = { strata = poor }
+			ideology = { factor = 0.1 value = communist }
+		}
+		
+		
+		ai_chance = {
+			factor = 0.8
+			#modifier = { 
+			#	factor = 0.6 #Represents support among the PDPA leadership
+			#	NOT = { OR = { aristocrats = { pop_majority_ideology = communist } bureaucrats = { pop_majority_ideology = communist } } }
+			#}
+			modifier = {
+				factor = 0.3 #Represents support among the National Assembly
+				NOT = { pop_majority_ideology = communist }
+			}
+			#modifier = { 
+			#	factor = 6 #Represents support among the PDPA leadership
+			#	OR = { aristocrats = { pop_majority_ideology = communist } bureaucrats = { pop_majority_ideology = communist } }
+			#}
+			modifier = {
+				factor = 3 #Represents support among the National Assembly
+				pop_majority_ideology = communist
+			}
+		}
 	}
 
 	option = {
@@ -631,18 +714,45 @@ country_event = {
 		set_country_flag = ratebzad_afg
 		clr_country_flag = taraki_afg
 		any_pop = { 
-			ideology = { factor = 0.10 value = communist_social }
 			militancy = -2
 			consciousness = -2
 		}
+
 		any_pop = { 
-			limit = { NOT = { OR = { pop_majority_ideology = communist pop_majority_ideology = socialist pop_majority_ideology = progressive pop_majority_ideology = communist_social } } }
-			ideology = { factor = 0.15 value = traditionalist }
-			militancy = 8
-			consciousness = 8
+			limit = { OR = { type = aristocrats type = bureaucrats } } 
+			ideology = { factor = 0.15 value = communist_social }
 		}
+		
+		any_pop = { 
+			limit = { strata = middle }
+			ideology = { factor = 0.1 value = communist_social }
+		}
+		
+		any_pop = { 
+			limit = { strata = poor }
+			ideology = { factor = 0.1 value = communist_social }
+		}
+
 		add_country_modifier = { name = political_strife duration = 1365 }
-		ai_chance = { factor = 0.2 }
+		ai_chance = {
+			factor = 0.2
+			#modifier = { 
+			#	factor = 0.6 #Represents support among the PDPA leadership
+			#	NOT = { OR = { aristocrats = { pop_majority_ideology = communist_social } bureaucrats = { pop_majority_ideology = communist_social } } }
+			#}
+			modifier = {
+				factor = 0.3 #Represents support among the National Assembly
+				NOT = { pop_majority_ideology = communist_social }
+			}
+			#modifier = { 
+			#	factor = 6 #Represents support among the PDPA leadership
+			#	OR = { aristocrats = { pop_majority_ideology = communist_social } bureaucrats = { pop_majority_ideology = communist_social } }
+			#}
+			modifier = {
+				factor = 3 #Represents support among the National Assembly
+				pop_majority_ideology = communist_social
+			}
+		}
 	}
 
 }
@@ -684,7 +794,46 @@ country_event = {
 			militancy = -2
 			consciousness = -2
 		}
-		ai_chance = { factor = 0.9 }
+		
+		any_pop = {
+			limit = { culture = pashtun }
+			ideology = { factor = 0.1 value = traditionalist }
+		}
+		
+		any_pop = { 
+			limit = { OR = { type = aristocrats type = bureaucrats } } 
+			ideology = { factor = 0.15 value = communist }
+		}
+		
+		any_pop = { 
+			limit = { strata = middle }
+			ideology = { factor = 0.1 value = communist }
+		}
+		
+		any_pop = { 
+			limit = { strata = poor }
+			ideology = { factor = 0.1 value = communist }
+		}
+		
+		ai_chance = {
+			factor = 0.8
+			#modifier = { 
+			#	factor = 0.6 #Represents support among the PDPA leadership
+			#	NOT = { OR = { aristocrats = { pop_majority_ideology = communist } bureaucrats = { pop_majority_ideology = communist } } }
+			#}
+			modifier = {
+				factor = 0.3 #Represents support among the National Assembly
+				NOT = { pop_majority_ideology = communist }
+			}
+			#modifier = { 
+			#	factor = 6 #Represents support among the PDPA leadership
+			#	OR = { aristocrats = { pop_majority_ideology = communist } bureaucrats = { pop_majority_ideology = communist } }
+			#}
+			modifier = {
+				factor = 3 #Represents support among the National Assembly
+				pop_majority_ideology = communist
+			}
+		}
 	}
 
 	option = {
@@ -695,7 +844,41 @@ country_event = {
 			militancy = 2
 			consciousness = 2
 		}
-		ai_chance = { factor = 0.1 }
+		
+		any_pop = { 
+			limit = { OR = { type = aristocrats type = bureaucrats } } 
+			ideology = { factor = 0.15 value = communist_social }
+		}
+		
+		any_pop = { 
+			limit = { strata = middle }
+			ideology = { factor = 0.1 value = communist_social }
+		}
+		
+		any_pop = { 
+			limit = { strata = poor }
+			ideology = { factor = 0.1 value = communist_social }
+		}
+		
+		ai_chance = {
+			factor = 0.2
+			#modifier = { 
+			#	factor = 0.6 #Represents support among the PDPA leadership
+			#	NOT = { OR = { aristocrats = { pop_majority_ideology = communist_social } bureaucrats = { pop_majority_ideology = communist_social } } }
+			#}
+			modifier = {
+				factor = 0.3 #Represents support among the National Assembly
+				NOT = { pop_majority_ideology = communist_social }
+			}
+			#modifier = { 
+			#	factor = 6 #Represents support among the PDPA leadership
+			#	OR = { aristocrats = { pop_majority_ideology = communist_social } bureaucrats = { pop_majority_ideology = communist_social } }
+			#}
+			modifier = {
+				factor = 3 #Represents support among the National Assembly
+				pop_majority_ideology = communist_social
+			}
+		}
 	}
 
 }
@@ -735,20 +918,36 @@ country_event = {
 			AFG = { military_access = RUS }
 		}
 		any_pop = { 
-			ideology = { factor = 0.02 value = communist }
+			limit = { culture = pashtun }
+			ideology = { factor = 0.05 value = traditionalist }
+			militancy = 2
+			consciousness = 2
+		}
+		any_pop = { 
+			ideology = { factor = 0.03 value = communist }
 			militancy = -2
 			consciousness = -2
 		}
-		ai_chance = { factor = 0.6 }
+		ai_chance = { #Use Domper's list of Soviet leaders
+			factor = 0.6
+		}
 	}
 
 	option = {
 		name = "Foster ties with the West Instead."
 		add_country_modifier = { name = political_strife duration = 1365 }
 		any_pop = { 
-			limit = { OR = { strata = rich strata = middle } }
+			limit = { culture = pashtun OR = { strata = rich strata = middle } }
 			militancy = 2.5 consciousness = 2.5
-			ideology = { factor = 0.05 value = liberal } 
+			ideology = { factor = 0.05 value = conservative } 
+		}
+		any_pop = { 
+			limit = { culture = pashtun strata = poor }
+			militancy = 2.5 consciousness = 2.5
+			ideology = { factor = 0.05 value = traditionalist } 
+		}
+		any_pop = { 
+			ideology = { factor = 0.03 value = communist_social }
 		}
 		
 		any_country = {
@@ -761,7 +960,9 @@ country_event = {
 		
 		money = 100000
 		
-		ai_chance = { factor = 0.4 }
+		ai_chance = { #Use Domper's list of Soviet leaders
+			factor = 0.4
+		}
 	}
 	
 }
@@ -779,7 +980,7 @@ country_event = {
 		year = 1982
 		NOT = { year = 1990 }
 		
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 government = socialist_democracy }
 		
 		ruling_party_ideology = communist
 		
@@ -793,11 +994,49 @@ country_event = {
 		set_country_flag = watanjar_afg
 		clr_country_flag = amin_afg
 		any_pop = { 
-			ideology = { factor = 0.10 value = communist }
 			militancy = -2
 			consciousness = -2
 		}
-		ai_chance = { factor = 0.7 }
+		
+		any_pop = { 
+			limit = { OR = { type = aristocrats type = bureaucrats } } 
+			ideology = { factor = 0.05 value = communist }
+		}
+		
+		any_pop = { 
+			limit = { strata = rich }
+			ideology = { factor = 0.05 value = communist }
+		}
+		
+		any_pop = { 
+			limit = { strata = middle }
+			ideology = { factor = 0.10 value = communist }
+		}
+		
+		any_pop = { 
+			limit = { strata = poor }
+			ideology = { factor = 0.10 value = communist }
+		}
+		
+		ai_chance = {
+			factor = 0.7
+			#modifier = { 
+			#	factor = 0.6 #Represents support among the PDPA leadership
+			#	NOT = { OR = { aristocrats = { pop_majority_ideology = communist } bureaucrats = { pop_majority_ideology = communist } } }
+			#}
+			modifier = {
+				factor = 0.3 #Represents support among the National Assembly
+				NOT = { pop_majority_ideology = communist }
+			}
+			#modifier = { 
+			#	factor = 6 #Represents support among the PDPA leadership
+			#	OR = { aristocrats = { pop_majority_ideology = communist } bureaucrats = { pop_majority_ideology = communist } }
+			#}
+			modifier = {
+				factor = 3 #Represents support among the National Assembly
+				pop_majority_ideology = communist
+			}
+		}
 	}
 
 	option = {
@@ -809,8 +1048,46 @@ country_event = {
 			militancy = -2
 			consciousness = -2
 		}
-		add_country_modifier = { name = political_strife duration = 1365 }
-		ai_chance = { factor = 0.3 }
+		
+		any_pop = { 
+			limit = { OR = { type = aristocrats type = bureaucrats } } 
+			ideology = { factor = 0.05 value = communist_social }
+		}
+		
+		any_pop = { 
+			limit = { strata = rich }
+			ideology = { factor = 0.05 value = communist_social }
+		}
+		
+		any_pop = { 
+			limit = { strata = middle }
+			ideology = { factor = 0.10 value = communist_social }
+		}
+		
+		any_pop = { 
+			limit = { strata = poor }
+			ideology = { factor = 0.10 value = communist_social }
+		}
+		
+		ai_chance = {
+			factor = 0.3
+			#modifier = { 
+			#	factor = 0.6 #Represents support among the PDPA leadership
+			#	NOT = { OR = { aristocrats = { pop_majority_ideology = communist_social } bureaucrats = { pop_majority_ideology = communist_social } } }
+			#}
+			modifier = {
+				factor = 0.3 #Represents support among the National Assembly
+				NOT = { pop_majority_ideology = communist_social }
+			}
+			#modifier = { 
+			#	factor = 6 #Represents support among the PDPA leadership
+			#	OR = { aristocrats = { pop_majority_ideology = communist_social } bureaucrats = { pop_majority_ideology = communist_social } }
+			#}
+			modifier = {
+				factor = 3 #Represents support among the National Assembly
+				pop_majority_ideology = communist_social
+			}
+		}
 	}
 
 }
@@ -855,6 +1132,10 @@ country_event = {
 			owner = { any_pop = { militancy = 8 consciousness = 8 ideology = { factor = 0.15 value = communist_social } } }
 		}
 		any_pop = { 
+			limit = { OR = { type = aristocrats type = bureaucrats } } 
+			ideology = { factor = 0.15 value = communist_social }
+		}
+		any_pop = { 
 			limit = { 
 				OR = {
 					is_primary_culture = yes
@@ -872,9 +1153,27 @@ country_event = {
 				}
 				type = farmers
 			}
-			reduce_pop = 0.90
+			reduce_pop = 0.98
 		}
-		ai_chance = { factor = 0.7 }
+		ai_chance = {
+			factor = 0.7
+			#modifier = { 
+			#	factor = 0.6 #Represents support among the PDPA leadership
+			#	NOT = { OR = { aristocrats = { pop_majority_ideology = communist_social } bureaucrats = { pop_majority_ideology = communist_social } } }
+			#}
+			modifier = {
+				factor = 0.3 #Represents support among the National Assembly
+				NOT = { pop_majority_ideology = communist_social }
+			}
+			#modifier = { 
+			#	factor = 6 #Represents support among the PDPA leadership
+			#	OR = { aristocrats = { pop_majority_ideology = communist_social } bureaucrats = { pop_majority_ideology = communist_social } }
+			#}
+			modifier = {
+				factor = 3 #Represents support among the National Assembly
+				pop_majority_ideology = communist_social
+			}
+		}
 	}
 
 	option = {
@@ -884,8 +1183,36 @@ country_event = {
 			militancy = 5
 			consciousness = 5
 		}
+		any_pop = { 
+			limit = { AND = { culture = pashtun OR = { strata = poor strata = rich } } } 
+			ideology = { factor = 0.05 value = traditionalist }
+		}
+		any_pop = { 
+			limit = { OR = { type = aristocrats type = bureaucrats } } 
+			ideology = { factor = 0.15 value = communist }
+		}
+		
 		add_country_modifier = { name = political_strife duration = 1365 }
-		ai_chance = { factor = 0.3 }
+		
+		ai_chance = {
+			factor = 0.3
+			#modifier = { 
+			#	factor = 0.6 #Represents support among the PDPA leadership
+			#	NOT = { OR = { aristocrats = { pop_majority_ideology = communist } bureaucrats = { pop_majority_ideology = communist } } }
+			#}
+			modifier = {
+				factor = 0.3 #Represents support among the National Assembly
+				NOT = { pop_majority_ideology = communist }
+			}
+			#modifier = { 
+			#	factor = 6 #Represents support among the PDPA leadership
+			#	OR = { aristocrats = { pop_majority_ideology = communist } bureaucrats = { pop_majority_ideology = communist } }
+			#}
+			modifier = {
+				factor = 3 #Represents support among the National Assembly
+				pop_majority_ideology = communist
+			}
+		}
 	}
 
 }
@@ -919,22 +1246,98 @@ country_event = {
 		government = proletarian_dictatorship1
 		ruling_party_ideology = communist_social
 		any_pop = { 
-			ideology = { factor = 0.05 value = communist_social }
 			militancy = -2
 			consciousness = -2
 		}
-		ai_chance = { factor = 0.9 }
+		
+		any_pop = { 
+			limit = { OR = { type = aristocrats type = bureaucrats } } 
+			ideology = { factor = 0.05 value = communist_social }
+		}
+		
+		any_pop = { 
+			limit = { strata = rich }
+			ideology = { factor = 0.05 value = communist_social }
+		}
+		
+		any_pop = { 
+			limit = { strata = middle }
+			ideology = { factor = 0.08 value = communist_social }
+		}
+		
+		any_pop = { 
+			limit = { strata = poor }
+			ideology = { factor = 0.05 value = communist_social }
+		}
+		
+		ai_chance = {
+			factor = 0.8
+			#modifier = { 
+			#	factor = 0.6 #Represents support among the PDPA leadership
+			#	NOT = { OR = { aristocrats = { pop_majority_ideology = communist_social } bureaucrats = { pop_majority_ideology = communist_social } } }
+			#}
+			modifier = {
+				factor = 0.3 #Represents support among the National Assembly
+				NOT = { pop_majority_ideology = communist_social }
+			}
+			#modifier = { 
+			#	factor = 6 #Represents support among the PDPA leadership
+			#	OR = { aristocrats = { pop_majority_ideology = communist_social } bureaucrats = { pop_majority_ideology = communist_social } }
+			#}
+			modifier = {
+				factor = 3 #Represents support among the National Assembly
+				pop_majority_ideology = communist_social
+			}
+		}
 	}
 
 	option = {
 		name = "Stick with the status quo."
 		add_country_modifier = { name = political_strife duration = 1365 }
 		any_pop = { 
-			ideology = { factor = 0.02 value = communist }
 			militancy = 2
 			consciousness = 2
 		}
-		ai_chance = { factor = 0.1 }
+		
+		any_pop = { 
+			limit = { OR = { type = aristocrats type = bureaucrats } } 
+			ideology = { factor = 0.05 value = communist }
+		}
+		
+		any_pop = { 
+			limit = { strata = rich }
+			ideology = { factor = 0.02 value = communist }
+		}
+		
+		any_pop = { 
+			limit = { strata = middle }
+			ideology = { factor = 0.02 value = communist }
+		}
+		
+		any_pop = { 
+			limit = { strata = poor }
+			ideology = { factor = 0.10 value = communist }
+		}
+		
+		ai_chance = {
+			factor = 0.2
+			#modifier = { 
+			#	factor = 0.6 #Represents support among the PDPA leadership
+			#	NOT = { OR = { aristocrats = { pop_majority_ideology = communist } bureaucrats = { pop_majority_ideology = communist } } }
+			#}
+			modifier = {
+				factor = 0.3 #Represents support among the National Assembly
+				NOT = { pop_majority_ideology = communist }
+			}
+			#modifier = { 
+			#	factor = 6 #Represents support among the PDPA leadership
+			#	OR = { aristocrats = { pop_majority_ideology = communist } bureaucrats = { pop_majority_ideology = communist } }
+			#}
+			modifier = {
+				factor = 3 #Represents support among the National Assembly
+				pop_majority_ideology = communist
+			}
+		}
 	}
 
 }
@@ -973,8 +1376,27 @@ country_event = {
 				any_pop = { 			
 					militancy = -2
 					consciousness = -2 
-					ideology = { factor = 0.15 value = communist } 
 				} 
+				
+				any_pop = { 
+					limit = { OR = { type = aristocrats type = bureaucrats } } 
+					ideology = { factor = 0.15 value = communist }
+				}
+				
+				any_pop = { 
+					limit = { strata = rich }
+					ideology = { factor = 0.05 value = communist }
+				}
+				
+				any_pop = { 
+					limit = { strata = middle }
+					ideology = { factor = 0.10 value = communist }
+				}
+				
+				any_pop = { 
+					limit = { strata = poor }
+					ideology = { factor = 0.15 value = communist }
+				}
 			}
 		}
 
@@ -984,19 +1406,73 @@ country_event = {
 				any_pop = { 			
 					militancy = -2
 					consciousness = -2 
-					ideology = { factor = 0.15 value = communist_social } 
 				} 
+				any_pop = { 
+					limit = { OR = { type = aristocrats type = bureaucrats } } 
+					ideology = { factor = 0.15 value = communist_social }
+				}
+				
+				any_pop = { 
+					limit = { strata = rich }
+					ideology = { factor = 0.05 value = communist_social }
+				}
+				
+				any_pop = { 
+					limit = { strata = middle }
+					ideology = { factor = 0.10 value = communist_social }
+				}
+				
+				any_pop = { 
+					limit = { strata = poor }
+					ideology = { factor = 0.15 value = communist_social }
+				}
 			}
 		}
 		
-		ai_chance = { factor = 0.9 }
+		ai_chance = {
+			factor = 0.8
+			#modifier = { 
+			#	factor = 0.6 #Represents support among the PDPA leadership
+			#	NOT = { OR = { aristocrats = { pop_majority_ideology = communist_social } bureaucrats = { pop_majority_ideology = communist_social } } }
+			#}
+			modifier = {
+				factor = 0.3 #Represents support among the National Assembly
+				NOT = { pop_majority_ideology = communist_social }
+			}
+			#modifier = { 
+			#	factor = 6 #Represents support among the PDPA leadership
+			#	OR = { aristocrats = { pop_majority_ideology = communist_social } bureaucrats = { pop_majority_ideology = communist_social } }
+			#}
+			modifier = {
+				factor = 3 #Represents support among the National Assembly
+				pop_majority_ideology = communist_social
+			}
+		}
 	}
 
 	option = {
 		name = "Save the resources for other matters."
 		add_country_modifier = { name = political_strife duration = 1365 }
 		prestige = -10
-		ai_chance = { factor = 0.1 }
+		ai_chance = {
+			factor = 0.2
+			#modifier = { 
+			#	factor = 0.6 #Represents support among the PDPA leadership
+			#	NOT = { OR = { aristocrats = { pop_majority_ideology = communist } bureaucrats = { pop_majority_ideology = communist } } }
+			#}
+			modifier = {
+				factor = 0.3 #Represents support among the National Assembly
+				NOT = { pop_majority_ideology = communist }
+			}
+			#modifier = { 
+			#	factor = 6 #Represents support among the PDPA leadership
+			#	OR = { aristocrats = { pop_majority_ideology = communist } bureaucrats = { pop_majority_ideology = communist } }
+			#}
+			modifier = {
+				factor = 3 #Represents support among the National Assembly
+				pop_majority_ideology = communist
+			}
+		}
 	}
 
 }
@@ -1015,7 +1491,7 @@ country_event = {
 		year = 1985
 		NOT = { year = 1990 }
 		
-		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 government = socialist_democracy }
 		
 		OR = { ruling_party_ideology = communist_social ruling_party_ideology = communist }
 	
@@ -1031,11 +1507,44 @@ country_event = {
 		set_country_flag = karmal_afg
 		war_exhaustion = 3
 		any_pop = { 
-			ideology = { factor = 0.02 value = communist_social }
-			militancy = 5
-			consciousness = 5
+			militancy = 2
+			consciousness = 2
 		}
-		ai_chance = { factor = 0.7 }
+		
+		any_pop = { 
+			limit = { OR = { type = aristocrats type = bureaucrats } } 
+			ideology = { factor = 0.15 value = communist_social }
+		}
+		
+		any_pop = { 
+			limit = { strata = middle }
+			ideology = { factor = 0.1 value = communist_social }
+		}
+		
+		any_pop = { 
+			limit = { strata = poor }
+			ideology = { factor = 0.1 value = communist_social }
+		}
+
+		ai_chance = {
+			factor = 0.7
+			#modifier = { 
+			#	factor = 0.6 #Represents support among the PDPA leadership
+			#	NOT = { OR = { aristocrats = { pop_majority_ideology = communist_social } bureaucrats = { pop_majority_ideology = communist_social } } }
+			#}
+			modifier = {
+				factor = 0.3 #Represents support among the National Assembly
+				NOT = { pop_majority_ideology = communist_social }
+			}
+			#modifier = { 
+			#	factor = 6 #Represents support among the PDPA leadership
+			#	OR = { aristocrats = { pop_majority_ideology = communist_social } bureaucrats = { pop_majority_ideology = communist_social } }
+			#}
+			modifier = {
+				factor = 3 #Represents support among the National Assembly
+				pop_majority_ideology = communist_social
+			}
+		}
 	}
 
 	option = {
@@ -1043,11 +1552,43 @@ country_event = {
 		clr_country_flag = ratebzad_afg
 		set_country_flag = gulabzoy_afg
 		any_pop = { 
-			ideology = { factor = 0.02 value = communist }
-			militancy = 5
-			consciousness = 5
+			militancy = 2
+			consciousness = 2
 		}
-		ai_chance = { factor = 0.4 }
+		
+		any_pop = { 
+			limit = { OR = { type = aristocrats type = bureaucrats } } 
+			ideology = { factor = 0.15 value = communist }
+		}
+		
+		any_pop = { 
+			limit = { strata = middle }
+			ideology = { factor = 0.1 value = communist }
+		}
+		any_pop = { 
+			limit = { strata = poor }
+			ideology = { factor = 0.1 value = communist }
+		}
+		
+		ai_chance = {
+			factor = 0.4
+			#modifier = { 
+			#	factor = 0.6 #Represents support among the PDPA leadership
+			#	NOT = { OR = { aristocrats = { pop_majority_ideology = communist } bureaucrats = { pop_majority_ideology = communist } } }
+			#}
+			modifier = {
+				factor = 0.3 #Represents support among the National Assembly
+				NOT = { pop_majority_ideology = communist }
+			}
+			#modifier = { 
+			#	factor = 6 #Represents support among the PDPA leadership
+			#	OR = { aristocrats = { pop_majority_ideology = communist } bureaucrats = { pop_majority_ideology = communist } }
+			#}
+			modifier = {
+				factor = 3 #Represents support among the National Assembly
+				pop_majority_ideology = communist
+			}
+		}
 	}
 	
 }
@@ -1082,12 +1623,41 @@ country_event = {
 		clr_country_flag = ratebzad_afg
 		set_country_flag = generic_parcham_afg
 		ruling_party_ideology = communist_social
+
 		any_pop = { 
-			ideology = { factor = 0.02 value = communist_social }
-			militancy = 5
-			consciousness = 5
+			limit = { OR = { type = aristocrats type = bureaucrats } } 
+			ideology = { factor = 0.15 value = communist_social }
 		}
-		ai_chance = { factor = 0.7 }
+		
+		any_pop = { 
+			limit = { strata = middle }
+			ideology = { factor = 0.1 value = communist_social }
+		}
+		
+		any_pop = { 
+			limit = { strata = poor }
+			ideology = { factor = 0.1 value = communist_social }
+		}
+
+		ai_chance = {
+			factor = 0.7
+			#modifier = { 
+			#	factor = 0.6 #Represents support among the PDPA leadership
+			#	NOT = { OR = { aristocrats = { pop_majority_ideology = communist_social } bureaucrats = { pop_majority_ideology = communist_social } } }
+			#}
+			modifier = {
+				factor = 0.3 #Represents support among the National Assembly
+				NOT = { pop_majority_ideology = communist_social }
+			}
+			#modifier = { 
+			#	factor = 6 #Represents support among the PDPA leadership
+			#	OR = { aristocrats = { pop_majority_ideology = communist_social } bureaucrats = { pop_majority_ideology = communist_social } }
+			#}
+			modifier = {
+				factor = 3 #Represents support among the National Assembly
+				pop_majority_ideology = communist_social
+			}
+		}
 	}
 
 	option = {
@@ -1095,12 +1665,41 @@ country_event = {
 		ruling_party_ideology = communist
 		clr_country_flag = ratebzad_afg
 		set_country_flag = generic_khalq_afg
+
+		
 		any_pop = { 
-			ideology = { factor = 0.02 value = communist }
-			militancy = 5
-			consciousness = 5
+			limit = { OR = { type = aristocrats type = bureaucrats } } 
+			ideology = { factor = 0.15 value = communist }
 		}
-		ai_chance = { factor = 0.4 }
+		
+		any_pop = { 
+			limit = { strata = middle }
+			ideology = { factor = 0.1 value = communist }
+		}
+		any_pop = { 
+			limit = { strata = poor }
+			ideology = { factor = 0.1 value = communist }
+		}
+		
+		ai_chance = {
+			factor = 0.4
+			#modifier = { 
+			#	factor = 0.6 #Represents support among the PDPA leadership
+			#	NOT = { OR = { aristocrats = { pop_majority_ideology = communist } bureaucrats = { pop_majority_ideology = communist } } }
+			#}
+			modifier = {
+				factor = 0.3 #Represents support among the National Assembly
+				NOT = { pop_majority_ideology = communist }
+			}
+			#modifier = { 
+			#	factor = 6 #Represents support among the PDPA leadership
+			#	OR = { aristocrats = { pop_majority_ideology = communist } bureaucrats = { pop_majority_ideology = communist } }
+			#}
+			modifier = {
+				factor = 3 #Represents support among the National Assembly
+				pop_majority_ideology = communist
+			}
+		}
 	}
 	
 }
@@ -1194,9 +1793,27 @@ country_event = {
 				}
 				type = farmers
 			}
-			reduce_pop = 0.90
+			reduce_pop = 0.98
 		}
-		ai_chance = { factor = 0.7 }
+		ai_chance = {
+			factor = 0.7
+			#modifier = { 
+			#	factor = 0.6 #Represents support among the PDPA leadership
+			#	NOT = { OR = { aristocrats = { pop_majority_ideology = communist } bureaucrats = { pop_majority_ideology = communist } } }
+			#}
+			modifier = {
+				factor = 0.3 #Represents support among the National Assembly
+				NOT = { pop_majority_ideology = communist }
+			}
+			#modifier = { 
+			#	factor = 6 #Represents support among the PDPA leadership
+			#	OR = { aristocrats = { pop_majority_ideology = communist } bureaucrats = { pop_majority_ideology = communist } }
+			#}
+			modifier = {
+				factor = 3 #Represents support among the National Assembly
+				pop_majority_ideology = communist
+			}
+		}
 	}
 
 	option = {
@@ -1204,15 +1821,61 @@ country_event = {
 
 		random_owned = { 
 			limit = { owner = { ruling_party_ideology = communist } }
-			owner = { any_pop = { militancy = -5 consciousness = -5 ideology = { factor = 0.15 value = communist } } }
+			owner = {
+				any_pop = { militancy = -5 consciousness = -5 }
+				any_pop = { 
+					limit = { strata = middle }
+					ideology = { factor = 0.1 value = communist }
+				}
+				any_pop = { 
+					limit = { strata = poor }
+					ideology = { factor = 0.15 value = communist }
+				}
+				any_pop = { 
+					limit = { OR = { type = aristocrats type = bureaucrats } }
+					ideology = { factor = 0.15 value = communist }
+				}
+			}
 		}
 
 		random_owned = { 
 			limit = { owner = { ruling_party_ideology = communist_social } }
-			owner = { any_pop = { militancy = -5 consciousness = -5 ideology = { factor = 0.15 value = communist_social } } }
+			owner = {
+				any_pop = { militancy = -5 consciousness = -5 }
+				any_pop = { 
+					limit = { strata = middle }
+					ideology = { factor = 0.1 value = communist_social }
+				}
+				any_pop = { 
+					limit = { strata = poor }
+					ideology = { factor = 0.15 value = communist_social }
+				}
+				any_pop = { 
+					limit = { OR = { type = aristocrats type = bureaucrats } }
+					ideology = { factor = 0.15 value = communist_social }
+				}
+			}
 		}
 		add_country_modifier = { name = political_strife duration = 1365 }
-		ai_chance = { factor = 0.3 }
+		ai_chance = {
+			factor = 0.3
+			#modifier = { 
+			#	factor = 0.6 #Represents support among the PDPA leadership
+			#	NOT = { OR = { aristocrats = { pop_majority_ideology = communist_social } bureaucrats = { pop_majority_ideology = communist_social } } }
+			#}
+			modifier = {
+				factor = 0.3 #Represents support among the National Assembly
+				NOT = { pop_majority_ideology = communist_social }
+			}
+			#modifier = { 
+			#	factor = 6 #Represents support among the PDPA leadership
+			#	OR = { aristocrats = { pop_majority_ideology = communist_social } bureaucrats = { pop_majority_ideology = communist_social } }
+			#}
+			modifier = {
+				factor = 3 #Represents support among the National Assembly
+				pop_majority_ideology = communist_social
+			}
+		}
 	}
 
 }
@@ -1327,12 +1990,40 @@ country_event = {
 		clr_country_flag = qadir_afg
 		set_country_flag = khalq_generic_afg
 		ruling_party_ideology = communist
+		
 		any_pop = { 
-			ideology = { factor = 0.05 value = communist }
-			militancy = -5
-			consciousness = -5
+			limit = { OR = { type = aristocrats type = bureaucrats } } 
+			ideology = { factor = 0.15 value = communist }
 		}
-		ai_chance = { factor = 0.7 }
+		
+		any_pop = { 
+			limit = { strata = middle }
+			ideology = { factor = 0.1 value = communist }
+		}
+		any_pop = { 
+			limit = { strata = poor }
+			ideology = { factor = 0.1 value = communist }
+		}
+		
+		ai_chance = {
+			factor = 0.7
+			#modifier = { 
+			#	factor = 0.6 #Represents support among the PDPA leadership
+			#	NOT = { OR = { aristocrats = { pop_majority_ideology = communist } bureaucrats = { pop_majority_ideology = communist } } }
+			#}
+			modifier = {
+				factor = 0.3 #Represents support among the National Assembly
+				NOT = { pop_majority_ideology = communist }
+			}
+			#modifier = { 
+			#	factor = 6 #Represents support among the PDPA leadership
+			#	OR = { aristocrats = { pop_majority_ideology = communist } bureaucrats = { pop_majority_ideology = communist } }
+			#}
+			modifier = {
+				factor = 3 #Represents support among the National Assembly
+				pop_majority_ideology = communist
+			}
+		}
 	}
 
 	option = {
@@ -1341,12 +2032,38 @@ country_event = {
 		set_country_flag = parcham_generic_afg
 		ruling_party_ideology = communist_social
 		any_pop = { 
-			ideology = { factor = 0.05 value = communist_social }
-			militancy = -5
-			consciousness = -5
+			limit = { OR = { type = aristocrats type = bureaucrats } } 
+			ideology = { factor = 0.15 value = communist_social }
 		}
-		add_country_modifier = { name = political_strife duration = 1365 }
-		ai_chance = { factor = 0.3 }
+		
+		any_pop = { 
+			limit = { strata = middle }
+			ideology = { factor = 0.1 value = communist_social }
+		}
+		any_pop = { 
+			limit = { strata = poor }
+			ideology = { factor = 0.1 value = communist_social }
+		}
+		
+		ai_chance = {
+			factor = 0.3
+			#modifier = { 
+			#	factor = 0.6 #Represents support among the PDPA leadership
+			#	NOT = { OR = { aristocrats = { pop_majority_ideology = communist_social } bureaucrats = { pop_majority_ideology = communist_social } } }
+			#}
+			modifier = {
+				factor = 0.3 #Represents support among the National Assembly
+				NOT = { pop_majority_ideology = communist_social }
+			}
+			#modifier = { 
+			#	factor = 6 #Represents support among the PDPA leadership
+			#	OR = { aristocrats = { pop_majority_ideology = communist_social } bureaucrats = { pop_majority_ideology = communist_social } }
+			#}
+			modifier = {
+				factor = 3 #Represents support among the National Assembly
+				pop_majority_ideology = communist_social
+			}
+		}
 	}
 
 }
@@ -1396,7 +2113,23 @@ country_event = {
 			militancy = -2
 			consciousness = -2
 		}
-		ai_chance = { factor = 0.6 }
+		
+		any_pop = { 
+			limit = { OR = { type = aristocrats type = bureaucrats } } 
+			ideology = { factor = 0.15 value = communist }
+		}
+		
+		ai_chance = {
+			factor = 0.6
+			modifier = {
+				factor = 0.3 #Represents support for Soviet Cooperation
+				OR = { AND = { RUS = { ruling_party_ideology = communist } AFG = { ruling_party_ideology = communist } } AND = { RUS = { ruling_party_ideology = communist_social } AFG = { ruling_party_ideology = communist_social } } }
+			}
+			modifier = {
+				factor = 3 #Represents support for Soviet Cooperation
+				NOT = { OR = { AND = { RUS = { ruling_party_ideology = communist } AFG = { ruling_party_ideology = communist } } AND = { RUS = { ruling_party_ideology = communist_social } AFG = { ruling_party_ideology = communist_social } } } }
+			}
+		}
 	}
 
 	option = {
@@ -1412,7 +2145,30 @@ country_event = {
 		
 		money = 50000
 		
-		ai_chance = { factor = 0.4 }
+		any_pop = { 
+			limit = { culture = pashtun }
+			ideology = { factor = 0.02 value = traditoinalist }
+			militancy = 2
+			consciousness = 2
+		}
+		any_pop = { 
+			limit = { NOT = { culture = pashtun } }
+			ideology = { factor = 0.05 value = communist }
+			militancy = 2
+			consciousness = 2
+		}
+		
+		ai_chance = {
+			factor = 0.4
+			modifier = {
+				factor = 3 #Represents support for Soviet Cooperation
+				OR = { AND = { RUS = { ruling_party_ideology = communist } AFG = { ruling_party_ideology = communist } } AND = { RUS = { ruling_party_ideology = communist_social } AFG = { ruling_party_ideology = communist_social } } }
+			}
+			modifier = {
+				factor = 0.3 #Represents support for Soviet Cooperation
+				NOT = { OR = { AND = { RUS = { ruling_party_ideology = communist } AFG = { ruling_party_ideology = communist } } AND = { RUS = { ruling_party_ideology = communist_social } AFG = { ruling_party_ideology = communist_social } } } }
+			}
+		}
 	}
 	
 }
@@ -1445,11 +2201,38 @@ country_event = {
 		set_country_flag = najibullah_afg
 		ruling_party_ideology = communist_social
 		any_pop = { 
-			ideology = { factor = 0.05 value = communist_social }
-			militancy = -5
-			consciousness = -5
+			limit = { OR = { type = aristocrats type = bureaucrats } } 
+			ideology = { factor = 0.15 value = communist_social }
 		}
-		ai_chance = { factor = 0.8 }
+		
+		any_pop = { 
+			limit = { strata = middle }
+			ideology = { factor = 0.1 value = communist_social }
+		}
+		any_pop = { 
+			limit = { strata = poor }
+			ideology = { factor = 0.1 value = communist_social }
+		}
+		
+		ai_chance = {
+			factor = 0.8
+			#modifier = { 
+			#	factor = 0.6 #Represents support among the PDPA leadership
+			#	NOT = { OR = { aristocrats = { pop_majority_ideology = communist_social } bureaucrats = { pop_majority_ideology = communist_social } } }
+			#}
+			modifier = {
+				factor = 0.3 #Represents support among the National Assembly
+				NOT = { pop_majority_ideology = communist_social }
+			}
+			#modifier = { 
+			#	factor = 6 #Represents support among the PDPA leadership
+			#	OR = { aristocrats = { pop_majority_ideology = communist_social } bureaucrats = { pop_majority_ideology = communist_social } }
+			#}
+			modifier = {
+				factor = 3 #Represents support among the National Assembly
+				pop_majority_ideology = communist_social
+			}
+		}
 	}
 
 	option = {
@@ -1458,13 +2241,38 @@ country_event = {
 		set_country_flag = gulabzoy_afg
 		ruling_party_ideology = communist
 		any_pop = { 
-			ideology = { factor = 0.05 value = communist }
-			militancy = -5
-			consciousness = -5
+			limit = { OR = { type = aristocrats type = bureaucrats } } 
+			ideology = { factor = 0.15 value = communist }
 		}
-		add_country_modifier = { name = political_strife duration = 1365 }
-		ai_chance = { factor = 0.2 }
-	}
+		
+		any_pop = { 
+			limit = { strata = middle }
+			ideology = { factor = 0.1 value = communist }
+		}
+		any_pop = { 
+			limit = { strata = poor }
+			ideology = { factor = 0.1 value = communist }
+		}
+		
+		ai_chance = {
+			factor = 0.2
+			#modifier = { 
+			#	factor = 0.6 #Represents support among the PDPA leadership
+			#	NOT = { OR = { aristocrats = { pop_majority_ideology = communist } bureaucrats = { pop_majority_ideology = communist } } }
+			#}
+			modifier = {
+				factor = 0.3 #Represents support among the National Assembly
+				NOT = { pop_majority_ideology = communist }
+			}
+			#modifier = { 
+			#	factor = 6 #Represents support among the PDPA leadership
+			#	OR = { aristocrats = { pop_majority_ideology = communist } bureaucrats = { pop_majority_ideology = communist } }
+			#}
+			modifier = {
+				factor = 3 #Represents support among the National Assembly
+				pop_majority_ideology = communist
+			}
+		}
 
 }
 
@@ -1514,7 +2322,23 @@ country_event = {
 			militancy = -2
 			consciousness = -2
 		}
-		ai_chance = { factor = 0.8 }
+		
+		any_pop = { 
+			limit = { OR = { type = aristocrats type = bureaucrats } } 
+			ideology = { factor = 0.15 value = communist }
+		}
+		
+		ai_chance = {
+			factor = 0.8
+			modifier = {
+				factor = 0.3 #Represents support for Soviet Cooperation
+				OR = { AND = { RUS = { ruling_party_ideology = communist } AFG = { ruling_party_ideology = communist } } AND = { RUS = { ruling_party_ideology = communist_social } AFG = { ruling_party_ideology = communist_social } } }
+			}
+			modifier = {
+				factor = 3 #Represents support for Soviet Cooperation
+				NOT = { OR = { AND = { RUS = { ruling_party_ideology = communist } AFG = { ruling_party_ideology = communist } } AND = { RUS = { ruling_party_ideology = communist_social } AFG = { ruling_party_ideology = communist_social } } } }
+			}
+		}
 	}
 
 	option = {
@@ -1530,7 +2354,30 @@ country_event = {
 		
 		money = 50000
 		
-		ai_chance = { factor = 0.2 }
+		any_pop = { 
+			limit = { culture = pashtun }
+			ideology = { factor = 0.02 value = traditoinalist }
+			militancy = 2
+			consciousness = 2
+		}
+		any_pop = { 
+			limit = { NOT = { culture = pashtun } }
+			ideology = { factor = 0.05 value = communist }
+			militancy = 2
+			consciousness = 2
+		}
+		
+		ai_chance = {
+			factor = 0.4
+			modifier = {
+				factor = 3 #Represents support for Soviet Cooperation
+				OR = { AND = { RUS = { ruling_party_ideology = communist } AFG = { ruling_party_ideology = communist } } AND = { RUS = { ruling_party_ideology = communist_social } AFG = { ruling_party_ideology = communist_social } } }
+			}
+			modifier = {
+				factor = 0.3 #Represents support for Soviet Cooperation
+				NOT = { OR = { AND = { RUS = { ruling_party_ideology = communist } AFG = { ruling_party_ideology = communist } } AND = { RUS = { ruling_party_ideology = communist_social } AFG = { ruling_party_ideology = communist_social } } } }
+			}
+		}
 	}
 	
 }
@@ -1566,23 +2413,89 @@ country_event = {
 		government = proletarian_dictatorship
 		set_country_flag = parcham_purge_gulabzoy
 		any_pop = { 
-			ideology = { factor = 0.10 value = communist }
 			militancy = -2
 			consciousness = -2
 		}
-		ai_chance = { factor = 0.7 }
+		
+		any_pop = { 
+			limit = { strata = middle } 
+			ideology = { factor = 0.1 value = communist }
+		}
+		
+		any_pop = { 
+			limit = { strata = poor } 
+			ideology = { factor = 0.15 value = communist }
+		}
+		
+		any_pop = { 
+			limit = { OR = { type = aristocrats type = bureaucrats } } 
+			ideology = { factor = 0.15 value = communist }
+		}
+		
+		ai_chance = {
+			factor = 0.7
+			#modifier = { 
+			#	factor = 0.6 #Represents support among the PDPA leadership
+			#	NOT = { OR = { aristocrats = { pop_majority_ideology = communist } bureaucrats = { pop_majority_ideology = communist } } }
+			#}
+			modifier = {
+				factor = 0.3 #Represents support among the National Assembly
+				NOT = { pop_majority_ideology = communist }
+			}
+			#modifier = { 
+			#	factor = 6 #Represents support among the PDPA leadership
+			#	OR = { aristocrats = { pop_majority_ideology = communist } bureaucrats = { pop_majority_ideology = communist } }
+			#}
+			modifier = {
+				factor = 3 #Represents support among the National Assembly
+				pop_majority_ideology = communist
+			}
+		}
 	}
 
 	option = {
 		name = "The PDPA must stand united."
 		set_country_flag = unitied_pdpa
 		any_pop = { 
-			ideology = { factor = 0.10 value = communist_social }
 			militancy = -2
 			consciousness = -2
 		}
+		
+		any_pop = { 
+			limit = { strata = middle } 
+			ideology = { factor = 0.15 value = communist_social }
+		}
+		
+		any_pop = { 
+			limit = { strata = poor } 
+			ideology = { factor = 0.1 value = communist_social }
+		}
+		
+		any_pop = { 
+			limit = { OR = { type = aristocrats type = bureaucrats } } 
+			ideology = { factor = 0.15 value = communist_social }
+		}
+		
 		add_country_modifier = { name = political_strife duration = 1365 }
-		ai_chance = { factor = 0.3 }
+		ai_chance = {
+			factor = 0.3
+			#modifier = { 
+			#	factor = 0.6 #Represents support among the PDPA leadership
+			#	NOT = { OR = { aristocrats = { pop_majority_ideology = communist_social } bureaucrats = { pop_majority_ideology = communist_social } } }
+			#}
+			modifier = {
+				factor = 0.3 #Represents support among the National Assembly
+				NOT = { pop_majority_ideology = communist_social }
+			}
+			#modifier = { 
+			#	factor = 6 #Represents support among the PDPA leadership
+			#	OR = { aristocrats = { pop_majority_ideology = communist_social } bureaucrats = { pop_majority_ideology = communist_social } }
+			#}
+			modifier = {
+				factor = 3 #Represents support among the National Assembly
+				pop_majority_ideology = communist_social
+			}
+		}
 	}
 
 }
@@ -1628,11 +2541,44 @@ country_event = {
 		set_country_flag = najibullah
 		war_exhaustion = 3
 		any_pop = { 
-			ideology = { factor = 0.02 value = communist_social }
 			militancy = 5
 			consciousness = 5
 		}
-		ai_chance = { factor = 0.7 }
+		
+		any_pop = { 
+			limit = { OR = { type = aristocrats type = bureaucrats } } 
+			ideology = { factor = 0.15 value = communist_social }
+		}
+		
+		any_pop = { 
+			limit = { strata = middle }
+			ideology = { factor = 0.15 value = communist_social }
+		}
+		
+		any_pop = { 
+			limit = { strata = poor }
+			ideology = { factor = 0.1 value = communist_social }
+		}
+		
+		ai_chance = {
+			factor = 0.7
+			#modifier = { 
+			#	factor = 0.6 #Represents support among the PDPA leadership
+			#	NOT = { OR = { aristocrats = { pop_majority_ideology = communist_social } bureaucrats = { pop_majority_ideology = communist_social } } }
+			#}
+			modifier = {
+				factor = 0.3 #Represents support among the National Assembly
+				NOT = { pop_majority_ideology = communist_social }
+			}
+			#modifier = { 
+			#	factor = 6 #Represents support among the PDPA leadership
+			#	OR = { aristocrats = { pop_majority_ideology = communist_social } bureaucrats = { pop_majority_ideology = communist_social } }
+			#}
+			modifier = {
+				factor = 3 #Represents support among the National Assembly
+				pop_majority_ideology = communist_social
+			}
+		}
 	}
 
 	option = {
@@ -1640,11 +2586,43 @@ country_event = {
 		clr_country_flag = gulabzoy_afg
 		set_country_flag = qadir_afg
 		any_pop = { 
-			ideology = { factor = 0.02 value = communist_social }
 			militancy = 5
 			consciousness = 5
 		}
-		ai_chance = { factor = 0.4 }
+		
+		any_pop = { 
+			limit = { OR = { type = aristocrats type = bureaucrats } } 
+			ideology = { factor = 0.15 value = communist }
+		}
+		
+		any_pop = { 
+			limit = { strata = middle }
+			ideology = { factor = 0.1 value = communist }
+		}
+		any_pop = { 
+			limit = { strata = poor }
+			ideology = { factor = 0.15 value = communist }
+		}
+		
+		ai_chance = {
+			factor = 0.4
+			#modifier = { 
+			#	factor = 0.6 #Represents support among the PDPA leadership
+			#	NOT = { OR = { aristocrats = { pop_majority_ideology = communist } bureaucrats = { pop_majority_ideology = communist } } }
+			#}
+			modifier = {
+				factor = 0.3 #Represents support among the National Assembly
+				NOT = { pop_majority_ideology = communist }
+			}
+			#modifier = { 
+			#	factor = 6 #Represents support among the PDPA leadership
+			#	OR = { aristocrats = { pop_majority_ideology = communist } bureaucrats = { pop_majority_ideology = communist } }
+			#}
+			modifier = {
+				factor = 3 #Represents support among the National Assembly
+				pop_majority_ideology = communist
+			}
+		}
 	}
 	
 }
@@ -1677,11 +2655,38 @@ country_event = {
 		set_country_flag = khalq_generic_afg
 		ruling_party_ideology = communist
 		any_pop = { 
-			ideology = { factor = 0.05 value = communist }
-			militancy = -5
-			consciousness = -5
+			limit = { OR = { type = aristocrats type = bureaucrats } } 
+			ideology = { factor = 0.15 value = communist }
 		}
-		ai_chance = { factor = 0.8 }
+		
+		any_pop = { 
+			limit = { strata = middle }
+			ideology = { factor = 0.1 value = communist }
+		}
+		any_pop = { 
+			limit = { strata = poor }
+			ideology = { factor = 0.15 value = communist }
+		}
+		
+		ai_chance = {
+			factor = 0.8
+			#modifier = { 
+			#	factor = 0.6 #Represents support among the PDPA leadership
+			#	NOT = { OR = { aristocrats = { pop_majority_ideology = communist } bureaucrats = { pop_majority_ideology = communist } } }
+			#}
+			modifier = {
+				factor = 0.3 #Represents support among the National Assembly
+				NOT = { pop_majority_ideology = communist }
+			}
+			#modifier = { 
+			#	factor = 6 #Represents support among the PDPA leadership
+			#	OR = { aristocrats = { pop_majority_ideology = communist } bureaucrats = { pop_majority_ideology = communist } }
+			#}
+			modifier = {
+				factor = 3 #Represents support among the National Assembly
+				pop_majority_ideology = communist
+			}
+		}
 	}
 
 	option = {
@@ -1690,12 +2695,39 @@ country_event = {
 		set_country_flag = parcham_generic_afg
 		ruling_party_ideology = communist_social
 		any_pop = { 
-			ideology = { factor = 0.05 value = communist_social }
-			militancy = -5
-			consciousness = -5
+			limit = { OR = { type = aristocrats type = bureaucrats } } 
+			ideology = { factor = 0.15 value = communist_social }
 		}
-		add_country_modifier = { name = political_strife duration = 1365 }
-		ai_chance = { factor = 0.2 }
+		
+		any_pop = { 
+			limit = { strata = middle }
+			ideology = { factor = 0.15 value = communist_social }
+		}
+		
+		any_pop = { 
+			limit = { strata = poor }
+			ideology = { factor = 0.1 value = communist_social }
+		}
+		
+		ai_chance = {
+			factor = 0.2
+			#modifier = { 
+			#	factor = 0.6 #Represents support among the PDPA leadership
+			#	NOT = { OR = { aristocrats = { pop_majority_ideology = communist_social } bureaucrats = { pop_majority_ideology = communist_social } } }
+			#}
+			modifier = {
+				factor = 0.3 #Represents support among the National Assembly
+				NOT = { pop_majority_ideology = communist_social }
+			}
+			#modifier = { 
+			#	factor = 6 #Represents support among the PDPA leadership
+			#	OR = { aristocrats = { pop_majority_ideology = communist_social } bureaucrats = { pop_majority_ideology = communist_social } }
+			#}
+			modifier = {
+				factor = 3 #Represents support among the National Assembly
+				pop_majority_ideology = communist_social
+			}
+		}
 	}
 
 }
@@ -1860,12 +2892,41 @@ country_event = {
 		clr_country_flag = watanjar_afg
 		set_country_flag = tanai_afg
 		ruling_party_ideology = communist
+		
 		any_pop = { 
-			ideology = { factor = 0.05 value = communist }
-			militancy = -5
-			consciousness = -5
+			limit = { OR = { type = aristocrats type = bureaucrats } } 
+			ideology = { factor = 0.15 value = communist }
 		}
-		ai_chance = { factor = 0.5 }
+		
+		any_pop = { 
+			limit = { strata = middle }
+			ideology = { factor = 0.1 value = communist }
+		}
+		any_pop = { 
+			limit = { strata = poor }
+			ideology = { factor = 0.15 value = communist }
+		}
+		
+		
+		ai_chance = {
+			factor = 0.5
+			#modifier = { 
+			#	factor = 0.6 #Represents support among the PDPA leadership
+			#	NOT = { OR = { aristocrats = { pop_majority_ideology = communist } bureaucrats = { pop_majority_ideology = communist } } }
+			#}
+			modifier = {
+				factor = 0.3 #Represents support among the National Assembly
+				NOT = { pop_majority_ideology = communist }
+			}
+			#modifier = { 
+			#	factor = 6 #Represents support among the PDPA leadership
+			#	OR = { aristocrats = { pop_majority_ideology = communist } bureaucrats = { pop_majority_ideology = communist } }
+			#}
+			modifier = {
+				factor = 3 #Represents support among the National Assembly
+				pop_majority_ideology = communist
+			}
+		}
 	}
 
 	option = {
@@ -1873,13 +2934,41 @@ country_event = {
 		clr_country_flag = watanjar_afg
 		set_country_flag = najibullah_afg
 		ruling_party_ideology = communist_social
+
 		any_pop = { 
-			ideology = { factor = 0.05 value = communist_social }
-			militancy = -5
-			consciousness = -5
+			limit = { OR = { type = aristocrats type = bureaucrats } } 
+			ideology = { factor = 0.15 value = communist_social }
 		}
-		add_country_modifier = { name = political_strife duration = 1365 }
-		ai_chance = { factor = 0.5 }
+		
+		any_pop = { 
+			limit = { strata = middle }
+			ideology = { factor = 0.15 value = communist_social }
+		}
+		
+		any_pop = { 
+			limit = { strata = poor }
+			ideology = { factor = 0.1 value = communist_social }
+		}
+
+		ai_chance = {
+			factor = 0.5
+			#modifier = { 
+			#	factor = 0.6 #Represents support among the PDPA leadership
+			#	NOT = { OR = { aristocrats = { pop_majority_ideology = communist_social } bureaucrats = { pop_majority_ideology = communist_social } } }
+			#}
+			modifier = {
+				factor = 0.3 #Represents support among the National Assembly
+				NOT = { pop_majority_ideology = communist_social }
+			}
+			#modifier = { 
+			#	factor = 6 #Represents support among the PDPA leadership
+			#	OR = { aristocrats = { pop_majority_ideology = communist_social } bureaucrats = { pop_majority_ideology = communist_social } }
+			#}
+			modifier = {
+				factor = 3 #Represents support among the National Assembly
+				pop_majority_ideology = communist_social
+			}
+		}
 	}
 
 }
@@ -1923,7 +3012,35 @@ country_event = {
 			militancy = 5
 			consciousness = 5
 		}
-		ai_chance = { factor = 0.8 }
+		
+		any_pop = { 
+			limit = { OR = { type = aristocrats type = bureaucrats } } 
+			ideology = { factor = 0.15 value = communist }
+		}
+		
+		ai_chance = {
+			factor = 0.8
+			#modifier = { 
+			#	factor = 0.6 #Represents support among the PDPA leadership
+			#	NOT = { OR = { aristocrats = { pop_majority_ideology = communist } bureaucrats = { pop_majority_ideology = communist } } }
+			#}
+			modifier = {
+				factor = 0.3 #Represents support among the National Assembly
+				NOT = { pop_majority_ideology = communist }
+			}
+			#modifier = { 
+			#	factor = 6 #Represents support among the PDPA leadership
+			#	OR = { aristocrats = { pop_majority_ideology = communist } bureaucrats = { pop_majority_ideology = communist } }
+			#}
+			modifier = {
+				factor = 3 #Represents support among the National Assembly
+				pop_majority_ideology = communist
+			}
+			modifier = {
+				factor = 2 #Represents support among the National Assembly
+				pop_majority_ideology = nationalism
+			}
+		}
 	}
 
 	option = {
@@ -1941,7 +3058,37 @@ country_event = {
 			militancy = -5
 			consciousness = -5
 		}
-		ai_chance = { factor = 0.2 }
+		any_pop = { 
+			limit = { culture = pashtun }
+			ideology = { factor = 0.01 value = traditionalism }
+			militancy = -5
+			consciousness = -5
+		}
+		
+		any_pop = { 
+			limit = { OR = { type = aristocrats type = bureaucrats } } 
+			ideology = { factor = 0.15 value = communist_social }
+		}
+		
+		ai_chance = {
+			factor = 0.2
+			#modifier = { 
+			#	factor = 0.6 #Represents support among the PDPA leadership
+			#	NOT = { OR = { aristocrats = { pop_majority_ideology = communist_social } bureaucrats = { pop_majority_ideology = communist_social } } }
+			#}
+			modifier = {
+				factor = 0.3 #Represents support among the National Assembly
+				NOT = { pop_majority_ideology = communist_social }
+			}
+			#modifier = { 
+			#	factor = 6 #Represents support among the PDPA leadership
+			#	OR = { aristocrats = { pop_majority_ideology = communist_social } bureaucrats = { pop_majority_ideology = communist_social } }
+			#}
+			modifier = {
+				factor = 3 #Represents support among the National Assembly
+				pop_majority_ideology = communist_social
+			}
+		}
 	}
 }
 
@@ -1965,19 +3112,53 @@ country_event = {
 		
 		has_country_flag = tanai_afg
 		has_country_flag = tanai_coup
+		
+		NOT = { has_country_flag = united_pdpa }
 	}
 
 	mean_time_to_happen = { months = 6 }
 
 	option = {
-		name = "Work to foster unity within the PDPA."
+		name = "Root out factionalism within the PDPA."
 		badboy = 1
 		any_pop = { 
-			ideology = { factor = 0.10 value = communist }
 			militancy = -5
 			consciousness = -5
 		}
-		ai_chance = { factor = 0.8 }
+		any_pop = { 
+			limit = { OR = { type = aristocrats type = bureaucrats } } 
+			ideology = { factor = 0.15 value = communist }
+		}
+		
+		any_pop = { 
+			limit = { strata = middle }
+			ideology = { factor = 0.1 value = communist }
+		}
+		
+		any_pop = { 
+			limit = { strata = poor }
+			ideology = { factor = 0.1 value = communist }
+		}
+
+		ai_chance = {
+			factor = 0.8
+			#modifier = { 
+			#	factor = 0.6 #Represents support among the PDPA leadership
+			#	NOT = { OR = { aristocrats = { pop_majority_ideology = communist } bureaucrats = { pop_majority_ideology = communist } } }
+			#}
+			modifier = {
+				factor = 0.3 #Represents support among the National Assembly
+				NOT = { pop_majority_ideology = communist }
+			}
+			#modifier = { 
+			#	factor = 6 #Represents support among the PDPA leadership
+			#	OR = { aristocrats = { pop_majority_ideology = communist } bureaucrats = { pop_majority_ideology = communist } }
+			#}
+			modifier = {
+				factor = 3 #Represents support among the National Assembly
+				pop_majority_ideology = communist
+			}
+		}
 	}
 
 	option = {
@@ -1985,16 +3166,43 @@ country_event = {
 		add_country_modifier = { name = political_strife duration = 1365 }
 		set_country_flag = unitied_pdpa
 		any_pop = { 
-			ideology = { factor = 0.05 value = communist_social }
 			militancy = -5
 			consciousness = -5
 		}
 		any_pop = { 
-			ideology = { factor = 0.05 value = communist }
-			militancy = -5
-			consciousness = -5
+			limit = { OR = { type = aristocrats type = bureaucrats } } 
+			ideology = { factor = 0.15 value = communist_social }
 		}
-		ai_chance = { factor = 0.2 }
+		
+		any_pop = { 
+			limit = { strata = middle }
+			ideology = { factor = 0.1 value = communist_social }
+		}
+		
+		any_pop = { 
+			limit = { strata = poor }
+			ideology = { factor = 0.1 value = communist_social }
+		}
+
+		ai_chance = {
+			factor = 0.2
+			#modifier = { 
+			#	factor = 0.6 #Represents support among the PDPA leadership
+			#	NOT = { OR = { aristocrats = { pop_majority_ideology = communist_social } bureaucrats = { pop_majority_ideology = communist_social } } }
+			#}
+			modifier = {
+				factor = 0.3 #Represents support among the National Assembly
+				NOT = { pop_majority_ideology = communist_social }
+			}
+			#modifier = { 
+			#	factor = 6 #Represents support among the PDPA leadership
+			#	OR = { aristocrats = { pop_majority_ideology = communist_social } bureaucrats = { pop_majority_ideology = communist_social } }
+			#}
+			modifier = {
+				factor = 3 #Represents support among the National Assembly
+				pop_majority_ideology = communist_social
+			}
+		}
 	}
 	
 }
@@ -2030,7 +3238,8 @@ country_event = {
 		political_reform = open_opinion 
 		political_reform = professional_service 
 		add_country_modifier = { name = political_strife duration = 1365 }
-		any_pop = { 
+		any_pop = {
+			limit = { culture = pashtun }
 			ideology = { factor = 0.10 value = communist }
 			militancy = 5
 			consciousness = 5
@@ -2151,11 +3360,39 @@ country_event = {
 		set_country_flag = khalq_generic_afg
 		ruling_party_ideology = communist
 		any_pop = { 
-			ideology = { factor = 0.05 value = communist }
-			militancy = -5
-			consciousness = -5
+			limit = { OR = { type = aristocrats type = bureaucrats } } 
+			ideology = { factor = 0.15 value = communist }
 		}
-		ai_chance = { factor = 0.8 }
+		
+		any_pop = { 
+			limit = { strata = middle }
+			ideology = { factor = 0.1 value = communist }
+		}
+		
+		any_pop = { 
+			limit = { strata = poor }
+			ideology = { factor = 0.15 value = communist }
+		}
+
+		ai_chance = {
+			factor = 0.5
+			#modifier = { 
+			#	factor = 0.6 #Represents support among the PDPA leadership
+			#	NOT = { OR = { aristocrats = { pop_majority_ideology = communist } bureaucrats = { pop_majority_ideology = communist } } }
+			#}
+			modifier = {
+				factor = 0.3 #Represents support among the National Assembly
+				NOT = { pop_majority_ideology = communist }
+			}
+			#modifier = { 
+			#	factor = 6 #Represents support among the PDPA leadership
+			#	OR = { aristocrats = { pop_majority_ideology = communist } bureaucrats = { pop_majority_ideology = communist } }
+			#}
+			modifier = {
+				factor = 3 #Represents support among the National Assembly
+				pop_majority_ideology = communist
+			}
+		}
 	}
 
 	option = {
@@ -2163,13 +3400,41 @@ country_event = {
 		clr_country_flag = tanai_afg
 		set_country_flag = parcham_generic_afg
 		ruling_party_ideology = communist_social
+		
 		any_pop = { 
-			ideology = { factor = 0.05 value = communist_social }
-			militancy = -5
-			consciousness = -5
+			limit = { OR = { type = aristocrats type = bureaucrats } } 
+			ideology = { factor = 0.15 value = communist_social }
 		}
-		add_country_modifier = { name = political_strife duration = 1365 }
-		ai_chance = { factor = 0.2 }
+		
+		any_pop = { 
+			limit = { strata = middle }
+			ideology = { factor = 0.15 value = communist_social }
+		}
+		
+		any_pop = { 
+			limit = { strata = poor }
+			ideology = { factor = 0.1 value = communist_social }
+		}
+
+		ai_chance = {
+			factor = 0.5
+			#modifier = { 
+			#	factor = 0.6 #Represents support among the PDPA leadership
+			#	NOT = { OR = { aristocrats = { pop_majority_ideology = communist_social } bureaucrats = { pop_majority_ideology = communist_social } } }
+			#}
+			modifier = {
+				factor = 0.3 #Represents support among the National Assembly
+				NOT = { pop_majority_ideology = communist_social }
+			}
+			#modifier = { 
+			#	factor = 6 #Represents support among the PDPA leadership
+			#	OR = { aristocrats = { pop_majority_ideology = communist_social } bureaucrats = { pop_majority_ideology = communist_social } }
+			#}
+			modifier = {
+				factor = 3 #Represents support among the National Assembly
+				pop_majority_ideology = communist_social
+			}
+		}
 	}
 
 }
@@ -2205,11 +3470,39 @@ country_event = {
 		set_country_flag = khalq_generic_afg
 		ruling_party_ideology = communist
 		any_pop = { 
-			ideology = { factor = 0.05 value = communist }
-			militancy = -5
-			consciousness = -5
+			limit = { OR = { type = aristocrats type = bureaucrats } } 
+			ideology = { factor = 0.15 value = communist }
 		}
-		ai_chance = { factor = 0.2 }
+		
+		any_pop = { 
+			limit = { strata = middle }
+			ideology = { factor = 0.1 value = communist }
+		}
+		
+		any_pop = { 
+			limit = { strata = poor }
+			ideology = { factor = 0.15 value = communist }
+		}
+
+		ai_chance = {
+			factor = 0.5
+			#modifier = { 
+			#	factor = 0.6 #Represents support among the PDPA leadership
+			#	NOT = { OR = { aristocrats = { pop_majority_ideology = communist } bureaucrats = { pop_majority_ideology = communist } } }
+			#}
+			modifier = {
+				factor = 0.3 #Represents support among the National Assembly
+				NOT = { pop_majority_ideology = communist }
+			}
+			#modifier = { 
+			#	factor = 6 #Represents support among the PDPA leadership
+			#	OR = { aristocrats = { pop_majority_ideology = communist } bureaucrats = { pop_majority_ideology = communist } }
+			#}
+			modifier = {
+				factor = 3 #Represents support among the National Assembly
+				pop_majority_ideology = communist
+			}
+		}
 	}
 
 	option = {
@@ -2217,13 +3510,41 @@ country_event = {
 		clr_country_flag = najibullah_afg
 		set_country_flag = parcham_generic_afg
 		ruling_party_ideology = communist_social
+		
 		any_pop = { 
-			ideology = { factor = 0.05 value = communist_social }
-			militancy = -5
-			consciousness = -5
+			limit = { OR = { type = aristocrats type = bureaucrats } } 
+			ideology = { factor = 0.15 value = communist_social }
 		}
-		add_country_modifier = { name = political_strife duration = 1365 }
-		ai_chance = { factor = 0.8 }
+		
+		any_pop = { 
+			limit = { strata = middle }
+			ideology = { factor = 0.15 value = communist_social }
+		}
+		
+		any_pop = { 
+			limit = { strata = poor }
+			ideology = { factor = 0.1 value = communist_social }
+		}
+
+		ai_chance = {
+			factor = 0.5
+			#modifier = { 
+			#	factor = 0.6 #Represents support among the PDPA leadership
+			#	NOT = { OR = { aristocrats = { pop_majority_ideology = communist_social } bureaucrats = { pop_majority_ideology = communist_social } } }
+			#}
+			modifier = {
+				factor = 0.3 #Represents support among the National Assembly
+				NOT = { pop_majority_ideology = communist_social }
+			}
+			#modifier = { 
+			#	factor = 6 #Represents support among the PDPA leadership
+			#	OR = { aristocrats = { pop_majority_ideology = communist_social } bureaucrats = { pop_majority_ideology = communist_social } }
+			#}
+			modifier = {
+				factor = 3 #Represents support among the National Assembly
+				pop_majority_ideology = communist_social
+			}
+		}
 	}
 
 }
@@ -2277,18 +3598,43 @@ country_event = {
 			set_country_flag = khad_interference
 			any_pop = { 
 				consciousness = 5
-				ideology = { factor = 0.15 value = communist_social }
+				ideology = { factor = 0.05 value = communist }
+			}
+			any_pop = { 
+				limit = { type = aristocrats type = bureaucrats }
+				consciousness = 5
+				ideology = { factor = 0.15 value = communist }
 			}
 		}
 		
-		ai_chance = { factor = 0.8 }
+		ai_chance = {
+			factor = 0.8
+			#modifier = { 
+			#	factor = 0.6 #Represents support among the PDPA leadership
+			#	NOT = { OR = { aristocrats = { pop_majority_ideology = communist } bureaucrats = { pop_majority_ideology = communist } } }
+			#}
+			#modifier = { 
+			#	factor = 6 #Represents support among the PDPA leadership
+			#	OR = { aristocrats = { pop_majority_ideology = communist } bureaucrats = { pop_majority_ideology = communist } }
+			#}
+		}
 	}
 
 	option = {
 		name = "There is no need for this."
 		prestige = -10
 		
-		ai_chance = { factor = 0.2 }
+		ai_chance = {
+			factor = 0.2
+			#modifier = { 
+			#	factor = 0.6 #Represents support among the PDPA leadership
+			#	NOT = { OR = { aristocrats = { pop_majority_ideology = communist_social } bureaucrats = { pop_majority_ideology = communist_social } } }
+			#}
+			#modifier = { 
+			#	factor = 6 #Represents support among the PDPA leadership
+			#	OR = { aristocrats = { pop_majority_ideology = communist_social } bureaucrats = { pop_majority_ideology = communist_social } }
+			#}
+		}
 	}
 	
 }
@@ -2336,7 +3682,17 @@ country_event = {
 		political_reform = parties_only_nominated 
 		prestige = 50
 		
-		ai_chance = { factor = 0.9 }
+		ai_chance = {
+			factor = 0.8
+			modifier = {
+				factor = 3 #Represents support among the Provisional Government
+				pop_majority_ideology = conservative
+			}
+			modifier = {
+				factor = 0.3 #Represents support among the Provisional Government
+				NOT = { pop_majority_ideology = conservative }
+			}
+		}
 	}
 
 	option = {
@@ -2347,7 +3703,17 @@ country_event = {
 		}
 		badboy = 4
 		
-		ai_chance = { factor = 0.1 }
+		ai_chance = {
+			factor = 0.2
+			modifier = {
+				factor = 3 #Represents support among the Provisional Government
+				pop_majority_ideology = traditionalist
+			}
+			modifier = {
+				factor = 0.3 #Represents support among the Provisional Government
+				NOT = { pop_majority_ideology = traditionalist }
+			}
+		}
 	}
 	
 }
@@ -2456,16 +3822,12 @@ country_event = {
 		ai_chance = {
 			factor = 0.7
 			modifier = {
-				factor = 8
-				pop_majority_ideology = communist_social
+				factor = 6
+				OR = { pop_majority_ideology = communist_social pop_majority_ideology = communist }
 			}
 			modifier = {
-				factor = 8
-				pop_majority_ideology = communist
-			}
-			modifier = {
-				factor = 10
-				NOT = { OR = { pop_majority_ideology = conservative pop_majority_ideology = traditionalist pop_majority_ideology = big_tent } }
+				factor = 0.6
+				NOT = { OR = { pop_majority_ideology = communist_social pop_majority_ideology = communist } }
 			}
 		}
 	}
@@ -2496,10 +3858,10 @@ country_event = {
 			factor = 0.3
 			modifier = {
 				factor = 0.3
-				NOT = { pop_majority_ideology = communist_social }
+				NOT = { OR = { pop_majority_ideology = conservative pop_majority_ideology = traditionalist pop_majority_ideology = big_tent } }
 			}
 			modifier = {
-				factor = 5
+				factor = 3
 				OR = { pop_majority_ideology = conservative pop_majority_ideology = traditionalist pop_majority_ideology = big_tent }
 			}
 		}
@@ -2556,13 +3918,46 @@ country_event = {
 		}
 		1209 = {
 			any_pop = { 
-				ideology = { factor = 0.10 value = communist_social }
+				ideology = { factor = 0.20 value = communist_social }
 				militancy = -2
 				consciousness = -2
 			}
 		}
 		
-		ai_chance = { factor = 0.99 }
+		any_pop = { 
+			limit = { OR = { type = aristocrats type = bureaucrats } } 
+			ideology = { factor = 0.15 value = communist_social }
+		}
+		
+		any_pop = { 
+			limit = { strata = middle }
+			ideology = { factor = 0.05 value = communist_social }
+		}
+		
+		any_pop = { 
+			limit = { strata = poor }
+			ideology = { factor = 0.05 value = communist_social }
+		}
+
+		ai_chance = {
+			factor = 0.9
+			#modifier = { 
+			#	factor = 0.6 #Represents support among the PDPA leadership
+			#	NOT = { OR = { aristocrats = { pop_majority_ideology = communist_social } bureaucrats = { pop_majority_ideology = communist_social } } }
+			#}
+			modifier = {
+				factor = 0.3 #Represents support among the National Assembly
+				NOT = { pop_majority_ideology = communist_social }
+			}
+			#modifier = { 
+			#	factor = 6 #Represents support among the PDPA leadership
+			#	OR = { aristocrats = { pop_majority_ideology = communist_social } bureaucrats = { pop_majority_ideology = communist_social } }
+			#}
+			modifier = {
+				factor = 3 #Represents support among the National Assembly
+				pop_majority_ideology = communist_social
+			}
+		}
 	}
 
 	option = {
@@ -2579,7 +3974,30 @@ country_event = {
 			militancy = 5
 		}
 		
-		ai_chance = { factor = 0.01 }
+		any_pop = { 
+			limit = { OR = { type = aristocrats type = bureaucrats } } 
+			ideology = { factor = 0.15 value = communist }
+		}
+		
+		ai_chance = {
+			factor = 0.1
+			#modifier = { 
+			#	factor = 0.6 #Represents support among the PDPA leadership
+			#	NOT = { OR = { aristocrats = { pop_majority_ideology = communist } bureaucrats = { pop_majority_ideology = communist } } }
+			#}
+			modifier = {
+				factor = 0.3 #Represents support among the National Assembly
+				NOT = { pop_majority_ideology = communist }
+			}
+			#modifier = { 
+			#	factor = 6 #Represents support among the PDPA leadership
+			#	OR = { aristocrats = { pop_majority_ideology = communist } bureaucrats = { pop_majority_ideology = communist } }
+			#}
+			modifier = {
+				factor = 3 #Represents support among the National Assembly
+				pop_majority_ideology = communist
+			}
+		}
 	}
 	
 }
@@ -2618,7 +4036,25 @@ country_event = {
 			militancy = -2
 			consciousness = -2
 		}
-		ai_chance = { factor = 0.7 }
+		ai_chance = {
+			factor = 0.7
+			#modifier = { 
+			#	factor = 0.6 #Represents support among the PDPA leadership
+			#	NOT = { OR = { aristocrats = { pop_majority_ideology = communist_social } bureaucrats = { pop_majority_ideology = communist_social } } }
+			#}
+			modifier = {
+				factor = 0.3 #Represents support among the National Assembly
+				NOT = { pop_majority_ideology = communist_social }
+			}
+			#modifier = { 
+			#	factor = 6 #Represents support among the PDPA leadership
+			#	OR = { aristocrats = { pop_majority_ideology = communist_social } bureaucrats = { pop_majority_ideology = communist_social } }
+			#}
+			modifier = {
+				factor = 3 #Represents support among the National Assembly
+				pop_majority_ideology = communist_social
+			}
+		}
 	}
 
 	option = {
@@ -2630,7 +4066,25 @@ country_event = {
 			consciousness = -2
 		}
 		add_country_modifier = { name = political_strife duration = 1365 }
-		ai_chance = { factor = 0.2 }
+		ai_chance = {
+			factor = 0.2
+			#modifier = { 
+			#	factor = 0.6 #Represents support among the PDPA leadership
+			#	NOT = { OR = { aristocrats = { pop_majority_ideology = communist } bureaucrats = { pop_majority_ideology = communist } } }
+			#}
+			modifier = {
+				factor = 0.3 #Represents support among the National Assembly
+				NOT = { pop_majority_ideology = communist }
+			}
+			#modifier = { 
+			#	factor = 6 #Represents support among the PDPA leadership
+			#	OR = { aristocrats = { pop_majority_ideology = communist } bureaucrats = { pop_majority_ideology = communist } }
+			#}
+			modifier = {
+				factor = 3 #Represents support among the National Assembly
+				pop_majority_ideology = communist
+			}
+		}
 	}
 
 	option = {
@@ -2649,7 +4103,25 @@ country_event = {
 			consciousness = -2
 		}
 		add_country_modifier = { name = political_strife duration = 1365 }
-		ai_chance = { factor = 0.1 }
+		ai_chance = {
+			factor = 0.1
+			#modifier = { 
+			#	factor = 0.6 #Represents support among the PDPA leadership
+			#	NOT = { OR = { aristocrats = { pop_majority_ideology = communist } bureaucrats = { pop_majority_ideology = communist } } }
+			#}
+			modifier = {
+				factor = 0.3 #Represents support among the National Assembly
+				NOT = { pop_majority_ideology = communist }
+			}
+			#modifier = { 
+			#	factor = 12 #Represents support among the PDPA leadership
+			#	OR = { aristocrats = { pop_majority_ideology = communist } bureaucrats = { pop_majority_ideology = communist } }
+			#}
+			modifier = {
+				factor = 6 #Represents support among the National Assembly
+				pop_majority_ideology = communist
+			}
+		}
 	}
 
 }

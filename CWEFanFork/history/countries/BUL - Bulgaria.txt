@@ -103,7 +103,7 @@ public_meetings = no_meetings penal_system = capital_punishment
 	non_state_culture_literacy = 0.05
 	civilized = yes
 	prestige = 66
-	ruling_party = "BSP - Centenarian"
+	ruling_party = "BSP - Centenarian (Right)"
 	upper_house = {
 		populist = 4
 		liberal = 21

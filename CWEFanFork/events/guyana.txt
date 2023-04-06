@@ -25,7 +25,7 @@ option = {
 name = "Release British Guiana as a dominion"
 release_vassal = GUY
 diplomatic_influence = { who = GUY value = 200 }
-GUY = { government = colonial_government country_event = 1512094 }
+GUY = { government = colonial_government }
 ai_chance = { factor = 0.8 }
 		}
 

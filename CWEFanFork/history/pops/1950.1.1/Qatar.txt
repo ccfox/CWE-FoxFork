@@ -1,11 +1,11 @@
 #Doha - Doha (25000/6250 POPS)
 1165 = {
-	aristocrats = {
+	capitalists = {
 		culture = arab_gulf
 		religion =  sunni 
 		size = 500
 	 } 
-	aristocrats = {
+	capitalists = {
 		culture = arab_gulf
 		religion = secularism
 		size = 2
@@ -15,7 +15,7 @@
 		religion =  sunni 
 		size = 5
 	 } 
-	capitalists = {
+	aristocrats = {
 		culture = arab_gulf
 		religion =  sunni 
 		size = 30
@@ -56,12 +56,12 @@
 		size = 11
 	 } 
 	farmers = {
-		culture = indian_muslim
+		culture = punjabi
 		religion =  sunni 
 		size = 1113
 	 } 
 	farmers = {
-		culture = indian_muslim
+		culture = punjabi
 		religion = secularism
 		size = 11
 	 } 

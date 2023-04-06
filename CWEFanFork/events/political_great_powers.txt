@@ -115,7 +115,7 @@ country_event = {
 		year = 1955
 		NOT = { has_country_flag = accept_differances_in_gov_by_communist }
 		sphere_owner = { OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } } 
-		NOT = { OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 ruling_party_ideology = communist ruling_party_ideology = socialist } }
+		NOT = { OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 ruling_party_ideology = communist ruling_party_ideology = communist_social ruling_party_ideology = socialist } }
 	}
 
 	mean_time_to_happen = {

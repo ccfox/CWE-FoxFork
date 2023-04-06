@@ -21,13 +21,43 @@ political_decisions = {
 #Indicate that this is the CWE mod
 set_global_flag = CWE_MOD_ACTIVE
 
+#Truman Doctrine (disabled by helsinki_accords)
+random_country = {
+	limit = { 
+		tag = USA
+		year = 1950
+		NOT = { year = 1990 } 
+	}
+	set_country_flag = truman_doctrine
+}
+
+random_country = { 
+	limit = { tag = UGR } 
+	any_pop = {
+		limit = { culture = greek }
+		ideology = { factor = 0.25 value = communist }
+	}
+		
+	any_pop = {
+		limit = { OR = { type = aristocrats type = bureaucrats } }
+		ideology = { factor = 0.25 value = communist }
+	}
+}
+
+#I can't figure out where to do this outside of this file
+random_country = { 
+	limit = { tag = USA is_greater_power = yes government = democracy } 
+	relation = { who = MEX value = -100 }
+	diplomatic_influence = { who = MEX value = -200 }
+}
+
 #Guatemalan Revolution
 random_country = {
 	limit = { 
 		tag = GUA
 		NOT = { year = 1990 } 
 	}
-	set_country_flag = socialist_surge
+	set_country_flag = social_democrat_surge
 }
 
 #Post War Austerity for European nations, Japan, Indonesia and Malaya
@@ -634,7 +664,7 @@ tech_school = army_tech_school
 }
 
 any_country = {
-limit = { tech_school = army_tech_school OR = { ruling_party_ideology = liberal ruling_party_ideology = progressive } }
+limit = { tech_school = army_tech_school OR = { ruling_party_ideology = liberal ruling_party_ideology = progressive ruling_party_ideology = social_democrat } }
 tech_school = culture_tech_school
 }
 

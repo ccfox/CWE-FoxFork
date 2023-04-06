@@ -86,12 +86,12 @@
 		size = 48
 	 } 
 	farmers = {
-		culture = native_american_minor
+		culture = guarani
 		religion =  catholic 
 		size = 3046
 	 } 
 	farmers = {
-		culture = native_american_minor
+		culture = guarani
 		religion = secularism
 		size = 78
 	 } 
@@ -99,87 +99,87 @@
 #Puerto Guarani - Puerto Guarani (16000/4000 POPS)
 2338 = {
 	officers = {
-		culture = native_american_minor
+		culture = guarani
 		religion =  catholic 
 		size = 12
 	 } 
 	soldiers = {
-		culture = native_american_minor
+		culture = guarani
 		religion =  catholic 
 		size = 50
 	 } 
 	soldiers = {
-		culture = native_american_minor
+		culture = guarani
 		religion = secularism
 		size = 1
 	 } 
 	capitalists = {
-		culture = native_american_minor
+		culture = guarani
 		religion =  catholic 
 		size = 156
 	 } 
 	capitalists = {
-		culture = native_american_minor
+		culture = guarani
 		religion = secularism
 		size = 4
 	 } 
 	bureaucrats = {
-		culture = native_american_minor
+		culture = guarani
 		religion =  catholic 
 		size = 3
 	 } 
 	aristocrats = {
-		culture = native_american_minor
+		culture = guarani
 		religion =  catholic 
 		size = 19
 	 } 
 	clergymen = {
-		culture = native_american_minor
+		culture = guarani
 		religion =  catholic 
 		size = 39
 	 } 
 	clergymen = {
-		culture = native_american_minor
+		culture = guarani
 		religion = secularism
 		size = 1
 	 } 
 	clerks = {
-		culture = native_american_minor
+		culture = guarani
 		religion =  catholic 
 		size = 89
 	 } 
 	clerks = {
-		culture = native_american_minor
+		culture = guarani
 		religion = secularism
 		size = 2
 	 } 
 	artisans = {
-		culture = native_american_minor
+		culture = guarani
 		religion =  catholic 
 		size = 84
 	 } 
 	artisans = {
-		culture = native_american_minor
+		culture = guarani
 		religion = secularism
 		size = 2
 	 } 
 	craftsmen = {
-		culture = native_american_minor
+		culture = guarani
 		religion =  catholic 
 		size = 273
 	 } 
 	craftsmen = {
-		culture = native_american_minor
+		culture = guarani
 		religion = secularism
 		size = 7
 	 } 
 	farmers = {
-		culture = native_american_minor
+		culture = guarani
 		religion =  catholic 
 		size = 50
 	 } 
 	farmers = {
-		culture = native_american_minor
+		culture = guarani
 		religion = secularism
 		size = 1
 	 } 
@@ -202,32 +202,32 @@
 #Asuncion - Asuncion (730000/182500 POPS)
 2339 = {
 	officers = {
-		culture = andean_white_spanish
+		culture = platinean_white_spanish
 		religion =  catholic 
 		size = 578
 	 } 
 	officers = {
-		culture = andean_white_spanish
+		culture = platinean_white_spanish
 		religion = secularism
 		size = 14
 	 } 
 	soldiers = {
-		culture = andean_white_spanish
+		culture = platinean_white_spanish
 		religion =  catholic 
 		size = 2313
 	 } 
 	soldiers = {
-		culture = andean_white_spanish
+		culture = platinean_white_spanish
 		religion = secularism
 		size = 59
 	 } 
 	capitalists = {
-		culture = andean_white_spanish
+		culture = platinean_white_spanish
 		religion =  catholic 
 		size = 4225
 	 } 
 	capitalists = {
-		culture = andean_white_spanish
+		culture = platinean_white_spanish
 		religion = secularism
 		size = 108
 	 } 
@@ -719,12 +719,12 @@
 		size = 386
 	 } 
 	farmers = {
-		culture = native_american_minor
+		culture = guarani
 		religion =  catholic 
 		size = 3139
 	 } 
 	farmers = {
-		culture = native_american_minor
+		culture = guarani
 		religion = secularism
 		size = 80
 	 } 

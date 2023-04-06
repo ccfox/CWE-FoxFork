@@ -1,0 +1,431 @@
+#Events here fire based on certain occurances in the Cold War, meant to represent significant events going in one or another nation's favor.
+
+
+#Soviet Victory in Afghanistan
+country_event = {
+   id = 6121000
+   title = "Mujahedeen Crushed in Afghanistan"
+   desc = EVTDESC6121000
+   picture = "afg_dra_army"
+
+	is_triggered_only = yes
+
+	option = {
+		name = "The communists have entrenched themselves within Afghanistan."
+		
+		random_owned = { #The US is Upset
+			limit = { tag = USA is_greater_power = yes government = democracy }
+			any_pop = { militancy = 2 consciousness = 2 }
+			any_pop = {
+				limit = { strata = poor } #Communist support grows among the working class
+				ideology = { factor = 0.15 value = communist }
+			}
+			any_pop = {
+				limit = { strata = middle } #Moderate left support among the middle class
+				ideology = { factor = 0.08 value = social_democrat }
+				ideology = { factor = 0.06 value = progressive }
+				ideology = { factor = 0.04 value = socialist }
+			}
+			any_pop = {
+				limit = { strata = rich } #Rich move more towards the far-right
+				ideology = { factor = 0.15 value = populist }
+			}
+		}
+		
+		random_owned = { #Communist support swells, the ruling elite become more desperate
+			limit = { 
+				capital_scope = { continent = europe } 
+				NOT = {
+					OR = {
+						ruling_party_ideology = communist
+						ruling_party_ideology = communist_social
+					}
+				}
+				NOT = { tag = RUS } #USSR gets its own special event
+			}
+			any_pop = { militancy = 2 consciousness = 2 }
+			any_pop = {
+				limit = { OR = { strata = poor strata = middle } }
+				ideology = { factor = 0.02 value = communist }
+			}
+			any_pop = {
+				limit = { strata = middle }
+				ideology = { factor = 0.02 value = social_democrat }
+				ideology = { factor = 0.02 value = progressive }
+				ideology = { factor = 0.02 value = socialist }
+			}
+			any_pop = {
+				limit = { strata = rich }
+				ideology = { factor = 0.02 value = populist }
+			}
+		}
+
+		random_owned = { #Communist regimes rejoice, victory serves as a stabilizing force
+			limit = { 
+				capital_scope = { continent = europe } 
+				ruling_party_ideology = communist
+				NOT = { tag = RUS } #USSR gets its own special event
+			}
+			any_pop = {
+				ideology = { factor = 0.02 value = communist }
+				militancy = -2 
+				consciousness = -2
+			}
+			any_pop = { 
+				limit = { OR = { type = aristocrats type = bureaucrats } } 
+				ideology = { factor = 0.05 value = communist }
+			}
+		}
+
+		random_owned = { #Communist regimes rejoice, victory serves as a stabilizing force
+			limit = { 
+				capital_scope = { continent = europe } 
+				ruling_party_ideology = communist_social
+				NOT = { tag = RUS } #USSR gets its own special event
+			}
+			any_pop = {
+				ideology = { factor = 0.02 value = communist_social }
+				militancy = -2 
+				consciousness = -2
+			}
+			any_pop = { 
+				limit = { OR = { type = aristocrats type = bureaucrats } } 
+				ideology = { factor = 0.05 value = communist_social }
+			}
+		}
+	}
+}
+
+
+
+
+
+
+#Soviet Defeat in Afghanistan
+country_event = {
+   id = 6121001
+   title = "Communist Government Falls in Afghanistan"
+   desc = EVTDESC6121001
+   picture = "nwo2_govt_change"
+
+	is_triggered_only = yes
+
+	option = {
+		name = "The Mujahedeen fighters have pushed communist influence out of Afghanistan."
+		
+		set_global_flag = afg_focal_event
+		
+		random_owned = { #The US is happy (for now)
+			limit = { tag = USA is_greater_power = yes government = democracy }
+			any_pop = { #Ruling elite become more entrenched
+				militancy = -2
+				consciousness = -2
+				ideology = { factor = 0.08 value = conservative }
+				ideology = { factor = 0.08 value = big_tent }
+				ideology = { factor = 0.08 value = liberal }
+			}
+		}
+		
+		random_owned = { #The ruling elite in Europe are more entrenched
+			limit = { 
+				capital_scope = { continent = europe } 
+				NOT = {
+					OR = {
+						ruling_party_ideology = communist
+						ruling_party_ideology = communist_social
+					}
+				}
+			}
+			any_pop = {
+				militancy = 2
+				consciousness = 2
+				ideology = { factor = 0.02 value = social_democrat }
+				ideology = { factor = 0.02 value = conservative }
+				ideology = { factor = 0.02 value = big_tent }
+				ideology = { factor = 0.02 value = liberal }
+			}
+		}
+
+		random_owned = { #Communist governments shaken
+			limit = {
+				exists = yes
+				OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 government = socialist_democracy }
+				capital_scope = { continent = europe }
+				NOT = { tag = RUS } #USSR gets its own special event
+			}
+			any_pop = {
+				consciousness = 2
+				militancy = 2
+				ideology = { factor = 0.02 value = liberal }
+			}
+			
+			any_pop = { 
+				limit = { OR = { type = aristocrats type = bureaucrats } } 
+				ideology = { factor = 0.1 value = communist_social }
+			}
+			
+			any_pop = { 
+				limit = { OR = { type = aristocrats type = bureaucrats } } 
+				ideology = { factor = 0.05 value = socialist }
+			}
+		}
+	}
+}
+
+
+
+#Communism spreads to South American nation
+country_event = {
+   id = 6121002
+   title = "Communism Spreads to $FROMCOUNTRY$"
+   desc = EVTDESC6121002
+   picture = "nwo2_govt_change"
+
+	is_triggered_only = yes
+
+	option = {
+		name = "The red wave crashes against South America."
+		
+		random_owned = { #The US is Upset
+			limit = { tag = USA is_greater_power = yes government = democracy }
+			any_pop = { militancy = 2 consciousness = 2 }
+			any_pop = {
+				limit = { strata = poor } #Communist support grows among the working class
+				ideology = { factor = 0.05 value = communist }
+			}
+			any_pop = {
+				limit = { strata = middle } #Moderate left support among the middle class
+				ideology = { factor = 0.06 value = social_democrat }
+				ideology = { factor = 0.04 value = progressive }
+				ideology = { factor = 0.02 value = socialist }
+			}
+			any_pop = {
+				limit = { strata = rich } #Rich move more towards the far-right
+				ideology = { factor = 0.05 value = populist }
+			}
+		}
+		
+		random_owned = { #Other Communist Movements are more emboldened
+			limit = { 
+				capital_scope = { continent = south_america } 
+				NOT = {
+					OR = {
+						ruling_party_ideology = communist
+						ruling_party_ideology = communist_social
+					}
+				}
+			}
+			any_pop = { militancy = 2 consciousness = 2 }
+			any_pop = {
+				limit = { OR = { strata = poor strata = middle } }
+				ideology = { factor = 0.02 value = communist }
+			}
+			any_pop = {
+				limit = { strata = middle }
+				ideology = { factor = 0.02 value = social_democrat }
+				ideology = { factor = 0.02 value = progressive }
+				ideology = { factor = 0.02 value = socialist }
+			}
+			any_pop = {
+				limit = { strata = rich }
+				ideology = { factor = 0.02 value = populist }
+			}
+		}
+
+		random_owned = { #Communist regimes rejoice, victory serves as a stabilizing force
+			limit = { 
+				capital_scope = { continent = south_america } 
+				ruling_party_ideology = communist
+			}
+			any_pop = {
+				ideology = { factor = 0.02 value = communist }
+				militancy = -2 
+				consciousness = -2
+			}
+			any_pop = { 
+				limit = { OR = { type = aristocrats type = bureaucrats } } 
+				ideology = { factor = 0.05 value = communist }
+			}
+		}
+
+		random_owned = { #Communist regimes rejoice, victory serves as a stabilizing force
+			limit = { 
+				capital_scope = { continent = south_america } 
+				ruling_party_ideology = communist_social
+			}
+			any_pop = {
+				ideology = { factor = 0.02 value = communist_social }
+				militancy = -2 
+				consciousness = -2
+			}
+			any_pop = { 
+				limit = { OR = { type = aristocrats type = bureaucrats } } 
+				ideology = { factor = 0.05 value = communist_social }
+			}
+		}
+	}
+}
+
+
+#Eastern European or Communist European nation Liberalizes
+country_event = {
+   id = 6121003
+   title = "End of Communism in $FROMCOUNTRY$"
+   desc = EVTDESC6121003
+   picture = "nwo2_govt_change"
+
+	is_triggered_only = yes
+
+	option = {
+		name = "The Socialist Bloc begins to crumble."
+		
+		random_owned = { #The US is happy
+			limit = { tag = USA is_greater_power = yes government = democracy }
+			any_pop = { #Ruling elite become more entrenched
+				militancy = -2
+				consciousness = -2
+				ideology = { factor = 0.08 value = conservative }
+				ideology = { factor = 0.08 value = big_tent }
+				ideology = { factor = 0.08 value = liberal }
+			}
+		}
+		
+		random_owned = { #The ruling elite in Europe are more entrenched
+			limit = { 
+				capital_scope = { continent = europe } 
+				NOT = {
+					OR = {
+						ruling_party_ideology = communist
+						ruling_party_ideology = communist_social
+					}
+				}
+			}
+			any_pop = {
+				militancy = 2
+				consciousness = 2
+				ideology = { factor = 0.03 value = social_democrat }
+				ideology = { factor = 0.03 value = conservative }
+				ideology = { factor = 0.03 value = big_tent }
+				ideology = { factor = 0.03 value = liberal }
+			}
+		}
+
+		random_owned = { #Communist governments shaken
+			limit = {
+				exists = yes
+				OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 government = socialist_democracy }
+				capital_scope = { continent = europe }
+				#NOT = { tag = RUS } #USSR gets its own special Modifiers
+			}
+			any_pop = {
+				consciousness = 2
+				militancy = 2
+				ideology = { factor = 0.05 value = liberal }
+			}
+			
+			any_pop = { 
+				limit = { OR = { type = aristocrats type = bureaucrats } } 
+				ideology = { factor = 0.1 value = communist_social }
+			}
+			
+			any_pop = { 
+				limit = { OR = { type = aristocrats type = bureaucrats } } 
+				ideology = { factor = 0.1 value = socialist }
+			}
+		}
+	}
+}
+
+
+
+#Western European or Capitalist European nation becomes Communist
+country_event = {
+   id = 6121004
+   title = "European Communism Spreads to $FROMCOUNTRY$"
+   desc = EVTDESC6121004
+   picture = "nwo2_govt_change"
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Socialist influence in Europe becomes more entrenched."
+		
+		random_owned = { #The US is Upset
+			limit = { tag = USA is_greater_power = yes government = democracy }
+			any_pop = { militancy = 2 consciousness = 2 }
+			any_pop = {
+				limit = { strata = poor } #Communist support grows among the working class
+				ideology = { factor = 0.08 value = communist }
+			}
+			any_pop = {
+				limit = { strata = middle } #Moderate left support among the middle class
+				ideology = { factor = 0.08 value = social_democrat }
+				ideology = { factor = 0.06 value = progressive }
+				ideology = { factor = 0.04 value = socialist }
+			}
+			any_pop = {
+				limit = { strata = rich } #Rich move more towards the far-right
+				ideology = { factor = 0.08 value = populist }
+			}
+		}
+		
+		random_owned = { #Other Communist Movements are more emboldened
+			limit = { 
+				capital_scope = { continent = south_america } 
+				NOT = {
+					OR = {
+						ruling_party_ideology = communist
+						ruling_party_ideology = communist_social
+					}
+				}
+			}
+			any_pop = { militancy = 2 consciousness = 2 }
+			any_pop = {
+				limit = { OR = { strata = poor strata = middle } }
+				ideology = { factor = 0.04 value = communist }
+			}
+			any_pop = {
+				limit = { strata = middle }
+				ideology = { factor = 0.04 value = social_democrat }
+				ideology = { factor = 0.04 value = progressive }
+				ideology = { factor = 0.04 value = socialist }
+			}
+			any_pop = {
+				limit = { strata = rich }
+				ideology = { factor = 0.04 value = populist }
+			}
+		}
+
+		random_owned = { #Communist regimes rejoice, victory serves as a stabilizing force
+			limit = { 
+				capital_scope = { continent = south_america } 
+				ruling_party_ideology = communist
+			}
+			any_pop = {
+				ideology = { factor = 0.04 value = communist }
+				militancy = -2 
+				consciousness = -2
+			}
+			any_pop = { 
+				limit = { OR = { type = aristocrats type = bureaucrats } } 
+				ideology = { factor = 0.1 value = communist }
+			}
+		}
+
+		random_owned = { #Communist regimes rejoice, victory serves as a stabilizing force
+			limit = { 
+				capital_scope = { continent = south_america } 
+				ruling_party_ideology = communist_social
+			}
+			any_pop = {
+				ideology = { factor = 0.04 value = communist_social }
+				militancy = -2 
+				consciousness = -2
+			}
+			any_pop = { 
+				limit = { OR = { type = aristocrats type = bureaucrats } } 
+				ideology = { factor = 0.1 value = communist_social }
+			}
+		}
+	}
+}

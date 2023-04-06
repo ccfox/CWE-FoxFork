@@ -680,6 +680,29 @@ native_american = {
 		 first_names = { Agustín Alberto Alfonso Alfredo Andrés Benito Carlos César Eduardo Eugenio Felipe Fernando Gabriel Gilberto Gregorio Jacinto Jesús José Juan Julio Macario Manuel Miguel Nazario Nicolás Oliverio Pablo Porfirio Rodolfo Rufino }
 		 last_names = { Alonso Antúnez Cabrera Cajigas Chacón Chiñas Cortés Fernández Gamboa García González Gutiérrez Guzmán Henestrosa Isael Jiménez Juárez López Matus Mérida Morales Nayeli Orozco Ortíz Pineda Rojas Ruíz Suárez Tamayo Vichido }
 	}
+	guarani = { #tag = -PRG
+		#!religion = { catholic }
+		color = {89 80 175}
+		first_names = { 
+			Achachic Achuqalla Alaya Ali Aliqora Amaru Ankalli Anku Ankuwillka Apumayta Aqarapi Aruma AruniAruwata Aruwiri
+			Awki Awqapuma Axaqupa Axata Ayawire	Ayka Aykisi	"Ch Allqu" "Ch Ayña" ChUllqi Champi Champilla Champiwillka Chinpukusi
+			Chiwchi Chuqi Chuqimamani Chuqitinta Chuqiwanka Chuqiwillka Chura Churata Churki Chuwi Chuyma Harawi Haylli Hila Ilawi Illa
+			Illampu Illatarku Illawara Illika Illimani Imiri Inkaruka Inti Intimayta Iraya Jalaru Jalja JanqU Jayri KAwna Kachi Kalisaya
+			Kalla Kanki Katari Khajkiri Khana Khantati Khari Kinu Kuka Kullu Kunturi Kurmi Kurumi Kusi Kusisa Lariku Lawra Lawrawa Laymi
+			Limachi Llallawa Llanqi LluskU LukAna Majnu Mallku Mamani Maya Mayta Mullu Munasiri Nina Ninaqhispi Ninawillka Ollantay Atalaya
+			Panqara	Panti Paqari Paqu Pawllu Pawqara Pawqarmayta Payllu Phaksi PhaksiphatI Phuqata Phuyu Pillqu Puma Pumakusi Qalani Qallari
+			Qantuta Qawana Qawaya Qawayu Qhallalli Qharuru Qhispi Qillqa Qinallata Qinaya Qisintuu Qisu Qisuyupanki Quien Qullqi Ruka Sanka
+			Sapana Sawalla Sayri Saywa Shatiri Sillanki Sinchiruka Sisa Sullkani Sullkata Suxsu TAlla TItU TItUatawchi TUla Tanqara Tarki
+			Taypi Thaluki Thaya Thayari	Tikuna Tintaya Titi Umantuu	UrisakA	Uruchi Ururi Uskamayta Usnayu Utuya Wallpa Wampu Wanka Wanka Wara
+			Warachi Warakusi Waranqa Wari WaychU Waylla Wayna Waywa Willka Yana Yatiri Yupanki 
+		}
+			
+		last_names = { 
+			Abjaisu Álvarez Ayegua Camba Chuaie Correa Cunhagatú Díaz Fernández Galeano
+			Gómez González Guaracay Guaraní Guerrero Jopara López Mongelós Morla Ortíz
+			Paravé Picagua Riquelme Rivarola "Santa Cruz" Tarayú Torga Velázquez Yaguarete Yrahi 
+		}
+	}
 }
 oceanic = {
 	leader = nativeamerican
@@ -854,12 +877,6 @@ regional_arabic_1 = {
 	
 	arab_awazi = { 
 	 color = { 25 63 18 }
-	 first_names = { "Ibn Muhammad" "Abdullah" "Abbas said" "Ismail Mansur" "Rahman" "Abdallahi" "Hassan" "Malusi" "Tahir" "Wiraj" "Amsalu" "Nijam" "Bakri" "Abd Allah" "Abd al-Karim" "Abd al-Malik" "Abd al-Qadir" "Abd al-Rahman" "Abu Bakr" "Ahmad" "Ali" "Fawzi" "Fuad" "Halil" "Hasan" "Hisham" "Ibrahim" "Ishaq" "Iskandar" "Ja'far" "Jamal" "Kamil" "Khalid" "Muhammad" "Mustafa" "Nur al-Din" "Sa'd al-Din" "Salim"  "Sa'ud" "Shukri" "Tawfiq" "Umar" "Uthman" "Yahya" "Yusuf" "Zafir" }
-	 last_names = { Ahmad Ali Zubayr Digna Azrak Hammuda al-Tasashi Nujumi "al-Annabi" "al-Araishi" "al-Asfawi" "al-Binzarti" "al-Fasi" "al-Gharyani" "al-Jaza'iri" "al-Miknasi" "al-Misurati" "al-Murrakushi" "al-Qabisi" "al-Qayrawani" "al-Ribati" "al-Safaqisi" "al-Silawi" "al-Sirti" "al-Susawi" "al-Tilimsani" "al-Tanjawi" "al-Tatwani" "al-Trablusi" "al-Tunusi" "al-Wahrani" "al-Warqali" "al-Wujdi" "ibn Abd Allah" "ibn Abd al-Qadir" "ibn Abu Bakr" "ibn Ahmad" "ibn Ali" "ibn Fuad" "ibn Halil" "ibn Hasan" "ibn Hisham" "ibn Ishaq" "ibn Ja'far" "ibm Kamil" "ibn Khalid" "ibn Muhammad" "ibn Mustafa" "ibn Salim" "ibn Umar" "ibn Uthman" "ibn Yusuf" }
-	}
-
-	arab_sahrawi = { 
-	 color = { 124 246 145 }
 	 first_names = { "Ibn Muhammad" "Abdullah" "Abbas said" "Ismail Mansur" "Rahman" "Abdallahi" "Hassan" "Malusi" "Tahir" "Wiraj" "Amsalu" "Nijam" "Bakri" "Abd Allah" "Abd al-Karim" "Abd al-Malik" "Abd al-Qadir" "Abd al-Rahman" "Abu Bakr" "Ahmad" "Ali" "Fawzi" "Fuad" "Halil" "Hasan" "Hisham" "Ibrahim" "Ishaq" "Iskandar" "Ja'far" "Jamal" "Kamil" "Khalid" "Muhammad" "Mustafa" "Nur al-Din" "Sa'd al-Din" "Salim"  "Sa'ud" "Shukri" "Tawfiq" "Umar" "Uthman" "Yahya" "Yusuf" "Zafir" }
 	 last_names = { Ahmad Ali Zubayr Digna Azrak Hammuda al-Tasashi Nujumi "al-Annabi" "al-Araishi" "al-Asfawi" "al-Binzarti" "al-Fasi" "al-Gharyani" "al-Jaza'iri" "al-Miknasi" "al-Misurati" "al-Murrakushi" "al-Qabisi" "al-Qayrawani" "al-Ribati" "al-Safaqisi" "al-Silawi" "al-Sirti" "al-Susawi" "al-Tilimsani" "al-Tanjawi" "al-Tatwani" "al-Trablusi" "al-Tunusi" "al-Wahrani" "al-Warqali" "al-Wujdi" "ibn Abd Allah" "ibn Abd al-Qadir" "ibn Abu Bakr" "ibn Ahmad" "ibn Ali" "ibn Fuad" "ibn Halil" "ibn Hasan" "ibn Hisham" "ibn Ishaq" "ibn Ja'far" "ibm Kamil" "ibn Khalid" "ibn Muhammad" "ibn Mustafa" "ibn Salim" "ibn Umar" "ibn Uthman" "ibn Yusuf" }
 	}
@@ -1099,18 +1116,6 @@ turko_semitic = {
 		 first_names = { Aslan Hamza "Jamal al-Din" Mansur Mohammad Murad Shamil }
 		 last_names = { Mollah Bek }
 	}
-	kabarday = {
-		 #!religion = { sunni }
-		 color = { 102 205 170 }
-		 first_names = { Aslan Hamza "Jamal al-Din" Mansur Mohammad Murad Shamil }
-		 last_names = { Mollah Bek }
-	}
-	karachay = {
-		 #!religion = { sunni }
-		 color = { 154 205 50 }
-		 first_names = { Aslan Hamza "Jamal al-Din" Mansur Mohammad Murad Shamil }
-		 last_names = { Mollah Bek }
-	}
 	karachay_balkar = {
 		 #!religion = { sunni }
 		 color = { 0 255 127 }
@@ -1158,12 +1163,6 @@ turko_semitic = {
 		 color = { 255 69 0  }
 		 first_names = { "Abd al-Ahad" "Abd al-Karim" "Abu al-Ghazi" Abulfayz Alimqul Aqim "Allah Quli" Haydar Husayn Iltazar Isfandiyar Jahangir Khudayar Madali Mahmud Muhammad Murad Nasrallah "Nasir al-Din" Nurali Pulad Qilich Qutlugh Rahim Shir Umar Yadigar Yaqub }
 		 last_names = { Bahadur Bukhari Khan }
-	}
-	balkar = {
-		 #!religion = { sunni }
-		 color = { 0 255 127 }
-		 first_names = { Asaf Baqi Galiaskar Ismail Makhmut  Musa Rustam Yusuf }
-		 last_names = { Amirkhanov Faysi Gizzat Ibragimov Kamal Khusainov Tinchurin Tukay Yanbayev }
 	}
 	bashkir = {
 		 #!religion = { sunni }

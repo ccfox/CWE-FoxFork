@@ -18,14 +18,28 @@ country_event = {
 		election = no
 		
 		#PRI parties in power
-		OR = { ruling_party_ideology = socialist ruling_party_ideology = social_democrat ruling_party_ideology = big_tent ruling_party_ideology = conservative }
+		OR = { ruling_party_ideology = socialist ruling_party_ideology = social_democrat ruling_party_ideology = big_tent ruling_party_ideology = conservative ruling_party_ideology = liberal }
 	}
 
 	mean_time_to_happen = { months = 3 }
 
 	option = {
 		name = "The PRI maintains its hegemony."
+		
+		random_owned = { #This should give the player or AI the modifier if they don't have a majority support
+			limit = { owner = { AND = { government = democracy tag = MEX NOT = { OR = { pop_majority_ideology = big_tent pop_majority_ideology = socialist pop_majority_ideology = social_democrat } } } } }
+			owner = { add_country_modifier = { name = revolution_chaos duration = 1825 } }
+		}
+		
 		ruling_party_ideology = big_tent
+		
+		any_pop = { 
+			ideology = { factor = 0.2 value = big_tent }
+		}
+		any_pop = { 
+			limit = { strata = poor }
+			ideology = { factor = 0.1 value = socialist }
+		}
 		
 		#Opposition parties get angry
 		any_pop = {
@@ -51,7 +65,24 @@ country_event = {
 			}
 		}
 		
-		ai_chance = { factor = 0.9 }
+		ai_chance = {
+			factor = 0.9
+			modifier = {
+				factor = 0.6
+				NOT = { OR = { pop_majority_ideology = big_tent pop_majority_ideology = socialist pop_majority_ideology = social_democrat } }
+			}
+			modifier = {
+				factor = 2
+				ruling_party_ideology = big_tent
+			}
+			modifier = {
+				factor = 2
+				AND = { #PRI dominance strenghtened by Soviet ties
+					RUS = { exists = yes OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } }
+					MEX = { in_sphere = RUS }
+				}
+			}
+		}
 	}
 
 	option = {
@@ -63,6 +94,19 @@ country_event = {
 			limit = { tag = USA is_greater_power = yes government = democracy OR = { ruling_party_ideology = traditionalist ruling_party_ideology = conservative ruling_party_ideology = big_tent } }
 			relation = { who = THIS value = 50 }
 			diplomatic_influence = { who = THIS value = 50 }
+		}
+		
+		random_owned = { #This should give the player or AI the modifier if they don't have a majority support
+			limit = { owner = { AND = { government = democracy tag = MEX NOT = { OR = { pop_majority_ideology = traditionalist pop_majority_ideology = conservative } } } } }
+			owner = { add_country_modifier = { name = revolution_chaos duration = 1825 } }
+		}
+		
+		any_pop = { 
+			ideology = { factor = 0.15 value = conservative }
+		}
+		any_pop = { 
+			limit = { strata = rich }
+			ideology = { factor = 0.15 value = traditionalist }
 		}
 		
 		#Liberals and Socialists are angry
@@ -92,10 +136,26 @@ country_event = {
 				ideology = communist_social
 			}
 		}
+	
 		
-		add_country_modifier = { name = revolution_chaos duration = 1825 }
-		
-		ai_chance = { factor = 0.1 }
+		ai_chance = {
+			factor = 0.1
+			modifier = {
+				factor = 6
+				OR = { pop_majority_ideology = traditionalist pop_majority_ideology = conservative }
+			}
+			modifier = {
+				factor = 4
+				OR = { pop_majority_ideology = nationalist pop_majority_ideology = populist }
+			}
+			modifier = {
+				factor = 2
+				AND = { #PRI dominance weakened by American ties
+					USA = { exists = yes NOT = { OR = { government = socialist_democracy government = proletarian_dictatorship government = proletarian_dictatorship1 } } }
+					MEX = { in_sphere = USA }
+				}
+			}
+		}
 	}
 
 }
@@ -120,14 +180,24 @@ country_event = {
 		election = no
 		
 		#PRI parties in power
-		OR = { ruling_party_ideology = socialist ruling_party_ideology = social_democrat ruling_party_ideology = big_tent ruling_party_ideology = conservative }
+		OR = { ruling_party_ideology = socialist ruling_party_ideology = social_democrat ruling_party_ideology = big_tent ruling_party_ideology = conservative ruling_party_ideology = liberal }
 	}
 
 	mean_time_to_happen = { months = 7 }
 
 	option = {
 		name = "Adolfo Ruiz Cortines becomes the 54th President of Mexico."
+		
+		random_owned = { #This should give the player or AI the modifier if they don't have a majority support
+			limit = { owner = { AND = { government = democracy tag = MEX NOT = { OR = { pop_majority_ideology = big_tent } } } } }
+			owner = { add_country_modifier = { name = revolution_chaos duration = 1825 } }
+		}
+		
 		ruling_party_ideology = big_tent
+		
+		any_pop = { 
+			ideology = { factor = 0.2 value = big_tent }
+		}
 		
 		#Opposition parties get angry
 		any_pop = {
@@ -153,12 +223,36 @@ country_event = {
 			}
 		}
 		
-		ai_chance = { factor = 0.8 }
+		ai_chance = {
+			factor = 0.25
+			modifier = {
+				factor = 6
+				OR = { pop_majority_ideology = big_tent }
+			}
+			modifier = {
+				factor = 0.6
+				NOT = { OR = { pop_majority_ideology = big_tent } }
+			}
+			modifier = {
+				factor 2
+				ruling_party_ideology = big_tent
+			}
+		}
 	}
 
 	option = {
 		name = "Go with the left-wing of the PRI."
+		
+		random_owned = { #This should give the player or AI the modifier if they don't have a majority support
+			limit = { owner = { AND = { government = democracy tag = MEX NOT = { OR = { pop_majority_ideology = socialist pop_majority_ideology = communist pop_majority_ideology = communist_social } } } } }
+			owner = { add_country_modifier = { name = revolution_chaos duration = 1825 } }
+		}
+		
 		ruling_party_ideology = socialist
+		
+		any_pop = { 
+			ideology = { factor = 0.2 value = socialist }
+		}
 		
 		#Liberals and Right wingers are angry
 		any_pop = {
@@ -188,14 +282,42 @@ country_event = {
 			}
 		}
 		
-		add_country_modifier = { name = revolution_chaos duration = 1825 }
-		
-		ai_chance = { factor = 0.1 }
+		ai_chance = {
+			factor = 0.25
+			modifier = {
+				factor = 6
+				OR = { pop_majority_ideology = socialist pop_majority_ideology = communist pop_majority_ideology = communist_social }
+			}
+			modifier = {
+				factor = 0.6
+				NOT = { OR = { pop_majority_ideology = socialist pop_majority_ideology = communist pop_majority_ideology = communist_social } }
+			}
+			modifier = {
+				factor = 3
+				AND = { #Left PRI dominance strenghtened by Soviet ties
+					RUS = { exists = yes OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } }
+					MEX = { in_sphere = RUS }
+				}
+			}
+		}
 	}
 
 	option = {
 		name = "Miguel Henriquez Guzman's splinter faction leads to more open politics."
-		ruling_party_ideology = big_tent
+		
+		random_owned = { #This should give the player or AI the modifier if they don't have a majority support
+			limit = { owner = { AND = { government = democracy tag = MEX NOT = { OR = { pop_majority_ideology = social_democrat pop_majority_ideology = progressive } } } } }
+			owner = { add_country_modifier = { name = revolution_chaos duration = 1825 } }
+		}
+		
+		ruling_party_ideology = social_democrat
+		
+		any_pop = { 
+			ideology = { factor = 0.15 value = social_democrat }
+		}
+		any_pop = { 
+			ideology = { factor = 0.15 value = progressive }
+		}
 		
 		political_reform = professional_service 
 		political_reform = parties_promote_democratic 
@@ -224,13 +346,26 @@ country_event = {
 			}
 		}
 		
-		add_country_modifier = { name = revolution_chaos duration = 3650 }
-		
-		ai_chance = { factor = 0.05 }
+		ai_chance = {
+			factor = 0.25
+			modifier = {
+				factor = 6
+				OR = { pop_majority_ideology = social_democrat pop_majority_ideology = progressive }
+			}
+			modifier = {
+				factor = 0.6
+				NOT = { OR = { pop_majority_ideology = social_democrat pop_majority_ideology = progressive } }
+			}
+			modifier = {
+				factor 0.3
+				ruling_party_ideology = big_tent
+			}
+		}
 	}
 
 	option = {
 		name = "Efrain Gonzalez Luna and the PAN wins."
+		
 		ruling_party_ideology = conservative
 
 		#Gain relations with USA
@@ -240,6 +375,15 @@ country_event = {
 			diplomatic_influence = { who = THIS value = 50 }
 		}
 		
+		random_owned = { #This should give the player or AI the modifier if they don't have a majority support
+			limit = { owner = { AND = { government = democracy tag = MEX NOT = { OR = { pop_majority_ideology = conservative } } } } }
+			owner = { add_country_modifier = { name = revolution_chaos duration = 1825 } }
+		}
+		
+		any_pop = { 
+			ideology = { factor = 0.2 value = conservative }
+		}
+
 		#Liberals and Socialists are angry
 		any_pop = {
 			scaled_militancy = {
@@ -268,9 +412,29 @@ country_event = {
 			}
 		}
 		
-		add_country_modifier = { name = revolution_chaos duration = 1825 }
 
-		ai_chance = { factor = 0.05 }
+		ai_chance = {
+			factor = 0.25
+			modifier = {
+				factor = 6
+				OR = { pop_majority_ideology = conservative }
+			}
+			modifier = {
+				factor = 0.6
+				NOT = { OR = { pop_majority_ideology = conservative } }
+			}
+			modifier = {
+				factor 0.6
+				ruling_party_ideology = big_tent
+			}
+			modifier = {
+				factor = 2
+				AND = { #PRI dominance weakened by American ties
+					USA = { exists = yes NOT = { OR = { government = socialist_democracy government = proletarian_dictatorship government = proletarian_dictatorship1 } } }
+					MEX = { in_sphere = USA }
+				}
+			}
+		}
 	}
 
 }
@@ -295,13 +459,24 @@ country_event = {
 		election = no
 		
 		#PRI parties in power
-		OR = { ruling_party_ideology = socialist ruling_party_ideology = social_democrat ruling_party_ideology = big_tent ruling_party_ideology = conservative }
+		OR = { ruling_party_ideology = socialist ruling_party_ideology = social_democrat ruling_party_ideology = big_tent ruling_party_ideology = conservative ruling_party_ideology = liberal }
 	}
 
 	mean_time_to_happen = { months = 7 }
 
 	option = {
 		name = "The PRI wins."
+		
+		random_owned = { #This should give the player or AI the modifier if they don't have a majority support
+			limit = { owner = { AND = { government = democracy tag = MEX NOT = { OR = { pop_majority_ideology = big_tent } } } } }
+			owner = { add_country_modifier = { name = revolution_chaos duration = 1825 } }
+		}
+		
+		ruling_party_ideology = big_tent
+		
+		any_pop = { 
+			ideology = { factor = 0.2 value = big_tent }
+		}
 		
 		#Opposition parties get angry
 		any_pop = {
@@ -327,12 +502,36 @@ country_event = {
 			}
 		}
 		
-		ai_chance = { factor = 0.9 }
+		ai_chance = {
+			factor = 0.5
+			modifier = {
+				factor = 6
+				OR = { pop_majority_ideology = big_tent }
+			}
+			modifier = {
+				factor = 0.6
+				NOT = { OR = { pop_majority_ideology = big_tent } }
+			}
+			modifier = {
+				factor 2
+				ruling_party_ideology = big_tent
+			}
+		}
 	}
 
 	option = {
 		name = "Go with the left-wing of the PRI."
+		
+		random_owned = { #This should give the player or AI the modifier if they don't have a majority support
+			limit = { owner = { AND = { government = democracy tag = MEX NOT = { OR = { pop_majority_ideology = socialist pop_majority_ideology = communist pop_majority_ideology = communist_social } } } } }
+			owner = { add_country_modifier = { name = revolution_chaos duration = 1825 } }
+		}
+		
 		ruling_party_ideology = socialist
+		
+		any_pop = { 
+			ideology = { factor = 0.2 value = socialist }
+		}
 		
 		#Liberals and Right wingers are angry
 		any_pop = {
@@ -362,15 +561,31 @@ country_event = {
 			}
 		}
 		
-		add_country_modifier = { name = revolution_chaos duration = 1825 }
-		
-		ai_chance = { factor = 0.05 }
+		ai_chance = {
+			factor = 0.25
+			modifier = {
+				factor = 6
+				OR = { pop_majority_ideology = socialist pop_majority_ideology = communist pop_majority_ideology = communist_social }
+			}
+			modifier = {
+				factor = 0.6
+				NOT = { OR = { pop_majority_ideology = socialist pop_majority_ideology = communist pop_majority_ideology = communist_social } }
+			}
+			modifier = {
+				factor = 3
+				AND = { #Left PRI dominance strenghtened by Soviet ties
+					RUS = { exists = yes OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } }
+					MEX = { in_sphere = RUS }
+				}
+			}
+		}
 	}
 
 	option = {
 		name = "Alvarez is able to win."
-		ruling_party_ideology = conservative
 		
+		ruling_party_ideology = conservative
+
 		#Gain relations with USA
 		random_country = {
 			limit = { tag = USA is_greater_power = yes government = democracy OR = { ruling_party_ideology = traditionalist ruling_party_ideology = conservative ruling_party_ideology = liberal ruling_party_ideology = big_tent } }
@@ -378,6 +593,15 @@ country_event = {
 			diplomatic_influence = { who = THIS value = 50 }
 		}
 		
+		random_owned = { #This should give the player or AI the modifier if they don't have a majority support
+			limit = { owner = { AND = { government = democracy tag = MEX NOT = { OR = { pop_majority_ideology = conservative } } } } }
+			owner = { add_country_modifier = { name = revolution_chaos duration = 1825 } }
+		}
+		
+		any_pop = { 
+			ideology = { factor = 0.2 value = conservative }
+		}
+
 		#Liberals and Socialists are angry
 		any_pop = {
 			scaled_militancy = {
@@ -406,9 +630,28 @@ country_event = {
 			}
 		}
 		
-		add_country_modifier = { name = revolution_chaos duration = 1825 }
-		
-		ai_chance = { factor = 0.05 }
+		ai_chance = {
+			factor = 0.25
+			modifier = {
+				factor = 6
+				OR = { pop_majority_ideology = conservative }
+			}
+			modifier = {
+				factor = 0.6
+				NOT = { OR = { pop_majority_ideology = conservative } }
+			}
+			modifier = {
+				factor 0.6
+				ruling_party_ideology = big_tent
+			}
+			modifier = {
+				factor = 2
+				AND = { #PRI dominance weakened by American ties
+					USA = { exists = yes NOT = { OR = { government = socialist_democracy government = proletarian_dictatorship government = proletarian_dictatorship1 } } }
+					MEX = { in_sphere = USA }
+				}
+			}
+		}
 	}
 
 }
@@ -441,6 +684,17 @@ country_event = {
 	option = {
 		name = "The PRI wins."
 		
+		random_owned = { #This should give the player or AI the modifier if they don't have a majority support
+			limit = { owner = { AND = { government = democracy tag = MEX NOT = { OR = { pop_majority_ideology = big_tent } } } } }
+			owner = { add_country_modifier = { name = revolution_chaos duration = 1825 } }
+		}
+		
+		ruling_party_ideology = big_tent
+		
+		any_pop = { 
+			ideology = { factor = 0.2 value = big_tent }
+		}
+		
 		#Opposition parties get angry
 		any_pop = {
 			scaled_militancy = {
@@ -465,12 +719,36 @@ country_event = {
 			}
 		}
 		
-		ai_chance = { factor = 0.9 }
+		ai_chance = {
+			factor = 0.5
+			modifier = {
+				factor = 6
+				OR = { pop_majority_ideology = big_tent }
+			}
+			modifier = {
+				factor = 0.6
+				NOT = { OR = { pop_majority_ideology = big_tent } }
+			}
+			modifier = {
+				factor 2
+				ruling_party_ideology = big_tent
+			}
+		}
 	}
 
 	option = {
 		name = "Go with the left-wing of the PRI."
+		
+		random_owned = { #This should give the player or AI the modifier if they don't have a majority support
+			limit = { owner = { AND = { government = democracy tag = MEX NOT = { OR = { pop_majority_ideology = socialist pop_majority_ideology = communist pop_majority_ideology = communist_social } } } } }
+			owner = { add_country_modifier = { name = revolution_chaos duration = 1825 } }
+		}
+		
 		ruling_party_ideology = socialist
+		
+		any_pop = { 
+			ideology = { factor = 0.2 value = socialist }
+		}
 		
 		#Liberals and Right wingers are angry
 		any_pop = {
@@ -500,15 +778,31 @@ country_event = {
 			}
 		}
 		
-		add_country_modifier = { name = revolution_chaos duration = 1825 }
-		
-		ai_chance = { factor = 0.05 }
+		ai_chance = {
+			factor = 0.25
+			modifier = {
+				factor = 6
+				OR = { pop_majority_ideology = socialist pop_majority_ideology = communist pop_majority_ideology = communist_social }
+			}
+			modifier = {
+				factor = 0.6
+				NOT = { OR = { pop_majority_ideology = socialist pop_majority_ideology = communist pop_majority_ideology = communist_social } }
+			}
+			modifier = {
+				factor = 3
+				AND = { #Left PRI dominance strenghtened by Soviet ties
+					RUS = { exists = yes OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } }
+					MEX = { in_sphere = RUS }
+				}
+			}
+		}
 	}
 
 	option = {
 		name = "PAN makes it through."
-		ruling_party_ideology = conservative
 		
+		ruling_party_ideology = conservative
+
 		#Gain relations with USA
 		random_country = {
 			limit = { tag = USA is_greater_power = yes government = democracy OR = { ruling_party_ideology = traditionalist ruling_party_ideology = conservative ruling_party_ideology = liberal ruling_party_ideology = big_tent } }
@@ -516,6 +810,15 @@ country_event = {
 			diplomatic_influence = { who = THIS value = 50 }
 		}
 		
+		random_owned = { #This should give the player or AI the modifier if they don't have a majority support
+			limit = { owner = { AND = { government = democracy tag = MEX NOT = { OR = { pop_majority_ideology = conservative } } } } }
+			owner = { add_country_modifier = { name = revolution_chaos duration = 1825 } }
+		}
+		
+		any_pop = { 
+			ideology = { factor = 0.2 value = conservative }
+		}
+
 		#Liberals and Socialists are angry
 		any_pop = {
 			scaled_militancy = {
@@ -544,9 +847,28 @@ country_event = {
 			}
 		}
 		
-		add_country_modifier = { name = revolution_chaos duration = 1825 }
-		
-		ai_chance = { factor = 0.05 }
+		ai_chance = {
+			factor = 0.25
+			modifier = {
+				factor = 6
+				OR = { pop_majority_ideology = conservative }
+			}
+			modifier = {
+				factor = 0.6
+				NOT = { OR = { pop_majority_ideology = conservative } }
+			}
+			modifier = {
+				factor 0.6
+				ruling_party_ideology = big_tent
+			}
+			modifier = {
+				factor = 2
+				AND = { #PRI dominance weakened by American ties
+					USA = { exists = yes NOT = { OR = { government = socialist_democracy government = proletarian_dictatorship government = proletarian_dictatorship1 } } }
+					MEX = { in_sphere = USA }
+				}
+			}
+		}
 	}
 
 }
@@ -578,7 +900,17 @@ country_event = {
 
 	option = {
 		name = "The PRI continues to dominate Mexican politics."
+		
+		random_owned = { #This should give the player or AI the modifier if they don't have a majority support
+			limit = { owner = { AND = { government = democracy tag = MEX NOT = { OR = { pop_majority_ideology = big_tent } } } } }
+			owner = { add_country_modifier = { name = revolution_chaos duration = 1825 } }
+		}
+		
 		ruling_party_ideology = big_tent
+		
+		any_pop = { 
+			ideology = { factor = 0.2 value = big_tent }
+		}
 		
 		#Opposition parties get angry
 		any_pop = {
@@ -604,12 +936,37 @@ country_event = {
 			}
 		}
 		
-		ai_chance = { factor = 0.9 }
+		ai_chance = {
+			factor = 0.5
+			modifier = {
+				factor = 6
+				OR = { pop_majority_ideology = big_tent }
+			}
+			modifier = {
+				factor = 0.6
+				NOT = { OR = { pop_majority_ideology = big_tent } }
+			}
+			modifier = {
+				factor 2
+				ruling_party_ideology = big_tent
+			}
+		}
 	}
 
 	option = {
 		name = "Go with the left-wing of the PRI."
+		
+		random_owned = { #This should give the player or AI the modifier if they don't have a majority support
+			limit = { owner = { AND = { government = democracy tag = MEX NOT = { OR = { pop_majority_ideology = socialist pop_majority_ideology = communist pop_majority_ideology = communist_social } } } } }
+			owner = { add_country_modifier = { name = revolution_chaos duration = 1825 } }
+		}
+		
 		ruling_party_ideology = socialist
+		
+		any_pop = { 
+			ideology = { factor = 0.2 value = socialist }
+		}
+		
 		
 		#Liberals and Right wingers are angry
 		any_pop = {
@@ -639,15 +996,31 @@ country_event = {
 			}
 		}
 		
-		add_country_modifier = { name = revolution_chaos duration = 1825 }
-		
-		ai_chance = { factor = 0.05 }
+		ai_chance = {
+			factor = 0.25
+			modifier = {
+				factor = 6
+				OR = { pop_majority_ideology = socialist pop_majority_ideology = communist pop_majority_ideology = communist_social }
+			}
+			modifier = {
+				factor = 0.6
+				NOT = { OR = { pop_majority_ideology = socialist pop_majority_ideology = communist pop_majority_ideology = communist_social } }
+			}
+			modifier = {
+				factor = 3
+				AND = { #Left PRI dominance strenghtened by Soviet ties
+					RUS = { exists = yes OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } }
+					MEX = { in_sphere = RUS }
+				}
+			}
+		}
 	}
 
 	option = {
 		name = "PAN becomes the dominant party."
-		ruling_party_ideology = conservative
 		
+		ruling_party_ideology = conservative
+
 		#Gain relations with USA
 		random_country = {
 			limit = { tag = USA is_greater_power = yes government = democracy OR = { ruling_party_ideology = traditionalist ruling_party_ideology = conservative ruling_party_ideology = liberal ruling_party_ideology = big_tent } }
@@ -655,6 +1028,15 @@ country_event = {
 			diplomatic_influence = { who = THIS value = 50 }
 		}
 		
+		random_owned = { #This should give the player or AI the modifier if they don't have a majority support
+			limit = { owner = { AND = { government = democracy tag = MEX NOT = { OR = { pop_majority_ideology = conservative } } } } }
+			owner = { add_country_modifier = { name = revolution_chaos duration = 1825 } }
+		}
+		
+		any_pop = { 
+			ideology = { factor = 0.2 value = conservative }
+		}
+
 		#Liberals and Socialists are angry
 		any_pop = {
 			scaled_militancy = {
@@ -683,9 +1065,28 @@ country_event = {
 			}
 		}
 		
-		add_country_modifier = { name = revolution_chaos duration = 1825 }
-		
-		ai_chance = { factor = 0.05 }
+		ai_chance = {
+			factor = 0.25
+			modifier = {
+				factor = 6
+				OR = { pop_majority_ideology = conservative }
+			}
+			modifier = {
+				factor = 0.6
+				NOT = { OR = { pop_majority_ideology = conservative } }
+			}
+			modifier = {
+				factor 0.6
+				ruling_party_ideology = big_tent
+			}
+			modifier = {
+				factor = 2
+				AND = { #PRI dominance weakened by American ties
+					USA = { exists = yes NOT = { OR = { government = socialist_democracy government = proletarian_dictatorship government = proletarian_dictatorship1 } } }
+					MEX = { in_sphere = USA }
+				}
+			}
+		}
 	}
 
 }
@@ -709,7 +1110,8 @@ country_event = {
 		
 		#PRI
 		OR = { 
-			ruling_party_ideology = conservative
+			ruling_party_ideology = socialist
+			ruling_party_ideology = social_democrat
 			ruling_party_ideology = big_tent 
 		}
 	}
@@ -718,7 +1120,41 @@ country_event = {
 
 	option = {
 		name = "The PRI runs unopposed."
-		ruling_party_ideology = big_tent
+		
+		random_owned = { #This should give the player or AI the modifier if they don't have a majority support
+			limit = { owner = { AND = { government = presidential_dictatorship tag = MEX NOT = { OR = { pop_majority_ideology = big_tent pop_majority_ideology = socialist pop_majority_ideology = social_democrat } } } } }
+			owner = { add_country_modifier = { name = revolution_chaos duration = 1825 } }
+		}
+		
+		random_owned = { #Should make it default to big_tent if no other ideology has majority, or give big_tent ruling party if there is a majority
+			limit = { owner = { AND = { tag = MEX OR = { pop_majority_ideology = big_tent NOT = { OR = { pop_majority_ideology = socialist pop_majority_ideology = social_democrat } } } } } 
+			owner = {
+				ruling_party_ideology = big_tent
+				any_pop = { 
+					ideology = { factor = 0.2 value = big_tent }
+				}
+			}
+		}
+		
+		random_owned = {
+			limit = { owner = { AND = { tag = MEX pop_majority_ideology = socialist } } 
+			owner = {
+				ruling_party_ideology = socialist
+				any_pop = { 
+					ideology = { factor = 0.2 value = socialist }
+				}
+			}
+		}
+
+		random_owned = {
+			limit = { owner = { AND = { tag = MEX pop_majority_ideology = social_democrat } } 
+			owner = {
+				ruling_party_ideology = social_democrat
+				any_pop = { 
+					ideology = { factor = 0.2 value = social_democrat }
+				}
+			}
+		}
 		
 		#Opposition parties get angry
 		any_pop = {
@@ -760,7 +1196,7 @@ country_event = {
 		any_pop = { 
 			limit = { strata = middle } 
 			ideology = { factor = 0.1 value = liberal } 
-			ideology = { factor = 0.1 value = progressive }
+			ideology = { factor = 0.1 value = social_democrat }
 		}
 		any_pop = { 
 			limit = { strata = poor } 
@@ -796,7 +1232,8 @@ country_event = {
 		
 		#PRI
 		OR = { 
-			ruling_party_ideology = conservative
+			ruling_party_ideology = socialist
+			ruling_party_ideology = social_democrat
 			ruling_party_ideology = big_tent 
 		}
 	}
@@ -805,7 +1242,17 @@ country_event = {
 
 	option = {
 		name = "The PRI candidate wins."
+		
+		random_owned = { #This should give the player or AI the modifier if they don't have a majority support
+			limit = { owner = { AND = { government = democracy tag = MEX NOT = { OR = { pop_majority_ideology = big_tent } } } } }
+			owner = { add_country_modifier = { name = revolution_chaos duration = 1825 } }
+		}
+		
 		ruling_party_ideology = big_tent
+		
+		any_pop = { 
+			ideology = { factor = 0.2 value = big_tent }
+		}
 		
 		#Opposition parties get angry
 		any_pop = {
@@ -831,12 +1278,36 @@ country_event = {
 			}
 		}
 		
-		ai_chance = { factor = 0.9 }
+		ai_chance = {
+			factor = 0.5
+			modifier = {
+				factor = 6
+				OR = { pop_majority_ideology = big_tent }
+			}
+			modifier = {
+				factor = 0.6
+				NOT = { OR = { pop_majority_ideology = big_tent } }
+			}
+			modifier = {
+				factor 2
+				ruling_party_ideology = big_tent
+			}
+		}
 	}
 
 	option = {
 		name = "Go with the left-wing of the PRI."
+		
+		random_owned = { #This should give the player or AI the modifier if they don't have a majority support
+			limit = { owner = { AND = { government = democracy tag = MEX NOT = { OR = { pop_majority_ideology = socialist pop_majority_ideology = communist pop_majority_ideology = communist_social } } } } }
+			owner = { add_country_modifier = { name = revolution_chaos duration = 1825 } }
+		}
+		
 		ruling_party_ideology = socialist
+		
+		any_pop = { 
+			ideology = { factor = 0.2 value = socialist }
+		}
 		
 		#Liberals and Right wingers are angry
 		any_pop = {
@@ -866,15 +1337,31 @@ country_event = {
 			}
 		}
 		
-		add_country_modifier = { name = revolution_chaos duration = 1825 }
-		
-		ai_chance = { factor = 0.05 }
+		ai_chance = {
+			factor = 0.25
+			modifier = {
+				factor = 6
+				OR = { pop_majority_ideology = socialist pop_majority_ideology = communist pop_majority_ideology = communist_social }
+			}
+			modifier = {
+				factor = 0.6
+				NOT = { OR = { pop_majority_ideology = socialist pop_majority_ideology = communist pop_majority_ideology = communist_social } }
+			}
+			modifier = {
+				factor = 3
+				AND = { #Left PRI dominance strenghtened by Soviet ties
+					RUS = { exists = yes OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } }
+					MEX = { in_sphere = RUS }
+				}
+			}
+		}
 	}
 
 	option = {
 		name = "Go with PAN."
-		ruling_party_ideology = conservative
 		
+		ruling_party_ideology = conservative
+
 		#Gain relations with USA
 		random_country = {
 			limit = { tag = USA is_greater_power = yes government = democracy OR = { ruling_party_ideology = traditionalist ruling_party_ideology = conservative ruling_party_ideology = liberal ruling_party_ideology = big_tent } }
@@ -882,6 +1369,15 @@ country_event = {
 			diplomatic_influence = { who = THIS value = 50 }
 		}
 		
+		random_owned = { #This should give the player or AI the modifier if they don't have a majority support
+			limit = { owner = { AND = { government = democracy tag = MEX NOT = { OR = { pop_majority_ideology = conservative } } } } }
+			owner = { add_country_modifier = { name = revolution_chaos duration = 1825 } }
+		}
+		
+		any_pop = { 
+			ideology = { factor = 0.2 value = conservative }
+		}
+
 		#Liberals and Socialists are angry
 		any_pop = {
 			scaled_militancy = {
@@ -909,10 +1405,29 @@ country_event = {
 				ideology = communist_social
 			}
 		}
-		
-		add_country_modifier = { name = revolution_chaos duration = 1825 }
-		
-		ai_chance = { factor = 0.05 }
+
+		ai_chance = {
+			factor = 0.25
+			modifier = {
+				factor = 6
+				OR = { pop_majority_ideology = conservative }
+			}
+			modifier = {
+				factor = 0.6
+				NOT = { OR = { pop_majority_ideology = conservative } }
+			}
+			modifier = {
+				factor 0.6
+				ruling_party_ideology = big_tent
+			}
+			modifier = {
+				factor = 2
+				AND = { #PRI dominance weakened by American ties
+					USA = { exists = yes NOT = { OR = { government = socialist_democracy government = proletarian_dictatorship government = proletarian_dictatorship1 } } }
+					MEX = { in_sphere = USA }
+				}
+			}
+		}
 	}
 
 }
@@ -936,15 +1451,25 @@ country_event = {
 		
 		election = no
 		
-		#Socialist PRI in power
-		ruling_party_ideology = socialist
+		#PRI or PAN parties in power
+		OR = { ruling_party_ideology = socialist ruling_party_ideology = social_democrat ruling_party_ideology = big_tent ruling_party_ideology = conservative ruling_party_ideology = liberal }
 	}
 
 	mean_time_to_happen = { months = 7 }
 
 	option = {
 		name = "Continue the left-ward lean of the PRI for now."
+		
+		random_owned = { #This should give the player or AI the modifier if they don't have a majority support
+			limit = { owner = { AND = { government = democracy tag = MEX NOT = { OR = { pop_majority_ideology = socialist pop_majority_ideology = communist pop_majority_ideology = communist_social } } } } }
+			owner = { add_country_modifier = { name = revolution_chaos duration = 1825 } }
+		}
+		
 		ruling_party_ideology = socialist
+		
+		any_pop = { 
+			ideology = { factor = 0.2 value = socialist }
+		}
 		
 		#Liberals and Right wingers are angry
 		any_pop = {
@@ -974,12 +1499,43 @@ country_event = {
 			}
 		}
 		
-		ai_chance = { factor = 0.9 }
+		ai_chance = {
+			factor = 0.5
+			modifier = {
+				factor = 6
+				OR = { pop_majority_ideology = socialist pop_majority_ideology = communist pop_majority_ideology = communist_social }
+			}
+			modifier = {
+				factor = 0.6
+				NOT = { OR = { pop_majority_ideology = socialist pop_majority_ideology = communist pop_majority_ideology = communist_social } }
+			}
+			modifier = {
+				factor = 2
+				ruling_party_ideology = socialist
+			}
+			modifier = {
+				factor = 3
+				AND = { #Left PRI dominance strenghtened by Soviet ties
+					RUS = { exists = yes OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } }
+					MEX = { in_sphere = RUS }
+				}
+			}
+		}
 	}
 
 	option = {
 		name = "Shift the course of the PRI with a more pragmatic candidate."
+		
+		random_owned = { #This should give the player or AI the modifier if they don't have a majority support
+			limit = { owner = { AND = { government = democracy tag = MEX NOT = { OR = { pop_majority_ideology = big_tent } } } } }
+			owner = { add_country_modifier = { name = revolution_chaos duration = 1825 } }
+		}
+		
 		ruling_party_ideology = big_tent
+		
+		any_pop = { 
+			ideology = { factor = 0.2 value = big_tent }
+		}
 		
 		#Opposition parties get angry
 		any_pop = {
@@ -1005,13 +1561,26 @@ country_event = {
 			}
 		}
 		
-		add_country_modifier = { name = revolution_chaos duration = 1825 }
-		
-		ai_chance = { factor = 0.05 }
+		ai_chance = {
+			factor = 0.25
+			modifier = {
+				factor = 6
+				OR = { pop_majority_ideology = big_tent }
+			}
+			modifier = {
+				factor = 0.6
+				NOT = { OR = { pop_majority_ideology = big_tent } }
+			}
+			modifier = {
+				factor 2
+				ruling_party_ideology = big_tent
+			}
+		}
 	}
 
 	option = {
 		name = "PAN will bring change to Mexico."
+		
 		ruling_party_ideology = conservative
 		
 		#Gain relations with USA
@@ -1021,6 +1590,15 @@ country_event = {
 			diplomatic_influence = { who = THIS value = 50 }
 		}
 		
+		random_owned = { #This should give the player or AI the modifier if they don't have a majority support
+			limit = { owner = { AND = { government = democracy tag = MEX NOT = { OR = { pop_majority_ideology = conservative } } } } }
+			owner = { add_country_modifier = { name = revolution_chaos duration = 1825 } }
+		}
+		
+		any_pop = { 
+			ideology = { factor = 0.2 value = conservative }
+		}
+
 		#Liberals and Socialists are angry
 		any_pop = {
 			scaled_militancy = {
@@ -1049,9 +1627,28 @@ country_event = {
 			}
 		}
 		
-		add_country_modifier = { name = revolution_chaos duration = 1825 }
-		
-		ai_chance = { factor = 0.1 }
+		ai_chance = {
+			factor = 0.25
+			modifier = {
+				factor = 6
+				OR = { pop_majority_ideology = conservative }
+			}
+			modifier = {
+				factor = 0.6
+				NOT = { OR = { pop_majority_ideology = conservative } }
+			}
+			modifier = {
+				factor 0.6
+				OR = { ruling_party_ideology = big_tent ruling_party_ideology = socialist }
+			}
+			modifier = {
+				factor = 2
+				AND = { #PRI dominance weakened by American ties
+					USA = { exists = yes NOT = { OR = { government = socialist_democracy government = proletarian_dictatorship government = proletarian_dictatorship1 } } }
+					MEX = { in_sphere = USA }
+				}
+			}
+		}
 	}
 
 }
@@ -1077,7 +1674,7 @@ country_event = {
 		
 		election = no
 		
-		#PRI parties in power
+		#PRI or PAN parties in power
 		OR = { ruling_party_ideology = socialist ruling_party_ideology = social_democrat ruling_party_ideology = big_tent ruling_party_ideology = conservative }
 	}
 
@@ -1085,7 +1682,17 @@ country_event = {
 
 	option = {
 		name = "The PRI continues on."
+		
+		random_owned = { #This should give the player or AI the modifier if they don't have a majority support
+			limit = { owner = { AND = { government = democracy tag = MEX NOT = { OR = { pop_majority_ideology = big_tent pop_majority_ideology = social_democrat } } } } }
+			owner = { add_country_modifier = { name = revolution_chaos duration = 1825 } }
+		}
+		
 		ruling_party_ideology = big_tent
+		
+		any_pop = { 
+			ideology = { factor = 0.2 value = big_tent }
+		}
 		
 		#Opposition parties get angry
 		any_pop = {
@@ -1111,12 +1718,36 @@ country_event = {
 			}
 		}
 		
-		ai_chance = { factor = 0.9 }
+		ai_chance = {
+			factor = 0.5
+			modifier = {
+				factor = 6
+				OR = { pop_majority_ideology = big_tent pop_majority_ideology = social_democrat }
+			}
+			modifier = {
+				factor = 0.6
+				NOT = { OR = { pop_majority_ideology = big_tent pop_majority_ideology = social_democrat } }
+			}
+			modifier = {
+				factor 2
+				ruling_party_ideology = big_tent
+			}
+		}
 	}
 
 	option = {
 		name = "'Democratic Current' continues the legacy of Mexico's left."
+		
+		random_owned = { #This should give the player or AI the modifier if they don't have a majority support
+			limit = { owner = { AND = { government = democracy tag = MEX NOT = { OR = { pop_majority_ideology = socialist pop_majority_ideology = communist pop_majority_ideology = communist_social } } } } }
+			owner = { add_country_modifier = { name = revolution_chaos duration = 1825 } }
+		}
+		
 		ruling_party_ideology = socialist
+		
+		any_pop = { 
+			ideology = { factor = 0.2 value = socialist }
+		}
 		
 		#Liberals and Right wingers are angry
 		any_pop = {
@@ -1146,13 +1777,29 @@ country_event = {
 			}
 		}
 		
-		add_country_modifier = { name = revolution_chaos duration = 1825 }
-		
-		ai_chance = { factor = 0.05 }
+		ai_chance = {
+			factor = 0.25
+			modifier = {
+				factor = 6
+				OR = { pop_majority_ideology = socialist pop_majority_ideology = communist pop_majority_ideology = communist_social }
+			}
+			modifier = {
+				factor = 0.6
+				NOT = { OR = { pop_majority_ideology = socialist pop_majority_ideology = communist pop_majority_ideology = communist_social } }
+			}
+			modifier = {
+				factor = 3
+				AND = { #Left PRI dominance strenghtened by Soviet ties
+					RUS = { exists = yes OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } }
+					MEX = { in_sphere = RUS }
+				}
+			}
+		}
 	}
 
 	option = {
 		name = "PAN brings liberalisation and more western-alignment."
+		
 		ruling_party_ideology = conservative
 		
 		#Gain relations with USA
@@ -1162,6 +1809,15 @@ country_event = {
 			diplomatic_influence = { who = THIS value = 50 }
 		}
 		
+		random_owned = { #This should give the player or AI the modifier if they don't have a majority support
+			limit = { owner = { AND = { government = democracy tag = MEX NOT = { OR = { pop_majority_ideology = conservative } } } } }
+			owner = { add_country_modifier = { name = revolution_chaos duration = 1825 } }
+		}
+		
+		any_pop = { 
+			ideology = { factor = 0.2 value = conservative }
+		}
+
 		#Liberals and Socialists are angry
 		any_pop = {
 			scaled_militancy = {
@@ -1190,9 +1846,28 @@ country_event = {
 			}
 		}
 		
-		add_country_modifier = { name = revolution_chaos duration = 1825 }
-		
-		ai_chance = { factor = 0.05 }
+		ai_chance = {
+			factor = 0.25
+			modifier = {
+				factor = 6
+				OR = { pop_majority_ideology = conservative }
+			}
+			modifier = {
+				factor = 0.6
+				NOT = { OR = { pop_majority_ideology = conservative } }
+			}
+			modifier = {
+				factor 0.6
+				ruling_party_ideology = big_tent
+			}
+			modifier = {
+				factor = 2
+				AND = { #PRI dominance weakened by American ties
+					USA = { exists = yes NOT = { OR = { government = socialist_democracy government = proletarian_dictatorship government = proletarian_dictatorship1 } } }
+					MEX = { in_sphere = USA }
+				}
+			}
+		}
 	}
 
 }
@@ -1218,7 +1893,7 @@ country_event = {
 		
 		election = no
 		
-		#PRI parties in power
+		#PRI or PAN parties in power
 		OR = { ruling_party_ideology = socialist ruling_party_ideology = social_democrat ruling_party_ideology = big_tent ruling_party_ideology = conservative }
 	}
 
@@ -1226,13 +1901,23 @@ country_event = {
 
 	option = {
 		name = "PAN wins!"
-		ruling_party_ideology = conservative
 		
+		ruling_party_ideology = conservative
+
 		#Gain relations with USA
 		random_country = {
 			limit = { tag = USA is_greater_power = yes government = democracy OR = { ruling_party_ideology = traditionalist ruling_party_ideology = conservative ruling_party_ideology = liberal ruling_party_ideology = big_tent } }
 			relation = { who = THIS value = 50 }
 			diplomatic_influence = { who = THIS value = 50 }
+		}
+		
+		random_owned = { #This should give the player or AI the modifier if they don't have a majority support
+			limit = { owner = { AND = { government = democracy tag = MEX NOT = { OR = { pop_majority_ideology = conservative } } } } }
+			owner = { add_country_modifier = { name = revolution_chaos duration = 1825 } }
+		}
+		
+		any_pop = { 
+			ideology = { factor = 0.2 value = conservative }
 		}
 		
 		#Liberals and Socialists are angry
@@ -1263,12 +1948,43 @@ country_event = {
 			}
 		}
 		
-		ai_chance = { factor = 0.9 }
+		ai_chance = {
+			factor = 0.5
+			modifier = {
+				factor = 6
+				OR = { pop_majority_ideology = conservative }
+			}
+			modifier = {
+				factor = 0.6
+				NOT = { OR = { pop_majority_ideology = conservative } }
+			}
+			modifier = {
+				factor 0.6
+				ruling_party_ideology = big_tent
+			}
+			modifier = {
+				factor = 2
+				AND = { #PRI dominance weakened by American ties
+					USA = { exists = yes NOT = { OR = { government = socialist_democracy government = proletarian_dictatorship government = proletarian_dictatorship1 } } }
+					MEX = { in_sphere = USA }
+				}
+			}
+		}
 	}
 
 	option = {
 		name = "Andres Manuel Lopez Obrador wins with the help of the PRD."
+		
+		random_owned = { #This should give the player or AI the modifier if they don't have a majority support
+			limit = { owner = { AND = { government = democracy tag = MEX NOT = { OR = { pop_majority_ideology = socialist pop_majority_ideology = communist pop_majority_ideology = communist_social } } } } }
+			owner = { add_country_modifier = { name = revolution_chaos duration = 1825 } }
+		}
+		
 		ruling_party_ideology = socialist
+		
+		any_pop = { 
+			ideology = { factor = 0.2 value = socialist }
+		}
 		
 		#Liberals and Right wingers are angry
 		any_pop = {
@@ -1298,14 +2014,39 @@ country_event = {
 			}
 		}
 		
-		add_country_modifier = { name = revolution_chaos duration = 1825 }
-		
-		ai_chance = { factor = 0.05 }
+		ai_chance = {
+			factor = 0.25
+			modifier = {
+				factor = 6
+				OR = { pop_majority_ideology = socialist pop_majority_ideology = communist pop_majority_ideology = communist_social }
+			}
+			modifier = {
+				factor = 0.6
+				NOT = { OR = { pop_majority_ideology = socialist pop_majority_ideology = communist pop_majority_ideology = communist_social } }
+			}
+			modifier = {
+				factor = 3
+				AND = { #Left PRI dominance strenghtened by Soviet ties
+					RUS = { exists = yes OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } }
+					MEX = { in_sphere = RUS }
+				}
+			}
+		}
 	}
 
 	option = {
 		name = "The PRI wins the elections."
+		
+		random_owned = { #This should give the player or AI the modifier if they don't have a majority support
+			limit = { owner = { AND = { government = democracy tag = MEX NOT = { OR = { pop_majority_ideology = big_tent pop_majority_ideology = social_democrat } } } } }
+			owner = { add_country_modifier = { name = revolution_chaos duration = 1825 } }
+		}
+		
 		ruling_party_ideology = big_tent
+		
+		any_pop = { 
+			ideology = { factor = 0.2 value = big_tent }
+		}
 		
 		#Opposition parties get angry
 		any_pop = {
@@ -1331,9 +2072,21 @@ country_event = {
 			}
 		}
 		
-		add_country_modifier = { name = revolution_chaos duration = 1825 }
-		
-		ai_chance = { factor = 0.05 }
+		ai_chance = {
+			factor = 0.25
+			modifier = {
+				factor = 6
+				OR = { pop_majority_ideology = big_tent pop_majority_ideology = social_democrat }
+			}
+			modifier = {
+				factor = 0.6
+				NOT = { OR = { pop_majority_ideology = big_tent pop_majority_ideology = social_democrat } }
+			}
+			modifier = {
+				factor 2
+				ruling_party_ideology = big_tent
+			}
+		}
 	}
 
 }
@@ -1357,7 +2110,7 @@ country_event = {
 		
 		election = no
 		
-		#PRI parties in power
+		#PRI or PAN parties in power
 		OR = { ruling_party_ideology = socialist ruling_party_ideology = social_democrat ruling_party_ideology = big_tent ruling_party_ideology = conservative }
 	}
 
@@ -1365,7 +2118,17 @@ country_event = {
 
 	option = {
 		name = "The PRI wins the election."
+		
+		random_owned = { #This should give the player or AI the modifier if they don't have a majority support
+			limit = { owner = { AND = { government = democracy tag = MEX NOT = { OR = { pop_majority_ideology = big_tent pop_majority_ideology = social_democrat } } } } }
+			owner = { add_country_modifier = { name = revolution_chaos duration = 1825 } }
+		}
+		
 		ruling_party_ideology = big_tent
+		
+		any_pop = { 
+			ideology = { factor = 0.2 value = big_tent }
+		}
 		
 		#Opposition parties get angry
 		any_pop = {
@@ -1391,18 +2154,42 @@ country_event = {
 			}
 		}
 		
-		ai_chance = { factor = 0.9 }
+		ai_chance = {
+			factor = 0.5
+			modifier = {
+				factor = 6
+				OR = { pop_majority_ideology = big_tent pop_majority_ideology = social_democrat }
+			}
+			modifier = {
+				factor = 0.6
+				NOT = { OR = { pop_majority_ideology = big_tent pop_majority_ideology = social_democrat } }
+			}
+			modifier = {
+				factor 2
+				ruling_party_ideology = big_tent
+			}
+		}
 	}
 
 	option = {
 		name = "PAN wins"
-		ruling_party_ideology = conservative
 		
+		ruling_party_ideology = conservative
+
 		#Gain relations with USA
 		random_country = {
 			limit = { tag = USA is_greater_power = yes government = democracy OR = { ruling_party_ideology = traditionalist ruling_party_ideology = conservative ruling_party_ideology = liberal ruling_party_ideology = big_tent } }
 			relation = { who = THIS value = 50 }
 			diplomatic_influence = { who = THIS value = 50 }
+		}
+		
+		random_owned = { #This should give the player or AI the modifier if they don't have a majority support
+			limit = { owner = { AND = { government = democracy tag = MEX NOT = { OR = { pop_majority_ideology = conservative } } } } }
+			owner = { add_country_modifier = { name = revolution_chaos duration = 1825 } }
+		}
+		
+		any_pop = { 
+			ideology = { factor = 0.2 value = conservative }
 		}
 		
 		#Liberals and Socialists are angry
@@ -1433,14 +2220,43 @@ country_event = {
 			}
 		}
 		
-		add_country_modifier = { name = revolution_chaos duration = 1825 }
-		
-		ai_chance = { factor = 0.05 }
+		ai_chance = {
+			factor = 0.25
+			modifier = {
+				factor = 6
+				OR = { pop_majority_ideology = conservative }
+			}
+			modifier = {
+				factor = 0.6
+				NOT = { OR = { pop_majority_ideology = conservative } }
+			}
+			modifier = {
+				factor 0.6
+				ruling_party_ideology = big_tent
+			}
+			modifier = {
+				factor = 2
+				AND = { #PRI dominance weakened by American ties
+					USA = { exists = yes NOT = { OR = { government = socialist_democracy government = proletarian_dictatorship government = proletarian_dictatorship1 } } }
+					MEX = { in_sphere = USA }
+				}
+			}
+		}
 	}
 
 	option = {
 		name = "Andres Manuel Lopez Obrador and the PRD wins."
+		
+		random_owned = { #This should give the player or AI the modifier if they don't have a majority support
+			limit = { owner = { AND = { government = democracy tag = MEX NOT = { OR = { pop_majority_ideology = socialist pop_majority_ideology = communist pop_majority_ideology = communist_social } } } } }
+			owner = { add_country_modifier = { name = revolution_chaos duration = 1825 } }
+		}
+		
 		ruling_party_ideology = socialist
+		
+		any_pop = { 
+			ideology = { factor = 0.2 value = socialist }
+		}
 		
 		#Liberals and Right wingers are angry
 		any_pop = {
@@ -1469,10 +2285,25 @@ country_event = {
 				ideology = nationalist
 			}
 		}
-		
-		add_country_modifier = { name = revolution_chaos duration = 1825 }
-		
-		ai_chance = { factor = 0.05 }
+
+		ai_chance = {
+			factor = 0.25
+			modifier = {
+				factor = 6
+				OR = { pop_majority_ideology = socialist pop_majority_ideology = communist pop_majority_ideology = communist_social }
+			}
+			modifier = {
+				factor = 0.6
+				NOT = { OR = { pop_majority_ideology = socialist pop_majority_ideology = communist pop_majority_ideology = communist_social } }
+			}
+			modifier = {
+				factor = 3
+				AND = { #Left PRI dominance strenghtened by Soviet ties
+					RUS = { exists = yes OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } }
+					MEX = { in_sphere = RUS }
+				}
+			}
+		}
 	}
 
 }
@@ -1496,7 +2327,7 @@ country_event = {
 		
 		election = no
 		
-		#PRI parties in power
+		#PRI or PAN parties in power
 		OR = { ruling_party_ideology = socialist ruling_party_ideology = social_democrat ruling_party_ideology = big_tent ruling_party_ideology = conservative }
 	}
 
@@ -1504,7 +2335,17 @@ country_event = {
 
 	option = {
 		name = "Andres Manuel Lopez Obrador's 'MORENA' sweeps to victory."
+		
+		random_owned = { #This should give the player or AI the modifier if they don't have a majority support
+			limit = { owner = { AND = { government = democracy tag = MEX NOT = { OR = { pop_majority_ideology = socialist pop_majority_ideology = communist pop_majority_ideology = communist_social } } } } }
+			owner = { add_country_modifier = { name = revolution_chaos duration = 1825 } }
+		}
+		
 		ruling_party_ideology = socialist
+		
+		any_pop = { 
+			ideology = { factor = 0.2 value = socialist }
+		}
 		
 		#Liberals and Right wingers are angry
 		any_pop = {
@@ -1534,12 +2375,39 @@ country_event = {
 			}
 		}
 		
-		ai_chance = { factor = 0.9 }
+		ai_chance = {
+			factor = 0.5
+			modifier = {
+				factor = 6
+				OR = { pop_majority_ideology = socialist pop_majority_ideology = communist pop_majority_ideology = communist_social }
+			}
+			modifier = {
+				factor = 0.6
+				NOT = { OR = { pop_majority_ideology = socialist pop_majority_ideology = communist pop_majority_ideology = communist_social } }
+			}
+			modifier = {
+				factor = 3
+				AND = { #Left PRI dominance strenghtened by Soviet ties
+					RUS = { exists = yes OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } }
+					MEX = { in_sphere = RUS }
+				}
+			}
+		}
 	}
 
 	option = {
 		name = "The PRI wins the election."
+		
+		random_owned = { #This should give the player or AI the modifier if they don't have a majority support
+			limit = { owner = { AND = { government = democracy tag = MEX NOT = { OR = { pop_majority_ideology = big_tent pop_majority_ideology = social_democrat } } } } }
+			owner = { add_country_modifier = { name = revolution_chaos duration = 1825 } }
+		}
+		
 		ruling_party_ideology = big_tent
+		
+		any_pop = { 
+			ideology = { factor = 0.2 value = big_tent }
+		}
 		
 		#Opposition parties get angry
 		any_pop = {
@@ -1564,15 +2432,44 @@ country_event = {
 				ideology = communist_social
 			}
 		}
-		
-		add_country_modifier = { name = revolution_chaos duration = 1825 }
-		
-		ai_chance = { factor = 0.05 }
+
+		ai_chance = {
+			factor = 0.25
+			modifier = {
+				factor = 6
+				OR = { pop_majority_ideology = big_tent pop_majority_ideology = social_democrat }
+			}
+			modifier = {
+				factor = 0.6
+				NOT = { OR = { pop_majority_ideology = big_tent pop_majority_ideology = social_democrat } }
+			}
+			modifier = {
+				factor 2
+				ruling_party_ideology = big_tent
+			}
+		}
 	}
 
 	option = {
 		name = "PAN wins the election!"
+		
 		ruling_party_ideology = conservative
+
+		#Gain relations with USA
+		random_country = {
+			limit = { tag = USA is_greater_power = yes government = democracy OR = { ruling_party_ideology = traditionalist ruling_party_ideology = conservative ruling_party_ideology = liberal ruling_party_ideology = big_tent } }
+			relation = { who = THIS value = 50 }
+			diplomatic_influence = { who = THIS value = 50 }
+		}
+		
+		random_owned = { #This should give the player or AI the modifier if they don't have a majority support
+			limit = { owner = { AND = { government = democracy tag = MEX NOT = { OR = { pop_majority_ideology = conservative } } } } }
+			owner = { add_country_modifier = { name = revolution_chaos duration = 1825 } }
+		}
+
+		any_pop = { 
+			ideology = { factor = 0.2 value = conservative }
+		}
 		
 		#Gain relations with USA
 		random_country = {
@@ -1608,10 +2505,29 @@ country_event = {
 				ideology = communist_social
 			}
 		}
-		
-		add_country_modifier = { name = revolution_chaos duration = 1825 }
-		
-		ai_chance = { factor = 0.05 }
+
+		ai_chance = {
+			factor = 0.25
+			modifier = {
+				factor = 6
+				OR = { pop_majority_ideology = conservative }
+			}
+			modifier = {
+				factor = 0.6
+				NOT = { OR = { pop_majority_ideology = conservative } }
+			}
+			modifier = {
+				factor 0.6
+				ruling_party_ideology = big_tent
+			}
+			modifier = {
+				factor = 2
+				AND = { #PRI dominance weakened by American ties
+					USA = { exists = yes NOT = { OR = { government = socialist_democracy government = proletarian_dictatorship government = proletarian_dictatorship1 } } }
+					MEX = { in_sphere = USA }
+				}
+			}
+		}
 	}
 
 }
