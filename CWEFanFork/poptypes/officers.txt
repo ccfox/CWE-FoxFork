@@ -566,6 +566,34 @@ ideologies = {
 			factor = 1.05
 		 	country = { is_disarmed = yes }
 		}
+		
+		modifier = {
+			factor = 0.1
+			country = { ruling_party_ideology = nationalist }
+			country = { OR = { government = nationalist_dictatorship government = populist_dictatorship } }
+			militancy = 6
+		}	
+		
+		modifier = {
+			factor = 0.3
+			country = { ruling_party_ideology = nationalist }
+			country = { OR = { government = absolute_monarchy government = theocracy government = presidential_dictatorship government = hms_government1 } }
+			militancy = 6
+		}
+		
+		modifier = {
+			factor = 0.5
+			country = { ruling_party_ideology = nationalist }
+			country = { OR = { government = democracy government = democracy1 government = hms_government government = hms_government1 } }
+			militancy = 6
+		}
+		
+		modifier = {
+			factor = 0.7
+			country = { ruling_party_ideology = nationalist }
+			country = { OR = { government = colonial_government government = mandate_government government = sar_government } }
+			militancy = 6
+		}
 
 		modifier = {
 			factor = 1.5
@@ -577,6 +605,7 @@ ideologies = {
 
 		modifier = {
 			factor = 4
+			country = { ruling_party_ideology = nationalist }
 			country = {
 				OR = { government = nationalist_dictatorship government = populist_dictatorship }
 			}

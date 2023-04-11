@@ -632,3 +632,11 @@ EVTDESC8116001;A period of mourning falls across Greece at the passing of our mo
 EVTDESC8116002;King of Greece, Constantine II, has today passed away from natural causes. He oversaw an uncertain period of Greek politics that culminated in the continuation of the monarchy, bringing with it ties to the Danish royal family. He is set to be succeeded by his son, Pavlos.;;;;;;;;;;;;;x,,,;;;;;;;;;;;;;;;;
 EVTDESC8116003;King of Greece, Pavlos, has today announced - in light of advancing age and the changing face of Europe - his abdication. He intends to leave the throne to his eldest son, Constantine Alexios.;;;;;;;;;;;;;x,,,;;;;;;;;;;;;;;;;
 guarani;Guarani;;;;;;;;;;;;;x,,,;;;;;;;;;;;;;;;;
+election_cooldown_timer;Recent Elections;;;;;;;;;;;;;x,,,;;;;;;;;;;;;;;;;
+election_cooldown_timer_desc;With regularly scheduled elections held in this country, it will be some time before the next elections.;;;;;;;;;;;;;x,,,;;;;;;;;;;;;;;;;
+reformer_com_push;Reformist Propaganda Campaign;;;;;;;;;;;;;x,,,;;;;;;;;;;;;;;;;
+reformer_com_push_desc;Reformist forces within the nation are organizing and building their support among the people in hopes of attaining power.;;;;;;;;;;;;;x,,,;;;;;;;;;;;;;;;;
+hardliner_com_push;Hardliner Propaganda Campaign;;;;;;;;;;;;;x,,,;;;;;;;;;;;;;;;;
+hardliner_com_push_desc;Hardline forces within the nation are organizing and building their support among the people in hopes of attaining power.;;;;;;;;;;;;;x,,,;;;;;;;;;;;;;;;;
+lib_com_push;Left Radical Propaganda Campaign;;;;;;;;;;;;;x,,,;;;;;;;;;;;;;;;;
+lib_com_push_desc;Pro-Reform and left radical forces within the nation are organizing and building their support among the people in hopes of attaining power.;;;;;;;;;;;;;x,,,;;;;;;;;;;;;;;;;

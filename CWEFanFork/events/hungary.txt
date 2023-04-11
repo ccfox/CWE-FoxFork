@@ -109,7 +109,7 @@ country_event = {
 		war = no
 		is_vassal = no
 		
-		NOT = { has_country_modifier = election_cooldown }
+		NOT = { has_country_modifier = election_cooldown_timer }
 		
 		OR = { ruling_party_ideology = socialist ruling_party_ideology = communist }
 		
@@ -122,7 +122,7 @@ country_event = {
 		
 		ruling_party_ideology = communist
 		
-		add_country_modifier = { name = election_cooldown duration = 730 }
+		add_country_modifier = { name = election_cooldown_timer duration = 730 }
 		
 		random_owned = { #This should give the player or AI the modifier if they don't have a majority support
 			limit = { owner = { AND = { tag = FIN NOT = { OR = { pop_majority_ideology = communist pop_majority_ideology = communist_social } } } } }
@@ -151,7 +151,7 @@ country_event = {
 		
 		ruling_party_ideology = socialist
 		
-		add_country_modifier = { name = election_cooldown duration = 730 }
+		add_country_modifier = { name = election_cooldown_timer duration = 730 }
 		
 		random_owned = { #This should give the player or AI the modifier if they don't have a majority support
 			limit = { owner = { AND = { tag = FIN NOT = { OR = { pop_majority_ideology = socialist pop_majority_ideology = social_democrat pop_majority_ideology = progressive } } } } }
@@ -196,7 +196,7 @@ country_event = {
 		war = no
 		is_vassal = no
 		
-		NOT = { has_country_modifier = election_cooldown }
+		NOT = { has_country_modifier = election_cooldown_timer }
 		
 		OR = { ruling_party_ideology = socialist ruling_party_ideology = communist }
 		
@@ -209,7 +209,7 @@ country_event = {
 		
 		ruling_party_ideology = communist
 		
-		add_country_modifier = { name = election_cooldown duration = 730 }
+		add_country_modifier = { name = election_cooldown_timer duration = 730 }
 		
 		random_owned = { #This should give the player or AI the modifier if they don't have a majority support
 			limit = { owner = { AND = { tag = FIN NOT = { OR = { pop_majority_ideology = communist pop_majority_ideology = communist_social } } } } }
@@ -238,7 +238,7 @@ country_event = {
 
 		ruling_party_ideology = socialist
 		
-		add_country_modifier = { name = election_cooldown duration = 730 }
+		add_country_modifier = { name = election_cooldown_timer duration = 730 }
 		
 		random_owned = { #This should give the player or AI the modifier if they don't have a majority support
 			limit = { owner = { AND = { tag = FIN NOT = { OR = { pop_majority_ideology = socialist pop_majority_ideology = social_democrat pop_majority_ideology = progressive } } } } }
