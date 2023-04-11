@@ -1242,17 +1242,15 @@ modifier = { factor = 1.5 country = { has_country_flag = socialist_surge } }
 
 		modifier = {
 			factor = 0.1
-country = { ruling_party_ideology = communist }
-			NOT = {
-				militancy = 6
-country = { OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } }
-			}
+			country = { ruling_party_ideology = communist }
+			country = { OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 government = socialist_democracy } }
+			militancy = 6
 		}
 		
 		modifier = {
 			factor = 3
 country = { ruling_party_ideology = communist }
-country = { OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } }
+country = { OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 government = socialist_democracy } }
 			everyday_needs = 0.5
 			OR = {
 				is_primary_culture = yes
@@ -1397,17 +1395,15 @@ communist_social = {
 
 		modifier = {
 			factor = 0.1
-country = { ruling_party_ideology = communist_social }
-			NOT = {
+			country = { ruling_party_ideology = communist_social }
+			country = { OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 government = socialist_democracy } }
 			militancy = 6
-country = { OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } }
-			}
 		}
 		
 		modifier = {
 			factor = 3
 country = { ruling_party_ideology = communist_social }
-country = { OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } }
+country = { OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 government = socialist_democracy } }
 			everyday_needs = 0.8
 			OR = {
 				is_primary_culture = yes

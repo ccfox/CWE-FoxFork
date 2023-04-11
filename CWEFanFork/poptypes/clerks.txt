@@ -925,6 +925,7 @@ promote_to =
 				OR = {
 					government = proletarian_dictatorship
 					government = proletarian_dictatorship1
+					government = socialist_democracy
 				}
 				economic_policy = planned_economy 
 			}
@@ -1054,18 +1055,6 @@ promote_to =
 
 	artisans = {
 		factor = 0.01
-		
-		#No artisans in marxist coommunist dictatorships
-		modifier = {
-			factor = -100
-			country = { 
-				OR = {
-					government = proletarian_dictatorship
-					government = proletarian_dictatorship1
-				}
-				economic_policy = planned_economy 
-			}
-		}
 		
 		#Clerks demote in colonial states as there are no factories
 		modifier = {
@@ -2238,16 +2227,14 @@ modifier = { factor = 1.5 country = { has_country_flag = big_tent_surge } }
 		modifier = {
 			factor = 0.1
 			country = { ruling_party_ideology = communist }
-			NOT = {
-				militancy = 6
-				country = { OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } }
-			}
+			country = { OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 government = socialist_democracy } }
+			militancy = 6
 		}
 		
 		modifier = {
 			factor = 3
 			country = { ruling_party_ideology = communist }
-			country = { OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } }
+			country = { OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 government = socialist_democracy } }
 			everyday_needs = 0.5
 			OR = {
 				is_primary_culture = yes
@@ -2379,17 +2366,15 @@ communist_social = {
 
 		modifier = {
 			factor = 0.1
-country = { ruling_party_ideology = communist_social }
-			NOT = {
+			country = { ruling_party_ideology = communist_social }
+			country = { OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 government = socialist_democracy } }
 			militancy = 6
-country = { OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } }
-			}
 		}
 		
 		modifier = {
 			factor = 3
 country = { ruling_party_ideology = communist_social }
-country = { OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } }
+country = { OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 government = socialist_democracy } }
 			everyday_needs = 0.8
 			OR = {
 				is_primary_culture = yes

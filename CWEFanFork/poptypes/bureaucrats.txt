@@ -226,6 +226,7 @@ modifier = { factor = 1 agree_with_ruling_party = 0.5 }
 				OR = {
 					government = proletarian_dictatorship
 					government = proletarian_dictatorship1
+					government = socialist_democracy
 				}
 				economic_policy = planned_economy 
 			}
@@ -1182,10 +1183,8 @@ NOT = { religion = secularism } }
 		modifier = {
 			factor = 0.1
 			country = { ruling_party_ideology = communist }
-			NOT = {
-				militancy = 6
-				country = { OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } }
-			}
+			country = { OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 government = socialist_democracy } }
+			militancy = 6
 		}
 		
 		modifier = {
@@ -1320,20 +1319,18 @@ ruling_party_ideology = socialist
 
 communist_social = { 
 		factor = 1.1
-
+		
 		modifier = {
 			factor = 0.1
 			country = { ruling_party_ideology = communist_social }
-			NOT = {
-				militancy = 6
-				country = { OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } }
-			}
+			country = { OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 government = socialist_democracy } }
+			militancy = 6
 		}
 		
 		modifier = {
 			factor = 3
 			country = { ruling_party_ideology = communist_social }
-			country = { OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } }
+			country = { OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 government = socialist_democracy } }
 			everyday_needs = 0.8
 			OR = {
 				is_primary_culture = yes

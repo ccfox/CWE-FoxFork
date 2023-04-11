@@ -195,15 +195,6 @@ promote_to =
 	aristocrats = {
 		factor = 0.01
 		
-		modifier = {
-			factor = -100
-			OR = {
-				state_scope = { aristocrats = 0.02 }
-		country = { 
-OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } 
-				}
-			}
-		}
 		
 		modifier = {
 			factor = -100
@@ -1533,17 +1524,15 @@ modifier = { factor = 2 country = { ruling_party_ideology = liberal civil_servic
 
 		modifier = {
 			factor = 0.1
-country = { ruling_party_ideology = communist }
-			NOT = {
-				militancy = 6
-country = { OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } }
-			}
+			country = { ruling_party_ideology = communist }
+			country = { OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 government = socialist_democracy } }
+			militancy = 6
 		}
 		
 		modifier = {
 			factor = 3
 			country = { ruling_party_ideology = communist }
-			country = { OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } }
+			country = { OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 government = socialist_democracy } }
 			everyday_needs = 0.5
 			OR = {
 				is_primary_culture = yes
@@ -1683,16 +1672,14 @@ communist_social = {
 		modifier = {
 			factor = 0.1
 			country = { ruling_party_ideology = communist_social }
-			NOT = {
-				militancy = 6
-				country = { OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } }
-			}
+			country = { OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 government = socialist_democracy } }
+			militancy = 6
 		}
 		
 		modifier = {
 			factor = 3
 			country = { ruling_party_ideology = communist_social }
-			country = { OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } }
+			country = { OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 government = socialist_democracy } }
 			everyday_needs = 0.8
 			OR = {
 				is_primary_culture = yes
