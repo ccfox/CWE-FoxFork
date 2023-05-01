@@ -920,7 +920,7 @@ MOL = {
 }
 	
 ARM = {
-	1099 = { change_province_name = "Kumayri " }
+	1099 = { change_province_name = "Kumayri" }
 }
 	
 AZB = {
