@@ -14,7 +14,7 @@ culture = hindi
 culture = marathi
 culture = gujarati
 culture = oriya
-culture = bengali_hindu
+culture = bengali
 
 religion = secularism
 government = democracy
