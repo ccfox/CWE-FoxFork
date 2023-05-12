@@ -14,9 +14,9 @@ join_cento = {
 		NOT = { has_country_flag = neutrality }
 		NOT = { has_country_modifier = neutrality }
 
-		PER = { exists = yes NOT = { OR = { government = theocracy government = proletarian_dictatorship } } }
+		PER = { exists = yes NOT = { OR = { government = theocracy government = proletarian_dictatorship government = proletarian_dictatorship1 } } }
 
-		IRQ = { exists = yes NOT = { OR = { government = theocracy government = proletarian_dictatorship } } }
+		IRQ = { exists = yes NOT = { OR = { government = theocracy government = proletarian_dictatorship government = proletarian_dictatorship1 } } }
 
 		OR = { 
 			has_country_flag = meto_accept 

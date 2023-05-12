@@ -67,7 +67,7 @@ political_decisions = {
 	form_benelux_commie = {
 		picture = "form_benelux_commie"
 		potential = {
-			government = proletarian_dictatorship
+			OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 government = socialist_democracy }
 			is_greater_power = yes
 			OR = { 
 				OR = { is_sphere_leader_of = NET is_our_vassal = NET tag = NET }
@@ -79,15 +79,15 @@ political_decisions = {
 		allow = {
 			war = no
 			AND = {
-				NET = { government = proletarian_dictatorship }
+				NET = { OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 government = socialist_democracy } }
 				OR = { is_sphere_leader_of = NET is_our_vassal = NET tag = NET }
 			}
 			AND = {
-				BEL = { government = proletarian_dictatorship }
+				BEL = { OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 government = socialist_democracy } }
 				OR = { is_sphere_leader_of = BEL is_our_vassal = BEL tag = BEL }
 			}
 			AND = {
-				LUX = { government = proletarian_dictatorship }
+				LUX = { OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 government = socialist_democracy } }
 				OR = { is_sphere_leader_of = LUX is_our_vassal = LUX tag = LUX }
 			}
 		}

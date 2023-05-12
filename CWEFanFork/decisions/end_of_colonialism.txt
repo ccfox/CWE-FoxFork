@@ -798,7 +798,7 @@ political_decisions = {
 			is_core = 695
 			is_core = 697 
 			
-			government = proletarian_dictatorship
+			OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 government = socialist_democracy }
 		}
 		allow = {
 			cold_war = 1
