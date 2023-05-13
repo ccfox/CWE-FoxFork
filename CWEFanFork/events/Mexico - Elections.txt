@@ -148,13 +148,13 @@ country_event = {
 				factor = 4
 				OR = { pop_majority_ideology = nationalist pop_majority_ideology = populist }
 			}
-			modifier = {
-				factor = 2
-				AND = { #PRI dominance weakened by American ties
-					USA = { exists = yes NOT = { OR = { government = socialist_democracy government = proletarian_dictatorship government = proletarian_dictatorship1 } } }
-					MEX = { in_sphere = USA }
-				}
-			}
+			#modifier = {
+			#	factor = 2
+			#	AND = { #PRI dominance weakened by American ties
+			#		USA = { exists = yes NOT = { OR = { government = socialist_democracy government = proletarian_dictatorship government = proletarian_dictatorship1 } } }
+			#		MEX = { in_sphere = USA }
+			#	}
+			#}
 		}
 	}
 
