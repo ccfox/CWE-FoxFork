@@ -169,12 +169,6 @@ HON = {
 	influence_value = 100
 	military_access = yes
 }
-MEX = {
-	level = 5
-	value = 200
-	influence_value = 100
-	military_access = yes
-}
 NIC = {
 	level = 5
 	value = 200
