@@ -1583,8 +1583,7 @@ country_event = {
 
 	trigger = {
 		tag = FIN
-		year = 1991
-		NOT = { year = 2011 }
+		year = 2011
 		
 		government = democracy
 		war = no
