@@ -27,10 +27,13 @@ political_decisions = {
 		effect = {
 			prestige = 100
 
+			add_accepted_culture = andean_white_spanish
+			add_accepted_culture = mestizo
+
 			ARG = { all_core = { add_core = LPL } }
 			PRG = { all_core = { add_core = LPL } }
 			BOL = { all_core = { add_core = LPL } }
-			URU = { all_core = { add_core = URU } }
+			URU = { all_core = { add_core = LPL } }
 
 			change_tag = LPL
 
