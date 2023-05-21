@@ -36,7 +36,7 @@ country_event = {
 		badboy = 5
 		set_country_flag = claim_the_sudan
 		SUD = { all_core = { add_core = EGY } }
-any_pop = { limit = { culture = sunni_arab } consciousness = 2 }
+any_pop = { limit = { culture = sudanese } consciousness = 2 }
 		ai_chance = { factor = 0.2 }
 	}
 	
