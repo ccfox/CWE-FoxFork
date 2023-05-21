@@ -69,7 +69,7 @@ country_event = {
 		badboy = 4.0
 		SUD = { any_core = { limit = { is_primary_culture = SUD } add_province_modifier = { name = nationalist_agitation duration = 3650 } } }
 		relation = { who = FROM value = -200 }
-		any_pop = { limit = { culture = sunni_arab } militancy = 6  consciousness = 5.0 }
+		any_pop = { limit = { culture = sudanese } militancy = 6  consciousness = 5.0 }
 	}
 
 }
