@@ -7,14 +7,14 @@ political_decisions = {
 		picture = "xio_ambition"
 		potential = {
 			NOT = { has_country_flag = hide_superstate }
-			OR = { tag = RAJ tag = HND tag = PAK tag = NEP tag = BHU tag = BNG tag = AFG tag = MLD tag = SRL }
+			OR = { tag = RAJ tag = HND tag = PAK tag = NEP tag = BHU tag = BNG tag = AFG tag = MLD tag = SRL tag = TIB }
 			NOT = { has_country_flag = xio_ambition } 
 		}
 
 		allow = {
 			NOT = { has_country_modifier = in_bankrupcy } 
 			OR = { part_of_sphere = no sphere_owner = { OR = { has_country_flag = xio_ambition NOT = { has_country_flag = deny_superstate } } } }
-			OR = { government = socialist_democracy government = democracy1 government = democracy government = hms_government government = hms_government1 }
+			OR = { government = socialist_democracy government = democracy1 government = democracy government = hms_government government = hms_government1 AND = { tag = TIB government = theocracy NOT = { ruling_party_ideology = traditionalist } } }
 			bank_for_international_settlements = 1
 			war = no
 		}
@@ -101,7 +101,7 @@ political_decisions = {
 		potential = {
 			NOT = { has_country_flag = hide_superstate }
 			NOT = { capital_scope = { has_province_modifier = single_market } }
-			OR = { tag = RAJ tag = HND tag = PAK tag = NEP tag = BHU tag = BNG tag = AFG tag = MLD tag = SRL }
+			OR = { tag = RAJ tag = HND tag = PAK tag = NEP tag = BHU tag = BNG tag = AFG tag = MLD tag = SRL tag = TIB }
 		}
 
 		allow = {
@@ -128,7 +128,7 @@ political_decisions = {
 		potential = {
 			NOT = { has_country_flag = hide_superstate }
 			NOT = { capital_scope = { has_province_modifier = currency_union_province } }
-			OR = { tag = RAJ tag = HND tag = PAK tag = NEP tag = BHU tag = BNG tag = AFG tag = MLD tag = SRL }
+			OR = { tag = RAJ tag = HND tag = PAK tag = NEP tag = BHU tag = BNG tag = AFG tag = MLD tag = SRL tag = TIB }
 		}
 
 		allow = {
@@ -157,7 +157,7 @@ political_decisions = {
 		potential = {
 			NOT = { has_country_flag = hide_superstate }
 			NOT = { capital_scope = { is_core = XIO } }
-			OR = { tag = RAJ tag = HND tag = PAK tag = NEP tag = BHU tag = BNG tag = AFG tag = MLD tag = SRL }
+			OR = { tag = RAJ tag = HND tag = PAK tag = NEP tag = BHU tag = BNG tag = AFG tag = MLD tag = SRL tag = TIB }
 		}
 		allow = {
 			has_country_flag = xio_ambition
@@ -181,7 +181,7 @@ political_decisions = {
 		potential = {
 			NOT = { has_country_flag = hide_superstate }
 			NOT = { capital_scope = { has_province_modifier = defence_union } }
-			OR = { tag = RAJ tag = HND tag = PAK tag = NEP tag = BHU tag = BNG tag = AFG tag = MLD tag = SRL }
+			OR = { tag = RAJ tag = HND tag = PAK tag = NEP tag = BHU tag = BNG tag = AFG tag = MLD tag = SRL tag = TIB }
 		}
 		allow = {
 			has_country_flag = xio_ambition
@@ -209,7 +209,7 @@ political_decisions = {
 		potential = {
 			NOT = { has_country_flag = hide_superstate }
 			XIO = { exists = no }
-			OR = { tag = RAJ tag = HND tag = PAK tag = NEP tag = BHU tag = BNG tag = AFG tag = MLD tag = SRL }
+			OR = { tag = RAJ tag = HND tag = PAK tag = NEP tag = BHU tag = BNG tag = AFG tag = MLD tag = SRL tag = TIB }
 		}
 		allow = {
 			has_country_flag = xio_ambition

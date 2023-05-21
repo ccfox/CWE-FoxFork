@@ -15,9 +15,10 @@ country_event = {
 		election = no
 		government = democracy
 		NOT = { has_country_flag = elections_disabled }
+		month = 11
 	}
 
-	mean_time_to_happen = { months = 11 modifier = { factor = 0.1 year = 1949 } }
+	mean_time_to_happen = { days = 8 modifier = { factor = 0.1 year = 1949 } }
 
 	option = {
 		name = "Harry S. Truman (Moderate Democrat)"
@@ -41,12 +42,12 @@ country_event = {
 		ai_chance = {
 			factor = 0.25
 			modifier = {
-				factor = 6
-				pop_majority_ideology = big_tent
+				factor = 3
+				OR = { pop_majority_ideology = big_tent pop_majority_ideology = liberal }
 			}
 			modifier = {
-				factor = 3
-				pop_majority_ideology = liberal
+				factor = 0.3
+				NOT = { OR = { pop_majority_ideology = big_tent pop_majority_ideology = liberal } }
 			}
 		}
 	}
@@ -82,16 +83,12 @@ country_event = {
 		ai_chance = {
 			factor = 0.25
 			modifier = {
-				factor = 6
-				pop_majority_ideology = progressive
+				factor = 3
+				OR = { pop_majority_ideology = progressive pop_majority_ideology = social_democrat pop_majority_ideology = socialist }
 			}
 			modifier = {
-				factor = 3
-				pop_majority_ideology = social_democrat
-			}
-			modifier = {
-				factor = 3
-				pop_majority_ideology = socialist
+				factor = 0.3
+				NOT = { OR = { pop_majority_ideology = progressive pop_majority_ideology = social_democrat pop_majority_ideology = socialist } }
 			}
 		}
 	}
@@ -119,12 +116,12 @@ country_event = {
 		ai_chance = {
 			factor = 0.25
 			modifier = {
-				factor = 8
-				pop_majority_ideology = conservative
+				factor = 3
+				OR = { pop_majority_ideology = conservative pop_majority_ideology = traditionalist }
 			}
 			modifier = {
-				factor = 1.1
-				pop_majority_ideology = traditionalist
+				factor = 0.3
+				NOT = { OR = { pop_majority_ideology = conservative pop_majority_ideology = traditionalist } }
 			}
 		}
 	}
@@ -158,12 +155,12 @@ country_event = {
 		ai_chance = {
 			factor = 0.25
 			modifier = {
-				factor = 6
-				pop_majority_ideology = populist
+				factor = 3
+				OR = { pop_majority_ideology = populist pop_majority_ideology = nationalist }
 			}
 			modifier = {
-				factor = 3
-				pop_majority_ideology = nationalist
+				factor = 0.3
+				NOT = { OR = { pop_majority_ideology = populist pop_majority_ideology = nationalist } }
 			}
 		}
 	}
@@ -183,10 +180,11 @@ country_event = {
 		year = 1952 NOT = { year = 1955 }
 		election = no
 		government = democracy
-		NOT = { has_country_flag = elections_disabled }	
+		NOT = { has_country_flag = elections_disabled }
+		month = 11
 	}
 
-	mean_time_to_happen = { months = 11 modifier = { factor = 0.1 year = 1953 } }
+	mean_time_to_happen = { days = 8 modifier = { factor = 0.1 year = 1953 } }
 	
 	option = {
 		name = "Dwight D. Eisenhower (Moderate Republican)"
@@ -210,16 +208,12 @@ country_event = {
 		ai_chance = {
 			factor = 0.25
 			modifier = {
-				factor = 6
-				pop_majority_ideology = big_tent
+				factor = 3
+				OR = { pop_majority_ideology = big_tent pop_majority_ideology = conservative pop_majority_ideology = traditionalist }
 			}
 			modifier = {
-				factor = 3
-				pop_majority_ideology = conservative
-			}
-			modifier = {
-				factor = 3
-				pop_majority_ideology = traditionalist
+				factor = 0.3
+				NOT = { OR = { pop_majority_ideology = big_tent pop_majority_ideology = conservative pop_majority_ideology = traditionalist } }
 			}
 		}
 	}
@@ -246,20 +240,12 @@ country_event = {
 		ai_chance = {
 			factor = 0.25
 			modifier = {
-				factor = 6
-				pop_majority_ideology = liberal
+				factor = 3
+				OR = { pop_majority_ideology = liberal pop_majority_ideology = progressive pop_majority_ideology = social_democrat pop_majority_ideology = populist }
 			}
 			modifier = {
-				factor = 1.1
-				pop_majority_ideology = progressive
-			}
-			modifier = {
-				factor = 1.1
-				pop_majority_ideology = social_democrat
-			}
-			modifier = {
-				factor = 1.1
-				pop_majority_ideology = populist
+				factor = 0.3
+				NOT = { OR = { pop_majority_ideology = liberal pop_majority_ideology = progressive pop_majority_ideology = social_democrat pop_majority_ideology = populist } }
 			}
 		}
 	}
@@ -279,10 +265,11 @@ country_event = {
 		year = 1956 NOT = { year = 1959 }
 		election = no
 		government = democracy
-		NOT = { has_country_flag = elections_disabled }	
+		NOT = { has_country_flag = elections_disabled }
+		month = 11
 	}
 
-	mean_time_to_happen = { months = 11 modifier = { factor = 0.1 year = 1957 } }
+	mean_time_to_happen = { days = 8 modifier = { factor = 0.1 year = 1957 } }
 
 	option = {
 		name = "Dwight D. Eisenhower (Moderate Republican)"
@@ -306,16 +293,12 @@ country_event = {
 		ai_chance = {
 			factor = 0.25
 			modifier = {
-				factor = 6
-				pop_majority_ideology = big_tent
+				factor = 3
+				OR = { pop_majority_ideology = big_tent pop_majority_ideology = conservative pop_majority_ideology = traditionalist }
 			}
 			modifier = {
-				factor = 3
-				pop_majority_ideology = conservative
-			}
-			modifier = {
-				factor = 3
-				pop_majority_ideology = traditionalist
+				factor = 0.3
+				NOT = { OR = { pop_majority_ideology = big_tent pop_majority_ideology = conservative pop_majority_ideology = traditionalist } }
 			}
 		}
 	}
@@ -342,20 +325,12 @@ country_event = {
 		ai_chance = {
 			factor = 0.25
 			modifier = {
-				factor = 6
-				pop_majority_ideology = liberal
+				factor = 3
+				OR = { pop_majority_ideology = liberal pop_majority_ideology = progressive pop_majority_ideology = social_democrat pop_majority_ideology = populist }
 			}
 			modifier = {
-				factor = 1.1
-				pop_majority_ideology = progressive
-			}
-			modifier = {
-				factor = 1.1
-				pop_majority_ideology = social_democrat
-			}
-			modifier = {
-				factor = 1.1
-				pop_majority_ideology = populist
+				factor = 0.3
+				NOT = { OR = { pop_majority_ideology = liberal pop_majority_ideology = progressive pop_majority_ideology = social_democrat pop_majority_ideology = populist } }
 			}
 		}
 	}
@@ -375,10 +350,11 @@ country_event = {
 		year = 1960 NOT = { year = 1962 }
 		government = democracy
 		election = no
-		NOT = { has_country_flag = elections_disabled }	
+		NOT = { has_country_flag = elections_disabled }
+		month = 11
 	}
 
-	mean_time_to_happen = { months = 11 modifier = { factor = 0.1 year = 1961 } }
+	mean_time_to_happen = { days = 8 modifier = { factor = 0.1 year = 1961 } }
 
 	option = {
 		name = "John F. Kennedy (Liberal Democrat)"
@@ -404,16 +380,12 @@ country_event = {
 		ai_chance = {
 			factor = 0.33
 			modifier = {
-				factor = 6
-				pop_majority_ideology = liberal
+				factor = 3
+				OR = { pop_majority_ideology = liberal pop_majority_ideology = progressive pop_majority_ideology = social_democrat }
 			}
 			modifier = {
-				factor = 3
-				pop_majority_ideology = progressive
-			}
-			modifier = {
-				factor = 3
-				pop_majority_ideology = social_democrat
+				factor = 0.3
+				NOT = { OR = { pop_majority_ideology = liberal pop_majority_ideology = progressive pop_majority_ideology = social_democrat } }
 			}
 		}
 	}
@@ -443,16 +415,12 @@ country_event = {
 		ai_chance = {
 			factor = 0.33
 			modifier = {
-				factor = 6
-				pop_majority_ideology = conservative
+				factor = 3
+				OR = { pop_majority_ideology = conservative pop_majority_ideology = big_tent pop_majority_ideology = traditionalist }
 			}
 			modifier = {
-				factor = 3
-				pop_majority_ideology = big_tent
-			}
-			modifier = {
-				factor = 3
-				pop_majority_ideology = traditionalist
+				factor = 0.3
+				NOT = { OR = { pop_majority_ideology = conservative pop_majority_ideology = big_tent pop_majority_ideology = traditionalist } }
 			}
 		}
 	}
@@ -486,12 +454,12 @@ country_event = {
 		ai_chance = {
 			factor = 0.33
 			modifier = {
-				factor = 6
-				pop_majority_ideology = populist
+				factor = 3
+				OR = { pop_majority_ideology = populist pop_majority_ideology = nationalist }
 			}
 			modifier = {
-				factor = 3
-				pop_majority_ideology = nationalist
+				factor = 0.3
+				NOT = { OR = { pop_majority_ideology = populist pop_majority_ideology = nationalist } }
 			}
 		}
 	}
@@ -521,6 +489,12 @@ country_event = {
 	option = {
 		name = EVT_8015805_A
 		prestige_factor = -0.02
+		any_pop = {
+			limit = {
+				OR = { strata = middle type = farmers type = labourers culture = afro_american }
+			}
+			ideology = { factor = 0.1 value = social_democrat }
+		}
 		any_pop = { militancy = -2.0 consciousness = 1 }
 	}
 }
@@ -539,10 +513,11 @@ country_event = {
 		year = 1964 NOT = { year = 1968 }
 		election = no
 		government = democracy
-		NOT = { has_country_flag = elections_disabled }	
+		NOT = { has_country_flag = elections_disabled }
+		month = 11
 	}
 
-	mean_time_to_happen = { months = 11 modifier = { factor = 0.1 year = 1965 } }
+	mean_time_to_happen = { days = 8 modifier = { factor = 0.1 year = 1965 } }
 
 	option = {
 		name = "Lyndon B. Johnson (Great Society Democratic)"
@@ -568,20 +543,20 @@ country_event = {
 		ai_chance = {
 			factor = 0.5
 			modifier = {
-				factor = 5
-				pop_majority_ideology = social_democrat
-			}
-			modifier = {
-				factor = 4
-				pop_majority_ideology = progressive
-			}
-			modifier = {
-				factor = 4
-				pop_majority_ideology = liberal
-			}
-			modifier = {
 				factor = 3
+				OR = { pop_majority_ideology = social_democrat pop_majority_ideology = progressive pop_majority_ideology = liberal }
+			}
+			modifier = {
+				factor = 0.3
+				NOT = { OR = { pop_majority_ideology = social_democrat pop_majority_ideology = progressive pop_majority_ideology = liberal } }
+			}
+			modifier = {
+				factor = 1.25
 				has_country_flag = { jfk_elected }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { has_country_flag = { jfk_elected } }
 			}
 		}
 	}
@@ -621,18 +596,18 @@ country_event = {
 			factor = 0.5
 			modifier = {
 				factor = 6
-				pop_majority_ideology = conservative
+				OR = { pop_majority_ideology = conservative pop_majority_ideology = big_tent pop_majority_ideology = traditionalist }
 			}
 			modifier = {
-				factor = 3
-				pop_majority_ideology = big_tent
+				factor = 0.3
+				NOT = { OR = { pop_majority_ideology = conservative pop_majority_ideology = big_tent pop_majority_ideology = traditionalist } }
 			}
 			modifier = {
-				factor = 3
-				pop_majority_ideology = traditionalist
+				factor = 0.8
+				has_country_flag = { jfk_elected }
 			}
 			modifier = {
-				factor = 3
+				factor = 1.25
 				NOT = { has_country_flag = { jfk_elected } }
 			}
 		}
@@ -653,10 +628,11 @@ country_event = {
 		year = 1968 NOT = { year = 1972 }
 		election = no
 		government = democracy
-		NOT = { has_country_flag = elections_disabled }	
+		NOT = { has_country_flag = elections_disabled }
+		month = 11
 	}
 
-	mean_time_to_happen = { months = 11 modifier = { factor = 0.1 year = 1969 } }
+	mean_time_to_happen = { days = 8 modifier = { factor = 0.1 year = 1969 } }
 
 	option = {
 		name = "Richard M. Nixon (Conservative Republican)"
@@ -683,16 +659,12 @@ country_event = {
 		ai_chance = {
 			factor = 0.33
 			modifier = {
-				factor = 6
-				pop_majority_ideology = conservative
+				factor = 3
+				OR = { pop_majority_ideology = conservative pop_majority_ideology = big_tent pop_majority_ideology = traditionalist }
 			}
 			modifier = {
-				factor = 3
-				pop_majority_ideology = big_tent
-			}
-			modifier = {
-				factor = 3
-				pop_majority_ideology = traditionalist
+				factor = 0.3
+				NOT = { OR = { pop_majority_ideology = conservative pop_majority_ideology = big_tent pop_majority_ideology = traditionalist } }
 			}
 		}
 	}
@@ -719,16 +691,12 @@ country_event = {
 		ai_chance = {
 			factor = 0.25
 			modifier = {
-				factor = 6
-				pop_majority_ideology = liberal
+				factor = 3
+				OR = { pop_majority_ideology = liberal pop_majority_ideology = progressive pop_majority_ideology = social_democrat }
 			}
 			modifier = {
-				factor = 1.1
-				pop_majority_ideology = progressive
-			}
-			modifier = {
-				factor = 1.1
-				pop_majority_ideology = social_democrat
+				factor = 0.3
+				NOT = { OR = { pop_majority_ideology = liberal pop_majority_ideology = progressive pop_majority_ideology = social_democrat } }
 			}
 		}
 	}
@@ -762,12 +730,12 @@ country_event = {
 		ai_chance = {
 			factor = 0.33
 			modifier = {
-				factor = 6
-				pop_majority_ideology = populist
+				factor = 3
+				OR = { pop_majority_ideology = populist pop_majority_ideology = nationalist }
 			}
 			modifier = {
-				factor = 3
-				pop_majority_ideology = nationalist
+				factor = 0.3
+				NOT = { OR = { pop_majority_ideology = populist pop_majority_ideology = nationalist } }
 			}
 		}
 	}
@@ -787,10 +755,11 @@ country_event = {
 		year = 1972 NOT = { year = 1973 }
 		election = no
 		government = democracy
-		NOT = { has_country_flag = elections_disabled }	
+		NOT = { has_country_flag = elections_disabled }
+		month = 11
 	}
 
-	mean_time_to_happen = { months = 11 modifier = { factor = 0.1 year = 1973 } }
+	mean_time_to_happen = { days = 8 modifier = { factor = 0.1 year = 1973 } }
 	
 	
 	option = {
@@ -818,16 +787,12 @@ country_event = {
 		ai_chance = {
 			factor = 0.5
 			modifier = {
-				factor = 6
-				pop_majority_ideology = conservative
+				factor = 3
+				OR = { pop_majority_ideology = conservative pop_majority_ideology = big_tent pop_majority_ideology = traditionalist }
 			}
 			modifier = {
-				factor = 3
-				pop_majority_ideology = big_tent
-			}
-			modifier = {
-				factor = 3
-				pop_majority_ideology = traditionalist
+				factor = 0.3
+				NOT = { OR = { pop_majority_ideology = conservative pop_majority_ideology = big_tent pop_majority_ideology = traditionalist } }
 			}
 		}
 	}
@@ -856,16 +821,12 @@ country_event = {
 		ai_chance = {
 			factor = 0.5
 			modifier = {
-				factor = 6
-				pop_majority_ideology = liberal
+				factor = 3
+				OR = { pop_majority_ideology = liberal pop_majority_ideology = progressive pop_majority_ideology = social_democrat }
 			}
 			modifier = {
-				factor = 1.1
-				pop_majority_ideology = progressive
-			}
-			modifier = {
-				factor = 1.1
-				pop_majority_ideology = social_democrat
+				factor = 0.3
+				NOT = { OR = { pop_majority_ideology = liberal pop_majority_ideology = progressive pop_majority_ideology = social_democrat } }
 			}
 		}
 	}
@@ -958,10 +919,11 @@ country_event = {
 		year = 1976 NOT = { year = 1980 }
 		election = no
 		government = democracy
-		NOT = { has_country_flag = elections_disabled }	
+		NOT = { has_country_flag = elections_disabled }
+		month = 11
 	}
 
-	mean_time_to_happen = { months = 11 modifier = { factor = 0.1 year = 1977 } }
+	mean_time_to_happen = { days = 8 modifier = { factor = 0.1 year = 1977 } }
 	
 	
 		option = {
@@ -990,19 +952,19 @@ country_event = {
 			factor = 0.5
 			modifier = {
 				factor = 6
-				pop_majority_ideology = liberal
+				OR = { pop_majority_ideology = liberal pop_majority_ideology = progressive pop_majority_ideology = social_democrat }
 			}
 			modifier = {
-				factor = 1.1
-				pop_majority_ideology = progressive
+				factor = 0.3
+				NOT = { OR = { pop_majority_ideology = liberal pop_majority_ideology = progressive pop_majority_ideology = social_democrat } }
 			}
 			modifier = {
-				factor = 1.1
-				pop_majority_ideology = social_democrat
-			}
-			modifier = {
-				factor = 4
+				factor = 1.5
 				has_country_flag = nixon_resigns
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { has_country_flag = nixon_resigns }
 			}
 		}
 	}
@@ -1033,16 +995,12 @@ country_event = {
 		ai_chance = {
 			factor = 0.5
 			modifier = {
-				factor = 6
-				pop_majority_ideology = conservative
+				factor = 3
+				OR = { pop_majority_ideology = conservative pop_majority_ideology = big_tent pop_majority_ideology = traditionalist }
 			}
 			modifier = {
-				factor = 3
-				pop_majority_ideology = big_tent
-			}
-			modifier = {
-				factor = 3
-				pop_majority_ideology = traditionalist
+				factor = 0.3
+				NOT = { OR = { pop_majority_ideology = conservative pop_majority_ideology = big_tent pop_majority_ideology = traditionalist } }
 			}
 		}
 	}
@@ -1062,10 +1020,11 @@ country_event = {
 		year = 1980 NOT = { year = 1984 }
 		election = no
 		government = democracy
-		NOT = { has_country_flag = elections_disabled }	
+		NOT = { has_country_flag = elections_disabled }
+		month = 11
 	}
 
-	mean_time_to_happen = { months = 11 modifier = { factor = 0.1 year = 1981 } }
+	mean_time_to_happen = { days = 8 modifier = { factor = 0.1 year = 1981 } }
 
 	option = {
 		name = "Ronald Reagan (Conservative Republican)"
@@ -1092,12 +1051,12 @@ country_event = {
 		ai_chance = {
 			factor = 0.33
 			modifier = {
-				factor = 6
-				pop_majority_ideology = conservative
+				factor = 3
+				OR = { pop_majority_ideology = conservative pop_majority_ideology = traditionalist }
 			}
 			modifier = {
-				factor = 3
-				pop_majority_ideology = traditionalist
+				factor = 0.3
+				NOT = { OR = { pop_majority_ideology = conservative pop_majority_ideology = traditionalist } }
 			}
 		}
 	}
@@ -1123,12 +1082,12 @@ country_event = {
 		ai_chance = {
 			factor = 0.33
 			modifier = {
-				factor = 6
-				pop_majority_ideology = liberal
+				factor = 3
+				OR = { pop_majority_ideology = liberal pop_majority_ideology = social_democrat }
 			}
 			modifier = {
-				factor = 1.1
-				pop_majority_ideology = social_democrat
+				factor = 0.3
+				NOT = { OR = { pop_majority_ideology = liberal pop_majority_ideology = social_democrat } }
 			}
 		}
 	}
@@ -1161,16 +1120,12 @@ country_event = {
 		ai_chance = {
 			factor = 0.33
 			modifier = {
-				factor = 8
-				pop_majority_ideology = big_tent
+				factor = 3
+				OR = { pop_majority_ideology = big_tent pop_majority_ideology = progressive pop_majority_ideology = populist }
 			}
 			modifier = {
-				factor = 1.1
-				pop_majority_ideology = progressive
-			}
-			modifier = {
-				factor = 1.1
-				pop_majority_ideology = populist
+				factor = 0.3
+				NOT = { OR = { pop_majority_ideology = big_tent pop_majority_ideology = progressive pop_majority_ideology = populist } }
 			}
 		}
 	} 
@@ -1190,10 +1145,11 @@ country_event = {
 		year = 1984 NOT = { year = 1988 }
 		election = no
 		government = democracy
-		NOT = { has_country_flag = elections_disabled }	
+		NOT = { has_country_flag = elections_disabled }
+		month = 11
 	}
 
-	mean_time_to_happen = { months = 11 modifier = { factor = 0.1 year = 1985 } }
+	mean_time_to_happen = { days = 8 modifier = { factor = 0.1 year = 1985 } }
 
 	option = {
 		name = "Ronald Reagan (Conservative Republican)"
@@ -1218,20 +1174,12 @@ country_event = {
 		ai_chance = {
 			factor = 0.5
 			modifier = {
-				factor = 6
-				pop_majority_ideology = conservative
+				factor = 3
+				OR = { pop_majority_ideology = conservative pop_majority_ideology = traditionalist pop_majority_ideology = nationalist pop_majority_ideology = populist }
 			}
 			modifier = {
-				factor = 3
-				pop_majority_ideology = traditionalist
-			}
-			modifier = {
-				factor = 3
-				pop_majority_ideology = nationalist
-			}
-			modifier = {
-				factor = 3
-				pop_majority_ideology = populist
+				factor = 0.3
+				NOT = { OR = { pop_majority_ideology = conservative pop_majority_ideology = traditionalist pop_majority_ideology = nationalist pop_majority_ideology = populist } }
 			}
 		}
 	}
@@ -1259,19 +1207,11 @@ country_event = {
 			factor = 0.5
 			modifier = {
 				factor = 3
-				pop_majority_ideology = liberal
+				OR = { pop_majority_ideology = liberal pop_majority_ideology = social_democrat pop_majority_ideology = progressive pop_majority_ideology = big_tent }
 			}
 			modifier = {
-				factor = 1.1
-				pop_majority_ideology = social_democrat
-			}
-			modifier = {
-				factor = 1.1
-				pop_majority_ideology = progressive
-			}
-			modifier = {
-				factor = 6
-				pop_majority_ideology = big_tent
+				factor = 0.3
+				NOT = { OR = { pop_majority_ideology = liberal pop_majority_ideology = social_democrat pop_majority_ideology = progressive pop_majority_ideology = big_tent } }
 			}
 		}
 	}
@@ -1291,10 +1231,11 @@ country_event = {
 		year = 1988 NOT = { year = 1992 }
 		election = no
 		government = democracy
-		NOT = { has_country_flag = elections_disabled }	
+		NOT = { has_country_flag = elections_disabled }
+		month = 11
 	}
 
-	mean_time_to_happen = { months = 11 modifier = { factor = 0.1 year = 1989 } }
+	mean_time_to_happen = { days = 8 modifier = { factor = 0.1 year = 1989 } }
 
 	option = {
 		name = "George H. W. Bush (Conservative Republican)"
@@ -1319,20 +1260,12 @@ country_event = {
 		ai_chance = {
 			factor = 0.5
 			modifier = {
-				factor = 6
-				pop_majority_ideology = conservative
+				factor = 3
+				OR = { pop_majority_ideology = conservative pop_majority_ideology = traditionalist pop_majority_ideology = populist pop_majority_ideology = nationalist }
 			}
 			modifier = {
-				factor = 3
-				pop_majority_ideology = traditionalist
-			}
-			modifier = {
-				factor = 3
-				pop_majority_ideology = populist
-			}
-			modifier = {
-				factor = 3
-				pop_majority_ideology = nationalist
+				factor = 0.3
+				NOT = { OR = { pop_majority_ideology = conservative pop_majority_ideology = traditionalist pop_majority_ideology = populist pop_majority_ideology = nationalist } }
 			}
 		}
 	}
@@ -1393,9 +1326,11 @@ country_event = {
 		election = no
 		government = democracy
 		NOT = { has_country_flag = elections_disabled }	
+		month = 11
+		
 	}
 
-	mean_time_to_happen = { months = 11 modifier = { factor = 0.1 year = 1993 } }
+	mean_time_to_happen = { days = 8 modifier = { factor = 0.1 year = 1993 } }
 
 	option = {
 		name = "Bill Clinton (Liberal Democrat)"
@@ -1460,16 +1395,12 @@ country_event = {
 		ai_chance = {
 			factor = 0.33
 			modifier = {
-				factor = 6
-				pop_majority_ideology = conservative
+				factor = 3
+				OR = { pop_majority_ideology = conservative pop_majority_ideology = traditionalist pop_majority_ideology = nationalist }
 			}
 			modifier = {
-				factor = 3
-				pop_majority_ideology = traditionalist
-			}
-			modifier = {
-				factor = 3
-				pop_majority_ideology = nationalist
+				factor = 0.3
+				NOT = { OR = { pop_majority_ideology = conservative pop_majority_ideology = traditionalist pop_majority_ideology = nationalist } }
 			}
 		}
 	}
@@ -1502,7 +1433,11 @@ country_event = {
 		ai_chance = {
 			factor = 0.33
 			modifier = {
-				factor = 8
+				factor = 3
+				pop_majority_ideology = populist
+			}
+			modifier = {
+				factor = 0.3
 				pop_majority_ideology = populist
 			}
 		}
@@ -1525,9 +1460,11 @@ country_event = {
 		election = no
 		government = democracy
 		NOT = { has_country_flag = elections_disabled }	
+		month = 11
+		
 	}
 
-	mean_time_to_happen = { months = 11 modifier = { factor = 0.1 year = 1997 } }
+	mean_time_to_happen = { days = 8 modifier = { factor = 0.1 year = 1997 } }
 
 	option = {
 		name = "Bill Clinton (Liberal Democrat)"
@@ -1592,16 +1529,12 @@ country_event = {
 		ai_chance = {
 			factor = 0.33
 			modifier = {
-				factor = 6
-				pop_majority_ideology = conservative
+				factor = 3
+				OR = { pop_majority_ideology = conservative pop_majority_ideology = traditionalist pop_majority_ideology = nationalist }
 			}
 			modifier = {
-				factor = 3
-				pop_majority_ideology = traditionalist
-			}
-			modifier = {
-				factor = 3
-				pop_majority_ideology = nationalist
+				factor = 0.3
+				NOT = { OR = { pop_majority_ideology = conservative pop_majority_ideology = traditionalist pop_majority_ideology = nationalist } }
 			}
 		}
 	}
@@ -1634,7 +1567,11 @@ country_event = {
 		ai_chance = {
 			factor = 0.33
 			modifier = {
-				factor = 8
+				factor = 3
+				pop_majority_ideology = populist
+			}
+			modifier = {
+				factor = 0.3
 				pop_majority_ideology = populist
 			}
 		}
@@ -1657,9 +1594,11 @@ country_event = {
 		election = no
 		government = democracy
 		NOT = { has_country_flag = elections_disabled }	
+		month = 11
+		
 	}
 
-	mean_time_to_happen = { months = 11 modifier = { factor = 0.1 year = 2001 } }
+	mean_time_to_happen = { days = 8 modifier = { factor = 0.1 year = 2001 } }
 
 	option = {
 		name = "George W. Bush Jr. (Conservative Republican)"
@@ -1685,20 +1624,12 @@ country_event = {
 		ai_chance = {
 			factor = 0.5
 			modifier = {
-				factor = 6
-				pop_majority_ideology = conservative
+				factor = 3
+				OR = { pop_majority_ideology = conservative pop_majority_ideology = traditionalist pop_majority_ideology = populist pop_majority_ideology = nationalist }
 			}
 			modifier = {
-				factor = 3
-				pop_majority_ideology = traditionalist
-			}
-			modifier = {
-				factor = 3
-				pop_majority_ideology = nationalist
-			}
-			modifier = {
-				factor = 3
-				pop_majority_ideology = populist
+				factor = 0.3
+				NOT = { OR = { pop_majority_ideology = conservative pop_majority_ideology = traditionalist pop_majority_ideology = populist pop_majority_ideology = nationalist } }
 			}
 		}
 	}
@@ -1725,20 +1656,12 @@ country_event = {
 		ai_chance = {
 			factor = 0.5
 			modifier = {
-				factor = 6
-				pop_majority_ideology = liberal
-			}
-			modifier = {
-				factor = 1.1
-				pop_majority_ideology = social_democrat
-			}
-			modifier = {
-				factor = 1.5
-				pop_majority_ideology = progressive
-			}
-			modifier = {
 				factor = 3
-				pop_majority_ideology = big_tent
+				OR = { pop_majority_ideology = liberal pop_majority_ideology = social_democrat pop_majority_ideology = progressive pop_majority_ideology = big_tent }
+			}
+			modifier = {
+				factor = 0.3
+				NOT = { OR = { pop_majority_ideology = liberal pop_majority_ideology = social_democrat pop_majority_ideology = progressive pop_majority_ideology = big_tent } }
 			}
 		}
 	}
@@ -1760,9 +1683,11 @@ country_event = {
 		election = no
 		government = democracy
 		NOT = { has_country_flag = elections_disabled }	
+		month = 11
+		
 	}
 
-	mean_time_to_happen = { months = 11 modifier = { factor = 0.1 year = 2005 } }
+	mean_time_to_happen = { days = 8 modifier = { factor = 0.1 year = 2005 } }
 
 	option = {
 		name = "George W. Bush Jr. (Conservative Republican)"
@@ -1787,20 +1712,12 @@ country_event = {
 		ai_chance = {
 			factor = 0.5
 			modifier = {
-				factor = 6
-				pop_majority_ideology = conservative
+				factor = 3
+				OR = { pop_majority_ideology = conservative pop_majority_ideology = traditionalist pop_majority_ideology = populist pop_majority_ideology = nationalist }
 			}
 			modifier = {
-				factor = 3
-				pop_majority_ideology = traditionalist
-			}
-			modifier = {
-				factor = 3
-				pop_majority_ideology = nationalist
-			}
-			modifier = {
-				factor = 3
-				pop_majority_ideology = populist
+				factor = 0.3
+				NOT = { OR = { pop_majority_ideology = conservative pop_majority_ideology = traditionalist pop_majority_ideology = populist pop_majority_ideology = nationalist } }
 			}
 		}
 	}
@@ -1827,20 +1744,12 @@ country_event = {
 		ai_chance = {
 			factor = 0.5
 			modifier = {
-				factor = 6
-				pop_majority_ideology = liberal
-			}
-			modifier = {
-				factor = 1.1
-				pop_majority_ideology = social_democrat
-			}
-			modifier = {
-				factor = 1.5
-				pop_majority_ideology = progressive
-			}
-			modifier = {
 				factor = 3
-				pop_majority_ideology = big_tent
+				OR = { pop_majority_ideology = liberal pop_majority_ideology = social_democrat pop_majority_ideology = progressive pop_majority_ideology = big_tent }
+			}
+			modifier = {
+				factor = 0.3
+				NOT = { OR = { pop_majority_ideology = liberal pop_majority_ideology = social_democrat pop_majority_ideology = progressive pop_majority_ideology = big_tent } }
 			}
 		}
 	}
@@ -1862,9 +1771,11 @@ country_event = {
 		election = no
 		government = democracy
 		NOT = { has_country_flag = elections_disabled }	
+		month = 11
+		
 	}
 
-	mean_time_to_happen = { months = 11 modifier = { factor = 0.1 year = 2009 } }
+	mean_time_to_happen = { days = 8 modifier = { factor = 0.1 year = 2009 } }
 
 	option = {
 		name = "Barack Obama (Liberal Democrat)"
@@ -1890,20 +1801,12 @@ country_event = {
 		ai_chance = {
 			factor = 0.5
 			modifier = {
-				factor = 6
-				pop_majority_ideology = liberal
-			}
-			modifier = {
-				factor = 1.1
-				pop_majority_ideology = social_democrat
-			}
-			modifier = {
-				factor = 1.5
-				pop_majority_ideology = progressive
-			}
-			modifier = {
 				factor = 3
-				pop_majority_ideology = big_tent
+				OR = { pop_majority_ideology = liberal pop_majority_ideology = social_democrat pop_majority_ideology = progressive pop_majority_ideology = big_tent }
+			}
+			modifier = {
+				factor = 0.3
+				NOT = { OR = { pop_majority_ideology = liberal pop_majority_ideology = social_democrat pop_majority_ideology = progressive pop_majority_ideology = big_tent } }
 			}
 		}
 	}
@@ -1931,20 +1834,12 @@ country_event = {
 		ai_chance = {
 			factor = 0.5
 			modifier = {
-				factor = 6
-				pop_majority_ideology = conservative
+				factor = 3
+				OR = { pop_majority_ideology = conservative pop_majority_ideology = traditionalist pop_majority_ideology = nationalist pop_majority_ideology = populist }
 			}
 			modifier = {
-				factor = 3
-				pop_majority_ideology = traditionalist
-			}
-			modifier = {
-				factor = 3
-				pop_majority_ideology = nationalist
-			}
-			modifier = {
-				factor = 3
-				pop_majority_ideology = populist
+				factor = 0.3
+				NOT = { OR = { pop_majority_ideology = conservative pop_majority_ideology = traditionalist pop_majority_ideology = nationalist pop_majority_ideology = populist } }
 			}
 		}
 	}
@@ -1966,9 +1861,11 @@ country_event = {
 		election = no
 		government = democracy
 		NOT = { has_country_flag = elections_disabled }	
+		month = 11
+		
 	}
 
-	mean_time_to_happen = { months = 11 modifier = { factor = 0.1 year = 2013 } }
+	mean_time_to_happen = { days = 8 modifier = { factor = 0.1 year = 2013 } }
 
 	option = {
 		name = "Barack Obama (Moderate Democrat)"
@@ -1995,19 +1892,11 @@ country_event = {
 			factor = 0.5
 			modifier = {
 				factor = 3
-				pop_majority_ideology = liberal
+				OR = { pop_majority_ideology = liberal pop_majority_ideology = social_democrat pop_majority_ideology = progressive pop_majority_ideology = big_tent }
 			}
 			modifier = {
-				factor = 1.1
-				pop_majority_ideology = social_democrat
-			}
-			modifier = {
-				factor = 1.5
-				pop_majority_ideology = progressive
-			}
-			modifier = {
-				factor = 6
-				pop_majority_ideology = big_tent
+				factor = 0.3
+				NOT = { OR = { pop_majority_ideology = liberal pop_majority_ideology = social_democrat pop_majority_ideology = progressive pop_majority_ideology = big_tent } }
 			}
 		}
 	}
@@ -2035,20 +1924,12 @@ country_event = {
 		ai_chance = {
 			factor = 0.5
 			modifier = {
-				factor = 6
-				pop_majority_ideology = conservative
+				factor = 3
+				OR = { pop_majority_ideology = conservative pop_majority_ideology = traditionalist pop_majority_ideology = nationalist pop_majority_ideology = populist }
 			}
 			modifier = {
-				factor = 3
-				pop_majority_ideology = traditionalist
-			}
-			modifier = {
-				factor = 3
-				pop_majority_ideology = nationalist
-			}
-			modifier = {
-				factor = 3
-				pop_majority_ideology = populist
+				factor = 0.3
+				NOT = { OR = { pop_majority_ideology = conservative pop_majority_ideology = traditionalist pop_majority_ideology = nationalist pop_majority_ideology = populist } }
 			}
 		}
 	}
@@ -2072,9 +1953,11 @@ country_event = {
 		NOT = { has_country_flag = elections_disabled }	
 		
 		NOT = { ruling_party_ideology = populist }
+		month = 11
+		
 	}
 
-	mean_time_to_happen = { months = 11 modifier = { factor = 0.1 year = 2017 } }
+	mean_time_to_happen = { days = 8 modifier = { factor = 0.1 year = 2017 } }
 
 	option = {
 		name = "Donald Trump (Populist Republican)"
@@ -2102,19 +1985,11 @@ country_event = {
 			factor = 0.5
 			modifier = {
 				factor = 3
-				pop_majority_ideology = conservative
+				OR = { pop_majority_ideology = conservative pop_majority_ideology = traditionalist pop_majority_ideology = nationalist pop_majority_ideology = populist }
 			}
 			modifier = {
-				factor = 3
-				pop_majority_ideology = traditionalist
-			}
-			modifier = {
-				factor = 3
-				pop_majority_ideology = nationalist
-			}
-			modifier = {
-				factor = 6
-				pop_majority_ideology = populist
+				factor = 0.3
+				NOT = { OR = { pop_majority_ideology = conservative pop_majority_ideology = traditionalist pop_majority_ideology = nationalist pop_majority_ideology = populist } }
 			}
 		}
 	}
@@ -2142,19 +2017,11 @@ country_event = {
 			factor = 0.5
 			modifier = {
 				factor = 3
-				pop_majority_ideology = liberal
+				OR = { pop_majority_ideology = liberal pop_majority_ideology = social_democrat pop_majority_ideology = progressive pop_majority_ideology = big_tent }
 			}
 			modifier = {
-				factor = 1.1
-				pop_majority_ideology = social_democrat
-			}
-			modifier = {
-				factor = 1.5
-				pop_majority_ideology = progressive
-			}
-			modifier = {
-				factor = 6
-				pop_majority_ideology = big_tent
+				factor = 0.3
+				NOT = { OR = { pop_majority_ideology = liberal pop_majority_ideology = social_democrat pop_majority_ideology = progressive pop_majority_ideology = big_tent } }
 			}
 		}
 	}
@@ -2179,9 +2046,11 @@ country_event = {
 		
 		NOT = { has_country_flag = elections_disabled }
 		
+		month = 11
+		
 	}
 
-	mean_time_to_happen = { months = 11 modifier = { factor = 0.1 year = 2017 } }
+	mean_time_to_happen = { days = 8 modifier = { factor = 0.1 year = 2017 } }
 
 	option = {
 		name = "Joe Biden (Moderate Democrat)"
@@ -2190,6 +2059,8 @@ country_event = {
 			limit = { owner = { AND = { government = democracy tag = USA NOT = { OR = { pop_majority_ideology = progressive pop_majority_ideology = social_democrat pop_majority_ideology = big_tent pop_majority_ideology = liberal } } } } }
 			owner = { add_country_modifier = { name = revolution_chaos duration = 1065 } }
 		}
+		
+		add_country_modifier = { name = election_cooldown_timer duration = 1200 }
 
 		set_country_flag = biden_2020_flag
 		
@@ -2208,19 +2079,11 @@ country_event = {
 			factor = 0.5
 			modifier = {
 				factor = 3
-				pop_majority_ideology = liberal
+				OR = { pop_majority_ideology = liberal pop_majority_ideology = social_democrat pop_majority_ideology = progressive pop_majority_ideology = big_tent }
 			}
 			modifier = {
-				factor = 1.1
-				pop_majority_ideology = social_democrat
-			}
-			modifier = {
-				factor = 1.5
-				pop_majority_ideology = progressive
-			}
-			modifier = {
-				factor = 6
-				pop_majority_ideology = big_tent
+				factor = 0.3
+				NOT = { OR = { pop_majority_ideology = liberal pop_majority_ideology = social_democrat pop_majority_ideology = progressive pop_majority_ideology = big_tent } }
 			}
 		}
 	}
@@ -2232,6 +2095,8 @@ country_event = {
 			limit = { owner = { AND = { government = democracy tag = USA NOT = { OR = { pop_majority_ideology = populist pop_majority_ideology = nationalist pop_majority_ideology = traditionalist pop_majority_ideology = conservative } } } } }
 			owner = { add_country_modifier = { name = revolution_chaos duration = 1065 } }
 		}
+		
+		add_country_modifier = { name = election_cooldown_timer duration = 1200 }
 		
 		#The president's party becomes the executive, ie the lower house in Vicky
 		ruling_party_ideology = populist
@@ -2278,19 +2143,346 @@ country_event = {
 			factor = 0.5
 			modifier = {
 				factor = 3
+				OR = { pop_majority_ideology = conservative pop_majority_ideology = traditionalist pop_majority_ideology = nationalist pop_majority_ideology = populist }
+			}
+			modifier = {
+				factor = 0.3
+				NOT = { OR = { pop_majority_ideology = conservative pop_majority_ideology = traditionalist pop_majority_ideology = nationalist pop_majority_ideology = populist } }
+			}
+		}
+	}
+
+}
+
+
+#Every single election that could ever happen under the two party system
+country_event = {
+  id = 8215821
+  title = "$YEAR$ Presidential Election"
+  desc = EVTDESC8215821
+  picture = "nwo2_usa_elections_2020"
+  
+	fire_only_once = yes
+
+	trigger = {
+    	tag = USA
+		year = 2024
+		election = no
+		government = democracy
+		NOT = { has_country_flag = elections_disabled }
+		NOT = { has_country_modifier = election_cooldown_timer }
+		month = 11
+	}
+
+	mean_time_to_happen = { days = 8 }
+
+	option = {
+		name = "A Candidate from the New Democrat Coalition."
+		
+		random_owned = { #This should give the player or AI the modifier if they don't have a majority support
+			limit = { owner = { AND = { government = democracy tag = USA NOT = { OR = { pop_majority_ideology = big_tent pop_majority_ideology = liberal } } } } }
+			owner = { add_country_modifier = { name = revolution_chaos duration = 1065 } }
+		}
+
+		add_country_modifier = { name = election_cooldown_timer duration = 1200 }
+
+		#The president's party becomes the executive, ie the lower house in Vicky
+		random_owned = { #check for liberal majority
+			limit = {
+				owner = {
+					AND = {
+						AND = { government = democracy tag = USA }
+						pop_majority_ideology = liberal
+					}
+				}
+			}
+			owner = {
+				ruling_party_ideology = liberal
+				#Simulate the ideological divide
+				any_pop = {
+					limit = {
+						OR = { strata = middle type = farmers type = labourers culture = afro_american }
+					}
+					ideology = { factor = 0.2 value = liberal }
+				}
+			}
+		}
+
+		random_owned = { #check for moderate majority
+			limit = {
+				owner = {
+					AND = {
+						AND = { government = democracy tag = USA }
+						pop_majority_ideology = big_tent
+					}
+				}
+			}
+			owner = {
+				ruling_party_ideology = big_tent
+				#Simulate the ideological divide
+				any_pop = {
+					limit = {
+						OR = { strata = middle type = farmers type = labourers culture = afro_american }
+					}
+					ideology = { factor = 0.2 value = big_tent }
+				}
+			}
+		}
+
+		random_owned = { #If neither liberals or moderates are majority, default to centrist
+			limit = {
+				owner = {
+					AND = {
+						AND = { government = democracy tag = USA }
+						NOT = {
+							OR = {
+								pop_majority_ideology = liberal
+								pop_majority_ideology = big_tent
+							}
+						}
+					}
+				}
+			}
+			owner = {
+				ruling_party_ideology = big_tent
+				#Simulate the ideological divide
+				any_pop = {
+					limit = {
+						OR = { strata = middle type = farmers type = labourers culture = afro_american }
+					}
+					ideology = { factor = 0.2 value = big_tent }
+				}
+			}
+		}
+		
+
+		
+		ai_chance = {
+			factor = 0.25
+			modifier = {
+				factor = 3
+				OR = { pop_majority_ideology = liberal pop_majority_ideology = big_tent }
+			}
+			modifier = {
+				factor = 0.3
+				NOT = { OR = { pop_majority_ideology = liberal pop_majority_ideology = big_tent } }
+			}
+		}
+	}
+	
+	option = {
+		name = "A candidate from the Progressive Caucus."
+		
+		random_owned = { #This should give the player or AI the modifier if they don't have a majority support
+			limit = { owner = { AND = { government = democracy tag = USA NOT = { OR = { pop_majority_ideology = progressive } } } } }
+			owner = { add_country_modifier = { name = revolution_chaos duration = 1065 } }
+		}
+
+		add_country_modifier = { name = election_cooldown_timer duration = 1200 }
+
+		#The president's party becomes the executive, ie the lower house in Vicky
+		ruling_party_ideology = progressive
+		
+		#Simulate the ideological divide
+		any_pop = {
+			limit = {
+				OR = { strata = poor culture = afro_american }
+			}
+			ideology = { factor = 0.2 value = progressive }
+		}
+		
+		ai_chance = {
+			factor = 0.25
+			modifier = {
+				factor = 3
+				OR = { pop_majority_ideology = progressive }
+			}
+			modifier = {
+				factor = 0.3
+				NOT = { OR = { pop_majority_ideology = progressive } }
+			}
+		}
+	}
+	
+	option = {
+		name = "A candidate from the DSA."
+		
+		random_owned = { #This should give the player or AI the modifier if they don't have a majority support
+			limit = { owner = { AND = { government = democracy tag = USA NOT = { OR = { pop_majority_ideology = socialist pop_majority_ideology = social_democrat } } } } }
+			owner = { add_country_modifier = { name = revolution_chaos duration = 1065 } }
+		}
+
+		add_country_modifier = { name = election_cooldown_timer duration = 1200 }
+
+		#The president's party becomes the executive, ie the lower house in Vicky
+		ruling_party_ideology = social_democrat
+		
+		#Simulate the ideological divide
+		any_pop = {
+			limit = {
+				OR = { strata = poor culture = afro_american }
+			}
+			ideology = { factor = 0.2 value = social_democrat }
+		}
+		
+		ai_chance = {
+			factor = 0.25
+			modifier = {
+				factor = 3
+				OR = { pop_majority_ideology = social_democrat pop_majority_ideology = socialist }
+			}
+			modifier = {
+				factor = 0.3
+				NOT = { OR = { pop_majority_ideology = social_democrat pop_majority_ideology = socialist } }
+			}
+		}
+	}
+
+	option = {
+		name = "A moderate Republican candidate."
+		
+		random_owned = { #This should give the player or AI the modifier if they don't have a majority support
+			limit = { owner = { AND = { government = democracy tag = USA NOT = { OR = { pop_majority_ideology = conservative } } } } }
+			owner = { add_country_modifier = { name = revolution_chaos duration = 1065 } }
+		}
+		
+		#The president's party becomes the executive, ie the lower house in Vicky
+		ruling_party_ideology = conservative
+		
+		#Simulate the ideological divide
+		any_pop = {
+			limit = { OR = { AND = { location = { is_core = CSA } NOT = { culture = afro_american } } strata = rich strata = middle } }
+			ideology = {
+				factor = 0.2
+				value = conservative
+			}
+		}
+		
+		ai_chance = {
+			factor = 0.25
+			modifier = {
+				factor = 3
 				pop_majority_ideology = conservative
 			}
 			modifier = {
-				factor = 3
-				pop_majority_ideology = traditionalist
+				factor = 0.3
+				NOT = { pop_majority_ideology = conservative }
 			}
+		}
+	}
+
+	option = {
+		name = "A Republican Freedom Caucus candidate."
+		
+		random_owned = { #This should give the player or AI the modifier if they don't have a majority support
+			limit = { owner = { AND = { government = democracy tag = USA NOT = { OR = { pop_majority_ideology = nationalist pop_majority_ideology = populist pop_majority_ideology = traditionalist } } } } }
+			owner = { add_country_modifier = { name = revolution_chaos duration = 1065 } }
+		}
+		
+		#The president's party becomes the executive, ie the lower house in Vicky
+		random_owned = { #check for nationalist majority
+			limit = {
+				owner = {
+					AND = {
+						AND = { government = democracy tag = USA }
+						pop_majority_ideology = nationalist
+					}
+				}
+			}
+			owner = {
+				ruling_party_ideology = nationalist
+				#Simulate the ideological divide
+				any_pop = {
+					limit = {
+						OR = { strata = middle type = farmers type = labourers culture = afro_american }
+					}
+					ideology = { factor = 0.2 value = nationalist }
+				}
+			}
+		}
+		
+		random_owned = { #check for traditionalist majority
+			limit = {
+				owner = {
+					AND = {
+						AND = { government = democracy tag = USA }
+						pop_majority_ideology = traditionalist
+					}
+				}
+			}
+			owner = {
+				ruling_party_ideology = big_tent
+				#Simulate the ideological divide
+				any_pop = {
+					limit = { OR = { AND = { location = { is_core = CSA } NOT = { culture = afro_american } } strata = rich strata = middle } }
+					ideology = {
+						factor = 0.2
+						value = traditionalist
+					}
+				}
+			}
+		}
+
+		random_owned = { #check for populist majority
+			limit = {
+				owner = {
+					AND = {
+						AND = { government = democracy tag = USA }
+						pop_majority_ideology = populist
+					}
+				}
+			}
+			owner = {
+				ruling_party_ideology = big_tent
+				#Simulate the ideological divide
+				any_pop = {
+					limit = { OR = { AND = { location = { is_core = CSA } NOT = { culture = afro_american } } strata = rich strata = middle } }
+					ideology = {
+						factor = 0.2
+						value = populist
+					}
+				}
+			}
+		}
+
+		random_owned = { #If neither nationalists, traditionalists, or populists are majority, default to populist
+			limit = {
+				owner = {
+					AND = {
+						AND = { government = democracy tag = USA }
+						NOT = {
+							OR = {
+								pop_majority_ideology = nationalist
+								pop_majority_ideology = populist
+								pop_majority_ideology = traditionalist
+							}
+						}
+					}
+				}
+			}
+			owner = {
+				ruling_party_ideology = populist
+				#Simulate the ideological divide
+				any_pop = {
+					limit = { OR = { AND = { location = { is_core = CSA } NOT = { culture = afro_american } } strata = rich strata = middle } }
+					ideology = {
+						factor = 0.2
+						value = populist
+					}
+				}
+			}
+		}
+		
+		
+		ai_chance = {
+			factor = 0.25
 			modifier = {
 				factor = 3
-				pop_majority_ideology = nationalist
+				OR = { pop_majority_ideology = nationalist pop_majority_ideology = populist pop_majority_ideology = traditionalist }
 			}
 			modifier = {
-				factor = 6
-				pop_majority_ideology = populist
+				factor = 0.3
+				NOT = { OR = { pop_majority_ideology = nationalist pop_majority_ideology = populist pop_majority_ideology = traditionalist } }
 			}
 		}
 	}

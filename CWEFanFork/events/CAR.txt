@@ -1,0 +1,130 @@
+#Central African Empire initiation
+country_event = {
+	id = 1400024
+	title = "Coup in the Central African Republic?"
+	desc = EVTDESC1400024
+	picture = "carcoup"
+	
+	fire_only_once = yes
+
+	trigger = {
+		tag = CAR
+		year = 1966
+		NOT = { year = 1990 }
+		
+		government = democracy
+		is_vassal = no
+		war = no
+	}
+
+	option = {
+		name = "Launch the coup!"
+		government = presidential_dictatorship
+		country_event = 800050
+		ruling_party_ideology = nationalist
+		ai_chance = { factor = 0.9 }
+	}
+	option = {
+		name = "Keep the unstable democracy!"
+		add_country_modifier = { name = revolution_chaos duration = 1825 }
+		ai_chance = { factor = 0.1 }
+	}
+
+}
+
+#Central African Empire
+country_event = {
+	id = 1400025
+	title = "Central African Empire"
+	desc = EVTDESC1400025
+	picture = "cae"
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = CAR
+		year = 1976
+		NOT = { year = 1990 }
+		
+		government = presidential_dictatorship
+		war = no
+		is_vassal = no
+		
+		OR = { ruling_party_ideology = traditionalist ruling_party_ideology = nationalist }
+	}
+	
+	option = {
+		name = "Become a monarchy!"
+		government = absolute_monarchy
+		prestige = 100
+		add_country_modifier = { name = revolution_chaos duration = 1825 }
+		any_pop = { militancy = 5 }
+		ai_chance = { factor = 0.9 }
+	}
+	
+	option = {
+		name = "Being President for Life is good enough!"
+		ai_chance = { factor = 0.1 }
+	}
+
+}
+
+#Coronation of Bokassa - cost to the Central African Republic
+country_event = {
+	id = 8028216
+	title = EVT_8028216_NAME
+	desc = EVT_8028216_DESC
+	picture = "nwo2_emperor_bokassa"
+	fire_only_once = yes
+
+	trigger = {
+		tag = CAR
+		year = 1976 NOT = { year = 1990 }
+		war = no
+		is_vassal = no
+		government = absolute_monarchy
+	}
+
+	mean_time_to_happen = { months = 12 }
+
+	option = {
+		name = EVT_8028216_A
+		treasury = -10000
+		prestige = 25
+	}
+}
+
+country_event = {
+	id = 8028217
+	title = EVT_8028217_NAME
+	desc = EVT_8028217_DESC
+	picture = "seleka"
+	fire_only_once = yes
+
+	trigger = {
+		tag = CAR
+		year = 2012 
+		is_greater_power = no
+		is_secondary_power = no
+		SEL = { exists = no }
+		is_vassal = no
+		war = no
+	}
+
+	mean_time_to_happen = { months = 1 }
+
+	option = {
+		name = EVT_8028217_A
+		release = SEL
+		any_owned = { limit = { OR = { province_id = 1968 province_id = 1969 province_id = 1970 } } change_controller = SEL }
+		war = { target = SEL attacker_goal = { casus_belli = civil_war } defender_goal = { casus_belli = status_quo } }
+		ai_chance = { factor = 0.8 }
+	}
+  
+	option = {
+		name = EVT_8028217_B
+		release = SEL
+		prestige = -10
+		ai_chance = { factor = 0.2 }
+	}
+}

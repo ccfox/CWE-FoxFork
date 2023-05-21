@@ -490,17 +490,6 @@ promote_to =
 	artisans = {
 		factor = 0.01
 		
-		#Only some artisans in marxist coommunist dictatorships
-		modifier = {
-			factor = -20
-			country = { 
-				OR = {
-					government = proletarian_dictatorship
-					government = proletarian_dictatorship1
-				}
-				economic_policy = planned_economy 
-			}
-		}
 		
 		group = {
 			modifier = {
@@ -1354,6 +1343,34 @@ ideologies = {
 			factor = 1.05
 		 	country = { is_disarmed = yes }
 		}
+		
+		modifier = {
+			factor = 0.1
+			country = { ruling_party_ideology = nationalist }
+			country = { OR = { government = nationalist_dictatorship government = populist_dictatorship } }
+			militancy = 6
+		}	
+		
+		modifier = {
+			factor = 0.3
+			country = { ruling_party_ideology = nationalist }
+			country = { OR = { government = absolute_monarchy government = theocracy government = presidential_dictatorship government = hms_government1 } }
+			militancy = 6
+		}
+		
+		modifier = {
+			factor = 0.5
+			country = { ruling_party_ideology = nationalist }
+			country = { OR = { government = democracy government = democracy1 government = hms_government government = hms_government1 } }
+			militancy = 6
+		}
+		
+		modifier = {
+			factor = 0.7
+			country = { ruling_party_ideology = nationalist }
+			country = { OR = { government = colonial_government government = mandate_government government = sar_government } }
+			militancy = 6
+		}
 
 		modifier = {
 			factor = 1.5
@@ -1365,6 +1382,7 @@ ideologies = {
 
 		modifier = {
 			factor = 4
+			country = { ruling_party_ideology = nationalist }
 			country = {
 				OR = { government = nationalist_dictatorship government = populist_dictatorship }
 			}
@@ -2555,10 +2573,8 @@ modifier = { factor = 2 country = { has_country_flag = us_politics_special } }
 		modifier = {
 			factor = 0.1
 			country = { ruling_party_ideology = communist }
-			NOT = {
-				militancy = 6
-				country = { OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } }
-			}
+			country = { OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 government = socialist_democracy } }
+			militancy = 6
 		}
 		
 		modifier = {
@@ -2708,16 +2724,14 @@ ruling_party_ideology = socialist
 		modifier = {
 			factor = 0.1
 			country = { ruling_party_ideology = communist_social }
-			NOT = {
-				militancy = 6
-				country = { OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } }
-			}
+			country = { OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 government = socialist_democracy } }
+			militancy = 6
 		}
 		
 		modifier = {
 			factor = 3
 			country = { ruling_party_ideology = communist_social }
-			country = { OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } }
+			country = { OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 government = socialist_democracy } }
 			everyday_needs = 0.8
 			OR = {
 				is_primary_culture = yes

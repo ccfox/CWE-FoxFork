@@ -1,4 +1,4 @@
-name = "Cold War Enhancement Mod 1.16 (FanFork)" # Feb 2023
+name = "Cold War Enhancement Mod 1.16.3 (FanFork)" # Apr. 2023
 path = "mod/CWEFanFork" # location of your mod files. If changed change map/default.map as well
 user_dir = "CWEFanFork" # optional.   
 replace_path = "common"

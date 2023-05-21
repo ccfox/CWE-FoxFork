@@ -7,6 +7,28 @@ international_change_timer = {
 	icon = 8
 }
 
+### New Election and Ideology Modifiers ###
+
+election_cooldown_timer = {
+        global_pop_consciousness_modifier = 0.01
+        icon = 13
+}
+
+reformer_com_push = { #Make pops push towards communist_social
+        global_pop_consciousness_modifier = 0.01
+        icon = 19
+}
+
+hardliner_com_push = { #Make pops push towards communist
+        global_pop_consciousness_modifier = 0.01
+        icon = 19
+}
+
+lib_com_push = { #Make pops push towards socialist
+        global_pop_consciousness_modifier = 0.01
+        icon = 19
+}
+
 ### Generic Development Aid ###
 
 development_aid_modifier = {

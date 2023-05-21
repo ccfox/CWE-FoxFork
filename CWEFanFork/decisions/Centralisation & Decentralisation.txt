@@ -46,6 +46,7 @@ changecentral = {
 						upper_house = { ideology = liberal value = 0.50 }
 						upper_house = { ideology = progressive value = 0.50 }
 						upper_house = { ideology = big_tent value = 0.50 }
+						upper_house = { ideology = social_democrat value = 0.50 }
 					}
 				}
 				

@@ -401,10 +401,17 @@ country_event = {
 	trigger = {
 		government = socialist_democracy
 		
-		#As a socialist only democracy is a flawed democracy, full political reforms will lead to a normal democracy
-		political_parties = parties_allowed
-		vote_franschise = universal_voting
-		political_opinions = free_opinion
+		#Socialist Democracy only switches to regular Democracy when laws and parties are correct
+		OR = { 
+			AND = {
+				OR = { ruling_party_ideology = social_democrat ruling_party_ideology = progressive }
+				political_parties = parties_allowed
+				vote_franschise = universal_voting
+				political_opinions = free_opinion
+			}
+			NOT = { OR = { ruling_party_ideology = socialist ruling_party_ideology = communist_social ruling_party_ideology = communist } }
+		}
+			
 	}
 	
 	mean_time_to_happen = {

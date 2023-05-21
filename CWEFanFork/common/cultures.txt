@@ -680,6 +680,29 @@ native_american = {
 		 first_names = { Agustín Alberto Alfonso Alfredo Andrés Benito Carlos César Eduardo Eugenio Felipe Fernando Gabriel Gilberto Gregorio Jacinto Jesús José Juan Julio Macario Manuel Miguel Nazario Nicolás Oliverio Pablo Porfirio Rodolfo Rufino }
 		 last_names = { Alonso Antúnez Cabrera Cajigas Chacón Chiñas Cortés Fernández Gamboa García González Gutiérrez Guzmán Henestrosa Isael Jiménez Juárez López Matus Mérida Morales Nayeli Orozco Ortíz Pineda Rojas Ruíz Suárez Tamayo Vichido }
 	}
+	guarani = { #tag = -PRG
+		#!religion = { catholic }
+		color = {89 80 175}
+		first_names = { 
+			Achachic Achuqalla Alaya Ali Aliqora Amaru Ankalli Anku Ankuwillka Apumayta Aqarapi Aruma AruniAruwata Aruwiri
+			Awki Awqapuma Axaqupa Axata Ayawire	Ayka Aykisi	"Ch Allqu" "Ch Ayña" ChUllqi Champi Champilla Champiwillka Chinpukusi
+			Chiwchi Chuqi Chuqimamani Chuqitinta Chuqiwanka Chuqiwillka Chura Churata Churki Chuwi Chuyma Harawi Haylli Hila Ilawi Illa
+			Illampu Illatarku Illawara Illika Illimani Imiri Inkaruka Inti Intimayta Iraya Jalaru Jalja JanqU Jayri KAwna Kachi Kalisaya
+			Kalla Kanki Katari Khajkiri Khana Khantati Khari Kinu Kuka Kullu Kunturi Kurmi Kurumi Kusi Kusisa Lariku Lawra Lawrawa Laymi
+			Limachi Llallawa Llanqi LluskU LukAna Majnu Mallku Mamani Maya Mayta Mullu Munasiri Nina Ninaqhispi Ninawillka Ollantay Atalaya
+			Panqara	Panti Paqari Paqu Pawllu Pawqara Pawqarmayta Payllu Phaksi PhaksiphatI Phuqata Phuyu Pillqu Puma Pumakusi Qalani Qallari
+			Qantuta Qawana Qawaya Qawayu Qhallalli Qharuru Qhispi Qillqa Qinallata Qinaya Qisintuu Qisu Qisuyupanki Quien Qullqi Ruka Sanka
+			Sapana Sawalla Sayri Saywa Shatiri Sillanki Sinchiruka Sisa Sullkani Sullkata Suxsu TAlla TItU TItUatawchi TUla Tanqara Tarki
+			Taypi Thaluki Thaya Thayari	Tikuna Tintaya Titi Umantuu	UrisakA	Uruchi Ururi Uskamayta Usnayu Utuya Wallpa Wampu Wanka Wanka Wara
+			Warachi Warakusi Waranqa Wari WaychU Waylla Wayna Waywa Willka Yana Yatiri Yupanki 
+		}
+			
+		last_names = { 
+			Abjaisu Álvarez Ayegua Camba Chuaie Correa Cunhagatú Díaz Fernández Galeano
+			Gómez González Guaracay Guaraní Guerrero Jopara López Mongelós Morla Ortíz
+			Paravé Picagua Riquelme Rivarola "Santa Cruz" Tarayú Torga Velázquez Yaguarete Yrahi 
+		}
+	}
 }
 oceanic = {
 	leader = nativeamerican
@@ -1499,12 +1522,6 @@ bangladeshi_cultures = {
 		 color = { 60 179 113  }
 		 first_names = { Murshid Quli Shujauddin Alauddin Alivardi Sirajuddaula "Mir Muhammad" Najimuddin Reza Saifuddaula Zainul Ahmad Mansur Mubarak Hasan Wasif Waris }
 		 last_names = { Jafar Muhammad Sarfaraz Ali "Qasim Ali" Najabut Bahadur Mirza }
-	}
-	bengali_hindu = {
-		 #!religion = { hindu }
-		 color = { 255 99 71 }
-		 first_names = { Ranjit Kharak Nau Nihal Chand Kaur Shir Dhalip Diwan Jassa Hari Bhuma Nawab Banda Baba Kapur }
-		 last_names = { Singh Kunwar Bahadur Dhillon Nalwa Ahluwalia Ramgarhia Mal Mulraj }
 	}
 	union = BNG
 }

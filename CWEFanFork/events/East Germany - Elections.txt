@@ -14,11 +14,11 @@ country_event = {
 		year = 1949
 		NOT = { year = 1950 }
 		
-		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 government = socialist_democracy }
 		war = no
 		
 		#Must not be a total dictatorship
-		NOT = { political_opinions = ruling_party_opinion }
+		#NOT = { political_opinions = ruling_party_opinion }
 	}
 
 	mean_time_to_happen = { months = 4 }
@@ -28,15 +28,18 @@ country_event = {
 		random_owned = { limit = { owner = { ruling_party_ideology = socialist } } owner = { any_pop = { limit = { strata = middle } ideology = { factor = 0.01 value = socialist } } } }
 		random_owned = { limit = { owner = { ruling_party_ideology = communist } } owner = { any_pop = { limit = { strata = middle } ideology = { factor = 0.02 value = communist } } } }
 		random_owned = { limit = { owner = { ruling_party_ideology = communist_social } } owner = { any_pop = { limit = { strata = middle } ideology = { factor = 0.01 value = communist_social } } } }
+		
+		add_country_modifier = { name = lib_com_push duration = 1095 }
+		
 		ai_chance = {
 			factor = 0.2
 			modifier = {
 				factor = 6
-				pop_majority_ideology = liberal
+				OR = { pop_majority_ideology = liberal pop_majority_ideology = big_tent }
 			}
 			modifier = {
-				factor = 6
-				pop_majority_ideology = big_tent
+				factor = 0.6
+				NOT = { OR = { pop_majority_ideology = liberal pop_majority_ideology = big_tent } }
 			}
 		}
 	}
@@ -46,11 +49,18 @@ country_event = {
 		random_owned = { limit = { owner = { ruling_party_ideology = socialist } } owner = { any_pop = { limit = { strata = middle } ideology = { factor = 0.01 value = socialist } } } }
 		random_owned = { limit = { owner = { ruling_party_ideology = communist } } owner = { any_pop = { limit = { strata = middle } ideology = { factor = 0.01 value = communist } } } }
 		random_owned = { limit = { owner = { ruling_party_ideology = communist_social } } owner = { any_pop = { limit = { strata = middle } ideology = { factor = 0.02 value = communist_social } } } }
+		
+		add_country_modifier = { name = lib_com_push duration = 1095 }
+		
 		ai_chance = { 
 			factor = 0.2
 			modifier = {
 				factor = 6
 				pop_majority_ideology = conservative
+			}
+			modifier = {
+				factor = 0.6
+				NOT = { pop_majority_ideology = conservative }
 			}
 		}
 	}
@@ -60,11 +70,18 @@ country_event = {
 		random_owned = { limit = { owner = { ruling_party_ideology = socialist } } owner = { any_pop = { limit = { type = farmers } ideology = { factor = 0.02 value = socialist } } } }
 		random_owned = { limit = { owner = { ruling_party_ideology = communist } } owner = { any_pop = { limit = { type = farmers } ideology = { factor = 0.03 value = communist } } } }
 		random_owned = { limit = { owner = { ruling_party_ideology = communist_social } } owner = { any_pop = { limit = { type = farmers } ideology = { factor = 0.02 value = communist_social } } } }
+		
+		add_country_modifier = { name = reformer_com_push duration = 1095 }
+		
 		ai_chance = { 
 			factor = 0.2
 			modifier = {
 				factor = 6
 				pop_majority_ideology = socialist
+			}
+			modifier = {
+				factor = 0.6
+				NOT = { pop_majority_ideology = socialist }
 			}
 		}
 	}
@@ -74,15 +91,18 @@ country_event = {
 		random_owned = { limit = { owner = { ruling_party_ideology = socialist } } owner = { any_pop = { limit = { strata = middle } ideology = { factor = 0.03 value = socialist } } } }
 		random_owned = { limit = { owner = { ruling_party_ideology = communist } } owner = { any_pop = { limit = { strata = middle } ideology = { factor = 0.02 value = communist } } } }
 		random_owned = { limit = { owner = { ruling_party_ideology = communist_social } } owner = { any_pop = { limit = { strata = middle } ideology = { factor = 0.02 value = communist_social } } } }
+		
+		add_country_modifier = { name = lib_com_push duration = 1095 }
+		
 		ai_chance = { 
 			factor = 0.2
 			modifier = {
 				factor = 6
-				pop_majority_ideology = nationalist
+				OR = { pop_majority_ideology = nationalist pop_majority_ideology = populist }
 			}
 			modifier = {
-				factor = 6
-				pop_majority_ideology = populist
+				factor = 0.6
+				NOT = { OR = { pop_majority_ideology = nationalist pop_majority_ideology = populist } }
 			}
 		}
 	}
@@ -92,19 +112,21 @@ country_event = {
 		random_owned = { limit = { owner = { ruling_party_ideology = socialist } } owner = { any_pop = { limit = { strata = poor } ideology = { factor = 0.02 value = socialist } } } }
 		random_owned = { limit = { owner = { ruling_party_ideology = communist } } owner = { any_pop = { limit = { strata = poor } ideology = { factor = 0.02 value = communist } } } }
 		random_owned = { limit = { owner = { ruling_party_ideology = communist_social } } owner = { any_pop = { limit = { strata = poor } ideology = { factor = 0.02 value = communist_social } } } }
+		
+		add_country_modifier = { name = hardliner_com_push duration = 1095 }
+		
 		ai_chance = { 
 			factor = 0.2
 			modifier = {
 				factor = 6
-				pop_majority_ideology = communist
+				OR = { pop_majority_ideology = communist pop_majority_ideology = communist_social }
 			}
 			modifier = {
-				factor = 6
-				pop_majority_ideology = communist_social
+				factor = 0.6
+				NOT = { OR = { pop_majority_ideology = communist pop_majority_ideology = communist_social } }
 			}
 		}
 	}
-
 }
 
 #1950-1986 East German election
@@ -120,29 +142,34 @@ country_event = {
 		year = 1950
 		NOT = { year = 1990 }
 		
-		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 government = socialist_democracy }
 		war = no
 		
 		#Must not be a total dictatorship
-		NOT = { political_opinions = ruling_party_opinion }
+		#NOT = { political_opinions = ruling_party_opinion }
+		
+		NOT = { has_country_modifier = election_cooldown_timer }
 	}
 
-	mean_time_to_happen = { months = 48 }
+	mean_time_to_happen = { months = 3 }
 
 	option = {
 		name = "Choose a LDPD candidate."
 		random_owned = { limit = { owner = { ruling_party_ideology = socialist } } owner = { any_pop = { limit = { strata = middle } ideology = { factor = 0.01 value = socialist } } } }
 		random_owned = { limit = { owner = { ruling_party_ideology = communist } } owner = { any_pop = { limit = { strata = middle } ideology = { factor = 0.02 value = communist } } } }
 		random_owned = { limit = { owner = { ruling_party_ideology = communist_social } } owner = { any_pop = { limit = { strata = middle } ideology = { factor = 0.01 value = communist_social } } } }
+		
+		add_country_modifier = { name = election_cooldown_timer duration = 1460 }
+		
 		ai_chance = {
 			factor = 0.2
 			modifier = {
 				factor = 6
-				pop_majority_ideology = liberal
+				OR = { pop_majority_ideology = liberal pop_majority_ideology = big_tent }
 			}
 			modifier = {
-				factor = 6
-				pop_majority_ideology = big_tent
+				factor = 0.6
+				NOT = { OR = { pop_majority_ideology = liberal pop_majority_ideology = big_tent } }
 			}
 		}
 	}
@@ -152,11 +179,18 @@ country_event = {
 		random_owned = { limit = { owner = { ruling_party_ideology = socialist } } owner = { any_pop = { limit = { strata = middle } ideology = { factor = 0.01 value = socialist } } } }
 		random_owned = { limit = { owner = { ruling_party_ideology = communist } } owner = { any_pop = { limit = { strata = middle } ideology = { factor = 0.01 value = communist } } } }
 		random_owned = { limit = { owner = { ruling_party_ideology = communist_social } } owner = { any_pop = { limit = { strata = middle } ideology = { factor = 0.02 value = communist_social } } } }
+		
+		add_country_modifier = { name = election_cooldown_timer duration = 1460 }
+		
 		ai_chance = { 
 			factor = 0.2
 			modifier = {
 				factor = 6
 				pop_majority_ideology = conservative
+			}
+			modifier = {
+				factor = 0.6
+				NOT = { pop_majority_ideology = conservative }
 			}
 		}
 	}
@@ -166,11 +200,18 @@ country_event = {
 		random_owned = { limit = { owner = { ruling_party_ideology = socialist } } owner = { any_pop = { limit = { type = farmers } ideology = { factor = 0.02 value = socialist } } } }
 		random_owned = { limit = { owner = { ruling_party_ideology = communist } } owner = { any_pop = { limit = { type = farmers } ideology = { factor = 0.03 value = communist } } } }
 		random_owned = { limit = { owner = { ruling_party_ideology = communist_social } } owner = { any_pop = { limit = { type = farmers } ideology = { factor = 0.02 value = communist_social } } } }
+		
+		add_country_modifier = { name = election_cooldown_timer duration = 1460 }
+		
 		ai_chance = { 
 			factor = 0.2
 			modifier = {
 				factor = 6
 				pop_majority_ideology = socialist
+			}
+			modifier = {
+				factor = 0.6
+				NOT = { pop_majority_ideology = socialist }
 			}
 		}
 	}
@@ -180,15 +221,18 @@ country_event = {
 		random_owned = { limit = { owner = { ruling_party_ideology = socialist } } owner = { any_pop = { limit = { strata = middle } ideology = { factor = 0.03 value = socialist } } } }
 		random_owned = { limit = { owner = { ruling_party_ideology = communist } } owner = { any_pop = { limit = { strata = middle } ideology = { factor = 0.02 value = communist } } } }
 		random_owned = { limit = { owner = { ruling_party_ideology = communist_social } } owner = { any_pop = { limit = { strata = middle } ideology = { factor = 0.02 value = communist_social } } } }
+		
+		add_country_modifier = { name = election_cooldown_timer duration = 1460 }
+		
 		ai_chance = { 
 			factor = 0.2
 			modifier = {
 				factor = 6
-				pop_majority_ideology = nationalist
+				OR = { pop_majority_ideology = nationalist pop_majority_ideology = populist }
 			}
 			modifier = {
-				factor = 6
-				pop_majority_ideology = populist
+				factor = 0.6
+				NOT = { OR = { pop_majority_ideology = nationalist pop_majority_ideology = populist } }
 			}
 		}
 	}
@@ -198,15 +242,18 @@ country_event = {
 		random_owned = { limit = { owner = { ruling_party_ideology = socialist } } owner = { any_pop = { limit = { strata = poor } ideology = { factor = 0.02 value = socialist } } } }
 		random_owned = { limit = { owner = { ruling_party_ideology = communist } } owner = { any_pop = { limit = { strata = poor } ideology = { factor = 0.02 value = communist } } } }
 		random_owned = { limit = { owner = { ruling_party_ideology = communist_social } } owner = { any_pop = { limit = { strata = poor } ideology = { factor = 0.02 value = communist_social } } } }
+		
+		add_country_modifier = { name = election_cooldown_timer duration = 1460 }
+		
 		ai_chance = { 
 			factor = 0.2
 			modifier = {
 				factor = 6
-				pop_majority_ideology = communist
+				OR = { pop_majority_ideology = communist pop_majority_ideology = communist_social }
 			}
 			modifier = {
-				factor = 6
-				pop_majority_ideology = communist_social
+				factor = 0.6
+				NOT = { OR = { pop_majority_ideology = communist pop_majority_ideology = communist_social } }
 			}
 		}
 	}
@@ -224,16 +271,16 @@ country_event = {
 		tag = DDR
 		year = 1990
 		
-		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 government = socialist_democracy }
 		war = no
 		
 		#Must not be a total dictatorship
-		NOT = { political_opinions = ruling_party_opinion }
+		#NOT = { political_opinions = ruling_party_opinion }
 		
-		NOT = { has_country_modifier = leader_cooldown }
+		NOT = { has_country_modifier = election_cooldown_timer }
 	}
 
-	mean_time_to_happen = { months = 60 }
+	mean_time_to_happen = { months = 3 }
 
 	option = {
 		name = "Choose an SED candidate."
@@ -241,17 +288,17 @@ country_event = {
 		random_owned = { limit = { owner = { ruling_party_ideology = communist } } owner = { any_pop = { limit = { strata = poor } ideology = { factor = 0.02 value = communist } } } }
 		random_owned = { limit = { owner = { ruling_party_ideology = communist_social } } owner = { any_pop = { limit = { strata = poor } ideology = { factor = 0.02 value = communist_social } } } }
 		
-		add_country_modifier = { name = leader_cooldown duration = 100 }
+		add_country_modifier = { name = election_cooldown_timer duration = 1460 }
 		
 		ai_chance = { 
 			factor = 0.2
 			modifier = {
 				factor = 6
-				pop_majority_ideology = communist
+				OR = { pop_majority_ideology = communist pop_majority_ideology = communist_social }
 			}
 			modifier = {
-				factor = 6
-				pop_majority_ideology = communist_social
+				factor = 0.6
+				NOT = { OR = { pop_majority_ideology = communist pop_majority_ideology = communist_social } }
 			}
 		}
 	}
@@ -262,17 +309,17 @@ country_event = {
 		random_owned = { limit = { owner = { ruling_party_ideology = communist } } owner = { any_pop = { limit = { strata = middle } ideology = { factor = 0.02 value = communist } } } }
 		random_owned = { limit = { owner = { ruling_party_ideology = communist_social } } owner = { any_pop = { limit = { strata = middle } ideology = { factor = 0.01 value = communist_social } } } }
 		
-		add_country_modifier = { name = leader_cooldown duration = 100 }
+		add_country_modifier = { name = election_cooldown_timer duration = 1460 }
 		
 		ai_chance = {
 			factor = 0.2
 			modifier = {
 				factor = 6
-				pop_majority_ideology = liberal
+				OR = { pop_majority_ideology = liberal pop_majority_ideology = big_tent }
 			}
 			modifier = {
-				factor = 6
-				pop_majority_ideology = big_tent
+				factor = 0.6
+				NOT = { OR = { pop_majority_ideology = liberal pop_majority_ideology = big_tent } }
 			}
 		}
 	}
@@ -283,13 +330,17 @@ country_event = {
 		random_owned = { limit = { owner = { ruling_party_ideology = communist } } owner = { any_pop = { limit = { strata = middle } ideology = { factor = 0.01 value = communist } } } }
 		random_owned = { limit = { owner = { ruling_party_ideology = communist_social } } owner = { any_pop = { limit = { strata = middle } ideology = { factor = 0.02 value = communist_social } } } }
 		
-		add_country_modifier = { name = leader_cooldown duration = 100 }
+		add_country_modifier = { name = election_cooldown_timer duration = 1460 }
 		
 		ai_chance = { 
 			factor = 0.2
 			modifier = {
 				factor = 6
 				pop_majority_ideology = conservative
+			}
+			modifier = {
+				factor = 0.6
+				NOT = { pop_majority_ideology = conservative }
 			}
 		}
 	}
@@ -300,13 +351,17 @@ country_event = {
 		random_owned = { limit = { owner = { ruling_party_ideology = communist } } owner = { any_pop = { limit = { type = farmers } ideology = { factor = 0.03 value = communist } } } }
 		random_owned = { limit = { owner = { ruling_party_ideology = communist_social } } owner = { any_pop = { limit = { type = farmers } ideology = { factor = 0.02 value = communist_social } } } }
 		
-		add_country_modifier = { name = leader_cooldown duration = 100 }
+		add_country_modifier = { name = election_cooldown_timer duration = 1460 }
 		
 		ai_chance = { 
 			factor = 0.2
 			modifier = {
 				factor = 6
 				pop_majority_ideology = socialist
+			}
+			modifier = {
+				factor = 0.6
+				NOT = { pop_majority_ideology = socialist }
 			}
 		}
 	}
@@ -317,17 +372,17 @@ country_event = {
 		random_owned = { limit = { owner = { ruling_party_ideology = communist } } owner = { any_pop = { limit = { strata = middle } ideology = { factor = 0.02 value = communist } } } }
 		random_owned = { limit = { owner = { ruling_party_ideology = communist_social } } owner = { any_pop = { limit = { strata = middle } ideology = { factor = 0.02 value = communist_social } } } }
 		
-		add_country_modifier = { name = leader_cooldown duration = 100 }
+		add_country_modifier = { name = election_cooldown_timer duration = 1460 }
 		
 		ai_chance = { 
 			factor = 0.2
 			modifier = {
 				factor = 6
-				pop_majority_ideology = nationalist
+				OR = { pop_majority_ideology = nationalist pop_majority_ideology = populist }
 			}
 			modifier = {
-				factor = 6
-				pop_majority_ideology = populist
+				factor = 0.6
+				NOT = { OR = { pop_majority_ideology = nationalist pop_majority_ideology = populist } }
 			}
 		}
 	}
