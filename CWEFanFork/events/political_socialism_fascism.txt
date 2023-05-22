@@ -2614,7 +2614,7 @@ country_event = {
 	}
 }
 
-#Islamist March
+#Nationalist March
 country_event = {
 	id = 17680
 	title = "EVTNAME17680"
