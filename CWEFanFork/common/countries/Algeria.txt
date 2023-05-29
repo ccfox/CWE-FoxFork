@@ -168,6 +168,17 @@ party = {
 		end_date = 2092.1.1
 }
 party = {
+		name = "National Liberation Front (Third Position)"
+		citizenship_policy = residency
+		economic_policy = state_capitalism
+		ideology = populist
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = jingoism
+		start_date = 1836.1.1
+		end_date = 1988.1.1
+}
+party = {
 		name = "Arab Socialist Ba'ath Party"
 		citizenship_policy = residency
 		economic_policy = state_capitalism

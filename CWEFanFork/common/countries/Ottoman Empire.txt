@@ -303,7 +303,7 @@ party = {
 		trade_policy = protectionism
 		war_policy = pacifism
 		start_date = 1983.1.1
-		end_date = 1985.1.1
+		end_date = 2008.5.3
 }
 party = {
 		name = "Peace and Democracy Party"
