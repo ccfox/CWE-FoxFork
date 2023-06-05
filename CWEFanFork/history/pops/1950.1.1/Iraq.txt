@@ -18,7 +18,7 @@
 	farmers = {
 		culture = arab_mesopotamian
 		religion =  sunni 
-		size = 59631
+		size = 60631
 	 } 
 	farmers = {
 		culture = arab_mesopotamian
@@ -38,11 +38,6 @@
 	 } 
 
 	#For Pan-Arab and National Arab
-	farmers = {
-		culture = arab_mesopotamian
-		religion =  sunni 
-		size = 1000
-	 } 
 	farmers = {
 		culture = arab
 		religion =  sunni 
@@ -112,7 +107,7 @@
 	farmers = {
 		culture = arab_mesopotamian
 		religion =  sunni 
-		size = 27716
+		size = 28716
 	 } 
 	farmers = {
 		culture = kurdish
@@ -121,11 +116,6 @@
 	 } 
 
 	#For Pan-Arab and National Arab
-	farmers = {
-		culture = arab_mesopotamian
-		religion =  sunni 
-		size = 1000
-	 } 
 	farmers = {
 		culture = arab
 		religion =  sunni 
@@ -168,7 +158,7 @@
 	farmers = {
 		culture = arab_mesopotamian
 		religion =  sunni 
-		size = 24123
+		size = 25123
 	 } 
 	soldiers = {
 		culture = arab_mesopotamian
@@ -187,11 +177,6 @@
 	 } 
 
 	#For Pan-Arab and National Arab
-	farmers = {
-		culture = arab_mesopotamian
-		religion =  sunni 
-		size = 1000
-	 } 
 	farmers = {
 		culture = arab
 		religion =  sunni 
@@ -214,7 +199,7 @@
 	farmers = {
 		culture = arab_mesopotamian
 		religion =  sunni 
-		size = 40397
+		size = 41397
 	 } 
 	farmers = {
 		culture = kurdish
@@ -223,11 +208,6 @@
 	 } 
 
 	#For Pan-Arab and National Arab
-	farmers = {
-		culture = arab_mesopotamian
-		religion =  sunni 
-		size = 1000
-	 } 
 	farmers = {
 		culture = arab
 		religion =  sunni 
@@ -250,7 +230,7 @@
 	farmers = {
 		culture = arab_mesopotamian
 		religion =  sunni 
-		size = 17053
+		size = 18053
 	 } 
 	farmers = {
 		culture = arab_mesopotamian
@@ -259,11 +239,6 @@
 	 } 
 
 	#For Pan-Arab and National Arab
-	farmers = {
-		culture = arab_mesopotamian
-		religion =  sunni 
-		size = 1000
-	 } 
 	farmers = {
 		culture = arab
 		religion =  sunni 
@@ -353,15 +328,10 @@
 	farmers = {
 		culture = arab_mesopotamian
 		religion =  sunni 
-		size = 47749
+		size = 48749
 	 } 
 
 	#For Pan-Arab and National Arab
-	farmers = {
-		culture = arab_mesopotamian
-		religion =  sunni 
-		size = 1000
-	 } 
 	farmers = {
 		culture = arab
 		religion =  sunni 
@@ -451,7 +421,7 @@
 	farmers = {
 		culture = arab_mesopotamian
 		religion =  sunni 
-		size = 1859
+		size = 2859
 	 } 
 	farmers = {
 		culture = arab_mesopotamian
@@ -460,11 +430,6 @@
 	 } 
 
 	#For Pan-Arab and National Arab
-	farmers = {
-		culture = arab_mesopotamian
-		religion =  sunni 
-		size = 1000
-	 } 
 	farmers = {
 		culture = arab
 		religion =  sunni 
