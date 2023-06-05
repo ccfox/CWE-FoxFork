@@ -8,7 +8,7 @@
 	farmers = {
 		culture = arab_gulf
 		religion =  sunni 
-		size = 6103
+		size = 7103
 	 } 
 	farmers = {
 		culture = arab_gulf
@@ -17,11 +17,6 @@
 	 } 
 
 	#For Pan-Arab and National Arab
-	farmers = {
-		culture = arab_gulf
-		religion =  sunni 
-		size = 1000
-	 } 
 	farmers = {
 		culture = arab
 		religion =  sunni 
