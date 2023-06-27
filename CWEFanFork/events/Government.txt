@@ -574,8 +574,8 @@ invention = joint_chiefs_of_staff
 is_vassal = no
 war = no
 NOT = { military_spending = 0.25 }
+NOT = { publishing_rights = state_publishing }
 NOT = { publishing_rights = censored_publishing }
-NOT = { publishing_rights = firewall_publishing }
 OR = { average_militancy = 2 NOT = { OR = { has_country_modifier = low_government_corruption has_country_modifier = minimal_government_corruption } } }
 	}
 
@@ -837,8 +837,8 @@ owner = { political_reform = unregulated_publishing clr_country_flag = return_to
 			}
 
 random_owned = { 
-limit = { owner = { has_country_flag = return_to_firewall_publishing } }
-owner = { political_reform = firewall_publishing clr_country_flag = return_to_firewall_publishing }
+limit = { owner = { has_country_flag = return_to_censored_publishing } }
+owner = { political_reform = censored_publishing clr_country_flag = return_to_censored_publishing }
 			}
 
 remove_country_modifier = martial_law
@@ -1029,8 +1029,8 @@ owner = { political_reform = unregulated_publishing clr_country_flag = return_to
 			}
 
 random_owned = { 
-limit = { owner = { has_country_flag = return_to_firewall_publishing } }
-owner = { political_reform = firewall_publishing clr_country_flag = return_to_firewall_publishing }
+limit = { owner = { has_country_flag = return_to_censored_publishing } }
+owner = { political_reform = censored_publishing clr_country_flag = return_to_censored_publishing }
 			}
 
 remove_country_modifier = martial_law
@@ -1070,7 +1070,7 @@ OR = {
 NOT = { vote_franschise = none_voting } 
 NOT = { political_opinions = ruling_party_opinion } 
 NOT = { public_meetings = no_meetings } 
-NOT = { publishing_rights = censored_publishing }
+NOT = { publishing_rights = state_publishing }
 NOT = { political_parties = parties_not_allowed }
 }
 
@@ -1361,8 +1361,8 @@ country_event = {
 		}
 
 		random_owned = { 
-			limit = { owner = { has_country_flag = return_to_firewall_publishing } }
-			owner = { political_reform = firewall_publishing clr_country_flag = return_to_firewall_publishing }
+			limit = { owner = { has_country_flag = return_to_censored_publishing } }
+			owner = { political_reform = censored_publishing clr_country_flag = return_to_censored_publishing }
 		}
 
 		remove_country_modifier = martial_law

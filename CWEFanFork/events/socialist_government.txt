@@ -21,7 +21,7 @@ country_event = {
 			NOT = { political_parties = parties_not_allowed }
 			NOT = { vote_franschise = none_voting }
 			
-			NOT = { OR = { publishing_rights = censored_publishing publishing_rights = firewall_publishing } }
+			NOT = { OR = { publishing_rights = state_publishing publishing_rights = censored_publishing } }
 			
 			NOT = { public_meetings = no_meetings }
 		}
@@ -115,10 +115,10 @@ country_event = {
 		random_owned = {
 			limit = { 
 				owner = { 
-					NOT = { OR = { publishing_rights = censored_publishing publishing_rights = firewall_publishing } }
+					NOT = { OR = { publishing_rights = state_publishing publishing_rights = censored_publishing } }
 				} 
 			}
-			owner = { political_reform = censored_publishing }
+			owner = { political_reform = state_publishing }
 		}
 		
 		random_owned = {

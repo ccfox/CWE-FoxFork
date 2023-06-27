@@ -1938,8 +1938,8 @@ country_event = {
 		#Has reforms to repeal
 		NOT = { 
 			OR = { 
+				publishing_rights = state_publishing 
 				publishing_rights = censored_publishing 
-				publishing_rights = firewall_publishing 
 			} 
 		}
 		
@@ -1957,7 +1957,7 @@ country_event = {
 		name = "This is a necessary evil"
 		
 		#Roll back press reforms and increase security reforms
-		political_reform = firewall_publishing
+		political_reform = censored_publishing
 		social_reform = preemptive_security_actions
 		
 		#Progressives are furious
@@ -3415,7 +3415,7 @@ country_event = {
 		political_reform = regulated_opinion
 		political_reform = no_meetings
 		political_reform = politicised_service
-		political_reform = firewall_publishing
+		political_reform = censored_publishing
 		political_reform = state_controlled_unions
 		political_reform = parties_only_nominated
 		
@@ -3588,7 +3588,7 @@ country_event = {
 					political_reform = regulated_opinion
 					political_reform = no_meetings
 					political_reform = politicised_service
-					political_reform = firewall_publishing
+					political_reform = censored_publishing
 					political_reform = state_controlled_unions
 					political_reform = parties_only_nominated
 		
@@ -3615,7 +3615,7 @@ country_event = {
 					political_reform = regulated_opinion
 					political_reform = no_meetings
 					political_reform = politicised_service
-					political_reform = firewall_publishing
+					political_reform = censored_publishing
 					political_reform = state_controlled_unions
 					political_reform = parties_only_nominated
 		
@@ -3686,7 +3686,7 @@ country_event = {
 					political_reform = regulated_opinion
 					political_reform = no_meetings
 					political_reform = politicised_service
-					political_reform = firewall_publishing
+					political_reform = censored_publishing
 					political_reform = state_controlled_unions
 					political_reform = parties_only_nominated
 		
@@ -3720,7 +3720,7 @@ country_event = {
 					political_reform = regulated_opinion
 					political_reform = no_meetings
 					political_reform = politicised_service
-					political_reform = firewall_publishing
+					political_reform = censored_publishing
 					political_reform = state_controlled_unions
 					political_reform = parties_only_nominated
 		
@@ -3760,7 +3760,7 @@ country_event = {
 					political_reform = regulated_opinion
 					political_reform = no_meetings
 					political_reform = politicised_service
-					political_reform = firewall_publishing
+					political_reform = censored_publishing
 					political_reform = state_controlled_unions
 					political_reform = parties_only_nominated
 		
@@ -3789,7 +3789,7 @@ country_event = {
 					political_reform = regulated_opinion
 					political_reform = no_meetings
 					political_reform = politicised_service
-					political_reform = firewall_publishing
+					political_reform = censored_publishing
 					political_reform = state_controlled_unions
 					political_reform = parties_only_nominated
 		
