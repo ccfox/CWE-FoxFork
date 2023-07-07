@@ -78,15 +78,10 @@
 	farmers = {
 		culture = arab_gulf
 		religion =  sunni 
-		size = 5440
+		size = 6440
 	 } 
 
 	#For Pan-Arab and National Arab
-	farmers = {
-		culture = arab_gulf
-		religion =  sunni 
-		size = 1000
-	 } 
 	farmers = {
 		culture = arab
 		religion =  sunni 
@@ -169,7 +164,7 @@
 	farmers = {
 		culture = arab_gulf
 		religion =  sunni 
-		size = 6160
+		size = 7160
 	 } 
 	farmers = {
 		culture = baluchi
@@ -178,11 +173,6 @@
 	 } 
 
 	#For Pan-Arab and National Arab
-	farmers = {
-		culture = arab_gulf
-		religion =  sunni 
-		size = 1000
-	 } 
 	farmers = {
 		culture = arab
 		religion =  sunni 
@@ -235,7 +225,7 @@
 	farmers = {
 		culture = arab_gulf
 		religion =  ibad 
-		size = 16640
+		size = 17640
 	 } 
 	farmers = {
 		culture = arab_gulf
@@ -244,11 +234,6 @@
 	 } 
 
 	#For Pan-Arab and National Arab
-	farmers = {
-		culture = arab_gulf
-		religion =  sunni 
-		size = 1000
-	 } 
 	farmers = {
 		culture = arab
 		religion =  sunni 
@@ -296,7 +281,7 @@
 	farmers = {
 		culture = arab_gulf
 		religion =  ibad 
-		size = 12084
+		size = 13084
 	 } 
 	farmers = {
 		culture = arab_gulf
@@ -305,11 +290,6 @@
 	 } 
 
 	#For Pan-Arab and National Arab
-	farmers = {
-		culture = arab_gulf
-		religion =  sunni 
-		size = 1000
-	 } 
 	farmers = {
 		culture = arab
 		religion =  sunni 
@@ -342,7 +322,7 @@
 	farmers = {
 		culture = arab_gulf
 		religion =  ibad 
-		size = 1387
+		size = 2387
 	 } 
 	farmers = {
 		culture = arab_gulf
@@ -351,11 +331,6 @@
 	 } 
 
 	#For Pan-Arab and National Arab
-	farmers = {
-		culture = arab_gulf
-		religion =  sunni 
-		size = 1000
-	 } 
 	farmers = {
 		culture = arab
 		religion =  sunni 
@@ -403,7 +378,7 @@
 	farmers = {
 		culture = arab_gulf
 		religion =  ibad 
-		size = 8518
+		size = 9518
 	 } 
 	farmers = {
 		culture = arab_gulf
@@ -412,11 +387,6 @@
 	 } 
 
 	#For Pan-Arab and National Arab
-	farmers = {
-		culture = arab_gulf
-		religion =  sunni 
-		size = 1000
-	 } 
 	farmers = {
 		culture = arab
 		religion =  sunni 
@@ -466,14 +436,9 @@
 	farmers = {
 		culture = arab_gulf
 		religion = sunni
-		size = 730
+		size = 830
 	}
 	
-	farmers = {
-		culture = arab_gulf
-		religion = sunni
-		size = 100
-	}
 }
 
 #Gwadar - Ziryanka (1000/250 POPS)
