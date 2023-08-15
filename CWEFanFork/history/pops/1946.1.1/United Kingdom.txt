@@ -8,15 +8,10 @@
 	farmers = {
 		culture = arab_gulf
 		religion =  sunni 
-		size = 53804
+		size = 54804
 	 } 
 
 	#For Pan-Arab and National Arab
-	farmers = {
-		culture = arab_gulf
-		religion =  sunni 
-		size = 1000
-	 } 
 	farmers = {
 		culture = arab
 		religion =  sunni 
@@ -29,15 +24,10 @@
 	farmers = {
 		culture = arab_gulf
 		religion =  sunni 
-		size = 5381
+		size = 5481
 	 } 
 
 	#For Pan-Arab and National Arab
-	farmers = {
-		culture = arab_gulf
-		religion =  sunni 
-		size = 100
-	 } 
 	farmers = {
 		culture = arab
 		religion =  sunni 
@@ -55,7 +45,7 @@
 	farmers = {
 		culture = arab_gulf
 		religion =  sunni 
-		size = 55744
+		size = 55844
 	 } 
 	farmers = {
 		culture = arab_gulf
@@ -64,11 +54,6 @@
 	 } 
 
 	#For Pan-Arab and National Arab
-	farmers = {
-		culture = arab_gulf
-		religion =  sunni 
-		size = 100
-	 } 
 	farmers = {
 		culture = arab
 		religion =  sunni 
@@ -116,15 +101,10 @@
 	farmers = {
 		culture = arab_gulf
 		religion =  sunni 
-		size = 1793
+		size = 1893
 	 } 
 
 	#For Pan-Arab and National Arab
-	farmers = {
-		culture = arab_gulf
-		religion =  sunni 
-		size = 100
-	 } 
 	farmers = {
 		culture = arab
 		religion =  sunni 
@@ -2716,7 +2696,7 @@
 	farmers = {
 		culture = arab_gulf
 		religion =  sunni 
-		size = 62034
+		size = 62134
 	 } 
 	farmers = {
 		culture = somali
@@ -2725,11 +2705,6 @@
 	 } 
 
 	#For Pan-Arab and National Arab
-	farmers = {
-		culture = arab_gulf
-		religion =  sunni 
-		size = 100
-	 } 
 	farmers = {
 		culture = arab
 		religion =  sunni 
@@ -2970,7 +2945,7 @@
 	farmers = {
 		culture = berber
 		religion =  sunni 
-		size = 62546
+		size = 63546
 	 }
 	farmers = {
 		culture = italian
@@ -2985,11 +2960,6 @@
 	
 	#For Pan-Arab and National Arab
 	farmers = {
-		culture = berber
-		religion =  sunni 
-		size = 1000
-	 } 
-	farmers = {
 		culture = arab
 		religion =  sunni 
 		size = 1000
@@ -3001,20 +2971,10 @@
 	farmers = {
 		culture = berber
 		religion =  sunni 
-		size = 8271
-	 } 
-	farmers = {
-		culture = berber
-		religion =  sunni 
-		size = 1388
+		size = 10659
 	 } 
 
 	#For Pan-Arab and National Arab
-	farmers = {
-		culture = berber
-		religion =  sunni 
-		size = 1000
-	 } 
 	farmers = {
 		culture = arab
 		religion =  sunni 
@@ -3037,7 +2997,7 @@
 	farmers = {
 		culture = berber
 		religion =  sunni 
-		size = 15621
+		size = 16621
 	 } 
 	farmers = {
 		culture = italian
@@ -3052,11 +3012,6 @@
 
 	#For Pan-Arab and National Arab
 	farmers = {
-		culture = berber
-		religion =  sunni 
-		size = 1000
-	 } 
-	farmers = {
 		culture = arab
 		religion =  sunni 
 		size = 1000
@@ -3068,15 +3023,10 @@
 	farmers = {
 		culture = berber
 		religion =  sunni 
-		size = 5603
+		size = 6603
 	 } 
 
 	#For Pan-Arab and National Arab
-	farmers = {
-		culture = berber
-		religion =  sunni 
-		size = 1000
-	 } 
 	farmers = {
 		culture = arab
 		religion =  sunni 
@@ -3119,7 +3069,7 @@
 	farmers = {
 		culture = berber
 		religion =  sunni 
-		size = 24941
+		size = 25941
 	 } 
 	farmers = {
 		culture = italian
@@ -3134,11 +3084,6 @@
 
 	#For Pan-Arab and National Arab
 	farmers = {
-		culture = berber
-		religion =  sunni 
-		size = 1000
-	 } 
-	farmers = {
 		culture = arab
 		religion =  sunni 
 		size = 1000
@@ -3150,15 +3095,10 @@
 	farmers = {
 		culture = berber
 		religion =  sunni 
-		size = 11398
+		size = 12398
 	 } 
 
 	#For Pan-Arab and National Arab
-	farmers = {
-		culture = berber
-		religion =  sunni 
-		size = 1000
-	 } 
 	farmers = {
 		culture = arab
 		religion =  sunni 
@@ -3171,15 +3111,10 @@
 	farmers = {
 		culture = berber
 		religion =  sunni 
-		size = 4636
+		size = 5636
 	 } 
 
 	#For Pan-Arab and National Arab
-	farmers = {
-		culture = berber
-		religion =  sunni 
-		size = 1000
-	 } 
 	farmers = {
 		culture = arab
 		religion =  sunni 
@@ -3227,15 +3162,10 @@
 	farmers = {
 		culture = berber
 		religion =  sunni 
-		size = 2512
+		size = 3512
 	 } 
 
 	#For Pan-Arab and National Arab
-	farmers = {
-		culture = berber
-		religion =  sunni 
-		size = 1000
-	 } 
 	farmers = {
 		culture = arab
 		religion =  sunni 
@@ -3283,15 +3213,10 @@
 	farmers = {
 		culture = berber
 		religion =  sunni 
-		size = 2512
+		size = 3512
 	 } 
 
 	#For Pan-Arab and National Arab
-	farmers = {
-		culture = berber
-		religion =  sunni 
-		size = 1000
-	 } 
 	farmers = {
 		culture = arab
 		religion =  sunni 
@@ -3339,15 +3264,10 @@
 	farmers = {
 		culture = berber
 		religion =  sunni 
-		size = 2125
+		size = 3125
 	 } 
 
 	#For Pan-Arab and National Arab
-	farmers = {
-		culture = berber
-		religion =  sunni 
-		size = 1000
-	 } 
 	farmers = {
 		culture = arab
 		religion =  sunni 
@@ -23832,17 +23752,12 @@
 	farmers = {
 		culture = arab_levantine
 		religion =  sunni 
-		size = 61879
+		size = 62879
 	 } 
 
 	#For Pan-Arab and National Arab
 	farmers = {
 		culture = arab
-		religion =  sunni 
-		size = 1000
-	 } 
-	farmers = {
-		culture = arab_levantine
 		religion =  sunni 
 		size = 1000
 	 } 
@@ -23933,7 +23848,7 @@
 	farmers = {
 		culture = arab_levantine
 		religion =  sunni 
-		size = 7650
+		size = 8650
 	 } 
 	farmers = {
 		culture = arab_levantine
@@ -23949,11 +23864,6 @@
 	#For Pan-Arab and National Arab
 	farmers = {
 		culture = arab
-		religion =  sunni 
-		size = 1000
-	 } 
-	farmers = {
-		culture = arab_levantine
 		religion =  sunni 
 		size = 1000
 	 } 
@@ -23974,17 +23884,12 @@
 	farmers = {
 		culture = arab_levantine
 		religion =  sunni 
-		size = 63731
+		size = 64731
 	 } 
 
 	#For Pan-Arab and National Arab
 	farmers = {
 		culture = arab
-		religion =  sunni 
-		size = 1000
-	 } 
-	farmers = {
-		culture = arab_levantine
 		religion =  sunni 
 		size = 1000
 	 } 
@@ -24115,17 +24020,12 @@
 	craftsmen = {
 		culture = arab_levantine
 		religion =  sunni 
-		size = 55305
+		size = 56305
 	 } 
 
 	#For Pan-Arab and National Arab
 	farmers = {
 		culture = arab
-		religion =  sunni 
-		size = 1000
-	 } 
-	farmers = {
-		culture = arab_levantine
 		religion =  sunni 
 		size = 1000
 	 } 
@@ -24201,7 +24101,7 @@
 	farmers = {
 		culture = arab_levantine
 		religion =  sunni 
-		size = 47297
+		size = 48297
 	 } 
 	farmers = {
 		culture = arab_levantine
@@ -24212,11 +24112,6 @@
 	#For Pan-Arab and National Arab
 	farmers = {
 		culture = arab
-		religion =  sunni 
-		size = 1000
-	 } 
-	farmers = {
-		culture = arab_levantine
 		religion =  sunni 
 		size = 1000
 	 } 
@@ -24277,22 +24172,12 @@
 	farmers = {
 		culture = arab_levantine
 		religion =  sunni 
-		size = 61879
-	 } 
-	farmers = {
-		culture = arab_levantine
-		religion =  sunni 
-		size = 1760
+		size = 64639
 	 } 
 
 	#For Pan-Arab and National Arab
 	farmers = {
 		culture = arab
-		religion =  sunni 
-		size = 1000
-	 } 
-	farmers = {
-		culture = arab_levantine
 		religion =  sunni 
 		size = 1000
 	 } 
@@ -24352,22 +24237,12 @@
 	farmers = {
 		culture = arab_levantine
 		religion =  sunni 
-		size = 61529
-	 } 
-	farmers = {
-		culture = arab_levantine
-		religion =  sunni 
-		size = 1760
+		size = 64639
 	 } 
 
 	#For Pan-Arab and National Arab
 	farmers = {
 		culture = arab
-		religion =  sunni 
-		size = 1000
-	 } 
-	farmers = {
-		culture = arab_levantine
 		religion =  sunni 
 		size = 1000
 	 } 
@@ -24427,22 +24302,12 @@
 	farmers = {
 		culture = arab_levantine
 		religion =  sunni 
-		size = 41879
-	 } 
-	farmers = {
-		culture = arab_levantine
-		religion =  sunni 
-		size = 1760
+		size = 44639
 	 } 
 
 	#For Pan-Arab and National Arab
 	farmers = {
 		culture = arab
-		religion =  sunni 
-		size = 1000
-	 } 
-	farmers = {
-		culture = arab_levantine
 		religion =  sunni 
 		size = 1000
 	 } 
@@ -24497,22 +24362,12 @@
 	farmers = {
 		culture = arab_levantine
 		religion =  sunni 
-		size = 51879
-	 } 
-	farmers = {
-		culture = arab_levantine
-		religion =  sunni 
-		size = 1760
+		size = 54639
 	 } 
 
 	#For Pan-Arab and National Arab
 	farmers = {
 		culture = arab
-		religion =  sunni 
-		size = 1000
-	 } 
-	farmers = {
-		culture = arab_levantine
 		religion =  sunni 
 		size = 1000
 	 } 
@@ -24567,22 +24422,12 @@
 	farmers = {
 		culture = arab_levantine
 		religion =  sunni 
-		size = 53879
-	 } 
-	farmers = {
-		culture = arab_levantine
-		religion =  sunni 
-		size = 1760
+		size = 56639
 	 } 
 
 	#For Pan-Arab and National Arab
 	farmers = {
 		culture = arab
-		religion =  sunni 
-		size = 1000
-	 } 
-	farmers = {
-		culture = arab_levantine
 		religion =  sunni 
 		size = 1000
 	 } 
