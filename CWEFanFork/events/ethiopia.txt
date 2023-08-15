@@ -359,7 +359,7 @@ country_event = {
 		owns = 1858
 		owns = 1863
 		
-		OR = { ruling_party_ideology = traditionalist ruling_party_ideology = conservative }
+		OR = { ruling_party_ideology = traditionalist ruling_party_ideology = conservative ruling_party_ideology = big_tent }
 	}
 
 	mean_time_to_happen = {
@@ -413,7 +413,7 @@ country_event = {
 		has_country_flag = hide_1973_famine
 		
 		#Emperor's ideology is in charge
-		OR = { ruling_party_ideology = traditionalist ruling_party_ideology = conservative }
+		OR = { ruling_party_ideology = traditionalist ruling_party_ideology = conservative ruling_party_ideology = big_tent }
 	}
 
 	mean_time_to_happen = {
@@ -430,7 +430,15 @@ country_event = {
 		set_country_flag = derg
 		
 		ai_chance = {
-			factor = 0.9
+			factor = 0.8
+			modifier = {
+				factor = 0.3
+				OR = { pop_majority_ideology = conservative pop_majority_ideology = big_tent pop_majority_ideology = traditionalist }
+			}
+			modifier = {
+				factor = 3
+				NOT = { OR = { pop_majority_ideology = conservative pop_majority_ideology = big_tent pop_majority_ideology = traditionalist } }
+			}
 		}
 	}
 	
@@ -459,7 +467,15 @@ country_event = {
 		} 
 		
 		ai_chance = {
-			factor = 0.1
+			factor = 0.2
+			modifier = {
+				factor = 3
+				OR = { pop_majority_ideology = conservative pop_majority_ideology = big_tent pop_majority_ideology = traditionalist }
+			}
+			modifier = {
+				factor = 0.3
+				NOT = { OR = { pop_majority_ideology = conservative pop_majority_ideology = big_tent pop_majority_ideology = traditionalist } }
+			}
 		}
 	}
 
@@ -561,7 +577,7 @@ country_event = {
 		
 		government = democracy1
 		country_event = 800054
-		ruling_party_ideology = conservative
+		ruling_party_ideology = social_democrat
 		
 		#Parliamentary system
 		clr_country_flag = presidential_system_republic
@@ -750,7 +766,7 @@ country_event = {
 		is_vassal = no
 		war = no
 		
-		OR = { ruling_party_ideology = socialist ruling_party_ideology = conservative } #one of the pro-western factions of the EPRDF
+		OR = { ruling_party_ideology = socialist ruling_party_ideology = social_democrat ruling_party_ideology = conservative } #one of the pro-western factions of the EPRDF
 
 	}
 
