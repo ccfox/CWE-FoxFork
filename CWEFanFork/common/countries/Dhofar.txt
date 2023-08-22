@@ -1,7 +1,7 @@
 graphical_culture = MiddleEasternGC
 color = { 255 99 71 }
 party = {
-		name = "Dhofar Liberation Front"
+		name = "Dhofar Liberation Front (N)"
 		citizenship_policy = limited_citizenship
 		economic_policy = state_capitalism
 		ideology = nationalist
@@ -46,7 +46,18 @@ party = {
 		end_date = 2092.1.1
 }
 party = {
-		name = "party_socialist_0_OMA"
+		name = "social_democrat_party"
+		citizenship_policy = full_citizenship
+		economic_policy = state_capitalism
+		ideology = social_democrat
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = pacifism
+		start_date = 1836.1.1
+		end_date = 2092.1.1
+}
+party = {
+		name = "Dhofar Liberation Front"
 		citizenship_policy = limited_citizenship
 		economic_policy = state_capitalism
 		ideology = socialist
@@ -90,7 +101,7 @@ party = {
 		end_date = 2092.1.1
 }
 party = {
-		name = "Dhofar Liberation Front"
+		name = "Dhofar Liberation Front (ML)"
 		citizenship_policy = full_citizenship
 		economic_policy = planned_economy
 		ideology = communist
@@ -101,24 +112,13 @@ party = {
 		end_date = 2092.1.1
 }
 party = {
-		name = "Dhofar Liberation Front"
+		name = "Dhofar Liberation Front (LN)"
 		citizenship_policy = full_citizenship
 		economic_policy = state_capitalism
 		ideology = communist_social
 		religious_policy = pro_atheism
 		trade_policy = protectionism
 		war_policy = pro_military
-		start_date = 1836.1.1
-		end_date = 2092.1.1
-}
-party = {
-		name = "social_democrat_party"
-		citizenship_policy = full_citizenship
-		economic_policy = state_capitalism
-		ideology = social_democrat
-		religious_policy = secularized
-		trade_policy = protectionism
-		war_policy = pacifism
 		start_date = 1836.1.1
 		end_date = 2092.1.1
 }
