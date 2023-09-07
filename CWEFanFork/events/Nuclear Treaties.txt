@@ -127,7 +127,7 @@ country_event = {
 		any_pop = { consciousness = 1 }
 		
 		random_owned = {
-			limit = { owner = { publishing_rights = censored_publishing } }
+			limit = { owner = { publishing_rights = state_publishing } }
 			owner = {
 				any_pop = {
 					dominant_issue = {
@@ -139,7 +139,7 @@ country_event = {
 		}
 		
 		random_owned = {
-			limit = { owner = { publishing_rights = firewall_publishing } }
+			limit = { owner = { publishing_rights = censored_publishing } }
 			owner = {
 				any_pop = {
 					dominant_issue = {
@@ -154,8 +154,8 @@ country_event = {
 			limit = { 
 				owner = { 
 					NOT = { 
+						publishing_rights = state_publishing 
 						publishing_rights = censored_publishing 
-						publishing_rights = firewall_publishing 
 					} 
 				} 
 			}

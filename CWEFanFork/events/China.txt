@@ -1122,7 +1122,7 @@ country_event = {
 		name = "Select Zhao Ziyang"
 		political_reform = open_opinion
 		political_reform = limited_meetings
-		political_reform = firewall_publishing
+		political_reform = censored_publishing
 		political_reform = minorities_equal_rights
 		ai_chance = { factor = 0.2 }
 	}
