@@ -13,6 +13,39 @@ party = {
 		end_date = 2100.1.1
 }
 party = {
+		name = "Imperial Parliament"
+		citizenship_policy = full_citizenship
+		economic_policy = interventionism
+		ideology = big_tent
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = pro_military
+		start_date = 1836.1.1
+		end_date = 1974.1.1
+}
+party = {
+		name = "Ethiopian Democratic Union"
+		citizenship_policy = full_citizenship
+		economic_policy = interventionism
+		ideology = big_tent
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = pro_military
+		start_date = 1974.1.1
+		end_date = 1978.6.20
+}
+party = {
+		name = "Ethiopian Democratic Party"
+		citizenship_policy = full_citizenship
+		economic_policy = interventionism
+		ideology = big_tent
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = pro_military
+		start_date = 1978.1.1
+		end_date = 2004.6.20
+}
+party = {
 		name = "National Democratic Front"
 		citizenship_policy = full_citizenship
 		economic_policy = interventionism
@@ -68,7 +101,7 @@ party = {
 		end_date = 1991.1.1
 }
 party = {
-		name = "EPRDF"
+		name = "EPRDF (Right-Wing)"
 		citizenship_policy = full_citizenship
 		economic_policy = laissez_faire
 		ideology = conservative
@@ -134,7 +167,7 @@ party = {
 		end_date = 2092.1.1
 }
 party = {
-		name = "EPRDF (Liberals)"
+		name = "EPRDF"
 		citizenship_policy = full_citizenship
 		economic_policy = state_capitalism
 		ideology = social_democrat
@@ -167,7 +200,7 @@ party = {
 		end_date = 2092.1.1
 }
 party = {
-		name = "EPRDF"
+		name = "EPRDF (Left-Wing)"
 		citizenship_policy = limited_citizenship
 		economic_policy = state_capitalism
 		ideology = socialist
@@ -321,7 +354,7 @@ party = {
 		end_date = 2092.1.1
 }
 party = {
-		name = "EPRDF"
+		name = "EPRDF (ML)"
 		citizenship_policy = full_citizenship
 		economic_policy = planned_economy
 		ideology = communist
@@ -343,7 +376,7 @@ party = {
 		end_date = 1991.1.1
 }
 party = {
-		name = "EPRDF"
+		name = "EPRDF (Left-Nationalist)"
 		citizenship_policy = full_citizenship
 		economic_policy = planned_economy1
 		ideology = communist_social

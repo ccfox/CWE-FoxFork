@@ -327,7 +327,17 @@ country_event = {
 		}
 		add_country_modifier = { name = revolution_chaos duration = 1825 }
 		
-		ai_chance = { factor = 0.9 }
+		ai_chance = {
+			factor = 0.8
+			modifier = {
+				factor = 3
+				OR = { pop_majority_ideology = communist pop_majority_ideology = communist_social pop_majority_ideology = socialist }
+			}
+			modifier = {
+				factor = 0.3
+				NOT = { OR = { pop_majority_ideology = communist pop_majority_ideology = communist_social pop_majority_ideology = socialist } }
+			}
+		}
 	}
 
 	option = {
@@ -345,9 +355,9 @@ country_event = {
 		}
 		
 		#DDR becomes a democracy
-		government = democracy
+		government = socialist_democracy
 		country_event = 800054
-		ruling_party_ideology = liberal
+		ruling_party_ideology = socialist
 		
 		#Liberalism grows
 		any_pop = { 
@@ -376,7 +386,17 @@ country_event = {
 			}
 		}
 
-		ai_chance = { factor = 0.1 }
+		ai_chance = {
+			factor = 0.2
+			modifier = {
+				factor = 0.3
+				OR = { pop_majority_ideology = communist pop_majority_ideology = communist_social pop_majority_ideology = socialist }
+			}
+			modifier = {
+				factor = 3
+				NOT = { OR = { pop_majority_ideology = communist pop_majority_ideology = communist_social pop_majority_ideology = socialist } }
+			}
+		}
 	}
   
 }
