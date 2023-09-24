@@ -8,7 +8,9 @@ political_decisions = {
 			NOT = { tag = ISI }
 			NOT = { tag = UAR }
 			NOT = { tag = XUM }
-
+			
+			NOT = { tag = LEB } #Stopgap bugfix
+			
 			capital_scope = { OR = { continent = mena is_core = SUD } }
 
 			NOT = { has_country_flag = arab_national_identity }
@@ -33,6 +35,7 @@ political_decisions = {
 							pop_majority_culture = arab_marsh
 							pop_majority_culture = arab_khamseh
 							pop_majority_culture = arab_hassaniya
+							pop_majority_culture = lebanese
 						}
 					}
 				}	
@@ -63,7 +66,7 @@ political_decisions = {
 			}
 
 			random_owned = { 
-				limit = { owner = { pop_majority_culture = arab_levantine } } 
+				limit = { owner = { pop_majority_culture = arab_levantine NOT = { capital_scope = { is_core = LEB } } } } 
 				owner = { primary_culture = arab_levantine }
 			}
 
@@ -123,7 +126,9 @@ political_decisions = {
 			NOT = { tag = UAR }
 
 			NOT = { tag = XUM }
-
+			
+			NOT = { tag = LEB } #Stopgap bugfix
+			
 			NOT = { has_country_flag = pan_arab_identity }
 
 			capital_scope = { OR = { continent = mena is_core = SUD } }
@@ -141,6 +146,7 @@ political_decisions = {
 				primary_culture = arab_marsh
 				primary_culture = arab_khamseh
 				primary_culture = arab_hassaniya
+				primary_culture = lebanese
 			}
 
 			NOT = { primary_culture = arab }
@@ -211,6 +217,11 @@ political_decisions = {
 			random_owned = { 
 				limit = { owner = { pop_majority_culture = sudanese } } 
 				owner = { add_accepted_culture = sudanese }
+			}
+
+			random_owned = { 
+				limit = { owner = { pop_majority_culture = lebanese } } 
+				owner = { add_accepted_culture = lebanese }
 			}
 
 		}

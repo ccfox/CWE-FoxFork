@@ -9,6 +9,7 @@ culture = arab_shuwa
 culture = arab_hassaniya
 culture = arab_khamseh
 culture = arab_marsh
+culture = lebanese
 religion = secularism
 government = democracy
 plurality = 36.0

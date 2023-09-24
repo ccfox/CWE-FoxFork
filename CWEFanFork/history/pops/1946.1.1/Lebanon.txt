@@ -1,17 +1,17 @@
 #Baalbeck - Baalbeck (194000/48500 POPS)
 912 = {
 	officers = {
-		culture = arab_levantine
+		culture = lebanese
 		religion =  orthodox 
 		size = 6
 	 } 
 	soldiers = {
-		culture = arab_levantine
+		culture = lebanese
 		religion =  orthodox 
 		size = 27
 	 } 
 	capitalists = {
-		culture = arab_levantine
+		culture = lebanese
 		religion =  orthodox 
 		size = 1876
 	 } 
@@ -21,7 +21,7 @@
 		size = 63
 	 } 
 	bureaucrats = {
-		culture = arab_levantine
+		culture = lebanese
 		religion =  orthodox 
 		size = 46
 	 } 
@@ -31,7 +31,7 @@
 		size = 1
 	 } 
 	aristocrats = {
-		culture = arab_levantine
+		culture = lebanese
 		religion =  orthodox 
 		size = 234
 	 } 
@@ -41,7 +41,7 @@
 		size = 7
 	 } 
 	clergymen = {
-		culture = arab_levantine
+		culture = lebanese
 		religion =  orthodox 
 		size = 469
 	 } 
@@ -51,7 +51,7 @@
 		size = 15
 	 } 
 	clerks = {
-		culture = arab_levantine
+		culture = lebanese
 		religion =  orthodox 
 		size = 1543
 	 } 
@@ -61,7 +61,7 @@
 		size = 51
 	 } 
 	artisans = {
-		culture = arab_levantine
+		culture = lebanese
 		religion =  orthodox 
 		size = 488
 	 } 
@@ -107,12 +107,12 @@
 #Beirut - Beirut (781000/195250 POPS)
 913 = {
 	officers = {
-		culture = arab_levantine
+		culture = lebanese
 		religion =  orthodox 
 		size = 27
 	 } 
 	soldiers = {
-		culture = arab_levantine
+		culture = lebanese
 		religion =  orthodox 
 		size = 110
 	 } 
@@ -122,7 +122,7 @@
 		size = 3
 	 } 
 	capitalists = {
-		culture = arab_levantine
+		culture = lebanese
 		religion =  orthodox 
 		size = 7556
 	 } 
@@ -132,7 +132,7 @@
 		size = 253
 	 } 
 	bureaucrats = {
-		culture = arab_levantine
+		culture = lebanese
 		religion =  orthodox 
 		size = 188
 	 } 
@@ -142,7 +142,7 @@
 		size = 6
 	 } 
 	aristocrats = {
-		culture = arab_levantine
+		culture = lebanese
 		religion =  orthodox 
 		size = 944
 	 } 
@@ -152,7 +152,7 @@
 		size = 31
 	 } 
 	clergymen = {
-		culture = arab_levantine
+		culture = lebanese
 		religion =  orthodox 
 		size = 200
 	 } 
@@ -167,7 +167,7 @@
 		size = 63
 	 } 
 	clerks = {
-		culture = arab_levantine
+		culture = lebanese
 		religion =  orthodox 
 		size = 1000
 	 } 
@@ -182,7 +182,7 @@
 		size = 208
 	 } 
 	artisans = {
-		culture = arab_levantine
+		culture = lebanese
 		religion =  orthodox 
 		size = 1000
 	 } 
@@ -197,7 +197,7 @@
 		size = 198
 	 } 
 	craftsmen = {
-		culture = arab_levantine
+		culture = lebanese
 		religion =  orthodox 
 		size = 2106
 	 } 
@@ -217,7 +217,7 @@
 		size = 636
 	 } 
 	farmers = {
-		culture = arab_levantine
+		culture = lebanese
 		religion =  orthodox 
 		size = 4110
 	 } 
@@ -263,17 +263,17 @@
 #Askaleh - Askaleh (194000/48500 POPS)
 914 = {
 	officers = {
-		culture = arab_levantine
+		culture = lebanese
 		religion =  orthodox 
 		size = 6
 	 } 
 	soldiers = {
-		culture = arab_levantine
+		culture = lebanese
 		religion =  orthodox 
 		size = 27
 	 } 
 	capitalists = {
-		culture = arab_levantine
+		culture = lebanese
 		religion =  orthodox 
 		size = 1876
 	 } 
@@ -283,7 +283,7 @@
 		size = 63
 	 } 
 	bureaucrats = {
-		culture = arab_levantine
+		culture = lebanese
 		religion =  orthodox 
 		size = 46
 	 } 
@@ -293,7 +293,7 @@
 		size = 1
 	 } 
 	aristocrats = {
-		culture = arab_levantine
+		culture = lebanese
 		religion =  orthodox 
 		size = 234
 	 } 
@@ -303,7 +303,7 @@
 		size = 7
 	 } 
 	clergymen = {
-		culture = arab_levantine
+		culture = lebanese
 		religion =  orthodox 
 		size = 469
 	 } 
@@ -313,7 +313,7 @@
 		size = 15
 	 } 
 	clerks = {
-		culture = arab_levantine
+		culture = lebanese
 		religion =  orthodox 
 		size = 1543
 	 } 
@@ -323,7 +323,7 @@
 		size = 51
 	 } 
 	artisans = {
-		culture = arab_levantine
+		culture = lebanese
 		religion =  orthodox 
 		size = 1466
 	 } 
@@ -333,7 +333,7 @@
 		size = 49
 	 } 
 	craftsmen = {
-		culture = arab_levantine
+		culture = lebanese
 		religion =  orthodox 
 		size = 2708
 	 } 
@@ -353,7 +353,7 @@
 		size = 158
 	 } 
 	farmers = {
-		culture = arab_levantine
+		culture = lebanese
 		religion =  orthodox 
 		size = 7397
 	 } 
@@ -394,17 +394,17 @@
 #Sidon - Sidon (194000/48500 POPS)
 915 = {
 	officers = {
-		culture = arab_levantine
+		culture = lebanese
 		religion =  orthodox 
 		size = 6
 	 } 
 	soldiers = {
-		culture = arab_levantine
+		culture = lebanese
 		religion =  orthodox 
 		size = 27
 	 } 
 	capitalists = {
-		culture = arab_levantine
+		culture = lebanese
 		religion =  orthodox 
 		size = 1876
 	 } 
@@ -414,7 +414,7 @@
 		size = 63
 	 } 
 	bureaucrats = {
-		culture = arab_levantine
+		culture = lebanese
 		religion =  orthodox 
 		size = 46
 	 } 
@@ -424,7 +424,7 @@
 		size = 1
 	 } 
 	aristocrats = {
-		culture = arab_levantine
+		culture = lebanese
 		religion =  orthodox 
 		size = 234
 	 } 
@@ -434,7 +434,7 @@
 		size = 7
 	 } 
 	clergymen = {
-		culture = arab_levantine
+		culture = lebanese
 		religion =  orthodox 
 		size = 154
 	 } 

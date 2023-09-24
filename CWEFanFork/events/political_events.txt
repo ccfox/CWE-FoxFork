@@ -3720,7 +3720,7 @@ country_event = {
 	
 	trigger = {
 		civilized = yes
-		religious_policy = moralism
+		OR = { religious_policy = moralism religious_policy = pluralism }
 		OR = {
 			publishing_rights = unregulated_publishing
 			publishing_rights = responsible_publishing
@@ -3855,7 +3855,7 @@ country_event = {
 
 	trigger = {
 		NOT = { has_country_flag = desecularized }
-		religious_policy = moralism
+		OR = { religious_policy = moralism religious_policy = pluralism }
 	}
 
 	mean_time_to_happen = {
@@ -4073,7 +4073,7 @@ country_event = {
 	picture = "Secularism"
 
 	trigger = {
-		NOT = { religious_policy = moralism }
+		NOT = { OR = { religious_policy = moralism religious_policy = pluralism } }
 		has_country_flag = desecularized
 		NOT = { government = theocracy }
 	}

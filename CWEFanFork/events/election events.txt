@@ -598,6 +598,56 @@ country_event = {
 	}
 	
 	option = {
+		name = "A Tolerant society guided by faith for $COUNTRY$"
+		
+		#State population becomes more supportive of pluralism
+		any_pop = {
+			limit = { location = { is_colonial = no } }
+			
+			dominant_issue = {
+				value = pluralism
+				factor = 0.05
+			}
+		}
+		
+		#Party discontent if ruling party issue is different
+		random_owned = {
+			limit = { owner = { NOT = { religious_policy = pluralism } } }
+			
+			owner = {
+				random = {
+					chance = 25
+					country_event = 7000099
+				}
+			}
+		}
+		
+		#Pops that support other issues get angry!
+		any_pop = {
+			limit = { location = { is_colonial = no } }
+			
+			scaled_consciousness = {
+				factor = 1
+				issue = pro_atheism
+			}
+			scaled_consciousness = {
+				factor = 1
+				issue = moralism
+			}
+			
+			scaled_militancy = {
+				factor = 1
+				issue = pro_atheism
+			}
+			scaled_militancy = {
+				factor = 1
+				issue = moralism
+			}
+		}
+		
+	}
+	
+	option = {
 		name = "A moralist society is best for $COUNTRY$"
 		
 		#State population becomes more supportive of moralism
