@@ -9,14 +9,20 @@ political_decisions = {
 			
 			NOT = { exists = KUR }
 			
-			owns = 893
+			OR = {
+				AND = {
+					owns = 893
+					OR = { is_secondary_power = yes is_greater_power = yes }
+				}
+				AND = { has_unclaimed_cores = no NOT = { AND = { is_vassal = yes tag = KRQ } } }
+			}
 			
-			is_vassal = no
+			OR = { is_vassal = no tag = KRI }
 		}
 
 		allow = {
 			war = no
-			is_vassal = no
+			OR = { is_vassal = no tag = KRI }
 		}
 
 		effect = {
