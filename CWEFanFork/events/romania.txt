@@ -3356,7 +3356,7 @@ country_event = {
 		random_country = {
 			limit = { 
 				OR = { continent = europe AND = { tag = USA government = democracy } }
-				NOT = ROM
+				NOT = { tag = ROM }
 			}
 			country_event = 6121003
 		}
@@ -3579,7 +3579,7 @@ country_event = {
 		random_country = {
 			limit = { 
 				OR = { continent = europe AND = { tag = USA government = democracy } }
-				NOT = ROM
+				NOT = { tag = ROM }
 			}
 			country_event = 6121003
 		}
@@ -3773,7 +3773,7 @@ country_event = {
 		random_country = {
 			limit = { 
 				OR = { continent = europe AND = { tag = USA government = democracy } }
-				NOT = ROM
+				NOT = { tag = ROM }
 			}
 			country_event = 6121003
 		}
@@ -3861,7 +3861,7 @@ country_event = {
 		random_country = {
 			limit = { 
 				OR = { continent = europe AND = { tag = USA government = democracy } }
-				NOT = ROM
+				NOT = { tag = ROM }
 			}
 			country_event = 6121003
 		}

@@ -93,6 +93,11 @@ country_event = {
 		name = "We have other plans for Libya!"
 		badboy = 5
 		
+		random_owned = {
+			limit = { is_core = LBY }
+			add_province_modifier = { name = occupied_province duration = -1 }
+		}
+		
 		#Arab pops are not happy
 		any_pop = {
 			limit = {
@@ -100,7 +105,7 @@ country_event = {
 				location = { is_core = LBY }
 			}
 			
-			add_province_modifier = { name = occupied_province duration = -1 }
+
 			
 			militancy = 10
 			consciousness = 10
@@ -191,14 +196,17 @@ country_event = {
 		name = "Libya shall be a British protectorate!"
 		badboy = 5
 		
+		random_owned = {
+			limit = { is_core = LBY }
+			add_province_modifier = { name = occupied_province duration = -1 }
+		}
+		
 		#Arab pops are not happy
 		any_pop = {
 			limit = {
 				OR = { is_culture_group = arabic is_culture_group = regional_arabic_1 }
 				location = { is_core = LBY }
 			}
-			
-			add_province_modifier = { name = occupied_province duration = -1 }
 			
 			militancy = 10
 			consciousness = 10
@@ -315,6 +323,11 @@ country_event = {
 		
 		badboy = 10
 		
+		random_owned = {
+			limit = { is_core = LBY }
+			add_province_modifier = { name = occupied_province duration = -1 }
+		}
+		
 		#Arab pops are not happy
 		any_pop = {
 			limit = {
@@ -322,7 +335,6 @@ country_event = {
 				location = { is_core = LBY }
 			}
 			
-			add_province_modifier = { name = occupied_province duration = -1 }
 			
 			militancy = 10
 			consciousness = 10

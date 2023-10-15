@@ -1593,7 +1593,8 @@ country_event = {
 		}
 		any_pop = {
 		    limit = { culture = hutu OR = { type = officers type = clergymen type = bureaucrats type = capitalists type = aristocrats } }
-		    type = farmers
+		    militancy = 2
+			consciousness = 2
 		}
 		
 		random_country = {
@@ -1636,7 +1637,8 @@ country_event = {
 		}
 		any_pop = {
 		    limit = { culture = tutsi type = officers }
-		    type = farmers
+		    militancy = 2
+			consciousness = 2
 		}
 		
 		add_country_modifier = { name = purge_ongoing duration = 365 }
@@ -1801,7 +1803,7 @@ country_event = {
 		
 		ruling_party_ideology = populist
 		
-		primary_culture_culture = hutu
+		primary_culture = hutu
 		remove_accepted_culture = tutsi
 		remove_accepted_culture = african_minor
 		

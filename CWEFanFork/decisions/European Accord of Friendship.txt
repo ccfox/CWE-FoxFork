@@ -243,8 +243,16 @@ political_decisions = {
 					consciousness = 2.5
 					
 					#Give money to pops so they can buy weapons to revolt
-					farmers = { money = 50 }
-					labourers = { money = 50 }
+					#farmers = { money = 50 }
+					#labourers = { money = 50 }
+				}
+				any_pop = {
+					limit = {
+						OR = { pop_type = farmers pop_type = labourers }
+						location = { is_colonial = yes }
+						is_accepted_culture = no 
+					}
+					money = 50
 				}
 			}
 			
@@ -262,8 +270,14 @@ political_decisions = {
 					consciousness = 1
 					
 					#Give money to pops so they can buy weapons to revolt
-					farmers = { money = 50 }
-					labourers = { money = 50 }
+					#farmers = { money = 50 }
+					#labourers = { money = 50 }
+				}
+				any_pop = {
+					limit = {
+						OR = { pop_type = farmers pop_type = labourers }
+					}
+					money = 50
 				}
 			}
 			

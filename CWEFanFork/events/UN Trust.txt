@@ -384,8 +384,6 @@ country_event = {
 		name = "Remain as a protectorate"
 		prestige = -50
 	
-		FROM = {
-
 			#Constitutional Monarchy
 			random_owned = { limit = { owner = { overlord = { OR = { government = hms_government government = hms_government1 government = absolute_monarchy } } } } owner = { government = hms_government1 } }
 
@@ -410,7 +408,6 @@ country_event = {
 			#Sectarian Dictatorship
 			random_owned = { limit = { owner = { overlord = { government = nationalist_dictatorship } } } owner = { government = nationalist_dictatorship country_event = 800050 } }
 
-		}
 
 		clr_country_flag = great_war_mandate_un
 		

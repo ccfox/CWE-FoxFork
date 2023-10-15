@@ -234,7 +234,7 @@ country_event = {
 				NOT = { OR = { pop_majority_ideology = big_tent } }
 			}
 			modifier = {
-				factor 2
+				factor = 2
 				ruling_party_ideology = big_tent
 			}
 		}
@@ -357,7 +357,7 @@ country_event = {
 				NOT = { OR = { pop_majority_ideology = social_democrat pop_majority_ideology = progressive } }
 			}
 			modifier = {
-				factor 0.3
+				factor = 0.3
 				ruling_party_ideology = big_tent
 			}
 		}
@@ -424,7 +424,7 @@ country_event = {
 				NOT = { OR = { pop_majority_ideology = conservative } }
 			}
 			modifier = {
-				factor 0.6
+				factor = 0.6
 				ruling_party_ideology = big_tent
 			}
 			modifier = {
@@ -513,7 +513,7 @@ country_event = {
 				NOT = { OR = { pop_majority_ideology = big_tent } }
 			}
 			modifier = {
-				factor 2
+				factor = 2
 				ruling_party_ideology = big_tent
 			}
 		}
@@ -641,7 +641,7 @@ country_event = {
 				NOT = { OR = { pop_majority_ideology = conservative } }
 			}
 			modifier = {
-				factor 0.6
+				factor = 0.6
 				ruling_party_ideology = big_tent
 			}
 			modifier = {
@@ -730,7 +730,7 @@ country_event = {
 				NOT = { OR = { pop_majority_ideology = big_tent } }
 			}
 			modifier = {
-				factor 2
+				factor = 2
 				ruling_party_ideology = big_tent
 			}
 		}
@@ -858,7 +858,7 @@ country_event = {
 				NOT = { OR = { pop_majority_ideology = conservative } }
 			}
 			modifier = {
-				factor 0.6
+				factor = 0.6
 				ruling_party_ideology = big_tent
 			}
 			modifier = {
@@ -947,7 +947,7 @@ country_event = {
 				NOT = { OR = { pop_majority_ideology = big_tent } }
 			}
 			modifier = {
-				factor 2
+				factor = 2
 				ruling_party_ideology = big_tent
 			}
 		}
@@ -1076,7 +1076,7 @@ country_event = {
 				NOT = { OR = { pop_majority_ideology = conservative } }
 			}
 			modifier = {
-				factor 0.6
+				factor = 0.6
 				ruling_party_ideology = big_tent
 			}
 			modifier = {
@@ -1137,7 +1137,7 @@ country_event = {
 		}
 		
 		random_owned = {
-			limit = { owner = { AND = { tag = MEX pop_majority_ideology = socialist } } 
+			limit = { owner = { AND = { tag = MEX pop_majority_ideology = socialist } } }
 			owner = {
 				ruling_party_ideology = socialist
 				any_pop = { 
@@ -1289,7 +1289,7 @@ country_event = {
 				NOT = { OR = { pop_majority_ideology = big_tent } }
 			}
 			modifier = {
-				factor 2
+				factor = 2
 				ruling_party_ideology = big_tent
 			}
 		}
@@ -1417,7 +1417,7 @@ country_event = {
 				NOT = { OR = { pop_majority_ideology = conservative } }
 			}
 			modifier = {
-				factor 0.6
+				factor = 0.6
 				ruling_party_ideology = big_tent
 			}
 			modifier = {
@@ -1572,7 +1572,7 @@ country_event = {
 				NOT = { OR = { pop_majority_ideology = big_tent } }
 			}
 			modifier = {
-				factor 2
+				factor = 2
 				ruling_party_ideology = big_tent
 			}
 		}
@@ -1638,7 +1638,7 @@ country_event = {
 				NOT = { OR = { pop_majority_ideology = conservative } }
 			}
 			modifier = {
-				factor 0.6
+				factor = 0.6
 				OR = { ruling_party_ideology = big_tent ruling_party_ideology = socialist }
 			}
 			modifier = {
@@ -1729,7 +1729,7 @@ country_event = {
 				NOT = { OR = { pop_majority_ideology = big_tent pop_majority_ideology = social_democrat } }
 			}
 			modifier = {
-				factor 2
+				factor = 2
 				ruling_party_ideology = big_tent
 			}
 		}
@@ -1857,7 +1857,7 @@ country_event = {
 				NOT = { OR = { pop_majority_ideology = conservative } }
 			}
 			modifier = {
-				factor 0.6
+				factor = 0.6
 				ruling_party_ideology = big_tent
 			}
 			modifier = {
@@ -1959,7 +1959,7 @@ country_event = {
 				NOT = { OR = { pop_majority_ideology = conservative } }
 			}
 			modifier = {
-				factor 0.6
+				factor = 0.6
 				ruling_party_ideology = big_tent
 			}
 			modifier = {
@@ -2083,7 +2083,7 @@ country_event = {
 				NOT = { OR = { pop_majority_ideology = big_tent pop_majority_ideology = social_democrat } }
 			}
 			modifier = {
-				factor 2
+				factor = 2
 				ruling_party_ideology = big_tent
 			}
 		}
@@ -2165,7 +2165,7 @@ country_event = {
 				NOT = { OR = { pop_majority_ideology = big_tent pop_majority_ideology = social_democrat } }
 			}
 			modifier = {
-				factor 2
+				factor = 2
 				ruling_party_ideology = big_tent
 			}
 		}
@@ -2231,7 +2231,7 @@ country_event = {
 				NOT = { OR = { pop_majority_ideology = conservative } }
 			}
 			modifier = {
-				factor 0.6
+				factor = 0.6
 				ruling_party_ideology = big_tent
 			}
 			modifier = {
@@ -2444,7 +2444,7 @@ country_event = {
 				NOT = { OR = { pop_majority_ideology = big_tent pop_majority_ideology = social_democrat } }
 			}
 			modifier = {
-				factor 2
+				factor = 2
 				ruling_party_ideology = big_tent
 			}
 		}
@@ -2517,7 +2517,7 @@ country_event = {
 				NOT = { OR = { pop_majority_ideology = conservative } }
 			}
 			modifier = {
-				factor 0.6
+				factor = 0.6
 				ruling_party_ideology = big_tent
 			}
 			modifier = {

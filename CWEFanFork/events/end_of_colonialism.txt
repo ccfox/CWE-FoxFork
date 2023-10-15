@@ -483,13 +483,13 @@ country_event = {
 		name = "EVT_15502_A"		
 		any_core = { 
 			limit = { has_province_modifier = grant_independence owner = { NOT = { tag = THIS } }  }
-			FROM = { secede_province = THIS }
+			#FROM = { secede_province = THIS } #This used to be triggered events, they are not anymore - can someone help me replace this please?
 			
 			remove_province_modifier = grant_independence
 			remove_province_modifier = promised_autonomy
 			remove_province_modifier = denied_independence
 		} 
-		FROM = { diplomatic_influence = { who = THIS value = 200 } }
+		#FROM = { diplomatic_influence = { who = THIS value = 200 } }
 		ai_chance = {
 			factor = 1
 		}

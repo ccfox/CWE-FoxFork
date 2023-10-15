@@ -494,8 +494,8 @@ country_event = {
 					OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 government = socialist_democracy }
 					OR = { has_country_flag = sov_afg has_country_Flag = soviet_intervention_in_afghanistan }
 				}
-				RUS = { country_event = 8176110 }
 			}
+			RUS = { country_event = 8176110 }
 		}
 		
 		war_exhaustion = 10

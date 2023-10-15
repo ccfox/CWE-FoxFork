@@ -685,7 +685,7 @@ country_event = {
 
 	option = {
 		name = "Refuse to submit to British pressure"
-		money = - 1000
+		money = -1000
 		relation = { who = ENG value = -50 }
 		relation = { who = PER value = 50 }
 		ai_chance = {
@@ -700,7 +700,7 @@ country_event = {
 	option = {
 		name = "Submit to British pressure"
 		prestige = -50
-		money = - -1000
+		money = -1000
 		any_pop = { consciousness = 5 }
 		relation = { who = ENG value = 50 }
 		relation = { who = PER value = -50 }

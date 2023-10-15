@@ -465,7 +465,7 @@ country_event = {
 				}
 			}
 			UGR = { inherit = GRE }
-			any_core = {
+			any_core = { #Reminder to replace, since this doesn't work?
 				limit = { is_core = GRE }
 				remove_core = GRE
 				add_core = UGR
@@ -483,7 +483,7 @@ country_event = {
 				}
 			}
 			GRE = { inherit = UGR }
-			any_core = {
+			any_core = { #Reminder to replace, since this doesn't work?
 				limit = { is_core = UGR }
 				remove_core = UGR
 				add_core = GRE
@@ -502,7 +502,7 @@ country_event = {
 				}
 			}
 			GRE = { inherit = UGR }
-			any_core = {
+			any_core = { #Reminder to replace, since this doesn't work?
 				limit = { is_core = UGR }
 				remove_core = UGR
 				add_core = GRE

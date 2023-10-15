@@ -29,7 +29,7 @@ country_event = {
 		release_vassal = IDO
 		IDO = { 
 			government = colonial_government 
-			event = 800054 
+			country_event = 800054 
 			ruling_party_ideology = conservative 
 			
 			#IDO returns any WPA cores to NET

@@ -28,7 +28,7 @@ country_event = {
 
 		NOT = { has_country_modifier = power_vacuum }
 
-		NOT = { has_country_modifier = civil_war }
+		#NOT = { has_country_modifier = civil_war }
 
 		NOT = { has_country_modifier = government_consensus }
 
@@ -101,7 +101,7 @@ country_event = {
 
 		NOT = { has_country_modifier = factionalism }
 
-		NOT = { has_country_modifier = civil_war }
+		#NOT = { has_country_modifier = civil_war }
 
 		NOT = { has_country_modifier = government_consensus }
 

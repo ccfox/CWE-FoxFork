@@ -714,7 +714,7 @@ option = {
 name = "A catastrophe"
 remove_country_modifier = arctic_route_control 
 prestige = -100
-relation = { who = FROM value = -25 }
+#relation = { who = FROM value = -25 }
 		}
 }
 

@@ -739,7 +739,7 @@ country_event = {
 		}
 		
 		any_pop = { 
-			limit = { type = poor } 
+			limit = { strata = poor } 
 			ideology = { factor = 0.15 value = socialist } 
 		}
 		

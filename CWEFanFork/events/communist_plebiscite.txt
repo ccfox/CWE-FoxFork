@@ -245,6 +245,7 @@ country_event = {
 				militancy = 3
 				consciousness = 1
 			}
+		}
 			ai_chance = {
 				factor = 0.5
 				modifier = {
@@ -252,7 +253,6 @@ country_event = {
 					has_country_modifier = unfair_money
 				}
 			}
-		}
 	}
 }
 

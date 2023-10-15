@@ -109,9 +109,7 @@ country_event = {
 			consciousness = 8
 		}
 		any_pop = { 
-		    limit = { is_core = KEN } 
-			any_pop = { 
-			    limit = { culture = british } 
+		    limit = { is_core = KEN culture = british } 
 			    militancy = -8 
 			    consciousness = -8
 		    }

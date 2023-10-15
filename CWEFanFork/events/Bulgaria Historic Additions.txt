@@ -2785,7 +2785,7 @@ country_event = {
 		random_country = {
 			limit = { 
 				OR = { continent = europe AND = { tag = USA government = democracy } }
-				NOT = BUL
+				NOT = { tag = BUL }
 			}
 			country_event = 6121003
 		}
@@ -2996,7 +2996,7 @@ country_event = {
 		random_country = {
 			limit = { 
 				OR = { continent = europe AND = { tag = USA government = democracy } }
-				NOT = BUL
+				NOT = { tag = BUL }
 			}
 			country_event = 6121003
 		}

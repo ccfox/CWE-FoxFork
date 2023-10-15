@@ -666,7 +666,7 @@ country_event = {
 				prestige_factor = -0.01
 				remove_country_modifier = cento_member
 				
-				add_country_modifier = { name = leave_cento_member duration = 1825 }
+				#add_country_modifier = { name = leave_cento_member duration = 1825 }
 				any_country = { limit = { has_country_modifier = cento_member } relation = { who = THIS value = -50 } leave_alliance = THIS }
 			}
 		}

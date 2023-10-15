@@ -109,7 +109,7 @@ country_event = {
 		
 		
 		any_pop = {
-			limit = { AND = { strata = rich NOT = { OR = { culture = quechua culture = aimara } } }
+			limit = { AND = { strata = rich NOT = { OR = { culture = quechua culture = aimara } } } }
 			militancy = 2
 			consciousness = 2
 			ideology = { factor = 0.15 value = conservative }

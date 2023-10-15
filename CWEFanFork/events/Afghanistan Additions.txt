@@ -850,7 +850,7 @@ country_event = {
 		
 		any_pop = { 
 			limit = { strata = rich }
-			ideology = { factor = 0.10 value = traditoinalist }
+			ideology = { factor = 0.10 value = traditionalist }
 		}
 		
 		any_pop = { 
@@ -2797,7 +2797,7 @@ country_event = {
 		}
 		
 		any_pop = {
-			limit = { culture = pashtun } }
+			limit = { culture = pashtun }
 			ideology = { factor = 0.15 value = traditionalist }
 		}
 		

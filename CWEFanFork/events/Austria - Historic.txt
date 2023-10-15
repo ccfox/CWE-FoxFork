@@ -82,7 +82,7 @@ country_event = {
 		add_country_modifier = { name = revolution_chaos duration = 1365 }
 
 		any_pop = { 
-			limit = { culture = german_austrian }
+			limit = { culture = austrian_german }
 			ideology = { factor = 0.2 value = liberal }
 		}
 
@@ -217,7 +217,7 @@ country_event = {
 		add_country_modifier = { name = revolution_chaos duration = 1365 }
 
 		any_pop = { 
-			limit = { culture = german_austrian }
+			limit = { culture = austrian_german }
 			ideology = { factor = 0.2 value = liberal }
 		}
 

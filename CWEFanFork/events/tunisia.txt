@@ -119,7 +119,7 @@ country_event = {
 		TUN = { exists = yes war = no is_vassal = no }
 	}
 
-	ean_time_to_happen = { 
+	mean_time_to_happen = { 
 		months = 7
 	}
 

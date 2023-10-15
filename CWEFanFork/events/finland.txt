@@ -56,7 +56,7 @@ country_event = {
 			ideology = { factor = 0.15 value = traditionalist }
 		}
 		any_pop = {
-			limit = { AND = { culture = swedish strata = rich }
+			limit = { AND = { culture = swedish strata = rich } }
 			ideology = { factor = 0.15 value = conservative }
 		}
 		any_pop = {

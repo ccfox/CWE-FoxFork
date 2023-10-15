@@ -1145,11 +1145,15 @@ country_event = {
 		
 		any_owned = { 
 			limit = { NOT = { is_core = POR } } 
-			militancy = 10
-			consciousness = 10
+			add_province_modifier = { name = nationalist_agitation duration = 3650 } 
+		}
+		
+		any_pop = {
+			limit = { NOT = { culture = portuguese } }
 			ideology = { factor = 0.2 value = communist }
 			ideology = { factor = 0.2 value = nationalist }
-			add_province_modifier = { name = nationalist_agitation duration = 3650 } 
+			militancy = 10
+			consciousness = 10
 		}
 		
 		ai_chance = { factor = 0.1 }
@@ -1343,11 +1347,15 @@ country_event = {
 		
 		any_owned = { 
 			limit = { NOT = { is_core = POR } } 
-			militancy = 10
-			consciousness = 10
+			add_province_modifier = { name = nationalist_agitation duration = 3650 } 
+		}
+		
+		any_pop = {
+			limit = { NOT = { culture = portuguese } }
 			ideology = { factor = 0.2 value = communist }
 			ideology = { factor = 0.2 value = nationalist }
-			add_province_modifier = { name = nationalist_agitation duration = 3650 } 
+			militancy = 10
+			consciousness = 10
 		}
 		
 		ai_chance = { factor = 0.2 }

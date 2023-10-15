@@ -33,6 +33,11 @@ country_event = { # Liberalization under Beria
 		
 		relation = { who = USA value = 50 }
 		relation = { who = GER value = 75 }
+		relation = { who = JAP value = 50 }
+		relation = { who = FIN value = 50 }
+		relation = { who = POL value = -75 }
+
+
 		
 		DDR = { any_pop = { consciousness = 7 militancy = 8 } }
 	}
@@ -92,7 +97,7 @@ country_event = { # East German Uprising of 1953 - RUS
 	is_triggered_only = yes
 
 	option = {
-		name = "Sent the army to counter the protesters."
+		name = "Send the army to counter the protesters."
 		
 		set_country_flag = ussr_beria_weak
 		clr_global_flag = east_german_uprising
