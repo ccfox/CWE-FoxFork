@@ -1318,33 +1318,33 @@ aparthied = {
 	non_accepted_pop_consciousness_modifier = 0.05
 }
 
-african_cultural_chaos = {
-	trigger = {
-		capital_scope = { continent = africa }
-		OR = { government = democracy government = democracy1 }
-	}
-	global_pop_militancy_modifier = 0.05
-}
+#african_cultural_chaos = {
+#	trigger = {
+#		capital_scope = { continent = africa }
+#		OR = { government = democracy government = democracy1 }
+#	}
+#	global_pop_militancy_modifier = 0.05
+#}
 
-instability_continent = {
-	trigger = {
-NOT = { tag = SAF }
-NOT = { tag = RHO }
-OR = { capital_scope = { continent = south_america } capital_scope = { continent = africa } }
-			}
-	icon = 5
-	global_pop_militancy_modifier = 0.02
-	non_accepted_pop_militancy_modifier = 0.03
-}
+#instability_continent = {
+#	trigger = {
+#		NOT = { tag = SAF }
+#		NOT = { tag = RHO }
+#		OR = { capital_scope = { continent = south_america } capital_scope = { continent = africa } }
+#	}
+#	icon = 5
+#	global_pop_militancy_modifier = 0.02
+#	non_accepted_pop_militancy_modifier = 0.03
+#}
 
-stability_nation = {
-	trigger = {
-OR = { tag = SAA tag = JOR tag = IRQ }
-OR = { government = hms_government government = absolute_monarchy }
-			}
-	global_pop_militancy_modifier = -0.1
-	non_accepted_pop_militancy_modifier = -0.1
-}
+#stability_nation = {
+#	trigger = {
+#		OR = { tag = SAA tag = JOR tag = IRQ }
+#		OR = { government = hms_government government = absolute_monarchy }
+#			}
+#		global_pop_militancy_modifier = -0.1
+#		non_accepted_pop_militancy_modifier = -0.1
+#}
 
 rich_nation = {
 	trigger = {
