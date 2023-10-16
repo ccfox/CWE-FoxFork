@@ -552,11 +552,11 @@ country_event = {
 			}
 			modifier = {
 				factor = 1.25
-				has_country_flag = { jfk_elected }
+				has_country_flag = jfk_elected
 			}
 			modifier = {
 				factor = 0.8
-				NOT = { has_country_flag = { jfk_elected } }
+				NOT = { has_country_flag = jfk_elected  }
 			}
 		}
 	}
@@ -604,11 +604,11 @@ country_event = {
 			}
 			modifier = {
 				factor = 0.8
-				has_country_flag = { jfk_elected }
+				has_country_flag = jfk_elected
 			}
 			modifier = {
 				factor = 1.25
-				NOT = { has_country_flag = { jfk_elected } }
+				NOT = { has_country_flag = jfk_elected }
 			}
 		}
 	}  

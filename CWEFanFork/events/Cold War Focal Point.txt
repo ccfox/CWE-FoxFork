@@ -14,7 +14,7 @@ country_event = {
 		name = "The communists have entrenched themselves within Afghanistan."
 		
 		random_owned = { #The US is Upset
-			limit = { tag = USA is_greater_power = yes government = democracy }
+			limit = { tag = USA is_greater_power = yes NOT = { OR = { ruling_party_ideology = communist ruling_party_ideology = socialist ruling_party_ideology = communist_social } } }
 			any_pop = { militancy = 2 consciousness = 2 }
 			any_pop = {
 				limit = { strata = poor } #Communist support grows among the working class
@@ -116,7 +116,7 @@ country_event = {
 		set_global_flag = afg_focal_event
 		
 		random_owned = { #The US is happy (for now)
-			limit = { tag = USA is_greater_power = yes government = democracy }
+			limit = { tag = USA is_greater_power = yes NOT = { OR = { ruling_party_ideology = communist ruling_party_ideology = socialist ruling_party_ideology = communist_social } } }
 			any_pop = { #Ruling elite become more entrenched
 				militancy = -2
 				consciousness = -2
@@ -148,7 +148,6 @@ country_event = {
 
 		random_owned = { #Communist governments shaken
 			limit = {
-				exists = yes
 				OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 government = socialist_democracy }
 				capital_scope = { continent = europe }
 				NOT = { tag = RUS } #USSR gets its own special event
@@ -187,7 +186,7 @@ country_event = {
 		name = "The red wave crashes against South America."
 		
 		random_owned = { #The US is Upset
-			limit = { tag = USA is_greater_power = yes government = democracy }
+			limit = { tag = USA is_greater_power = yes NOT = { OR = { ruling_party_ideology = communist ruling_party_ideology = socialist ruling_party_ideology = communist_social } } }
 			any_pop = { militancy = 2 consciousness = 2 }
 			any_pop = {
 				limit = { strata = poor } #Communist support grows among the working class
@@ -280,7 +279,7 @@ country_event = {
 		name = "The Socialist Bloc begins to crumble."
 		
 		random_owned = { #The US is happy
-			limit = { tag = USA is_greater_power = yes government = democracy }
+			limit = { tag = USA is_greater_power = yes NOT = { OR = { ruling_party_ideology = communist ruling_party_ideology = socialist ruling_party_ideology = communist_social } } }
 			any_pop = { #Ruling elite become more entrenched
 				militancy = -2
 				consciousness = -2
@@ -312,7 +311,6 @@ country_event = {
 
 		random_owned = { #Communist governments shaken
 			limit = {
-				exists = yes
 				OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 government = socialist_democracy }
 				capital_scope = { continent = europe }
 				#NOT = { tag = RUS } #USSR gets its own special Modifiers
@@ -351,7 +349,7 @@ country_event = {
 		name = "Socialist influence in Europe becomes more entrenched."
 		
 		random_owned = { #The US is Upset
-			limit = { tag = USA is_greater_power = yes government = democracy }
+			limit = { tag = USA is_greater_power = yes NOT = { OR = { ruling_party_ideology = communist ruling_party_ideology = socialist ruling_party_ideology = communist_social } } }
 			any_pop = { militancy = 2 consciousness = 2 }
 			any_pop = {
 				limit = { strata = poor } #Communist support grows among the working class

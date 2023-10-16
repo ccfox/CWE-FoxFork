@@ -662,14 +662,14 @@ name = "Join the mission!"
 clr_country_flag = un_peace_making_marker
 
 prestige = 25
-relation = { who = FROM value = 200 }
-create_alliance = FROM
-military_access = FROM
-FROM = { military_access = THIS }
+#relation = { who = FROM value = 200 }
+#create_alliance = FROM
+#military_access = FROM
+#FROM = { military_access = THIS }
 
 ai_chance = { 
 factor = 1
-modifier = { factor = 0 NOT = { relation = { who = FROM value = 0 } } }
+#modifier = { factor = 0 NOT = { relation = { who = FROM value = 0 } } }
 modifier = { factor = 0 war_policy = pacifism }
 }
 
@@ -681,11 +681,11 @@ name = "Don't interfere in $FROMCOUNTRY_ADJ$ politics!"
 clr_country_flag = un_peace_making_marker
 
 prestige = -25
-relation = { who = FROM value = -25 }
+#relation = { who = FROM value = -25 }
 ai_chance = { 
 factor = 1
-modifier = { factor = 0 relation = { who = FROM value = 0 } }
-modifier = { factor = 0 NOT = { war_policy = pacifism } }
+#modifier = { factor = 0 relation = { who = FROM value = 0 } }
+#modifier = { factor = 0 NOT = { war_policy = pacifism } }
 }
 		}
 

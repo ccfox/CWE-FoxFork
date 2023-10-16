@@ -664,7 +664,7 @@ country_event = {
 				ideology = { factor = 0.05 value = socialist }
 			}
 			any_pop = { 
-				limit = { type = middle }
+				limit = { strata = middle }
 				ideology = { factor = 0.05 value = social_democrat }
 			}
 		}
@@ -763,7 +763,7 @@ country_event = {
 				ideology = { factor = 0.05 value = socialist }
 			}
 			any_pop = { 
-				limit = { type = middle }
+				limit = { strata = middle }
 				ideology = { factor = 0.05 value = social_democrat }
 			}
 		}

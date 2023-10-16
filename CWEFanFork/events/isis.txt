@@ -21,12 +21,13 @@ country_event = {
 			limit = { is_core = ISI } 
 			remove_core = ISI
 		}
-		casus_belli = {
+		
+		war = {
 			target = ISI
-			type = acquire_core_state
-			months = 60
+			attacker_goal = { casus_belli = acquire_core_state }
+			call_ally = no
 		}
-		war = ISI
+			
 	}
 }
 

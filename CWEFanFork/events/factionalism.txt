@@ -102,6 +102,7 @@ country_event = {
 		NOT = { has_country_modifier = factionalism }
 
 		#NOT = { has_country_modifier = civil_war }
+		#has_country_modifier = obviously_fake_modifier #This is a test to see if whatever error software is flagging things that are commented out as errors if it looks like they are still code.
 
 		NOT = { has_country_modifier = government_consensus }
 

@@ -777,7 +777,7 @@ country_event = {
 
 		#Make Liberals more powerful
 		any_pop = { 
-			limit = { OR = strata = rich } 
+			limit = { OR = { strata = middle strata = rich } } 
 			ideology = { factor = 0.05 value = socialist } 
 		}			
 		
