@@ -296,6 +296,7 @@ option = {
 name = "A calamity!"
 prestige = -100
 remove_country_modifier = next_olympics_host_nation
+clr_country_flag = next_olympics_host_nation
 random_country = { limit = { NOT = { has_country_modifier = recently_held_olympics } OR = { is_greater_power = yes is_secondary_power = yes } is_vassal = no war = no money = 750000 } country_event = 123425 }
 		}
 }
