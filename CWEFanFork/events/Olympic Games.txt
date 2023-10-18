@@ -288,7 +288,7 @@ country_event = {
 	desc = "Due to the war we are in, the olympics will be moved to another city."
 	picture = "olympics_bid"
 trigger = {
-war = no
+war = yes
 has_country_flag = next_olympics_host_nation
 }
 
