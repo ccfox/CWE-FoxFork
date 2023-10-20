@@ -86,36 +86,94 @@ political_decisions = {
 			#Oppressed pops are not happy
 			any_pop = { limit = { NOT = { is_culture_group = THIS } } consciousness = 5 militancy = 5 }
 			
-			#Pops become more socialist
-			any_pop = {
-				limit = { 
-					strata = middle
-					NOT = { OR = { pop_majority_ideology = communist pop_majority_ideology = communist_social } } 
+		random_owned = { #check for nationalist gov
+			limit = {
+				owner = {
+					OR = { ruling_party_ideology = traditionalist ruling_party_ideology = nationalist ruling_party_ideology = populist }
 				}
-				ideology = { factor = 0.025 value = socialist }
 			}
-			any_pop = {
-				limit = { 
-					strata = poor 
-					NOT = { OR = { pop_majority_ideology = communist pop_majority_ideology = communist_social } } 
+			owner = {
+				any_pop = {
+					limit = {
+						NOT = { is_culture_group = THIS }
+						strata = middle
+						
+					}
+					ideology = { factor = 0.01 value = social_democrat }
+					ideology = { factor = 0.01 value = progressive }
 				}
-				ideology = { factor = 0.05 value = socialist }
+				any_pop = {
+					limit = {
+						NOT = { is_culture_group = THIS }
+						strata = poor
+						
+					}
+					ideology = { factor = 0.01 value = socialist }
+					ideology = { factor = 0.01 value = communist }
+				}
+				any_pop = {
+					limit = {
+						NOT = { OR = { pop_majority_ideology = nationalist pop_majority_ideology = traditionalist pop_majority_ideology = populist } }
+						OR = { strata = poor strata = middle }
+						
+					}
+					ideology = { factor = 0.01 value = social_democrat }
+					ideology = { factor = 0.01 value = progressive }
+					ideology = { factor = 0.01 value = socialist }
+					ideology = { factor = 0.01 value = communist }
+				}
 			}
+		}
 			
-			any_pop = {
-				limit = { 
-					strata = middle
-					OR = { pop_majority_ideology = communist pop_majority_ideology = communist_social }
+			
+		random_owned = { #check for communist gov
+			limit = {
+				owner = {
+					OR = { ruling_party_ideology = socialist ruling_party_ideology = communist ruling_party_ideology = communist_social }
 				}
-				ideology = { factor = 0.025 value = communist }
 			}
-			any_pop = {
-				limit = { 
-					strata = poor 
-					OR = { pop_majority_ideology = communist pop_majority_ideology = communist_social }
+			owner = {
+				any_pop = {
+					limit = {
+						strata = rich
+						
+					}
+					ideology = { factor = 0.01 value = conservative }
+					ideology = { factor = 0.01 value = populist }
 				}
-				ideology = { factor = 0.05 value = communist }
+				any_pop = {
+					limit = {
+						NOT = { is_culture_group = THIS }
+						strata = middle
+						
+					}
+					ideology = { factor = 0.01 value = liberal }
+					ideology = { factor = 0.01 value = conservative }
+					ideology = { factor = 0.01 value = big_tent }
+				}
+				any_pop = {
+					limit = {
+						NOT = { is_culture_group = THIS }
+						strata = poor
+						
+					}
+					ideology = { factor = 0.01 value = social_democrat }
+					ideology = { factor = 0.01 value = progressive }
+					ideology = { factor = 0.01 value = liberal }
+				}
+				any_pop = {
+					limit = {
+						NOT = { OR = { pop_majority_ideology = socialist pop_majority_ideology = communist pop_majority_ideology = communist_social } }
+						OR = { strata = poor strata = middle }
+						
+					}
+					ideology = { factor = 0.01 value = big_tent }
+					ideology = { factor = 0.01 value = liberal }
+					ideology = { factor = 0.01 value = conservative }
+				}
 			}
+		}
+			
 			
 			#Decision comes with education reforms
 			random_owned = {
