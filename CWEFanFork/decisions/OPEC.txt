@@ -4,7 +4,15 @@ political_decisions = {
 		picture = "opec"
 		potential = {
 			year = 1960
-			NOT = { OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } }
+			NOT = {
+				AND = {
+					NOT = { capital_scope = { continent = mena } }
+					OR = { 
+						government = proletarian_dictatorship
+						government = proletarian_dictatorship1
+					}
+				}
+			}
 			
 			#Not a club for GPs
 			is_greater_power = no

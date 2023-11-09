@@ -148,7 +148,7 @@
 	aristocrats = {
 		culture = arab_mesopotamian
 		religion =  sunni 
-		size = 3000
+		size = 4000
 	 } 
 	clergymen = {
 		culture = arab_mesopotamian

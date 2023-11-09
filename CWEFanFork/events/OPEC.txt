@@ -37,8 +37,13 @@ country_event = {
 		OR = { 
 			NOT = { any_owned_province = { trade_goods = petroleum } } 
 			is_vassal = yes 
-			government = proletarian_dictatorship 
-			government = proletarian_dictatorship1
+			AND = {
+				NOT = { capital_scope = { continent = mena } }
+				OR = { 
+					government = proletarian_dictatorship
+					government = proletarian_dictatorship1
+				}
+			}
 		}
 	}
 	
