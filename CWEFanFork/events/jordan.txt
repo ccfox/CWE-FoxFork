@@ -13,7 +13,7 @@ country_event = {
 		NOT = { has_global_flag = 1950_start_date_flag }
 		NOT = { year = 1990 }
 		
-		government = hms_government
+		#government = hms_government
 		war = no
 		is_vassal = no
 		
@@ -28,7 +28,17 @@ country_event = {
 		name = "Free Jordan from the British Empire"
 		prestige = 50
 		release_vassal = JOR 
-		ai_chance = { factor = 0.9 }
+		ai_chance = {
+			factor = 0.8
+			modifier = {
+				factor = 0.3
+				OR = { ruling_party_ideology = nationalist ruling_party_ideology = traditionalist ruling_party_ideology = populist }
+			}
+			modifier = {
+				factor = 3
+				NOT = { OR = { ruling_party_ideology = nationalist ruling_party_ideology = traditionalist ruling_party_ideology = populist } }
+			}
+		}
 	}
 	
 	option = {
@@ -41,7 +51,17 @@ country_event = {
 				ideology = { factor = 0.25 value = nationalist }
 			}
 		}
-		ai_chance = { factor = 0.1 }
+		ai_chance = {
+			factor = 0.2
+			modifier = {
+				factor = 3
+				OR = { ruling_party_ideology = nationalist ruling_party_ideology = traditionalist ruling_party_ideology = populist }
+			}
+			modifier = {
+				factor = 0.3
+				NOT = { OR = { ruling_party_ideology = nationalist ruling_party_ideology = traditionalist ruling_party_ideology = populist } }
+			}
+		}
 	}
 
 }

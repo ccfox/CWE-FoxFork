@@ -69,7 +69,17 @@ country_event = {
 	option = {
 		name = "Abandon the Palestinian Mandate quickly"
 		country_event = 1007602
-		ai_chance = { factor = 0.8 }
+		ai_chance = {
+			factor = 0.7
+			modifier = {
+				factor = 3
+				OR = { ruling_party_ideology = conservative ruling_party_ideology = big_tent ruling_party_ideology = liberal }
+			}
+			modifier = {
+				factor = 0.3
+				NOT = { OR = { ruling_party_ideology = conservative ruling_party_ideology = big_tent ruling_party_ideology = liberal } }
+			}
+		}
 	}
 
 	option = {
@@ -115,7 +125,17 @@ country_event = {
 			relation = { who = THIS value = -150 }
 		}
 
-		ai_chance = { factor = 0.1 }
+		ai_chance = {
+			factor = 0.15
+			modifier = {
+				factor = 5
+				OR = { ruling_party_ideology = social_democrat ruling_party_ideology = progressive ruling_party_ideology = socialist ruling_party_ideology = communist ruling_party_ideology = communist_social }
+			}
+			modifier = {
+				factor = 0.5
+				NOT = { OR = { ruling_party_ideology = social_democrat ruling_party_ideology = progressive ruling_party_ideology = socialist ruling_party_ideology = communist ruling_party_ideology = communist_social } }
+			}
+		}
 	}
 
 	option = {
@@ -136,7 +156,17 @@ country_event = {
 				relation = { who = THIS value = -100 }
 			}
 
-		ai_chance = { factor = 0.1 }
+		ai_chance = {
+			factor = 0.15
+			modifier = {
+				factor = 5
+				OR = { ruling_party_ideology = nationalist ruling_party_ideology = populist ruling_party_ideology = traditionalist }
+			}
+			modifier = {
+				factor = 0.5
+				NOT = { OR = { ruling_party_ideology = nationalist ruling_party_ideology = populist ruling_party_ideology = traditionalist } }
+			}
+		}
 	}
 
 }
@@ -192,7 +222,17 @@ country_event = {
 		#Prepare to let go of Palestine historically
 		set_country_flag = dissolve_the_palestine_mandate
 		
-		ai_chance = { factor = 0.8 }
+		ai_chance = {
+			factor = 0.6
+			modifier = {
+				factor = 3
+				OR = { ruling_party_ideology = conservative ruling_party_ideology = big_tent ruling_party_ideology = liberal ruling_party_ideology = social_democrat }
+			}
+			modifier = {
+				factor = 0.3
+				NOT = { OR = { ruling_party_ideology = conservative ruling_party_ideology = big_tent ruling_party_ideology = liberal ruling_party_ideology = social_democrat } }
+			}
+		}
 	}
 	
 	option = {
@@ -200,8 +240,8 @@ country_event = {
 		
 		relation = { who = USA value = -50 }
 		
-		#Controversial move
-		badboy = 2.5
+		#Controversial move #This was already the existing British Policy
+		badboy = 1.5
 		
 		#Jews increase in population size slightly
 		any_pop = {
@@ -209,7 +249,7 @@ country_event = {
 				OR = { culture = jewish culture =  haredim_jewish }
 				location = { OR = { is_core = ISR is_core = PAL } }
 			}
-			reduce_pop = 1.2
+			reduce_pop = 1.15
 		}
 		
 		#Israelis are angry!
@@ -230,7 +270,9 @@ country_event = {
 		
 		#Palestine to be independent via the generic system
 		
-		ai_chance = { factor = 0.1 }
+		ai_chance = {
+			factor = 0.2
+		}
 	}
 	
 	option = {
@@ -270,7 +312,9 @@ country_event = {
 
 		USA = { clr_country_flag = support_zionism }
 		
-		ai_chance = { factor = 0.1 }
+		ai_chance = {
+			factor = 0.2
+		}
 	}	
 }
 
@@ -320,7 +364,17 @@ country_event = {
 		
 		set_global_flag = independent_israel
 		
-		ai_chance = { factor = 0.8 }
+		ai_chance = {
+			factor = 0.6
+			modifier = { #Mainstream Parties
+				factor = 3
+				OR = { ruling_party_ideology = conservative ruling_party_ideology = big_tent ruling_party_ideology = liberal ruling_party_ideology = social_democrat }
+			}
+			modifier = {
+				factor = 0.3
+				NOT = { OR = { ruling_party_ideology = conservative ruling_party_ideology = big_tent ruling_party_ideology = liberal ruling_party_ideology = social_democrat } }
+			}
+		}
 	}
 		
 	option = {
@@ -352,7 +406,17 @@ country_event = {
 		
 		set_global_flag = independent_israel
 		
-		ai_chance = { factor = 0.1 }
+		ai_chance = {
+			factor = 0.1
+			modifier = { #Moderate Left Parties
+				factor = 3
+				OR = { ruling_party_ideology = progressive ruling_party_ideology = socialist }
+			}
+			modifier = {
+				factor = 0.3
+				NOT = { OR = { ruling_party_ideology = progressive ruling_party_ideology = socialist } }
+			}
+		}
 	}
 
 	option = {
@@ -387,7 +451,17 @@ country_event = {
 		
 		set_global_flag = independent_israel
 		
-		ai_chance = { factor = 0.05 }
+		ai_chance = {
+			factor = 0.15
+			modifier = { #Hard Right Parties
+				factor = 3
+				OR = { ruling_party_ideology = nationalist ruling_party_ideology = traditionalist ruling_party_ideology = populist }
+			}
+			modifier = {
+				factor = 0.3
+				NOT = { OR = { ruling_party_ideology = nationalist ruling_party_ideology = traditionalist ruling_party_ideology = populist } }
+			}
+		}
 	}
 
 	option = {
@@ -413,7 +487,17 @@ country_event = {
 			any_owned = { limit = { is_core = ISR } add_province_modifier = { name = nationalist_agitation duration = 3650 } } 
 		}
 		
-		ai_chance = { factor = 0.05 }
+		ai_chance = {
+			factor = 0.15
+			modifier = { #Hard Left Parties
+				factor = 3
+				OR = { ruling_party_ideology = communist ruling_party_ideology = communist_social }
+			}
+			modifier = {
+				factor = 0.3
+				NOT = { OR = { ruling_party_ideology = communist ruling_party_ideology = communist_social } }
+			}
+		}
 	}
 	
 }
@@ -456,13 +540,33 @@ country_event = {
 		
 		set_country_flag = support_zionism 
 		
-		ai_chance = { factor = 0.95 }
+		ai_chance = {
+			factor = 0.75
+			modifier = { #Mainstream Parties+Far Right
+				factor = 3
+				OR = { ruling_party_ideology = conservative ruling_party_ideology = big_tent ruling_party_ideology = liberal ruling_party_ideology = social_democrat ruling_party_ideology = nationalist ruling_party_ideology = populist ruling_party_ideology = traditionalist }
+			}
+			modifier = {
+				factor = 0.3
+				NOT = { OR = { ruling_party_ideology = conservative ruling_party_ideology = big_tent ruling_party_ideology = liberal ruling_party_ideology = social_democrat ruling_party_ideology = nationalist ruling_party_ideology = populist ruling_party_ideology = traditionalist } }
+			}
+		}
 	}
 	
 	option = {
 		name = "Nevermind"
 		remove_accepted_culture = jewish
-		ai_chance = { factor = 0.05 }
+		ai_chance = {
+			factor = 0.25
+			modifier = { #Left Parties
+				factor = 3
+				OR = { ruling_party_ideology = communist ruling_party_ideology = communist_social ruling_party_ideology = socialist ruling_party_ideology = progressive }
+			}
+			modifier = {
+				factor = 0.3
+				NOT = { OR = { ruling_party_ideology = communist ruling_party_ideology = communist_social ruling_party_ideology = socialist ruling_party_ideology = progressive } }
+			}
+		}
 	}
 	
 }
