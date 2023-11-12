@@ -105,6 +105,10 @@ country_event = {
 			limit = { OR = { type = aristocrats type = bureaucrats } } 
 			ideology = { factor = 0.15 value = communist_social }
 		}
+		any_pop = { 
+			limit = { OR = { strata = middle strata = poor } } 
+			ideology = { factor = 0.15 value = communist_social }
+		}
 
 		ai_chance = {
 			factor = 0.8
@@ -142,6 +146,10 @@ country_event = {
 		
 		any_pop = { 
 			limit = { OR = { type = aristocrats type = bureaucrats } } 
+			ideology = { factor = 0.15 value = communist }
+		}
+		any_pop = { 
+			limit = { OR = { strata = middle strata = poor } } 
 			ideology = { factor = 0.15 value = communist }
 		}
 		
@@ -210,6 +218,10 @@ country_event = {
 			limit = { OR = { type = aristocrats type = bureaucrats } } 
 			ideology = { factor = 0.15 value = liberal }
 		}
+		any_pop = { 
+			limit = { OR = { strata = middle strata = poor } } 
+			ideology = { factor = 0.15 value = liberal }
+		}
 		
 		add_country_modifier = { name = prince_of_terror duration = 3650 }
 		
@@ -244,6 +256,10 @@ country_event = {
 		
 		any_pop = { 
 			limit = { OR = { type = aristocrats type = bureaucrats } } 
+			ideology = { factor = 0.15 value = socialist }
+		}
+		any_pop = { 
+			limit = { OR = { strata = middle strata = poor } } 
 			ideology = { factor = 0.15 value = socialist }
 		}
 		
@@ -553,6 +569,10 @@ country_event = {
 			limit = { OR = { type = aristocrats type = bureaucrats } } 
 			ideology = { factor = 0.15 value = communist_social } 
 		}
+		any_pop = { 
+			limit = { OR = { strata = poor strata = middle } } 
+			ideology = { factor = 0.15 value = communist_social } 
+		}
 		
 		#Jews get sent to the Gulags
 		any_pop = { 
@@ -568,14 +588,18 @@ country_event = {
 		any_pop = { militancy = 2 consciousness = 3 }
 		
 		#Lose popularity
-		any_pop = { 
-			limit = { OR = { strata = poor strata = middle } is_culture_group = THIS } 
-			ideology = { factor = 0.05 value = liberal } 
-		}
+		#any_pop = { #No negatives for not enacting a racist conspiracy.
+		#	limit = { OR = { strata = poor strata = middle } is_culture_group = THIS } 
+		#	ideology = { factor = 0.05 value = liberal } 
+		#}
 		
 		#Make Reformists less powerful
 		any_pop = { 
 			limit = { OR = { type = aristocrats type = bureaucrats } } 
+			ideology = { factor = 0.15 value = communist } 
+		}
+		any_pop = { 
+			limit = { OR = { strata = poor strata = middle } } 
 			ideology = { factor = 0.15 value = communist } 
 		}
 		
@@ -583,6 +607,10 @@ country_event = {
 		any_pop = { 
 			limit = { OR = { type = aristocrats type = bureaucrats } } 
 			ideology = { factor = 0.15 value = socialist } 
+		}
+		any_pop = { 
+			limit = { OR = { strata = poor strata = middle } } 
+			ideology = { factor = 0.1 value = socialist } 
 		}
 		
 		ai_chance = { factor = 0.1 }

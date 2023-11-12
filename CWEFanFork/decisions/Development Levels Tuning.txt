@@ -46,7 +46,7 @@ political_decisions = {
 					total_pops = 35000 
 					AND = { is_capital = no is_state_capital = yes } 
 				} 
-				owner = { money = -250000 prestige = 10 }
+				owner = { money = -25000 prestige = 10 }
 				infrastructure = 1
 				any_pop = { literacy = 0.02 }
 			}
@@ -56,7 +56,7 @@ political_decisions = {
 					is_colonial = no 
 					is_capital = yes 
 				} 
-				owner = { money = -500000 prestige = 20 } 
+				owner = { money = -50000 prestige = 20 } 
 				infrastructure  = 2 
 				any_pop = { literacy = 0.05 } 
 			}
