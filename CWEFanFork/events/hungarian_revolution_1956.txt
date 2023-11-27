@@ -16,6 +16,7 @@ country_event = {
 		vassal_of = RUS
     	war = no
 		has_global_flag = blocsenabled
+		has_global_flag = de_stalinization
 	}
 
 	mean_time_to_happen = { months = 10 }

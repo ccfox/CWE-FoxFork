@@ -101,7 +101,7 @@ party = {
 		end_date = 2092.1.1
 }
 party = {
-		name = "Party of Democratic Action (Far-Right"
+		name = "Party of Democratic Action (Far-Right)"
 		citizenship_policy = residency
 		economic_policy = state_capitalism
 		ideology = traditionalist
