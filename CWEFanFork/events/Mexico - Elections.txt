@@ -1122,12 +1122,37 @@ country_event = {
 		name = "The PRI runs unopposed."
 		
 		random_owned = { #This should give the player or AI the modifier if they don't have a majority support
-			limit = { owner = { AND = { government = presidential_dictatorship tag = MEX NOT = { OR = { pop_majority_ideology = big_tent pop_majority_ideology = socialist pop_majority_ideology = social_democrat } } } } }
+			limit = {
+				owner = {
+					AND = {
+						government = presidential_dictatorship
+						tag = MEX
+						NOT = { OR = {
+							pop_majority_ideology = big_tent
+							pop_majority_ideology = socialist
+							pop_majority_ideology = social_democrat
+						} }
+					}
+				}
+			}
 			owner = { add_country_modifier = { name = revolution_chaos duration = 1825 } }
 		}
 		
 		random_owned = { #Should make it default to big_tent if no other ideology has majority, or give big_tent ruling party if there is a majority
-			limit = { owner = { AND = { tag = MEX OR = { pop_majority_ideology = big_tent NOT = { OR = { pop_majority_ideology = socialist pop_majority_ideology = social_democrat } } } } } 
+			limit = {
+				owner = {
+					AND = {
+						tag = MEX
+						OR = {
+							pop_majority_ideology = big_tent
+							NOT = { OR = {
+									pop_majority_ideology = socialist
+									pop_majority_ideology = social_democrat
+							} }
+						}
+					}
+				}
+			}
 			owner = {
 				ruling_party_ideology = big_tent
 				any_pop = { 
@@ -1147,7 +1172,7 @@ country_event = {
 		}
 
 		random_owned = {
-			limit = { owner = { AND = { tag = MEX pop_majority_ideology = social_democrat } } 
+			limit = { owner = { AND = { tag = MEX pop_majority_ideology = social_democrat } } }
 			owner = {
 				ruling_party_ideology = social_democrat
 				any_pop = { 
