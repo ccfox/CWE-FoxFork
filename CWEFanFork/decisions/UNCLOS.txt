@@ -174,22 +174,17 @@ has_country_modifier = united_nations_ga_member
 			badboy = 1
 
 			random_country = { 
-					limit = { 
-							neighbour = THIS is_vassal = no num_of_ports = 1 
-							NOT = { relation = { who = THIS value = -50 } }
-							OR = { has_country_modifier = claim_200 has_country_modifier = claim_12 has_country_modifier = claim_24 }
-					}
+				limit = { 
+						neighbour = THIS is_vassal = no num_of_ports = 1 
+						NOT = { relation = { who = THIS value = -50 } }
+						OR = { has_country_modifier = claim_200 has_country_modifier = claim_12 has_country_modifier = claim_24 }
+				}
 
-					NOT = { relation = { who = THIS value = -50 } } 
-
-					}
-				}  
+				NOT = { relation = { who = THIS value = -50 } } 
 			}
-
 		}
 		ai_will_do = { 
 			factor = 100 
 		}
 	}
-
 }
