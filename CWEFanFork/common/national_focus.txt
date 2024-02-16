@@ -436,7 +436,7 @@ NOT = { owner = { economic_policy = planned_economy } }
 	service_focus = {
 		financial_services = 60
 		recreation = 50
-		culture = 50
+		culture_good = 50
 		education_rnd = 50
 		transport = 50
 		health = 50

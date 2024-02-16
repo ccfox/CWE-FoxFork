@@ -1697,7 +1697,7 @@ culture_factory = {
 		transport = 1
 		financial_services = 1
 	}
-	output_goods = culture 
+	output_goods = culture_good 
 	value = 6.2
 	bonus = {
 		trigger = { 
@@ -2464,7 +2464,7 @@ artisan_culture = {
 		computers = 1
 		telecommunications = 1
 	}
-	output_goods = culture 
+	output_goods = culture_good 
 	value = 8
 	owner = {
 		poptype = artisans 
