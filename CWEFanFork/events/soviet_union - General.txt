@@ -1951,7 +1951,7 @@ country_event = {
 		year = 1989
 		NOT = { has_global_flag = 1992_start_date_flag }
 		
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		war = no
 		is_vassal = no
 		
@@ -2055,11 +2055,11 @@ country_event = {
 		
 		has_global_flag = autumn_of_nations
 		
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		war = no
 		is_vassal = no
 		
-		ruling_party_ideology = communist_social
+		OR = { ruling_party_ideology = communist_social AND = { ruling_party_ideology = communist is_greater_power = no } }
 		NOT = { has_global_flag = august_coup }
 		
 		OR = { 
@@ -2149,7 +2149,7 @@ country_event = {
     	tag = RUS
     	has_global_flag = autumn_of_nations
 		has_global_flag = august_coup
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
     	war = no
 		is_vassal = no
 	}
