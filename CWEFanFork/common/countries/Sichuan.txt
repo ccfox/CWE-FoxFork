@@ -2,7 +2,19 @@ graphical_culture = ChineseGC
 populist_dictatorship = { 139 107 255 }
 color = { 169 223 55 }
 party = {
-		name = "party_big_tent"
+		name = "Xikang Clique (Pro-KMT)"
+		citizenship_policy = full_citizenship
+		economic_policy = state_capitalism
+		ideology = nationalist
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = pro_military
+		start_date = 1836.1.1
+		end_date = 2100.1.1
+}
+
+party = {
+		name = "Sichuan Kuomintang"
 		citizenship_policy = full_citizenship
 		economic_policy = interventionism
 		ideology = big_tent
@@ -13,7 +25,7 @@ party = {
 		end_date = 2100.1.1
 }
 party = {
-		name = "party_conservative_0_SZC"
+		name = "Sichuan Kuomintang (Conservative)"
 		citizenship_policy = limited_citizenship
 		economic_policy = interventionism
 		ideology = conservative
@@ -24,7 +36,7 @@ party = {
 		end_date = 2100.1.1
 }
 party = {
-		name = "party_liberal_0_SZC"
+		name = "Sichuan Kuomintang (Pro-Western)"
 		citizenship_policy = full_citizenship
 		economic_policy = laissez_faire
 		ideology = liberal
@@ -35,7 +47,18 @@ party = {
 		end_date = 2100.1.1
 }
 party = {
-		name = "party_socialist_0_SZC"
+		name = "Sichuan Kuomintang (Tridemism)"
+		citizenship_policy = full_citizenship
+		economic_policy = state_capitalism
+		ideology = social_democrat
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = pacifism
+		start_date = 1836.1.1
+		end_date = 2092.1.1
+}
+party = {
+		name = "Xikang Clique (Pro-CCP)"
 		citizenship_policy = limited_citizenship
 		economic_policy = state_capitalism
 		ideology = socialist
@@ -46,7 +69,7 @@ party = {
 		end_date = 2100.1.1
 }
 party = {
-		name = "party_progressive_0_SZC"
+		name = "Sichuan Kuomintang (Progressive)"
 		citizenship_policy = full_citizenship
 		economic_policy = interventionism
 		ideology = progressive
@@ -57,7 +80,7 @@ party = {
 		end_date = 2100.1.1
 }
 party = {
-		name = "party_populist_0_SZC"
+		name = "Xikang Clique"
 		citizenship_policy = residency
 		economic_policy = state_capitalism
 		ideology = populist
@@ -68,7 +91,7 @@ party = {
 		end_date = 2100.1.1
 }
 party = {
-		name = "party_traditionalist_0_SZC"
+		name = "Xikang Clique (Pro-Tibet)"
 		citizenship_policy = residency
 		economic_policy = state_capitalism
 		ideology = traditionalist
@@ -79,42 +102,21 @@ party = {
 		end_date = 2100.1.1
 }
 party = {
-		name = "party_communist_0_SZC"
-		citizenship_policy = full_citizenship
-		economic_policy = state_capitalism
-		ideology = communist
-		religious_policy = pro_atheism
-		trade_policy = protectionism
-		war_policy = pro_military
-		start_date = 1836.1.1
-		end_date = 2100.1.1
-}
-party = {
-		name = "party_communist_1_SZC"
-		citizenship_policy = full_citizenship
-		economic_policy = interventionism
-		ideology = communist
-		religious_policy = pro_atheism
-		trade_policy = protectionism
-		war_policy = pro_military
-		start_date = 1836.1.1
-		end_date = 2100.1.1
-}
-party = {
-		name = "party_nationalist"
+		name = "Sichuan Communist Party"
 		citizenship_policy = full_citizenship
 		economic_policy = planned_economy
-		ideology = nationalist
-		religious_policy = secularized
+		ideology = communist
+		religious_policy = pro_atheism
 		trade_policy = protectionism
 		war_policy = pro_military
 		start_date = 1836.1.1
 		end_date = 2100.1.1
 }
+
 party = {
-		name = "party_communist_social"
+		name = "Sichuan Communist Party (Reformist)"
 		citizenship_policy = full_citizenship
-		economic_policy = state_capitalism
+		economic_policy = planned_economy1
 		ideology = communist_social
 		religious_policy = pro_atheism
 		trade_policy = protectionism
@@ -122,17 +124,7 @@ party = {
 		start_date = 1836.1.1
 		end_date = 2092.1.1
 }
-party = {
-		name = "social_democrat_party"
-		citizenship_policy = full_citizenship
-		economic_policy = state_capitalism
-		ideology = social_democrat
-		religious_policy = secularized
-		trade_policy = protectionism
-		war_policy = pacifism
-		start_date = 1836.1.1
-		end_date = 2092.1.1
-}
+
 unit_names = {
 	carrier = {
 		"Nan Shin" "Pao Nim" "Ying Ching" "Ton Chi" "Hai Yung" "Hai Shew" "Hai Shen" "Ying Swei" "Fei Hung" "Chao Ho" "Hai Chi" "Ying Swei" "Chao Ho" "Ning Hai" "Ping Hai" "Chung king" "Nan Shin" "Pao Nim" "Ying Ching" "Ton Chi" "Hai Yung" "Hai Shew" "Hai Shen" "Ying Swei" "Fei Hung"
