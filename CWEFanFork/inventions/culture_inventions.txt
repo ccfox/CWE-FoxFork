@@ -388,7 +388,7 @@ web_1 = {
 	effect = {
 		shared_prestige = 10
 		factory_goods_output = {
-			culture = 0.01
+			culture_good = 0.01
 		}
 	}
 }
@@ -461,7 +461,7 @@ web_2 = {
 	effect = {
 		shared_prestige = 10
 		factory_goods_output = {
-			culture = 0.01
+			culture_good = 0.01
 		}
 	}
 }
@@ -521,7 +521,7 @@ web_3 = {
 	effect = {
 		shared_prestige = 15
 		factory_goods_output = {
-			culture = 0.01
+			culture_good = 0.01
 		}
 	}
 }

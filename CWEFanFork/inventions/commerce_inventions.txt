@@ -2936,7 +2936,7 @@ telematic_work = {
 		}
 	}
 	effect = {
-		factory_goods_output = { culture = 0.1 }
+		factory_goods_output = { culture_good = 0.1 }
 		factory_goods_output = { recreation = 0.1 }
 		factory_goods_output = { education_rnd = 0.1 }
 	}
@@ -2976,7 +2976,7 @@ the_digital_economy = {
 	effect = { 
 		rgo_goods_output = { credit = 0.1 }
 		factory_goods_output = { financial_services = 0.1}	
-		factory_goods_output = { culture = 0.1 }
+		factory_goods_output = { culture_good = 0.1 }
 		factory_goods_output = { recreation = 0.1 }
 		factory_goods_output = { education_rnd = 0.1 }
 	}
