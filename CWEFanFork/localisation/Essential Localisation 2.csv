@@ -3031,4 +3031,8 @@ communist_bloc_leader_desc;Our nation is the leader of the Communist Bloc. As ou
 atomic_nation_desc;We have the capability to launch nuclear strikes against our enemies. This will serve as a deterrent to those who may threaten our independence, but also ensures watchful observation from the other atomic nations.;;;;;;;;;;;;;x;;;;
 german_scientists_desc;With the help of our intelligence agency, we are utilizing former Nazi scientists and engineers in order to further our developments in rocketry and other sciences. While morally dubious, this program offers an abundance of scientific talent that will surely give us an edge in this Cold War.;;;;;;;;;;;;;x;;;;
 united_nations_ga_member_desc;We are a recognized member of the United Nations General Assembly. This provides us with a platform to further our geopolitical goals and resolve diplomatic disputes through books, not bombs.;;;;;;;;;;;;;x;;;;
+<<<<<<< HEAD
 unsc_permanent_member_desc;We are one of the five sovereign states to whom the UN Charter of 1945 grants a permanent seat on the UN Security Council. This allows us to veto any resolution, regardless of its level of international support.;;;;;;;;;;;;;x;;;;
+=======
+unsc_permanent_member_desc;We are one of the five sovereign states to whom the UN Charter of 1945 grants a permanent seat on the UN Security Council. This allows us to veto any resolution, regardless of its level of international support.;;;;;;;;;;;;;x;;;;
+>>>>>>> 5034e0f4d0f88efc66ea428e6e8d7754db619967
