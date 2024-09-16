@@ -1,7 +1,7 @@
 graphical_culture = EuropeanGC
 color = { 116 107 140 }
 party = {
-		name = "Zveno"
+		name = "Zveno (Nationalists)"
 		citizenship_policy = limited_citizenship
 		economic_policy = state_capitalism
 		ideology = nationalist
@@ -89,7 +89,7 @@ party = {
 		end_date = 2092.1.1
 }
 party = {
-		name = "National Movement Simeon II"
+		name = "NDSV (Liberal)"
 		citizenship_policy = full_citizenship
 		economic_policy = laissez_faire
 		ideology = liberal

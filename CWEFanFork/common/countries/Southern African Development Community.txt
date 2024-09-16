@@ -111,7 +111,7 @@ party = {
 		end_date = 2092.1.1
 }
 party = {
-		name = "social_democrat_party"
+		name = "Pan Africanist Congress (Right)"
 		citizenship_policy = full_citizenship
 		economic_policy = state_capitalism
 		ideology = social_democrat
