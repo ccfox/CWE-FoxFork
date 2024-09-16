@@ -12,7 +12,7 @@ party = {
 		end_date = 2100.1.1
 }
 party = {
-		name = "Free Buryatia Foundation"
+		name = "party_big_tent"
 		citizenship_policy = full_citizenship
 		economic_policy = interventionism
 		ideology = big_tent
@@ -23,7 +23,7 @@ party = {
 		end_date = 2092.1.1
 }
 party = {
-		name = "Free Buryatia Foundation (Right)"
+		name = "party_conservative_0_BYU"
 		citizenship_policy = limited_citizenship
 		economic_policy = interventionism
 		ideology = conservative
@@ -34,7 +34,7 @@ party = {
 		end_date = 2092.1.1
 }
 party = {
-		name = "Free Buryatia Foundation (Left)"
+		name = "party_liberal_0_BYU"
 		citizenship_policy = full_citizenship
 		economic_policy = laissez_faire
 		ideology = liberal
@@ -45,7 +45,7 @@ party = {
 		end_date = 2092.1.1
 }
 party = {
-		name = "BPP (Right)"
+		name = "social_democrat_party"
 		citizenship_policy = full_citizenship
 		economic_policy = state_capitalism
 		ideology = social_democrat
@@ -56,7 +56,7 @@ party = {
 		end_date = 2092.1.1
 }
 party = {
-		name = "BPRP (Liberal)"
+		name = "party_socialist_0_BYU"
 		citizenship_policy = limited_citizenship
 		economic_policy = state_capitalism
 		ideology = socialist
@@ -67,7 +67,7 @@ party = {
 		end_date = 2092.1.1
 }
 party = {
-		name = "BPP (Left)"
+		name = "party_progressive_0_BYU"
 		citizenship_policy = full_citizenship
 		economic_policy = interventionism
 		ideology = progressive
@@ -100,7 +100,7 @@ party = {
 		end_date = 2092.1.1
 }
 party = {
-		name = "BPRP"
+		name = "party_communist_0_BYU"
 		citizenship_policy = full_citizenship
 		economic_policy = planned_economy
 		ideology = communist
@@ -111,9 +111,9 @@ party = {
 		end_date = 2092.1.1
 }
 party = {
-		name = "BPRP (LN)"
+		name = "party_communist_social"
 		citizenship_policy = full_citizenship
-		economic_policy = planned_economy1
+		economic_policy = state_capitalism
 		ideology = communist_social
 		religious_policy = pro_atheism
 		trade_policy = protectionism

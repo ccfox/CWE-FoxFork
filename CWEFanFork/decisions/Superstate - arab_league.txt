@@ -11,7 +11,6 @@ political_decisions = {
 			
 			#National arab culture states only
 			is_culture_group = arabic
-			NOT = { tag = UAR }
 		}
 		allow = {
 		
@@ -63,7 +62,6 @@ political_decisions = {
 			NOT = { has_country_flag = hide_superstate }
 			has_country_flag = xal_ambition
 			NOT = { tag = XAL }
-			NOT = { tag = UAR }
 		}
 		allow = {
 			OR = { 
@@ -106,7 +104,6 @@ political_decisions = {
 			
 			#National arab culture states only
 			is_culture_group = arabic
-			NOT = { tag = UAR }
 		}
 		allow = {
 			has_country_flag = xal_ambition
@@ -125,7 +122,6 @@ political_decisions = {
 			
 			#National arab culture states only
 			is_culture_group = arabic
-			NOT = { tag = UAR }
 		}
 		allow = {
 			has_country_flag = xal_ambition
@@ -145,7 +141,6 @@ political_decisions = {
 			
 			#National arab culture states only
 			is_culture_group = arabic
-			NOT = { tag = UAR }
 		}
 		allow = {
 			has_country_flag = xal_ambition
@@ -165,7 +160,6 @@ political_decisions = {
 			
 			#National arab culture states only
 			is_culture_group = arabic
-			NOT = { tag = UAR }
 		}
 		allow = {
 			has_country_flag = xal_ambition
@@ -189,7 +183,6 @@ political_decisions = {
 			
 			#National arab culture states only
 			is_culture_group = arabic
-			NOT = { tag = UAR }
 		}
 		allow = {
 			has_country_flag = xal_ambition
