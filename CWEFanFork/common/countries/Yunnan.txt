@@ -1,7 +1,7 @@
 graphical_culture = ChineseGC
 color = { 160 82 45 }
 party = {
-		name = "Yunnan Patriotic Front"
+		name = "Yunnan Self-Government Committee"
 		citizenship_policy = limited_citizenship
 		economic_policy = state_capitalism
 		ideology = nationalist
@@ -12,7 +12,7 @@ party = {
 		end_date = 2100.1.1
 }
 party = {
-		name = "Yunnan Moderates"
+		name = "Yunnan Provincial Government"
 		citizenship_policy = full_citizenship
 		economic_policy = interventionism
 		ideology = big_tent
@@ -23,7 +23,7 @@ party = {
 		end_date = 2100.1.1
 }
 party = {
-		name = "Conservative Union"
+		name = "Yunnan KMT (Right)"
 		citizenship_policy = limited_citizenship
 		economic_policy = interventionism
 		ideology = conservative
@@ -34,7 +34,7 @@ party = {
 		end_date = 2092.1.1
 }
 party = {
-		name = "Liberal Coalition"
+		name = "Yunnan Democratic League (Right)"
 		citizenship_policy = full_citizenship
 		economic_policy = laissez_faire
 		ideology = liberal
@@ -45,7 +45,18 @@ party = {
 		end_date = 2092.1.1
 }
 party = {
-		name = "Socialist Federation"
+		name = "Yunnan KMT (Democratic Socialist)"
+		citizenship_policy = full_citizenship
+		economic_policy = state_capitalism
+		ideology = social_democrat
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = pacifism
+		start_date = 1836.1.1
+		end_date = 2092.1.1
+}
+party = {
+		name = "Yunnan KMT (Minsheng)"
 		citizenship_policy = limited_citizenship
 		economic_policy = state_capitalism
 		ideology = socialist
@@ -56,7 +67,7 @@ party = {
 		end_date = 2092.1.1
 }
 party = {
-		name = "Chinese Progressive Party"
+		name = "Yunnan Democratic League (Left)"
 		citizenship_policy = full_citizenship
 		economic_policy = interventionism
 		ideology = progressive
@@ -67,7 +78,7 @@ party = {
 		end_date = 2092.1.1
 }
 party = {
-		name = "Yunnan Peopls's Party"
+		name = "Yunnan Clique"
 		citizenship_policy = residency
 		economic_policy = state_capitalism
 		ideology = populist
@@ -78,7 +89,7 @@ party = {
 		end_date = 2092.1.1
 }
 party = {
-		name = "Traditionalist Faction"
+		name = "Reconstruction Society"
 		citizenship_policy = residency
 		economic_policy = state_capitalism
 		ideology = traditionalist
@@ -100,9 +111,9 @@ party = {
 		end_date = 2092.1.1
 }
 party = {
-		name = "party_communist_social"
+		name = "Communist Party of Yunnan (Reformist)"
 		citizenship_policy = full_citizenship
-		economic_policy = state_capitalism
+		economic_policy = planned_economy1
 		ideology = communist_social
 		religious_policy = pro_atheism
 		trade_policy = protectionism
@@ -110,17 +121,7 @@ party = {
 		start_date = 1836.1.1
 		end_date = 2092.1.1
 }
-party = {
-		name = "social_democrat_party"
-		citizenship_policy = full_citizenship
-		economic_policy = state_capitalism
-		ideology = social_democrat
-		religious_policy = secularized
-		trade_policy = protectionism
-		war_policy = pacifism
-		start_date = 1836.1.1
-		end_date = 2092.1.1
-}
+
 unit_names = {
 	carrier = {
 		"Nan Shin" "Pao Nim" "Ying Ching" "Ton Chi" "Hai Yung" "Hai Shew" "Hai Shen" "Ying Swei" "Fei Hung" "Chao Ho" "Hai Chi" "Ying Swei" "Chao Ho" "Ning Hai" "Ping Hai" "Chung king" "Nan Shin" "Pao Nim" "Ying Ching" "Ton Chi" "Hai Yung" "Hai Shew" "Hai Shen" "Ying Swei" "Fei Hung"
