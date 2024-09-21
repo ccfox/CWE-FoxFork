@@ -101,7 +101,7 @@ party = {
 		end_date = 2100.1.1
 }
 party = {
-		name = "Andean Progress Initiative"
+		name = "Guardia Indígena"
 		citizenship_policy = full_citizenship
 		economic_policy = interventionism
 		ideology = progressive
