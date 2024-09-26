@@ -654,6 +654,14 @@ country_event = {
 		
 		has_country_flag = romanian_de_stalinization
 		has_country_flag = ana_pauker_romania
+		
+		OR = {
+			party_position = {
+				ideology = communist 
+				position = limited_citizenship 
+			}
+			NOT = { has_accepted_culture = hungarian }
+		}
 	}
 
 	mean_time_to_happen = { months = 2 }
@@ -662,6 +670,11 @@ country_event = {
 		name = "We will recreate this organization."
 		
 		add_accepted_culture = hungarian
+		
+		change_party_position = {
+			ideology = communist 
+			position = full_citizenship 
+		}
 		
 		any_pop = { 
 			limit = { AND = { culture = hungarian OR = { strata = poor strata = middle } } }
@@ -2272,6 +2285,11 @@ country_event = {
 		name = "Technocrats seize the party apparatus!"
 		clr_country_flag = rom_zoia
 		set_country_flag = technocrats_rom
+		
+		change_party_name = {
+			ideology = ruling_party 
+			name = "Romanian Communist Party (Technocrats)"
+		}
 		
 		#Technocratic Government
 		political_reform = elitist_service

@@ -773,6 +773,11 @@ country_event = {
 	option = {
 		name = "There is no need to provide them special priviledges."
 		
+		change_party_position = {
+			ideology = ruling_party 
+			position = limited_citizenship 
+		}
+		
 		any_pop = { 
 			limit = { culture = hungarian }
 			militancy = 5
@@ -1211,6 +1216,11 @@ country_event = {
 		name = "Hungarians are agents of separatism and revision!"
 		remove_accepted_culture = hungarian
 		
+		change_party_position = {
+			ideology = ruling_party 
+			position = limited_citizenship 
+		}
+		
 		any_pop = { 
 			limit = { culture = hungarian }
 			militancy = 10
@@ -1543,6 +1553,36 @@ country_event = {
 		
 		ruling_party_ideology = communist_social
 		
+
+
+		#random_owned = {
+		#	limit = {
+		#		tag = ROM
+		#		party_position = {
+		#			ideology = communist 
+		#			position = limited_citizenship 
+		#		}
+		#	}
+		#	owner = { 
+		#		change_party_position = {
+		#			ideology = ruling_party 
+		#			position = limited_citizenship 
+		#		}
+		#	}
+		#}
+		
+		#ROM = {
+		#	limit = {
+		#		party_position = {
+		#			ideology = communist 
+		#			position = limited_citizenship 
+		#		}
+		#	}
+		#	change_party_position = {
+		#		ideology = ruling_party 
+		#		position = limited_citizenship 
+		#	}
+		#}
 		
 		any_pop = { 
 			limit = { strata = rich }
@@ -1942,6 +1982,11 @@ country_event = {
 		clr_country_flag = magyar_autonomy
 		
 		remove_accepted_culture = hungarian
+		
+		change_party_position = {
+			ideology = ruling_party 
+			position = limited_citizenship 
+		}
 		
 		any_pop = { 
 			limit = { culture = hungarian }
@@ -3155,6 +3200,11 @@ country_event = {
 		country_event = 800054
 		ruling_party_ideology = communist_social
 		
+		change_party_name = {
+			ideology = ruling_party 
+			name = "National Salvation Front"
+		}
+		
 		election = yes
 		
 		clr_country_flag = nicolae_ceausescu_flag
@@ -3326,6 +3376,11 @@ country_event = {
 		government = democracy 
 		country_event = 800054
 		ruling_party_ideology = conservative
+		
+		change_party_name = {
+			ideology = communist_social 
+			name = "Romanian Communist Party" 
+		}
 		
 		random_owned = { #This should give the player or AI the modifier if they don't have a majority support
 			limit = { owner = { AND = { tag = ROM NOT = { OR = { pop_majority_ideology = conservative pop_majority_ideology = liberal pop_majority_ideology = big_tent } } } } }
@@ -3531,7 +3586,11 @@ country_event = {
 		government = democracy
 		country_event = 800054
 		ruling_party_ideology = liberal
-	
+		
+		change_party_name = {
+			ideology = communist_social 
+			name = "Romanian Communist Party" 
+		}
 		
 		#Romania is a Presidential republic
 		set_country_flag = presidential_system_republic
@@ -3724,6 +3783,11 @@ country_event = {
 		country_event = 800054
 		ruling_party_ideology = conservative
 		
+		change_party_name = {
+			ideology = communist_social 
+			name = "Romanian Communist Party" 
+		}
+		
 		#Romania is a Semi-Presidential republic
 		clr_country_flag = presidential_system_republic
 		set_country_flag = semi_presidential_system_republic
@@ -3836,6 +3900,11 @@ country_event = {
 		country_event = 800054
 		ruling_party_ideology = socialist
 		
+		change_party_name = {
+			ideology = communist_social 
+			name = "Romanian Communist Party" 
+		}
+		
 		any_pop = { 
 			limit = { strata = rich }
 			ideology = { factor = 0.1 value = conservative }
@@ -3908,6 +3977,11 @@ country_event = {
 	option = {
 		name = "Perhaps we can still find our own path to Socialism."
 		badboy = 5
+		
+		change_party_name = {
+			ideology = communist_social 
+			name = "Romanian Communist Party" 
+		}
 		
 		any_pop = { 
 			limit = { strata = rich }
