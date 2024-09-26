@@ -10,21 +10,18 @@ political_decisions = {
 			war = no
 			is_vassal = no
 
-			ruling_party_ideology = traditionalist
+			OR = { ruling_party_ideology = traditionalist ruling_party_ideology = nationalist ruling_party_ideology = populist }
 
-			OR = { 
-				KUK = { all_core = { owned_by = THIS } }
 
-				AND = { 
-					OR = { is_sphere_leader_of = AUS is_our_vassal = AUS tag = AUS }
-					OR = { is_sphere_leader_of = HUN is_our_vassal = HUN tag = HUN }
-					OR = { is_sphere_leader_of = CZH is_our_vassal = CZH tag = CZH CZH = { exists = no } }
-					OR = { is_sphere_leader_of = BOH is_our_vassal = BOH tag = BOH BOH = { exists = no } }
-					OR = { is_sphere_leader_of = SLV is_our_vassal = SLV tag = SLV SLV = { exists = no } }
-					OR = { is_sphere_leader_of = SLO is_our_vassal = SLO tag = SLO SLO = { exists = no } }
-				}
- 
+			AND = { 
+				OR = { is_sphere_leader_of = AUS is_our_vassal = AUS tag = AUS }
+				OR = { is_sphere_leader_of = HUN is_our_vassal = HUN tag = HUN }
+				OR = { is_sphere_leader_of = CZH is_our_vassal = CZH tag = CZH CZH = { exists = no } }
+				OR = { is_sphere_leader_of = BOH is_our_vassal = BOH tag = BOH BOH = { exists = no } }
+				OR = { is_sphere_leader_of = SLV is_our_vassal = SLV tag = SLV SLV = { exists = no } }
+				OR = { is_sphere_leader_of = SLO is_our_vassal = SLO tag = SLO SLO = { exists = no } }
 			}
+ 
 		}
 		effect = {
 			prestige = 100
@@ -48,7 +45,7 @@ political_decisions = {
 		
 		}
 		ai_will_do = { 
-			factor = 0
+			factor = 1
 			modifier = {
 				factor = 0 
 				OR = { AUS = { ai = no } HUN = { ai = no } CZH = { ai = no } BOH = { ai = no } SLV = { ai = no } SLO = { ai = no } } 
