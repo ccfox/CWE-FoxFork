@@ -145,7 +145,7 @@
 	 
 	farmers = {
 		culture = assyrian
-		religion =  catholic 
+		religion =  syriac_christianity 
 		size = 10000 #Unclear estimates from the time period
 	 } 
 
@@ -191,7 +191,7 @@
 	 } 
 	farmers = {
 		culture = assyrian
-		religion =  catholic 
+		religion =  syriac_christianity 
 		size = 38000 #Only demographics for 1943 and 1953 31k->42k
 	 } 
 	farmers = {
@@ -394,7 +394,7 @@
 	 
 	farmers = {
 		culture = assyrian
-		religion =  catholic 
+		religion =  syriac_christianity 
 		size = 10000 #Unclear estimates from the time period
 	 } 
 

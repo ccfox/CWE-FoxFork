@@ -3709,7 +3709,7 @@ theocracy_rebels = {
 		modifier = {
 			factor = 1.25
 			country = { has_country_flag = yom_kippur_war }
-			has_pop_religion = jewish
+			OR = { has_pop_religion = jewish has_pop_religion = haredim }
 		}
 		modifier = {
 			factor = 1.25
@@ -3973,7 +3973,7 @@ islamist_sunni_rebels = {
 		}
 		modifier = {
 			factor = 1.25
-			has_pop_religion = jewish
+			OR = { has_pop_religion = jewish has_pop_religion = haredim }
 		}
 
 		modifier = {
@@ -4236,7 +4236,7 @@ islamist_ibad_rebels = {
 		}
 		modifier = {
 			factor = 1.25
-			has_pop_religion = jewish
+			OR = { has_pop_religion = jewish has_pop_religion = haredim }
 		}
 
 		modifier = {
@@ -4505,7 +4505,7 @@ islamist_shiite_rebels = {
 		}
 		modifier = {
 			factor = 1.25
-			has_pop_religion = jewish
+			OR = { has_pop_religion = jewish has_pop_religion = haredim }
 		}
 
 		modifier = {
@@ -4768,7 +4768,7 @@ islamist_druze_rebels = {
 		}
 		modifier = {
 			factor = 1.25
-			has_pop_religion = jewish
+			OR = { has_pop_religion = jewish has_pop_religion = haredim }
 		}
 
 		modifier = {

@@ -117,7 +117,7 @@
 	 } 
 	farmers = {
 		culture = metis
-		religion =  animist 
+		religion =  animist_america 
 		size = 252
 	 } 
 	farmers = {
@@ -127,7 +127,7 @@
 	 } 
 	farmers = {
 		culture = inuit
-		religion =  animist 
+		religion =  animist_america 
 		size = 426
 	 } 
 	farmers = {
@@ -245,7 +245,7 @@
 	 } 
 	farmers = {
 		culture = metis
-		religion = animist
+		religion = animist_america
 		size = 500
 	 } 
 	farmers = {
@@ -491,7 +491,7 @@
 	 } 
 	farmers = {
 		culture = metis
-		religion =  animist 
+		religion =  animist_america 
 		size = 71
 	 } 
 	farmers = {
@@ -1413,7 +1413,7 @@
 	 } 
 	farmers = {
 		culture = inuit
-		religion = animist
+		religion = animist_america
 		size = 300
 	 } 
 	farmers = {
@@ -2968,7 +2968,7 @@
 	 } 
 	farmers = {
 		culture = metis
-		religion =  animist 
+		religion =  animist_america 
 		size = 100
 	 } 
 	farmers = {
@@ -3086,7 +3086,7 @@
 	 } 
 	farmers = {
 		culture = metis
-		religion =  animist 
+		religion =  animist_america 
 		size = 500
 	 } 
 	farmers = {
@@ -3611,7 +3611,7 @@
 	 } 
 	farmers = {
 		culture = metis
-		religion =  animist 
+		religion =  animist_america 
 		size = 35
 	 } 
 	farmers = {

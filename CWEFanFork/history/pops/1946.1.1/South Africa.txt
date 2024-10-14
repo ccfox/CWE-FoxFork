@@ -4378,7 +4378,7 @@
 3352 = {
 	officers = {
 		culture = african_minor
-		religion =  animist
+		religion =  animist_africa
 		size = 58
 	 } 
 	officers = {
@@ -4388,7 +4388,7 @@
 	 } 
 	soldiers = {
 		culture = african_minor
-		religion =  animist
+		religion =  animist_africa
 		size = 132
 	 } 
 	soldiers = {
@@ -4398,7 +4398,7 @@
 	 } 
 	capitalists = {
 		culture = african_minor
-		religion =  animist
+		religion =  animist_africa
 		size = 493
 	 } 
 	capitalists = {
@@ -4408,12 +4408,12 @@
 	 } 
 	bureaucrats = {
 		culture = african_minor
-		religion =  animist
+		religion =  animist_africa
 		size = 19
 	 } 
 	aristocrats = {
 		culture = african_minor
-		religion =  animist
+		religion =  animist_africa
 		size = 98
 	 } 
 	aristocrats = {
@@ -4423,7 +4423,7 @@
 	 } 
 	clergymen = {
 		culture = african_minor
-		religion = animist
+		religion = animist_africa
 		size = 97
 	 } 
 	clergymen = {
@@ -4433,7 +4433,7 @@
 	 } 
 	artisans = {
 		culture = african_minor
-		religion = animist
+		religion = animist_africa
 		size = 380
 	 } 
 	artisans = {
@@ -4443,7 +4443,7 @@
 	 } 
 	farmers = {
 		culture = african_minor
-		religion = animist
+		religion = animist_africa
 		size = 853
 	 } 
 	farmers = {
@@ -4546,7 +4546,7 @@
 	 } 
 	soldiers = {
 		culture = coloured
-		religion =  animist
+		religion =  animist_africa
 		size = 493
 	 } 
 	soldiers = {
@@ -4556,7 +4556,7 @@
 	 } 
 	capitalists = {
 		culture = coloured
-		religion =  animist
+		religion =  animist_africa
 		size = 823
 	 } 
 	capitalists = {
@@ -4581,7 +4581,7 @@
 	 } 
 	clergymen = {
 		culture = coloured
-		religion = animist
+		religion = animist_africa
 		size = 266
 	 } 
 	clergymen = {
@@ -4591,7 +4591,7 @@
 	 } 
 	artisans = {
 		culture = coloured
-		religion = animist
+		religion = animist_africa
 		size = 306
 	 } 
 	artisans = {
@@ -4601,7 +4601,7 @@
 	 } 
 	farmers = {
 		culture = coloured
-		religion = animist
+		religion = animist_africa
 		size = 1020
 	 } 
 	farmers = {

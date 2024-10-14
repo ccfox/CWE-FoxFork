@@ -3854,8 +3854,9 @@ country_event = {
 	picture = "supportwar"
 
 	trigger = {
-		NOT = { has_country_flag = desecularized }
-		religious_policy = moralism
+		NOT = { has_country_flag = desecularized } #Why?
+		#religion = secularism
+		religious_policy = moralism #OR = { religious_policy = moralism religious_policy = religious_pluralism }
 	}
 
 	mean_time_to_happen = {
@@ -3893,7 +3894,7 @@ country_event = {
 	option = {
 		name = EVT_4431_A # We have regained part of our national fabric
 
-		random_pop = {
+		random_pop = { #This code needs to be heavily improved.
 			limit = {
 				location = { has_province_modifier = religion_flag }
 				is_primary_culture = yes
@@ -4046,7 +4047,7 @@ country_event = {
 			random_country = { limit = { tag = THIS } religion = sikh }
 		}
 
-		random_pop = {
+		random_pop = { 
 			limit = {
 				location = { has_province_modifier = religion_flag }
 				is_primary_culture = yes
@@ -4054,6 +4055,16 @@ country_event = {
 				religion = animist
 			}
 			random_country = { limit = { tag = THIS } religion = animist }
+		}
+		
+		random_pop = {
+			limit = {
+				location = { has_province_modifier = religion_flag }
+				is_primary_culture = yes
+				country = { capital_scope = { any_pop = { is_primary_culture = yes religion = yazidi } } }
+				religion = yazidi
+			}
+			random_country = { limit = { tag = THIS } religion = yazidi }
 		}
 
 		any_pop = { limit = { is_state_religion = no } consciousness = 1 }
@@ -4073,14 +4084,15 @@ country_event = {
 	picture = "Secularism"
 
 	trigger = {
-		NOT = { religious_policy = moralism }
-		has_country_flag = desecularized
+		NOT = { religious_policy = moralism } #religious_policy = pro_atheism
+		has_country_flag = desecularized #WHY?!
 		NOT = { government = theocracy }
+		NOT = { religion = secularism }
 	}
 
 	mean_time_to_happen = {
 		months = 12
-		modifier = {
+		modifier = { #Don't need this, just decrease mtth
 			factor = 0.4
 			religious_policy = pro_atheism
 		}

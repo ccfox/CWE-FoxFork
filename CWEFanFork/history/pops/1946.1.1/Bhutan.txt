@@ -32,7 +32,7 @@
 	 }  
 	farmers = {
 		culture = ngalop
-		religion =  animist 
+		religion =  animist_asia 
 		size = 1438
 	 } 	 
 	farmers = {
