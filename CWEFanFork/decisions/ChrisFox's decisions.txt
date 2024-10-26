@@ -244,4 +244,32 @@ political_decisions = {
 		}
 	}
 
+ukraine_neo_soviet = { #Annexation of Ukraine if Ukraine and Russia are socialist republics
+  picture = "RUS_annex_UKR"
+
+  potential = {
+    tag = RUS
+    exists = UKR
+OR = { government = proletarian_dictatorship government = socialist_democracy }
+  }
+
+  allow = {
+neighbour = UKR
+is_vassal = no
+war = no
+UKR= { war = no OR = { AND = { in_sphere = RUS is_vassal = no } vassal_of = RUS } }
+UKR= { OR = { government = proletarian_dictatorship government = socialist_democracy } }
+  }
+
+  effect = {
+   relation = { who = USA value = -100 }
+   inherit = UKR
+   badboy = 5
+	prestige = -25
+  }
+		ai_will_do = {
+			factor = 1
+		}
+}
+
 }

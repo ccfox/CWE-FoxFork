@@ -39,6 +39,42 @@ christian = {
 		icon = 21
 		color = { 0 0 0.5 }
 	}
+
+	#folk_christianity = { #Probably need better icon.
+	#	icon = 32
+	#	color = { 0.2 0.2 0.6 }
+	#}
+
+	#folk_catholic = { #Probably need better icon.
+	#	icon = 33
+	#	color = { 0.7 0.7 0.2 }
+	#}
+
+	#folk_orthodox = { #Probably need better icon.
+	#	icon = 34
+	#	color = { 0.6 0.4 0.2 }
+	#}
+
+	#anglican = {
+	#	icon = 1
+	#	color = { 0.8 0.8 0 }
+	#}
+
+	#reformed = {
+	#	icon = 1
+	#	color = { 0.8 0.8 0 }
+	#}
+
+	#czech_hussite = { 
+	#	icon = 1
+	#	color = { 0.8 0.8 0 }
+	#}
+
+	#gnostic = { #Might not include this one, overlaps with Folk Catholicism/Folk Christianity. Also mostly arose in the 60s and 70s.
+	#	icon = 1
+	#	color = { 0.8 0.8 0 }
+	#}
+
 }
 
 muslim = {
@@ -58,7 +94,7 @@ muslim = {
 		
 	}
 
-	druze = {
+	druze = { #Going to be moved into pagan group, they do not identify as Muslim by and large.
 		icon = 20
 		color = { 0 0.2 0.6 }
 	}
@@ -67,6 +103,22 @@ muslim = {
 		icon = 25
 		color = { 0.7 0.7 0 }
 	}
+
+	#folk_islam = { #Probably need better icon.
+	#	icon = 35
+	#	color = { 0.2 0.5 0.2 }
+	#}
+
+	#ahmadiyya = { #Need Icon.
+	#	icon = 25
+	#	color = { 0.8 0.7 0.8 }
+	#}
+
+	#ismali = { #Need Icon.
+	#	icon = 25
+	#	color = { 0.8 0.7 0.8 }
+	#}
+	
 }
 
 jewish_group = {
@@ -138,6 +190,11 @@ pagan = {
 		icon = 22
 		color = { 0.4 0.0 1.0 }
 	}
+
+	#tengri = {
+	#	icon = 1
+	#	color = { 0.1 0.1 0.3 }
+	#}
 
 	animist = { #Generic Folk Religion
 		icon = 18

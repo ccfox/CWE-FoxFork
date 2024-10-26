@@ -1412,5 +1412,8 @@ conversion_chance = { # 1.0
 			
 		}
 	}
+	
+	modifier = { factor = -0.2 OR = { has_pop_religion = animist_asia has_pop_religion = yazidi has_pop_religion = syriac_christianity has_pop_religion = sufi has_pop_religion = mormon } }
+	modifier = { factor = -0.5 OR = { has_pop_religion = animist_european has_pop_religion = bahai has_pop_religion = chinese_folk_religion has_pop_religion = jain } }
 
 }
