@@ -1912,7 +1912,7 @@ country_event = { # Conscription
 		name = "Let's cut the time."
 		
 		country_event = 9001121
-		political_reform = gender_neutrallity
+		political_reform = one_year_draft
 		ai_chance = { factor = 0.9 }
 	}
 	
@@ -1920,7 +1920,7 @@ country_event = { # Conscription
 		name = "It's become useless."
 		
 		country_event = 9001121
-		political_reform = lgbt_outlawed
+		political_reform = no_draft
 		ai_chance = { factor = 0.1 }
 	}
 }

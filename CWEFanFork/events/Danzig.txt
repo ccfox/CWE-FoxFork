@@ -108,7 +108,7 @@ country_event = {
 		political_reform = state_controlled_unions
 		political_reform = parties_promote_democratic
 		political_reform = open_immigration
-		political_reform = lgbt_equal_rights #2 year draft
+		political_reform = two_year_draft #2 year draft
 		political_reform = minorities_affirmative_action
 		political_reform = jefferson_method
 		

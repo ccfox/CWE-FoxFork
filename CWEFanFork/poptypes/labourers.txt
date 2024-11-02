@@ -1159,13 +1159,13 @@ clergymen =
 		factor = 0.01
 
 		#Conscription laws limit the total soldier pop size unless there is a war
-		modifier = { factor = -100 soldiers = 0.01 country = { lgbt_rights = lgbt_outlawed war = no } }
+		modifier = { factor = -100 soldiers = 0.01 country = { conscription_law = no_draft war = no } }
 		
-		modifier = { factor = -100 soldiers = 0.02 country = { lgbt_rights = gender_neutrallity war = no } }
+		modifier = { factor = -100 soldiers = 0.02 country = { conscription_law = one_year_draft war = no } }
 
-		modifier = { factor = -100 soldiers = 0.03 country = { lgbt_rights = lgbt_equal_rights war = no } }
+		modifier = { factor = -100 soldiers = 0.03 country = { conscription_law = two_year_draft war = no } }
 
-		modifier = { factor = -100 soldiers = 0.04 country = { lgbt_rights = lgbt_allowed war = no } }
+		modifier = { factor = -100 soldiers = 0.04 country = { conscription_law = three_year_draft war = no } }
 		
 		#Special
 		modifier = { factor = 5 country = { has_country_flag = indo_con } }
@@ -4502,13 +4502,13 @@ issues = {
 		modifier = { factor = 1.05 literacy = 0.40 }
 	}
 	
-# lgbt_rights
-	# lgbt_outlawed
+# conscription_law
+	# no_draft
 
-	lgbt_outlawed = {
+	no_draft = {
 		factor = 1
 		
-		modifier = { factor = 0 NOT = { is_next_reform = lgbt_outlawed } }
+		modifier = { factor = 0 NOT = { is_next_reform = no_draft } }
 
 		modifier = { factor = 1.25 country = { has_country_flag = world_low } }
 
@@ -4528,10 +4528,10 @@ issues = {
 
 	}
 
-	gender_neutrallity = {
+	one_year_draft = {
 		factor = 1
 
-		modifier = { factor = 0 NOT = { is_next_reform = gender_neutrallity } }
+		modifier = { factor = 0 NOT = { is_next_reform = one_year_draft } }
 
 		modifier = { factor = 1.25 country = { has_country_flag = world_low } }
 
@@ -4553,10 +4553,10 @@ issues = {
 
 	}
 
-	lgbt_equal_rights = {
+	two_year_draft = {
 		factor = 1
 
-		modifier = { factor = 0 NOT = { is_next_reform = lgbt_equal_rights } }
+		modifier = { factor = 0 NOT = { is_next_reform = two_year_draft } }
 
 		modifier = { factor = 1.25 country = { has_country_flag = world_medium } }
 
@@ -4578,10 +4578,10 @@ issues = {
 
 	}
 
-	lgbt_allowed = {
+	three_year_draft = {
 		factor = 1
 
-		modifier = { factor = 0 NOT = { is_next_reform = lgbt_allowed } }
+		modifier = { factor = 0 NOT = { is_next_reform = three_year_draft } }
 
 		modifier = { factor = 1.25 country = { has_country_flag = world_high } }
 
@@ -4603,10 +4603,10 @@ issues = {
 
 	}
 
-	lgbt_promoted = {
+	mandatory_service = {
 		factor = 1
 
-		modifier = { factor = 0 NOT = { is_next_reform = lgbt_promoted } }
+		modifier = { factor = 0 NOT = { is_next_reform = mandatory_service } }
 
 		modifier = { factor = 1.25 country = { has_country_flag = world_high } }
 

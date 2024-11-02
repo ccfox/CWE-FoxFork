@@ -1612,7 +1612,7 @@ country_event = { # The Type of Army
 		prestige = 150
 		money = -1500000
 		add_country_modifier = { name = soviet_defensive_army duration = 3650 }
-		political_reform = lgbt_equal_rights # two_year_draft
+		political_reform = two_year_draft # two_year_draft
 		random_country = { limit = { tag = USA OR = { government = democracy government = democracy1 } is_vassal = no } relation = { who = THIS value = 100 } }
 		
 		#Soldiers are not pleased
@@ -1627,7 +1627,7 @@ country_event = { # The Type of Army
 	
 	option = {
 		name = "The army is our backbone."
-		political_reform = lgbt_promoted # mandatory_service
+		political_reform = mandatory_service # mandatory_service
 		ai_chance = { factor = 0.2 }
 	}
 }

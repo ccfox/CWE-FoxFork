@@ -338,9 +338,9 @@ country_event = {
 	trigger = {
 
 		OR = { 
-			lgbt_rights = lgbt_promoted
-			lgbt_rights = lgbt_allowed
-			lgbt_rights = lgbt_equal_rights
+			conscription_law = mandatory_service
+			conscription_law = three_year_draft
+			conscription_law = two_year_draft
 		}
 
 		war = no
@@ -468,20 +468,20 @@ country_event = {
 
 		#two_year_draft to one_year_draft
 		random_owned = { 
-			limit = { owner = { lgbt_rights = lgbt_equal_rights } }
-			owner = { political_reform = gender_neutrallity }
+			limit = { owner = { conscription_law = two_year_draft } }
+			owner = { political_reform = one_year_draft }
 		}
 
 		#three_year_draft to two_year_draft
 		random_owned = { 
-			limit = { owner = { lgbt_rights = lgbt_allowed } }
-			owner = { political_reform = lgbt_equal_rights }
+			limit = { owner = { conscription_law = three_year_draft } }
+			owner = { political_reform = two_year_draft }
 		}
 
 		#mandatory_service to three_year_draft
 		random_owned = { 
-			limit = { owner = { lgbt_rights = lgbt_promoted } }
-			owner = { political_reform = lgbt_allowed }
+			limit = { owner = { conscription_law = mandatory_service } }
+			owner = { political_reform = three_year_draft }
 		}
 
 		ai_chance = { factor = 0.1 }
@@ -499,7 +499,7 @@ country_event = {
 
 	trigger = {
 
-		lgbt_rights = gender_neutrallity
+		conscription_law = one_year_draft
 
 		war = no
 		has_recently_lost_war = no
@@ -612,7 +612,7 @@ country_event = {
 			}
 		}
 
-		political_reform = lgbt_outlawed
+		political_reform = no_draft
 
 		ai_chance = { factor = 0.1 }
 
