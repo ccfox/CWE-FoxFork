@@ -21344,8 +21344,13 @@
 	soldiers = {
 		culture = european
 		religion = secularism
-		size = 1104
-	 } 
+		size = 1054
+	 }
+	soldiers = {
+		culture = european
+		religion = animist_european
+		size = 50
+	 }
 	capitalists = {
 		culture = european
 		religion =  protestant 

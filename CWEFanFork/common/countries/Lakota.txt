@@ -25,7 +25,7 @@ party = {
 }
 
 party = {
-		name = "party_conservative_0_generic_USA"
+		name = "Lakota Freedom Movement (Right)"
 		citizenship_policy = limited_citizenship
 		economic_policy = interventionism
 		ideology = conservative
@@ -36,7 +36,7 @@ party = {
 		end_date = 2092.1.1
 }
 party = {
-		name = "party_liberal_0_generic_USA"
+		name = "Lakota Freedom Movement (Left)"
 		citizenship_policy = full_citizenship
 		economic_policy = laissez_faire
 		ideology = liberal
@@ -47,7 +47,18 @@ party = {
 		end_date = 2092.1.1
 }
 party = {
-		name = "party_socialist_0_generic_USA"
+		name = "Lakota People's Party (Right)"
+		citizenship_policy = full_citizenship
+		economic_policy = state_capitalism
+		ideology = social_democrat
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = pacifism
+		start_date = 1836.1.1
+		end_date = 2092.1.1
+}
+party = {
+		name = "Lakota People's Party (Left)"
 		citizenship_policy = limited_citizenship
 		economic_policy = state_capitalism
 		ideology = socialist
@@ -58,7 +69,7 @@ party = {
 		end_date = 2092.1.1
 }
 party = {
-		name = "party_progressive_0_generic_USA"
+		name = "Lakota People's Party"
 		citizenship_policy = full_citizenship
 		economic_policy = interventionism
 		ideology = progressive
@@ -69,7 +80,7 @@ party = {
 		end_date = 2092.1.1
 }
 party = {
-		name = "party_populist_0_generic_USA"
+		name = "Lakota Freedom Movement"
 		citizenship_policy = residency
 		economic_policy = state_capitalism
 		ideology = populist
@@ -113,17 +124,7 @@ party = {
 		end_date = 2092.1.1
 }
 
-party = {
-		name = "social_democrat_party"
-		citizenship_policy = full_citizenship
-		economic_policy = state_capitalism
-		ideology = social_democrat
-		religious_policy = secularized
-		trade_policy = protectionism
-		war_policy = pacifism
-		start_date = 1836.1.1
-		end_date = 2092.1.1
-}
+
 unit_names = {
 	carrier = {
 		"Louis Riel" "Gabriel Dumont" "Jean-Baptiste Wilkie" Pitikwahanapiwiyin Kamiokisihkwew  Saskatchewan "St. Laurent"

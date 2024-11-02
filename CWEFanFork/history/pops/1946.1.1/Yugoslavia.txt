@@ -378,8 +378,13 @@
 	farmers = {
 		culture = bosniak
 		religion =  sunni 
-		size = 18332
+		size = 13332
 	 } 
+	farmers = {
+		culture = bosniak
+		religion =  sufi 
+		size = 5000
+	 }
 	farmers = {
 		culture = serb
 		religion =  orthodox 
@@ -1947,17 +1952,32 @@
 	clergymen = {
 		culture = bosniak
 		religion =  sunni 
-		size = 1242
+		size = 1142
+	 }
+	clergymen = {
+		culture = bosniak
+		religion =  sufi 
+		size = 100
 	 } 
 	artisans = {
 		culture = bosniak
 		religion =  sunni 
-		size = 3495
+		size = 3195
 	 } 
+	artisans = {
+		culture = bosniak
+		religion =  sufi 
+		size = 300
+	 }
 	craftsmen = {
 		culture = bosniak
 		religion =  sunni 
-		size = 88413
+		size = 80413
+	 } 
+	craftsmen = {
+		culture = bosniak
+		religion =  sufi 
+		size = 8000
 	 } 
 	farmers = {
 		culture = serb
@@ -2372,8 +2392,13 @@
 	farmers = {
 		culture = bosniak
 		religion =  sunni 
-		size = 25110
+		size = 20110
 	 } 
+	farmers = {
+		culture = bosniak
+		religion =  sufi 
+		size = 5000
+	 }
 	farmers = {
 		culture = serb
 		religion =  orthodox 

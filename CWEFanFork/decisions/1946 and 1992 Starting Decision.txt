@@ -295,7 +295,7 @@ random_owned = {
 	owner = { 
 		ISR = { 
 			all_core = { 
-				limit = { culture = jewish } 
+				limit = { is_culture_group = jewish_cultures } 
 				any_pop = { literacy = 0.15 } 
 			} 
 		}
