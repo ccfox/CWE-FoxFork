@@ -2189,7 +2189,7 @@
 	 } 
 	farmers = {
 		culture = hani
-		religion = chinese_folk_religion
+		religion = animist
 		size = 94588
 	 } 
 }
@@ -2812,7 +2812,7 @@
 	 } 
 	farmers = {
 		culture = miao
-		religion = chinese_folk_religion
+		religion = animist
 		size = 90937
 	 } 
 	farmers = {
@@ -2822,7 +2822,7 @@
 	 } 
 	farmers = {
 		culture = zhuang
-		religion =  chinese_folk_religion 
+		religion =  animist 
 		size = 204207
 	 } 
 	farmers = {
@@ -2915,7 +2915,7 @@
 	 } 
 	farmers = {
 		culture = miao
-		religion = chinese_folk_religion 
+		religion = animist 
 		size = 33000
 	 } 
 	farmers = {
@@ -3008,7 +3008,7 @@
 	 } 
 	farmers = {
 		culture = miao
-		religion = chinese_folk_religion 
+		religion = animist 
 		size = 200000
 	 } 
 	farmers = {
@@ -3018,7 +3018,7 @@
 	 } 
 	farmers = {
 		culture = dong
-		religion = chinese_folk_religion 
+		religion = animist 
 		size = 89485
 	 } 
 	farmers = {
@@ -3028,7 +3028,7 @@
 	 } 
 	farmers = {
 		culture = zhuang
-		religion = chinese_folk_religion 
+		religion = animist 
 		size = 55024
 	 } 
 	farmers = {
@@ -7629,37 +7629,37 @@
 	 } 
 	soldiers = {
 		culture = yi
-		religion =  chinese_folk_religion 
+		religion =  animist 
 		size = 1485
 	 } 
 	officers = {
 		culture = yi
-		religion = chinese_folk_religion
+		religion = animist
 		size = 178
 	 } 
 	farmers = {
 		culture = yi
-		religion =  chinese_folk_religion 
+		religion =  animist 
 		size = 119682
 	 } 
 	clerks = {
 		culture = yi
-		religion = chinese_folk_religion
+		religion = animist
 		size = 17
 	 } 
 	clergymen = {
 		culture = yi
-		religion =  chinese_folk_religion 
+		religion =  animist 
 		size = 1229
 	 } 
 	capitalists = {
 		culture = yi
-		religion = chinese_folk_religion
+		religion = animist
 		size = 614
 	 } 
 	bureaucrats = {
 		culture = yi
-		religion =  chinese_folk_religion 
+		religion =  animist 
 		size = 123
 	 } 
 	soldiers = {
@@ -7807,72 +7807,72 @@
 	 } 
 	soldiers = {
 		culture = yi
-		religion =  chinese_folk_religion 
+		religion =  animist 
 		size = 526
 	 } 
 	officers = {
 		culture = yi
-		religion = chinese_folk_religion
+		religion = animist
 		size = 63
 	 } 
 	farmers = {
 		culture = yi
-		religion =  chinese_folk_religion 
+		religion =  animist 
 		size = 42433
 	 } 
 	clerks = {
 		culture = yi
-		religion = chinese_folk_religion
+		religion = animist
 		size = 6
 	 } 
 	clergymen = {
 		culture = yi
-		religion =  chinese_folk_religion 
+		religion =  animist 
 		size = 436
 	 } 
 	capitalists = {
 		culture = yi
-		religion = chinese_folk_religion
+		religion = animist
 		size = 218
 	 } 
 	bureaucrats = {
 		culture = yi
-		religion =  chinese_folk_religion 
+		religion =  animist 
 		size = 44
 	 } 
 	soldiers = {
 		culture = hani
-		religion =  chinese_folk_religion 
+		religion =  animist 
 		size = 1289
 	 } 
 	officers = {
 		culture = hani
-		religion = chinese_folk_religion
+		religion = animist
 		size = 154
 	 } 
 	farmers = {
 		culture = hani
-		religion =  chinese_folk_religion 
+		religion =  animist 
 		size = 103883
 	 } 
 	clerks = {
 		culture = hani
-		religion = chinese_folk_religion
+		religion = animist
 		size = 15
 	 } 
 	clergymen = {
 		culture = hani
-		religion =  chinese_folk_religion 
+		religion =  animist 
 		size = 1067
 	 } 
 	capitalists = {
 		culture = hani
-		religion = chinese_folk_religion
+		religion = animist
 		size = 533
 	 } 
 	bureaucrats = {
 		culture = hani
-		religion =  chinese_folk_religion 
+		religion =  animist 
 		size = 107
 	 } 
 	soldiers = {
@@ -7990,72 +7990,72 @@
 	 } 
 	soldiers = {
 		culture = yi
-		religion =  chinese_folk_religion 
+		religion =  animist 
 		size = 469
 	 } 
 	officers = {
 		culture = yi
-		religion = chinese_folk_religion
+		religion = animist
 		size = 56
 	 } 
 	farmers = {
 		culture = yi
-		religion =  chinese_folk_religion 
+		religion =  animist 
 		size = 37819
 	 } 
 	clerks = {
 		culture = yi
-		religion = chinese_folk_religion
+		religion = animist
 		size = 5
 	 } 
 	clergymen = {
 		culture = yi
-		religion =  chinese_folk_religion 
+		religion =  animist 
 		size = 388
 	 } 
 	capitalists = {
 		culture = yi
-		religion = chinese_folk_religion
+		religion = animist
 		size = 194
 	 } 
 	bureaucrats = {
 		culture = yi
-		religion =  chinese_folk_religion 
+		religion =  animist 
 		size = 39
 	 } 
 	soldiers = {
 		culture = hani
-		religion =  chinese_folk_religion 
+		religion =  animist 
 		size = 1955
 	 } 
 	officers = {
 		culture = hani
-		religion = chinese_folk_religion
+		religion = animist
 		size = 234
 	 } 
 	farmers = {
 		culture = hani
-		religion =  chinese_folk_religion 
+		religion =  animist 
 		size = 157586
 	 } 
 	clerks = {
 		culture = hani
-		religion = chinese_folk_religion
+		religion = animist
 		size = 22
 	 } 
 	clergymen = {
 		culture = hani
-		religion =  chinese_folk_religion 
+		religion =  animist 
 		size = 1618
 	 } 
 	capitalists = {
 		culture = hani
-		religion = chinese_folk_religion
+		religion = animist
 		size = 809
 	 } 
 	bureaucrats = {
 		culture = hani
-		religion =  chinese_folk_religion 
+		religion =  animist 
 		size = 162
 	 } 
 	soldiers = {
@@ -9204,7 +9204,7 @@
 	 } 
 	farmers = {
 		culture = hani
-		religion = chinese_folk_religion
+		religion = animist
 		size = 7626
 	 } 
 }
@@ -9355,107 +9355,107 @@
 2631 = {
 	soldiers = {
 		culture = zhuang
-		religion =  chinese_folk_religion 
+		religion =  animist 
 		size = 1320
 	 } 
 	officers = {
 		culture = zhuang
-		religion = chinese_folk_religion
+		religion = animist
 		size = 158
 	 } 
 	farmers = {
 		culture = zhuang
-		religion =  chinese_folk_religion 
+		religion =  animist 
 		size = 106373
 	 } 
 	clerks = {
 		culture = zhuang
-		religion = chinese_folk_religion
+		religion = animist
 		size = 15
 	 } 
 	clergymen = {
 		culture = zhuang
-		religion =  chinese_folk_religion 
+		religion =  animist 
 		size = 1092
 	 } 
 	capitalists = {
 		culture = zhuang
-		religion = chinese_folk_religion
+		religion = animist
 		size = 546
 	 } 
 	bureaucrats = {
 		culture = zhuang
-		religion =  chinese_folk_religion 
+		religion =  animist 
 		size = 109
 	 } 
 	soldiers = {
 		culture = yi
-		religion =  chinese_folk_religion 
+		religion =  animist 
 		size = 668
 	 } 
 	officers = {
 		culture = yi
-		religion = chinese_folk_religion
+		religion = animist
 		size = 80
 	 } 
 	farmers = {
 		culture = yi
-		religion =  chinese_folk_religion 
+		religion =  animist 
 		size = 53879
 	 } 
 	clerks = {
 		culture = yi
-		religion = chinese_folk_religion
+		religion = animist
 		size = 8
 	 } 
 	clergymen = {
 		culture = yi
-		religion =  chinese_folk_religion 
+		religion =  animist 
 		size = 553
 	 } 
 	capitalists = {
 		culture = yi
-		religion = chinese_folk_religion
+		religion = animist
 		size = 276
 	 } 
 	bureaucrats = {
 		culture = yi
-		religion =  chinese_folk_religion 
+		religion =  animist 
 		size = 55
 	 } 
 	soldiers = {
 		culture = miao
-		religion =  chinese_folk_religion 
+		religion =  animist 
 		size = 829
 	 } 
 	officers = {
 		culture = miao
-		religion = chinese_folk_religion
+		religion = animist
 		size = 99
 	 } 
 	farmers = {
 		culture = miao
-		religion =  chinese_folk_religion 
+		religion =  animist 
 		size = 66807
 	 } 
 	clerks = {
 		culture = miao
-		religion = chinese_folk_religion
+		religion = animist
 		size = 9
 	 } 
 	clergymen = {
 		culture = miao
-		religion =  chinese_folk_religion 
+		religion =  animist 
 		size = 686
 	 } 
 	capitalists = {
 		culture = miao
-		religion = chinese_folk_religion
+		religion = animist
 		size = 343
 	 } 
 	bureaucrats = {
 		culture = miao
-		religion =  chinese_folk_religion 
+		religion =  animist 
 		size = 68
 	 } 
 	soldiers = {

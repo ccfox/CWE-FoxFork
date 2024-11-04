@@ -17351,13 +17351,8 @@
 	farmers = {
 		culture = latvian
 		religion = secularism
-		size = 32217
+		size = 32417
 	 } 
-	farmers = {
-		culture = latvian
-		religion = animist_european
-		size = 200
-	 }
 	farmers = {
 		culture = byelorussian
 		religion =  orthodox 
@@ -17522,13 +17517,8 @@
 	farmers = {
 		culture = latvian
 		religion = secularism
-		size = 99
+		size = 299
 	 } 
-	farmers = {
-		culture = latvian
-		religion = animist_european
-		size = 200
-	 }
 	farmers = {
 		culture = byelorussian
 		religion =  orthodox 
@@ -17703,13 +17693,8 @@
 	farmers = {
 		culture = latvian
 		religion = secularism
-		size = 4648
-	 }
-	farmers = {
-		culture = latvian
-		religion = animist_european
-		size = 200
-	 }
+		size = 4848
+	 } 
 }
 #Liepaja - Liepaja (163000/40750 POPS)
 359 = {
@@ -17884,13 +17869,8 @@
 	farmers = {
 		culture = lithuanian
 		religion = secularism
-		size = 8923
+		size = 8073
 	 } 
-	farmers = {
-		culture = lithuanian
-		religion = animist_european
-		size = 150
-	 }
 }
 #Kaunas - Kaunas (512000/128000 POPS)
 361 = {
@@ -19904,13 +19884,8 @@
 	soldiers = {
 		culture = german
 		religion = secularism
-		size = 43
+		size = 83
 	 } 
-	soldiers = {
-		culture = german
-		religion = animist_european
-		size = 40
-	 }
 	bureaucrats = {
 		culture = german
 		religion =  catholic 

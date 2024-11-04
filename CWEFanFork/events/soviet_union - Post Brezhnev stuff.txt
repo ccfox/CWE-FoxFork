@@ -1165,7 +1165,7 @@ country_event = { # The Jewish Question
 		badboy = 5
 		relation = { who = ISR value = -400 }
 		any_pop = {
-			limit = { is_culture_group = jewish_cultures }
+			limit = { culture = jewish }
 			consciousness = 4 militancy = 5
 		}
 		set_country_flag = eliminate_dissenters_done

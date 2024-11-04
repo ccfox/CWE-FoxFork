@@ -33,7 +33,7 @@
 	 
 	farmers = {
 		culture = assyrian
-		religion =  syriac_christianity 
+		religion =  catholic 
 		size = 10000 #Unclear estimates from the time period
 	 } 
 
@@ -70,7 +70,7 @@
 	 
 	farmers = {
 		culture = assyrian
-		religion =  syriac_christianity 
+		religion =  catholic 
 		size = 10000 #Unclear estimates from the time period
 	 } 
 

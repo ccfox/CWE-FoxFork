@@ -576,7 +576,7 @@ country_event = {
 		
 		#Jews get sent to the Gulags
 		any_pop = { 
-			limit = { AND = { is_culture_group = jewish_cultures strata = rich } } 
+			limit = { AND = { culture = jewish strata = rich } } 
 			pop_type = slaves
 		}
 		

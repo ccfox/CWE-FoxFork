@@ -10,25 +10,9 @@ political_decisions = {
 			
 			#Special
 			NOT = {
-				OR = {
-					AND = {
-						tag = RUS
-						government = proletarian_dictatorship
-						has_country_flag = ussr_not_rebuild_moscow
-					}
-					AND = {
-						tag = ROM
-						OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 government = socialist_democracy }
-						has_country_flag = systematization_ROM
-						OR = {
-							has_country_flag = nicolae_ceausescu_flag
-							has_country_flag = rom_manescu
-							has_country_flag = gheorghe_apostol_romania
-							has_country_flag = rom_nicu
-							has_country_flag = rom_zoia
-						}
-					}
-				}
+				tag = RUS
+				government = proletarian_dictatorship
+				has_country_flag = ussr_not_rebuild_moscow
 			}
 		}
 

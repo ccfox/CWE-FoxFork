@@ -82,7 +82,7 @@
 	 } 
 	farmers = {
 		culture = inuit
-		religion =  animist_america 
+		religion =  animist 
 		size = 739
 	 } 
 	farmers = {
@@ -323,7 +323,7 @@
 	 } 
 	farmers = {
 		culture = native_american_minor
-		religion =  animist_america 
+		religion =  animist 
 		size = 32000
 	 } 
 	farmers = {
@@ -2397,7 +2397,7 @@
 	 } 
 	farmers = {
 		culture = dakota
-		religion =  animist_america
+		religion =  animist
 		size = 2000
 	 } 
 	farmers = {
@@ -2510,7 +2510,7 @@
 	 } 
 	farmers = {
 		culture = dakota
-		religion =  animist_america
+		religion =  animist
 		size = 2610
 	 } 
 	farmers = {
@@ -2623,7 +2623,7 @@
 	 } 
 	farmers = {
 		culture = dakota
-		religion =  animist_america
+		religion =  animist
 		size = 4000
 	 } 
 	farmers = {
@@ -2736,7 +2736,7 @@
 	 } 
 	farmers = {
 		culture = dakota
-		religion =  animist_america
+		religion =  animist
 		size = 6000
 	 } 
 	farmers = {
@@ -12560,7 +12560,7 @@
 	 } 
 	farmers = {
 		culture = inuit
-		religion =  animist_america
+		religion =  animist
 		size = 739
 	 } 
 	farmers = {
@@ -19461,7 +19461,7 @@
 	 } 
 	farmers = {
 		culture = inuit
-		religion =  animist_america 
+		religion =  animist 
 		size = 1556
 	 } 
 	farmers = {
@@ -19554,7 +19554,7 @@
 	 } 
 	farmers = {
 		culture = inuit
-		religion =  animist_america 
+		religion =  animist 
 		size = 1900
 	 } 
 	farmers = {
@@ -19647,7 +19647,7 @@
 	 } 
 	farmers = {
 		culture = inuit
-		religion =  animist_america 
+		religion =  animist 
 		size = 739
 	 } 
 	farmers = {
@@ -19740,7 +19740,7 @@
 	 } 
 	farmers = {
 		culture = inuit
-		religion =  animist_america 
+		religion =  animist 
 		size = 739
 	 } 
 	farmers = {
@@ -21344,13 +21344,8 @@
 	soldiers = {
 		culture = european
 		religion = secularism
-		size = 1054
-	 }
-	soldiers = {
-		culture = european
-		religion = animist_european
-		size = 50
-	 }
+		size = 1104
+	 } 
 	capitalists = {
 		culture = european
 		religion =  protestant 

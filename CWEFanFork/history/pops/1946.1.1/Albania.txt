@@ -3,181 +3,96 @@
 	soldiers = {
 		culture = albanian
 		religion =  sunni 
-		size = 2045
-	 }
-	soldiers = {
-		culture = albanian
-		religion =  sufi 
-		size = 200
-	 } 	 
-	slaves = {
-		culture = albanian
-		religion =  sunni 
-		size = 5240
+		size = 2245
 	 } 
 	slaves = {
 		culture = albanian
-		religion =  sufi 
-		size = 500
-	 }
-	clergymen = {
-		culture = albanian
 		religion =  sunni 
-		size = 1335
+		size = 5740
 	 } 
 	clergymen = {
 		culture = albanian
-		religion =  sufi 
-		size = 100
-	 }
-	clerks = {
-		culture = albanian
 		religion =  sunni 
-		size = 2637
+		size = 1435
 	 } 
 	clerks = {
 		culture = albanian
-		religion =  sufi 
-		size = 200
-	 }
-	artisans = {
-		culture = albanian
 		religion =  sunni 
-		size = 2495
+		size = 2837
 	 } 
 	artisans = {
 		culture = albanian
-		religion =  sufi 
-		size = 200
+		religion =  sunni 
+		size = 2695
 	 } 
 	craftsmen = {
 		culture = albanian
 		religion =  sunni 
-		size = 7852
-	 } 
-	craftsmen = {
-		culture = albanian
-		religion =  sufi 
-		size = 800
+		size = 8652
 	 } 
 	farmers = {
 		culture = albanian
 		religion =  sunni 
-		size = 108475
+		size = 118475
 	 } 
-	farmers = {
-		culture = albanian
-		religion =  sufi 
-		size = 10000
-	 }
 }
 #Shkoder - Shkoder, Kukes, Lezhe (188000/47000 POPS)
 850 = {
 	capitalists = {
 		culture = albanian
 		religion =  sunni 
-		size = 1780
-	 } 
-	capitalists = {
-		culture = albanian
-		religion =  sufi 
-		size = 100
-	 }
-	craftsmen = {
-		culture = albanian
-		religion =  sunni 
-		size = 2634
+		size = 1880
 	 } 
 	craftsmen = {
 		culture = albanian
-		religion =  sufi 
-		size = 200
-	 }
-	farmers = {
-		culture = albanian
 		religion =  sunni 
-		size = 35805
+		size = 2834
 	 } 
 	farmers = {
 		culture = albanian
-		religion =  sufi 
-		size = 3000
-	 }
+		religion =  sunni 
+		size = 38805
+	 } 
 }
 #Durres - Durres (126000/31500 POPS)
 851 = {
 	capitalists = {
 		culture = albanian
 		religion =  sunni 
-		size = 1110
+		size = 1260
 	 } 
-	capitalists = {
-		culture = albanian
-		religion =  sufi 
-		size = 150
-	 }
 	craftsmen = {
 		culture = albanian
 		religion =  sunni 
-		size = 1699
-	 } 
-	craftsmen = {
-		culture = albanian
-		religion =  sufi 
-		size = 200
+		size = 1899
 	 } 
 	farmers = {
 		culture = albanian
 		religion =  sunni 
-		size = 23010
+		size = 26010
 	 } 
-	farmers = {
-		culture = albanian
-		religion =  sufi 
-		size = 3000
-	 }
 }
 #Vlore - Vlore, Fier (210000/52500 POPS)
 852 = {
 	capitalists = {
 		culture = albanian
 		religion =  sunni 
-		size = 1900
-	 } 
-	capitalists = {
-		culture = albanian
-		religion =  sufi 
-		size = 200
-	 }
-	clerks = {
-		culture = albanian
-		religion =  sunni 
-		size = 908
+		size = 2100
 	 } 
 	clerks = {
 		culture = albanian
-		religion =  sufi 
-		size = 130
-	 }
-	craftsmen = {
-		culture = albanian
 		religion =  sunni 
-		size = 2165
+		size = 1038
 	 } 
 	craftsmen = {
 		culture = albanian
-		religion =  sufi 
-		size = 1000
-	 }
-	farmers = {
-		culture = albanian
 		religion =  sunni 
-		size = 39346
+		size = 3165
 	 } 
 	farmers = {
 		culture = albanian
-		religion =  sufi 
-		size = 4000
+		religion =  sunni 
+		size = 43346
 	 } 
 }
 #Gjirokaster - Gjirokaster, Korce (127000/31750 POPS)
@@ -185,32 +100,17 @@
 	capitalists = {
 		culture = albanian
 		religion =  sunni 
-		size = 1070
-	 } 
-	capitalists = {
-		culture = albanian
-		religion =  sufi 
-		size = 200
+		size = 1270
 	 } 
 	craftsmen = {
 		culture = albanian
 		religion =  sunni 
-		size = 1714
+		size = 1914
 	 } 
-	craftsmen = {
-		culture = albanian
-		religion =  sufi 
-		size = 200
-	 }
 	farmers = {
 		culture = albanian
 		religion =  sunni 
-		size = 20359
-	 } 
-	farmers = {
-		culture = albanian
-		religion =  sufi 
-		size = 3000
+		size = 23359
 	 } 
 	farmers = {
 		culture = greek

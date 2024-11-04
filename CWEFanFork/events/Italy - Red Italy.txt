@@ -712,7 +712,7 @@ country_event = {
 		any_pop = { militancy = -3 consciousness = -3 }
 		
 		any_pop = { 
-			limit = { is_culture_group = jewish_cultures } 
+			limit = { culture = jewish } 
 			ideology = { factor = 0.2 value = liberal }
 			consciousness = 6
 		}

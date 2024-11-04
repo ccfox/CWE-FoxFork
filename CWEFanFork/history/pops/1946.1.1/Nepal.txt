@@ -102,7 +102,7 @@
 	 } 
 	farmers = {
 		culture = nepali
-		religion =  animist_asia 
+		religion =  animist 
 		size = 79388
 	 } 	 
 	farmers = {

@@ -12,12 +12,16 @@ political_decisions = {
 
 			NOT = { OR = { ruling_party_ideology = nationalist ruling_party_ideology = populist } }
 
+			OR = { 
+				LPL = { all_core = { owned_by = THIS } }
 
-			AND = { 
-				OR = { is_sphere_leader_of = ARG is_our_vassal = ARG tag = ARG }
-				OR = { is_sphere_leader_of = PRG is_our_vassal = PRG tag = PRG }
-				OR = { is_sphere_leader_of = BOL is_our_vassal = BOL tag = BOL }
-				OR = { is_sphere_leader_of = URU is_our_vassal = URU tag = URU }
+				AND = { 
+					OR = { is_sphere_leader_of = ARG is_our_vassal = ARG tag = ARG }
+					OR = { is_sphere_leader_of = PRG is_our_vassal = PRG tag = PRG }
+					OR = { is_sphere_leader_of = BOL is_our_vassal = BOL tag = BOL }
+					OR = { is_sphere_leader_of = URU is_our_vassal = URU tag = URU }
+				}
+ 
 			}
 		}
 		effect = {

@@ -2357,7 +2357,7 @@ country_event = {
 		
 		any_pop = { 
 			limit = { culture = pashtun }
-			ideology = { factor = 0.02 value = traditionalist }
+			ideology = { factor = 0.02 value = traditoinalist }
 			militancy = 2
 			consciousness = 2
 		}

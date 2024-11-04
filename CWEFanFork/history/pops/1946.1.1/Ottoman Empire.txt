@@ -251,7 +251,7 @@
 	 }
 	farmers = {
 		culture = assyrian
-		religion = syriac_christianity
+		religion = catholic
 		size = 4000
 	 }  
 	farmers = {
@@ -2794,7 +2794,7 @@
 	 }
 	farmers = {
 		culture = assyrian
-		religion = syriac_christianity 
+		religion = catholic 
 		size = 1251
 	 } 
 	farmers = {
@@ -2857,7 +2857,7 @@
 	 }
 	farmers = {
 		culture = assyrian
-		religion = syriac_christianity
+		religion = catholic
 		size = 5772
 	 }
 	farmers = {
@@ -2925,7 +2925,7 @@
 	 }
 	farmers = {
 		culture = assyrian
-		religion = syriac_christianity
+		religion = catholic
 		size = 13772
 	 }  
 	artisans = {

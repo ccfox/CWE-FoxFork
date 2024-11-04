@@ -329,7 +329,6 @@ country_event = { # August Coup - Fail
 	
 	trigger = {
 		tag = RUS
-		NOT = { has_global_flag = august_coup_victory }
 		has_global_flag = august_coup_event_chain_fired
 		government = proletarian_dictatorship
 		
@@ -417,7 +416,6 @@ country_event = { # August Coup - Pyrrhic Victory
 	
 	trigger = {
 		tag = RUS
-		NOT = { has_global_flag = august_coup_victory }
 		has_global_flag = august_coup_event_chain_fired
 		government = proletarian_dictatorship
 		
@@ -471,7 +469,6 @@ country_event = { # August Coup - Victory
 	
 	trigger = {
 		tag = RUS
-		NOT = { has_global_flag = august_coup_victory }
 		has_global_flag = august_coup_event_chain_fired
 		government = proletarian_dictatorship
 		

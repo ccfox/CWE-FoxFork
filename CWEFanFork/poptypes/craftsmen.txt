@@ -1206,13 +1206,13 @@ promote_to =
 		factor = 0.01
 		
 		#Conscription laws limit the total soldier pop size unless there is a war
-		modifier = { factor = -100 soldiers = 0.02 country = { lgbt_rights = lgbt_outlawed war = no } }
+		modifier = { factor = -100 soldiers = 0.01 country = { lgbt_rights = lgbt_outlawed war = no } }
 		
-		modifier = { factor = -100 soldiers = 0.03 country = { lgbt_rights = gender_neutrallity war = no } }
+		modifier = { factor = -100 soldiers = 0.02 country = { lgbt_rights = gender_neutrallity war = no } }
 
-		modifier = { factor = -100 soldiers = 0.04 country = { lgbt_rights = lgbt_equal_rights war = no } }
+		modifier = { factor = -100 soldiers = 0.03 country = { lgbt_rights = lgbt_equal_rights war = no } }
 
-		modifier = { factor = -100 soldiers = 0.05 country = { lgbt_rights = lgbt_allowed war = no } }
+		modifier = { factor = -100 soldiers = 0.04 country = { lgbt_rights = lgbt_allowed war = no } }
 
 		#Imported from HPM
 		group = {
@@ -1326,38 +1326,6 @@ promote_to =
 				soldiers = 0.05
 			}
 		}
-		
-		
-		#Hopefully fixing issue of soldiers going extinct.
-		group = {
-			modifier = {
-				factor = 2
-				unemployment_by_type = { type = craftsmen value = 0.05 }
-				NOT = { literacy = 0.4 }
-			}
-			modifier = {
-				factor = 2
-				unemployment_by_type = { type = craftsmen value = 0.10 }
-				NOT = { literacy = 0.4 }
-			}
-			modifier = {
-				factor = 2
-				unemployment_by_type = { type = craftsmen value = 0.15 }
-				NOT = { literacy = 0.4 }
-			}
-			modifier = {
-				factor = 2
-				unemployment_by_type = { type = craftsmen value = 0.20 }
-				NOT = { literacy = 0.4 }
-			}
-		}
-		
-
-		modifier = { factor = 2 OR = { ruling_party_ideology = nationalist ruling_party_ideology = populist ruling_party_ideology = traditionalist war_policy = jingoism war_policy = pro_military } }
-
-		modifier = { factor = 1.25 literacy = 0.30 OR = { government = presidential_dictatorship government = nationalist_dictatorship government = populist_dictatorship } }
-		
-		
 	}
 
 }
