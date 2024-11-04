@@ -557,7 +557,7 @@ country_event = {
 		prestige = 10
 		badboy = -2
 		
-		any_pop = { limit = { culture = jewish } move_pop = 919 } #Reminder: Edit this when Jewish cultures are fixed to represent actual Jewish cultures
+		any_pop = { limit = { is_culture_group = jewish_cultures } move_pop = 919 } #Reminder: Edit this when Jewish cultures are fixed to represent actual Jewish cultures
 
 		relation = { who = ISR value = 200 } #Might make an event for Israel
 		

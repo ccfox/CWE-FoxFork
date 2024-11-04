@@ -158,7 +158,7 @@
 	 } 
 	clergymen = {
 		culture = assyrian
-		religion =  catholic
+		religion =  syriac_christianity
 		size = 1688
 	 } 
 	clergymen = {
@@ -173,7 +173,7 @@
 	 } 
 	clerks = {
 		culture = assyrian
-		religion =  catholic
+		religion =  syriac_christianity
 		size = 5215
 	 } 
 	clerks = {
@@ -188,7 +188,7 @@
 	 } 
 	artisans = {
 		culture = assyrian
-		religion =  catholic
+		religion =  syriac_christianity
 		size = 4903
 	 } 
 	artisans = {
@@ -203,7 +203,7 @@
 	 } 
 	craftsmen = {
 		culture = assyrian
-		religion =  catholic
+		religion =  syriac_christianity
 		size = 12850
 	 } 
 	craftsmen = {
@@ -223,7 +223,7 @@
 	 } 
 	farmers = {
 		culture = assyrian
-		religion =  catholic
+		religion =  syriac_christianity
 		size = 52886
 	 } 
 	farmers = {
@@ -344,7 +344,7 @@
 	 } 
 	craftsmen = {
 		culture = assyrian
-		religion =  catholic
+		religion =  syriac_christianity
 		size = 1000
 	 } 
 	craftsmen = {
@@ -364,7 +364,7 @@
 	 } 
 	farmers = {
 		culture = assyrian
-		religion =  catholic
+		religion =  syriac_christianity
 		size = 4000
 	 } 
 	farmers = {

@@ -1751,7 +1751,7 @@
 	 }
 	farmers = {
 		culture = african_minor
-		religion = animist 
+		religion = animist_africa 
 		size = 5385
 	 }
 }
@@ -1834,7 +1834,7 @@
 	 }
 	artisans = {
 		culture = tutsi
-		religion = animist
+		religion = animist_africa
 		size = 2101
 	 } 
 	artisans = {
@@ -1854,12 +1854,12 @@
 	 }
 	farmers = {
 		culture = hutu
-		religion = animist
+		religion = animist_africa
 		size = 13724
 	 }
 	farmers = {
 		culture = african_minor
-		religion = animist
+		religion = animist_africa
 		size = 5772
 	 } 
 }

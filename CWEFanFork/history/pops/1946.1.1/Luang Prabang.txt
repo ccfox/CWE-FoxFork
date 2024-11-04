@@ -42,7 +42,7 @@
 	 }  
 	farmers = {
 		culture = miao
-		religion =  animist 
+		religion =  animist_asia 
 		size = 61550
 	 } 
 }
@@ -138,7 +138,7 @@
 	 } 
 	farmers = {
 		culture = miao
-		religion =  animist 
+		religion =  animist_asia 
 		size = 38875
 	 } 
 }
@@ -186,7 +186,7 @@
 	 } 
 	farmers = {
 		culture = miao
-		religion =  animist 
+		religion =  animist_asia 
 		size = 20240
 	 } 
 }
@@ -234,7 +234,7 @@
 	 } 
 	farmers = {
 		culture = miao
-		religion =  animist 
+		religion =  animist_asia 
 		size = 35962
 	 } 
 }
@@ -282,7 +282,7 @@
 	 }  
 	farmers = {
 		culture = miao
-		religion =  animist 
+		religion =  animist_asia 
 		size = 3552
 	 } 
 }

@@ -18974,8 +18974,13 @@
 	clergymen = {
 		culture = english
 		religion = secularism
-		size = 6310
+		size = 6160
 	 } 
+	clergymen = {
+		culture = english
+		religion = animist_european
+		size = 150
+	 }
 	clerks = {
 		culture = english
 		religion =  protestant 
@@ -19308,8 +19313,13 @@
 	clergymen = {
 		culture = english
 		religion = secularism
-		size = 1462
-	 } 
+		size = 1312
+	 }
+	clergymen = {
+		culture = english
+		religion = animist_european
+		size = 150
+	 }
 	clerks = {
 		culture = english
 		religion =  protestant 

@@ -188,6 +188,9 @@ party_issues = {
 		secularized = {
 			global_immigrant_attract = 0.25
 		}
+		religious_pluralism = {
+			non_accepted_pop_militancy_modifier = -0.01
+		}
 		moralism = {
 			non_accepted_pop_militancy_modifier = 0.01
 			global_assimilation_rate = 0.05

@@ -186,7 +186,7 @@
 	 } 
 	farmers = {
 		culture = cham
-		religion =  animist 
+		religion =  animist_asia 
 		size = 14524
 	 } 	 
 	farmers = {

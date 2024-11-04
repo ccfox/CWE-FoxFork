@@ -30,7 +30,51 @@ christian = {
 		color = { 0 0.5 0.7 }
 	}
 
-	# mormon icon 21
+	syriac_christianity = {
+		icon = 26
+		color = { 0 0.5 0.7 }
+	}
+
+	mormon = {
+		icon = 21
+		color = { 0 0 0.5 }
+	}
+
+	#folk_christianity = { #Probably need better icon.
+	#	icon = 32
+	#	color = { 0.2 0.2 0.6 }
+	#}
+
+	#folk_catholic = { #Probably need better icon.
+	#	icon = 33
+	#	color = { 0.7 0.7 0.2 }
+	#}
+
+	#folk_orthodox = { #Probably need better icon.
+	#	icon = 34
+	#	color = { 0.6 0.4 0.2 }
+	#}
+
+	#anglican = {
+	#	icon = 1
+	#	color = { 0.8 0.8 0 }
+	#}
+
+	#reformed = {
+	#	icon = 1
+	#	color = { 0.8 0.8 0 }
+	#}
+
+	#czech_hussite = { 
+	#	icon = 1
+	#	color = { 0.8 0.8 0 }
+	#}
+
+	#gnostic = { #Might not include this one, overlaps with Folk Catholicism/Folk Christianity. Also mostly arose in the 60s and 70s.
+	#	icon = 1
+	#	color = { 0.8 0.8 0 }
+	#}
+
 }
 
 muslim = {
@@ -50,28 +94,58 @@ muslim = {
 		
 	}
 
-	druze = {
+	druze = { #Going to be moved into pagan group, they do not identify as Muslim by and large.
 		icon = 20
 		color = { 0 0.2 0.6 }
 	}
+
+	sufi = {
+		icon = 25
+		color = { 0.7 0.7 0 }
+	}
+
+	#folk_islam = { #Probably need better icon.
+	#	icon = 35
+	#	color = { 0.2 0.5 0.2 }
+	#}
+
+	#ahmadiyya = { #Need Icon.
+	#	icon = 25
+	#	color = { 0.8 0.7 0.8 }
+	#}
+
+	#ismali = { #Need Icon.
+	#	icon = 25
+	#	color = { 0.8 0.7 0.8 }
+	#}
 	
-	# yazidi icon 22
 }
 
 jewish_group = {
 	jewish = {
 		icon = 9 # menorah
-		#icon = 10 # magen david
 		color = { 0.3 0.5 0.3 }
+	}
+	haredim = {
+		icon = 10 # magen david
+		color = { 0.8 0.5 0.8 }
 	}
 }
 
 eastern = {
 	buddhist = { # mahayana
 		color = { 1.0 0.55 0 }
-		#icon = 11 # shrivatsa
-		#icon = 12 # buddha
-		icon = 13 # dharmachakra
+		icon = 13 #dharmachakra
+	}
+
+	buddhist_gelugpa = {
+		color = { 0 0.3 0.8 }
+		icon = 12 #buddha
+	}
+
+	buddhist_theravada = {
+		color = { 0.8 0 0.8 }
+		icon = 11 #shrivatsa
 	}
 
 	hindu = {
@@ -79,7 +153,7 @@ eastern = {
 		icon = 14
 	}
 
-	taoism = { # gelugpa
+	taoism = { 
 		color = { 0 0.3 0.8 }
 		icon = 15
 	}
@@ -94,13 +168,62 @@ eastern = {
 		icon = 17
 	}
 
-	# jain icon 23
+	jain = {
+		color = { 0.3 0.8 0 }
+		icon = 23
+	}
+
+	chinese_folk_religion = {
+		color = { 0.6 0.8 0 }
+		icon = 29
+	}
 }
 
 pagan = {
-	animist = {
+
+	zoroastrian = {
+		icon = 24
+		color = { 0.7 0.2 0.1 }
+	}
+
+	yazidi = {
+		icon = 22
+		color = { 0.4 0.0 1.0 }
+	}
+
+	#tengri = {
+	#	icon = 1
+	#	color = { 0.1 0.1 0.3 }
+	#}
+
+	animist = { #Generic Folk Religion
 		icon = 18
 		color = { 0.5 0.0 0.0 }
+		pagan = yes
+	}
+	animist_european = { #Neo-Paganism
+		icon = 18
+		color = { 0.5 0 0.5 }
+		pagan = yes
+	}
+	animist_africa = { #African Folk Religion
+		icon = 27
+		color = { 0.3 0.3 0 }
+		pagan = yes
+	}
+	animist_asia = { #Asian Folk Religion
+		icon = 30
+		color = { 0.7 0.3 0 }
+		pagan = yes
+	}
+	animist_america = { #American Folk Religion
+		icon = 28
+		color = { 0.3 0.1 0.3 }
+		pagan = yes
+	}
+	bahai = {
+		icon = 31
+		color = { 0.3 0.8 0.8 }
 		pagan = yes
 	}
 	secularism = {

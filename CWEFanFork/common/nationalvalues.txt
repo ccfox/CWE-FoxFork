@@ -21,7 +21,6 @@ nv_liberty = {
 	mobilisation_size = 0.035
 	mobilisation_economy_impact = 0.25
 	suppression_points_modifier = -0.1
-	political_reform_desire = 0.1
 }
 
 nv_equality = {
@@ -47,7 +46,6 @@ nv_islamic = {
 	ruling_party_support = 0.4
 	mobilisation_size = 0.04
 	mobilisation_economy_impact = -0.25
-	political_reform_desire = -0.1
 	global_population_growth = 0.001
 }
 

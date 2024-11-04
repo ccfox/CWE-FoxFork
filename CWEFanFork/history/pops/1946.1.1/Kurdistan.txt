@@ -35,7 +35,7 @@
 	 } 
 	farmers = {
 		culture = assyrian
-		religion =  catholic
+		religion =  syriac_christianity
 		size = 3000
 	 } 
 }
