@@ -2154,6 +2154,132 @@ country_event = {
 
 }
 
+#2024 Elections
+country_event = {
+  id = 2024_us_elections
+  title = "2024 Presidential Election"
+  desc = EVTDESC2024_us_elections
+  picture = "nwo2_usa_elections_2024"
+  fire_only_once = yes
+
+	trigger = {
+    	tag = USA
+		year = 2024 NOT = { year = 2028 }
+		election = no
+		government = democracy
+
+		is_vassal = no
+
+		NOT = { has_country_flag = elections_disabled }
+
+		month = 11
+
+	}
+
+	mean_time_to_happen = { days = 8 modifier = { factor = 0.1 year = 2017 } }
+
+	option = {
+		name = "Kamala Harris (Moderate Democrat)"
+
+		random_owned = { #This should give the player or AI the modifier if they don't have a majority support
+			limit = { owner = { AND = { government = democracy tag = USA NOT = { OR = { pop_majority_ideology = progressive pop_majority_ideology = social_democrat pop_majority_ideology = big_tent pop_majority_ideology = liberal } } } } }
+			owner = { add_country_modifier = { name = revolution_chaos duration = 1065 } }
+		}
+
+		add_country_modifier = { name = election_cooldown_timer duration = 1200 }
+
+		set_country_flag = harris_2024_flag
+
+		#The president's party becomes the executive, ie the lower house in Vicky
+		ruling_party_ideology = big_tent
+
+		#Simulate the ideological divide
+		any_pop = {
+			limit = {
+				OR = { strata = middle type = farmers type = labourers culture = afro_american }
+			}
+			ideology = { factor = 0.2 value = big_tent }
+		}
+
+		ai_chance = {
+			factor = 0.5
+			modifier = {
+				factor = 3
+				OR = { pop_majority_ideology = liberal pop_majority_ideology = social_democrat pop_majority_ideology = progressive pop_majority_ideology = big_tent }
+			}
+			modifier = {
+				factor = 0.3
+				NOT = { OR = { pop_majority_ideology = liberal pop_majority_ideology = social_democrat pop_majority_ideology = progressive pop_majority_ideology = big_tent } }
+			}
+		}
+	}
+
+	option = {
+		name = "Donald Trump (Populist Republican)"
+
+		random_owned = { #This should give the player or AI the modifier if they don't have a majority support
+			limit = { owner = { AND = { government = democracy tag = USA NOT = { OR = { pop_majority_ideology = populist pop_majority_ideology = nationalist pop_majority_ideology = traditionalist pop_majority_ideology = conservative } } } } }
+			owner = { add_country_modifier = { name = revolution_chaos duration = 1065 } }
+		}
+
+		add_country_modifier = { name = election_cooldown_timer duration = 1200 }
+
+		#The president's party becomes the executive, ie the lower house in Vicky
+		ruling_party_ideology = populist
+
+		#Simulate the ideological divide
+		any_pop = {
+			limit = { OR = { AND = { location = { is_core = CSA } NOT = { culture = afro_american } } strata = rich strata = middle } }
+			ideology = {
+				factor = 0.2
+				value = populist
+			}
+		}
+
+		#Weaken US democracy
+		political_reform = regulated_opinion
+		political_reform = universal_weighted_voting
+		political_reform = politicised_service
+
+		#Democrats are furious
+		any_pop = {
+			scaled_militancy = {
+				factor = 5
+				ideology = liberal
+			}
+			scaled_militancy = {
+				factor = 10
+				ideology = progressive
+			}
+			scaled_militancy = {
+				factor = 10
+				ideology = socialist
+			}
+			scaled_militancy = {
+				factor = 10
+				ideology = communist
+			}
+			scaled_militancy = {
+				factor = 10
+				ideology = communist_social
+			}
+		}
+
+		ai_chance = {
+			factor = 0.5
+			modifier = {
+				factor = 3
+				OR = { pop_majority_ideology = conservative pop_majority_ideology = traditionalist pop_majority_ideology = nationalist pop_majority_ideology = populist }
+			}
+			modifier = {
+				factor = 0.3
+				NOT = { OR = { pop_majority_ideology = conservative pop_majority_ideology = traditionalist pop_majority_ideology = nationalist pop_majority_ideology = populist } }
+			}
+		}
+	}
+
+}
+
 
 #Every single election that could ever happen under the two party system
 country_event = {
@@ -2166,7 +2292,7 @@ country_event = {
 
 	trigger = {
     	tag = USA
-		year = 2024
+		year = 2028
 		election = no
 		government = democracy
 		NOT = { has_country_flag = elections_disabled }
