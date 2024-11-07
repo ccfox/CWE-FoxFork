@@ -1,7 +1,8 @@
 capital = 252
 primary_culture = arab
-culture = haredim_jewish
-culture = jewish
+culture = ashkenazi
+culture = sephardic
+culture = mizrahi
 culture = arab_levantine
 religion = secularism
 government = sar_government

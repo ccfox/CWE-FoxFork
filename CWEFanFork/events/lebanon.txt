@@ -287,7 +287,7 @@ mean_time_to_happen = { months = 5 }
 	prestige = -50
 	badboy = -5
 
-915 = { any_pop = { limit = { OR = { culture = jewish culture = haredim_jewish } } move_pop = 916 } }
+915 = { any_pop = { limit = { is_culture_group = jewish_cultures } move_pop = 916 } }
 915 = { secede_province = LEB }
 
 915 = { add_province_modifier = { name = nationalist_agitation duration = 3650 } }
@@ -304,7 +304,7 @@ relation = { who = LEB value = -100 }
 
 badboy = 10
 
-915 = { any_pop = { limit = { OR = { NOT = { culture = jewish } NOT = { culture = haredim_jewish } } } militancy = 10 consciousness = 8 } }
+915 = { any_pop = { limit = { OR = { NOT = { is_culture_group = jewish_cultures } NOT = { religion = haredim } } } militancy = 10 consciousness = 8 } }
 
 915 = { add_province_modifier = { name = occupied_province duration = -1 } }
 

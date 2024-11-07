@@ -352,7 +352,7 @@ party = {
 		start_date = 1836.1.1
 		end_date = 1948.2.1
 }
-party = {
+party = { #Reminder to utilize renaming events also for nations whose renamings can't be neatly fitted into current events. Make triggers for start date flags so that these name changes can become player choice.
 		name = "Romanian Worker's Party"
 		citizenship_policy = full_citizenship
 		economic_policy = planned_economy

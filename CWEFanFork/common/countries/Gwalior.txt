@@ -78,7 +78,22 @@ party = {
 		end_date = 2092.1.1
 }
 party = {
-		name = "party_traditionalist_0_HND"
+		name = "Gwalior Residency"
+		citizenship_policy = residency
+		economic_policy = state_capitalism
+		ideology = traditionalist
+		religious_policy = moralism
+		trade_policy = protectionism
+		war_policy = pacifism
+		start_date = 1836.1.1
+		end_date = 2092.1.1
+		trigger = {
+			is_vassal_of = ENG
+		}
+		
+}
+party = {
+		name = "House of Scindia"
 		citizenship_policy = residency
 		economic_policy = state_capitalism
 		ideology = traditionalist
@@ -87,7 +102,12 @@ party = {
 		war_policy = pro_military
 		start_date = 1836.1.1
 		end_date = 2092.1.1
+		trigger = {
+			NOT = { is_vassal_of = ENG }
+		}
 }
+
+
 party = {
 		name = "party_communist_0_HND"
 		citizenship_policy = full_citizenship

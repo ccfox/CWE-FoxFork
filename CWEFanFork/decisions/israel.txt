@@ -197,8 +197,9 @@ political_decisions = {
 			add_accepted_culture = arab_levantine 
 			
 			#Add jewish cultures if PAL formed the bi national state
-			add_accepted_culture = jewish
-			add_accepted_culture = haredim_jewish
+			add_accepted_culture = ashkenazi
+			add_accepted_culture = mizrahi
+			add_accepted_culture = sephardic
 			add_accepted_culture = druze
 
 		}

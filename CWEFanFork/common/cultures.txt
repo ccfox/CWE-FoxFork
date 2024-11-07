@@ -585,13 +585,7 @@ pan_albanian = {
 jewish_cultures = {
 	leader = european
 	unit = EuropeanGC
-	haredim_jewish = { #Slated for deletion
-		 #!religion = { jewish }
-		 color = { 50 60 10 }
-		 first_names = { Abraham Albert Amos Baruch Benjamin Daniel David Efraim Eliezer Elijah Franz Gavriel Gustav Hebel Heinrich Hermann Immanuel Isaak Ignatz Jakob Jeremias Josef Levi Leonhard Mattiyahu Mensahe Michael Mose Natan Noach Reuben Roi Salomon Saul Shalom Shmuel Sigmund Simon Theodor Tovia Uriel Uzziel Yachien Yafe Yehoshua Yehudah Yochanan Yonatan Zohar }
-		 last_names = { Abramovitch Ashkenazi Banai Barak "Ben Ami" Benveniste Bernstein Birnbaum Bloch Canetti Cantor Cohen Disraeli Frank Friedländer Gaon Ginsberg Golan Goldstein Halevi Horowitz Israel Jacobsohn Kagan Kaplan Klein Levin Luria Maimon Mizrahi Montefiore Morgenstern Nathan Netanyahu Oren Peretz Rafaeli Rosenthal Saban Sachs Sassoon Schapiro Schwartz Sebag Weinstein Weiss }
-	}
-	jewish = { #Probably rename to Ashkenazi
+	ashkenazi = {
 		 #!religion = { jewish }
 		 color = { 150 212 214 }
 		 first_names = { Abraham Albert Amos Baruch Benjamin Daniel David Efraim Eliezer Elijah Franz Gavriel Gustav Hebel Heinrich Hermann Immanuel Isaak Ignatz Jakob Jeremias Josef Levi Leonhard Mattiyahu Mensahe Michael Mose Natan Noach Reuben Roi Salomon Saul Shalom Shmuel Sigmund Simon Theodor Tovia Uriel Uzziel Yachien Yafe Yehoshua Yehudah Yochanan Yonatan Zohar }
@@ -608,9 +602,15 @@ jewish_cultures = {
 	}
 	mizrahi = {
         	color = { 60 60 60 }
-        	first_names = { Abiatar Ahijah Akabon Alon Amit Amram Ananelus Ananias Aretas Aristobulus Azrikam Barak Baruch Belshazar Costobarus Deror Dori Eiran Eleazar Erotimus Ezra Hadasa Herod Hyrkanus Jannaeus Joazar Yosef Josiada Kahana Hillel Hodaviah Honio Meir Nahum Nathan Nehemiah Nikanor Nir Obadiah Ofer Omri Pinchas Phannias Phasael Raanan Malichus Manasseh Nogah Shamgar Shammai Shaul Shemaiah Shemida Silas Simeon Sosa Talmon Tarfon Tovia Yair Yochanan Zadok Chaim Abba Abbaye Acha Achai Achunai Aharon Alechsandri Ammi Amunah Ashi Asher Avomai Avraham Azariah Baboi Bibai Binyamin Boaz Bustenai Chanan Chananel Chaninai Chanoch Chayim Chelbo Chisdai Chiyya Chizkiyah Chofni Chushiel Daniel David Dimi Dodai Dudai Efrayim Eina Elazar Elchanan Eldad Eliezer Elyakim Gedalyah Gershom Ghayyat Giat Giza Hila Isaac Ivomai Kafnai Kalonymos Levi Kiyomi Machir Malcha Mar Mari Matiyahu Menechem Menashe Mesharsheya Meshulam Mevasser Mishael Mordechai Moshe Nachman Nachshon Nasan Natan Natroi Natronai Nechemiah Nehilai Nesanel Nissim Paltoi Pirkoi Peter Rava Ravai Ravi Ravya Reuven Rivai Saadiah Sechok Shabsai Shalom Shanoi Shemaryah Sherira Sheshna Shila Shimon Shinoi Shlomo Shmuel Sorgo Sulam Tachlifa Tamar Tzadok Tzemach Uri Yaakov Yachya Yechiel Yehudah Yehudai Yehoshua Yeshayah Yisrael Yitzchak Yoel Yoshiah Yosi Yuda Zakkai Zelekman Zuiskind }
-        	last_names = { "ben Shushan" "ben Zafrani" "ben Hillel" "ben Nogah" "ben Isaiah" "Shofet" "ben Daniel" "ben Mordechai" "al-Yahud" "ben Shmuel" "al-Dhimmi" "Shalom" }
-	}
+			first_names = { Abiatar Ahijah Akabon Alon Amit Amram Ananelus Ananias Aretas Aristobulus Azrikam Barak Baruch Belshazar Costobarus Deror Dori Eiran Eleazar Erotimus Ezra Hadasa Herod Hyrkanus Jannaeus Joazar Yosef Josiada Kahana Hillel Hodaviah Honio Meir Nahum Nathan Nehemiah Nikanor Nir Obadiah Ofer Omri Pinchas Phannias Phasael Raanan Malichus Manasseh Nogah Shamgar Shammai Shaul Shemaiah Shemida Silas Simeon Sosa Talmon Tarfon Tovia Yair Yochanan Zadok Chaim Abba Abbaye Acha Achai Achunai Aharon Alechsandri Ammi Amunah Ashi Asher Avomai Avraham Azariah Baboi Bibai Binyamin Boaz Bustenai Chanan Chananel Chaninai Chanoch Chayim Chelbo Chisdai Chiyya Chizkiyah Chofni Chushiel Daniel David Dimi Dodai Dudai Efrayim Eina Elazar Elchanan Eldad Eliezer Elyakim Gedalyah Gershom Ghayyat Giat Giza Hila Isaac Ivomai Kafnai Kalonymos Levi Kiyomi Machir Malcha Mar Mari Matiyahu Menechem Menashe Mesharsheya Meshulam Mevasser Mishael Mordechai Moshe Nachman Nachshon Nasan Natan Natroi Natronai Nechemiah Nehilai Nesanel Nissim Paltoi Pirkoi Peter Rava Ravai Ravi Ravya Reuven Rivai Saadiah Sechok Shabsai Shalom Shanoi Shemaryah Sherira Sheshna Shila Shimon Shinoi Shlomo Shmuel Sorgo Sulam Tachlifa Tamar Tzadok Tzemach Uri Yaakov Yachya Yechiel Yehudah Yehudai Yehoshua Yeshayah Yisrael Yitzchak Yoel Yoshiah Yosi Yuda Zakkai Zelekman Zuiskind }
+			last_names = { "ben Shushan" "ben Zafrani" "ben Hillel" "ben Nogah" "ben Isaiah" "Shofet" "ben Daniel" "ben Mordechai" "al-Yahud" "ben Shmuel" "al-Dhimmi" "Shalom" }
+    }
+	beta_israeli = {
+        color = { 185 30 160 }
+        first_names = { Amare Bekele Berhanu Saleh Haile Berihun Demissie Desta Geteye Girma Kelile Negasi Abebe Fakirta Adis Kassa Menelik }
+
+        last_names = { Selassie Mikael Mariam Melekot Seged Wossen Makonnen Mengitsu Abbaba Dingil Hailu Giorgis }
+    }
 	union = ISR
 }
 pan_romanian = {

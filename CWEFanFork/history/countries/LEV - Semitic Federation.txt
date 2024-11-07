@@ -1,6 +1,7 @@
 capital = 917
-primary_culture = jewish
-culture = haredim_jewish
+primary_culture = ashkenazi
+culture = sephardic
+culture = mizrahi
 culture = druze
 culture = arab_levantine
 religion = secularism

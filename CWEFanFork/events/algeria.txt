@@ -428,7 +428,7 @@ country_event = {
 		FAG = {
 			primary_culture = french
 			remove_accepted_culture = arab
-			add_accepted_culture = jewish
+			add_accepted_culture = sephardic
 			
 			government = nationalist_dictatorship 
 			ruling_party_ideology = nationalist
@@ -611,7 +611,7 @@ country_event = {
 		all_core = { limit = { is_core = ALG } remove_core = FRA }
 		any_pop = { limit = { location = { is_core = ALG } culture = french strata = middle } move_pop = 425 } # Paris
 		any_pop = { limit = { location = { is_core = ALG } culture = french NOT = { strata = middle } } move_pop = 467 } # Marseilles
-		any_pop = { limit = { location = { is_core = ALG } culture = jewish } move_pop = 425 } # Paris
+		any_pop = { limit = { location = { is_core = ALG } culture = sephardic } move_pop = 425 } # Paris
 		release = ALG	
 		diplomatic_influence = { who = ALG value = 200 }
 		ALG = { primary_culture = arab government = presidential_dictatorship ruling_party_ideology = socialist country_event = 800050 }

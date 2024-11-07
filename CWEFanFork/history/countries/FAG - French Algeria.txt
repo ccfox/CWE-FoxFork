@@ -1,6 +1,6 @@
 capital = 1700
 primary_culture = french
-culture = jewish
+culture = sephardic
 religion = secularism
 government = democracy
 plurality = 2.0

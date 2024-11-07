@@ -5,10 +5,10 @@ israel_usa_boost = {
 	potential = {
 tag = ISR
 USA = { rank = 2 }
-primary_culture = jewish
+primary_culture = ashkenazi
 government = democracy
 is_greater_power = no
-USA = { government = democracy accepted_culture = jewish }
+USA = { government = democracy accepted_culture = ashkenazi }
 NOT = { has_country_modifier = relations_timer }
 		}
 alert = no

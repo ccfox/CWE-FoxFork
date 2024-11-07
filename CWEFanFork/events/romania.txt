@@ -1,6 +1,6 @@
 #1945 Drought
 country_event = {
-  id = 8023008
+  id = romsetup.1
   title = "Romania's Drought of 1945"
   desc = EVTDESC8023008
   picture = "dry_year"
@@ -62,7 +62,7 @@ country_event = {
 
 #Starting economic issues
 country_event = { 
-	id = 8023009
+	id = romsetup.2
 	title = "Post-War Romania"
 	desc = EVTDESC8023009
 	picture = "post_war_romania"
@@ -110,7 +110,7 @@ country_event = {
 
 #1947 Bounty Year
 country_event = {
-  id = 8023011
+  id = romsetup.3
   title = "A Brief Reprieve"
   desc = EVTDESC8023011
   picture = "bountiful_year"
@@ -179,7 +179,7 @@ country_event = {
 
 #Monetary Reforms 1947.
 country_event = { 
-	id = 80230121
+	id = romsetup.4
 	title = "Great Stabilization"
 	desc = EVTDESC80230121
 	picture = "romanian_currency_1947"
