@@ -4,7 +4,7 @@ political_decisions = {
 1950_start_decision = {
 	picture = "defcon1"
 		potential = {
-			ai = no
+			#ai = no
 			ai = yes
 			year = 1950
 			NOT = { year = 1991 }
@@ -17,6 +17,20 @@ political_decisions = {
 		}
 
 		effect = {
+		
+			#Party Renames
+			ROM = {
+				change_party_name = {
+					ideology = communist 
+					name = "Romanian Worker's Party"
+				}
+			}
+			ROM = {
+				change_party_name = {
+					ideology = communist_social
+					name = "Romanian Worker's Party (Reformist)"
+				}
+			}
 		
 			#US politics
 			set_country_flag = mc_carthy_politics

@@ -16,6 +16,23 @@ political_decisions = {
 	}
 
 	effect = {
+	
+			#Party Renames
+			ROM = {
+				change_party_name = {
+					ideology = communist 
+					name = "Romanian Communist Party"
+				}
+				change_party_name = {
+					ideology = communist_social
+					name = "National Salvation Front"
+				}
+				change_party_name = {
+					ideology = socialist 
+					name = "National Salvation Front (Moderates)"
+				}
+			}
+	
 
 #Clear 1950 start marker
 clr_global_flag = 1950_start_date_flag

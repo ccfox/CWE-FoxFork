@@ -6374,7 +6374,7 @@ communist_bloc_leader = {
 	tax_efficiency = 0.10
 	loan_interest = -0.20
 	supply_consumption = 0.20
-	suppression_points_modifier = 1.0
+	#suppression_points_modifier = 1.0
 	
 	education_efficiency_modifier = 0.10
 	administrative_efficiency_modifier = 0.10
@@ -6414,7 +6414,7 @@ communist_bloc = {
 	tax_efficiency = 0.05
 	loan_interest = -0.10
 	supply_consumption = 0.10
-	suppression_points_modifier = 0.5
+	#suppression_points_modifier = 0.5
 	
 	education_efficiency_modifier = 0.05
 	administrative_efficiency_modifier = 0.05
@@ -6455,7 +6455,7 @@ democratic_bloc_leader = {
 	tax_efficiency = 0.10
 	loan_interest = -0.20
 	supply_consumption = 0.20
-	suppression_points_modifier = 0.5
+	#suppression_points_modifier = 0.5
 	
 	education_efficiency_modifier = 0.10
 	administrative_efficiency_modifier = 0.10
@@ -6495,7 +6495,7 @@ democratic_bloc = {
 	tax_efficiency = 0.05
 	loan_interest = -0.10
 	supply_consumption = 0.10
-	suppression_points_modifier = 0.25
+	#suppression_points_modifier = 0.25
 	
 	education_efficiency_modifier = 0.05
 	administrative_efficiency_modifier = 0.05

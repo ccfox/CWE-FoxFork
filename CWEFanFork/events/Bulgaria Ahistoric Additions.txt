@@ -2773,6 +2773,11 @@ country_event = {
 		any_pop = { militancy = -3 consciousness = -3 }
 		ruling_party_ideology = socialist
 		
+		change_party_name = {
+			ideology = ruling_party 
+			name = "Bulgarian Communist Party (Eurocommunist)
+		}
+		
 		any_pop = { 
 			limit = { OR = { type = aristocrats type = bureaucrats } } 
 			ideology = { factor = 0.10 value = socialist }
