@@ -1226,7 +1226,7 @@ country_event = {
 		political_reform = no_trade_unions
 		political_reform = parties_not_allowed
 		political_reform = open_immigration
-		political_reform = lgbt_promoted #Conscription
+		political_reform = mandatory_service #Conscription
 		
 		ai_chance = { factor = 1 }
 	}

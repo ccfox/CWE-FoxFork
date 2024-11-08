@@ -47,7 +47,7 @@ country_event = {
 		political_reform = state_controlled_unions #State Unions
 		political_reform = parties_only_nominated
 		political_reform = open_immigration
-		political_reform = lgbt_outlawed #no_draft
+		political_reform = no_draft #no_draft
 		political_reform = minorities_affirmative_action
 		political_reform = proportional_representation
 
@@ -4091,7 +4091,7 @@ country_event = {
 		is_greater_power = yes
 		war = no
 		
-		NOT = { ruling_party_ideology = communist }
+		NOT = { OR = { ruling_party_ideology = communist ruling_party_ideology = communist_social ruling_party_ideology = socialist } }
 		
 		money = 60000
 		

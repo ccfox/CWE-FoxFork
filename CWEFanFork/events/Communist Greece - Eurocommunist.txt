@@ -423,7 +423,7 @@ country_event = { # Political Liberalization
 		political_reform = unregulated_publishing
 		political_reform = restricted_unions
 		political_reform = naturalization
-		political_reform = lgbt_outlawed
+		political_reform = no_draft
 		
 		any_pop = {
 			consciousness = -5 militancy = -5

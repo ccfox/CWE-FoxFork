@@ -830,7 +830,7 @@ guiTypes = {
 		}
 
 		windowType = {
-			name = "lgbt_rights"
+			name = "conscription_law"
 			backGround =""
 			position = { x = 686 y = 158 }
 			size = { x=686 y= 100}

@@ -70,7 +70,7 @@ country_event = {
 		political_reform = restricted_unions #non-socialist
 		political_reform = parties_restrict_non_democratic
 		political_reform = open_immigration
-		political_reform = lgbt_outlawed #no_draft
+		political_reform = no_draft #no_draft
 		political_reform = minorities_oppression
 
 		relation = { who = JAP value = 50 }

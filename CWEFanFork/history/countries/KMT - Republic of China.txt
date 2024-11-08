@@ -41,7 +41,7 @@ minorities_reform = minorities_oppression
 immigration_policy = quota_immigration
 civil_service = politicised_service
 political_parties = parties_only_nominated
-lgbt_rights = lgbt_allowed
+conscription_law = three_year_draft
 publishing_rights = censored_publishing
 union_rights = state_controlled_unions
 voting_system = first_past_the_post
@@ -81,7 +81,7 @@ oob = "/KMT_oob.txt"
 1950.1.1 = {
 
 #Conscription
-lgbt_rights = lgbt_equal_rights
+conscription_law = two_year_draft
 
 }
 
@@ -111,7 +111,7 @@ lgbt_rights = lgbt_equal_rights
 	immigration_policy = quota_immigration
 	civil_service = politicised_service
 	political_parties = parties_only_nominated
-	lgbt_rights = gender_neutrallity
+	conscription_law = one_year_draft
 	publishing_rights = censored_publishing
 	union_rights = state_controlled_unions
 	voting_system = proportional_representation

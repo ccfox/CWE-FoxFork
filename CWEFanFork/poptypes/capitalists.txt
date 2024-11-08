@@ -3425,13 +3425,13 @@ issues = {
 		modifier = { factor = 1.05 literacy = 0.40 }
 	}
 	
-# lgbt_rights
-	# lgbt_outlawed
+# conscription_law
+	# no_draft
 
-	lgbt_outlawed = {
+	no_draft = {
 		factor = 1
 		
-		modifier = { factor = 0 NOT = { is_next_reform = lgbt_outlawed } }
+		modifier = { factor = 0 NOT = { is_next_reform = no_draft } }
 
 		modifier = { factor = 1.25 country = { has_country_flag = world_low } }
 
@@ -3451,10 +3451,10 @@ issues = {
 
 	}
 
-	gender_neutrallity = {
+	one_year_draft = {
 		factor = 1
 
-		modifier = { factor = 0 NOT = { is_next_reform = gender_neutrallity } }
+		modifier = { factor = 0 NOT = { is_next_reform = one_year_draft } }
 
 		modifier = { factor = 1.25 country = { has_country_flag = world_low } }
 
@@ -3476,10 +3476,10 @@ issues = {
 
 	}
 
-	lgbt_equal_rights = {
+	two_year_draft = {
 		factor = 1
 
-		modifier = { factor = 0 NOT = { is_next_reform = lgbt_equal_rights } }
+		modifier = { factor = 0 NOT = { is_next_reform = two_year_draft } }
 
 		modifier = { factor = 1.25 country = { has_country_flag = world_medium } }
 
@@ -3501,10 +3501,10 @@ issues = {
 
 	}
 
-	lgbt_allowed = {
+	three_year_draft = {
 		factor = 1
 
-		modifier = { factor = 0 NOT = { is_next_reform = lgbt_allowed } }
+		modifier = { factor = 0 NOT = { is_next_reform = three_year_draft } }
 
 		modifier = { factor = 1.25 country = { has_country_flag = world_high } }
 
@@ -3526,10 +3526,10 @@ issues = {
 
 	}
 
-	lgbt_promoted = {
+	mandatory_service = {
 		factor = 1
 
-		modifier = { factor = 0 NOT = { is_next_reform = lgbt_promoted } }
+		modifier = { factor = 0 NOT = { is_next_reform = mandatory_service } }
 
 		modifier = { factor = 1.25 country = { has_country_flag = world_high } }
 
