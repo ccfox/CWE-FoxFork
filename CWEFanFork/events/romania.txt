@@ -3231,9 +3231,72 @@ country_event = {
 			name = "National Salvation Front"
 		}
 		
+		change_party_position = {
+			ideology = ruling_party 
+			#subideology = left_nationalism_1_ideology 
+			#government_law = socialist_law 
+			#state_structure = devolved_unitary_structure
+			
+			vote_franschise = registered_voting
+			political_opinions = regulated_opinion
+			public_meetings = limited_meetings
+			penal_system = incarceration
+			civil_service = elitist_service
+			publishing_rights = firewall_publishing 
+			union_rights = state_controlled_unions
+			political_parties = parties_restrict_non_democratic
+			immigration_policy = quota_immigration
+			conscription_law = two_year_draft
+			minorities_reform = minorities_equal_rights
+			voting_system = proportional_representation
+			
+			wage_and_work_hours = paid_sick_leave_hours
+			security_reform = security_clearance_for_gov_services
+			safety_regulations = strict_regulations
+			unemployment_subsidies = generous_subsidies
+			child_care = state_provided_child_care
+			pensions = good_pensions
+			health_care = good_health_care
+			pollution = low_envir
+			education = unlimited_education
+			public_housing = good_public_housing
+		}
+		
 		change_party_name = {
 			ideology = socialist 
 			name = "National Salvation Front (Moderates)"
+		}
+		
+		change_party_position = {
+			ideology = socialist 
+			#Subideology
+			#subideology = left_nationalism_2_ideology
+			#government_law = socialist_law
+			#state_structure = devolved_unitary_structure
+			
+			vote_franschise = registered_voting
+			political_opinions = regulated_opinion
+			public_meetings = limited_meetings
+			penal_system = incarceration
+			civil_service = elitist_service
+			publishing_rights = firewall_publishing 
+			union_rights = state_controlled_unions
+			political_parties = parties_restrict_non_democratic
+			immigration_policy = quota_immigration
+			conscription_law = two_year_draft
+			minorities_reform = minorities_equal_rights
+			voting_system = proportional_representation
+			
+			wage_and_work_hours = paid_sick_leave_hours
+			security_reform = security_clearance_for_gov_services
+			safety_regulations = strict_regulations
+			unemployment_subsidies = generous_subsidies
+			child_care = state_provided_child_care
+			pensions = good_pensions
+			health_care = good_health_care
+			pollution = low_envir
+			education = unlimited_education
+			public_housing = good_public_housing
 		}
 		
 		election = yes
@@ -3410,12 +3473,81 @@ country_event = {
 		
 		change_party_name = {
 			ideology = communist_social 
-			name = "Romanian Communist Party" 
+			name = "Socialist Party of Labour" 
+		}
+		
+		change_party_name = {
+			ideology = communist
+			name = "Socialist Party of Labour (Neocommunist)" 
+		}
+		
+		change_party_position = {
+			ideology = communist
+			#Subideology
+			#subideology = neocommunism_ideology
+			#government_law = socialist_law 
+			#state_structure = devolved_unitary_structure
+			
+			vote_franschise = registered_voting
+			political_opinions = ruling_party_opinion
+			public_meetings = limited_meetings
+			penal_system = incarceration
+			civil_service = politicised_service
+			publishing_rights = firewall_publishing 
+			union_rights = state_controlled_unions
+			political_parties = parties_restrict_non_democratic
+			immigration_policy = quota_immigration
+			conscription_law = two_year_draft
+			minorities_reform = minorities_equal_rights
+			voting_system = proportional_representation
+			
+			wage_and_work_hours = paid_sick_leave_hours
+			security_reform = security_clearance_for_gov_services
+			safety_regulations = strict_regulations
+			unemployment_subsidies = generous_subsidies
+			child_care = state_provided_child_care
+			pensions = good_pensions
+			health_care = good_health_care
+			pollution = low_envir
+			education = unlimited_education
+			public_housing = good_public_housing
 		}
 		
 		change_party_name = {
 			ideology = socialist 
 			name = "Democratic National Salvation Front" 
+		}
+		
+		change_party_position = {
+			ideology = socialist 
+			#Subideology
+			#subideology = democratic_socialist_ideology
+			#government_law = democracy_law
+			#state_structure = devolved_unitary_structure
+			
+			vote_franschise = registered_voting
+			political_opinions = regulated_opinion
+			public_meetings = limited_meetings
+			penal_system = incarceration
+			civil_service = elitist_service
+			publishing_rights = firewall_publishing 
+			union_rights = state_controlled_unions
+			political_parties = parties_restrict_non_democratic
+			immigration_policy = quota_immigration
+			conscription_law = two_year_draft
+			minorities_reform = minorities_equal_rights
+			voting_system = proportional_representation
+			
+			wage_and_work_hours = paid_sick_leave_hours
+			security_reform = security_clearance_for_gov_services
+			safety_regulations = strict_regulations
+			unemployment_subsidies = generous_subsidies
+			child_care = state_provided_child_care
+			pensions = good_pensions
+			health_care = good_health_care
+			pollution = low_envir
+			education = unlimited_education
+			public_housing = good_public_housing
 		}
 		
 		random_owned = { #This should give the player or AI the modifier if they don't have a majority support
@@ -3625,12 +3757,81 @@ country_event = {
 		
 		change_party_name = {
 			ideology = communist_social 
-			name = "Romanian Communist Party" 
+			name = "Socialist Party of Labour" 
+		}
+		
+		change_party_name = {
+			ideology = communist
+			name = "Socialist Party of Labour (Neocommunist)" 
+		}
+		
+		change_party_position = {
+			ideology = communist
+			#Subideology
+			#subideology = neocommunism_ideology
+			#government_law = socialist_law 
+			#state_structure = devolved_unitary_structure
+			
+			vote_franschise = registered_voting
+			political_opinions = ruling_party_opinion
+			public_meetings = limited_meetings
+			penal_system = incarceration
+			civil_service = politicised_service
+			publishing_rights = firewall_publishing 
+			union_rights = state_controlled_unions
+			political_parties = parties_restrict_non_democratic
+			immigration_policy = quota_immigration
+			conscription_law = two_year_draft
+			minorities_reform = minorities_equal_rights
+			voting_system = proportional_representation
+			
+			wage_and_work_hours = paid_sick_leave_hours
+			security_reform = security_clearance_for_gov_services
+			safety_regulations = strict_regulations
+			unemployment_subsidies = generous_subsidies
+			child_care = state_provided_child_care
+			pensions = good_pensions
+			health_care = good_health_care
+			pollution = low_envir
+			education = unlimited_education
+			public_housing = good_public_housing
 		}
 		
 		change_party_name = {
 			ideology = socialist 
 			name = "Democratic National Salvation Front" 
+		}
+		
+		change_party_position = {
+			ideology = socialist 
+			#Subideology
+			#subideology = democratic_socialist_ideology
+			#government_law = democracy_law
+			#state_structure = devolved_unitary_structure
+			
+			vote_franschise = registered_voting
+			political_opinions = regulated_opinion
+			public_meetings = limited_meetings
+			penal_system = incarceration
+			civil_service = elitist_service
+			publishing_rights = firewall_publishing 
+			union_rights = state_controlled_unions
+			political_parties = parties_restrict_non_democratic
+			immigration_policy = quota_immigration
+			conscription_law = two_year_draft
+			minorities_reform = minorities_equal_rights
+			voting_system = proportional_representation
+			
+			wage_and_work_hours = paid_sick_leave_hours
+			security_reform = security_clearance_for_gov_services
+			safety_regulations = strict_regulations
+			unemployment_subsidies = generous_subsidies
+			child_care = state_provided_child_care
+			pensions = good_pensions
+			health_care = good_health_care
+			pollution = low_envir
+			education = unlimited_education
+			public_housing = good_public_housing
 		}
 		
 		#Romania is a Presidential republic
@@ -3826,12 +4027,81 @@ country_event = {
 		
 		change_party_name = {
 			ideology = communist_social 
-			name = "Romanian Communist Party" 
+			name = "Socialist Party of Labour" 
+		}
+		
+		change_party_name = {
+			ideology = communist
+			name = "Socialist Party of Labour (Neocommunist)" 
+		}
+		
+		change_party_position = {
+			ideology = communist
+			#Subideology
+			#subideology = neocommunism_ideology
+			#government_law = socialist_law 
+			#state_structure = devolved_unitary_structure
+			
+			vote_franschise = registered_voting
+			political_opinions = ruling_party_opinion
+			public_meetings = limited_meetings
+			penal_system = incarceration
+			civil_service = politicised_service
+			publishing_rights = firewall_publishing 
+			union_rights = state_controlled_unions
+			political_parties = parties_restrict_non_democratic
+			immigration_policy = quota_immigration
+			conscription_law = two_year_draft
+			minorities_reform = minorities_equal_rights
+			voting_system = proportional_representation
+			
+			wage_and_work_hours = paid_sick_leave_hours
+			security_reform = security_clearance_for_gov_services
+			safety_regulations = strict_regulations
+			unemployment_subsidies = generous_subsidies
+			child_care = state_provided_child_care
+			pensions = good_pensions
+			health_care = good_health_care
+			pollution = low_envir
+			education = unlimited_education
+			public_housing = good_public_housing
 		}
 		
 		change_party_name = {
 			ideology = socialist 
 			name = "Democratic National Salvation Front" 
+		}
+		
+		change_party_position = {
+			ideology = socialist 
+			#Subideology
+			#subideology = democratic_socialist_ideology
+			#government_law = democracy_law
+			#state_structure = devolved_unitary_structure
+			
+			vote_franschise = registered_voting
+			political_opinions = regulated_opinion
+			public_meetings = limited_meetings
+			penal_system = incarceration
+			civil_service = elitist_service
+			publishing_rights = firewall_publishing 
+			union_rights = state_controlled_unions
+			political_parties = parties_restrict_non_democratic
+			immigration_policy = quota_immigration
+			conscription_law = two_year_draft
+			minorities_reform = minorities_equal_rights
+			voting_system = proportional_representation
+			
+			wage_and_work_hours = paid_sick_leave_hours
+			security_reform = security_clearance_for_gov_services
+			safety_regulations = strict_regulations
+			unemployment_subsidies = generous_subsidies
+			child_care = state_provided_child_care
+			pensions = good_pensions
+			health_care = good_health_care
+			pollution = low_envir
+			education = unlimited_education
+			public_housing = good_public_housing
 		}
 		
 		#Romania is a Semi-Presidential republic
@@ -3948,13 +4218,82 @@ country_event = {
 		
 		change_party_name = {
 			ideology = communist_social 
-			name = "Romanian Communist Party" 
+			name = "Socialist Party of Labour" 
+		}
+		
+		change_party_name = {
+			ideology = communist
+			name = "Socialist Party of Labour (Neocommunist)" 
+		}
+		
+		change_party_position = {
+			ideology = communist
+			#Subideology
+			#subideology = neocommunism_ideology
+			#government_law = socialist_law 
+			#state_structure = devolved_unitary_structure
+			
+			vote_franschise = registered_voting
+			political_opinions = ruling_party_opinion
+			public_meetings = limited_meetings
+			penal_system = incarceration
+			civil_service = politicised_service
+			publishing_rights = firewall_publishing 
+			union_rights = state_controlled_unions
+			political_parties = parties_restrict_non_democratic
+			immigration_policy = quota_immigration
+			conscription_law = two_year_draft
+			minorities_reform = minorities_equal_rights
+			voting_system = proportional_representation
+			
+			wage_and_work_hours = paid_sick_leave_hours
+			security_reform = security_clearance_for_gov_services
+			safety_regulations = strict_regulations
+			unemployment_subsidies = generous_subsidies
+			child_care = state_provided_child_care
+			pensions = good_pensions
+			health_care = good_health_care
+			pollution = low_envir
+			education = unlimited_education
+			public_housing = good_public_housing
 		}
 		
 		change_party_name = {
 			ideology = socialist 
 			name = "Democratic National Salvation Front" 
 		}
+		
+		change_party_position = {
+			ideology = socialist 
+			#Subideology
+			#subideology = democratic_socialist_ideology
+			#government_law = democracy_law
+			#state_structure = devolved_unitary_structure
+			
+			vote_franschise = registered_voting
+			political_opinions = regulated_opinion
+			public_meetings = limited_meetings
+			penal_system = incarceration
+			civil_service = elitist_service
+			publishing_rights = firewall_publishing 
+			union_rights = state_controlled_unions
+			political_parties = parties_restrict_non_democratic
+			immigration_policy = quota_immigration
+			conscription_law = two_year_draft
+			minorities_reform = minorities_equal_rights
+			voting_system = proportional_representation
+			
+			wage_and_work_hours = paid_sick_leave_hours
+			security_reform = security_clearance_for_gov_services
+			safety_regulations = strict_regulations
+			unemployment_subsidies = generous_subsidies
+			child_care = state_provided_child_care
+			pensions = good_pensions
+			health_care = good_health_care
+			pollution = low_envir
+			education = unlimited_education
+			public_housing = good_public_housing
+		}	
 		
 		any_pop = { 
 			limit = { strata = rich }
@@ -4031,12 +4370,81 @@ country_event = {
 		
 		change_party_name = {
 			ideology = communist_social 
-			name = "Romanian Communist Party" 
+			name = "Socialist Party of Labour" 
+		}
+		
+		change_party_name = {
+			ideology = communist
+			name = "Socialist Party of Labour (Neocommunist)" 
+		}
+		
+		change_party_position = {
+			ideology = communist
+			#Subideology
+			#subideology = neocommunism_ideology
+			#government_law = socialist_law 
+			#state_structure = devolved_unitary_structure
+			
+			vote_franschise = registered_voting
+			political_opinions = ruling_party_opinion
+			public_meetings = limited_meetings
+			penal_system = incarceration
+			civil_service = politicised_service
+			publishing_rights = firewall_publishing 
+			union_rights = state_controlled_unions
+			political_parties = parties_restrict_non_democratic
+			immigration_policy = quota_immigration
+			conscription_law = two_year_draft
+			minorities_reform = minorities_equal_rights
+			voting_system = proportional_representation
+			
+			wage_and_work_hours = paid_sick_leave_hours
+			security_reform = security_clearance_for_gov_services
+			safety_regulations = strict_regulations
+			unemployment_subsidies = generous_subsidies
+			child_care = state_provided_child_care
+			pensions = good_pensions
+			health_care = good_health_care
+			pollution = low_envir
+			education = unlimited_education
+			public_housing = good_public_housing
 		}
 		
 		change_party_name = {
 			ideology = socialist 
 			name = "Democratic National Salvation Front" 
+		}
+		
+		change_party_position = {
+			ideology = socialist 
+			#Subideology
+			#subideology = left_nationalism_2_ideology
+			#government_law = socialist_law
+			#state_structure = devolved_unitary_structure
+			
+			vote_franschise = registered_voting
+			political_opinions = regulated_opinion
+			public_meetings = limited_meetings
+			penal_system = incarceration
+			civil_service = elitist_service
+			publishing_rights = firewall_publishing 
+			union_rights = state_controlled_unions
+			political_parties = parties_restrict_non_democratic
+			immigration_policy = quota_immigration
+			conscription_law = two_year_draft
+			minorities_reform = minorities_equal_rights
+			voting_system = proportional_representation
+			
+			wage_and_work_hours = paid_sick_leave_hours
+			security_reform = security_clearance_for_gov_services
+			safety_regulations = strict_regulations
+			unemployment_subsidies = generous_subsidies
+			child_care = state_provided_child_care
+			pensions = good_pensions
+			health_care = good_health_care
+			pollution = low_envir
+			education = unlimited_education
+			public_housing = good_public_housing
 		}
 		
 		any_pop = { 
@@ -4290,8 +4698,77 @@ country_event = {
 		ruling_party_ideology = social_democrat
 		
 		change_party_name = {
+			ideology = social_democrat
+			name = "Democratic National Salvation Front"
+		}
+		
+		change_party_position = {
+			ideology = social_democrat
+			#Subideology
+			#subideology = right_socdem_ideology 
+			#government_law = democracy_law
+			#state_structure = devolved_unitary_structure
+			
+			vote_franschise = registered_voting
+			political_opinions = democratic_opinion
+			public_meetings = free_meetings
+			penal_system = rehabilitation
+			civil_service = professional_service
+			publishing_rights = responsible_publishing
+			union_rights = restricted_unions
+			political_parties = parties_allowed
+			immigration_policy = open_immigration
+			conscription_law = no_draft
+			minorities_reform = minorities_equal_rights
+			voting_system = proportional_representation
+			
+			wage_and_work_hours = paid_sick_leave_hours
+			security_reform = security_clearance_for_gov_services
+			safety_regulations = strict_regulations
+			unemployment_subsidies = generous_subsidies
+			child_care = state_provided_child_care
+			pensions = acceptable_pensions
+			health_care = acceptable_health_care
+			pollution = acceptable_envir
+			education = public_higher_education
+			public_housing = acceptable_public_housing
+		}
+		
+		change_party_name = {
 			ideology = socialist 
-			name = "Socialist Party of Labour" 
+			name = "PDSR (Left)" 
+		}
+		
+		change_party_position = {
+			ideology = socialist 
+			#Subideology
+			#subideology = left_nationalism_2_ideology
+			#government_law = socialist_law
+			#state_structure = devolved_unitary_structure
+			
+			vote_franschise = registered_voting
+			political_opinions = regulated_opinion
+			public_meetings = limited_meetings
+			penal_system = incarceration
+			civil_service = elitist_service
+			publishing_rights = firewall_publishing 
+			union_rights = state_controlled_unions
+			political_parties = parties_restrict_non_democratic
+			immigration_policy = quota_immigration
+			conscription_law = two_year_draft
+			minorities_reform = minorities_equal_rights
+			voting_system = proportional_representation
+			
+			wage_and_work_hours = paid_sick_leave_hours
+			security_reform = security_clearance_for_gov_services
+			safety_regulations = strict_regulations
+			unemployment_subsidies = generous_subsidies
+			child_care = state_provided_child_care
+			pensions = good_pensions
+			health_care = good_health_care
+			pollution = low_envir
+			education = unlimited_education
+			public_housing = good_public_housing
 		}
 		
 		random_owned = { #This should give the player or AI the modifier if they don't have a majority support
@@ -4326,9 +4803,110 @@ country_event = {
 		
 		ruling_party_ideology = big_tent
 		
+		change_party_position = {
+			ideology = big_tent
+			#Subideology
+			#subideology = atlanticism_ideology
+			#government_law = democracy_law
+			#state_structure = devolved_unitary_structure
+			
+			vote_franschise = universal_weighted_voting
+			political_opinions = open_opinion
+			public_meetings = limited_meetings
+			penal_system = incarceration
+			civil_service = professional_service
+			publishing_rights = responsible_publishing
+			union_rights = restricted_unions
+			political_parties = parties_allowed
+			immigration_policy = naturalization
+			conscription_law = no_draft
+			minorities_reform = minorities_equal_rights
+			voting_system = proportional_representation
+			
+			wage_and_work_hours = paid_vacation_hours
+			security_reform = security_clearance_for_gov_services
+			safety_regulations = balanced_regulations
+			unemployment_subsidies = ghent_system
+			child_care = supported_child_care
+			pensions = low_pensions
+			health_care = low_health_care
+			pollution = trinket_envir
+			education = public_education
+			public_housing = low_public_housing
+		}
+		
+		change_party_name = {
+			ideology = social_democrat
+			name = "Democratic National Salvation Front"
+		}
+		
+		change_party_position = {
+			ideology = social_democrat
+			#Subideology
+			#subideology = right_socdem_ideology 
+			#government_law = democracy_law
+			#state_structure = devolved_unitary_structure
+			
+			vote_franschise = registered_voting
+			political_opinions = democratic_opinion
+			public_meetings = free_meetings
+			penal_system = rehabilitation
+			civil_service = professional_service
+			publishing_rights = responsible_publishing
+			union_rights = restricted_unions
+			political_parties = parties_allowed
+			immigration_policy = open_immigration
+			conscription_law = no_draft
+			minorities_reform = minorities_equal_rights
+			voting_system = proportional_representation
+			
+			wage_and_work_hours = paid_sick_leave_hours
+			security_reform = security_clearance_for_gov_services
+			safety_regulations = strict_regulations
+			unemployment_subsidies = generous_subsidies
+			child_care = state_provided_child_care
+			pensions = acceptable_pensions
+			health_care = acceptable_health_care
+			pollution = acceptable_envir
+			education = public_higher_education
+			public_housing = acceptable_public_housing
+		}
+		
 		change_party_name = {
 			ideology = socialist 
-			name = "Socialist Party of Labour" 
+			name = "PDSR (Left)" 
+		}
+		
+		change_party_position = {
+			ideology = socialist 
+			#Subideology
+			#subideology = left_nationalism_2_ideology
+			#government_law = socialist_law
+			#state_structure = devolved_unitary_structure
+			
+			vote_franschise = registered_voting
+			political_opinions = regulated_opinion
+			public_meetings = limited_meetings
+			penal_system = incarceration
+			civil_service = elitist_service
+			publishing_rights = firewall_publishing 
+			union_rights = state_controlled_unions
+			political_parties = parties_restrict_non_democratic
+			immigration_policy = quota_immigration
+			conscription_law = two_year_draft
+			minorities_reform = minorities_equal_rights
+			voting_system = proportional_representation
+			
+			wage_and_work_hours = paid_sick_leave_hours
+			security_reform = security_clearance_for_gov_services
+			safety_regulations = strict_regulations
+			unemployment_subsidies = generous_subsidies
+			child_care = state_provided_child_care
+			pensions = good_pensions
+			health_care = good_health_care
+			pollution = low_envir
+			education = unlimited_education
+			public_housing = good_public_housing
 		}
 		
 		any_pop = { 
@@ -4390,6 +4968,38 @@ country_event = {
 		
 		ruling_party_ideology = big_tent
 		
+		change_party_position = {
+			ideology = big_tent
+			#Subideology
+			#subideology = atlanticism_ideology
+			#government_law = democracy_law
+			#state_structure = devolved_unitary_structure
+			
+			vote_franschise = universal_weighted_voting
+			political_opinions = open_opinion
+			public_meetings = limited_meetings
+			penal_system = incarceration
+			civil_service = professional_service
+			publishing_rights = responsible_publishing
+			union_rights = restricted_unions
+			political_parties = parties_allowed
+			immigration_policy = naturalization
+			conscription_law = no_draft
+			minorities_reform = minorities_equal_rights
+			voting_system = proportional_representation
+			
+			wage_and_work_hours = paid_vacation_hours
+			security_reform = security_clearance_for_gov_services
+			safety_regulations = balanced_regulations
+			unemployment_subsidies = ghent_system
+			child_care = supported_child_care
+			pensions = low_pensions
+			health_care = low_health_care
+			pollution = trinket_envir
+			education = public_education
+			public_housing = low_public_housing
+		}
+		
 		any_pop = { 
 			ideology = { factor = 0.2 value = big_tent }
 		}
@@ -4413,6 +5023,80 @@ country_event = {
 		random_owned = { #This should give the player or AI the modifier if they don't have a majority support
 			limit = { owner = { AND = { tag = ROM NOT = { OR = { pop_majority_ideology = social_democrat pop_majority_ideology = socialist } } } } }
 			owner = { add_country_modifier = { name = revolution_chaos duration = 1365 } }
+		}
+		
+		change_party_name = {
+			ideology = social_democrat
+			name = "PDSR (Right)"
+		}
+		
+		change_party_position = {
+			ideology = social_democrat
+			#Subideology
+			#subideology = right_socdem_ideology 
+			#government_law = democracy_law
+			#state_structure = devolved_unitary_structure
+			
+			vote_franschise = registered_voting
+			political_opinions = democratic_opinion
+			public_meetings = free_meetings
+			penal_system = rehabilitation
+			civil_service = professional_service
+			publishing_rights = responsible_publishing
+			union_rights = restricted_unions
+			political_parties = parties_allowed
+			immigration_policy = open_immigration
+			conscription_law = no_draft
+			minorities_reform = minorities_equal_rights
+			voting_system = proportional_representation
+			
+			wage_and_work_hours = paid_sick_leave_hours
+			security_reform = security_clearance_for_gov_services
+			safety_regulations = strict_regulations
+			unemployment_subsidies = generous_subsidies
+			child_care = state_provided_child_care
+			pensions = acceptable_pensions
+			health_care = acceptable_health_care
+			pollution = acceptable_envir
+			education = public_higher_education
+			public_housing = acceptable_public_housing
+		}
+		
+		change_party_name = {
+			ideology = socialist 
+			name = "PDSR (Left)" 
+		}
+		
+		change_party_position = {
+			ideology = socialist 
+			#Subideology
+			#subideology = left_nationalism_2_ideology
+			#government_law = socialist_law
+			#state_structure = devolved_unitary_structure
+			
+			vote_franschise = registered_voting
+			political_opinions = regulated_opinion
+			public_meetings = limited_meetings
+			penal_system = incarceration
+			civil_service = elitist_service
+			publishing_rights = firewall_publishing 
+			union_rights = state_controlled_unions
+			political_parties = parties_restrict_non_democratic
+			immigration_policy = quota_immigration
+			conscription_law = two_year_draft
+			minorities_reform = minorities_equal_rights
+			voting_system = proportional_representation
+			
+			wage_and_work_hours = paid_sick_leave_hours
+			security_reform = security_clearance_for_gov_services
+			safety_regulations = strict_regulations
+			unemployment_subsidies = generous_subsidies
+			child_care = state_provided_child_care
+			pensions = good_pensions
+			health_care = good_health_care
+			pollution = low_envir
+			education = unlimited_education
+			public_housing = good_public_housing
 		}
 		
 		any_pop = { 
@@ -4548,6 +5232,61 @@ country_event = {
 		name = "Democratic Party"
 		ruling_party_ideology = conservative
 		
+		
+		change_party_name = {
+			ideology = conservative
+			name "Democratic Party"
+		}
+		
+		change_party_position = {
+			ideology = conservative
+			
+			religious_policy = moralism
+			trade_policy = protectionism
+			economic_policy = laissez_faire
+			citizenship_policy = full_citizenship
+			
+			#Subideology
+			#subideology = lib_con_ideology 
+			#government_law = democracy_law
+			#state_structure = unitary_structure
+
+			vote_franschise = universal_weighted_voting
+			political_opinions = free_opinion
+			public_meetings = free_meetings
+			penal_system = incarceration
+			civil_service = professional_service
+			publishing_rights = responsible_publishing
+			union_rights = restricted_unions
+			political_parties = parties_allowed
+			immigration_policy = naturalization
+			conscription_law = no_draft
+			minorities_reform = minorities_equal_rights
+			voting_system = proportional_representation
+			
+			wage_and_work_hours = paid_vacation_hours
+			security_reform = security_data_cohesion
+			safety_regulations = strict_regulations
+			unemployment_subsidies = ghent_system
+			child_care = parental_leave_child_care
+			pensions = acceptable_pensions
+			health_care = acceptable_health_care
+			pollution = low_envir
+			education = public_higher_education
+			public_housing = low_public_housing
+		}
+		
+		change_party_name = {
+			ideology = social_democrat
+			name = "Social Democratic Party (Right)"
+		}
+		
+		change_party_name = {
+			ideology = socialist
+			name = "Social Democratic Party (Left)"
+		}
+		
+		
 		random_owned = { #This should give the player or AI the modifier if they don't have a majority support
 			limit = { owner = { AND = { tag = ROM NOT = { pop_majority_ideology = conservative } } } }
 			owner = { add_country_modifier = { name = revolution_chaos duration = 1365 } }
@@ -4573,6 +5312,59 @@ country_event = {
 	option = {
 		name = "PSD"
 		ruling_party_ideology = social_democrat
+		
+		change_party_name = {
+			ideology = conservative
+			name "Democratic Party"
+		}
+		
+		change_party_position = {
+			ideology = conservative
+			
+			religious_policy = moralism
+			trade_policy = protectionism
+			economic_policy = laissez_faire
+			citizenship_policy = full_citizenship
+			
+			#Subideology
+			#subideology = lib_con_ideology 
+			#government_law = democracy_law
+			#state_structure = unitary_structure
+
+			vote_franschise = universal_weighted_voting
+			political_opinions = free_opinion
+			public_meetings = free_meetings
+			penal_system = incarceration
+			civil_service = professional_service
+			publishing_rights = responsible_publishing
+			union_rights = restricted_unions
+			political_parties = parties_allowed
+			immigration_policy = naturalization
+			conscription_law = no_draft
+			minorities_reform = minorities_equal_rights
+			voting_system = proportional_representation
+			
+			wage_and_work_hours = paid_vacation_hours
+			security_reform = security_data_cohesion
+			safety_regulations = strict_regulations
+			unemployment_subsidies = ghent_system
+			child_care = parental_leave_child_care
+			pensions = acceptable_pensions
+			health_care = acceptable_health_care
+			pollution = low_envir
+			education = public_higher_education
+			public_housing = low_public_housing
+		}
+		
+		change_party_name = {
+			ideology = social_democrat
+			name = "Social Democratic Party (Right)"
+		}
+		
+		change_party_name = {
+			ideology = socialist
+			name = "Social Democratic Party (Left)"
+		}
 		
 		random_owned = { #This should give the player or AI the modifier if they don't have a majority support
 			limit = { owner = { AND = { tag = ROM NOT = { OR = { pop_majority_ideology = social_democrat pop_majority_ideology = socialist } } } } }
@@ -4631,6 +5423,11 @@ country_event = {
 		name = "Democratic Liberal Party coalition"
 		ruling_party_ideology = conservative
 		
+		change_party_name = {
+			ideology = conservative
+			name "Democratic Liberal Party"
+		}
+		
 		random_owned = { #This should give the player or AI the modifier if they don't have a majority support
 			limit = { owner = { AND = { tag = ROM NOT = { pop_majority_ideology = conservative } } } }
 			owner = { add_country_modifier = { name = revolution_chaos duration = 1365 } }
@@ -4656,6 +5453,11 @@ country_event = {
 	option = {
 		name = "PSD"
 		ruling_party_ideology = social_democrat
+		
+		change_party_name = {
+			ideology = conservative
+			name "Democratic Liberal Party"
+		}
 		
 		random_owned = { #This should give the player or AI the modifier if they don't have a majority support
 			limit = { owner = { AND = { tag = ROM NOT = { OR = { pop_majority_ideology = social_democrat pop_majority_ideology = socialist } } } } }
