@@ -338,6 +338,8 @@ country_event = {
 		}
 
 		add_country_modifier = { name = revolution_chaos duration = 3650 }
+		
+		RUS = { release_vassal = THIS country_event = 120002 } #War to vassalise
 
 		ai_chance = {
 			factor = 0.1
@@ -388,6 +390,38 @@ country_event = {
 		government = proletarian_dictatorship1
 
 		set_country_flag = rom_communist_path
+		
+		change_party_position = {
+			ideology = communist
+			#Subideology
+			#position = stalinism_ideology
+			#position = communist_law 
+			#position = unitary_structure
+			
+			position = registered_voting
+			position = ruling_party_opinion
+			position = no_meetings 
+			position = capital_punishment
+			position = politicised_service
+			position = censored_publishing 
+			position = state_controlled_unions
+			position = parties_not_allowed 
+			position = quota_immigration
+			position = mandatory_service
+			position = minorities_equal_rights
+			position = acclamatory_voting
+			
+			position = six_hours
+			position = security_clearance_for_gov_services
+			position = strict_regulations
+			position = citizen_salary
+			position = state_provided_child_care
+			position = good_pensions
+			position = good_health_care
+			position = low_envir
+			position = unlimited_education
+			position = good_public_housing
+		}	
 		
 		ROM = {
 			change_party_name = {
@@ -739,6 +773,12 @@ country_event = {
 		
 		add_accepted_culture = hungarian
 		
+		change_party_position = {
+			ideology = communist
+			
+			position = devolved_unitary_structure
+		}
+		
 		any_pop = { 
 			limit = { culture = hungarian }
 			militancy = -5
@@ -851,6 +891,12 @@ country_event = {
 		political_reform = minorities_oppression
 		
 		government = proletarian_dictatorship
+		
+		change_party_position = {
+			ideology = communist
+			
+			position = minorities_oppression
+		}
 		
 		any_pop = { 
 			limit = { AND = { culture = hungarian OR = { type = aristocrats type = bureaucrats } } } 
@@ -965,6 +1011,13 @@ country_event = {
 		political_reform = minorities_affirmative_action
 		
 		government = proletarian_dictatorship
+		
+		
+		change_party_position = {
+			ideology = communist
+			
+			position = minorities_affirmative_action
+		}
 		
 		any_pop = { 
 			limit = { AND = { culture = hungarian OR = { type = aristocrats type = bureaucrats } } } 
@@ -1566,7 +1619,42 @@ country_event = {
 		
 		ruling_party_ideology = communist_social
 		
-
+		clr_country_flag = gheorghiu_dej_romania
+		set_country_flag = gheorghe_apostol_romania
+		
+		change_party_position = {
+			ideology = communist_social
+			
+			#Subideology
+			#position = reformed_stalinism_ideology 
+			#position = communist_law 
+			#position = devolved_unitary_structure
+			
+			position = universal_weighted_voting
+			position = ruling_party_opinion
+			position = limited_meetings
+			position = incarceration
+			position = politicised_service
+			position = firewall_publishing
+			position = state_controlled_unions
+			position = parties_only_nominated
+			position = quota_immigration
+			position = one_year_draft
+			position = minorities_equal_rights
+			position = acclamatory_voting
+			
+			position = six_hours
+			position = security_clearance_for_gov_services
+			position = strict_regulations
+			position = citizen_salary
+			position = state_provided_child_care
+			position = good_pensions
+			position = good_health_care
+			position = low_envir
+			position = unlimited_education
+			position = good_public_housing
+		
+		}
 
 		#random_owned = {
 		#	limit = {
@@ -1659,6 +1747,40 @@ country_event = {
 
 	option = {
 		name = "Gheorghiu-Dej's protege will continue his legacy!"
+		
+		change_party_position = {
+			ideology = communist
+			#Subideology
+			#position = national_communism_ideology 
+			#position = communist_law 
+			#position = unitary_structure
+			
+			position = registered_voting
+			position = ruling_party_opinion
+			position = no_meetings 
+			position = capital_punishment
+			position = politicised_service
+			position = censored_publishing 
+			position = state_controlled_unions
+			position = parties_not_allowed 
+			position = nobody_gets_out
+			position = mandatory_service
+			position = minorities_oppression
+			position = acclamatory_voting
+			
+			position = six_hours
+			position = security_clearance_for_gov_services
+			position = strict_regulations
+			position = citizen_salary
+			position = state_provided_child_care
+			position = good_pensions
+			position = good_health_care
+			position = low_envir
+			position = unlimited_education
+			position = good_public_housing
+		}
+		
+		
 		any_pop = { militancy = -5 consciousness = -5 }
 		
 		any_pop = { 
