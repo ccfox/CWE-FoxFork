@@ -3153,6 +3153,41 @@ country_event = {
 		
 		set_country_flag = gheorghe_apostol_romania
 		
+		
+		change_party_position = {
+			ideology = communist_social
+			
+			#Subideology
+			#position = reformed_stalinism_ideology 
+			#position = communist_law 
+			#position = devolved_unitary_structure
+			
+			position = universal_weighted_voting
+			position = ruling_party_opinion
+			position = limited_meetings
+			position = incarceration
+			position = politicised_service
+			position = firewall_publishing
+			position = state_controlled_unions
+			position = parties_only_nominated
+			position = quota_immigration
+			position = one_year_draft
+			position = minorities_equal_rights
+			position = acclamatory_voting
+			
+			position = six_hours
+			position = security_clearance_for_gov_services
+			position = strict_regulations
+			position = citizen_salary
+			position = state_provided_child_care
+			position = good_pensions
+			position = good_health_care
+			position = low_envir
+			position = unlimited_education
+			position = good_public_housing
+		
+		}
+		
 
 		any_pop = { 
 			militancy = -3 consciousness = -3
@@ -3270,14 +3305,48 @@ country_event = {
 		name = "Party Reformists use the chaos to organize a coup."
 
 		#Limited liberalisation
-		political_reform = open_opinion
+		political_reform = regulated_opinion
 		political_reform = limited_meetings
-		political_reform = responsible_publishing
+		political_reform = firewall_publishing
 
 		ruling_party_ideology = communist_social
 		
 		clr_country_flag = nicolae_ceausescu_flag
 		set_country_flag = ion_illescu_romania
+		
+		change_party_position = {
+			ideology = communist_social
+				
+			#Subideology
+			#position = reformist_communism
+			#position = communist_law
+			#position = devolved_unitary_structure
+			
+			position = registered_voting
+			position = regulated_opinion
+			position = limited_meetings
+			position = incarceration
+			position = politicised_service
+			position = firewall_publishing 
+			position = state_controlled_unions
+			position = parties_only_nominated
+			position = quota_immigration
+			position = three_year_draft
+			position = minorities_equal_rights
+			position = acclamatory_voting
+			
+			position = strict_regulations
+			position = good_pensions
+			position = unlimited_education
+			position = good_health_care
+			position = security_clearance_for_gov_services
+			position = state_provided_child_care
+			position = generous_subsidies
+			position = low_envir
+			position = paid_sick_leave_hours
+			position = good_public_housing
+		
+		}
 		
 		any_pop = { 
 			limit = { strata = rich }

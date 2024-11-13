@@ -367,9 +367,43 @@ country_event = {
 		name = "Ana Pauker will lead Romania into a bright Socialist Future!"
 		
 		#Limited liberalisation
-		political_reform = regulated_opinion
+		#political_reform = regulated_opinion
 		political_reform = limited_meetings
-		political_reform = restricted_unions
+		#political_reform = restricted_unions
+		
+		change_party_position = {
+			ideology = communist
+			
+			#Subideology
+			#position = marxism_leninism_ideology
+			#position = communist_law 
+			#position = devolved_unitary_structure
+			
+			position = universal_weighted_voting
+			position = ruling_party_opinion
+			position = limited_meetings
+			position = incarceration
+			position = politicised_service
+			position = firewall_publishing 
+			position = state_controlled_unions
+			position = parties_only_nominated
+			position = quota_immigration
+			position = two_year_draft
+			position = minorities_affirmative_action
+			position = acclamatory_voting
+			
+			position = six_hours
+			position = security_clearance_for_gov_services
+			position = strict_regulations
+			position = citizen_salary
+			position = state_provided_child_care
+			position = good_pensions
+			position = good_health_care
+			position = low_envir
+			position = unlimited_education
+			position = good_public_housing
+			
+		}
 		
 		any_pop = { militancy = -5 consciousness = -5 }
 		
@@ -441,6 +475,38 @@ country_event = {
 		
 		clr_country_flag = gheorghiu_dej_romania
 		set_country_flag = nicolae_ceausescu_flag
+		
+			change_party_position = {
+				ideology = communist
+				#Subideology
+				#position = national_communism_ideology 
+				#position = communist_law 
+				#position = unitary_structure
+				
+				position = registered_voting
+				position = ruling_party_opinion
+				position = no_meetings 
+				position = capital_punishment
+				position = politicised_service
+				position = censored_publishing 
+				position = state_controlled_unions
+				position = parties_not_allowed 
+				position = nobody_gets_out
+				position = mandatory_service
+				position = minorities_oppression
+				position = acclamatory_voting
+				
+				position = six_hours
+				position = preemptive_security_actions
+				position = strict_regulations
+				position = citizen_salary
+				position = limited_child_care
+				position = good_pensions
+				position = good_health_care
+				position = low_envir
+				position = unlimited_education
+				position = good_public_housing
+			}
 
 		ai_chance = {
 			factor = 0.5
@@ -804,6 +870,40 @@ country_event = {
 		name = "We must moderate our approach."
 		ruling_party_ideology = communist_social
 		
+		change_party_position = {
+			ideology = communist_social
+				
+			#Subideology
+			#position = reformist_communism
+			#position = communist_law
+			#position = devolved_unitary_structure
+			
+			position = registered_voting
+			position = regulated_opinion
+			position = limited_meetings
+			position = incarceration
+			position = politicised_service
+			position = firewall_publishing 
+			position = state_controlled_unions
+			position = parties_only_nominated
+			position = quota_immigration
+			position = three_year_draft
+			position = minorities_equal_rights
+			position = acclamatory_voting
+			
+			position = strict_regulations
+			position = good_pensions
+			position = unlimited_education
+			position = good_health_care
+			position = security_clearance_for_gov_services
+			position = state_provided_child_care
+			position = generous_subsidies
+			position = low_envir
+			position = paid_sick_leave_hours
+			position = good_public_housing
+		
+		}
+		
 		add_country_modifier = { name = yugoslaveia_economic_boom duration = 3650 }
 		
 		any_pop = { 
@@ -966,6 +1066,7 @@ country_event = {
 
 	option = {
 		name = "Gheorghe Apostol, a Stalinist-Reformer"
+		ideology = communist_social
 		any_pop = { militancy = 1 consciousness = 1 }
 		
 		any_pop = { 
@@ -989,6 +1090,40 @@ country_event = {
 		
 		clr_country_flag = ana_pauker_romania
 		set_country_flag = gheorghe_apostol_romania
+		
+		change_party_position = {
+			ideology = communist_social
+			
+			#Subideology
+			#position = reformed_stalinism_ideology 
+			#position = communist_law 
+			#position = devolved_unitary_structure
+			
+			position = universal_weighted_voting
+			position = ruling_party_opinion
+			position = limited_meetings
+			position = incarceration
+			position = politicised_service
+			position = firewall_publishing
+			position = state_controlled_unions
+			position = parties_only_nominated
+			position = quota_immigration
+			position = one_year_draft
+			position = minorities_equal_rights
+			position = acclamatory_voting
+			
+			position = six_hours
+			position = security_clearance_for_gov_services
+			position = strict_regulations
+			position = citizen_salary
+			position = state_provided_child_care
+			position = good_pensions
+			position = good_health_care
+			position = low_envir
+			position = unlimited_education
+			position = good_public_housing
+		
+		}
 
 		ai_chance = {
 			factor = 0.2
@@ -1043,6 +1178,7 @@ country_event = {
 
 	option = {
 		name = "Ion Illescu, a Reformist"
+
 		
 		#Limited reforms
 		political_reform = open_opinion
@@ -1088,6 +1224,7 @@ country_event = {
 
 	option = {
 		name = "Gheorghe Apostol, a Stalinist-Reformer"
+		ideology = communist_social
 		
 		#Limited reforms
 		political_reform = ruling_party_opinion
@@ -1116,6 +1253,40 @@ country_event = {
 		
 		clr_country_flag = teohari_georgescu_romania
 		set_country_flag = gheorghe_apostol_romania
+		
+		change_party_position = {
+			ideology = communist_social
+			
+			#Subideology
+			#position = reformed_stalinism_ideology 
+			#position = communist_law 
+			#position = devolved_unitary_structure
+			
+			position = universal_weighted_voting
+			position = ruling_party_opinion
+			position = limited_meetings
+			position = incarceration
+			position = politicised_service
+			position = firewall_publishing
+			position = state_controlled_unions
+			position = parties_only_nominated
+			position = quota_immigration
+			position = one_year_draft
+			position = minorities_equal_rights
+			position = acclamatory_voting
+			
+			position = six_hours
+			position = security_clearance_for_gov_services
+			position = strict_regulations
+			position = citizen_salary
+			position = state_provided_child_care
+			position = good_pensions
+			position = good_health_care
+			position = low_envir
+			position = unlimited_education
+			position = good_public_housing
+		
+		}
 
 		ai_chance = {
 			factor = 0.2
@@ -1227,6 +1398,40 @@ country_event = {
 	option = {
 		name = "Revive Stalinism in Romania."
 		ruling_party_ideology = communist
+		
+		change_party_position = {
+			ideology = communist
+			#Subideology
+			#position = stalinism_ideology
+			#position = communist_law 
+			#position = unitary_structure
+			
+			position = registered_voting
+			position = ruling_party_opinion
+			position = no_meetings 
+			position = capital_punishment
+			position = politicised_service
+			position = censored_publishing 
+			position = state_controlled_unions
+			position = parties_not_allowed 
+			position = quota_immigration
+			position = mandatory_service
+			position = minorities_equal_rights
+			position = acclamatory_voting
+			
+			position = six_hours
+			position = security_clearance_for_gov_services
+			position = strict_regulations
+			position = citizen_salary
+			position = state_provided_child_care
+			position = good_pensions
+			position = good_health_care
+			position = low_envir
+			position = unlimited_education
+			position = good_public_housing
+		}
+		
+		
 		any_pop = { 
 			consciousness = 3
 			militancy = -3
@@ -1360,6 +1565,40 @@ country_event = {
 		name = "Implement limited reforms."
 		
 		ruling_party_ideology = communist_social
+		
+		change_party_position = {
+			ideology = communist_social
+			
+			#Subideology
+			#position = reformed_stalinism_ideology 
+			#position = communist_law 
+			#position = devolved_unitary_structure
+			
+			position = universal_weighted_voting
+			position = ruling_party_opinion
+			position = limited_meetings
+			position = incarceration
+			position = politicised_service
+			position = firewall_publishing
+			position = state_controlled_unions
+			position = parties_only_nominated
+			position = quota_immigration
+			position = one_year_draft
+			position = minorities_equal_rights
+			position = acclamatory_voting
+			
+			position = six_hours
+			position = security_clearance_for_gov_services
+			position = strict_regulations
+			position = citizen_salary
+			position = state_provided_child_care
+			position = good_pensions
+			position = good_health_care
+			position = low_envir
+			position = unlimited_education
+			position = good_public_housing
+		
+		}
 
 		add_country_modifier = { name = yugoslaveia_economic_boom duration = 1920 }
 		
@@ -1461,6 +1700,38 @@ country_event = {
 		name = "Moscow's Authority is restored."
 		
 		ruling_party_ideology = communist
+		
+		change_party_position = {
+			ideology = communist
+			#Subideology
+			#position = stalinism_ideology
+			#position = communist_law 
+			#position = unitary_structure
+			
+			position = registered_voting
+			position = ruling_party_opinion
+			position = no_meetings 
+			position = capital_punishment
+			position = politicised_service
+			position = censored_publishing 
+			position = state_controlled_unions
+			position = parties_not_allowed 
+			position = quota_immigration
+			position = mandatory_service
+			position = minorities_equal_rights
+			position = acclamatory_voting
+			
+			position = six_hours
+			position = security_clearance_for_gov_services
+			position = strict_regulations
+			position = citizen_salary
+			position = state_provided_child_care
+			position = good_pensions
+			position = good_health_care
+			position = low_envir
+			position = unlimited_education
+			position = good_public_housing
+		}
 		
 		clr_country_flag = romania_does_something_silly_part_2
 		
@@ -1753,6 +2024,40 @@ country_event = {
 		
 		ruling_party_ideology = socialist
 		
+		change_party_position = {
+			ideology = socialist
+				
+			#Subideology
+			#position = liberal_socialism_ideology 
+			#position = socialist_law
+			#position = devolved_unitary_structure
+			
+			position = promoted_voting 
+			position = open_opinion 
+			position = free_meetings 
+			position = rehabilitation
+			position = professional_service
+			position = responsible_publishing
+			position = free_trade_unions
+			position = parties_promote_democratic 
+			position = quota_immigration
+			position = no_draft
+			position = minorities_affirmative_action
+			position = proportional_representation
+			
+			position = paid_sick_leave_hours
+			position = security_clearance_for_gov_services
+			position = strict_regulations
+			position = generous_subsidies
+			position = state_provided_child_care
+			position = good_pensions
+			position = good_health_care
+			position = low_envir
+			position = unlimited_education
+			position = good_public_housing
+		
+		}
+		
 		any_pop = { 
 			limit = { is_culture_group = THIS OR = { type = aristocrats type = bureaucrats } } 
 			ideology = { factor = 0.05 value = socialist }
@@ -1862,6 +2167,40 @@ country_event = {
 		government = socialist_democracy 
 		country_event = 800054
 		ruling_party_ideology = socialist
+		
+		change_party_position = {
+			ideology = socialist
+				
+			#Subideology
+			#position = liberal_socialism_ideology 
+			#position = socialist_law
+			#position = devolved_unitary_structure
+			
+			position = promoted_voting 
+			position = open_opinion 
+			position = free_meetings 
+			position = rehabilitation
+			position = professional_service
+			position = responsible_publishing
+			position = free_trade_unions
+			position = parties_promote_democratic 
+			position = quota_immigration
+			position = no_draft
+			position = minorities_affirmative_action
+			position = proportional_representation
+			
+			position = paid_sick_leave_hours
+			position = security_clearance_for_gov_services
+			position = strict_regulations
+			position = generous_subsidies
+			position = state_provided_child_care
+			position = good_pensions
+			position = good_health_care
+			position = low_envir
+			position = unlimited_education
+			position = good_public_housing
+		
+		}
 		
 		any_pop = { 
 			limit = { is_culture_group = THIS OR = { type = aristocrats type = bureaucrats } } 
@@ -2072,6 +2411,40 @@ country_event = {
 		name = "Comrade Zoia will usher in a new Romanian era of science!"
 		clr_country_flag = nicolae_ceausescu_flag
 		set_country_flag = rom_zoia
+		
+		change_party_position = {
+			ideology = communist
+			
+			#Subideology
+			#position = communist_technocracy 
+			#position = communist_law  
+			#position = devolved_unitary_structure
+			
+			position = registered_voting
+			position = ruling_party_opinion
+			position = limited_meetings
+			position = incarceration
+			position = politicised_service
+			position = firewall_publishing 
+			position = state_controlled_unions
+			position = parties_restrict_non_democratic
+			position = quota_immigration
+			position = two_year_draft
+			position = minorities_equal_rights
+			position = proportional_representation
+			
+			position = paid_sick_leave_hours
+			position = security_clearance_for_gov_services
+			position = strict_regulations
+			position = generous_subsidies
+			position = state_provided_child_care
+			position = good_pensions
+			position = good_health_care
+			position = low_envir
+			position = unlimited_education
+			position = good_public_housing
+			
+		}
 
 		any_pop = { militancy = 3 consciousness = 5 }
 		any_pop = { 
@@ -2352,6 +2725,42 @@ country_event = {
 		political_reform = restricted_unions
 		political_reform = open_opinion
 		
+		ideology = communist_social
+		
+		change_party_position = {
+			ideology = communist_social
+				
+			#Subideology
+			#position = reformist_communism
+			#position = communist_law
+			#position = devolved_unitary_structure
+			
+			position = registered_voting
+			position = regulated_opinion
+			position = limited_meetings
+			position = incarceration
+			position = politicised_service
+			position = firewall_publishing 
+			position = state_controlled_unions
+			position = parties_only_nominated
+			position = quota_immigration
+			position = three_year_draft
+			position = minorities_equal_rights
+			position = acclamatory_voting
+			
+			position = strict_regulations
+			position = good_pensions
+			position = unlimited_education
+			position = good_health_care
+			position = security_clearance_for_gov_services
+			position = state_provided_child_care
+			position = generous_subsidies
+			position = low_envir
+			position = paid_sick_leave_hours
+			position = good_public_housing
+		
+		}
+		
 		any_pop = { militancy = -5 consciousness = -5 }
 		any_pop = { 
 			limit = { OR = { type = aristocrats type = bureaucrats } } 
@@ -2403,6 +2812,38 @@ country_event = {
 		political_reform = politicised_service
 		political_reform = no_trade_unions
 		political_reform = ruling_party_opinion
+		
+		change_party_position = {
+			ideology = communist
+			#Subideology
+			#position = stalinism_ideology
+			#position = communist_law 
+			#position = unitary_structure
+			
+			position = registered_voting
+			position = ruling_party_opinion
+			position = no_meetings 
+			position = capital_punishment
+			position = politicised_service
+			position = censored_publishing 
+			position = state_controlled_unions
+			position = parties_not_allowed 
+			position = quota_immigration
+			position = mandatory_service
+			position = minorities_equal_rights
+			position = acclamatory_voting
+			
+			position = six_hours
+			position = security_clearance_for_gov_services
+			position = strict_regulations
+			position = citizen_salary
+			position = state_provided_child_care
+			position = good_pensions
+			position = good_health_care
+			position = low_envir
+			position = unlimited_education
+			position = good_public_housing
+		}
 		
 		any_pop = { militancy = -5 consciousness = -5 }
 
@@ -2529,6 +2970,42 @@ country_event = {
 		political_reform = restricted_unions
 		political_reform = open_opinion
 		
+		ideology = communist_social
+		
+		change_party_position = {
+			ideology = communist_social
+				
+			#Subideology
+			#position = reformist_communism
+			#position = communist_law
+			#position = devolved_unitary_structure
+			
+			position = registered_voting
+			position = regulated_opinion
+			position = limited_meetings
+			position = incarceration
+			position = politicised_service
+			position = firewall_publishing 
+			position = state_controlled_unions
+			position = parties_only_nominated
+			position = quota_immigration
+			position = three_year_draft
+			position = minorities_equal_rights
+			position = acclamatory_voting
+			
+			position = strict_regulations
+			position = good_pensions
+			position = unlimited_education
+			position = good_health_care
+			position = security_clearance_for_gov_services
+			position = state_provided_child_care
+			position = generous_subsidies
+			position = low_envir
+			position = paid_sick_leave_hours
+			position = good_public_housing
+		
+		}
+		
 		any_pop = { militancy = -5 consciousness = -5 }
 		any_pop = { 
 			limit = { OR = { type = aristocrats type = bureaucrats } } 
@@ -2585,6 +3062,38 @@ country_event = {
 		political_reform = politicised_service
 		political_reform = no_trade_unions
 		political_reform = ruling_party_opinion
+		
+		change_party_position = {
+			ideology = communist
+			#Subideology
+			#position = stalinism_ideology
+			#position = communist_law 
+			#position = unitary_structure
+			
+			position = registered_voting
+			position = ruling_party_opinion
+			position = no_meetings 
+			position = capital_punishment
+			position = politicised_service
+			position = censored_publishing 
+			position = state_controlled_unions
+			position = parties_not_allowed 
+			position = quota_immigration
+			position = mandatory_service
+			position = minorities_equal_rights
+			position = acclamatory_voting
+			
+			position = six_hours
+			position = security_clearance_for_gov_services
+			position = strict_regulations
+			position = citizen_salary
+			position = state_provided_child_care
+			position = good_pensions
+			position = good_health_care
+			position = low_envir
+			position = unlimited_education
+			position = good_public_housing
+		}
 		
 		any_pop = { militancy = -5 consciousness = -5 }
 
@@ -2710,6 +3219,42 @@ country_event = {
 		political_reform = restricted_unions
 		political_reform = open_opinion
 		
+		ideology = communist_social
+		
+		change_party_position = {
+			ideology = communist_social
+				
+			#Subideology
+			#position = reformist_communism
+			#position = communist_law
+			#position = devolved_unitary_structure
+			
+			position = registered_voting
+			position = regulated_opinion
+			position = limited_meetings
+			position = incarceration
+			position = politicised_service
+			position = firewall_publishing 
+			position = state_controlled_unions
+			position = parties_only_nominated
+			position = quota_immigration
+			position = three_year_draft
+			position = minorities_equal_rights
+			position = acclamatory_voting
+			
+			position = strict_regulations
+			position = good_pensions
+			position = unlimited_education
+			position = good_health_care
+			position = security_clearance_for_gov_services
+			position = state_provided_child_care
+			position = generous_subsidies
+			position = low_envir
+			position = paid_sick_leave_hours
+			position = good_public_housing
+		
+		}
+		
 		any_pop = { militancy = -5 consciousness = -5 }
 		any_pop = { 
 			limit = { OR = { type = aristocrats type = bureaucrats } } 
@@ -2766,6 +3311,38 @@ country_event = {
 		political_reform = politicised_service
 		political_reform = no_trade_unions
 		political_reform = ruling_party_opinion
+		
+		change_party_position = {
+			ideology = communist
+			#Subideology
+			#position = stalinism_ideology
+			#position = communist_law 
+			#position = unitary_structure
+			
+			position = registered_voting
+			position = ruling_party_opinion
+			position = no_meetings 
+			position = capital_punishment
+			position = politicised_service
+			position = censored_publishing 
+			position = state_controlled_unions
+			position = parties_not_allowed 
+			position = quota_immigration
+			position = mandatory_service
+			position = minorities_equal_rights
+			position = acclamatory_voting
+			
+			position = six_hours
+			position = security_clearance_for_gov_services
+			position = strict_regulations
+			position = citizen_salary
+			position = state_provided_child_care
+			position = good_pensions
+			position = good_health_care
+			position = low_envir
+			position = unlimited_education
+			position = good_public_housing
+		}
 		
 		any_pop = { militancy = -5 consciousness = -5 }
 
@@ -2847,6 +3424,42 @@ country_event = {
 		political_reform = restricted_unions
 		political_reform = open_opinion
 		
+		ideology = communist_social
+		
+		change_party_position = {
+			ideology = communist_social
+				
+			#Subideology
+			#position = reformist_communism
+			#position = communist_law
+			#position = devolved_unitary_structure
+			
+			position = registered_voting
+			position = regulated_opinion
+			position = limited_meetings
+			position = incarceration
+			position = politicised_service
+			position = firewall_publishing 
+			position = state_controlled_unions
+			position = parties_only_nominated
+			position = quota_immigration
+			position = three_year_draft
+			position = minorities_equal_rights
+			position = acclamatory_voting
+			
+			position = strict_regulations
+			position = good_pensions
+			position = unlimited_education
+			position = good_health_care
+			position = security_clearance_for_gov_services
+			position = state_provided_child_care
+			position = generous_subsidies
+			position = low_envir
+			position = paid_sick_leave_hours
+			position = good_public_housing
+		
+		}
+		
 		any_pop = { militancy = -5 consciousness = -5 }
 		any_pop = { 
 			limit = { OR = { type = aristocrats type = bureaucrats } } 
@@ -2905,6 +3518,40 @@ country_event = {
 		political_reform = politicised_service
 		political_reform = no_trade_unions
 		political_reform = ruling_party_opinion
+		
+		ideology = communist
+		
+		change_party_position = {
+			ideology = communist
+			#Subideology
+			#position = stalinism_ideology
+			#position = communist_law 
+			#position = unitary_structure
+			
+			position = registered_voting
+			position = ruling_party_opinion
+			position = no_meetings 
+			position = capital_punishment
+			position = politicised_service
+			position = censored_publishing 
+			position = state_controlled_unions
+			position = parties_not_allowed 
+			position = quota_immigration
+			position = mandatory_service
+			position = minorities_equal_rights
+			position = acclamatory_voting
+			
+			position = six_hours
+			position = security_clearance_for_gov_services
+			position = strict_regulations
+			position = citizen_salary
+			position = state_provided_child_care
+			position = good_pensions
+			position = good_health_care
+			position = low_envir
+			position = unlimited_education
+			position = good_public_housing
+		}
 		
 		any_pop = { militancy = -5 consciousness = -5 }
 
@@ -2986,6 +3633,40 @@ country_event = {
 		political_reform = restricted_unions
 		political_reform = open_opinion
 		
+		change_party_position = {
+			ideology = communist_social
+				
+			#Subideology
+			#position = reformist_communism
+			#position = communist_law
+			#position = devolved_unitary_structure
+			
+			position = registered_voting
+			position = regulated_opinion
+			position = limited_meetings
+			position = incarceration
+			position = politicised_service
+			position = firewall_publishing 
+			position = state_controlled_unions
+			position = parties_only_nominated
+			position = quota_immigration
+			position = three_year_draft
+			position = minorities_equal_rights
+			position = acclamatory_voting
+			
+			position = strict_regulations
+			position = good_pensions
+			position = unlimited_education
+			position = good_health_care
+			position = security_clearance_for_gov_services
+			position = state_provided_child_care
+			position = generous_subsidies
+			position = low_envir
+			position = paid_sick_leave_hours
+			position = good_public_housing
+		
+		}
+		
 		any_pop = { militancy = -5 consciousness = -5 }
 		any_pop = { 
 			limit = { OR = { type = aristocrats type = bureaucrats } } 
@@ -3035,14 +3716,14 @@ country_event = {
 
 	option = {
 		name = "Empower the hardliners."
-		ruling_party_ideology = communist
+		#ruling_party_ideology = communist
 		clr_country_flag = gheorghe_apostol_romania
 		set_country_flag = hardliners_rom
 		
 		#Hardliner Government
-		political_reform = politicised_service
-		political_reform = no_trade_unions
-		political_reform = ruling_party_opinion
+		#political_reform = politicised_service
+		#political_reform = no_trade_unions
+		#political_reform = ruling_party_opinion
 		
 		any_pop = { militancy = -5 consciousness = -5 }
 
@@ -3181,6 +3862,40 @@ country_event = {
 		political_reform = politicised_service
 		political_reform = no_trade_unions
 		political_reform = ruling_party_opinion
+		
+		change_party_position = {
+			ideology = communist
+			
+			#Subideology
+			#position = marxism_leninism_ideology
+			#position = communist_law 
+			#position = devolved_unitary_structure
+			
+			position = universal_weighted_voting
+			position = ruling_party_opinion
+			position = limited_meetings
+			position = incarceration
+			position = politicised_service
+			position = firewall_publishing 
+			position = state_controlled_unions
+			position = parties_only_nominated
+			position = quota_immigration
+			position = two_year_draft
+			position = minorities_affirmative_action
+			position = acclamatory_voting
+			
+			position = six_hours
+			position = security_clearance_for_gov_services
+			position = strict_regulations
+			position = citizen_salary
+			position = state_provided_child_care
+			position = good_pensions
+			position = good_health_care
+			position = low_envir
+			position = unlimited_education
+			position = good_public_housing
+			
+		}
 		
 		any_pop = { militancy = -5 consciousness = -5 }
 

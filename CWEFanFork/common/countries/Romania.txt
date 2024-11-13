@@ -312,41 +312,71 @@ party = {
 		trade_policy = protectionism
 		war_policy = pacifism
 		start_date = 1836.1.1
-		end_date = 1993.5.28
+		end_date = 2092.1.1 #1993.5.28 
+		
+		#Subideology
+		#subideology = right_socdem_ideology 
+		#government_law = democracy_law
+		#state_structure = devolved_unitary_structure
+		
+		vote_franschise = registered_voting
+		political_opinions = democratic_opinion
+		public_meetings = free_meetings
+		penal_system = rehabilitation
+		civil_service = professional_service
+		publishing_rights = responsible_publishing
+		union_rights = restricted_unions
+		political_parties = parties_allowed
+		immigration_policy = open_immigration
+		conscription_law = no_draft
+		minorities_reform = minorities_equal_rights
+		voting_system = proportional_representation
+		
+		wage_and_work_hours = paid_sick_leave_hours
+		security_reform = security_clearance_for_gov_services
+		safety_regulations = strict_regulations
+		unemployment_subsidies = generous_subsidies
+		child_care = state_provided_child_care
+		pensions = acceptable_pensions
+		health_care = acceptable_health_care
+		pollution = acceptable_envir
+		education = public_higher_education
+		public_housing = acceptable_public_housing
+		
 }
-party = {
-		name = "Democratic Party"
-		citizenship_policy = full_citizenship
-		economic_policy = interventionism
-		ideology = social_democrat
-		religious_policy = secularized
-		trade_policy = protectionism
-		war_policy = pacifism
-		start_date = 1993.5.28
-		end_date = 1993.7.10
-}
-party = {
-		name = "Party of Social Democracy"
-		citizenship_policy = full_citizenship
-		economic_policy = interventionism
-		ideology = social_democrat
-		religious_policy = secularized
-		trade_policy = protectionism
-		war_policy = pacifism
-		start_date = 1993.7.10
-		end_date = 2001.6.16
-}
-party = {
-		name = "Social Democratic Party"
-		citizenship_policy = full_citizenship
-		economic_policy = interventionism
-		ideology = social_democrat
-		religious_policy = secularized
-		trade_policy = free_trade
-		war_policy = pro_military
-		start_date = 2001.6.16
-		end_date = 2092.1.1
-}
+#party = {
+#		name = "Democratic Party"
+#		citizenship_policy = full_citizenship
+#		economic_policy = interventionism
+#		ideology = social_democrat
+#		religious_policy = secularized
+#		trade_policy = protectionism
+#		war_policy = pacifism
+#		start_date = 1993.5.28
+#		end_date = 1993.7.10
+#}
+#party = {
+#		name = "Party of Social Democracy"
+#		citizenship_policy = full_citizenship
+#		economic_policy = interventionism
+#		ideology = social_democrat
+#		religious_policy = secularized
+#		trade_policy = protectionism
+#		war_policy = pacifism
+#		start_date = 1993.7.10
+#		end_date = 2001.6.16
+#}
+#party = {
+#		name = "Social Democratic Party"
+#		citizenship_policy = full_citizenship
+#		economic_policy = interventionism
+#		ideology = social_democrat
+#		religious_policy = secularized
+#		trade_policy = free_trade
+#		war_policy = pro_military
+#		start_date = 2001.6.16
+#		end_date = 2092.1.1
+#}
 party = {
 		name = "Ploughmen's Front"
 		citizenship_policy = full_citizenship
@@ -357,7 +387,33 @@ party = {
 		war_policy = pacifism
 		
 		#Subideology
-		#subideology = left_wing_populism
+		#subideology = left_wing_populism 
+		#government_law = democracy_law #sometimes socialist_law
+		#state_structure = devolved_unitary_structure
+		
+		vote_franschise = universal_weighted_voting
+		political_opinions = regulated_opinion
+		public_meetings = free_meetings
+		penal_system = incarceration
+		civil_service = professional_service
+		publishing_rights = firewall_publishing 
+		union_rights = free_trade_unions
+		political_parties = parties_restrict_non_democratic
+		immigration_policy = naturalization
+		conscription_law = no_draft
+		minorities_reform = minorities_affirmative_action 
+		voting_system = proportional_representation
+		
+		wage_and_work_hours = paid_sick_leave_hours
+		security_reform = security_clearance_for_gov_services
+		safety_regulations = strict_regulations
+		unemployment_subsidies = generous_subsidies
+		child_care = state_provided_child_care
+		pensions = good_pensions
+		health_care = good_health_care
+		pollution = low_envir
+		education = unlimited_education
+		public_housing = good_public_housing
 		
 		
 		start_date = 1836.1.1
@@ -373,7 +429,33 @@ party = {
 		war_policy = pacifism
 		
 		#Subideology
-		#subideology = left_wing_populism
+		#subideology = left_wing_populism 
+		#government_law = democracy_law #sometimes socialist_law
+		#state_structure = devolved_unitary_structure
+		
+		vote_franschise = universal_weighted_voting
+		political_opinions = regulated_opinion
+		public_meetings = free_meetings
+		penal_system = incarceration
+		civil_service = professional_service
+		publishing_rights = firewall_publishing 
+		union_rights = free_trade_unions
+		political_parties = parties_restrict_non_democratic
+		immigration_policy = naturalization
+		conscription_law = no_draft
+		minorities_reform = minorities_affirmative_action 
+		voting_system = proportional_representation
+		
+		wage_and_work_hours = paid_sick_leave_hours
+		security_reform = security_clearance_for_gov_services
+		safety_regulations = strict_regulations
+		unemployment_subsidies = generous_subsidies
+		child_care = state_provided_child_care
+		pensions = good_pensions
+		health_care = good_health_care
+		pollution = low_envir
+		education = unlimited_education
+		public_housing = good_public_housing
 		
 		
 		start_date = 1953.1.1
@@ -389,7 +471,33 @@ party = {
 		war_policy = pacifism
 		
 		#Subideology
-		#subideology = left_wing_populism
+		#subideology = left_wing_populism 
+		#government_law = democracy_law #sometimes socialist_law
+		#state_structure = devolved_unitary_structure
+		
+		vote_franschise = universal_weighted_voting
+		political_opinions = regulated_opinion
+		public_meetings = free_meetings
+		penal_system = incarceration
+		civil_service = professional_service
+		publishing_rights = firewall_publishing 
+		union_rights = free_trade_unions
+		political_parties = parties_restrict_non_democratic
+		immigration_policy = naturalization
+		conscription_law = no_draft
+		minorities_reform = minorities_affirmative_action 
+		voting_system = proportional_representation
+		
+		wage_and_work_hours = paid_sick_leave_hours
+		security_reform = security_clearance_for_gov_services
+		safety_regulations = strict_regulations
+		unemployment_subsidies = generous_subsidies
+		child_care = state_provided_child_care
+		pensions = good_pensions
+		health_care = good_health_care
+		pollution = low_envir
+		education = unlimited_education
+		public_housing = good_public_housing
 		
 		
 		start_date = 1968.1.1
@@ -449,6 +557,36 @@ party = {
 		war_policy = pacifism
 		start_date = 1836.1.1
 		end_date = 1948.1.1
+		
+		#Subideology
+		#subideology = progressive_agrarianism 
+		#government_law = democracy_law
+		#state_structure = devolved_unitary_structure
+		
+		vote_franschise = universal_voting 
+		political_opinions = democratic_opinion 
+		public_meetings = free_meetings 
+		penal_system = rehabilitation
+		civil_service = independent_service
+		publishing_rights = unregulated_publishing
+		union_rights = free_trade_unions
+		political_parties = parties_restrict_non_democratic
+		immigration_policy = open_immigration
+		conscription_law = no_draft
+		minorities_reform = minorities_equal_rights
+		voting_system = proportional_representation
+		
+		wage_and_work_hours = paid_sick_leave_hours
+		security_reform = security_data_cohesion 
+		safety_regulations = strict_regulations
+		unemployment_subsidies = citizen_salary 
+		child_care = state_provided_child_care
+		pensions = good_pensions
+		health_care = good_health_care
+		pollution = acceptable_envir
+		education = unlimited_education
+		public_housing = good_public_housing
+		
 }
 party = {
 		name = "Democratic Peasants' Party"
@@ -460,9 +598,39 @@ party = {
 		war_policy = pro_military
 		start_date = 1946.1.20
 		end_date = 1990.1.20
+		
+		#Subideology
+		#subideology = progressive_agrarianism 
+		#government_law = democracy_law
+		#state_structure = devolved_unitary_structure
+		
+		vote_franschise = universal_voting 
+		political_opinions = democratic_opinion 
+		public_meetings = free_meetings 
+		penal_system = rehabilitation
+		civil_service = independent_service
+		publishing_rights = unregulated_publishing
+		union_rights = free_trade_unions
+		political_parties = parties_restrict_non_democratic
+		immigration_policy = open_immigration
+		conscription_law = no_draft
+		minorities_reform = minorities_equal_rights
+		voting_system = proportional_representation
+		
+		wage_and_work_hours = paid_sick_leave_hours
+		security_reform = security_data_cohesion 
+		safety_regulations = strict_regulations
+		unemployment_subsidies = citizen_salary 
+		child_care = state_provided_child_care
+		pensions = good_pensions
+		health_care = good_health_care
+		pollution = acceptable_envir
+		education = unlimited_education
+		public_housing = good_public_housing
+		
 }
 party = {
-		name = "Romanian Ecologist Party"
+		name = "Green Party - The Greens"
 		citizenship_policy = full_citizenship
 		economic_policy = interventionism
 		ideology = progressive
@@ -471,6 +639,37 @@ party = {
 		war_policy = pacifism
 		start_date = 1990.1.20
 		end_date = 2092.1.1
+		
+
+		#Subideology
+		#subideology = green_politics_ideology 
+		#government_law = democracy_law
+		#state_structure = devolved_unitary_structure
+		
+		vote_franschise = universal_voting 
+		political_opinions = democratic_opinion 
+		public_meetings = free_meetings 
+		penal_system = rehabilitation
+		civil_service = independent_service
+		publishing_rights = unregulated_publishing
+		union_rights = free_trade_unions
+		political_parties = parties_allowed 
+		immigration_policy = open_immigration
+		conscription_law = no_draft
+		minorities_reform = minorities_affirmative_action
+		voting_system = proportional_representation
+		
+		wage_and_work_hours = six_hours 
+		security_reform = security_clearance_for_gov_services 
+		safety_regulations = rigid_regulations 
+		unemployment_subsidies = citizen_salary 
+		child_care = state_provided_child_care
+		pensions = good_pensions
+		health_care = good_health_care
+		pollution = good_envir
+		education = unlimited_education
+		public_housing = good_public_housing
+		
 }
 party = {
 		name = "Iron Guard (Populist)"
@@ -564,6 +763,36 @@ party = {
 		war_policy = jingoism
 		start_date = 2019.12.1
 		end_date = 2092.1.1
+		
+		#Subideology
+		#subideology = right_populism_ideology
+		#government_law = nationalist_law
+		#state_structure = unitary_structure
+
+		vote_franschise = registered_voting
+		political_opinions = ruling_party_opinion 
+		public_meetings = no_meetings 
+		penal_system = capital_punishment
+		civil_service = politicised_service
+		publishing_rights = firewall_publishing 
+		union_rights = no_trade_unions
+		political_parties = parties_only_nominated 
+		immigration_policy = nobody_gets_out
+		conscription_law = mandatory_service
+		minorities_reform = minorities_oppression
+		voting_system = acclamatory_voting
+		
+		wage_and_work_hours = unregulated_hours 
+		security_reform = preemptive_security_actions 
+		safety_regulations = some_regulations 
+		unemployment_subsidies = no_subsidies
+		child_care = limited_child_care
+		pensions = trinket_pensions
+		health_care = no_health_care
+		pollution = no_controls
+		education = self_financed_education
+		public_housing = no_public_housing
+		
 }
 party = {
 		name = "National Peasants' Party (Monarchist)"
@@ -575,6 +804,36 @@ party = {
 		war_policy = pro_military
 		start_date = 1836.1.1
 		end_date = 1989.12.1
+		
+		#Subideology
+		#subideology = monarchist_ideology 
+		#government_law = monarchy_law 
+		#state_structure = unitary_structure
+		
+		vote_franschise = none_voting 
+		political_opinions = ruling_party_opinion 
+		public_meetings = no_meetings 
+		penal_system = capital_punishment
+		civil_service = elitist_service
+		publishing_rights = censored_publishing 
+		union_rights = no_trade_unions
+		political_parties = parties_not_allowed 
+		immigration_policy = nobody_gets_out
+		conscription_law = mandatory_service
+		minorities_reform = minorities_oppression
+		voting_system = acclamatory_voting
+		
+		wage_and_work_hours = unregulated_hours 
+		security_reform = security_clearance_for_gov_services 
+		safety_regulations = some_regulations 
+		unemployment_subsidies = no_subsidies
+		child_care = no_child_care
+		pensions = no_pensions
+		health_care = no_health_care
+		pollution = no_controls
+		education = self_financed_education
+		public_housing = no_public_housing
+		
 }
 party = {
 		name = "Christian Democratic National Peasants' Party (NRx)"
@@ -586,6 +845,37 @@ party = {
 		war_policy = pro_military
 		start_date = 1989.12.1
 		end_date = 2092.1.1
+		
+		
+		#Subideology
+		#subideology = monarchist_ideology 
+		#government_law = monarchy_law 
+		#state_structure = unitary_structure
+		
+		vote_franschise = none_voting 
+		political_opinions = ruling_party_opinion 
+		public_meetings = no_meetings 
+		penal_system = capital_punishment
+		civil_service = elitist_service
+		publishing_rights = censored_publishing 
+		union_rights = no_trade_unions
+		political_parties = parties_not_allowed 
+		immigration_policy = nobody_gets_out
+		conscription_law = mandatory_service
+		minorities_reform = minorities_oppression
+		voting_system = acclamatory_voting
+		
+		wage_and_work_hours = unregulated_hours 
+		security_reform = security_clearance_for_gov_services 
+		safety_regulations = some_regulations 
+		unemployment_subsidies = no_subsidies
+		child_care = no_child_care
+		pensions = no_pensions
+		health_care = no_health_care
+		pollution = no_controls
+		education = self_financed_education
+		public_housing = no_public_housing
+		
 }
 party = {
 		name = "Romanian Communist Party"
