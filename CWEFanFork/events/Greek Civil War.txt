@@ -732,7 +732,7 @@ country_event = {
 		}
 		
 		#Greek Civil War ends
-		#end_war = UGR
+		end_war = UGR
 		
 		#Inform UGR
 		UGR = { country_event = 8940044 }

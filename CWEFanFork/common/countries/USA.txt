@@ -13,6 +13,36 @@ party = {
 	war_policy = jingoism
 	start_date = 1836.1.1
 	end_date = 1973.1.1
+	
+		#Subideology
+		#subideology = southern_democrat_ideology 
+		#government_law = democracy_law
+		#state_structure = federal_structure
+		
+		vote_franschise = universal_weighted_voting 
+		political_opinions = open_opinion 
+		public_meetings = limited_meetings 
+		penal_system = capital_punishment
+		civil_service = elitist_service
+		publishing_rights = firewall_publishing 
+		union_rights = restricted_unions
+		political_parties = parties_restrict_non_democratic 
+		immigration_policy = quota_immigration
+		conscription_law = mandatory_service
+		minorities_reform = minorities_oppression
+		voting_system = first_past_the_post
+		
+		wage_and_work_hours = unregulated_hours 
+		security_reform = security_data_cohesion 
+		safety_regulations = balanced_regulations
+		unemployment_subsidies = minimal_subsidies
+		child_care = limited_child_care
+		pensions = trinket_pensions
+		health_care = trinket_health_care
+		pollution = no_controls
+		education = public_education
+		public_housing = no_public_housing
+	
 }
 party = {
 	name = "Republican Party (Nationalist)"
@@ -24,6 +54,37 @@ party = {
 	war_policy = jingoism
 	start_date = 1973.1.1
 	end_date = 2100.1.1
+	
+		#Subideology
+		#subideology = christian_nationalist_ideology 
+		#government_law = populist_law
+		#state_structure = federal_structure
+		
+		vote_franschise = none_voting
+		political_opinions = ruling_party_opinion
+		public_meetings = no_meetings
+		penal_system = capital_punishment
+		civil_service = politicised_service
+		publishing_rights = censored_publishing
+		union_rights = no_trade_unions
+		political_parties = parties_not_allowed
+		immigration_policy = nobody_gets_out
+		conscription_law = mandatory_service
+		minorities_reform = minorities_oppression
+		voting_system = acclamatory_voting
+		
+		wage_and_work_hours = unregulated_hours 
+		security_reform = security_data_cohesion 
+		safety_regulations = balanced_regulations
+		unemployment_subsidies = minimal_subsidies
+		child_care = limited_child_care
+		pensions = trinket_pensions
+		health_care = trinket_health_care
+		pollution = no_controls
+		education = public_education
+		public_housing = no_public_housing
+	
+	
 }
 party = {
 	name = "Democratic Party (Moderates)"

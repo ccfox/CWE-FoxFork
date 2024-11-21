@@ -684,7 +684,7 @@ party = {
 		
 		#Subideology
 		#subideology = right_populism_ideology
-		#government_law = nationalist_law
+		#government_law = populist_law
 		#state_structure = unitary_structure
 
 		vote_franschise = registered_voting
