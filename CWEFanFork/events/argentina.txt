@@ -19,6 +19,7 @@ months = 2
 
 option = {
 name = "Choose Peron"
+set_country_flag = arg_peron
 relation = { who = USA value = -50 }
 ruling_party_ideology = populist
 
@@ -66,7 +67,9 @@ country_event = {
 
   trigger = {
     tag = ARG
-NOT = { ruling_party_ideology = big_tent }
+	has_country_flag = arg_peron
+	ruling_party_ideology = populist
+	NOT = { has_country_flag = revolution_libertadora }
     year = 1955 NOT = { year = 1980 }
   }
 
@@ -78,6 +81,8 @@ NOT = { ruling_party_ideology = big_tent }
 	random_state = { any_pop = { ideology = { value = nationalist factor = 0.30 } } }
 	#define_general = { name = "Pedro Aramburu" personality = energetic background = no_background }
 	government = presidential_dictatorship country_event = 800050 ruling_party_ideology = nationalist
+	clr_country_flag = arg_person
+	set_country_flag = revolution_libertadora
 	ai_chance = { factor = 0.9 }
   }
 
