@@ -22,17 +22,20 @@ political_decisions = {
 
 			NOT = { OR = { ruling_party_ideology = nationalist ruling_party_ideology = populist } }
 
-			OR = { 
-				PCC = { all_core = { owned_by = THIS } }
-				
-				AND = { 
-					OR = { is_sphere_leader_of = POL is_our_vassal = POL tag = POL POL = { exists = no } }
-					OR = { is_sphere_leader_of = CZH is_our_vassal = CZH tag = CZH CZH = { exists = no } }
-					OR = { is_sphere_leader_of = BOH is_our_vassal = BOH tag = BOH BOH = { exists = no } }
-					OR = { is_sphere_leader_of = SLV is_our_vassal = SLV tag = SLV SLV = { exists = no } }
-				}
- 
+			AND = { 
+				POL = { all_core = { owned_by = THIS } }
+				CZH = { all_core = { owned_by = THIS } }
+				BOH = { all_core = { owned_by = THIS } }
+				SLV = { all_core = { owned_by = THIS } }
 			}
+				
+			AND = { 
+				OR = { is_sphere_leader_of = POL is_our_vassal = POL tag = POL POL = { exists = no } }
+				OR = { is_sphere_leader_of = CZH is_our_vassal = CZH tag = CZH CZH = { exists = no } }
+				OR = { is_sphere_leader_of = BOH is_our_vassal = BOH tag = BOH BOH = { exists = no } }
+				OR = { is_sphere_leader_of = SLV is_our_vassal = SLV tag = SLV SLV = { exists = no } }
+			}
+ 
 		}
 		effect = {
 			prestige = 100
