@@ -4090,3 +4090,96 @@ country_event = {
 	}
 
 }
+
+country_event = {
+	id = 8015880
+	title = "The New Reform Party"
+	desc = EVTDESC8015880
+	picture = "nwo2_usa_superpower"
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = USA
+		year = 2000
+		government = democracy
+		ruling_party_ideology = populist
+	}
+
+	mean_time_to_happen = { 
+		days = 1
+	}
+	
+	option = {
+		name = "Donald Trump and Jesse Ventura take over the Reform Party!"
+		
+		change_party_name = {
+			ideology = populist
+			name = "Reform Party USA (Trump)"
+		}
+		
+		#Rise in populist support
+		any_pop = {
+			limit = { strata = poor }
+			ideology = { factor = 0.02 value = populist }
+		}
+		
+		ai_chance = { factor = 0.6 }
+	}
+
+	option = {
+		name = "Pat Buchanan and his supporters take over the Reform Party!"
+		
+		ruling_party_ideology = traditionalist
+		
+		change_party_name = {
+			ideology = populist
+			name = "Reform Party USA (Anti-Buchanan)"
+		}
+		
+		change_party_name = {
+			ideology = traditionalist
+			name = "Reform Party USA (Buchanan)"
+		}
+		
+		change_party_position = {
+			ideology = traditionalist
+			
+			position = moralism
+			position = protectionism
+			position = interventionism
+			position = full_citizenship
+			position = pacifism
+			
+			#Subideology
+			#position = lib_con_ideology 
+			#position = democracy_law
+			#position = unitary_structure
+		}
+		
+		#Rise in traditionalist support
+		any_pop = {
+			limit = { strata = poor }
+			ideology = { factor = 0.03 value = traditionalist }
+		}
+		any_pop = {
+			limit = { strata = middle }
+			ideology = { factor = 0.1 value = traditionalist }
+		}
+		any_pop = {
+			limit = { strata = rich }
+			ideology = { factor = 0.1 value = traditionalist }
+		}
+		
+		#Reform people are furious
+		any_pop = {
+			scaled_militancy = {
+				factor = 7
+				ideology = populist
+			}
+		}
+		
+		ai_chance = { factor = 0.4 }
+	}
+
+}

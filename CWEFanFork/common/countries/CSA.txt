@@ -1,7 +1,7 @@
 graphical_culture = UsGC
 color = { 168 168 168 }
 party = {
-		name = "Southern Republican Party"
+		name = "Southern Heritage Party (N)"
 		citizenship_policy = limited_citizenship
 		economic_policy = state_capitalism
 		ideology = nationalist
@@ -12,7 +12,7 @@ party = {
 		end_date = 2100.1.1
 }
 party = {
-		name = "party_big_tent_0_generic_USA"
+		name = "Moderate Party (M)"
 		citizenship_policy = full_citizenship
 		economic_policy = interventionism
 		ideology = big_tent
@@ -24,7 +24,7 @@ party = {
 }
 
 party = {
-		name = "party_conservative_0_generic_USA"
+		name = "Moderate Party (C)"
 		citizenship_policy = limited_citizenship
 		economic_policy = interventionism
 		ideology = conservative
@@ -35,7 +35,7 @@ party = {
 		end_date = 2092.1.1
 }
 party = {
-		name = "party_liberal_0_generic_USA"
+		name = "Progressive Party (L)"
 		citizenship_policy = full_citizenship
 		economic_policy = laissez_faire
 		ideology = liberal
@@ -46,7 +46,7 @@ party = {
 		end_date = 2092.1.1
 }
 party = {
-		name = "party_socialist_0_generic_USA"
+		name = "People's Power Party"
 		citizenship_policy = limited_citizenship
 		economic_policy = state_capitalism
 		ideology = socialist
@@ -57,7 +57,7 @@ party = {
 		end_date = 2092.1.1
 }
 party = {
-		name = "party_progressive_0_generic_USA"
+		name = "Progressive Party (P)"
 		citizenship_policy = full_citizenship
 		economic_policy = interventionism
 		ideology = progressive
@@ -68,18 +68,18 @@ party = {
 		end_date = 2092.1.1
 }
 party = {
-		name = "party_populist_0_generic_USA"
+		name = "Libertarian Party"
 		citizenship_policy = residency
-		economic_policy = state_capitalism
+		economic_policy = laissez_faire
 		ideology = populist
 		religious_policy = secularized
-		trade_policy = protectionism
-		war_policy = jingoism
+		trade_policy = free_trade
+		war_policy = pacifism
 		start_date = 1836.1.1
 		end_date = 2092.1.1
 }
 party = {
-		name = "party_traditionalist_0_generic_USA"
+		name = "Southern Heritage Party (T)"
 		citizenship_policy = residency
 		economic_policy = state_capitalism
 		ideology = traditionalist
@@ -90,7 +90,7 @@ party = {
 		end_date = 2092.1.1
 }
 party = {
-		name = "party_communist_0_generic_USA"
+		name = "Communist Party"
 		citizenship_policy = full_citizenship
 		economic_policy = planned_economy
 		ideology = communist
@@ -101,7 +101,7 @@ party = {
 		end_date = 2092.1.1
 }
 party = {
-		name = "party_communist_social_0_generic_USA"
+		name = "Communist Party (Reformist)"
 		citizenship_policy = full_citizenship
 		economic_policy = state_capitalism
 		ideology = communist_social
@@ -112,7 +112,7 @@ party = {
 		end_date = 2092.1.1
 }
 party = {
-		name = "social_democrat_party"
+		name = "Progressive Party (SD)"
 		citizenship_policy = full_citizenship
 		economic_policy = state_capitalism
 		ideology = social_democrat

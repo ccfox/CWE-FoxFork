@@ -13,7 +13,7 @@ party = {
 		end_date = 2100.1.1
 }
 party = {
-		name = "party_big_tent_0_generic_USA"
+		name = "Lakota Moderate Party"
 		citizenship_policy = full_citizenship
 		economic_policy = interventionism
 		ideology = big_tent
@@ -91,7 +91,7 @@ party = {
 		end_date = 2092.1.1
 }
 party = {
-		name = "party_traditionalist_0_generic_USA"
+		name = "Lakota Traditional Party"
 		citizenship_policy = residency
 		economic_policy = state_capitalism
 		ideology = traditionalist
@@ -102,7 +102,7 @@ party = {
 		end_date = 2092.1.1
 }
 party = {
-		name = "party_communist_0_generic_USA"
+		name = "Lakota Communist Party (Reformist)"
 		citizenship_policy = full_citizenship
 		economic_policy = planned_economy
 		ideology = communist
@@ -113,7 +113,7 @@ party = {
 		end_date = 2092.1.1
 }
 party = {
-		name = "party_communist_social_0_generic_USA"
+		name = "Lakota Communist Party (Reformist)"
 		citizenship_policy = full_citizenship
 		economic_policy = state_capitalism
 		ideology = communist_social

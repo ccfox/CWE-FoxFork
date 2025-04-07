@@ -254,7 +254,7 @@ party = {
 	end_date = 1990.1.1
 }
 party = {
-	name = "Reform Party USA"
+	name = "Reform Party USA (Perot)"
 	citizenship_policy = full_citizenship
 	economic_policy = interventionism
 	ideology = populist
@@ -262,7 +262,18 @@ party = {
 	trade_policy = protectionism
 	war_policy = pro_military
 	start_date = 1990.1.1
-	end_date = 2016.1.1
+	end_date = 2000.1.1
+}
+party = {
+	name = "Reform Party USA"
+	citizenship_policy = full_citizenship
+	economic_policy = interventionism
+	ideology = populist
+	religious_policy = secularized
+	trade_policy = protectionism
+	war_policy = pacifism
+	start_date = 2000.1.1
+	end_date = 2092.1.1
 }
 party = {
 	name = "Republican Party (Trumpist)"
