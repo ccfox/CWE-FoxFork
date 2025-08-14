@@ -161,7 +161,7 @@ political_decisions = { #Consider Revising
 		allow = {
 			war = no
 			election = no
-			OR = { ruling_party_ideology = populist ruling_party_ideology = nationalist ruling_party_ideology = communist ruling_party_ideology = communist_social }
+			OR = { ruling_party_ideology = populist ruling_party_ideology = nationalist ruling_party_ideology = communist ruling_party_ideology = communist_social ruling_party_ideology = social_democrat AND = { ruling_party_ideology = liberal year = 1980 } }
 			PUR = { NOT = { OR = { ruling_party_ideology = populist ruling_party_ideology = nationalist ruling_party_ideology = communist ruling_party_ideology = communist_social } } }
 		}
 
